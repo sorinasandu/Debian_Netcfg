@@ -4,14 +4,14 @@
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
 # Welsh messages for debian-installer.
-# Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Dafydd Harries, 2003 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2004-10-04 13:00-0600\n"
-"PO-Revision-Date: 2004-08-27 17:13+0200\n"
+"POT-Creation-Date: 2004-10-06 08:19+0200\n"
+"PO-Revision-Date: 2004-10-06 08:15+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "MIME-Version: 1.0\n"
@@ -92,14 +92,15 @@ msgstr "Rhyngwyneb rhwydwaith cynradd:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Mae gan eich system fwy nag un rhyngwyneb rhwydwaith. Dewiswch yr un i'w "
-"ddefnyddio fel y rhyngwyneb rhwydwaith cynradd wrth sefydlu Debian."
+"ddefnyddio fel y rhyngwyneb rhwydwaith cynradd wrth sefydlu Debian. Os yn "
+"bosib, mae'r rhyngwyneb rhyngwyneb cysylltiedig a ganfuwyd gyntaf wedi cael "
+"ei ddewis."
 
 #. Type: string
 #. Description
@@ -239,15 +240,14 @@ msgstr "Mae'r enw \"${hostname}\" yn annilys."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Caiff enwau gwesteiwr gynnwys nodau alffaniwmerig a'r arwydd minws yn unig. "
-"Rhaid iddo fod rhwng 2 a 63 nod o hyd, a ni chaiff gychwyn na gorffen gyda "
-"arwydd minws."
+"Caiff enwau gwesteiwr gynnwys y rhifau 0-9, y llythrennau bychan a-z a'r "
+"arwydd minws yn unig. Rhaid iddo fod rhwng 2 a 63 nod o hyd, a ni chaiff "
+"gychwyn na gorffen gyda arwydd minws."
 
 #. Type: error
 #. Description
@@ -537,7 +537,6 @@ msgstr "Dull cyfluniad rhwydwaith:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -745,8 +744,6 @@ msgstr "Ydy'r wybodaeth hyn yn gywir?"
 msgid "Currently configured network parameters:"
 msgstr "Paramedrau rhwydwatih cyfluniedig cyfredol:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

@@ -10,11 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2004-10-04 13:00-0600\n"
-"PO-Revision-Date: 2004-09-30 10:42+0200\n"
+"POT-Creation-Date: 2004-10-06 08:19+0200\n"
+"PO-Revision-Date: 2004-10-05 22:24+0200\n"
 "Last-Translator:  VERÃK IstvÃ¡n <vi@fsf.hu>\n"
-"Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
-"org>\n"
+"Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,14 +91,14 @@ msgstr "Elsődleges hálózati csatoló:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "A gép több hálózati csatolóval is rendelkezik. Válassza ki a Debian "
-"telepítésére használni kívánt elsődleges csatolót."
+"telepítésére használni kívánt elsődleges csatolót. Az első hálózati csatoló "
+"már ki is van választva (ha van ilyen)."
 
 #. Type: string
 #. Description
@@ -742,8 +741,6 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

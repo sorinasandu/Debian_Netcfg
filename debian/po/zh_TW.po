@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2004-10-04 13:00-0600\n"
-"PO-Revision-Date: 2004-09-30 21:13+0800\n"
+"POT-Creation-Date: 2004-10-06 08:19+0200\n"
+"PO-Revision-Date: 2004-10-06 10:37+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
@@ -36,9 +36,9 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"可以使用 DHCP 來設定網路，或者手動輸入所有資訊。如果您選擇了使用 DHCP，但安裝"
-"程式卻無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，您"
-"仍然可以經由手動輸入來設定網路。"
+"您可以使用 DHCP 來設定網路，或者手動輸入所有資訊。如果您選擇了使用 DHCP，但安"
+"裝程式卻無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，"
+"您仍然可以替由手動輸入來設定網路。"
 
 #. Type: string
 #. Description
@@ -75,10 +75,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"名稱伺服器 (Name Server) 是用來在網路上搜尋主機名稱 (Host Name)。請以空格分"
-"隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。在進行查詢"
-"時將優先使用列表中的第一個名稱伺服器。如果您不想用任何名稱伺服器，直接在欄位"
-"中留白即可。"
+"名稱伺服器 (Name Server) 是用來在網路上查詢主機名稱 (Host Name) 的。請以空格"
+"分隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。在進行查"
+"詢時將優先使用列表中的第一個名稱伺服器。如果您不想使用任何名稱伺服器，直接在"
+"欄位中留白即可。"
 
 #. Type: select
 #. Description
@@ -95,7 +95,7 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "您的系統有多個網路介面。請選擇其中之一來做為安裝 Debian 時的主要網路介面。如"
-"果可能，已指定為第一個被找到的已連線之網路介面。"
+"果可以的話，已指定為第一個被找到的已連線之網路介面。"
 
 #. Type: string
 #. Description
@@ -112,7 +112,7 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} 是一個無線網路的介面。請輸入 ${iface} 所要使用的無線網路的名稱 "
-"(ESSID)。如果您想使用任何可用的網路，在欄位中留白即可。"
+"(ESSID)。如果您想使用任何可用的網路，直接在欄位中留白即可。"
 
 #. Type: string
 #. Description
@@ -127,8 +127,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"如果適用的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。有兩種方法可以採"
-"用："
+"如果需要的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。輸入方式有兩種："
 
 #. Type: string
 #. Description
@@ -154,7 +153,7 @@ msgstr "如果您的 WEP 密鑰使用的是密碼文字的話，請在前面加�
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "當然囉，如果您的無線網路中並沒有使用到 WEP 密鑰，在欄位中留白即可。"
+msgstr "當然囉，如果您的無線網路中並沒有使用 WEP 密鑰，在欄位中留白即可。"
 
 #. Type: error
 #. Description
@@ -169,8 +168,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"該 WEP 密鑰 ${wepkey} 是不正確的。請仔細參考下一個畫面裡的說明來了解如何正確"
-"得輸入 WEP 密鑰，然後再試一次。"
+"這個 WEP 密鑰，${wepkey} 是不正確的。請仔細參考下一個畫面裡的說明來了解如何正"
+"確得輸入 WEP 密鑰，然後再試一次。"
 
 #. Type: error
 #. Description
@@ -185,8 +184,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"該 ESSID，${essid} 是不正確的。ESSID 最多只能長至 32 個字元，不過任何類型的字"
-"元都可以使用。"
+"這個 ESSID，${essid} 是不正確的。ESSID 最多只能長至 32 個字元，不過任何類型的"
+"字元都可以使用。"
 
 #. Type: string
 #. Description
@@ -223,7 +222,7 @@ msgstr "不正確的主機名稱"
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "名稱“${hostname}”是不正確的。"
+msgstr "名稱「${hostname}」是不正確的。"
 
 #. Type: error
 #. Description
@@ -248,7 +247,7 @@ msgstr "錯誤"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr "發生錯誤，且網路設定作業已經中止。您可以從安裝程序主選單來重新嘗試。"
+msgstr "發生錯誤，網路設定程序已經中止。您可以從安裝程序主選單來再重新嘗試。"
 
 #. Type: error
 #. Description
@@ -262,7 +261,7 @@ msgstr "探測不到任何網路介面"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "找不到任何網路介面。安裝系統無法找到網路裝置。"
+msgstr "探測不到任何的網路介面。安裝系統無法找到網路裝置。"
 
 #. Type: error
 #. Description
@@ -294,8 +293,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"無線網路可以是 Managed 或是 Ad-hoc。如果您是以某些實體裝置做為基地台，您的網"
-"路是 Managed。而或者您的基地台是另一台電腦，您的網路則可能是 Ad-hoc。"
+"無線網路可以為 Managed 或 Ad-hoc 其中之一。如果您是以某些實體裝置做為基地台，"
+"您的網路就是 Managed。而或者您的基地台是另一台電腦，那麼您的網路則可能是 Ad-"
+"hoc。"
 
 #. Type: text
 #. Description
@@ -417,7 +417,7 @@ msgstr "正在設定網路 ..."
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "設定網路"
+msgstr "網路設定"
 
 #. Type: string
 #. Description
@@ -463,13 +463,13 @@ msgstr "網路自動設定作業已經完成！"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "找不到 DHCP 客戶端"
+msgstr "找不到 DHCP 用戶端程式"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "找不到 DHCP 客戶端。這個套件需要安裝 pump 或者 dhcp-client。"
+msgstr "找不到 DHCP 用戶端程式。這個套件需要安裝了 pump 或者 dhcp-client。"
 
 #. Type: error
 #. Description
@@ -525,7 +525,7 @@ msgid ""
 msgstr ""
 "您可以在此選擇再一次試著使用 DHCP 來自動設定網路，（如果是因為您的 DHCP 伺服"
 "器的回應時間較長，那可能會奏效）﹔或是試著手動來設定網路。有些 DHCP 伺服器會"
-"要求用戶端傳送特定的 DHCP 主機名稱，因而您可以選擇提供這個主機名稱並再次嘗試"
+"要求用戶端傳送特定的 DHCP 主機名稱，因而您可以選擇提供這個主機名稱並再次試著"
 "使用 DHCP 來自動設定網路。"
 
 #. Type: note
@@ -542,7 +542,7 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "您的網路很可能並不使用 DHCP 協定。而或者，是 DHCP 伺服器回應過慢，或是某些網"
-"路硬體未能正常作業。"
+"路硬體未能正常運作。"
 
 #. Type: boolean
 #. Description
@@ -560,10 +560,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)：那麼系統"
-"會無法知道該如何和 Internet 上的主機進行連線。除非您手上有 Debian 官方的第一"
-"張光碟、一個 'Netinst' 光碟、或是在您區域網路中可以取得所需套件，否則將會導致"
-"安裝作業無法繼續進行。"
+"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)；那麼系統"
+"會無法得知該如何和 Internet 上的主機進行連線。除非您手上有 Debian 官方的第一"
+"張光碟、或是 Netinst 光碟、或是在您區域網路中可以取得所需套件，否則將會導致安"
+"裝作業無法繼續進行。"
 
 #. Type: boolean
 #. Description
@@ -572,7 +572,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行：請向您區域網"
+"如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行；請向您區域網"
 "路的管理員反應這個問題。"
 
 #. Type: text
@@ -618,8 +618,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"您所提供的 IP 位址格式是錯誤的。它的格式應該像是 x.x.x.x，其中的每一個 x 都不"
-"可以超過 255。請再試一次。"
+"您所提供的 IP 位址的格式是錯誤的。它的格式應該像是 x.x.x.x，其中的每一個 x 都"
+"不可以超過 255。請再試一次。"
 
 #. Type: string
 #. Description
@@ -675,10 +675,10 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"閘道 (Gateway) 是用來指定閘道路由器，也常叫做預設路由器，的 IP 位址 (四個由句"
-"點分隔的數字)。所有通往區域網路外部的連線 (例如，連接上網際網路) 都要藉由這個"
-"路由器來傳送。在某些罕見情況裡，您可能沒有路由器﹔在此情況下，直接在欄位中留"
-"白即可。如果您不知道這個問題的適切答案，請洽詢您的網路管理員。"
+"閘道 (Gateway) 是用來指定閘道路由器（也常叫做預設路由器）的 IP 位址（四個由句"
+"點分隔的數字）。所有通往區域網路外部的連線（例如，連接上網際網路）都要藉由這"
+"個路由器來傳送。在某些罕見情況裡，您可能沒有路由器﹔在此情況下，直接在欄位中"
+"留白即可。如果您不知道這個問題的適切答案，請洽詢您的網路管理員。"
 
 #. Type: error
 #. Description
@@ -709,10 +709,8 @@ msgstr "這些資訊是否正確？"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "當前被設定的網路參數："
+msgstr "目前所設定的網路參數："
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
