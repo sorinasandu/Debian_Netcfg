@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-04-16 23:18+0900\n"
+"PO-Revision-Date: 2004-05-16 23:38+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -476,9 +476,8 @@ msgstr "시간이 좀 걸릴 수도 있습니다."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "고정 네트워크 설정"
+msgstr "네트워크 자동 설정이 성공했습니다!"
 
 #. Type: error
 #. Description
@@ -503,43 +502,38 @@ msgstr "DHCP 설정 단계가 중지되었습니다."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "고정 네트워크 설정"
+msgstr "네트워크 자동 설정 다시 시도"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "동적 네트워크 설정 (DHCP)"
+msgstr "네트워크 자동 설정 (DHCP 호스트 이름 포함) 다시 시도"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "네트워크 설정"
+msgstr "네트워크 수동 설정"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "네트워크 설정"
+msgstr "일단 네트워크 설정하지 않기"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "네트워크 설정"
+msgstr "네트워크 설정 방법:"
 
 #. Type: select
 #. Description
@@ -550,14 +544,13 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
+msgstr "네트워크 자동 설정이 실패했습니다. 이 네트워크에 있는 DHCP 서버가 느려서 그럴 수도 있으므로, 다시 시도하면 성공할 수도 있습니다. 이 네트워크에서 DHCP를 사용하지 않는 경우에는, 수동으로 설정할 수도 있습니다. 또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 사용해야 하는 경우가 있으므로, DHCP를 다시 시도하기 전에 호스트 이름을 입력할 수도 있습니다."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "네트워크 설정"
+msgstr "무선 네트워크 다시 설정"
 
 #. Type: text
 #. Description
@@ -688,7 +681,6 @@ msgstr "IP 주소, 네트마스크, 게이트웨이중에 잘못 입력한 게 �
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -698,8 +690,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " 인터페이스     = ${interface}\n"
-" 호스트 이름    = ${hostname}\n"
-" 도메인         = ${domain}\n"
 " IP주소         = ${ipaddress}\n"
 " 네트마스크     = ${netmask}\n"
 " 게이트웨이     = ${gateway}\n"
@@ -712,23 +702,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "고정 주소를 사용해 네트워크를 설정합니다"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "네트워크 설정 방법:"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC카드 (PCMCIA) 이더넷 혹은 토큰 링"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "DHCP 네트워크 설정을 다시 시도하시겠습니까?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "DHCP로 자동 네트워크 설정을 했지만 IP 주소를 받지 못했습니다.  DHCP 서버"
-#~ "는 가끔 아주 느릴 때가 있습니다. 원한다면 다시 시도할 수 있습니다."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "동적 주소 (DHCP), 고정 주소 (수동)"
