@@ -5,9 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-05-13 18:55+0200\n"
+"PO-Revision-Date: 2004-05-15 13:03+0100\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -542,7 +541,7 @@ msgstr "Ne pas configurer le réseau maintenant"
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid "Network configuration method:"
-msgstr "Méthode pour la configuration du réseau :"
+msgstr "Méthode pour la configuration du réseau :"
 
 #. Type: select
 #. Description
@@ -701,7 +700,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -711,8 +709,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 "  interface         = ${interface}\n"
-"  nom de machine    = ${hostname}\n"
-"  domaine           = ${domain}\n"
 "  adresse IP        = ${ipaddress}\n"
 "  masque-réseau     = ${netmask}\n"
 "  passerelle        = ${gateway}\n"
@@ -725,17 +721,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet ou Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Voulez-vous refaire la configuration du réseau avec DHCP ?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Aucune adresse n'a été donnée pendant la configuration du réseau avec "
-#~ "DHCP. Les serveurs DHCP sont parfois très lents. Si vous le souhaitez, "
-#~ "vous pouvez réessayer."
