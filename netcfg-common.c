@@ -270,23 +270,26 @@ int iface_is_hotpluggable(const char *iface)
     FILE* f = NULL;
     char buf[256];
     size_t len = strlen(iface);
-    int result = 0;
     
     if (!(f = fopen(DEVHOTPLUG, "r")))
-        return 0;
+    {
+      di_info("No hotpluggable devices are present in the system.");
+      return 0;
+    }
     
     while (fgets(buf, 256, f) != NULL)
     {
         if (!strncmp(buf, iface, len))
-        {
-            result = 1;
-            break;
-        }
+	{
+	  di_info("Detected %s as a hotpluggable device", iface);
+	  return 1;
+	}
     }
     
     fclose(f);
     
-    return result;
+    di_info("Hotpluggable devices available, but %s is not one of them", iface);
+    return 0;
 }
 
 FILE *file_open(char *path, const char *opentype)

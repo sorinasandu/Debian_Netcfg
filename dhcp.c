@@ -324,6 +324,28 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         {
           char buf[MAXHOSTNAMELEN + 1];
 
+          if ((d = fopen("/tmp/domain_name", "r")) != NULL)
+          {
+            fgets(buf, 65, d);
+            fclose(d);
+            unlink("/tmp/domain_name");
+          }
+
+          /* Seed the domain. We will prefer the domain name passed
+           * by the DHCP server if there is one. */
+          if (!empty_str(buf))
+          {
+            debconf_set(client, "netcfg/get_domain", buf);
+            have_domain = 1;
+          }
+          else if ((ptr = strchr(buf, '.')) != NULL)
+          {
+            debconf_set(client, "netcfg/get_domain", ptr + 1);
+            have_domain = 1;
+          }
+          else
+            have_domain = 0; /* shouldn't be needed, but what the hell */
+          
           /* dhcp hostname, ask for one with the dhcp hostname
            * as a seed */
           if (gethostname(buf, sizeof(buf)) == 0 && !empty_str(buf) && strcmp(buf, "(none)") != 0)
@@ -332,44 +354,22 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             char buf[65] = { 0 }; /* UTSNAME_LENGTH */
             FILE* d;
             debconf_set(client, "netcfg/get_hostname", buf);
-
-            if ((d = fopen("/tmp/domain_name", "r")) != NULL)
-            {
-              fgets(buf, 65, d);
-              fclose(d);
-              unlink("/tmp/domain_name");
-            }
-            
-            /* Seed the domain as well. We will prefer the domain name passed
-             * by the DHCP server if there is one. */
-            if (!empty_str(buf))
-            {
-              debconf_set(client, "netcfg/get_domain", buf);
-              have_domain = 1;
-            }
-            else if ((ptr = strchr(buf, '.')) != NULL)
-            {
-              debconf_set(client, "netcfg/get_domain", ptr + 1);
-              have_domain = 1;
-            }
-            else
-              have_domain = 0; /* shouldn't be needed, but what the hell */
           }
           else
-	  {
-	    struct ifreq ifr;
-	    struct in_addr d_ipaddr = { 0 };
+          {
+            struct ifreq ifr;
+            struct in_addr d_ipaddr = { 0 };
 
-	    ifr.ifr_addr.sa_family = AF_INET;
-	    strncpy(ifr.ifr_name, interface, IFNAMSIZ);
-	    if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0)
-	    {
-	      d_ipaddr = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr;
-	      seed_hostname_from_dns(client, &d_ipaddr);
-	    }
-	    else
-	      di_error("ioctl failed (%s)", strerror(errno));
-	  }
+            ifr.ifr_addr.sa_family = AF_INET;
+            strncpy(ifr.ifr_name, interface, IFNAMSIZ);
+            if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0)
+            {
+              d_ipaddr = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr;
+              seed_hostname_from_dns(client, &d_ipaddr);
+            }
+            else
+              di_error("ioctl failed (%s)", strerror(errno));
+          }
 
           state = HOSTNAME;
         }
