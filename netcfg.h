@@ -55,9 +55,7 @@ extern int is_interface_up (char *inter);
 
 extern void get_name (char *name, char *p);
 
-extern void getif_start ();
-
-extern void getif_end ();
+extern char** get_all_ifs (int all);
 
 extern char *get_ifdsc (struct debconfclient *client, const char *ifp);
 

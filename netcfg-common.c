@@ -147,48 +147,41 @@ void get_name(char *name, char *p)
     return;
 }
 
-
-static FILE *ifs = NULL;
-static char ibuf[512];
-
-void getif_start(void)
+char** get_all_ifs (int all)
 {
-    if (ifs != NULL) {
-        fclose(ifs);
-        ifs = NULL;
-    }
-    if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
-        fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
-        fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
-    }
-    return;
-}
+  FILE *ifs = NULL;
+  char ibuf[512], rbuf[512];
+  char** list = NULL;
+  size_t len = 0;
 
-
-char *getif(int all)
-{
-    char rbuf[512];
-    if (ifs == NULL)
-        return NULL;
-
-    if (fgets(rbuf, sizeof(rbuf), ifs) != NULL) {
-        get_name(ibuf, rbuf);
-        if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
-            return getif(all);      /* seriously doubt there is an infinite number of lo devices */
-        if (all || is_interface_up(ibuf) == 1)
-            return ibuf;
-    }
+  if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
+    fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
+    fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
+  }
+  else
     return NULL;
-}
 
-
-void getif_end(void)
-{
-    if (ifs != NULL) {
-        fclose(ifs);
-        ifs = NULL;
+  while (fgets(rbuf, sizeof(rbuf), ifs) != NULL)
+  {
+    get_name(ibuf, rbuf);
+    if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
+      continue;
+    if (all || is_interface_up(ibuf) == 1)
+    {
+      list = realloc(list, sizeof(char*) * (len + 1));
+      list[len] = strdup(ibuf);
+      len++;
     }
-    return;
+  }
+
+  /* OK, now terminate it if necessary */
+  if (list != NULL) 
+  {
+    list = realloc(list, sizeof(char*) * (len + 1));
+    list[len] = NULL;
+  }
+  fclose (ifs);
+  return list;
 }
 
 char *find_in_devnames(const char* iface)
@@ -321,7 +314,7 @@ void netcfg_die(struct debconfclient *client)
 int netcfg_get_interface(struct debconfclient *client, char **interface,
                          int *numif)
 {
-    char *inter;
+    char *inter, **ifs;
     size_t len;
     int ret;
     int num_interfaces = 0;
@@ -339,9 +332,9 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     len = 128;
     *ptr = '\0';
 
-    getif_start();
+    ifs = get_all_ifs(1);
 
-    while ((inter = getif(1)) != NULL) {
+    while (ifs && (inter = *ifs) != NULL) {
 	size_t newchars;
 
 	interface_down(inter);
@@ -355,8 +348,8 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
         num_interfaces++;
         free(ifdsc);
+        ifs++;
     }
-    getif_end();
 
     if (num_interfaces == 0) {
         debconf_input(client, "high", "netcfg/no_interfaces");
