@@ -1,0 +1,542 @@
+#    Chinese (Traditional) translation for debian-installer/tools/netcfg
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer/tools/netcfg\n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"PO-Revision-Date: 2004-01-30 08:53+1300\n"
+"Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
+"Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:4
+msgid "Dynamic addressing (DHCP), Static addressing (manual)"
+msgstr "動態位址 (DHCP), 靜態位址 (手動設定)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid "Network configuration method:"
+msgstr "網路設定方式："
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
+msgstr ""
+"網路可以由 DHCP 來加以設定，或者手動輸入所有資訊。如果您指定使用 DHCP，但"
+"安裝程式無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，"
+"您仍然可以經由手動輸入來設定網路。如果不確定，請選擇使用 DHCP。"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid "Domain name:"
+msgstr "網域名稱："
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"網域名稱 (Domain Name) 是您的網際網路位址中，主機名稱之後的那一部分。"
+"它通常是以 .com、.net、.edu 或 .org 結尾。如果您正在設定的是家用網路，"
+"您可以隨意取一個，但是要確保您在所有電腦上所使用的網域名稱都是一樣的。"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid "Name server addresses:"
+msgstr "名稱伺服器位址："
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
+msgstr ""
+"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器 (Name Server) 的 IP 位址 (不是主機名稱) 。"
+"在進行查詢時將優先使用列表中的第一個伺服器。如果不想用任何名稱伺服器，"
+"直接在欄位中留白即可。"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid "Primary network interface:"
+msgstr "主要網路介面："
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid ""
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
+msgstr "您的系統有多個網路介面。請選擇其中之一來做為 Debian 安裝時的主要網路介面。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:38
+msgid "Error while activating the network"
+msgstr "在啟動網路時發生錯誤"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:38
+msgid "An error occurred while activating the network."
+msgstr "在啟動網路的過程中發生錯誤。"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid "Hostname:"
+msgstr "主機名稱："
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid "Please enter the hostname for this system."
+msgstr "請輸入系統的主機名稱。"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"主機名稱 (HostName) 是用來在網路中辨別您的系統的一個單字。如果您不知道系統的主機名稱應該是什麼，"
+"請洽詢您的網路管理員。如果您正在設定的是自己的家用網路，那麼可以隨意取個名字。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid "Invalid hostname"
+msgstr "不正確的主機名稱"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid "The name \"${hostname}\" is invalid."
+msgstr "名稱“${hostname}”是不正確的。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr ""
+"正確的主機名稱應當只包含 字母、數字 和 減號。它的長度必須在 2 到 63 個字元之間，"
+"且不能以減號開頭或結尾。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:63
+msgid "Error"
+msgstr "錯誤"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:63
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr "發生錯誤，且網路設定作業已經中止。您可以從安裝程序主選單來重新嘗試。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid "No network interfaces detected"
+msgstr "探測不到任何網路介面"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr "找不到任何網路介面。安裝系統無法找到網路設備。"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr ""
+"如果有的話，您可能必須載入您的網路卡的專用模組。請返回到網路硬體"
+"偵測步驟來進行這個動作。"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:78
+msgid "<none>"
+msgstr "<無>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:82
+msgid "Ethernet or Fast Ethernet"
+msgstr "以太網路或高速乙太網路"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:86
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC 卡 (PCMCIA) 以太網路或 Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:90
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:94
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:98
+msgid "Serial-line IP"
+msgstr "Serial-line IP (SLIP)"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:102
+msgid "Parallel-port IP"
+msgstr "Parallel-port IP (PLIP)"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:106
+msgid "Point-to-Point Protocol"
+msgstr "點對點通訊協定 (PPP)"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:110
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:114
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN 點對點通訊協定"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:118
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:122
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:126
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:130
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:134
+msgid "Unknown interface"
+msgstr "不明介面"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:139
+msgid "Network Configuration"
+msgstr "網路設定"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:144
+msgid "Configure the network"
+msgstr "設定網路"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP 主機名稱："
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"您可能需要提供一個 DHCP 主機名稱。如果您所使用的是 cable modem，可能還得在此指定一個帳號。"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "其他大多數的使用者可以在此直接留白。"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
+#: ../netcfg-static.templates:47
+msgid "Is this information correct?"
+msgstr "這些資訊正確嗎？"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
+#: ../netcfg-static.templates:47
+msgid "Currently configured network parameters:"
+msgstr "當前被設定的網路參數："
+
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" 介面           = ${interface}\n"
+" 主機名稱       = ${hostname}\n"
+" 網域名稱       = ${domain}\n"
+" DHCP 主機名稱  = ${dhcp_hostname}\n"
+" 名稱伺服器     = ${nameservers}"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "Configuring the network with DHCP"
+msgstr "使用 DHCP 來設定網路"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:27
+msgid "This may take some time."
+msgstr "這將會花上一些時間。"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr "找不到 DHCP 客戶端"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "找不到 DHCP 客戶端。這個套件需要安裝 pump 或者 dhcp-client。"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr "DHCP 的網路設定程序將被中止。"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "您想要重新嘗試由 DHCP 來設定網路嗎？"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. If you wish, you can retry."
+msgstr ""
+"在經由 DHCP 來設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常慢，"
+"如果您希望的話可以重新嘗試。"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "動態網路設定 (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "使用動態位址 (DHCP) 來設定網路"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "IP 位址："
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"您的電腦有個獨一無二的 IP 位址，它是由四個用句點分隔的數字所組成。"
+"如果您不知道在這裡應該填什麼，請洽詢您的網路管理員。"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Point-to-point address:"
+msgstr "點對點位址："
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr ""
+"點對點位址 (Point-to-Point Address) 是用來決定點對點網路的另一個端點。"
+"如果您不知道位址，請洽詢您的網路管理員。"
+"點對點位址應該是由四個用句點分隔的數字所組成。"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask:"
+msgstr "網路遮罩："
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"網路遮罩 (NetMask) 是用來決定哪些機器是位於您的區域網路中。"
+"如果您不知道這個遮罩值，請洽詢您的網路管理員。"
+"網路遮罩應該是由四個用句點分隔的數字所組成。"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway:"
+msgstr "閘道："
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr ""
+"閘道 (Gateway) 是用來指定閘道路由器，也常叫做預設路由器，的 IP 位址 (四個用句點分隔的數字) 。"
+"所有通往區域網路外部的連線 (例如，連接上網際網路) 都要藉由這個路由器來傳送。"
+"在某些罕見情況裡，您可能沒有路由器﹔在此情況下，直接在欄位中留白即可。"
+"如果您不知道這個問題的適切答案，請洽詢您的網路管理員。"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "Unreachable gateway"
+msgstr "無法通連的閘道"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "The gateway address you entered is unreachable."
+msgstr "您所輸入的閘道位址是無法通連的。"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
+
+#: ../netcfg-static.templates:47
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" 介面          = ${interface}\n"
+" 主機名稱      = ${hostname}\n"
+" 網域名稱      = ${domain}\n"
+" IP 位址       = ${ipaddress}\n"
+" 網路遮罩      = ${netmask}\n"
+" 閘道          = ${gateway}\n"
+" 點對點        = ${pointopoint}\n"
+" 名稱伺服器    = ${nameservers}"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-static.templates:62
+msgid "Static network configuration"
+msgstr "靜態網路設定"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:67
+msgid "Configure a network using static addressing"
+msgstr "使用靜態位址來設定網路"
+
