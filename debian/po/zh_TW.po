@@ -12,9 +12,10 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-13 12:30+0200\n"
-"PO-Revision-Date: 2004-07-25 18:08+0800\n"
-"Last-Translator:  Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Chinese Traditional <tetralet@pchome.com.tw>\n"
+"PO-Revision-Date: 2004-09-29 22:22+0800\n"
+"Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
+"debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,13 +89,13 @@ msgstr "主要網路介面："
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"您的系統有多個網路介面。請選擇其中之一來做為 Debian 安裝時的主要網路介面。"
+"您的系統有多個網路介面。請選擇其中之一來做為安裝 Debian 時的主要網路介面。如"
+"果可能，已指定為第一個被找到的已連線之網路介面。"
 
 #. Type: string
 #. Description
@@ -227,14 +228,13 @@ msgstr "名稱“${hostname}”是不正確的。"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"正確的主機名稱應當只包含 字母、數字 和 減號。它的長度必須在 2 至 63 個字元之"
-"間，且應當不能以減號開頭或結尾。"
+"正確的主機名稱應當只包含了 數字 0-9、小寫字母 a-z 和 減號。它的長度必須在 2 "
+"至 63 個字元之間，且應當不能以減號開頭或結尾。"
 
 #. Type: error
 #. Description
@@ -516,7 +516,6 @@ msgstr "網路的設定方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -524,8 +523,8 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"您可以在此選擇重新試著使用 DHCP 來自動設定網路，（如果是因為您的 DHCP 伺服器"
-"的回應時間較長，那有可能會成功）﹔或是試著手動來設定網路。有些 DHCP 伺服器會"
+"您可以在此選擇再一次試著使用 DHCP 來自動設定網路，（如果是因為您的 DHCP 伺服"
+"器的回應時間較長，那可能會奏效）﹔或是試著手動來設定網路。有些 DHCP 伺服器會"
 "要求用戶端傳送特定的 DHCP 主機名稱，因而您可以選擇提供這個主機名稱並再次嘗試"
 "使用 DHCP 來自動設定網路。"
 
