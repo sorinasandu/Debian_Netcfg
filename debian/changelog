@@ -12,6 +12,7 @@ netcfg (0.57) UNRELEASED; urgency=low
       add a template for its question. Note: needs translation.
     - Make interfaces honor the decision made in the adhoc/managed question.
     - Make sure the WEP question, priority high, always gets asked.
+    - No gateway, no point-to-point address is OK. (Closes: #238653)
     - If netcfg/get_hostname returns a FQDN, seed netcfg/get_domain with it
       and do not ask that question a second time. Only ask it if FQDN was
       _not_ passed. (Closes: #174360)
@@ -20,7 +21,7 @@ netcfg (0.57) UNRELEASED; urgency=low
     po files. A record of your contributions will be added to the changelog
     at package release time by the output-l10n-changes program.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Fri, 19 Mar 2004 13:00:49 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Fri, 19 Mar 2004 18:30:38 -0800
 
 netcfg (0.56) unstable; urgency=low
 

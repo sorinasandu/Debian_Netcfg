@@ -543,6 +543,9 @@ int netcfg_get_pointopoint(struct debconfclient *client)
       if (ret)  
 	return ret;
 
+      if (empty_str(ptr)) /* No P-P is ok */
+	return 0;
+      
       ok = inet_pton (AF_INET, ptr, &pointopoint);
       
       if (!ok)
@@ -608,6 +611,9 @@ int netcfg_get_gateway(struct debconfclient *client)
       ret = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
       if (ret)  
 	return ret;
+
+      if (empty_str(ptr)) /* No gateway, that's fine */
+	return 0;
 
       ok = inet_pton (AF_INET, ptr, &gateway);
       
