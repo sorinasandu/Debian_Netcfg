@@ -9,20 +9,23 @@
 # Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
 # Eugene Konev <ejka@imfi.kspu.ru>, 2004.
 # Yuri Kozlov <yuray@id.ru>, 2004.
+# Yuriy Talakan' <yt@amur.elektra.ru>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-13 09:01+0400\n"
-"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
+"PO-Revision-Date: 2004-07-06 11:46+0200\n"
+"Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -266,8 +269,8 @@ msgstr "Ошибка"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Произошла ошибка и процесс настройки сети был прерван. Вы можете повторить "
 "его из меню установки."
@@ -542,7 +545,6 @@ msgstr "Метод настройки сети:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -560,9 +562,8 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Автоматическая настройка сети прошла успешно"
+msgstr "Сбой автоматической настройки сети"
 
 #. Type: note
 #. Description
@@ -571,12 +572,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Скорее всего, в вашей сети не используется протокол DHCP. Еще возможно, что "
+"сервер DHCP медленный или какое-то сетевое оборудование работает неправильно."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Продолжить без пути по умолчанию?"
 
 #. Type: boolean
 #. Description
@@ -588,6 +591,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Автонастройка сети прошла успешно. Однако, путь по умолчанию не установлен: "
+"система не знает, как связаться с машинами в Интернете. Это может сделать "
+"продолжение установки невозможным, если у вас нет первого официального "
+"компакт-диска Debian ('Netinst'), или пакетов, доступных по локальной сети."
 
 #. Type: boolean
 #. Description
@@ -596,6 +603,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Если вы не уверены, не продолжайте установку без пути по умолчанию: "
+"свяжитесь с администратором вашей локальной сети насчет этой проблемы."
 
 #. Type: text
 #. Description
@@ -764,6 +773,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Автоматическая настройки сети (по DHCP протоколу)"
