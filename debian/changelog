@@ -2,11 +2,14 @@ netcfg (0.71) UNRELEASED; urgency=low
 
   * Joshua Kwan
     - Remove XSIisms in dhclient-script.
-    - Patch by Thomas Hood to change interfaces options that use underscores
-      to hyphens. No loss of functionality. (Closes: #255185)
     - Evaluate argv[0] after calling basename on it so that we can strcmp it
-      against "ptom".
+      against "ptom". It somehow didn't happen in the internal dhclient-script
+      context, but appeared during testing in the shell.
   * Thomas Hood
+    - Change interfaces options that use underscore to hyphens. No loss
+      of functionality. (Closes: #255185)
+    - Add comment to /e/n/i about who implements the wireless-* options
+      (viz., the wireless-tools package)
     - static.c:
       + Add resolvconf support (Closes: #255187)
       + Add comments to /e/n/i about which packages implement which options
