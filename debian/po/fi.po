@@ -1,30 +1,18 @@
-# translation of fi.po to Finnish
-# translation of netcfg to Finnish
-# Translators, if you are not familiar with the PO format, gettext
-# documentation is worth reading, especially sections dedicated to
-# this format, e.g. by running:
-# info -n '(gettext)PO Files'
-# info -n '(gettext)Header Entry'
-# Some information specific to po-debconf are available at
-# /usr/share/doc/po-debconf/README-trans
-# or http://www.debian.org/intl/l10n/po-debconf/README-trans
-# Developers do not need to manually edit POT or PO files.
-# Tommi Vainikainen <thv+debian@iki.fi>, 2003.
-# Tapio Lehtonen <tale@debian.org>, 2004.
-# 
-# 
+# Finnish messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-31 21:51-0700\n"
-"PO-Revision-Date: 2004-08-15 19:52+0300\n"
-"Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
-"Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
+"POT-Creation-Date: 2004-09-01 09:36+0200\n"
+"PO-Revision-Date: 2004-09-03 17:14+0200\n"
+"Last-Translator:  Tapio Lehtonen <tale@debian.org>\n"
+"Language-Team:  Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
@@ -741,8 +729,6 @@ msgstr "Ovatko nämä tiedot oikein?"
 msgid "Currently configured network parameters:"
 msgstr "Verkkoasetukset ovat nyt:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -765,78 +751,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Tee verkkoasetukset itse"
-
-#, fuzzy
-#~ msgid "Configure the network statically?"
-#~ msgstr "Tee verkkoasetukset käsin"
-
-#~ msgid ""
-#~ "${IFACE} does not seem to be connected to any sort of network. This could "
-#~ "be due to a missing network cable or network adapter malfunction. You can "
-#~ "either forego configuring the network until you reboot into Debian and "
-#~ "use the etherconf utility, or configure the network statically. You can "
-#~ "also go back and choose a different interface."
-#~ msgstr ""
-#~ "${IFACE} ei näytä olevan kytketty minkäänlaiseen verkkoon. Tämä voi "
-#~ "johtua puuttuvasta kaapelista tai verkkosovittimen viasta. Verkon "
-#~ "asetukset voidaan tehdä vasta Debianin uudelleenkäynnistyksen jälkeen "
-#~ "käyttäen apuohjelmaa etherconf tai tehdä pysyvät verkon asetukset. Voit "
-#~ "myös palata takaisin valitsemaan jonkun muun verkkoliitännän."
-
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Jatketaanko tekemättä verkkoasetuksia?"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Verkkoasetusten haku automaattisesti (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " sovitin        = ${interface}\n"
-#~ " konenimi       = ${hostname}\n"
-#~ " toimialue      = ${domain}\n"
-#~ " dhcp-konenimi  = ${dhcp_hostname}\n"
-#~ " nimipalvelimet = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Miten verkkoasetukset tehdään:"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card(PCMCIA)-Ethernet tai -Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Yritetäänkö uudestaan verkkoasetusten automaattista hakua?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskus "
-#~ "tosi hitaita, jos haluat voidaan yrittää uudestaan."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Hae verkkoasetukset automaattisesti (DHCP) tai tee asetukset itse"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Tapahtui virhe käynnistettäessä verkkoa"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Virhe verkkoyhteyttä käynnistettäessä."
-
-#~ msgid "Interface:"
-#~ msgstr "Verkkoliitäntä:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
-#~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
-#~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
