@@ -2,21 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2002-10-20 23:12+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2002-10-22 18:24+0200\n"
+"Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
+"Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #. Description
 #: ../netcfg-common.templates:3
@@ -100,7 +99,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Maskinnavnet \"${hostname}\" er ugyldigt."
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -109,6 +108,9 @@ msgid ""
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
+"Gyldige maskinnavne indeholder kun bogstaver, tal og minustegn, er "
+"mellem 2 og 63 tegn lange - og starter og slutter ikke med et "
+"minustegn."
 
 #. Description
 #: ../netcfg-common.templates:48
@@ -127,16 +129,15 @@ msgstr "Der blev ikke fundet nogen netkort."
 
 #. Description
 #: ../netcfg-common.templates:53
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
 "is possible that the module for it hasn't been selected yet.  Go back to "
 "'Configure network hardware'."
 msgstr ""
-"Der blev ikke fundet nogen netkort. Hvis du har et netkort, kan det være at "
-"dets modul ikke er blevet valgt endnu.\n"
-" Gå tilbage til 'Sæt netværksudstyr op'."
+"Der blev ikke fundet nogen netkort. Det vil sige at installationssystemet ikke "
+"kunne finde et netkort. Hvis du har et netkort, kan det være at "
+"dets modul endnu ikke er blevet valgt. Gå tilbage til 'Sæt netværksudstyr op'."
 
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -145,7 +146,6 @@ msgstr "Hvad er dit dhcp-værtsnavn?"
 
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "In some situations, you may need to supply a DHCP host name.  These "
 "situations are rare.  Most commonly, it applies to cable modem users. If you "
@@ -153,7 +153,7 @@ msgid ""
 "Otherwise, you can just leave this blank."
 msgstr ""
 "I nogle situationer er det nødvendigt at angive et DHCP-værtsnavn. Det er "
-"dog sjældent nødvendigt. Oftest kan det ske for brugere af kabelmodemmer. "
+"dog sjældent nødvendigt. Oftest gælder det brugere af kabelmodemmer. "
 "Hvis du bruger kabelmodem, skal du muligvis angive et kontonummer her. "
 "Ellers kan du blot lade feltet være tomt."
 
@@ -185,8 +185,7 @@ msgstr "Jeg vil nu sætte netværket op."
 #. Description
 #: ../netcfg-dhcp.templates:21
 msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr ""
-"Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
+msgstr "Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
@@ -216,22 +215,20 @@ msgstr ""
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Pointopoint address?"
-msgstr "IP-adresse?"
+msgstr "punkt-til-punkt-adresse?"
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The pointopoint address is used to determine the other endpoint of the point "
 "to point network.  Consult your network administrator if you do not know the "
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
-"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
-"Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
-"angives som fire tal adskilt af punktummer."
+"Punkt-til-punkt-adressen bruges til at definere den anden ende af et "
+"punkt-til-punkt-netværk. Spørg din netværksadministrator hvis du ikke kender "
+"værdien. Netmasken skal angives som fire tal adskilt af punktummer."
 
 #. Description
 #: ../netcfg-static.templates:18
@@ -245,7 +242,7 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
+"Netmasken bruges til at afgøre hvilke maskiner der er lokale på dit netværk. "
 "Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
 "angives som fire tal adskilt af punktummer."
 
@@ -278,8 +275,7 @@ msgstr "Den angivne gateway kan ikke nåes."
 
 #. Description
 #: ../netcfg-static.templates:36
-msgid ""
-"You may have made an error entering your ipaddress, netmask and/or gateway."
+msgid "You may have made an error entering your ipaddress, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -291,7 +287,6 @@ msgstr "Er denne opsætning korrekt?"
 
 #. Description
 #: ../netcfg-static.templates:43
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -302,16 +297,18 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" netkort       = ${interface}\n"
-" maskinnavn    = ${hostname}\n"
-" domæne        = ${domain}\n"
-" IP-adresse    = ${ipaddress}\n"
-" netmaske      = ${netmask}\n"
-" gateway       = ${gateway}\n"
-" navneservere  = ${nameservers}"
+" netkort         = ${interface}\n"
+" maskinnavn      = ${hostname}\n"
+" domæne          = ${domain}\n"
+" IP-adresse      = ${ipaddress}\n"
+" netmaske        = ${netmask}\n"
+" gateway         = ${gateway}\n"
+" punkt-til-punkt = ${pointopoint}\n"
+" navneservere    = ${nameservers}"
 
 #~ msgid "${ifchoices}"
 #~ msgstr "${ifchoices}"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
