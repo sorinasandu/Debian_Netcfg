@@ -1,3 +1,11 @@
+netcfg (0.39) unstable; urgency=high
+
+   * Reverted Thiemo Seufer's "code cleanup", which broke the state machine
+     and made netcfg hang after getting a dhcp lease. Test before committing,
+     people!
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 26 Dec 2003 13:35:58 -0500
+
 netcfg (0.38) unstable; urgency=low
 
   * Peter Mann
