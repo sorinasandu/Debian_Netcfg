@@ -186,11 +186,44 @@ void getif_end(void)
     return;
 }
 
+char *find_in_devnames(const char* iface)
+{
+#define DEVNAMES "/etc/network/devnames"
+  FILE* dn = NULL;
+  char buf[512], *result = NULL;
+  size_t len = strlen(iface);
+
+  if (!(dn = fopen(DEVNAMES, "r")))
+    return NULL;
+
+  while (fgets(buf, 512, dn) != NULL)
+  {
+    char *ptr = strchr(buf, ':'), *desc = ptr + 1;
+
+    if (!ptr)
+    {
+      result = NULL; /* corrupt */
+      break;
+    }
+    else if (!strncmp(buf, iface, len))
+    {
+      result = strdup(desc);
+      break;
+    }
+  }
+
+  fclose(dn);
+
+  return result;
+}
 
 char *get_ifdsc(struct debconfclient *client, const char *ifp)
 {
-    char template[256];
+    char template[256], *ptr = NULL;
 
+    if ((ptr = find_in_devnames(ifp)) != NULL)
+      return ptr; /* already strdup'd */
+    
     if (strlen(ifp) < 100) {
       if (!is_wireless_iface(ifp))
       {
