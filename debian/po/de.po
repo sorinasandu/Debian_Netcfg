@@ -1,5 +1,4 @@
-# translation of de.po to 
-# translation of debian-installer to German
+# translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
@@ -12,7 +11,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-25 06:56+0100\n"
-"PO-Revision-Date: 2004-01-12 23:32+0100\n"
+"PO-Revision-Date: 2004-02-25 18:20+0100\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +107,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "ESSID für ${iface}:"
 
 #. Type: string
 #. Description
@@ -118,12 +117,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} ist ein drahtloses Netzwerkinterface. Bitte geben Sie den Namen "
+"(die ESSID) des drahtlosen Netzwerks an, das ${iface} verwenden soll. Wenn "
+"Sie irgendein verfügbares Netzwerk verwenden möchten, lassen Sie dieses "
+"Feld leer."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "WEP-Schlüssel für ${iface}:"
 
 #. Type: string
 #. Description
@@ -132,6 +135,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Falls notwendig, geben Sie den WEP-Sicherheitsschlüssel für das Gerät "
+"${iface} an. Es gibt zwei Möglichkeiten, dies zu tun:"
 
 #. Type: string
 #. Description
@@ -140,6 +145,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
+"Wenn Ihr WEP-Schlüssel im Format 'nnnn-nnnn-nn' oder 'nnnnnnnn', wobei n "
+"eine Ziffer ist, geben Sie ihn einfach wie er ist in dieses Feld ein."
 
 #. Type: string
 #. Description
@@ -148,6 +155,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein 's:' "
+"(ohne Anführungszeichen) voran."
 
 #. Type: string
 #. Description
@@ -156,12 +165,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Wenn es für Ihr drahtloses Netzwerk keinen WEP-Schlüssel gibt, lassen Sie "
+"dieses Feld leer."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Ungültiger WEP-Schlüssel"
 
 #. Type: error
 #. Description
@@ -170,12 +181,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"Der WEP-Schlüssel '${wepkey}' ist ungültig. Bitte beachten Sie die "
+"Anweisungen auf dem nächsten Bildschirm über die korrekte Eingabe des "
+"WEP-Schlüssels und versuchen Sie es noch einmal."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Ungültige ESSID"
 
 #. Type: error
 #. Description
@@ -184,6 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"Die ESSID \"${essid}\" ist ungültig. ESSIDs dürfen nur 32 Zeichen lang sein, "
+"können aber alle Arten von Zeichen enthalten."
 
 #. Type: string
 #. Description
@@ -288,7 +304,7 @@ msgstr "<nichts>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Drahtloses Ethernet (802.11x)"
 
 #. Type: text
 #. Description
@@ -385,9 +401,8 @@ msgstr "Netzwerkkonfiguration"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
 msgid "Configuring network ..."
-msgstr "Das Netzwerk wird jetzt konfiguriert"
+msgstr "Konfiguriere das Netzwerk ..."
 
 #. Type: text
 #. Description
@@ -469,8 +484,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -508,8 +522,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -532,9 +545,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP-Adresse:"
+msgstr "Ungültige IP-Adresse"
 
 #. Type: error
 #. Description
@@ -543,6 +555,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Die von Ihnen angegebene IP-Adresse ist ungültig. Sie sollte die Form "
+"x.x.x.x haben, wobei jedes 'x' nicht größer als 255 ist. Bitte versuchen "
+"Sie es noch einmal."
 
 #. Type: string
 #. Description
@@ -622,8 +637,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -712,3 +726,4 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
+
