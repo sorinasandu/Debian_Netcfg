@@ -20,7 +20,6 @@
 
 */
 
-#include <iwlib.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -67,6 +66,7 @@ int main(int argc, char *argv[])
     di_system_init("netcfg");
 
     parse_args (argc, argv);
+    open_sockets();
 
     /* initialize debconf */
     client = debconfclient_new();
@@ -136,8 +136,6 @@ int main(int argc, char *argv[])
 	    break;
 
         case WCONFIG:
-	    if (!wfd)
-	      wfd = iw_sockets_open();
 	    if (requested_wireless_tools == 0)
 	    {
 	      di_exec_shell_log("apt-install wireless-tools");

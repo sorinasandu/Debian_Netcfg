@@ -2,8 +2,8 @@
 # Sample debian/rules that uses debhelper.
 # GNU copyright 1997 to 1999 by Joey Hess.
 
-PACKAGES=$(shell dh_listpackages)
-DHCP_PACKAGES=netcfg netcfg-dhcp
+PACKAGES	= $(shell dh_listpackages)
+DHCP_PACKAGES	= netcfg netcfg-dhcp
 
 build: build-stamp
 build-stamp:
@@ -28,10 +28,9 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	dh_installdirs -A usr/lib/prebaseconfig.d etc/network
+	dh_installdirs -A usr/lib/prebaseconfig.d etc/network bin
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
-	  mkdir -p debian/$(PACKAGE)/bin; \
 	  install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
 	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; \
 	  ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )

@@ -20,7 +20,6 @@
    
 */
 
-#include <iwlib.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -38,12 +37,11 @@ int main(int argc, char *argv[])
 
     enum { BACKUP, GET_INTERFACE, WCONFIG, WCONFIG_WEP, WCONFIG_ESSID, QUIT } state = GET_INTERFACE;
 
-    wfd = iw_sockets_open();
-
     /* initialize libd-i */
     di_system_init("netcfg-dhcp");
 
     parse_args(argc, argv);
+    open_sockets();
 
     /* initialize debconf */
     client = debconfclient_new();

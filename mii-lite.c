@@ -31,7 +31,6 @@
 
 typedef unsigned short u16;
 
-int skfd = -1;			/* AF_INET socket for ioctl() calls.	*/
 struct ifreq ifr;
 int new_ioctl_nums;
 
@@ -42,13 +41,6 @@ mii_diag_status_lite (char *ifname)
 {
   u16 *data = NULL;
   
-  /* Open a basic socket. */
-  if ((skfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
-  {
-    di_error("Couldn't open skfd!");
-    return DUNNO;
-  }
-
   /* Verify that the interface supports the ioctl(), and if
      it is using the new or old SIOCGMIIPHY value (grrr...).
      */
@@ -63,7 +55,6 @@ mii_diag_status_lite (char *ifname)
   else if (ioctl(skfd, SIOCDEVPRIVATE, &ifr) >= 0)
     new_ioctl_nums = 0;
   else {
-    close(skfd);
     return DUNNO;
   }
 
@@ -74,7 +65,6 @@ mii_diag_status_lite (char *ifname)
   }
   else
   {
-    close(skfd);
     di_info("ioctl: media state for %s is: connected", ifname);
     return DHCP;
   }

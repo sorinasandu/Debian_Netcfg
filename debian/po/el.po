@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-05-16 17:16EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -166,7 +166,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ""
+"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -300,7 +301,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr ""
+"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -460,61 +462,33 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "Οι περισσότεροι χρήστες μπορούν να αφήσουν το πεδίο κενό."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Είναι οι παρακάτω ρυθμίσεις σωστές;"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "Τρέχουσες ρυθμίσεις δικτύου:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-"Διασύνδεση            = ${interface}\n"
-"Όνομα υπολογιστή      = ${hostname}\n"
-"Τομέας δικτύου        = ${domain}\n"
-"Όνομα DHCP            = ${dhcp_hostname}\n"
-"Διακομιστές ονομάτων  = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Ρύθμιση του δικτύου μέσω DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Η διαδικασία ίσως διαρκέσει μερικά λεπτά."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής!"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Δε βρέθηκε πρόγραμμα πελάτης DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Δε βρέθηκε πρόγραμμα πελάτης DHCP. Το πακέτο αυτό απαιτεί την ύπαρξη του "
@@ -522,49 +496,49 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Η διαδικασία ρύθμισης DHCP θα τερματιστεί."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
 msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δικτύου"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δικτύου με όνομα DHCP"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
 msgstr "Χειροκίνητη ρυθμίση του δικτύου"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
 msgstr "Να μη γίνει ρυθμίση του δικτύου σε αυτό το σημείο"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
 msgstr "Μέθοδος ρύθμισης δικτύου: "
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -581,21 +555,21 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
 msgstr "Επαναρυθμίση ασύρματου δικτύου"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Δυναμική ρύθμιση δικτύου (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Αυτόματη ρύθμιση δικτύου μέσω δυναμικής διευθυνσιοδότησης DHCP."
 
@@ -711,10 +685,23 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Είναι οι παρακάτω ρυθμίσεις σωστές;"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Τρέχουσες ρυθμίσεις δικτύου:"
 
 #. Type: boolean
 #. Description
@@ -741,3 +728,15 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
 
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ "Διασύνδεση            = ${interface}\n"
+#~ "Όνομα υπολογιστή      = ${hostname}\n"
+#~ "Τομέας δικτύου        = ${domain}\n"
+#~ "Όνομα DHCP            = ${dhcp_hostname}\n"
+#~ "Διακομιστές ονομάτων  = ${nameservers}"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-05-16 21:00+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -154,7 +154,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr ""
+"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -162,7 +163,8 @@ msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik ga
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
+msgstr ""
+"Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -451,109 +453,82 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "Beste erabiltzaileek hau hutsik utz dezakete."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Informazioa hau ondo dago?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "Une honetan konfiguratutako sare parametroak:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" interfazea           = ${interface}\n"
-" ostalari izena       = ${hostname}\n"
-" domeinua             = ${domain}\n"
-" dhcp ostalaria       = ${dhcp_hostname}\n"
-" izen zerbitzariak    = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Sarea DHCP bidez konfiguratzen"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Honek denbora bat artu lezake."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Sare autokonfiguraizioa egoki amaitu da"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Ez da DHCP bezeroa aurkitu"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr ""
+"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP konfigurazio prozesua ezeztatu egingo da."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
 msgstr "Sare autokonfiguraizioa berriz saiatu"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Sare autkonfigurazioa berriz saiatu DHCP ostalari izen batekin"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
 msgstr "Sarea eskuz konfiguratu"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
 msgstr "Sarea ez momentu honetan konfiguratu"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
 msgstr "Sare Konfigurazioa modua:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -564,27 +539,26 @@ msgstr ""
 "Sare autokonfigurazioak huts egin du. Hau DHCP zerbitzari geldo baten errua "
 "izan liteke, eta ziurrenik berriz saiatu beharko zenuke. Zure sareak ez badu "
 "DHCP zerbitzaririk eskuz konfiguratu dezakezu. Izan liteke ere DHCP "
-"Zerbitzari "
-"batzuek DHCP ostalari izen berezi bat behar izatea, orduan zuk izen hori ezarri "
-"beharko zenuke DHCP eskaria egin aurretik."
+"Zerbitzari batzuek DHCP ostalari izen berezi bat behar izatea, orduan zuk "
+"izen hori ezarri beharko zenuke DHCP eskaria egin aurretik."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
 msgstr "Kablegabeko Sarea birkonfiguratu"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Sare Konfigurazio Dinamikoa (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sarea helbide dinamikoak (DHCP) erabiliaz konfiguratu"
 
@@ -698,10 +672,23 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo "
 "atebidea sartzerakoan."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Informazioa hau ondo dago?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Une honetan konfiguratutako sare parametroak:"
 
 #. Type: boolean
 #. Description
@@ -728,6 +715,19 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " interfazea           = ${interface}\n"
+#~ " ostalari izena       = ${hostname}\n"
+#~ " domeinua             = ${domain}\n"
+#~ " dhcp ostalaria       = ${dhcp_hostname}\n"
+#~ " izen zerbitzariak    = ${nameservers}"
+
 #~ msgid "Next network configuration step:"
 #~ msgstr "Sare konfigurazio hurrengo pausua:"
 
@@ -744,4 +744,3 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
 #~ "DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
 #~ "ebrriz saia zaitezke."
-

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-05-16 23:38+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -433,61 +433,33 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "대부분의 사용자들은 이 칸은 비워두면 됩니다."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "이 정보가 맞습니까?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "현재 설정된 네트워크 인수:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" 인터페이스      = ${interface}\n"
-" 호스트 이름     = ${hostname}\n"
-" 도메인          = ${domain}\n"
-" DHCP 호스트이름 = ${dhcp_hostname}\n"
-" 네임서버        = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "DHCP로 네트워크를 설정하는 중입니다"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "시간이 좀 걸릴 수도 있습니다."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded!"
 msgstr "네트워크 자동 설정이 성공했습니다!"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "DHCP 클라이언트를 찾을 수 없습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP 클라이언트를 찾을 수 없습니다. 이 꾸러미는 pump나 dhcp-client가 필요합니"
@@ -495,74 +467,79 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 설정 단계가 중지되었습니다."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
 msgstr "네트워크 자동 설정 다시 시도"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "네트워크 자동 설정 (DHCP 호스트 이름 포함) 다시 시도"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
 msgstr "네트워크 수동 설정"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
 msgstr "일단 네트워크 설정하지 않기"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
 msgstr "네트워크 설정 방법:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr "네트워크 자동 설정이 실패했습니다. 이 네트워크에 있는 DHCP 서버가 느려서 그럴 수도 있으므로, 다시 시도하면 성공할 수도 있습니다. 이 네트워크에서 DHCP를 사용하지 않는 경우에는, 수동으로 설정할 수도 있습니다. 또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 사용해야 하는 경우가 있으므로, DHCP를 다시 시도하기 전에 호스트 이름을 입력할 수도 있습니다."
+msgstr ""
+"네트워크 자동 설정이 실패했습니다. 이 네트워크에 있는 DHCP 서버가 느려서 그"
+"럴 수도 있으므로, 다시 시도하면 성공할 수도 있습니다. 이 네트워크에서 DHCP를 "
+"사용하지 않는 경우에는, 수동으로 설정할 수도 있습니다. 또, 일부 DHCP 서버는 "
+"특정 DHCP 호스트 이름을 사용해야 하는 경우가 있으므로, DHCP를 다시 시도하기 "
+"전에 호스트 이름을 입력할 수도 있습니다."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
 msgstr "무선 네트워크 다시 설정"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "동적 네트워크 설정 (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "동적 주소를 사용해 네트워크 설정 (DHCP)"
 
@@ -681,6 +658,18 @@ msgstr "IP 주소, 네트마스크, 게이트웨이중에 잘못 입력한 게 �
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "이 정보가 맞습니까?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "현재 설정된 네트워크 인수:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -702,3 +691,16 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "고정 주소를 사용해 네트워크를 설정합니다"
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " 인터페이스      = ${interface}\n"
+#~ " 호스트 이름     = ${hostname}\n"
+#~ " 도메인          = ${domain}\n"
+#~ " DHCP 호스트이름 = ${dhcp_hostname}\n"
+#~ " 네임서버        = ${nameservers}"

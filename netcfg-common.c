@@ -21,12 +21,11 @@
 */
 
 #include "netcfg.h"
-
+#include <iwlib.h>
 #include <errno.h>
 #include <assert.h>
 #include <ctype.h>
 #include <sys/socket.h>
-#include <net/if.h>
 #include <sys/ioctl.h>
 #include <string.h>
 #include <stdlib.h>
@@ -50,6 +49,10 @@ struct in_addr ipaddress = { 0 };
 int have_domain = 0;
 
 pid_t dhcp_pid = -1;
+
+/* File descriptors for ioctls and such */
+int skfd = 0;
+int wfd = 0;
 
 /* convert a netmask (255.255.255.0) into the length (24) */
 int inet_ptom (const char *src, int *dst, struct in_addr *addrp)
@@ -99,25 +102,22 @@ const char *inet_mtop (int src, char *dst, socklen_t cnt)
         return inet_ntop (AF_INET, &addr, dst, cnt);
 }
 
+void open_sockets (void)
+{
+  wfd = iw_sockets_open();
+  skfd = socket (AF_INET, SOCK_DGRAM, 0);
+}
+
 int is_interface_up(char *inter)
 {
     struct ifreq ifr;
-    int sfd = -1, ret = -1;
-    
-    if ((sfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-        goto int_up_done;
     
     strncpy(ifr.ifr_name, inter, sizeof(ifr.ifr_name));
     
-    if (ioctl(sfd, SIOCGIFFLAGS, &ifr) < 0)
-        goto int_up_done;
+    if (ioctl(skfd, SIOCGIFFLAGS, &ifr) < 0)
+        return -1;
 
-    ret = (ifr.ifr_flags & IFF_UP) ? 1 : 0;
-    
- int_up_done:
-    if (sfd != -1)
-        close(sfd);
-    return ret;
+    return ((ifr.ifr_flags & IFF_UP) ? 1 : 0);
 }
 
 void get_name(char *name, char *p)
@@ -629,7 +629,6 @@ void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipad
 void interface_up (char* iface)
 {
   struct ifreq ifr;
-  int skfd = socket(AF_INET, SOCK_DGRAM, 0);
 
   strncpy(ifr.ifr_name, iface, IFNAMSIZ);
 
@@ -638,14 +637,12 @@ void interface_up (char* iface)
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
     ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
     ioctl(skfd, SIOCSIFFLAGS, &ifr);
-    close(skfd);
   }
 }
 
 void interface_down (char* iface)
 {
   struct ifreq ifr;
-  int skfd = socket(AF_INET, SOCK_DGRAM, 0);
 
   strncpy(ifr.ifr_name, iface, IFNAMSIZ);
 
@@ -654,7 +651,6 @@ void interface_down (char* iface)
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
     ifr.ifr_flags &= ~IFF_UP;
     ioctl(skfd, SIOCSIFFLAGS, &ifr);
-    close(skfd);
   }
 }
 

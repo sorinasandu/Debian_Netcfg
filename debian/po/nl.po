@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-05-14 17:29+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -488,61 +488,33 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "De meeste andere gebruikers kunnen dit leeg laten."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Zijn deze gegevens correct?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "Momenteel ingestelde netwerkparameters:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" netwerkapparaat         = ${interface}\n"
-" computernaam      = ${hostname}\n"
-" domein            = ${domain}\n"
-" dhcp-computernaam = ${dhcp_hostname}\n"
-" naamservers       = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Netwerk instellen met DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Dit kan enige tijd duren."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Automatische netwerkconfiguratie is gelukt!"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Er is geen DHCP-client-programma gevonden"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Er is geen DHCP-client-programma gevonden. Dit pakket vereist 'pump'- of "
@@ -550,19 +522,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Het DHCP-configuratieproces wordt afgebroken."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
 msgstr "Automatische netwerkconfiguratie opnieuw proberen"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
 "Automatische netwerkconfiguratie opnieuw proberen met opgave van een DHCP-"
@@ -570,31 +542,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
 msgstr "Netwerk handmatig configureren"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
 msgstr "Netwerkconfiguratie nu niet uitvoeren"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
 msgstr "Volgende netwerkconfiguratiestap:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 #, fuzzy
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
@@ -612,21 +584,21 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
 msgstr "Draadloos netwerk opnieuw configureren"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamische netwerkconfiguratie (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Netwerk instellen met dynamische adressen (DHCP)"
 
@@ -757,6 +729,18 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Zijn deze gegevens correct?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Momenteel ingestelde netwerkparameters:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 #, fuzzy
 msgid ""
 " interface     = ${interface}\n"
@@ -781,3 +765,16 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Netwerk instellen met statische adressen"
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " netwerkapparaat         = ${interface}\n"
+#~ " computernaam      = ${hostname}\n"
+#~ " domein            = ${domain}\n"
+#~ " dhcp-computernaam = ${dhcp_hostname}\n"
+#~ " naamservers       = ${nameservers}"

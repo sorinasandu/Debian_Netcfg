@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-04-18 20:42+0200\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: \n"
@@ -670,49 +670,13 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "רוב המשתמשים האחרים יכולים להשאיר שדה זה ריק"
 
-#  Type: boolean
-#  Description
-#  Type: boolean
-#  Description
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "האם המידע נכון?"
-
-#  Type: boolean
-#  Description
-#  Type: boolean
-#  Description
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "פרמרטים שנקבעו  כרגע:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" ממשק                 = ${interface}\n"
-"שם שרת              = ${hostname}\n"
-" דומיין               = ${domain}\n"
-" שם שרת DHCP  = ${dhcp_hostname}\n"
-"שרתי שמות        = ${nameservers}"
-
 #  Type: text
 #  Description
 #  Type: text
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "מגדיר את הרשת עם DHCP"
 
@@ -722,7 +686,7 @@ msgstr "מגדיר את הרשת עם DHCP"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "הפעולה עלולה לקחת זמן מה..."
 
@@ -734,7 +698,7 @@ msgstr "הפעולה עלולה לקחת זמן מה..."
 #  Title displayed when configuring this package
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 #, fuzzy
 msgid "Network autoconfiguration has succeeded!"
 msgstr "הגדרת רשת קבועה:"
@@ -745,7 +709,7 @@ msgstr "הגדרת רשת קבועה:"
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "לא נמצא לקוח DHCP"
 
@@ -755,7 +719,7 @@ msgstr "לא נמצא לקוח DHCP"
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "לא נמצא לקוח DHCP. החבילה הנוכחית דורשת pump או dhcp-cleint."
 
@@ -765,7 +729,7 @@ msgstr "לא נמצא לקוח DHCP. החבילה הנוכחית דורשת pump
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "תהליך הגדרת DHCP יבוטל"
 
@@ -777,7 +741,7 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #  Title displayed when configuring this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "הגדרת רשת קבועה:"
@@ -787,7 +751,7 @@ msgstr "הגדרת רשת קבועה:"
 #  Title displayed when configuring this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "הגדרה משתנה של הרשת (DHCP)"
@@ -800,14 +764,14 @@ msgstr "הגדרה משתנה של הרשת (DHCP)"
 #  Item in the main menu to select this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Configure network manually"
 msgstr "מגדיר את הרשת..."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr ""
 
@@ -819,7 +783,7 @@ msgstr ""
 #  Item in the main menu to select this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "מגדיר את הרשת..."
@@ -832,14 +796,14 @@ msgstr "מגדיר את הרשת..."
 #  Title displayed when configuring this package
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 #, fuzzy
 msgid "Network configuration method:"
 msgstr "הגדרת רשת קבועה:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -856,7 +820,7 @@ msgstr ""
 #  Item in the main menu to select this package
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "מגדיר את הרשת..."
@@ -867,7 +831,7 @@ msgstr "מגדיר את הרשת..."
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "הגדרה משתנה של הרשת (DHCP)"
 
@@ -877,7 +841,7 @@ msgstr "הגדרה משתנה של הרשת (DHCP)"
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "הגדר את הרשת שלך בעזרת כתובות משתנות (DHCP)"
 
@@ -1038,6 +1002,26 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "אולי עשית שגיאה בכנסת כתובת ה-IP, מסכת הרשת, או ה-gateway."
 
+#  Type: boolean
+#  Description
+#  Type: boolean
+#  Description
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "האם המידע נכון?"
+
+#  Type: boolean
+#  Description
+#  Type: boolean
+#  Description
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "פרמרטים שנקבעו  כרגע:"
+
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
@@ -1071,6 +1055,19 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " ממשק                 = ${interface}\n"
+#~ "שם שרת              = ${hostname}\n"
+#~ " דומיין               = ${domain}\n"
+#~ " שם שרת DHCP  = ${dhcp_hostname}\n"
+#~ "שרתי שמות        = ${nameservers}"
 
 #  Type: text
 #  Description

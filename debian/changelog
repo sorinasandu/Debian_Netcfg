@@ -7,6 +7,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Fix the GO_BACK interaction between WEP and ESSID configuration.
     - Switch to using iproute for everything, a step towards removing
       ifconfig and route applets from busybox.
+    - Add amd64 support. (Closes: #249363)
+    - Open one set of socket FDs and use them for the whole runtime.
     - Write loopback all the time, even when you abort network config.
       (Closes: #248636)
     - Redesign DHCP strategy with a new template that uses a select,
@@ -30,7 +32,7 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Bump the DHCP wait to 15 seconds. The magic number seems to be just
       over 10 for me. (Closes: #244819)
     - Template cleanups: netcfg/static-title, netcfg/dhcp-title,
-      netcfg/internal-pcmcia
+      netcfg/internal-pcmcia, netcfg/confirm_dhcp
     - Add dhcp3-client support.
     - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's
       rant on debian-boot.

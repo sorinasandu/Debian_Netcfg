@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-04-22 21:07+0300\n"
 "Last-Translator: Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
@@ -453,115 +453,87 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "Повечето други потребители може да оставят това поле празно."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Вярна ли е тази информация?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "Текущите настроени параметри на мрежата:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-"интерфейс      = ${interface}\n"
-"име на хост    = ${hostname}\n"
-"домейн         = ${domain}\n"
-"DHCP хост      = ${dhcp_hostname}\n"
-"DNS сървъри    = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Настройка на мрежата чрез DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Това може да отнеме известно време."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 #, fuzzy
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Статична мрежова настройка"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Няма намерен DHCP клиент"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Не беше намерен DHCP клиент. Този пакет изисква pump или dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Процесът на настройка на DHCP ще бъде прекъснат."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Статична мрежова настройка"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Динамична мрежова настройка (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Настройка на мрежата"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Настройка на мрежата"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 #, fuzzy
 msgid "Network configuration method:"
 msgstr "Мрежова Настройка"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -572,7 +544,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Настройка на мрежата"
@@ -580,14 +552,14 @@ msgstr "Настройка на мрежата"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Динамична мрежова настройка (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Настройка на мрежата, използвайки динамично адресиране (DHCP)"
 
@@ -711,6 +683,18 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Вярна ли е тази информация?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Текущите настроени параметри на мрежата:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 #, fuzzy
 msgid ""
 " interface     = ${interface}\n"
@@ -735,6 +719,19 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Настройка на мрежа чрез статични адреси"
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ "интерфейс      = ${interface}\n"
+#~ "име на хост    = ${hostname}\n"
+#~ "домейн         = ${domain}\n"
+#~ "DHCP хост      = ${dhcp_hostname}\n"
+#~ "DNS сървъри    = ${nameservers}"
 
 #, fuzzy
 #~ msgid "Next network configuration step:"

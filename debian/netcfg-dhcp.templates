@@ -6,18 +6,6 @@ _Description: DHCP hostname:
  .
  Most other users can just leave this blank.
 
-Template: netcfg/confirm_dhcp
-Type: boolean
-Default: true
-_Description: Is this information correct?
- Currently configured network parameters:
- .
-  interface      = ${interface}
-  hostname       = ${hostname}
-  domain         = ${domain}
-  dhcp hostname  = ${dhcp_hostname}
-  nameservers    = ${nameservers}
-
 Template: netcfg/dhcp_progress
 Type: text
 _Description: Configuring the network with DHCP

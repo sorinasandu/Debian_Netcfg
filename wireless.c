@@ -16,9 +16,6 @@ wifimode_t mode = MANAGED;
 char* wepkey = NULL;
 char* essid = NULL;
 
-/* IW socket for global use - init in main */
-int wfd = 0;
-
 int is_wireless_iface (const char* iface)
 {
   wireless_config wc;

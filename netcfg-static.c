@@ -25,7 +25,6 @@
 #include <sys/types.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
-#include <iwlib.h>
 #include "netcfg.h"
 
 int main(int argc, char** argv)
@@ -36,12 +35,11 @@ int main(int argc, char** argv)
 
     enum { BACKUP, GET_INTERFACE, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT} state = GET_INTERFACE;
     
-    wfd = iw_sockets_open();
-
     /* initialize libd-i */
     di_system_init("netcfg-static");
 
     parse_args(argc, argv);
+    open_sockets();
     
     /* initialize debconf */
     client = debconfclient_new();

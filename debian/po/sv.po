@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-04-24 16:20+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
@@ -447,116 +447,88 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "De flesta användare kan lämna det här tomt."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Är denna information korrekt?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "Nätverksparametrar som är konfigurerade:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" nätverkskort   = ${interface}\n"
-" värdnamn       = ${hostname}\n"
-" domän          = ${domain}\n"
-" dhcp-värdnamn  = ${dhcp_hostname}\n"
-" namnservrar    = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Konfigurerar nätverket med DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Detta kan ta ett tag."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 #, fuzzy
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Statisk nätverkskonfigurering"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Hittade ingen DHCP-klient"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Hittade ingen DHCP-klient. Det här paketet kräver pump eller dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP-konfigureringsprocessen kommer att avbrytas."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statisk nätverkskonfigurering"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dynamisk nätverkskonfigurering (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Konfigurera nätverket"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Konfigurera nätverket"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 #, fuzzy
 msgid "Network configuration method:"
 msgstr "Nätverkskonfigurering"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -567,7 +539,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Konfigurera nätverket"
@@ -575,14 +547,14 @@ msgstr "Konfigurera nätverket"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamisk nätverkskonfigurering (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Konfigurera nätverket via dynamisk adressering (DHCP)"
 
@@ -704,6 +676,18 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Är denna information korrekt?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Nätverksparametrar som är konfigurerade:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 #, fuzzy
 msgid ""
 " interface     = ${interface}\n"
@@ -728,6 +712,19 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Konfigurera ett nätverk genom statisk adressering"
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " nätverkskort   = ${interface}\n"
+#~ " värdnamn       = ${hostname}\n"
+#~ " domän          = ${domain}\n"
+#~ " dhcp-värdnamn  = ${dhcp_hostname}\n"
+#~ " namnservrar    = ${nameservers}"
 
 #, fuzzy
 #~ msgid "Next network configuration step:"

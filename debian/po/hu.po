@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-15 00:23-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-05-15 11:59+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -455,61 +455,33 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "Más felhasználók nyugodtan hagyhatják üresen."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "Az információk megfelelnek a valóságnak?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "A jelenleg beállított hálózati paraméterek:"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
-msgid ""
-" interface      = ${interface}\n"
-" hostname       = ${hostname}\n"
-" domain         = ${domain}\n"
-" dhcp hostname  = ${dhcp_hostname}\n"
-" nameservers    = ${nameservers}"
-msgstr ""
-" csatoló         = ${interface}\n"
-" gépnév          = ${hostname}\n"
-" domain          = ${domain}\n"
-" dhcp-gépnév     = ${dhcp_hostname}\n"
-" névszolgáltatók = ${nameservers}"
-
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
 msgstr "Hálózat konfigurálása DHCP-vel"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
 msgstr "Ez percekbe is beletelhet."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded!"
 msgstr "Hálózat automatikus konfigurálása sikeresen megtörtént!"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "DHCP-kliens keresése eredménytelen"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP-kliens keresése eredménytelen. Ez a csomag a pump vagy a dhcp-client "
@@ -517,49 +489,49 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "A DHCP-konfiguráció folyamata megszakad."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
 msgstr "Hálózat automatikus konfigurálásának újrapróbálása"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Hálózat automatikus konfigurálásának újrapróbálása DHCP-gépnévvel"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
 msgstr "Hálózat kézi konfigurálása"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
 msgstr "Hálózatkonfigurálás elhalasztása"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
 msgstr "Hálózat konfigurálásának módja:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:32
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -568,30 +540,30 @@ msgid ""
 "hostname before retrying DHCP."
 msgstr ""
 "A hálózat automatikus konfigurálása kudarcot vallott. Ennek oka lehet a "
-"hálózat DHCP-kiszolgálójának lassúsága, ez esetben próbálkozzon újra. "
-"Ha a hálózatot nem lehet DHCP-vel automatikusan konfigurálni, akkor "
-"kézi módszerekhez is folyamodhat. Valamint, egyes DHCP-kiszolgálók "
-"csak egy bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen "
-"kiszolgálót próbál megszólítani, akkor a DHCP újrapróbálása előtt "
-"megadhatja a megfelelő gépnevet is."
+"hálózat DHCP-kiszolgálójának lassúsága, ez esetben próbálkozzon újra. Ha a "
+"hálózatot nem lehet DHCP-vel automatikusan konfigurálni, akkor kézi "
+"módszerekhez is folyamodhat. Valamint, egyes DHCP-kiszolgálók csak egy "
+"bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen kiszolgálót próbál "
+"megszólítani, akkor a DHCP újrapróbálása előtt megadhatja a megfelelő "
+"gépnevet is."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:53
+#: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
 msgstr "Drótnélküli hálózat újrakonfigurálása"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "A hálózat konfigurálása dinamikus címzéssel (DHCP)"
 
@@ -714,6 +686,18 @@ msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibá
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Az információk megfelelnek a valóságnak?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "A jelenleg beállított hálózati paraméterek:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -735,6 +719,19 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Hálózat konfigurálása statikus címzéssel"
+
+#~ msgid ""
+#~ " interface      = ${interface}\n"
+#~ " hostname       = ${hostname}\n"
+#~ " domain         = ${domain}\n"
+#~ " dhcp hostname  = ${dhcp_hostname}\n"
+#~ " nameservers    = ${nameservers}"
+#~ msgstr ""
+#~ " csatoló         = ${interface}\n"
+#~ " gépnév          = ${hostname}\n"
+#~ " domain          = ${domain}\n"
+#~ " dhcp-gépnév     = ${dhcp_hostname}\n"
+#~ " névszolgáltatók = ${nameservers}"
 
 #, fuzzy
 #~ msgid "Next network configuration step:"

@@ -334,27 +334,18 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             debconf_set(client, "netcfg/get_hostname", buf);
           else
 	  {
-	    int skfd = socket(AF_INET, SOCK_DGRAM, 0);
+	    struct ifreq ifr;
+	    struct in_addr d_ipaddr = { 0 };
 
-	    if (skfd)
+	    ifr.ifr_addr.sa_family = AF_INET;
+	    strncpy(ifr.ifr_name, interface, IFNAMSIZ);
+	    if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0)
 	    {
-	      struct ifreq ifr;
-	      struct in_addr d_ipaddr = { 0 };
-	      
-	      ifr.ifr_addr.sa_family = AF_INET;
-	      strncpy(ifr.ifr_name, interface, IFNAMSIZ);
-	      if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0)
-	      {
-		d_ipaddr = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr;
-                seed_hostname_from_dns(client, &d_ipaddr);
-	      }
-	      else
-		di_error("ioctl failed (%s)", strerror(errno));
-
-	      close(skfd);
+	      d_ipaddr = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr;
+	      seed_hostname_from_dns(client, &d_ipaddr);
 	    }
 	    else
-	      di_error("skfd could not be allocated!");
+	      di_error("ioctl failed (%s)", strerror(errno));
 	  }
 
           state = HOSTNAME;

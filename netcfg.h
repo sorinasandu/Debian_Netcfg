@@ -28,7 +28,7 @@ typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
 typedef enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhclient_t;
 
 extern int netcfg_progress_displayed;
-extern int wfd;
+extern int wfd, skfd;
 extern int input_result;
 extern int have_domain;
 extern pid_t dhcp_pid;
@@ -110,5 +110,6 @@ extern void seed_hostname_from_dns(struct debconfclient *client, struct in_addr 
 extern int inet_ptom (const char *src, int *dst, struct in_addr * addrp);
 extern const char *inet_mtop (int src, char *dst, socklen_t cnt);
 extern void parse_args (int argc, char** argv);
+extern void open_sockets (void);
 
 #endif /* _NETCFG_H_ */
