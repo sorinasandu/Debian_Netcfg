@@ -133,7 +133,7 @@ main (int argc, char *argv[])
   client->command (client, "title", "DHCP Network Configuration", NULL);
 
 
-  if (stat ("/sbin/dhclient", &buf) == 0)
+  if (stat ("/sbin/dhclient-2.2.x", &buf) == 0)
     dhcp_client = DHCLIENT;
   else if (stat ("/sbin/pump", &buf) == 0)
     dhcp_client = PUMP;
