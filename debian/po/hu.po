@@ -14,25 +14,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-23 22:12+0100\n"
-"PO-Revision-Date: 2004-03-20 04:35+0100\n"
+"POT-Creation-Date: 2004-03-23 15:38-0700\n"
+"PO-Revision-Date: 2004-03-24 00:57+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Hálózat konfigurálása DHCP-vel"
+msgstr "Automatikusan konfigurálja a hálózatot DHCP-vel?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -43,8 +41,7 @@ msgstr ""
 "A hálózat konfigurálása vagy DHCP-vel, vagy az összes szükséges adat kézi "
 "beírásával történhet. Ha a DHCP-t választja és a Debian-telepítő nem tud az "
 "aktuális hálózaton levő DHCP-kiszolgálótól használható adatokat szerezni, a "
-"DHCP-s kísérlet után lehetősége nyílik a hálózat kézi konfigurációjára. Ha "
-"most bizonytalan a választásban, próbálja meg először a DHCP-t."
+"DHCP-s kísérlet után lehetősége nyílik a hálózat kézi konfigurációjára."
 
 #. Type: string
 #. Description
@@ -467,8 +464,6 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -662,8 +657,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
