@@ -1,4 +1,5 @@
-# translation of el.po to 
+# translation of debian-installer_packages_netcfg_debian_po_el.po to 
+# translation of el.po to
 # translation of el.po to
 # translation of el.po to
 # translation of el.po to
@@ -19,10 +20,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: debian-installer_packages_netcfg_debian_po_el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 20:55-0700\n"
-"PO-Revision-Date: 2004-08-10 14:49+0300\n"
+"POT-Creation-Date: 2004-08-10 11:45-0600\n"
+"PO-Revision-Date: 2004-08-13 12:22+0300\n"
 "Last-Translator: George Papamichelakis <george@step.gr>\n"
 "Language-Team:  <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,6 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -253,13 +255,13 @@ msgstr "Το όνομα του υπολογιστή \"${hostname}\" δεν εί�
 #. Description
 #: ../netcfg-common.templates:84
 msgid ""
-"A valid hostname may contain only alphanumeric characters and the minus "
-"sign. It must be between 2 and 63 characters long, and may not begin or end "
-"with a minus sign."
+"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
+"z, and the minus sign. It must be between 2 and 63 characters long, and may "
+"not begin or end with a minus sign."
 msgstr ""
-"Ένα έγκυρο όνομα υπολογιστή μπορεί να περιέχει μόνο αλφαριθμητικούς "
-"χαρακτήρες και το σύμβολο μείον \"-\", και να έχει μέγεθος από 2 έως 63 "
-"χαρακτήρες. Δε μπορεί να αρχίζει ή να τελειώνει με το σύμβολο \"-\"."
+"Ένα έγκυρο όνομα υπολογιστή μπορεί να περιέχει μόνο πεζούς αλφαριθμητικούς "
+"χαρακτήρες και το σύμβολο μείον. Πρέπει να έχει μέγεθος από 2 έως 63 "
+"χαρακτήρες. Δε πρέπει να αρχίζει ή να τελειώνει με το σύμβολο μείον."
 
 #. Type: error
 #. Description
@@ -322,11 +324,11 @@ msgid ""
 "back and choose a different interface."
 msgstr ""
 "η διασύνδεση ${IFACE} δεν φαίνεται να είναι συνδεδεμένο σε κάποιο δίκτυο. "
-"Αυτό μπορεί να οφείλεται σε ασύνδετο καλώδιο δικτύου ή σε δυσλειτουργία "
-"του μέσου διασύνδεσης. Μπορείτε είτε να συνεχίσετε και να ρυθμίσετε το δίκτυο "
-"στην επόμενη επανεκκίνηση με το προγραμμα etherconf, ή να ρυθμίσετε το δίκτυο "
-"στατικά. Μπορείτε ακόμα να επιστρέψετε και να επιλέξετε ένα διαφορετικό "
-"μέσο διασύνδεσης."
+"Αυτό μπορεί να οφείλεται σε ασύνδετο καλώδιο δικτύου ή σε δυσλειτουργία του "
+"μέσου διασύνδεσης. Μπορείτε είτε να συνεχίσετε και να ρυθμίσετε το δίκτυο "
+"στην επόμενη επανεκκίνηση με το προγραμμα etherconf, ή να ρυθμίσετε το "
+"δίκτυο στατικά. Μπορείτε ακόμα να επιστρέψετε και να επιλέξετε ένα "
+"διαφορετικό μέσο διασύνδεσης."
 
 #. Type: select
 #. Choices
@@ -365,7 +367,7 @@ msgstr "Ασύρματη ρύθμιση δικτύου"
 msgid "Searching for wireless access points ..."
 msgstr "Ανίχνευση για ασύρματα σημεία πρόσβασης ..."
 
-#. Type: text
+#. Type: boolean
 #. Description
 #: ../netcfg-common.templates:141
 msgid "<none>"
@@ -582,12 +584,12 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Εδώ μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP (που μπορεί "
-"να πετύχει αν ο εξυπηρετητής DHCP αργεί να αποκριθεί σε αιτήσεις) ή να ρυθμίσετε "
-"το δίκτυο χειροκίνητα. Επίσης, ορισμένοι εξυπηρετητές DHCP απαιτούν "
-"να τους αποσταλεί "
-"κάποιο συγκεκριμένο όνομα υπολογιστή, οπότε μπορείτε να ξαναπροσπαθήσετε "
-"την αυτόματη ρύθμιση δικτύου DHCP παρέχοντας ένα προκαθορισμένο όνομα υπολογιστή."
+"Εδώ μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP (που "
+"μπορεί να πετύχει αν ο εξυπηρετητής DHCP αργεί να αποκριθεί σε αιτήσεις) ή "
+"να ρυθμίσετε το δίκτυο χειροκίνητα. Επίσης, ορισμένοι εξυπηρετητές DHCP "
+"απαιτούν να τους αποσταλεί κάποιο συγκεκριμένο όνομα υπολογιστή, οπότε "
+"μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP παρέχοντας "
+"ένα προκαθορισμένο όνομα υπολογιστή."
 
 #. Type: note
 #. Description
@@ -780,8 +782,6 @@ msgstr "Είναι οι παρακάτω ρυθμίσεις σωστές;"
 msgid "Currently configured network parameters:"
 msgstr "Τρέχουσες ρυθμίσεις δικτύου:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
