@@ -8,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg-0.45\n"
+"Project-Id-Version: netcfg-0.46\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 01:26-0500\n"
-"PO-Revision-Date: 2004-02-21 22:13-0300\n"
+"PO-Revision-Date: 2004-02-23 13:03-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -107,9 +107,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Esta configuração está correta ?"
+msgstr "ESSID sem fio para ${iface} :"
 
 #. Type: string
 #. Description
@@ -119,12 +118,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this form blank."
 msgstr ""
+"${iface} é uma interface de rede sem fio. Por favor, informe o nome "
+"(o ESSID) da rede sem fio que você gostaria que a ${iface} utilizasse. "
+"Caso você deseje usar qualquer rede disponível, deixe este campo em branco."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "Chave WEP para ${iface} :"
 
 #. Type: string
 #. Description
@@ -133,6 +135,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Caso aplicável, por favor informe a chave de segurança WEP para o "
+"dispositivo ${iface}. Existem duas formas de fazê-lo :"
 
 #. Type: string
 #. Description
@@ -141,6 +145,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into the box."
 msgstr ""
+"Caso sua chave WEP esteja no formato 'nnnn-nnnn-nn' ou 'nnnnnnnn', onde "
+"'n' é um número, somente digite a mesma na caixa."
 
 #. Type: string
 #. Description
@@ -149,6 +155,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes.)"
 msgstr ""
+"Caso sua chave WEP esteja no formato de uma passphrase, prefixe a mesma "
+"com 's:' (sem aspas)."
 
 #. Type: string
 #. Description
@@ -157,12 +165,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this form "
 "blank."
 msgstr ""
+"É claro, caso não exista chave WEP para sua rede sem fio, deixe a camp "
+"em branco."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Chave WEP inválida"
 
 #. Type: error
 #. Description
@@ -171,12 +181,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"A chave WEP '${wepkey}' é inválida. Por favor, consulte cuidadosamente "
+"as instruções na tela a seguir sobre como informar sua chave WEP "
+"corretamente e tente novamente."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "ESSID inválido"
 
 #. Type: error
 #. Description
@@ -185,6 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"O ESSID \"${essid}\" é inválido. ESSIDs podem ter no máximo 32 caracteres, "
+"mas podem conter qualquer tipo de caracteres."
 
 #. Type: string
 #. Description
@@ -289,7 +304,7 @@ msgstr "<nenhuma>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Rede sem fio (802.11x)"
 
 #. Type: text
 #. Description
