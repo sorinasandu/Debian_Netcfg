@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-04-15 13:42+0700\n"
+"PO-Revision-Date: 2004-04-18 22:31+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
-"Language-Team: Debian Indonesia <debid@yahoogroups.com>\n"
+"Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,8 +31,8 @@ msgid ""
 msgstr ""
 "Jaringan dapat dikonfigurasikan dengan DHCP atau dengan memasukkan informasi "
 "secara manual. Bila anda memilih menggunakan DHCP dan program instalasi "
-"tidak mendapatkan konfigurasi dari DHCP server, anda akan diberi kesempatan "
-"untuk mengkonfigurasikan secara manual kemudian."
+"tidak mendapatkan konfigurasi dari server DHCP, anda akan diberi kesempatan "
+"untuk mengkonfigurasikan secara manual."
 
 #. Type: string
 #. Description
@@ -58,7 +58,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Alamat name server:"
+msgstr "Alamat server DNS:"
 
 #. Type: string
 #. Description
@@ -70,10 +70,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Name server digunakan untuk mencari nama host Internet. Silakan masukkan "
-"alamat IP (bukan nama host) dari name server (maksimum 3 name server, "
+"Server DNS digunakan untuk mencari nama host Internet. Silakan masukkan "
+"alamat IP (bukan nama host) dari server DNS (maksimum 3 server, "
 "dipisahkan dengan spasi, bukan koma). Server pertama merupakan server yang "
-"akan dikueri pertama kali. Bila anda tidak menggunakan name server, biarkan "
+"akan digunakan pertama kali. Bila anda tidak menggunakan server DNS, biarkan "
 "ruas ini kosong."
 
 #. Type: select
@@ -114,7 +114,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Kunci WEP untuk perangkat nirkabel ${iface}:"
+msgstr "Kunci WEP untuk piranti nirkabel ${iface}:"
 
 #. Type: string
 #. Description
@@ -123,7 +123,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Bila ada, silakan masukkan kunci keamanan WEP untuk perangkat nirkabel "
+"Bila ada, silakan masukkan kunci keamanan WEP untuk piranti nirkabel "
 "${iface}. Ada dua cara melakukan ini:"
 
 #. Type: string
@@ -133,7 +133,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' or 'nnnnnnnn' dimana n "
+"Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' atau 'nnnnnnnn' dengan n "
 "merupakan angka, langsung isikan saja pada ruas ini."
 
 #. Type: string
@@ -152,7 +152,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Tentu saja bila tidak ada kunci WEP untuk jaringan nirkabel anda, biarkan "
+"Tentu saja, bila tidak ada kunci WEP untuk jaringan nirkabel anda, biarkan "
 "ruas ini kosong."
 
 #. Type: error
@@ -169,7 +169,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "Kunci WEP '${wepkey}' tidak sah. Silakan baca petunjuk pada layar berikut "
-"tentang bagaimana memasukkan kunci WEP dengan benar dan coba lagi."
+"tentang cara memasukkan kunci WEP dengan benar dan coba lagi."
 
 #. Type: error
 #. Description
@@ -233,9 +233,9 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Nama host yang sah hanya berisi karakter alfanumerik dan tanda kurang. "
+"Nama host yang sah hanya berisi karakter alfanumerik dan tanda hubung. "
 "Panjangnya antara 2 sampai 63 karakter, dan tidak boleh dimulai atau "
-"diakhiri dengan tanda kurang."
+"diakhiri dengan tanda hubung."
 
 #. Type: error
 #. Description
@@ -250,14 +250,14 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Terjadi kesalahan dan konfigurasi jaringan telah digugurkan. Anda dapat "
-"mencoba lagi dengan memilih dari menu utama instalasi."
+"Sebuah kesalahan telah terjadi dan proses konfigurasi jaringan telah "
+"dibatalkan. Anda dapat mencoba lagi dengan memilih dari menu utama instalasi."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
-msgstr "Tidak terdeteksi adanya antarmuka jaringan"
+msgstr "Antarmuka jaringan tidak terdeteksi"
 
 #. Type: error
 #. Description
@@ -266,8 +266,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Tidak ditemukan antarmuka jaringan. Sistem instalasi tidak dapat menemukan "
-"perangkat keras jaringan."
+"Antarmuka jaringan tidak ditemukan. Sistem instalasi tidak dapat menemukan "
+"sebuah piranti jaringan."
 
 #. Type: error
 #. Description
@@ -276,9 +276,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Anda perlu memuat modul spesifik untuk kartu jaringan anda, bila anda "
-"memilikinya. Untuk itu anda perlu kembali ke langkah deteksi perangkat keras "
-"jaringan."
+"Anda perlu memuat modul khusus untuk kartu jaringan anda, bila anda "
+"memilikinya. Untuk itu, anda perlu kembali ke langkah deteksi perangkat "
+"keras jaringan."
 
 #. Type: select
 #. Choices
@@ -320,7 +320,7 @@ msgstr "Sedang mencari titik akses nirkabel ..."
 #. Description
 #: ../netcfg-common.templates:125
 msgid "<none>"
-msgstr "<tak-satu-pun>"
+msgstr "<tiada>"
 
 #. Type: text
 #. Description
@@ -356,19 +356,19 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:149
 msgid "Serial-line IP"
-msgstr "Serial-line IP"
+msgstr "IP Serial-line"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:153
 msgid "Parallel-port IP"
-msgstr "Parallel-pot IP"
+msgstr "IP port Paralel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:157
 msgid "Point-to-Point Protocol"
-msgstr "Point-to-Point Protocol"
+msgstr "Protocol Point-to-Point"
 
 #. Type: text
 #. Description
@@ -380,19 +380,19 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:165
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN Point-to-Point Protocol"
+msgstr "Protocol Point-to-Point ISDN"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:169
 msgid "Channel-to-channel"
-msgstr "Channel-to-channel"
+msgstr "Kanal-ke-kanal"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:173
 msgid "Real channel-to-channel"
-msgstr "Channel-to-channel nyata"
+msgstr "Kanal-ke-kanal nyata"
 
 #. Type: text
 #. Description
@@ -404,7 +404,7 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:181
 msgid "Inter-user communication vehicle"
-msgstr "Inter-user communication vehicle"
+msgstr "Sarana komunikasi antar-pemakai"
 
 #. Type: text
 #. Description
@@ -417,14 +417,14 @@ msgstr "Antar muka tak dikenal"
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:190
 msgid "Configuring network ..."
-msgstr "Sedang mengkonfigurasikan jaringan ..."
+msgstr "Sedang mengkonfigurasi jaringan ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:195
 msgid "Configure the network"
-msgstr "Mengkonfigurasikan jaringan"
+msgstr "Mengkonfigurasi jaringan"
 
 #. Type: string
 #. Description
@@ -440,7 +440,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
-"anda perlu memberikan nomor akun anda di sini."
+"anda perlu memberikan nomor account anda di sini."
 
 #. Type: string
 #. Description
@@ -452,13 +452,13 @@ msgstr "Kebanyakan pengguna dapat membiarkan ruas ini kosong."
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Apakah informasi ini benar?"
+msgstr "Apakah keterangan ini benar?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Konfigurasi jaringan saat ini: "
+msgstr "Parameter konfigurasi jaringan saat ini: "
 
 #. Type: boolean
 #. Description
@@ -474,13 +474,13 @@ msgstr ""
 " nama host      = ${hostname}\n"
 " domain         = ${domain}\n"
 " nama host dhcp = ${dhcp_hostname}\n"
-" nameserver    = ${nameservers}"
+" server DNS    = ${nameservers}"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr "Sedang mengkonfigurasikan jaringan dengan DHCP"
+msgstr "Sedang mengkonfigurasi jaringan dengan DHCP"
 
 #. Type: text
 #. Description
@@ -492,26 +492,27 @@ msgstr "Ini mungkin memakan waktu."
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr "Tidak ditemukan klien DHCP"
+msgstr "Klien DHCP tidak ditemukan"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Tidak ditemukan klien DHCP. Paket ini memerlukan pump atau dhcp-client."
+"Tidak ada klien DHCP yang ditemukan. Paket ini memerlukan pump atau "
+"dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr "Proses konfigurasi DHCP akan digugurkan."
+msgstr "Proses konfigurasi DHCP akan dibatalkan."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Anda ingin mengulang konfigurasi jaringan dengan DHCP?"
+msgstr "Anda ingin mengulangi konfigurasi jaringan dengan DHCP?"
 
 #. Type: boolean
 #. Description
@@ -520,9 +521,9 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Tidak ditemukan alamat IP saat melakukan konfigurasi jaringan secara "
-"otomatis dengan DHCP. Server DHCP kadangkala lambat. Anda dapat mengulangi "
-"lagi."
+"Tidak ada alamat IP yang ditemukan saat melakukan konfigurasi jaringan "
+"secara otomatis dengan DHCP. Server DHCP kadangkala sangat lambat. Anda "
+"dapat mengulangi lagi."
 
 #. Type: text
 #. Description
@@ -552,9 +553,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Alamat IP unik pada tiap komputer dan terdiri dari 4 angka yang dipisahkan "
-"dengan titik. Bila anda tidak mengetahui alamat mana yang mesti digunakan, "
-"tanyakan pada administrator jaringan anda."
+"Alamat IP adalah unik pada tiap komputer dan terdiri dari 4 angka yang "
+"dipisahkan dengan titik. Bila anda tidak mengetahui alamat yang harus "
+" digunakan, tanyakan pada administrator jaringan anda."
 
 #. Type: error
 #. Description
@@ -570,7 +571,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Alamat IP yang anda berikan tidak benar. Bentuknya harus sebagai berikut: x."
-"x.x.x dimana tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
+"x.x.x dengan tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
 
 #. Type: string
 #. Description
@@ -589,7 +590,7 @@ msgid ""
 msgstr ""
 "Alamat point-to-point digunakan untuk menentukan titik akhir lain dari "
 "jaringan point-to-point. Tanyakan pada administrator jaringan anda bila "
-"tidak mengetahui nilainya. Alamat point-to-point mesti dimasukkan dalam "
+"tidak mengetahui nilainya. Alamat point-to-point harus dimasukkan dalam "
 "bentuk 4 angka yang dipisah dengan titik."
 
 #. Type: string
@@ -606,9 +607,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmask digunakan untuk menentukan mesin-mesin mana yang lokal pada "
-"jaringan. Tanyakan pada administrator jaringan bila anda tidak mengetahui "
-"nilainya. Netmask mesti dimasukkan dalam bentuk 4 angka yang dipisah dengan "
+"Netmask digunakan untuk menentukan mesin-mesin lokal pada jaringan. "
+"Tanyakan pada administrator jaringan bila anda tidak mengetahui "
+"nilainya. Netmask harus dimasukkan dalam bentuk 4 angka yang dipisah dengan "
 "titik."
 
 #. Type: string
@@ -628,12 +629,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Gerbang merupakan alamat IP (4 angka yang dipisah dengan titik)yang "
-"menunjukan router gerbang, juga disebut sebagai router bawaan. Semua lalu "
+"Gerbang merupakan alamat IP (4 angka yang dipisah dengan titik) yang "
+"menunjukan router gerbang, juga disebut sebagai router utama. Semua lalu "
 "lintas yang keluar dari LAN (misalnya ke Internet) akan dikirim melalui "
 "router ini. Sangat jarang suatu jaringan tidak memiliki router; dalam kasus "
-"ini, biarkan ruas ini kosong. Bila anda tidak ragu, tanyakan pada "
-"administrator jaringan."
+"ini, biarkan ruas ini kosong. Bila anda tidak tahu jawaban yang benar, "
+"tanyakan pada administrator jaringan."
 
 #. Type: error
 #. Description
@@ -676,7 +677,7 @@ msgstr ""
 " netmask       = ${netmask}\n"
 " gerbang       = ${gateway}\n"
 " pointopoint   = ${pointopoint}\n"
-" nameserver    = ${nameservers}"
+" server DNS    = ${nameservers}"
 
 #. Type: text
 #. Description
