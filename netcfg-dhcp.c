@@ -50,12 +50,10 @@ int main(void)
     client = debconfclient_new();
     debconf_capb(client,"backup");
 
-    while (state != QUIT) {
-
+    while (1) {
 	switch(state) {
 	case BACKUP:
-	    exit(10);
-	    break;
+	    return 10;
 	case GET_INTERFACE:
 	    state =  netcfg_get_interface(client, &interface, &num_interfaces) ? 
 		BACKUP : GET_DHCP;
@@ -67,12 +65,11 @@ int main(void)
 		state = QUIT;
 	    break;
 	case QUIT:
+	    if (netcfg_activate_dhcp(client) != 0)
+		return 1;
 	    break;
 	}
-                
     }
 
-    if (netcfg_activate_dhcp(client) != 0)
-	exit(1);
     return 0;
 }

@@ -61,8 +61,6 @@ int main(void)
     static struct debconfclient *client;
     static char *none;
 
-
-
     /* initialize libd-i */
     di_system_init("netcfg");
 
@@ -73,12 +71,10 @@ int main(void)
     debconf_metaget(client,  "netcfg/internal-none", "description");
     none = client->value ? strdup(client->value) : strdup("<none>");
 
-    while (state != QUIT) {
-
+    while (1) {
 	switch(state) {
 	case BACKUP:
-	    exit(10);
-	    break;
+	    return 10;
 	case GET_INTERFACE:
 	    state =  netcfg_get_interface(client, &interface, &num_interfaces) ?
 		BACKUP : GET_METHOD;
@@ -117,7 +113,6 @@ int main(void)
 	}
                 
     }
-
 
     return 0;
 }
