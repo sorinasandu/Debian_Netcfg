@@ -5,10 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.23\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-30 23:42+0100\n"
-"PO-Revision-Date: 2003-10-27 14:47+0100\n"
+"Project-Id-Version: netcfg 0.28\n"
+"POT-Creation-Date: 2003-11-06 01:44-0700\n"
+"PO-Revision-Date: 2003-11-06 11:02+0100\n"
 "Last-Translator: Philippe Batailler <pbatailler@teaser.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +38,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
-msgstr "Indiquez les adresses de vos serveurs DNS :"
+msgstr "Indiquez les adresses des serveurs DNS :"
 
 #. Type: string
 #. Description
@@ -126,7 +125,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
-msgstr "Une erreur s'est produite : impossible de continuer !"
+msgstr "Une erreur s'est produite : impossible de continuer"
 
 #. Type: error
 #. Description
@@ -147,12 +146,12 @@ msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
 "is possible that the module for it hasn't been selected yet.  Go back to "
-"'Detect network hardware and load kernel drivers for it'."
+"'Detect network hardware'."
 msgstr ""
 "Aucune interface réseau n'a été détectée. Le système d'installation n'a pu "
 "trouver aucun périphérique réseau. Si vous avez bien une carte réseau, il se "
-"peut que vous n'ayez pas encore choisi son module. Revenez à « Détection du "
-"matériel réseau et chargement des modules noyau appropriés »."
+"peut que vous n'ayez pas encore choisi son module. Revenez à l'étape de "
+"détection du matériel réseau."
 
 #. Type: text
 #. Description
@@ -313,7 +312,7 @@ msgstr "Ce paquet demande pump ou dhcp-client."
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
-msgstr "Configurer le réseau avec DHCP"
+msgstr "Configuration du réseau avec DHCP"
 
 #. Type: text
 #. Description
@@ -395,13 +394,13 @@ msgid ""
 "can leave this blank.  If you don't know the proper answer to this question, "
 "consult your network administrator."
 msgstr ""
-"La passerelle une adresse IP (quatre nombres séparés par des points) qui "
+"La passerelle est une adresse IP (quatre nombres séparés par des points) qui "
 "indique la machine qui joue le rôle de routeur ; cette machine est aussi "
-"connue comme le routeur par défaut. Tout le trafic qui sort de votre réseau "
-"(p. ex. vers internet) passe par ce routeur. Dans quelques rares "
-"circonstances, vous n'avez pas besoin de routeur. Si c'est le cas, vous "
-"pouvez laisser ce champ vide. Consultez votre administrateur si vous ne "
-"connaissez pas la réponse correcte à cette question."
+"appelée le routeur par défaut. Tout le trafic qui sort de votre réseau (p. "
+"ex. vers internet) passe par ce routeur. Dans quelques rares circonstances, "
+"vous n'avez pas besoin de routeur. Si c'est le cas, vous pouvez laisser ce "
+"champ vide. Consultez votre administrateur si vous ne connaissez pas la "
+"réponse correcte à cette question."
 
 #. Type: note
 #. Description
@@ -451,7 +450,7 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
-msgstr "Configurer le réseau avec une adresse fixe"
+msgstr "Configuration du réseau avec une adresse fixe"
 
 #. Type: text
 #. Description
