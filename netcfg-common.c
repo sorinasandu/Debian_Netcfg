@@ -405,7 +405,7 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
         
     } while (!*hostname);
 
-    if ((s = strchr(hostname, '.')))
+    if ((s = strchr(*hostname, '.')))
     {
       if (s[1] == '\0') /* "somehostname." <- . should be ignored */
 	*s = '\0';
@@ -428,7 +428,6 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
        
     if (have_domain == 1)
     {
-      char *p = NULL;
       debconf_get(client, "netcfg/get_domain");
       assert (!empty_str(client->value));
       if (*domain)
