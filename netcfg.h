@@ -2,14 +2,15 @@
 #define _NETCFG_H_
 #include <sys/types.h>
 
-#define ETC_DIR "/etc"
-#define NETWORK_DIR "/etc/network"
-#define DHCPCD_DIR "/etc/dhcpc"
+#define ETC_DIR 	"/etc"
+#define NETWORK_DIR 	"/etc/network"
+#define DHCPCD_DIR 	"/etc/dhcpc"
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCPCD_FILE     "/etc/dhcpc/config"
+#define DHCLIENT_FILE	"/etc/dhclient.conf"
 
 
 extern int netcfg_mkdir (char *path);

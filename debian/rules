@@ -47,9 +47,11 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	$(foreach PACKAGE,  $(PACKAGES), \
-	( $(MAKE) install PROGS=$(PACKAGE) DESTDIR=`pwd`/debian/$(PACKAGE)) ; )
-
+	cp netcfg-dhcp debian/netcfg-dhcp.postinst
+	cp netcfg-static debian/netcfg-static.postinst
+# if you ever decide to make the netcfg-common package, uncomment these to install it
+#	mkdir -p `pwd`/debian/netcfg-common/usr/lib/
+#	cp libnetcfg.so.0.1.0 `pwd`/debian/netcfg-common/usr/lib/
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -70,16 +72,11 @@ binary-arch: build install
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol -- -fdebian/files~ 
-	$(foreach PACKAGE, $(PACKAGES), \
+	@$(foreach PACKAGE, $(PACKAGES), \
 	(dpkg-distaddfile $(PACKAGE)_$(VERSION)_$(ARCH).udeb \
 		debian-installer $(PRIORITY) ) ; )
 	dh_md5sums
-# I think the following should work, but it doesn't, so I revert to manually 
-# calling dpkg-deb	
-#	$(foreach PACKAGE, $(PACKAGES), \
-#	(dh_builddeb --filename=$(PACKAGE)_$(VERSION)_$(ARCH).udeb -- $(PACKAGE) \
-#		); ) # to make a .udeb
-	$(foreach PACKAGE, $(PACKAGES), \
+	@$(foreach PACKAGE, $(PACKAGES), \
 	(cd debian ; \
 		dpkg-deb -b $(PACKAGE) ../../$(PACKAGE)_$(VERSION)_$(ARCH).udeb \
 		); )

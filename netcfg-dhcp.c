@@ -64,8 +64,9 @@ netcfg_write_dhcp ()
       fprintf (fp,
 	       "\n# This entry was created during the Debian installation\n");
       fprintf (fp, "iface %s inet dhcp\n", interface);
+      fclose (fp);
     }
-
+#ifdef DHCPCD
   netcfg_mkdir (DHCPCD_DIR);
   if ((fp = file_open (DHCPCD_FILE)))
     {
@@ -74,7 +75,25 @@ netcfg_write_dhcp ()
       fprintf (fp, "IFACE=%s\n", interface);
       if (dhcp_hostname)
 	fprintf (fp, "OPTIONS='-h %s'\n", dhcp_hostname);
+      fclose (fp);
     }
+#elif defined PUMP
+/* nothing to do */
+
+#elif defined DHCLIENT
+  if (dhcp_hostname)
+    if ((fp = file_open (DHCLIENT_FILE)))
+      {
+	fprintf (fp,
+		 "\n# dhclient configuration: created during the Debian installation\n \
+interface \"%s\" {\nsend host-name \"%s\";\n}\n",
+		 interface, dhcp_hostname);
+	fclose (fp);
+      }
+
+#else
+#error "Must specify a dhcp client"
+#endif
 }
 
 
@@ -84,8 +103,10 @@ netcfg_activate_dhcp ()
   char buf[128];
   char *ptr;
   execlog ("/sbin/ifconfig lo 127.0.0.1");
-
   ptr = buf;
+
+#ifdef DHCPCD
+
   ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
   if (dhcp_hostname)
     ptr +=
@@ -93,8 +114,25 @@ netcfg_activate_dhcp ()
 
   ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " %s", interface);
 
+#elif defined PUMP
+
+  ptr += snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
+  if (dhcp_hostname)
+    ptr +=
+      snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
+
+#elif defined DHCLIENT
+
+  ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient-2.2.x %s", interface);
+
+#else
+
+#error "Must specify a dhcp client"
+#endif
+
   if (execlog (buf))
     netcfg_die (client);
+
 }
 
 int
