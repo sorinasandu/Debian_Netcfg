@@ -1,0 +1,50 @@
+
+1.  Initialization
+    --------------
+
+    The po/ directory is not used to build templates files, but instead
+    is a show-room for po-debconf.  In order not to conflict with current
+    templates files, the procedure to generate files is somewhat special,
+    these commands were run from the debian/ directory:
+    
+      mkdir po
+      for t in common dhcp static
+      do
+          debconf-gettextize -F --new-templates=po/netcfg-$t._templates \
+                    template/netcfg-$t.templates
+      done
+    
+    IMPORTANT NOTE:  template/*.templates.en must first be renamed into
+                     template/*.templates
+    
+    For a casual package, one only has to run
+      debconf-gettextize foo.templates
+    
+2.  Update
+    ------
+
+    When _templates files are modified, PO files are updated by running
+    	debconf2po-update
+    from the debian/ directory.
+
+3.  Merge
+    -----
+
+    The following commands can be run to merge translations, in the
+    debian/ directory:
+
+       for TYPE in common dhcp static
+       do
+           po2debconf po/netcfg-$TYPE._templates > po/netcfg-$TYPE.templates
+       done
+       for TYPE in dhcp static
+       do
+           echo >> po/netcfg-$TYPE.templates
+           cat po/netcfg-common.templates >> po/netcfg-$TYPE.templates
+       done
+
+4.  Warning
+    -------
+
+    This is experimental, please do not modify these files or your
+    changes may be lost.

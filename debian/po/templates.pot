@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-09-18 00:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../po/netcfg-common._templates:4
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org. If "
+"you are setting up a home network, you can make something up, but make sure "
+"you use the same domain name on all your computers."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:4
+msgid "Choose the domain name."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid "Choose the DNS Server Addresses"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid "Choose an interface."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "Something went wrong when I tried to activate your network."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "An error occured."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:34
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:34
+msgid "Enter the system's hostname."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "Feel free to retry."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "An error occured and I cannot continue."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:54
+msgid "No interfaces were detected."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:54
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Configure Network Hardware'."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid ""
+"In some situations, you may need to supply a DHCP host name.  These "
+"situations are rare.  Most commonly, it applies to cable modem users.  If "
+"you are a cable modem user, you might need to specify an account number "
+"here.  Otherwise, you can just leave this blank."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid "What is your dhcp hostname?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid "Is this information correct?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "I will now configure the network."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "No dhcp client found. I cannot continue."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "This package requires pump or dhcp-client."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid "IP address?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:11
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:11
+msgid "Pointopoint address?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:19
+msgid "Netmask?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid "Gateway?"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid ""
+"You may have made an error entering your ipaddress, netmask and/or gateway."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid "The gateway you entered is unreachable."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid "Is this configuration correct?"
+msgstr ""

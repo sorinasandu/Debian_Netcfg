@@ -1,0 +1,310 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-09-18 00:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../po/netcfg-common._templates:4
+#, fuzzy
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org. If "
+"you are setting up a home network, you can make something up, but make sure "
+"you use the same domain name on all your computers."
+msgstr ""
+"Domænenavnet er den del af din internetadresse, der er til højre for dit "
+"maskinnavn. Det ender oftest på .com, .net, .edu, .org eller .dk.  Hvis du "
+"er på et hjemmenetværk kan du selv finde på et, men sørg for at alle dine "
+"computere bruger samme domænenavn."
+
+#. Description
+#: ../po/netcfg-common._templates:4
+msgid "Choose the domain name."
+msgstr "Vælg domænenavn."
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid "Choose the DNS Server Addresses"
+msgstr "Vælg adressen på DNS-serveren"
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+"Angiv IP-adressen (ikke værtsnavne) på op til tre navneservere adskilt med "
+"mellemrum. Brug ikke kommaer. Serverne vil blive forespurgt i den "
+"rækkefølge, de er angivet. Hvis du ikke ønsker at bruge navneservere, kan du "
+"blot lade dette felt være tomt."
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+"Følgende netkort blev fundet. Vælg typen på det primære netkort, som du vil "
+"bruge til at installere Debiansystemet (via NFS eller HTTP)."
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid "Choose an interface."
+msgstr "Vælg netkort"
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Noget gik galt, da jeg forsøgte at aktivere dit netværk."
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "An error occured."
+msgstr "Fejl!"
+
+#. Description
+#: ../po/netcfg-common._templates:34
+#, fuzzy
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Maskinnavnet er et enkelt ord, der identificerer dit system på netværket.  "
+"Hvis du ikke ved, hvad dit maskinnavn bør være, bør du spørge din "
+"netværksadministrator. Hvis du laver dit eget hjemmenetværk, kan du selv "
+"finde på et navn."
+
+#. Description
+#: ../po/netcfg-common._templates:34
+msgid "Enter the system's hostname."
+msgstr "Angiv dit systems maskinnavn."
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "Feel free to retry."
+msgstr "Du kan evt. forsøge igen."
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "An error occured and I cannot continue."
+msgstr "Der skete en fejl og jeg kan ikke fortsætte."
+
+#. Description
+#: ../po/netcfg-common._templates:54
+msgid "No interfaces were detected."
+msgstr "Der blev ikke fundet nogen netkort."
+
+#. Description
+#: ../po/netcfg-common._templates:54
+#, fuzzy
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Configure Network Hardware'."
+msgstr ""
+"Der blev ikke fundet nogen netkort. Hvis du har et netkort, kan det være at "
+"dets modul ikke er blevet valgt endnu. Gå tilbage til 'Sæt netværksudstyr "
+"op'."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid ""
+"In some situations, you may need to supply a DHCP host name.  These "
+"situations are rare.  Most commonly, it applies to cable modem users.  If "
+"you are a cable modem user, you might need to specify an account number "
+"here.  Otherwise, you can just leave this blank."
+msgstr ""
+"I nogle situationer er det nødvendigt at angive et DHCP-værtsnavn. Det er "
+"dog sjældent nødvendigt. Oftest kan det ske for brugere af kabelmodemmer. "
+"Hvis du bruger kabelmodem, skal du muligvis angive et kontonummer her. "
+"Ellers kan du blot lade feltet være tomt."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid "What is your dhcp hostname?"
+msgstr "Hvad er dit dhcp-værtsnavn?"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid "Is this information correct?"
+msgstr "Er disse oplysninger korrekte?"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" netkort        = ${interface}\n"
+" maskinnavn     = ${hostname}\n"
+" domæne         = ${domain}\n"
+" dhcp-værtsnav  = ${dhcp_hostname}\n"
+" navneservere   = ${nameservers}"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "I will now configure the network."
+msgstr "Jeg vil nu sætte netværket op."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr ""
+"Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "No dhcp client found. I cannot continue."
+msgstr "Fandt ingen dhcp-klient. Kan ikke fortsætte."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "This package requires pump or dhcp-client."
+msgstr "Denne pakke kræver pakken pump eller dhcp-client."
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"IP-adressen er unik for din computer og består af fire numre adskilt af "
+"punktummer. Hvis du ikke ved, hvad du skal bruge her, bør du spørge din "
+"netværksadministrator."
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid "IP address?"
+msgstr "IP-adresse?"
+
+#. Description
+#: ../po/netcfg-static._templates:11
+#, fuzzy
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
+"Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
+"angives som fire tal adskilt af punktummer."
+
+#. Description
+#: ../po/netcfg-static._templates:11
+#, fuzzy
+msgid "Pointopoint address?"
+msgstr "IP-adresse?"
+
+#. Description
+#: ../po/netcfg-static._templates:19
+#, fuzzy
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
+"Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
+"angives som fire tal adskilt af punktummer."
+
+#. Description
+#: ../po/netcfg-static._templates:19
+msgid "Netmask?"
+msgstr "Netmaske?"
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+"Dette er en IP-adresse (fire numre adskilt af punktummer), der angiver din "
+"gateway, også kaldet standard-routeren. Al trafik, der skal ud fra dit "
+"lokale netværk (for eksempel til Internettet) sendes gennem denne. Kun i "
+"sjældne tilfælde har du ingen router. I så fald kan du lade dette felt være "
+"tomt. Hvis du ikke kender svaret på dette spørgsmål, bør du spørge din "
+"netværksadministrator."
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid "Gateway?"
+msgstr "Gateway?"
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid ""
+"You may have made an error entering your ipaddress, netmask and/or gateway."
+msgstr ""
+"Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
+"gateway."
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "Den angivne gateway kan ikke nåes."
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" netkort       = ${interface}\n"
+" maskinnavn    = ${hostname}\n"
+" domæne        = ${domain}\n"
+" IP-adresse    = ${ipaddress}\n"
+" netmaske      = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" navneservere  = ${nameservers}"
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid "Is this configuration correct?"
+msgstr "Er denne opsætning korrekt?"
+
+#~ msgid "${ifchoices}"
+#~ msgstr "${ifchoices}"
+
+#~ msgid "debian"
+#~ msgstr "debian"

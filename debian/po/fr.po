@@ -1,0 +1,312 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2002-09-18 00:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../po/netcfg-common._templates:4
+#, fuzzy
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org. If "
+"you are setting up a home network, you can make something up, but make sure "
+"you use the same domain name on all your computers."
+msgstr ""
+"Le domaine est cette partie de l'adresse internet qui est à la droite du nom "
+"de machine. Il se termine souvent par .com, .net, .edu, ou .org. Si vous "
+"paramétrez votre propre réseau, vous pouvez mettre ce que vous voulez mais "
+"assurez-vous d'employer le même nom sur toutes vos machines."
+
+#. Description
+#: ../po/netcfg-common._templates:4
+msgid "Choose the domain name."
+msgstr "Choisissez le nom de domaine."
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid "Choose the DNS Server Addresses"
+msgstr "Choisissez les adresses des serveurs DNS."
+
+#. Description
+#: ../po/netcfg-common._templates:12
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+"Veuillez donner les adresses IP (pas un nom de machine) ; vous pouvez "
+"inscrire au plus trois adresses, séparées par des espaces. N'utilisez pas de "
+"virgule. Les serveurs seront interrogés dans l'ordre que vous avez donné. Si "
+"vous n'utilisez aucun serveur de noms, laissez ce champ vide."
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+"Les interfaces suivantes ont été détectées. Choisissez l'interface réseau "
+"dont vous aurez besoin pour installer le système Debian (via NFS ou HTTP)."
+
+#. Description
+#: ../po/netcfg-common._templates:21
+msgid "Choose an interface."
+msgstr "Choisissez une interface."
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Quelque chose s'est mal passé lors de l'activation de votre réseau."
+
+#. Description
+#: ../po/netcfg-common._templates:28
+msgid "An error occured."
+msgstr "Erreur !"
+
+#. Description
+#: ../po/netcfg-common._templates:34
+#, fuzzy
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Le nom de machine est un mot unique qui identifie le système auprès du "
+"réseau. Si vous ne connaissez pas ce nom, demandez-le à votre administrateur "
+"réseau. Si vous installez votre propre réseau, vous pouvez mettre ce que "
+"vous voulez."
+
+#. Description
+#: ../po/netcfg-common._templates:34
+msgid "Enter the system's hostname."
+msgstr "Donnez le nom de machine pour le système."
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:42
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr ""
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "Feel free to retry."
+msgstr "Vous pouvez réessayer."
+
+#. Description
+#: ../po/netcfg-common._templates:49
+msgid "An error occured and I cannot continue."
+msgstr "Erreur : je ne peux pas continuer !"
+
+#. Description
+#: ../po/netcfg-common._templates:54
+msgid "No interfaces were detected."
+msgstr "Aucune interface n'a été détectée."
+
+#. Description
+#: ../po/netcfg-common._templates:54
+#, fuzzy
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Configure Network Hardware'."
+msgstr ""
+"Aucune interface réseau n'a été détectée. Le système d'installation n'a pu "
+"trouver aucun périphérique réseau. Si vous avez bien une carte réseau, il se "
+"peut que vous n'ayez pas encore choisi son module. Revenez à « Configurer le "
+"matériel réseau »."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid ""
+"In some situations, you may need to supply a DHCP host name.  These "
+"situations are rare.  Most commonly, it applies to cable modem users.  If "
+"you are a cable modem user, you might need to specify an account number "
+"here.  Otherwise, you can just leave this blank."
+msgstr ""
+"Parfois, mais rarement, vous devez fournir un nom d'hôte DHCP. Cela "
+"s'applique principalement aux utilisateurs du câble. Si vous êtes dans ce "
+"cas, vous pouvez avoir besoin de mettre ici un numéro de compte. Sinon, vous "
+"pouvez laisser ce champ vide."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:4
+msgid "What is your dhcp hostname?"
+msgstr "Quel est le nom dhcp de votre machine ?"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid "Is this information correct?"
+msgstr "Ces renseignements sont-ils corrects ?"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:13
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" interface            = ${interface}\n"
+" nom de machine       = ${hostname}\n"
+" domaine              = ${domain}\n"
+" nom dhcp de machine  = ${dhcp_hostname}\n"
+" serveurs de noms     = ${nameservers}"
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "I will now configure the network."
+msgstr "Je vais maintenant configurer votre réseau."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:22
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr "Cela peut prendre du temps, mais pas plus d'une minute ou deux."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "No dhcp client found. I cannot continue."
+msgstr "Aucun client dhcp trouvé. Je ne peux pas continuer."
+
+#. Description
+#: ../po/netcfg-dhcp._templates:27
+msgid "This package requires pump or dhcp-client."
+msgstr "Ce paquet demande les paquets pump ou dhcp-client."
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"L'adresse IP est spécifique à votre machine ; elle comprend quatre nombres "
+"séparés par des points. Si vous ne savez pas quelle adresse utiliser, "
+"demandez-la à votre administrateur réseau."
+
+#. Description
+#: ../po/netcfg-static._templates:4
+msgid "IP address?"
+msgstr "Quelle adresse IP ?"
+
+#. Description
+#: ../po/netcfg-static._templates:11
+#, fuzzy
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+"Le masque de réseau sert à connaître les machines qui appartiennent à votre "
+"réseau. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
+"administrateur réseau. Le masque de réseau est une adresse comprenant quatre "
+"nombres séparés par des points."
+
+#. Description
+#: ../po/netcfg-static._templates:11
+#, fuzzy
+msgid "Pointopoint address?"
+msgstr "Quelle adresse IP ?"
+
+#. Description
+#: ../po/netcfg-static._templates:19
+#, fuzzy
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Le masque de réseau sert à connaître les machines qui appartiennent à votre "
+"réseau. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
+"administrateur réseau. Le masque de réseau est une adresse comprenant quatre "
+"nombres séparés par des points."
+
+#. Description
+#: ../po/netcfg-static._templates:19
+msgid "Netmask?"
+msgstr "Quel masque de réseau ?"
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+"Cette adresse IP (quatre nombres séparés par des points) indique la "
+"passerelle de routage ; on dit aussi le routeur par défaut. Tout le trafic "
+"sortant de votre LAN (p.ex. vers l'Internet) est envoyé à ce routeur. "
+"Parfois, vous n'avez pas besoin de routeur ; vous pouvez alors laisser ce "
+"champ vide. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
+"administrateur réseau."
+
+#. Description
+#: ../po/netcfg-static._templates:27
+msgid "Gateway?"
+msgstr "Quelle passerelle ?"
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid ""
+"You may have made an error entering your ipaddress, netmask and/or gateway."
+msgstr ""
+"Vous avez peut-être fait une erreur en donnant une des adresses IP "
+"demandées, le nom de machine, le masque de réseau ou la passerelle."
+
+#. Description
+#: ../po/netcfg-static._templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "On ne peut pas accéder à votre passerelle."
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" interface              = ${interface}\n"
+" nom de machine         = ${hostname}\n"
+" domaine                = ${domain}\n"
+" adresse IP             = ${ipaddress}\n"
+" masque de réseau       = ${netmask}\n"
+" passerelle             = ${gateway}\n"
+" serveurs de noms       = ${nameservers}"
+
+#. Description
+#: ../po/netcfg-static._templates:44
+msgid "Is this configuration correct?"
+msgstr "Ces renseignements sont-ils corrects ?"
+
+#~ msgid "${ifchoices}"
+#~ msgstr "${ifchoices}"
+
+#~ msgid "debian"
+#~ msgstr "debian"
