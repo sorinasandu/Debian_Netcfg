@@ -1,17 +1,17 @@
 # Italian messages for netcfg, part of debian-installer.
-# Copyright © 2002, 2003, 2004 Software in the Public Interest, Inc
+# Copyright ¬© 2002, 2003, 2004 Software in the Public Interest, Inc
 # This file is distributed under the same license as debian-installer.
 # First translator: Stefano Melchior <stefano.melchior@openlabs.it>, 2003.
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.49\n"
+"Project-Id-Version: netcfg 0.51\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-02-29 22:36+0100\n"
+"PO-Revision-Date: 2004-03-04 22:52+0100\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
@@ -36,10 +36,10 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"La rete puÚ essere o configurata con il DHCP oppure manualmente inserendo "
+"La rete pu√≤ essere o configurata con il DHCP oppure manualmente inserendo "
 "tutte le informazioni. Se si scegliesse il DHCP e l'installatore non fosse "
 "capace di ottenere una configurazione funzionante dal server DHCP sulla "
-"rete, sar‡ offerta l'opportunit‡ di configurare la rete manualmente in "
+"rete, sar√† offerta l'opportunit√† di configurare la rete manualmente in "
 "seguito al tentativodi configurare il DHCP. Se non si fosse sicuri si scelga "
 "DHCP"
 
@@ -58,7 +58,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Il nome del dominio Ë la parte dell'indirizzo a destra del nome del "
+"Il nome del dominio √® la parte dell'indirizzo a destra del nome del "
 "computer. Di solito finisce in .com, .net, .edu o .org. Se si sta usando una "
 "rete domestica assicurarsi di inserire lo stesso dominio in tutti i computer."
 
@@ -79,7 +79,7 @@ msgid ""
 msgstr ""
 "Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre DNS "
 "separati da spazi, senza usare virgole. I server verranno interrogati "
-"nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS Ë "
+"nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS √® "
 "sufficiente lasciare vuoto questo campo."
 
 #. Type: select
@@ -95,7 +95,7 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Questo sistema ha pi˘ di una interfaccia di rete. Selezionare quella da "
+"Questo sistema ha pi√π di una interfaccia di rete. Selezionare quella da "
 "usare come interfaccia della rete principale durante l'installazione di "
 "Debian."
 
@@ -114,7 +114,7 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} p una interfaccia di rete wireless. Inserire il nome (l'ESSID) "
-"della rete wireless da fare usare a ${iface}. Se non si hanno preferenze Ë "
+"della rete wireless da fare usare a ${iface}. Se non si hanno preferenze √® "
 "possibile lasciare il campo in bianco."
 
 #. Type: string
@@ -140,8 +140,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Se la propria chiave WEP Ë nel formato \"nnnn-nnnn-nn\" oppure \"nnnnnnnn\", "
-"dove \"n\" Ë un numero, allora copiarla cosÏ com'Ë nel campo."
+"Se la propria chiave WEP √® nel formato \"nnnn-nnnn-nn\" oppure \"nnnnnnnn\", "
+"dove \"n\" √® un numero, allora copiarla cos√¨ com'√® nel campo."
 
 #. Type: string
 #. Description
@@ -150,7 +150,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se la chiave WEP Ë sotto forma di parola chiave, le si apponga davanti \"s:"
+"Se la chiave WEP √® sotto forma di parola chiave, le si apponga davanti \"s:"
 "\" (senza le virgolette)."
 
 #. Type: string
@@ -160,7 +160,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Ovviamente se non c'Ë una chiave WEP per questa rete, si lasci il campo in "
+"Ovviamente se non c'√® una chiave WEP per questa rete, si lasci il campo in "
 "bianco."
 
 #. Type: error
@@ -176,7 +176,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La chiave WEP \"${wepkey}\" non Ë valida. Si faccia molta attenzione alle "
+"La chiave WEP \"${wepkey}\" non √® valida. Si faccia molta attenzione alle "
 "istruzioni nella prossima schermata per inserire correttamente la chiave WEP "
 "e provare nuovamente."
 
@@ -193,7 +193,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"L'ESSID \"${essid}\" non Ë valido. ESSID puÚ essere composto al massimo da "
+"L'ESSID \"${essid}\" non √® valido. ESSID pu√≤ essere composto al massimo da "
 "32 caratteri qualsiasi."
 
 #. Type: string
@@ -217,8 +217,8 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Il nome dell'host Ë una singola parola che identifica il sistema nella rete. "
-"Se non lo si conosce Ë possibile consultare l'amministratore della rete "
+"Il nome dell'host √® una singola parola che identifica il sistema nella rete. "
+"Se non lo si conosce √® possibile consultare l'amministratore della rete "
 "oppure inserire un nome arbitrario se si sta utilizzando una rete domestica."
 
 #. Type: error
@@ -231,7 +231,7 @@ msgstr "Nome del computer non valido"
 #. Description
 #: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Il nome \"${hostname}\" non Ë valido."
+msgstr "Il nome \"${hostname}\" non √® valido."
 
 #. Type: error
 #. Description
@@ -242,7 +242,7 @@ msgid ""
 "with a minus sign."
 msgstr ""
 "Un nome valido contiene solo caratteri alfanumerici e il segno meno, la sua "
-"lunghezza Ë compresa tra 2 e 63 caratteri e non puÚ iniziare o finire con il "
+"lunghezza √® compresa tra 2 e 63 caratteri e non pu√≤ iniziare o finire con il "
 "segno meno."
 
 #. Type: error
@@ -258,8 +258,8 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Si Ë verificato un errore e la configurazione della rete Ë stata interrotta. "
-"» possibile riprovare usando il menu principale."
+"Si √® verificato un errore e la configurazione della rete √® stata interrotta. "
+"√à possibile riprovare usando il menu principale."
 
 #. Type: error
 #. Description
@@ -275,7 +275,7 @@ msgid ""
 "a network device."
 msgstr ""
 "Non sono state rilevate interfacce di rete. Il sistema di installazione non "
-"Ë stato in grado di trovare un dispositivo di rete."
+"√® stato in grado di trovare un dispositivo di rete."
 
 #. Type: error
 #. Description
@@ -284,7 +284,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Se Ë realmente presente una scheda di rete potrebbe essere necessario "
+"Se √® realmente presente una scheda di rete potrebbe essere necessario "
 "caricare un modulo specifico. Per farlo, tornare indietro alla rilevazione "
 "automatica dell'hardware."
 
@@ -418,7 +418,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"In alcune situazioni Ë necessario specificare un hostname DHCP. Se si usa un "
+"In alcune situazioni √® necessario specificare un hostname DHCP. Se si usa un "
 "cable modem potrebbe essere necessario specificare qui il numero "
 "dell'account."
 
@@ -426,7 +426,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "La maggior parte degli altri utenti puÚ lasciare il campo vuoto."
+msgstr "La maggior parte degli altri utenti pu√≤ lasciare il campo vuoto."
 
 #. Type: boolean
 #. Description
@@ -479,14 +479,14 @@ msgstr "Client DHCP non trovato"
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Non Ë stato trovato alcun client DHCP. Questo pacchetto richiede pump o dhcp-"
+"Non √® stato trovato alcun client DHCP. Questo pacchetto richiede pump o dhcp-"
 "client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr "La configurazione con DHCP verr‡ terminata."
+msgstr "La configurazione con DHCP verr√† terminata."
 
 #. Type: boolean
 #. Description
@@ -497,14 +497,10 @@ msgstr "Riprovare la Configurazione della rete con DHCP?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr ""
-"Durante la configurazione della rete con il DHCP non Ë stato offerto alcun "
-"indirizzo IP. Talvolta i server DHCP sono  veramente lenti. Volendo, si puÚ "
-"riprovare."
+msgstr "Durante la configurazione automatica della rete con il DHCP non √® stato assegnato alcun indirizzo IP. Talvolta i server DHCP sono veramente lenti. Volendo, si pu√≤ riprovare."
 
 #. Type: text
 #. Description
@@ -534,7 +530,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"L'indirizzo IP Ë univoco per ogni computer ed Ë formato da quattro numeri "
+"L'indirizzo IP √® univoco per ogni computer ed √® formato da quattro numeri "
 "separati da punti. Se non si conosce questo valore, consultare "
 "l'amministratore della rete."
 
@@ -551,8 +547,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"L'indirizzo IP che Ë stato fornito non Ë corretto. Deve essere nella forma x."
-"x.x.x dove ogni \"x\" non Ë maggiore a 255. Riprovare."
+"L'indirizzo IP che √® stato fornito non √® corretto. Deve essere nella forma x."
+"x.x.x dove ogni \"x\" non √® maggiore a 255. Riprovare."
 
 #. Type: string
 #. Description
@@ -569,7 +565,7 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"L'indirizzo point-to-point (PtP) Ë usato per determinare l'altra estremit‡ "
+"L'indirizzo point-to-point (PtP) √® usato per determinare l'altra estremit√† "
 "nella rete punto a punto. Consultare l'amministratore della rete se non si "
 "conosce questo valore. L'indirizzo point-to-point deve essere formato da "
 "quattro numeri separati da punti."
@@ -588,7 +584,7 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"La maschera di rete Ë usata per determinare quali computer nella rete sono "
+"La maschera di rete √® usata per determinare quali computer nella rete sono "
 "locali.  Consultare l'amministratore della rete se non se ne conosce il "
 "valore, il quale deve essere formato da quattro numeri separati da punti."
 
@@ -609,10 +605,10 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Questo Ë un indirizzo IP (quattro numeri separati da punti) che indica il "
+"Questo √® un indirizzo IP (quattro numeri separati da punti) che indica il "
 "router gateway, chiamato anche default router, al quale viene inviato tutto "
 "il traffico per l'esterno della rete LAN (ad esempio, Internet). In alcuni "
-"rari casi un router non Ë presente; in questi casi Ë possibile lasciare "
+"rari casi un router non √® presente; in questi casi √® possibile lasciare "
 "questo campo vuoto. Se non si conosce la risposta consultare "
 "l'amministratore della rete."
 
@@ -626,7 +622,7 @@ msgstr "Gateway non raggiungibile"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Il gateway inserito non Ë raggiungibile."
+msgstr "Il gateway inserito non √® raggiungibile."
 
 #. Type: error
 #. Description
@@ -634,7 +630,7 @@ msgstr "Il gateway inserito non Ë raggiungibile."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Si puÚ aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
+"Si pu√≤ aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
 "e/o il gateway."
 
 #. Type: boolean
