@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:19+0200\n"
+"POT-Creation-Date: 2004-06-29 10:35+0200\n"
 "PO-Revision-Date: 2004-05-26 18:44-0300\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -536,9 +536,9 @@ msgstr "Dull cyfluniad rhwydwaith:"
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be entered, "
-"so you can also choose to retry DHCP network autoconfiguration with a "
-"hostname that you provide."
+"network manually. Some DHCP servers require a DHCP hostname to be sent by "
+"the client, so you can also choose to retry DHCP network autoconfiguration "
+"with a hostname that you provide."
 msgstr ""
 "Methodd awtogyfluniad rhwydwaith. Fe all hyn fod oherwydd gweinydd DHCP araf "
 "ar y rhwydwaith, felly efallai hoffech ailgeisio. Os nad yw eich rhwydwaith "
@@ -548,14 +548,14 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Network autoconfiguration failed"
 msgstr "Mae awtogyfluniad rhwydwaith wedi llwyddo"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
@@ -563,13 +563,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "Network autoconfiguration was successful. However, no default route was set: "
 "the system does not know how to communicate with hosts on the Internet. This "
@@ -580,7 +580,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
@@ -588,14 +588,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
 msgstr "Ailgyflunio'r rhwydwaith diwifren"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:64
+#: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Cyflunio'r rhwydwaith gan ddefnuddio cyfeiriadaeth deinamig (DHCP)"
 

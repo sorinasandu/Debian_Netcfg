@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:19+0200\n"
+"POT-Creation-Date: 2004-06-29 10:35+0200\n"
 "PO-Revision-Date: 2004-06-29 17:19+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -535,9 +535,9 @@ msgstr "ネットワークの設定方法:"
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be entered, "
-"so you can also choose to retry DHCP network autoconfiguration with a "
-"hostname that you provide."
+"network manually. Some DHCP servers require a DHCP hostname to be sent by "
+"the client, so you can also choose to retry DHCP network autoconfiguration "
+"with a hostname that you provide."
 msgstr ""
 "ここでは、DHCP ネットワークの自動設定の再試行またはネットワークの手動設定を選"
 "ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要とす"
@@ -545,13 +545,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
 msgstr "ネットワークの自動設定に失敗しました"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
@@ -562,13 +562,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
 msgstr "デフォルトルートなしに続けますか?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "Network autoconfiguration was successful. However, no default route was set: "
 "the system does not know how to communicate with hosts on the Internet. This "
@@ -581,7 +581,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
@@ -592,14 +592,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
 msgstr "無線ネットワークの再設定"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:64
+#: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "動的アドレス (DHCP) を利用してネットワークを設定"
 

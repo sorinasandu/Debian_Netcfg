@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:19+0200\n"
+"POT-Creation-Date: 2004-06-29 10:35+0200\n"
 "PO-Revision-Date: 2004-05-15 10:22+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac."
@@ -524,9 +524,9 @@ msgstr "Metoda konfigurasi jaringan"
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be entered, "
-"so you can also choose to retry DHCP network autoconfiguration with a "
-"hostname that you provide."
+"network manually. Some DHCP servers require a DHCP hostname to be sent by "
+"the client, so you can also choose to retry DHCP network autoconfiguration "
+"with a hostname that you provide."
 msgstr ""
 "Autokonfigurasi jaringan gagal. Ini mungkin disebabkan server DHCP yang "
 "lambat pada jaringan, jadi dapat mengulang. Jika jaringan anda tidak "
@@ -537,14 +537,14 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Network autoconfiguration failed"
 msgstr "Autokonfigurasi jaringan selesai dengan sukses"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:42
 msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
@@ -552,13 +552,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "Network autoconfiguration was successful. However, no default route was set: "
 "the system does not know how to communicate with hosts on the Internet. This "
@@ -569,7 +569,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:47
+#: ../netcfg-dhcp.templates:48
 msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
@@ -577,14 +577,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
 msgstr "Mengkonfigurasikan lagi jaringan nirkabel"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:64
+#: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Melakukan konfigurasi jaringan dengan DHCP."
 
