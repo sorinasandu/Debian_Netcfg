@@ -65,9 +65,15 @@ int main(void)
 		state = QUIT;
 	    break;
 	case QUIT:
-	    if (netcfg_activate_dhcp(client) != 0)
-		return 1;
-	    return 0;
+	    switch (netcfg_activate_dhcp(client)) {
+            case 0:
+		return 0;
+            case 10:
+	        state = BACKUP;
+	        break;
+            default:
+	        return 1;
+	    }
 	}
     }
 

@@ -843,7 +843,7 @@ int netcfg_get_static(struct debconfclient *client)
 
             debconf_capb(client); // Turn off backup for yes/no confirmation
             my_debconf_input(client, "medium", "netcfg/confirm_static", &ptr);
-            state = strstr(ptr, "true") ? QUIT : GET_IPADDRESS; 
+            state = strstr(ptr, "true") ? QUIT : GET_IPADDRESS;
             debconf_capb(client, "backup");
             break;
         case QUIT:
@@ -899,7 +899,6 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     pid_t pid = 0;
     int retry = 1;
     char *ptr;
-    int ret;
     char progname[PATH_MAX] = "40";
 
     enum { PUMP, DHCLIENT, UDHCPC } dhcp_client;
@@ -979,19 +978,28 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
         /* got a lease? */
         if (!dhcp_running && (dhcp_exit_status == 0)) {
+	    /* even systems on dhcp get hostnames */
+	    /* TODO use the dhcp hostname if available. */
+            if (netcfg_get_hostname(client, &hostname))
+                return 30; // backup
+	    
             /* write configuration */
             strncat(progname, di_progname_get(), PATH_MAX-2);
 
             netcfg_write_common(progname, ipaddress, hostname, domain);
             netcfg_write_dhcp(interface, dhcp_hostname);
+
             return 0;
         }
 
         /* ask if user wants to retry */
-        debconf_capb(client);
-        ret = my_debconf_input(client, "high", "netcfg/dhcp_retry", &ptr);
+        if (my_debconf_input(client, "high", "netcfg/dhcp_retry", &ptr) == 30) {
+            if (dhcp_running) {
+                kill(pid, SIGTERM);
+            }
+	    return 30; // backup
+	}
         retry = strstr(ptr, "true") ? 1 : 0;
-        debconf_capb(client, "backup");
     }
 
     if (dhcp_running) {
@@ -1002,20 +1010,15 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
 int netcfg_get_dhcp(struct debconfclient *client) {
 
-    enum { BACKUP, GET_HOSTNAME, GET_DHCP_HOSTNAME,
-           QUIT } state = GET_HOSTNAME;
+    enum { BACKUP, GET_DHCP_HOSTNAME, QUIT } state = GET_DHCP_HOSTNAME;
 
     while (1) {
         switch (state) {
         case BACKUP:
             return 10; // Back to main
-        case GET_HOSTNAME:
-            state = netcfg_get_hostname(client, &hostname) ?
-                BACKUP : GET_DHCP_HOSTNAME;
-            break;
         case GET_DHCP_HOSTNAME:
             state = netcfg_get_dhcp_hostname(client, &dhcp_hostname) ?
-                GET_HOSTNAME : QUIT;
+                BACKUP : QUIT;
             break;
         case QUIT:
             return 0;

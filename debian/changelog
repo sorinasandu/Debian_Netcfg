@@ -49,6 +49,11 @@ netcfg (0.42) UNRELEASED; urgency=low
     - Update Swedish translation (sv.po)
   * Safir Secerovic
     - Update Bosnian translation (bs.po).
+  * Joey Hess
+    - Only prompt for a hostname after dhcp has succeeded, to avoid
+      double prompt on failed dhcp followed by static config.
+      Closes: #227897
+    - Add back button to the dhcp retry dialog. Closes half of #225861
 
  -- Bart Cornelis <cobaco@linux.be>  Thu,  8 Jan 2004 13:47:12 +0100
 

@@ -91,10 +91,17 @@ int main(void)
 	    if (netcfg_get_dhcp(client))
 		state = GET_METHOD;
 	    else {
-		if (netcfg_activate_dhcp(client))
-		    state = GET_STATIC;
-		else
+	        switch (netcfg_activate_dhcp(client)) {
+                case 0:
 		    state = QUIT;
+		    break;
+                case 30:
+		    state = BACKUP;
+		    break;
+                default:
+		    state = GET_STATIC;
+		    break;
+	        }
 	    }
 	    break;
 	case GET_STATIC:
