@@ -51,8 +51,8 @@ msgid ""
 msgstr ""
 "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse. Jos "
 "valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
-"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdäasetukset itse. "
-"Jos et ole varma, käytä DHCP:tä."
+"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdäasetukset itse. Jos et "
+"ole varma, käytä DHCP:tä."
 
 #. Type: string
 #. Description
@@ -70,9 +70,9 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "Verkkoaluenimi on se osa Internet-osoitettasi, joka on tietokoneesi nimen "
-"perässä. Se on usein jotain, joka loppuu .fi, .com, .net tai .org. Jos "
-"olet pystyttämässä kotiverkkoa, voit keksiä tähän jotain, mutta varmista, "
-"että käytät samaa verkkoaluenimeä kaikissa tietokoneissasi."
+"perässä. Se on usein jotain, joka loppuu .fi, .com, .net tai .org. Jos olet "
+"pystyttämässä kotiverkkoa, voit keksiä tähän jotain, mutta varmista, että "
+"käytät samaa verkkoaluenimeä kaikissa tietokoneissasi."
 
 #. Type: string
 #. Description
@@ -89,10 +89,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Kirjoita IP-osoitteet (ei konenimiä) korkeintaan kolmelle "
-"nimipalvelimelle välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta "
-"kysytään siinä järjestyksessä kuin syötät ne. Jos et halua käyttää mitään "
-"nimipalvelimia, voit jättää tämän kentän tyhjäksi."
+"Kirjoita IP-osoitteet (ei konenimiä) korkeintaan kolmelle nimipalvelimelle "
+"välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta kysytään siinä "
+"järjestyksessä kuin syötät ne. Jos et halua käyttää mitään nimipalvelimia, "
+"voit jättää tämän kentän tyhjäksi."
 
 #. Type: select
 #. Description
@@ -487,7 +487,8 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr ""
+"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
@@ -539,9 +540,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP-osoite on yksikäsitteinen tunniste verkon tietokoneille ja sisältää "
-"neljä lukua eroteltuna pisteillä. Jos et tiedä mitä käyttää tässä, kysy "
-"verkkosi ylläpitäjältä."
+"IP-osoite on yksikäsitteinen tunniste verkon tietokoneille ja sisältää neljä "
+"lukua eroteltuna pisteillä. Jos et tiedä mitä käyttää tässä, kysy verkkosi "
+"ylläpitäjältä."
 
 #. Type: error
 #. Description
@@ -593,8 +594,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Verkon peitettä käytetään määrittämään, mitkä koneet ovat "
-"paikallisverkossasi. Kysy verkkosi ylläpitäjältä, jos et tiedä tätä "
-"arvoa. Verkon peite syötetään neljänä lukuna eroteltuna pistein."
+"paikallisverkossasi. Kysy verkkosi ylläpitäjältä, jos et tiedä tätä arvoa. "
+"Verkon peite syötetään neljänä lukuna eroteltuna pistein."
 
 #. Type: string
 #. Description
@@ -635,7 +636,8 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
@@ -694,4 +696,3 @@ msgstr "Tee verkkoasetukset itse"
 #~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
 #~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
 #~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
-

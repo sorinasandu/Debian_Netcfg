@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-12 19:38-0700\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-03-01 01:43+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
@@ -430,6 +430,8 @@ msgstr "這些資訊正確嗎？"
 msgid "Currently configured network parameters:"
 msgstr "當前被設定的網路參數："
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -487,8 +489,8 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"在藉由 DHCP 來自動設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常慢，如果"
-"您希望的話可以重新嘗試。"
+"在藉由 DHCP 來自動設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常慢，"
+"如果您希望的話可以重新嘗試。"
 
 #. Type: text
 #. Description
@@ -615,6 +617,8 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

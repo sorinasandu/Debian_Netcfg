@@ -64,9 +64,9 @@ msgid ""
 msgstr ""
 "La red puede configurarse, bien mediante DHCP o bien introduciendo "
 "manualmente toda la información. Si elige DHCP y el instalador no puede "
-"encontrar una configuración que funcione de un servidor DHCP de su red, "
-"se le dará oportunidad de configurar su red manualmente tras el intento "
-"de hacerlo por DHCP. Si no está seguro, elija DHCP."
+"encontrar una configuración que funcione de un servidor DHCP de su red, se "
+"le dará oportunidad de configurar su red manualmente tras el intento de "
+"hacerlo por DHCP. Si no está seguro, elija DHCP."
 
 #. Type: string
 #. Description
@@ -106,8 +106,8 @@ msgid ""
 msgstr ""
 "Por favor, introduzca la dirección IP (no nombre de sistema) de hasta tres "
 "servidores de nombres, separados por espacios. No utilice comas. Los "
-"servidores serán consultados en el orden en que se introduzcan. Si no "
-"quiere utilizar ningún servidor de nombres deje este campo en blanco."
+"servidores serán consultados en el orden en que se introduzcan. Si no quiere "
+"utilizar ningún servidor de nombres deje este campo en blanco."
 
 #. Type: select
 #. Description
@@ -122,8 +122,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Sus sistema tiene varias interfaces de red. Por favor, elija una para "
-"usarla como la interfaz de red primaria durante la instalación."
+"Sus sistema tiene varias interfaces de red. Por favor, elija una para usarla "
+"como la interfaz de red primaria durante la instalación."
 
 #. Type: string
 #. Description
@@ -245,9 +245,9 @@ msgid ""
 "something up here."
 msgstr ""
 "El nombre del sistema es una sóla palabra que identifica su sistema en la "
-"red. "
-"Si no sabe qué nombre debería tener, consulte a su administrador de red. Si "
-"está configurando una red doméstica, puede inventarse el valor del nombre."
+"red. Si no sabe qué nombre debería tener, consulte a su administrador de "
+"red. Si está configurando una red doméstica, puede inventarse el valor del "
+"nombre."
 
 #. Type: error
 #. Description
@@ -270,8 +270,8 @@ msgid ""
 "with a minus sign."
 msgstr ""
 "Un nombre de host válido debe contener sólo caracteres alfanúmericos y el "
-"signo menos, debe tener entre 2 y 63 caracteres, y no puede empezar "
-"o terminar con el signo menos."
+"signo menos, debe tener entre 2 y 63 caracteres, y no puede empezar o "
+"terminar con el signo menos."
 
 #. Type: error
 #. Description
@@ -506,8 +506,8 @@ msgstr "No se encontró un cliente DHCP"
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"No se ha encontrado un cliente DHCP. Este paquete requiere "
-"pump o dhcp-client."
+"No se ha encontrado un cliente DHCP. Este paquete requiere pump o dhcp-"
+"client."
 
 #. Type: error
 #. Description
@@ -527,7 +527,10 @@ msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr "No se ha conseguido ninguna dirección IP durante la configuración de la red por DHCP. Los servidores DHCP son, a veces, realmente lentos. Si lo desea, puede reintentarlo."
+msgstr ""
+"No se ha conseguido ninguna dirección IP durante la configuración de la red "
+"por DHCP. Los servidores DHCP son, a veces, realmente lentos. Si lo desea, "
+"puede reintentarlo."
 
 #. Type: text
 #. Description
@@ -635,12 +638,10 @@ msgid ""
 msgstr ""
 "La pasarela es una dirección IP (cuatro números separados por puntos) que "
 "indica el router de pasarela, también conocido como router por defecto. Todo "
-"el tráfico que "
-"se envía fuera de su LAN (por ejemplo, hacia Internet) se envía a este "
-"router.  En algunas circunstancias "
-"anormales, puede no tener un router; si es así lo puede dejar en blanco. Si "
-"no sabe la "
-"respuesta correcta a esta pregunta, consulte a su administrador de red."
+"el tráfico que se envía fuera de su LAN (por ejemplo, hacia Internet) se "
+"envía a este router.  En algunas circunstancias anormales, puede no tener un "
+"router; si es así lo puede dejar en blanco. Si no sabe la respuesta correcta "
+"a esta pregunta, consulte a su administrador de red."
 
 #. Type: error
 #. Description
@@ -715,10 +716,9 @@ msgstr "Configurar la red usando direccionamiento estático"
 #~ "Debian system (via NFS or HTTP)."
 #~ msgstr ""
 #~ "Todas las interfaces de red detectadas se muestran a continuación. Por "
-#~ "favor, "
-#~ "elija la interfaz que quiere configurar y el tipo de la interfaz de red. "
-#~ "Ésta interfaz "
-#~ "será usada para instalar el sistema Debian (mediante NFS o HTTP)."
+#~ "favor, elija la interfaz que quiere configurar y el tipo de la interfaz "
+#~ "de red. Ésta interfaz será usada para instalar el sistema Debian "
+#~ "(mediante NFS o HTTP)."
 
 #~ msgid "Choose the domain name."
 #~ msgstr "Escoga el nombre de dominio."
