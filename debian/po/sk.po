@@ -1,0 +1,564 @@
+# translation of sk.po to Slovak
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+# KLFMANiK <Peter.Mann@tuke.sk>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-13 11:31-0500\n"
+"PO-Revision-Date: 2003-12-24 14:50+0100\n"
+"Last-Translator: KLFMANiK <Peter.Mann@tuke.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:4
+msgid "Dynamic addressing (DHCP), Static addressing (manual)"
+msgstr "Dynamické adresovanie (DHCP), Statické adresovanie (manuálne)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid "Network configuration method:"
+msgstr "Spôsob nastavenia siete:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
+msgstr ""
+"Sie» mô¾e by» nastavená automaticky pomocou DHCP, alebo manuálne po vlo¾ení "
+"po¾adovaných informácií. Ak si zvolíte DHCP a in¹talaèný program nedostane "
+"správne sie»ové nastavenia z DHCP servera na va¹ej sieti, dostanete príle¾itos» "
+"na manuálne nastavenie. Ak si nie ste istí, skúste DHCP."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid "Domain name:"
+msgstr "Názov domény:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Názov domény je èas» va¹ej internetovej adresy napravo od mena poèítaèa. "
+"Èasto konèí na .org, .net, .edu alebo .sk. Ak nastavujete domácu sie», "
+"mô¾ete si nieèo vymyslie», ale pou¾ívajte rovnakú doménu pre v¹etky va¹e "
+"poèítaèe."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid "Name server addresses:"
+msgstr "Adresy DNS serverov:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
+msgstr ""
+"Zadajte IP adresy (nie názvy) maximálne troch DNS serverov, oddelených "
+"medzerami. Nepou¾ívajte èiarky. Prvý server v zozname bude prvým, ktorý "
+"bude pou¾itý pre DNS po¾iadavky. Ak nechcete pou¾íva» ¾iaden DNS server, "
+"nechajte toto pole prázdne."
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid "Interface:"
+msgstr "Rozhranie:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid ""
+"Please choose the interface you want to configure. All currently detected "
+"interfaces on your system are shown below. Please choose the type of your "
+"primary network interface. This interface will be used for installing the "
+"Debian system (via NFS or HTTP)."
+msgstr ""
+"Vyberte rozhranie, ktoré chcete nastavi». V¹etky rozpoznané rozhrania na "
+"va¹om systéme sú zobrazené ni¾¹ie. Vyberte typ vá¹ho hlavného sie»ového "
+"rozhrania, ktoré bude pou¾ité na in¹taláciu systému Debian (cez NFS alebo "
+"HTTP)."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:40
+msgid "Error while activating the network"
+msgstr "Chyba pri spú¹»aní siete"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:40
+msgid "An error occurred while activating the network."
+msgstr "Pri spú¹»aní siete nastala chyba."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid "Hostname:"
+msgstr "Názov poèítaèa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid "Please enter the hostname for this system."
+msgstr "Vlo¾te názov poèítaèa pre tento systém."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Názov poèítaèa je jednoslovné pomenovanie, ktoré identifikuje vá¹ systém "
+"v sieti. Ak neviete, aký by mal by» názov vá¹ho poèítaèa, kontaktujte správcu "
+"va¹ej siete. Ak nastavujete domácu sie», mô¾ete si nieèo vymyslie»."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid "Invalid hostname"
+msgstr "Neplatný názov poèítaèa"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid "The name \"${hostname}\" is invalid."
+msgstr "Názov poèítaèa \"${hostname}\" je neplatný."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr ""
+"Názov poèítaèa mô¾e obsahova» iba alfanumerické znaky a znamienko mínus."
+"Musí by» v rozmedzí od 2 do 63 znakov a nesmie zaèína» alebo konèi» "
+"znamienkom mínus."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Error"
+msgstr "Chyba"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:65
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr ""
+"Pri nastavovaní siete nastala chyba a proces bol preru¹ený. Mô¾ete to znova "
+"skúsi» z hlavného menu in¹talaèného programu."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid "No network interfaces detected"
+msgstr "Neboli rozpoznané ¾iadne sie»ové rozhrania"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr ""
+"Neboli nájdené ¾iadne sie»ové rozhrania. In¹talaèný program nena¹iel ¾iadne "
+"sie»ové zariadenie."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr ""
+"Ak máte sie»ovú kartu, mo¾no pre òu potrebujete naèíta» ¹pecifický modul. "
+"Mô¾ete to urobi» pri návrate spä» do kroku rozpoznania sie»ových zariadení."
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:80
+msgid "<none>"
+msgstr "<niè>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:84
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet alebo Fast Ethernet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:88
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet alebo Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:92
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:96
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:100
+msgid "Serial-line IP"
+msgstr "Serial-line IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:104
+msgid "Parallel-port IP"
+msgstr "Parallel-port IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:108
+msgid "Point-to-Point Protocol"
+msgstr "Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:112
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:116
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
+msgid "Real channel-to-channel"
+msgstr "Skutoèný channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:128
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:132
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:136
+msgid "Unknown interface"
+msgstr "Neznáme rozhranie"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:141
+msgid "Network Configuration"
+msgstr "Nastavenie siete"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:146
+msgid "Configure the network"
+msgstr "Nastavi» sie»"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP názov poèítaèa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Mo¾no budete musie» zada» DHCP meno poèítaèa. Ak pou¾ívate káblový modem, asi"
+"bude potrebné zada» èíslo úètu."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Väè¹ina pou¾ívateµov nemusí niè zadáva»."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Is this information correct?"
+msgstr "Sú tieto informácie správne?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Currently configured network parameters:"
+msgstr "Aktuálne nastavené parametre siete:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" rozhranie      = ${interface}\n"
+" názov poèítaèa = ${hostname}\n"
+" doména         = ${domain}\n"
+" dhcp meno      = ${dhcp_hostname}\n"
+" DNS servery    = ${nameservers}"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "Configuring the network with DHCP"
+msgstr "Nastavujem sie» pomocou DHCP"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:27
+msgid "This may take some time."
+msgstr "Mô¾e to chvíµu trva»."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr "Nena¹iel sa ¾iaden DHCP klient"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "Nebol nájdený ¾iaden DHCP klient. Tento balík vy¾aduje pump alebo dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr "Priebeh DHCP nastavenia bude preru¹ený."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "Chcete zopakova» nastavenie siete pomocou DHCP?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. If you wish, you can retry."
+msgstr ""
+"Poèas nastavenia siete pomocou DHCP sme nedostali ¾iadnu IP adresu. DHCP "
+"servery sú obèas tro¹ku pomal¹ie. Zopakujte to, ak chcete."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Dynamické nastavenie siete (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "Nastavi» sie» s dynamickými adresami (DHCP)"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "IP adresa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"IP adresa je jedineèná pre ka¾dý poèítaè a skladá sa zo ¹tyroch èísiel "
+"oddelených bodkami. Ak neviete, akú IP adresu máte pou¾i», kontaktujte "
+"správcu va¹ej siete."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Point-to-point address:"
+msgstr "Point-to-point adresa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr ""
+"Point-to-point adresa slú¾i na urèenie opaèného konca point to point siete. "
+"Kontaktujte správcu va¹ej siete, ak neviete, èo máte zada». Point-to-point "
+"adresa sa zadáva ako ¹tyri èísla oddelené bodkami."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask:"
+msgstr "Sie»ová maska:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Sie»ová maska slú¾i na urèenie poèítaèov, ktoré patria k lokálnej sieti. "
+"Kontaktujte správcu va¹ej siete, ak neviete, èo máte zada». Sie»ová maska "
+"sa zadáva ako ¹tyri èísla oddelené bodkami."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway:"
+msgstr "Brána:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr ""
+"Brána je IP adresa (¹tyri èísla oddelené bodkami), ktorá urèuje smerovaè. "
+"Celá prevádzka, ktorá ide mimo va¹ej lokálnej siete (napríklad do Internetu), "
+"je zasielaná cez tento smerovaè. Vo výnimoèných prípadoch, keï smerovaè nemáte, "
+"mô¾ete necha» toto pole prázdne. Kontaktujte správcu va¹ej siete, ak neviete, "
+"èo máte zada»."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "Unreachable gateway"
+msgstr "Nedosiahnuteµná brána"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "The gateway address you entered is unreachable."
+msgstr "Zadaná adresa brány je nedosiahnuteµná."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "Mo¾no ste urobili chybu pri zadávaní IP adresy, sie»ovej masky a/alebo brány."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:47
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" rozhranie      = ${interface}\n"
+" názov poèítaèa = ${hostname}\n"
+" doména         = ${domain}\n"
+" IP adresa      = ${ipaddress}\n"
+" sie»ová maska  = ${netmask}\n"
+" brána          = ${gateway}\n"
+" pointopoint    = ${pointopoint}\n"
+" DNS servery    = ${nameservers}"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-static.templates:62
+msgid "Static network configuration"
+msgstr "Statické nastavenie siete"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:67
+msgid "Configure a network using static addressing"
+msgstr "Nastavi» sie» so statickými adresami"
+
