@@ -1,120 +1,215 @@
 /* 
    netcfg.c : Configures the network 
+
 */
 
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include "debconf.h"
 
-#define IP4_ADDR_SZ (4)
-struct ip4_addr
-{
-  int i[IP4_ADDR_SZ];
-}
-ip4_addr_t;
-char *host = NULL;
+char *hostname = NULL;
 char *domain = NULL;
+u_int32_t ipaddress = 0;
+u_int32_t network_address = 0;
+u_int32_t netmask = 0;
+u_int32_t gateway = 0;
 
-ip4_addr_t ipaddr = { {192, 168, 1, 1} };
-ip4_addr_t netmask = { {255, 255, 255, 0} };
-ip4_addr_t network = { {192, 168, 1, 0} };
-ip4_addr_t broadcast = { {192, 168, 1, 255} };
-ip4_addr_t gateway = { {0, 0, 0, 0} };
+//#define INTERFACES_FILE "/etc/network/interfaces"
+#define INTERFACES_FILE "etc/network/interfaces"
 
 
-/*
- * Checks a string with an IPv4-address for validity and converts it into an
- * ip4_addr_t type;
- */
-int
-atoIP4 (char *addr, ip4_addr_t * iaddr)
+
+/** 
+ * dot2num and num2dot
+ * Copyright: Karl Hammar, Aspö Data
+*/
+char *
+dot2num (u_int32_t * num, char *dot)
 {
-  char *end;
-  char *tmp_a;
-  char *current = strdup (addr);
-  char *next = NULL;
-  int ix = 0;
-  int tmp;
+  char *p = dot - 1;
+  char *e;
+  int ix;
+  unsigned long val;
 
-  tmp_a = current;
-  end = current + strlen (current) + 1;
-  while (next != end)
+  if (!dot)
+    return NULL;
+  *num = 0;
+  for (ix = 0; ix < 4; ix++)
     {
-      next = strchr (current, '.');
-      if (next == NULL)
-	next = end;
-      else
-	{
-	  *next = '\0';
-	  next++;
-	}
-
-      if (ix == IP4_ADDR_SZ)
-	{
-	  free (tmp_a);
-	  return 255;
-	}
-      else
-	{
-	  tmp = atoi (current);
-	  if ((tmp < 0) || (tmp > 255))
-	    {
-	      free (tmp_a);
-	      return 255;
-	    }
-	  iaddr->i[ix++] = tmp;
-	  current = next;
-	}
+      *num <<= 8;
+      p++;
+      val = strtoul (p, &e, 10);
+      if (e == p)
+	val = 0;
+      else if (val > 255)
+	return NULL;
+      *num += val;
+      /*printf("%#8x, %#2x\n", *num, val); */
+      if (ix < 3 && *e != '.')
+	return NULL;
+      p = e;
     }
-  free (tmp_a);
-  if (ix != IP4_ADDR_SZ)
-    return 255;
-  return 0;
+
+  return p;
 }
 
 
-
-static_network_cfg ()
+void
+num2dot (u_int32_t num, char *dot)
 {
+  /* dot MUST point to an char arr[16] or longer area */
+  int byte[4];
   int ix;
 
-  debconf_command ("INPUT", "high", "netcfg/get_hostname", NULL);
+  if (!dot)
+    return;
+  for (ix = 3; ix >= 0; ix--)
+    {
+      byte[ix] = num & 0xff;
+      num >>= 8;
+    }
+  sprintf (dot, "%d.%d.%d.%d", byte[0], byte[1], byte[2], byte[3]);
+}
 
-  do {
+
+
+
+void
+get_static_cfg (void)
+{
+  int finished = 0;
+  char *ptr;
+
+
+  do
+    {
+
+
+      debconf_command ("INPUT", "critical", "netcfg/get_hostname", NULL);
+      debconf_command ("GO", NULL);
+      debconf_command ("GET", "netcfg/get_hostname", NULL);
+      hostname = debconf_ret ();
+      debconf_command ("subst", "netcfg/confirm_static_cfg", "hostname",
+		       hostname, NULL);
+
+      debconf_command ("INPUT", "critical", "netcfg/get_domain", NULL);
+      debconf_command ("GO", NULL);
+      debconf_command ("GET", "netcfg/get_domain", NULL);
+      domain = debconf_ret ();
+      debconf_command ("subst", "netcfg/confirm_static_cfg", "domain", domain,
+		       NULL);
+
       debconf_command ("INPUT", "critical", "netcfg/get_ipaddress", NULL);
       debconf_command ("GO", NULL);
-  } while ( atoIP4(debconf_command ("GET", "netcfg/get_ipaddress", NULL), &ipaddress)) ;
+      debconf_command ("GET", "netcfg/get_ipaddress", NULL);
+      ptr = debconf_ret ();
+      debconf_command ("subst", "netcfg/confirm_static_cfg", "ipaddress", ptr,
+		       NULL);
+      dot2num (&ipaddress, ptr);
 
-  do {
       debconf_command ("INPUT", "critical", "netcfg/get_netmask", NULL);
       debconf_command ("GO", NULL);
-  } while ( atoIP4(debconf_command ("GET", "netcfg/get_netmask", NULL), &netmask)) ;
+      debconf_command ("GET", "netcfg/get_netmask", NULL);
+      ptr = debconf_ret ();
+      debconf_command ("subst", "netcfg/confirm_static_cfg", "netmask", ptr,
+		       NULL);
+      dot2num (&netmask, debconf_ret ());
+
+      debconf_command ("INPUT", "critical", "netcfg/get_gateway", NULL);
+      debconf_command ("GO", NULL);
+      debconf_command ("GET", "netcfg/get_gateway", NULL);
+      ptr = debconf_ret ();
+      debconf_command ("subst", "netcfg/confirm_static_cfg", "gateway", ptr,
+		       NULL);
+      dot2num (&gateway, ptr);
 
 
-  /*
-   * Generate the network, broadcast and default gateway address
-   * Default gateway address is network with last number set to "1", 
-   * or "2" if "1" is the local address.
-   */
-  for (ix = 0; ix < IP4_ADDR_SZ; ix++)
-    {
-      gateway.i[ix] = network.i[ix] = ipaddr.i[ix] & netmask.i[ix];
-      broadcast.i[ix] = (~netmask.i[ix] & 255) | ipaddr.i[ix];
+      debconf_command ("INPUT", "high", "netcfg/confirm_static_cfg", NULL);
+      debconf_command ("GO", NULL);
+      debconf_command ("GET", "netcfg/confirm_static_cfg", NULL);
+      ptr = debconf_ret ();
+
+      if (strstr (ptr, "true"))
+	finished = 1;
+      else
+	{
+	  debconf_command ("fset", "netcfg/get_hostname", "seen", "false",
+			   NULL);
+	  debconf_command ("fset", "netcfg/get_domain", "seen", "false",
+			   NULL);
+	  debconf_command ("fset", "netcfg/get_ipaddress", "seen", "false",
+			   NULL);
+	  debconf_command ("fset", "netcfg/get_netmask", "seen", "false",
+			   NULL);
+	  debconf_command ("fset", "netcfg/get_gateway", "seen", "false",
+			   NULL);
+	  debconf_command ("fset", "netcfg/confirm_static_cfg", "seen",
+			   "false", NULL);
+	}
+
     }
-  gateway.i[IP4_ADDR_SZ - 1] |=
-    (ipaddr.i[IP4_ADDR_SZ - 1] == (network.i[IP4_ADDR_SZ - 1] | 1)) ? 2 : 1;
+  while (!finished);
+
 
 }
 
 
 
 
+void
+write_static_cfg (void)
+{
+  FILE *fp;
+  char buf[16];
 
-int main(int argc, char *argv[]){
+
+  if ((fp = fopen (INTERFACES_FILE, "w")))
+    {
+      fprintf (fp,
+	       "\n# The first network card - this entry was created during the Debian installation\n");
+      fprintf (fp, "# (network, broadcast and gateway are optional)\n");
+      fprintf (fp, "iface eth0 inet static\n");
+
+      num2dot (ipaddress, buf);
+      fprintf (fp, "\taddress %s\n", buf);
+
+      num2dot (netmask, buf);
+      fprintf (fp, "\tnetmask %s\n", buf);
+
+      num2dot (ipaddress, buf);
+      fprintf (fp, "\tnetwork %s\n", buf);
+
+      num2dot (ipaddress, buf);
+      fprintf (fp, "\tbroadcast %s\n", buf);
+
+      num2dot (ipaddress, buf);
+      fprintf (fp, "\tgateway %s\n", buf);
+
+      fclose (fp);
+    }
+  else
+    {
+      perror ("fopen");
+      fprintf (stderr, "Unable to write to '%s'\n", INTERFACES_FILE);
+    }
+}
+
+
+
+int
+main (int argc, char *argv[])
+{
 
 
   debconf_command ("TITLE", "Network Configuration", NULL);
 
-  static_netork_cfg();
+  get_static_cfg ();
 
+  write_static_cfg ();
 
-
-
+  return 0;
 }

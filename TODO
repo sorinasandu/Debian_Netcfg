@@ -1,0 +1,8 @@
+* menutest : check for existance and size, of conf files (any other checks?)
+* search for network interfaces and allow the user to choose which one they want to configure
+* put in checks so the user can't enter data that is clearly invalid
+* dhcp: either another module, or in here
+* fall back to safe defaults if the user doesn't enter a particular value (ex. gateway)
+* create config dirs if they don't exist
+* use the the debconf library rather than our own debconf.[ch]
+* do other sorts of network configurations (pcmcia)

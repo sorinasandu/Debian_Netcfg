@@ -1,0 +1,14 @@
+Source: netcfg
+Section: debian-installer
+Priority: optional
+Maintainer: David Whedon <dwhedon@gordian.com>
+Build-Depends: debhelper
+Standards-Version: 3.1.1
+
+Package: netcfg
+Architecture: any
+Depends: ${shlibs:Depends}
+Provides: network-configuration
+XBC-Installer-Menu-Item: 1
+Description: Configure the network
+ This package configures the network.
