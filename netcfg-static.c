@@ -46,57 +46,89 @@ static u_int32_t pointopoint = 0;
 static struct debconfclient *client;
 static char *none;
 
-static char *my_debconf_input(char *priority, char *template)
-{
-        debconf_fset(client, template, "seen", "false");
-        debconf_input(client, priority, template);
-        debconf_go(client);
-        debconf_get(client,  template);
-        return client->value;
-}
-
-
-static void netcfg_get_static()
+static int netcfg_get_static()
 {
         char *ptr;
+	int ret = 0;
+	enum { STATE_QUIT, STATE_GET_IPADDR, STATE_GET_POINTTOPOINT, STATE_GET_NETMASK,
+		STATE_GET_GATEWAY, STATE_GATEWAY_UNREACHABLE } state = STATE_GET_IPADDR;
 
         ipaddress = network = broadcast = netmask = gateway = pointopoint =
             0;
 
-        ptr = my_debconf_input("critical", "netcfg/get_ipaddress");
-        dot2num(&ipaddress, ptr);
+	/* Simple state machine to handle goback buttons */
+	while (state != STATE_QUIT) {
+		switch (state) { 
+	
+		case STATE_GET_IPADDR:
+	       		 ret = my_debconf_input(client,"critical", "netcfg/get_ipaddress", &ptr);
+			if (ret == 30)  {
+				/* back the whole way out */
+				return 30;
+			 } else {
+				dot2num(&ipaddress, ptr);
+				debconf_subst(client, "netcfg/confirm_static", "ipaddress",
+				  	      (ipaddress ? num2dot(ipaddress) : none));
+				 if (strncmp(interface, "plip", 4) == 0
+				     || strncmp(interface, "slip", 4) == 0
+	       		              || strncmp(interface, "ctc", 3) == 0
+	       		              || strncmp(interface, "escon", 5) == 0)
+					 state = STATE_GET_POINTTOPOINT;
+				 else
+					 state = STATE_GET_NETMASK;
+			}
+			break;
+	
+		case STATE_GET_POINTTOPOINT:
+       		        ret = my_debconf_input(client,"critical", "netcfg/get_pointopoint", &ptr);
+			if (ret == 30) {
+				state = STATE_GET_IPADDR;
+			} else { 
+		                dot2num(&pointopoint, ptr);
+       		         	dot2num(&netmask, "255.255.255.255");
+		                network = ipaddress;
+		                gateway = pointopoint;
+				state = STATE_QUIT;
+			}
+			break;
+	
+		case  STATE_GET_NETMASK:
+			ret = my_debconf_input(client,"critical", "netcfg/get_netmask", &ptr);
+			if (ret == 30) {
+				state = STATE_GET_IPADDR;
+			} else {
+				dot2num(&netmask, ptr);
+				gateway = ipaddress & netmask;
+				debconf_set(client, "netcfg/get_gateway", num2dot(gateway+1));
+				state = STATE_GET_GATEWAY;
+			}
+			break;
+	
+		case STATE_GET_GATEWAY:
+       		        ret  = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
+			if (ret == 30) {
+				state = STATE_GET_NETMASK;
+			} else {
+       		         	dot2num(&gateway, ptr);
+	                	network = ipaddress & netmask;
+       		         	if (gateway && ((gateway & netmask) != network)) 
+					state = STATE_GATEWAY_UNREACHABLE;
+				else
+					state = STATE_QUIT;
+			}
+			break;
+	
+		case STATE_GATEWAY_UNREACHABLE:
+			debconf_input(client, "high", "netcfg/gateway_unreachable");
+       		        debconf_go(client);
+			state = STATE_GET_GATEWAY;
+			break;
 
-        debconf_subst(client, "netcfg/confirm_static", "ipaddress",
-                        (ipaddress ? num2dot(ipaddress) : none));
-
-        if (strncmp(interface, "plip", 4) == 0
-            || strncmp(interface, "slip", 4) == 0
-            || strncmp(interface, "ctc", 3) == 0
-            || strncmp(interface, "escon", 5) == 0
-            || strncmp(interface, "iucv", 4) == 0) {
-                ptr = my_debconf_input("critical", "netcfg/get_pointopoint");
-                dot2num(&pointopoint, ptr);
-
-                dot2num(&netmask, "255.255.255.255");
-                network = ipaddress;
-                gateway = pointopoint;
-        } else {
-                ptr = my_debconf_input("critical", "netcfg/get_netmask");
-                dot2num(&netmask, ptr);
-                gateway = ipaddress & netmask;
-                
-                debconf_set(client, "netcfg/get_gateway", num2dot(gateway+1));
-
-                ptr = my_debconf_input("critical", "netcfg/get_gateway");
-                dot2num(&gateway, ptr);
-
-                network = ipaddress & netmask;
-
-                if (gateway && ((gateway & netmask) != network)) {
-                        debconf_input(client, "high", "netcfg/gateway_unreachable");
-                        debconf_go(client);
-                }
-        }
+		case STATE_QUIT:
+			break;
+        	}
+		
+	}
 
         debconf_subst(client, "netcfg/confirm_static", "netmask", 
 		      (netmask ? num2dot(netmask) : none));
@@ -108,6 +140,7 @@ static void netcfg_get_static()
                         (pointopoint ? num2dot(pointopoint) : none));
 
         broadcast = (network | ~netmask);
+	return 0;
 }
 
 
@@ -119,7 +152,7 @@ static int netcfg_write_static()
                 fprintf(fp, "localnet %s\n", num2dot(network));
                 fclose(fp);
 
-		di_prebaseconfig_append("40netcfg-static", "cp %s %s\n",
+		di_system_prebaseconfig_append("40netcfg-static", "cp %s %s\n",
 					NETWORKS_FILE,
 					"/target" NETWORKS_FILE);
         } else
@@ -156,8 +189,8 @@ static int netcfg_activate_static()
         char buf[256];
 #ifdef __GNU__
 /* I had to do something like this ? */
-/*  di_execlog ("settrans /servers/socket/2 -fg");  */
-        di_execlog("settrans /servers/socket/2 --goaway");
+/*  di_exec_shell_log ("settrans /servers/socket/2 -fg");  */
+        di_exec_shell_log("settrans /servers/socket/2 --goaway");
         snprintf(buf, sizeof(buf),
                  "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
                  interface, num2dot(ipaddress));
@@ -169,10 +202,10 @@ static int netcfg_activate_static()
                 snprintf(buf, sizeof(buf), " --gateway=%s",
                          num2dot(gateway));
 
-        rv |= di_execlog(buf);
+        rv |= di_exec_shell_log(buf);
 
 #else
-        di_execlog("/sbin/ifconfig lo 127.0.0.1");
+        di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
 
         snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s",
                  interface, num2dot(ipaddress));
@@ -185,13 +218,13 @@ static int netcfg_activate_static()
                 di_snprintfcat(buf, sizeof(buf), " pointopoint %s",
                                num2dot(pointopoint));
 
-        rv |= di_execlog(buf);
+        rv |= di_exec_shell_log(buf);
 
         if (gateway) {
                 snprintf(buf, sizeof(buf),
                          "/sbin/route add default gateway %s",
                          num2dot(gateway));
-                rv |= di_execlog(buf);
+                rv |= di_exec_shell_log(buf);
         }
 #endif
 
@@ -204,41 +237,59 @@ static int netcfg_activate_static()
 
 int main(int argc, char *argv[])
 {
-        int finished = 0;
+        int ret = 0, goback = 0;
         char *ptr;
         char *nameservers = NULL;
+	enum { QUIT, GET_COMMON, GET_STATIC, CONFIRM_STATIC} state = GET_COMMON;
 
         client = debconfclient_new();
-        // debconf_(client, "SETTITLE", "netcfg/static-title", NULL);
-
+	debconf_capb(client, "backup");
 
         debconf_metaget(client,  "netcfg/internal-none", "description");
         none = client->value ? strdup(client->value) : strdup("<none>");
 
-        do {
-                netcfg_get_common(client, &interface, &hostname, &domain,
-                                  &nameservers);
+	while (state != QUIT) {
+		switch (state) {
 
-                debconf_subst(client, "netcfg/confirm_static", "interface", interface);
+		case GET_COMMON:
+	                ret = netcfg_get_common(client, &interface, &hostname, &domain,
+        	                                &nameservers, goback);
+			if (ret == 30) {
+				exit (10); /* goback the whole way out */
+			} else { 
+				goback = 0;
+				state = GET_STATIC;
+			}
+			break;
+		
+		case GET_STATIC:	
+			ret = netcfg_get_static();
+			if (ret == 30) {
+				goback = 1;
+				state = GET_COMMON;
+			} else { 
+				state = CONFIRM_STATIC;
+			}
+			break;
 
-                debconf_subst(client, "netcfg/confirm_static", "hostname", hostname);
+		case CONFIRM_STATIC:
+               		debconf_subst(client, "netcfg/confirm_static", "interface", interface);
+                	debconf_subst(client, "netcfg/confirm_static", "hostname", hostname);
+                	debconf_subst(client, "netcfg/confirm_static", "domain", (domain ? domain : none));
+       	        	debconf_subst(client, "netcfg/confirm_static", "nameservers",
+               	        	      (nameservers ? nameservers : none));
+               		netcfg_nameservers_to_array(nameservers, nameserver_array);
 
-                debconf_subst(client, "netcfg/confirm_static", "domain", (domain ? domain : none));
-
-                debconf_subst(client, "netcfg/confirm_static", "nameservers",
-                              (nameservers ? nameservers : none));
-
-                netcfg_nameservers_to_array(nameservers, nameserver_array);
-
-                netcfg_get_static();
-
-                ptr = my_debconf_input("medium", "netcfg/confirm_static");
-
-                if (strstr(ptr, "true"))
-                        finished = 1;
-
-        }
-        while (!finished);
+			debconf_capb(client); // Turn off backup for yes/no confirmation
+	                my_debconf_input(client, "medium", "netcfg/confirm_static", &ptr);
+	                state = strstr(ptr, "true") ? QUIT : GET_COMMON; 
+			debconf_capb(client, "backup");
+			break;
+			
+		case QUIT:
+			break;
+        	}
+	}
 
         netcfg_write_common("40netcfg-static", ipaddress, domain, hostname,
 			    nameserver_array);

@@ -34,9 +34,6 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
-static char *interface = NULL;
-static char *hostname = NULL;
-static char *domain = NULL;
 static u_int32_t ipaddress = 0;
 static u_int32_t nameserver_array[4] = { 0 };
 static struct debconfclient *client;
@@ -44,42 +41,32 @@ enum {
         PUMP,
         DHCLIENT,
         UDHCPC
-} dhcp_client_choices;
+} dhcp_client = PUMP;
 
-int dhcp_client = PUMP;
 
-static char *dhcp_hostname = NULL;
 static char *none;
 
-static char *my_debconf_input(char *priority, char *template)
+static int netcfg_get_dhcp_hostname(struct debconfclient *client, char **dhcp_hostname)
 {
-        debconf_fset(client, template, "seen", "false");
-        debconf_input(client, priority, template);
-        debconf_go(client);
-        debconf_get(client, template);
-        return client->value;
-}
-
-static void netcfg_get_dhcp()
-{
-        if (dhcp_hostname) {
-                free(dhcp_hostname);
-                dhcp_hostname = NULL;
-        }
+	int ret;
 
         debconf_input(client, "low", "netcfg/dhcp_hostname");
-        debconf_go(client);
+        ret = debconf_go(client);
+	if (ret == 30) 
+		return ret;
+        if (*dhcp_hostname) {
+                free(*dhcp_hostname);
+                *dhcp_hostname = NULL;
+        }
         debconf_get(client, "netcfg/dhcp_hostname");
 
         if (strcmp (client->value, "") != 0)
-                dhcp_hostname = strdup(client->value);
-
-        debconf_subst(client, "netcfg/confirm_dhcp", "dhcp_hostname",
-                     (dhcp_hostname ? dhcp_hostname : none));
+                *dhcp_hostname = strdup(client->value);
+	return 0;
 }
 
 
-static void netcfg_write_dhcp()
+static void netcfg_write_dhcp(char *interface, char *dhcp_hostname)
 {
 
         FILE *fp;
@@ -96,11 +83,12 @@ static void netcfg_write_dhcp()
 }
 
 
-static void netcfg_activate_dhcp()
+static void netcfg_activate_dhcp(struct debconfclient *client,
+				 char *interface, char *dhcp_hostname)
 {
         char buf[128];
-        di_execlog("/sbin/ifconfig lo 127.0.0.1");
-	di_execlog("/sbin/modprobe af_packet");
+        di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
+	di_exec_shell_log("/sbin/modprobe af_packet");
 
         switch (dhcp_client) {
         case PUMP:
@@ -123,18 +111,52 @@ static void netcfg_activate_dhcp()
                 break;
         }
 
-        if (di_execlog(buf))
+        if (di_exec_shell_log(buf))
                 netcfg_die(client);
 }
+
+/* 
+ * Ask a question to confirm all of these settings. 
+ * @return 0 if OK, 30 if we backup.
+ */
+int netcfg_get_confirm (struct debconfclient *client,
+	    	       char *interface, char *hostname, 
+		       char *domain, char *dhcp_hostname)
+{
+	char *ptr;
+	int finished = 0;
+	 char *nameservers = NULL;
+
+	debconf_subst(client, "netcfg/confirm_dhcp", "interface", interface);
+	debconf_subst(client, "netcfg/confirm_dhcp", "hostname", hostname);
+	debconf_subst(client, "netcfg/confirm_dhcp", "domain", 
+		         	(domain ? domain : none));
+
+	netcfg_nameservers_to_array(nameservers, nameserver_array);
+	debconf_subst(client, "netcfg/confirm_dhcp", "nameservers",
+                      (nameservers ? nameservers : none));
+        netcfg_get_dhcp_hostname(client, &dhcp_hostname);
+
+	debconf_capb(client); // turn off backup, just ask yes/no
+        my_debconf_input(client, "medium", "netcfg/confirm_dhcp", &ptr);
+	if (strstr (ptr, "true"))
+		finished = 1;
+	debconf_capb(client, "backup");
+	return (finished ? 0 : 30);
+}
+
 
 int main(int argc, char *argv[])
 {
         char *ptr;
-        char *nameservers = NULL;
-        int finished = 0;
         struct stat buf;
-        client = debconfclient_new();
-        // client->command(client, "SETTITLE", "netcfg/dhcp-title", NULL);
+	int num_interfaces;
+	char *interface = NULL, *hostname = NULL,*domain = NULL, *dhcp_hostname = NULL;
+       	enum { BACKUP, GET_INTERFACE, GET_HOSTNAME, GET_DHCP_HOSTNAME, 
+	       GET_CONFIRM, QUIT } state = GET_INTERFACE;
+
+	client = debconfclient_new();
+	debconf_capb(client,"backup");
 
         debconf_metaget(client, "netcfg/internal-none", "description");
         none = client->value ? strdup(client->value) : strdup("<none>");
@@ -151,41 +173,43 @@ int main(int argc, char *argv[])
                 exit(1);
         }
 
-
-        do {
-                netcfg_get_interface(client, &interface);
-		netcfg_get_hostname(client, &hostname);
-
-                debconf_subst(client, "netcfg/confirm_dhcp", "interface", interface);
-
-                debconf_subst(client, "netcfg/confirm_dhcp", "hostname", hostname);
-
-                debconf_subst(client, "netcfg/confirm_dhcp", "domain", 
-		         	(domain ? domain : none));
-
-                netcfg_nameservers_to_array(nameservers, nameserver_array);
-
-                debconf_subst(client, "netcfg/confirm_dhcp", "nameservers",
-                                (nameservers ? nameservers : none));
-                netcfg_get_dhcp();
-
-
-                ptr = my_debconf_input("medium", "netcfg/confirm_dhcp");
-
-                if (strstr(ptr, "true"))
-                        finished = 1;
-        }
-        while (!finished);
+	while (state != QUIT) {
+		switch (state) {
+		case BACKUP:
+			exit (10); // Back the whole way out
+			break;
+		case GET_INTERFACE:
+			state =  netcfg_get_interface(client, &interface, &num_interfaces) ? 
+			   	BACKUP : GET_HOSTNAME;
+			break;
+		case GET_HOSTNAME:					
+			if (netcfg_get_hostname(client, &hostname)) 
+				// if num_interfaces ==1 , interface question won't be asked. Go further back
+				state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
+			else
+				state =  GET_DHCP_HOSTNAME;
+			break;
+		case GET_DHCP_HOSTNAME:
+			state = netcfg_get_dhcp_hostname(client, &dhcp_hostname) ?
+				GET_HOSTNAME : GET_CONFIRM;
+			break;
+		case GET_CONFIRM:
+			state = netcfg_get_confirm(client, interface, 
+						   hostname, domain, dhcp_hostname) ?
+				GET_INTERFACE : QUIT;
+		case QUIT:
+			break;
+		}
+	}
 
         netcfg_write_common("40netcfg-dhcp", ipaddress, domain, hostname,
 			    nameserver_array);
-        netcfg_write_dhcp();
-
+        netcfg_write_dhcp(interface, dhcp_hostname);
 	debconf_progress_start(client, 0, 1, "netcfg/dhcp_progress");
 	netcfg_progress_displayed = 1;
 	debconf_progress_info(client, "netcfg/dhcp_progress_note");
-        my_debconf_input("medium", "netcfg/do_dhcp");
-        netcfg_activate_dhcp();
+        my_debconf_input(client, "medium", "netcfg/do_dhcp", &ptr);
+        netcfg_activate_dhcp(client, interface, dhcp_hostname);
 	debconf_progress_step(client, 1);
 	debconf_progress_stop(client);
 	netcfg_progress_displayed = 0;

@@ -36,13 +36,15 @@ extern char *num2dot (u_int32_t num);
 
 extern void netcfg_die (struct debconfclient *client);
 
-extern void netcfg_get_interface(struct debconfclient *client, char **interface);
+extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces);
 
-extern void netcfg_get_hostname(struct debconfclient *client, char **hostname);
+extern int netcfg_get_hostname(struct debconfclient *client, char **hostname);
 
-extern void netcfg_get_common (struct debconfclient *client, char **interface,
+extern int netcfg_get_common (struct debconfclient *client, char **interface,
 			       char **hostname, char **domain,
-			       char **nameservers);
+			       char **nameservers, int goback);
+
+extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
 
 extern void netcfg_write_common (const char *prebaseconfig,
 				 u_int32_t ipaddress, char *domain,

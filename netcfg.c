@@ -38,14 +38,16 @@
 int netcfg_progress_displayed = 0;
 
 
-static char *my_debconf_input(struct debconfclient *client, char *priority,
-                           char *template)
+int my_debconf_input(struct debconfclient *client, char *priority,
+                           char *template, char **p)
 {
+	int ret = 0;
         debconf_fset(client, template, "seen", "false");
         debconf_input(client, priority, template);
-        debconf_go(client);
+        ret = debconf_go(client);
         debconf_get(client, template);
-        return client->value;
+	*p = client->value;
+        return ret;
 }
 
 
@@ -150,15 +152,15 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
         char template[256];
 
         if (strlen(ifp) < 100) {
-	    /* strip away the number from the interface (eth0 -> eth) */
-	    char *new_ifp = strdup(ifp), *ptr = new_ifp;
+	    /* strip away the number from the interface (eth0 -> eth) */           
+   	    char *new_ifp = strdup(ifp), *ptr = new_ifp;
 	    while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
-	        ptr++;
-	    *ptr = '\0';
-	
-            sprintf(template, "netcfg/internal-%s", new_ifp);
-	    free(new_ifp);
-	    
+		ptr++;
+    	    *ptr = '\0';
+
+	    sprintf(template, "netcfg/internal-%s", new_ifp);           
+	    free(new_ifp);           
+
             debconf_metaget(client, template, "description");
             if (client->value != NULL)
                 return strdup(client->value);
@@ -240,20 +242,28 @@ void netcfg_die(struct debconfclient *client)
 {
 	if (netcfg_progress_displayed)
 		debconf_progress_stop(client);
+	debconf_capb(client);
         debconf_input(client, "high", "netcfg/error");
         debconf_go(client);
         exit(1);
 }
 
+/**
+ * @brief Ask which interface to configure
+ * @param client - client 
+ * @param interface      - set to the answer
+ * @param numif - number of interfaces found.
+ */
 
-void
-netcfg_get_interface(struct debconfclient *client, char **interface)
+int
+netcfg_get_interface(struct debconfclient *client, char **interface,
+		     int *numif)
 {
         char *inter;
-        int len;
+        int len, ret;
+	int num_interfaces = 0;
         int newchars;
         char *ptr;
-        int num_interfaces = 0;
         char *ifdsc;
 
         if (*interface) {
@@ -275,9 +285,8 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
                                 goto error;
                         len += newchars + 128;
                 }
-
                 di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
-                num_interfaces++;
+		num_interfaces++;
 		free(ifdsc);
         }
         getif_end();
@@ -288,19 +297,23 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
                 free(ptr);
                 exit(1);
         } else if (num_interfaces > 1) {
-                /* remove the trailing ", ", which confuses cdebconf */
-                ptr[strlen(ptr) - 2] = '\0';
-		
+		*numif = num_interfaces;
+		/* remove the trailing ", ", which confuses cdebconf */
+		ptr[strlen(ptr) - 2] = '\0';
+
                 debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
                 free(ptr);
-                inter =
-                    my_debconf_input(client, "high",
-                                  "netcfg/choose_interface");
+                ret = my_debconf_input(client, "high",
+                                        "netcfg/choose_interface", &inter);
 
+		if (ret)
+			return ret;
                 if (!inter)
                         netcfg_die(client);
-        } else if (num_interfaces == 1)
+        } else if (num_interfaces == 1) {
                 inter = ptr;
+		*numif = 1;
+	}
 
         /* grab just the interface name, not the description too */
         *interface = inter;
@@ -311,29 +324,36 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
 
         *interface = strdup(*interface);
 
-        return;
+        return 0;
 
       error:
         if (ptr)
                 free(ptr);
 
         netcfg_die(client);
+	return 10; /* unreachable */
 }
 
-void
+/*
+ * Set the hostname. 
+ * @return 0 on success, 30 on BACKUP being selected.
+ */
+int
 netcfg_get_hostname(struct debconfclient *client, char **hostname)
 {
         static const char *valid_chars =
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
         size_t len;
+	int ret;
+	char *p;
 
         do {
+
+		ret = my_debconf_input(client, "medium", "netcfg/get_hostname", &p);
+		if (ret == 30) // backup
+			return ret;
 		free(*hostname);
-
-                *hostname =
-                    strdup(my_debconf_input
-                           (client, "medium", "netcfg/get_hostname"));
-
+                *hostname = strdup(p);
                 len = strlen(*hostname);
 
                 /* Check the hostname for RFC 1123 compliance.  */
@@ -352,33 +372,86 @@ netcfg_get_hostname(struct debconfclient *client, char **hostname)
 		}
         
 	} while (!*hostname);
+	return 0;
 }
 
-
-void
-netcfg_get_common(struct debconfclient *client, char **interface,
-                  char **hostname, char **domain, char **nameservers)
+/* @brief Get the domainname.
+ * @return 0 for success, with *domain = domain, 30 for 'goback',
+ */
+int netcfg_get_domain(struct debconfclient *client,  char **domain)
 {
-        char *ptr;
-
-        netcfg_get_interface(client, interface);
-	netcfg_get_hostname(client, hostname);
-
-	free(*domain);
-
-	*domain = NULL;
+	int ret;
+	char *ptr;
         
-	if ((ptr = my_debconf_input(client, "medium", "netcfg/get_domain")))
-                *domain = strdup(ptr);
-
-	free(*nameservers);
-        
-	*nameservers = NULL;
-        if ((ptr =
-             my_debconf_input(client, "medium", "netcfg/get_nameservers")))
-                *nameservers = strdup(ptr);
-
+	ret = my_debconf_input(client, "medium", "netcfg/get_domain", &ptr);
+        if (ret)
+                return ret;
+	if (*domain)
+                free(*domain);
+        *domain = NULL;
+	if (ptr)
+		*domain = strdup(ptr);
+	return 0;
 }
+
+int
+netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
+{
+	char *ptr;
+        int ret;
+
+	ret = my_debconf_input(client, "medium", "netcfg/get_nameservers", &ptr);
+	if (*nameservers)
+		free(*nameservers);
+	*nameservers = NULL;
+        if (ptr)
+                *nameservers = strdup(ptr);
+	return ret;
+}
+
+
+
+
+/*
+ * @brief Get details common to both static & DHCP net configurations
+ * @return 0 on success, 30 to goback. 
+ *   If ret==0, interface, hostname, domain, nameservers set.
+ */
+int
+netcfg_get_common(struct debconfclient *client, char **interface,
+                  char **hostname, char **domain, char **nameservers, int goback)
+{
+	int num_interfaces =0;
+	enum { GET_INTERFACE, GET_HOSTNAME, GET_DOMAIN, GET_NAMESERVERS, GOBACK, QUIT } 
+		state;
+
+	state = goback ? GET_NAMESERVERS : GET_INTERFACE ; 
+
+	/* netcfg_get_*() return either 30 to goback, or 0 to continue */
+	while (state != QUIT) {
+	switch (state) {
+		case GOBACK:
+			return 30;
+			break;
+		case GET_INTERFACE:
+			state = (netcfg_get_interface (client, interface, &num_interfaces)) ? GOBACK: GET_HOSTNAME;
+			break;
+		case GET_HOSTNAME:
+			state = (netcfg_get_hostname (client, hostname)) ? GOBACK: GET_DOMAIN;
+			break;
+		case GET_DOMAIN:
+			state = (netcfg_get_domain (client, domain)) ? GET_HOSTNAME : GET_NAMESERVERS;
+			break;
+		case GET_NAMESERVERS:
+			state = (netcfg_get_nameservers (client, nameservers)) ? GET_DOMAIN : QUIT;
+			break;
+		case QUIT:
+			break;
+		}
+	}
+	return 0;
+}
+		
 
 void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
 {
@@ -417,7 +490,7 @@ netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 		fprintf(fp, "iface lo inet loopback\n");
 		fclose(fp);
 
-		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
 					INTERFACES_FILE,
 					"/target" INTERFACES_FILE);
 	}
@@ -438,7 +511,7 @@ netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 
                 fclose(fp);
 
-		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
 					HOSTS_FILE, "/target" HOSTS_FILE);
         }
 
@@ -453,7 +526,7 @@ netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 
                 fclose(fp);
 
-		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
 					RESOLV_FILE, "/target" RESOLV_FILE);
         }
 }

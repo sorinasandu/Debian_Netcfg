@@ -9,6 +9,8 @@ netcfg (0.30) UNRELEASED; urgency=low
       "netcfg/internal-eth" instead of (e.g.) "netcfg/internal-eth0".
     - Make multiple network cards work properly, by stripping off the
       trailing ", " from the choices list sent to cdebconf.
+  * Alastair McKinstry
+    - Enable <goback> button to work. Closes: #212771.
 
  -- Bart Cornelis <cobaco@linux.be>  Sat,  8 Nov 2003 03:43:54 +0100
 
