@@ -21,15 +21,16 @@
 #include <time.h>
 #include <netdb.h>
 
-int dhcp_running = 0, dhcp_exit_status = 1;
-pid_t dhcp_pid = -1;
+static int dhcp_running = 0;
+static int dhcp_exit_status = 1;
+static pid_t dhcp_pid = -1;
 
 /* Signal handler for DHCP client child */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
 {
     if (dhcp_running == 1) {
-	wait(&dhcp_exit_status);
-	dhcp_running = 0;
+        wait(&dhcp_exit_status);
+        dhcp_running = 0;
     }
 }
 
@@ -43,15 +44,15 @@ static void netcfg_write_dhcp (char *iface)
         if (!iface_is_hotpluggable(iface))
             fprintf(fp, "auto %s\n", iface);
         fprintf(fp, "iface %s inet dhcp\n", iface);
-	if (is_wireless_iface(iface))
-	{
-	  fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
-	  fprintf(fp, "\twireless-mode %s\n",
-	      (mode == MANAGED) ? "managed" : "adhoc");
-	  fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
-	  if (wepkey != NULL)
-	    fprintf(fp, "\twireless-key %s\n", wepkey);
-	}
+        if (is_wireless_iface(iface))
+        {
+          fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
+          fprintf(fp, "\twireless-mode %s\n",
+              (mode == MANAGED) ? "managed" : "adhoc");
+          fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
+          if (wepkey != NULL)
+            fprintf(fp, "\twireless-key %s\n", wepkey);
+        }
         fclose(fp);
     }
 
@@ -67,8 +68,10 @@ static void netcfg_write_dhcp (char *iface)
  * necessary). That's all. The meat of the DHCP code is really in
  * poll_dhcp_client.
  *
- * Its PID will be left in dhcp_pid.
- * If the client is not running, dhcp_pid will always get set to -1.
+ * The client should be run such that it dies once a lease is acquired.
+ *
+ * The client's PID is stored in dhcp_pid.  Once the client dies
+ * dhcp_pid should be set to -1.
  */
 
 int start_dhcp_client (struct debconfclient *client, char* dhostname)
@@ -94,42 +97,42 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     switch (dhcp_client)
     {
       case PUMP:
-	if (dhostname)
-	  execlp("pump", "pump", "-i", interface, "-h", dhostname, NULL);
-	else
-	  execlp("pump", "pump", "-i", interface, NULL);
+        if (dhostname)
+          execlp("pump", "pump", "-i", interface, "-h", dhostname, NULL);
+        else
+          execlp("pump", "pump", "-i", interface, NULL);
 
-	break;
+        break;
 
       case DHCLIENT:
-	/* First, set up dhclient.conf if necessary */
+        /* First, set up dhclient.conf if necessary */
 
-	if (dhostname)
-	{
-	  if ((dc = file_open(DHCLIENT_CONF, "w")))
-	  {
-	    fprintf(dc, "send host-name \"%s\";\n", dhostname);
-	    fclose(dc);
-	  }
-	}
+        if (dhostname)
+        {
+          if ((dc = file_open(DHCLIENT_CONF, "w")))
+          {
+            fprintf(dc, "send host-name \"%s\";\n", dhostname);
+            fclose(dc);
+          }
+        }
 
-	execlp("dhclient", "dhclient", "-e", interface, NULL);
-	break;
+        execlp("dhclient", "dhclient", "-e", interface, NULL);
+        break;
 
       case DHCLIENT3:
-	/* Different place.. */
+        /* Different place.. */
 
-	if (dhostname)
-	{
-	  if ((dc = file_open(DHCLIENT3_CONF, "w")))
-	  {
-	    fprintf(dc, "send host-name \"%s\";\n", dhostname);
-	    fclose(dc);
-	  }
-	}
+        if (dhostname)
+        {
+          if ((dc = file_open(DHCLIENT3_CONF, "w")))
+          {
+            fprintf(dc, "send host-name \"%s\";\n", dhostname);
+            fclose(dc);
+          }
+        }
 
-	execlp("dhclient", "dhclient", "-1", interface, NULL);
-	break;
+        execlp("dhclient", "dhclient", "-1", interface, NULL);
+        break;
     }
     if (errno != 0)
       di_error("Could not exec dhcp client: %s", strerror(errno));
@@ -280,52 +283,62 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case ASK_RETRY:
-	quit_after_hostname = 0;
+        quit_after_hostname = 0;
         /* ooh, now it's a select */
         switch (ask_dhcp_retry (client))
         {
-          case GO_BACK: kill_dhcp_client(); exit(10); /* XXX */
-          case REPLY_RETRY_AUTOCONFIG: state = POLL; break;
-          case REPLY_RETRY_WITH_HOSTNAME: state = DHCP_HOSTNAME; break;
-          case REPLY_CONFIGURE_MANUALLY: state = STATIC; break;
+          case GO_BACK:
+            kill_dhcp_client();
+            exit(10); /* XXX */
+          case REPLY_RETRY_AUTOCONFIG:
+            state = POLL;
+            break;
+          case REPLY_RETRY_WITH_HOSTNAME:
+            kill_dhcp_client();
+            state = DHCP_HOSTNAME;
+            break;
+          case REPLY_CONFIGURE_MANUALLY:
+            kill_dhcp_client();
+            state = STATIC;
+            break;
           case REPLY_DONT_CONFIGURE:
-                  kill_dhcp_client();
-		  netcfg_write_loopback();
-                  quit_after_hostname = 1;
-		  state = HOSTNAME;
-		  break;
-	  case REPLY_RECONFIGURE_WIFI:
+            kill_dhcp_client();
+            netcfg_write_loopback();
+            quit_after_hostname = 1;
+            state = HOSTNAME;
+            break;
+          case REPLY_RECONFIGURE_WIFI:
           {
-	    /* oh god - a NESTED satan machine */
- 	    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
+            /* oh god - a NESTED satan machine */
+             enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
 
-	    for (;;)
-	    {
-	      switch (wifistate)
-	      {
-		case ESSID:
-		  wifistate = ( netcfg_wireless_set_essid(client, interface, "high") == GO_BACK ) ?
-		    ABORT : WEP;
-		  break;
+            for (;;)
+            {
+              switch (wifistate)
+              {
+                case ESSID:
+                  wifistate = ( netcfg_wireless_set_essid(client, interface, "high") == GO_BACK ) ?
+                    ABORT : WEP;
+                  break;
 
-		case WEP:
-		  wifistate = ( netcfg_wireless_set_wep (client, interface) == GO_BACK ) ?
-		    ESSID : DONE;
-		  break;
+                case WEP:
+                  wifistate = ( netcfg_wireless_set_wep (client, interface) == GO_BACK ) ?
+                    ESSID : DONE;
+                  break;
 
-		case ABORT:
-		  state = ASK_RETRY;
-		  break;
+                case ABORT:
+                  state = ASK_RETRY;
+                  break;
 
-		case DONE:
-		  state = POLL;
-		  break;
-	      }
+                case DONE:
+                  state = POLL;
+                  break;
+              }
 
-	      if (wifistate == DONE || wifistate == ABORT)
-		break;
-	    }
-	  }
+              if (wifistate == DONE || wifistate == ABORT)
+                break;
+            }
+          }
         }
         break;
 
@@ -340,6 +353,9 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
           have_domain = 0;
           
+          /*
+           * Default to the domain name returned via DHCP, if any
+           */
           if ((d = fopen(DOMAIN_FILE, "r")) != NULL)
           {
             char domain[_UTSNAME_LENGTH + 1] = { 0 };
@@ -347,19 +363,21 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             fclose(d);
             unlink(DOMAIN_FILE);
 
-            /* Seed the domain. We will prefer the domain name passed
-             * by the DHCP server if there is one. */
             if (!empty_str(domain))
             {
               debconf_set(client, "netcfg/get_domain", domain);
               have_domain = 1;
             }
           }
-          
-          /* dhcp hostname, ask for one with the dhcp hostname
-           * as a seed */
-          if (gethostname(buf, sizeof(buf)) == 0 && !empty_str(buf)
-                && strcmp(buf, "(none)") != 0)
+
+          /*
+           * Default to the hostname returned via DHCP, if any,
+           * otherwise to the hostname found in DNS for the
+           * IP address of the interface
+           */
+          if (gethostname(buf, sizeof(buf)) == 0
+               && !empty_str(buf)
+               && strcmp(buf, "(none)"))
           {
             di_info("DHCP hostname: \"%s\"", buf);
             debconf_set(client, "netcfg/get_hostname", buf);
@@ -380,6 +398,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
               di_error("ioctl failed (%s)", strerror(errno));
           }
 
+          /*
+           * Default to the domain name that is the domain part
+           * of the hostname, if any
+           */
           if (have_domain == 0 && (ptr = strchr(buf, '.')) != NULL)
           {
             debconf_set(client, "netcfg/get_domain", ptr + 1);
@@ -392,13 +414,13 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case HOSTNAME:
         if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
-	{
-	  kill_dhcp_client();
-	  if (quit_after_hostname) /* go back to retry */
-	    state = ASK_RETRY;
-	  else
+        {
+          kill_dhcp_client();
+          if (quit_after_hostname) /* go back to retry */
+            state = ASK_RETRY;
+          else
             exit(10); /* go back, going back to poll isn't intuitive */
-	}
+        }
         else
         {
           /* If we didn't send a DHCP hostname before, use the one specified */
@@ -418,19 +440,19 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case DOMAIN:
-	if (!have_domain && netcfg_get_domain (client, &domain))
-	  state = HOSTNAME;
-	else if (quit_after_hostname)
-	{
-	  netcfg_write_common(ipaddress, hostname, domain);
-	  exit(0);
-	}
-	else
-	  state = END;
-	break;
+        if (!have_domain && netcfg_get_domain (client, &domain))
+          state = HOSTNAME;
+        else if (quit_after_hostname)
+        {
+          netcfg_write_common(ipaddress, hostname, domain);
+          exit(0);
+        }
+        else
+          state = END;
+        break;
 
       case STATIC:
-	kill_dhcp_client();
+        kill_dhcp_client();
         return 15;
         break;
         

@@ -16,8 +16,10 @@ netcfg (0.71) UNRELEASED; urgency=low
     - dhcp.c
       + Add comments to /e/n/i about which packages implement which options
       + Fix race to dhcp_exit_status after dhcp_running set to 0.
-      + Fix some comments
       + Count iterations in the polling loop instead of checking the time()
+      + Mark local variables with "static"
+      + Always use spaces for indentation
+      + Improve comments
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 
