@@ -63,13 +63,10 @@ msgid ""
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
 "La red puede configurarse, bien mediante DHCP o bien introduciendo "
-"manualmente\n"
-"toda la información. Si elige DHCP y el instalador no puede encontrar una "
-"configuración\n"
-"que funcione de un servidor DHCP de su red, se le dará oportunidad de "
-"configurar su \n"
-"red manualmente tras el intento de hacerlo por DHCP. Si no está seguro, "
-"eliga DHCP."
+"manualmente toda la información. Si elige DHCP y el instalador no puede "
+"encontrar una configuración que funcione de un servidor DHCP de su red, "
+"se le dará oportunidad de configurar su red manualmente tras el intento "
+"de hacerlo por DHCP. Si no está seguro, elija DHCP."
 
 #. Type: string
 #. Description
@@ -107,12 +104,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Por favor introduzca la dirección IP (no nombre de sistema) de hasta tres \n"
+"Por favor, introduzca la dirección IP (no nombre de sistema) de hasta tres "
 "servidores de nombres, separados por espacios. No utilice comas. Los "
-"servidores \n"
-"serán preguntados en el orden en que se introduzcan. Si no quiere utilizar "
-"ningún \n"
-"servidor de nombres deje este campo en blanco."
+"servidores serán consultados en el orden en que se introduzcan. Si no "
+"quiere utilizar ningún servidor de nombres deje este campo en blanco."
 
 #. Type: select
 #. Description
@@ -127,7 +122,7 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Sus sistema tiene varias interfaces de red. Por favor, eliga una para\n"
+"Sus sistema tiene varias interfaces de red. Por favor, elija una para "
 "usarla como la interfaz de red primaria durante la instalación."
 
 #. Type: string
@@ -250,10 +245,9 @@ msgid ""
 "something up here."
 msgstr ""
 "El nombre del sistema es una sóla palabra que identifica su sistema en la "
-"red. \n"
+"red. "
 "Si no sabe qué nombre debería tener, consulte a su administrador de red. Si "
-"está \n"
-"configurando una red doméstica, puede inventarse el valor del nombre."
+"está configurando una red doméstica, puede inventarse el valor del nombre."
 
 #. Type: error
 #. Description
@@ -276,10 +270,8 @@ msgid ""
 "with a minus sign."
 msgstr ""
 "Un nombre de host válido debe contener sólo caracteres alfanúmericos y el "
-"signo \n"
-"menos, debe tener entre 2 y 63 caracteres, y no puede empezar o terminar "
-"con \n"
-"el signo menos."
+"signo menos, debe tener entre 2 y 63 caracteres, y no puede empezar "
+"o terminar con el signo menos."
 
 #. Type: error
 #. Description
@@ -295,8 +287,7 @@ msgid ""
 "may retry it from the installation main menu."
 msgstr ""
 "Ocurrió un error y el proceso de configuración de la red ha sido abortado. "
-"Puede \n"
-"intentarlo de nuevo desde el menú principal de la instalación."
+"Puede intentarlo de nuevo desde el menú principal de la instalación."
 
 #. Type: error
 #. Description
@@ -311,7 +302,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"No se detectó ninguna interfaz de red. Esto significa que el sistema de \n"
+"No se detectó ninguna interfaz de red. Esto significa que el sistema de "
 "instalación no pudo encontrar un dispositivo de red."
 
 #. Type: error
@@ -321,7 +312,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Puede que necesite cargar un módulo específico para su tarjeta de red, si\n"
+"Puede que necesite cargar un módulo específico para su tarjeta de red, si "
 "tiene uno. Para ello, vuelva al paso de detección de dispositivos de red."
 
 #. Type: text
@@ -455,8 +446,8 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "En algunas circunstancias será necesario que indique el nombre de su "
-"servidor DHCP. Si \n"
-"usted es un usuario de cable modem, puede necesitar un número de cuenta aquí."
+"servidor DHCP. Si usted es un usuario de cable modem, puede necesitar "
+"indicar un número de cuenta aquí."
 
 #. Type: string
 #. Description
@@ -515,7 +506,7 @@ msgstr "No se encontró un cliente DHCP"
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"No se ha encontrado un cliente DHCP. Este paquete requiere \n"
+"No se ha encontrado un cliente DHCP. Este paquete requiere "
 "pump o dhcp-client."
 
 #. Type: error
@@ -642,13 +633,13 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"La pasarela es una dirección IP (cuatro números separados por puntos) que \n"
+"La pasarela es una dirección IP (cuatro números separados por puntos) que "
 "indica el router de pasarela, también conocido como router por defecto. Todo "
-"el tráfico que \n"
+"el tráfico que "
 "se envía fuera de su LAN (por ejemplo, hacia Internet) se envía a este "
-"router.  En algunas circunstancias \n"
+"router.  En algunas circunstancias "
 "anormales, puede no tener un router; si es así lo puede dejar en blanco. Si "
-"no sabe la \n"
+"no sabe la "
 "respuesta correcta a esta pregunta, consulte a su administrador de red."
 
 #. Type: error
@@ -724,9 +715,9 @@ msgstr "Configurar la red usando direccionamiento estático"
 #~ "Debian system (via NFS or HTTP)."
 #~ msgstr ""
 #~ "Todas las interfaces de red detectadas se muestran a continuación. Por "
-#~ "favor, \n"
-#~ "eliga la interfaz que quiere configurar y el tipo de la interfaz de red. "
-#~ "Esta interfaz\n"
+#~ "favor, "
+#~ "elija la interfaz que quiere configurar y el tipo de la interfaz de red. "
+#~ "Ésta interfaz "
 #~ "será usada para instalar el sistema Debian (mediante NFS o HTTP)."
 
 #~ msgid "Choose the domain name."
