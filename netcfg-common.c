@@ -73,9 +73,6 @@ char* essid = NULL;
 /* IW socket for global use - init in main */
 int wfd = 0;
 
-/* If 1, ask all questions at priority high. */
-int full_configuration = 0;
-
 int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
