@@ -2,13 +2,12 @@
 # by the Portguese team: http://www.DebianPT.org/traduz/
 # 1º Tradutor: Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
 # ...
-# 2005.01.19 Miguel Figueiredo <elmig@debianpt.org> - Fixed typo, small corrections.
-# 2005.01.20 Miguel Figueiredo - fixed another typo.
+# 2005.01.19,20,23 - Miguel Figueiredo <elmig@debianpt.org> - Fixed typo, small corrections.
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 1.08\n"
 "POT-Creation-Date: 2004-11-24 00:33-0700\n"
-"PO-Revision-Date: 2005-01-20 21:57+0000\n"
+"PO-Revision-Date: 2005-01-23 21:57+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,10 +31,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"A rede pode ser configurada via DHCP ou introduzindo manualmente todos as "
+"A rede pode ser configurada via DHCP ou introduzindo manualmente todas as "
 "informações necessárias. Caso você opte por usar DHCP e o instalador não "
-"seja capaz de obter uma configuração de um servidor DHCP na sua rede, ser-"
-"lhe-à dada a oportunidade de configurar a sua rede manualamente após a "
+"for capaz de obter uma configuração de um servidor DHCP na sua rede, ser-"
+"-lhe-à dada a oportunidade de configurar a sua rede manualmente após a "
 "tentativa de configura-la por DHCP."
 
 #. Type: string
@@ -243,8 +242,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Um nome do computador válido só pode conter os números 0-9, letras "
-"minúsculasa-z, e o sinal menos. Tem de ter entre 2 e 63 caracteres de "
+"Um nome do computador válido só pode conter os números 0-9, as letras "
+"minúsculas de a-z, e o sinal menos. Tem de ter entre 2 e 63 caracteres de "
 "comprimento, e não pode iniciar ou terminar com um sinal de menos."
 
 #. Type: error
@@ -267,7 +266,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Nenhum interface de rede foi detectado"
+msgstr "Não foi detectado nenhum interface de rede"
 
 #. Type: error
 #. Description
@@ -276,7 +275,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Nenhum interface de rede foi encontrado. O sistema de instalação não foi "
+"Não foi encontrado nenhum interface de rede. O sistema de instalação não foi "
 "capaz de encontrar um dispositivo de rede."
 
 #. Type: error
@@ -287,7 +286,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Você pode precisar de carregar um módulo específico para a sua placa de "
-"rede, caso realmente possua uma. Para fazê-lo, retorne ao passo de detecção "
+"rede, caso realmente possua uma. Para fazê-lo, retorne à etapa de detecção "
 "de hardware de rede."
 
 #. Type: select
@@ -312,7 +311,7 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Redes sem fios ou são managed ou ad-hoc. Se usar um verdadeiro ponto de "
+"As redes sem fios ou são managed ou ad-hoc. Se usar um verdadeiro ponto de "
 "acesso de algum tipo, a sua rede é Managed. Se outro computador é o seu "
 "'ponto de acesso', então a sua rede pode ser Ad-hoc."
 
@@ -338,7 +337,7 @@ msgstr "<nenhuma>"
 #. Description
 #: ../netcfg-common.templates:138
 msgid "Wireless ethernet (802.11x)"
-msgstr "Rede sem fio (802.11x)"
+msgstr "Rede sem fios (802.11x)"
 
 #. Type: text
 #. Description
