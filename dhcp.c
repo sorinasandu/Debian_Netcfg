@@ -326,7 +326,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
           /* dhcp hostname, ask for one with the dhcp hostname
            * as a seed */
-          if (gethostname(buf, sizeof(buf)) == 0 && strcmp(buf, "(none)") != 0)
+          if (gethostname(buf, sizeof(buf)) == 0 && !empty_str(buf) && strcmp(buf, "(none)") != 0)
             debconf_set(client, "netcfg/get_hostname", buf);
           else
 	  {
