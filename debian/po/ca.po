@@ -1,16 +1,15 @@
 # Catalan messages for debian-installer.
-# Copyright © 2002, 2003, 2004 Software in the Public Interest, Inc.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-21 18:47-0700\n"
+"POT-Creation-Date: 2004-08-23 12:37+0200\n"
 "PO-Revision-Date: 2004-07-13 00:23+0200\n"
-"Last-Translator: Jordi Mallach <jordi@debian.org>\n"
-"Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
+"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
+"Language-Team: Debian L10n Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -291,7 +290,7 @@ msgstr ""
 #: ../netcfg-common.templates:109
 #, fuzzy
 msgid "Configure the network statically?"
-msgstr "Configura la xarxa manualment"
+msgstr "Configura el dispositiu de xarxa"
 
 #. Type: boolean
 #. Description
@@ -419,7 +418,6 @@ msgstr "Canal-a-canal"
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
-# La veritat, no se si s'ha de traduir moltes d'aquestes...
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:193
@@ -759,8 +757,6 @@ msgstr "És aquesta informació correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Paràmetres de la xarxa actualment configurada:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -783,61 +779,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Configura la xarxa"
-
-#~ msgid ""
-#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
-#~ "or your network simply not being set up for DHCP."
-#~ msgstr ""
-#~ "Això pot ser degut a un servidor de DHCP lent, mal funcionament de "
-#~ "l'equipament de xarxa, o que la vostra xarxa no està configurada per a "
-#~ "DHCP."
-
-#~ msgid ""
-#~ "If you are unsure then you can continue and come back to the network "
-#~ "configuration step later if necessary."
-#~ msgstr ""
-#~ "Si no esteu segur, podeu continuar i tornar al pas de la configuració de "
-#~ "la xarxa més tard, si és necessari."
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configuració dinàmica de la xarxa (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " interfície         = ${interface}\n"
-#~ " nom de l'ordinador = ${hostname}\n"
-#~ " domini             = ${domain}\n"
-#~ " nom de dhcp        = ${dhcp_hostname}\n"
-#~ " servidors de noms  = ${nameservers}"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Voleu tornar a provar la configuració de la xarxa per DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "No s'ha trobat cap adreça IP durant la configuració de la xarxa per DHCP. "
-#~ "A vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a "
-#~ "provar."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Adreçament dinàmic (DHCP), adreçament estàtic (manual)"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "S'ha produït un error en activar la xarxa"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "S'ha produït un error en activar la xarxa."
