@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg-0.46\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 09:46-0800\n"
-"PO-Revision-Date: 2004-02-23 13:03-0300\n"
+"PO-Revision-Date: 2004-02-24 17:24-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +113,6 @@ msgstr "ESSID sem fio para ${iface} :"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -142,35 +141,32 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
 "Caso sua chave WEP esteja no formato 'nnnn-nnnn-nn' ou 'nnnnnnnn', onde 'n' "
-"é um número, somente digite a mesma na caixa."
+"é um número, somente digite a mesma no campo."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Caso sua chave WEP esteja no formato de uma passphrase, prefixe a mesma com "
-"'s:' (sem aspas)."
+"Caso sua chave WEP esteja no formato de uma passphrase, prefixe a mesma "
+"com 's:' (sem as aspas)."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"É claro, caso não exista chave WEP para sua rede sem fio, deixe a camp em "
-"branco."
+"É claro, caso não exista uma chave WEP para sua rede sem fio, deixe o "
+"campo em branco."
 
 #. Type: error
 #. Description
@@ -550,9 +546,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "Endereço IP :"
+msgstr "Endereço IP malformado"
 
 #. Type: error
 #. Description
@@ -561,6 +556,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"O endereço IP que você informou está mailformado. Ele deve estar no "
+"formato x.x.x.x , onde cada 'x' não deve ser maior que 255. Por favor, "
+"tente novamente."
 
 #. Type: string
 #. Description
