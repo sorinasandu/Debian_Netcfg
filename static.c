@@ -293,7 +293,9 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
 int netcfg_activate_static(struct debconfclient *client)
 {
     int rv = 0, masksize;
-    char buf[256], ptr1[INET_ADDRSTRLEN];
+    char buf[256];
+    char ptr1[INET_ADDRSTRLEN];
+    char ptr2[INET_ADDRSTRLEN];
 
 #ifdef __GNU__
     /* I had to do something like this ? */
@@ -325,11 +327,20 @@ int netcfg_activate_static(struct debconfclient *client)
     rv |= di_exec_shell_log(buf);
     
     rv |= !inet_ptom (NULL, &masksize, &netmask);
-    
+
     /* Add the new IP address, and broadcast, and netmask */
+    if (pointopoint.s_addr)
+    {
+    snprintf(buf, sizeof(buf), "ip addr add %s/%d peer %s dev %s",
+	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
+	     inet_ntop (AF_INET, &pointopoint, ptr2, sizeof (ptr2)),    
+	interface);
+    }
+    else {
     snprintf(buf, sizeof(buf), "ip addr add %s/%d dev %s",
 	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
 	interface);
+    }
 
     di_info("executing: %s", buf);
     rv |= di_exec_shell_log(buf);
@@ -339,8 +350,7 @@ int netcfg_activate_static(struct debconfclient *client)
       snprintf(buf, sizeof(buf), "ip route add default dev %s", interface);
       rv |= di_exec_shell_log(buf);
     }
-
-    if (gateway.s_addr) {
+    else if (gateway.s_addr) {
         snprintf(buf, sizeof(buf), "ip route add default via %s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
         rv |= di_exec_shell_log(buf);
