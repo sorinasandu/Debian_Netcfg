@@ -1050,7 +1050,7 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
         fclose(fp);
     }
 
-    if ((fp = file_open(RESOLV_FILE, "w"))) {
+    if ((fp = file_open(RESOLV_FILE, "a"))) {
       fclose(fp);
     }
     
