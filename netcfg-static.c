@@ -159,8 +159,10 @@ netcfg_activate_static ()
 /*  execlog ("settrans /servers/socket/2 -fg");  */
   execlog ("settrans /servers/socket/2 --goaway");
   snprintf (buf, sizeof (buf),
-	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s --netmask=%s",
-	    interface, num2dot (ipaddress), num2dot (netmask));
+	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
+	    interface, num2dot (ipaddress));
+  snprintfcat (buf, sizeof (buf) " --netmask=%s", num2dot (netmask));
+  buf[sizeof (buf) - 1] = '\0';
 
   if (gateway)
     snprintf (buf, sizeof (buf), " --gateway=%s", num2dot (gateway));
@@ -170,9 +172,11 @@ netcfg_activate_static ()
 #else
   execlog ("/sbin/ifconfig lo 127.0.0.1");
 
-  snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s netmask %s broadcast %s",
-	    interface, num2dot (ipaddress), num2dot (netmask),
-	    num2dot (broadcast));
+  snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", 
+	    interface, num2dot (ipaddress));
+  snprintfcat (buf, sizeof (buf), " netmask %s", num2dot (netmask));
+  snprintfcat (buf, sizeof (buf), " broadcast %s", num2dot (broadcast));
+  buf[sizeof (buf) - 1] = '\0';
 
   if (pointopoint)
     snprintfcat (buf, sizeof (buf), " pointopoint %s", num2dot (pointopoint));
