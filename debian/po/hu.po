@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 18:28+0200\n"
-"PO-Revision-Date: 2004-04-10 15:47+0200\n"
+"POT-Creation-Date: 2004-04-13 03:40-0600\n"
+"PO-Revision-Date: 2004-04-13 13:09+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -72,7 +72,6 @@ msgstr "Névszolgáltatók címei:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -80,9 +79,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Szóközökkel elválasztva adja meg a (legfeljebb 3) névszolgáltató IP-címét "
-"(nem gépnevét). Ne használjon vesszőket. Az elsőnek megadott kiszolgálóhoz "
-"fordul majd először. Ha nem használ névszolgáltatót, hagyja üresen a mezőt."
+"A névszolgáltatók a hálózaton található gépek neveinek feloldására "
+"használatosak. Szóközökkel elválasztva adja meg a (legfeljebb 3) "
+"névszolgáltató IP-címét (nem gépnevét). Ne tegyen közéjük vesszőket. Az "
+"elsőnek megadott kiszolgálóhoz fordul majd először. Ha nem vesz igénybe "
+"névszolgáltatót, hagyja üresen a mezőt."
 
 #. Type: select
 #. Description
@@ -471,8 +472,6 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -666,8 +665,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
