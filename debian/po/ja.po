@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-29 17:50+0900\n"
+"PO-Revision-Date: 2004-07-01 16:35+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -556,7 +556,7 @@ msgstr "ネットワークの自動設定に失敗しました"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "あなたのネットワークはおそらく、DHCP プロトコルを使っていません。または、DHCP サーバが遅いか、何らかのネットワークハードウェアが正しく動作していないのでしょう。"
 
 #. Type: boolean
 #. Description
@@ -567,16 +567,13 @@ msgstr "デフォルトルートなしに続けますか?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
-"ネットワークの自動設定には成功しましたが、インターネットのような外部のネット"
-"ワークへの利用可能なデフォルトルートがないようです。"
+msgstr "ネットワークの自動設定に成功しました。ただ、デフォルトルートが設定されていないようです。システムは、インターネット上のホストとやり取りする方法を知りません。これは、1 枚目の公式 Debian CD-ROM、'ネットワークインストール' CD-ROM、ローカルネットワークにある利用可能なパッケージがない限り、インストールの継続を妨げることになります。"
 
 #. Type: boolean
 #. Description
@@ -584,7 +581,7 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "よくわからなければ、デフォルトルートなしに続けるべきではありません。この問題についてローカルネットワークの管理者に相談してください。"
 
 #. Type: text
 #. Description
@@ -752,19 +749,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid ""
-#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
-#~ "or your network simply not being set up for DHCP."
-#~ msgstr ""
-#~ "これは遅い DHCP サーバのためか、ネットワークケーブルが外れているか、あなた"
-#~ "のネットワークのルータまたはハブが壊れているか、ネットワークが単に DHCP の"
-#~ "セットアップを用意していないかといったことによるものでしょう。"
-
-#~ msgid ""
-#~ "If you are unsure then you can continue and come back to the network "
-#~ "configuration step later if necessary."
-#~ msgstr ""
-#~ "必要なものすべてが CD にあるという場合以外は、Debian のインストールを続け"
-#~ "ることができないかもしれません。よくわからなければ、ネットワーク設定に戻っ"
-#~ "てください。"
