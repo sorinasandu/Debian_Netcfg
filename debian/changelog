@@ -2,6 +2,9 @@ netcfg (0.29) UNRELEASED; urgency=low
 
   * Joey Hess
     - Temporary fix to refer to correct menu item title for ethdetect.
+  * Matt Kraai
+    - Pass -e to dhclient so that it exits unsuccessfully if it is unable
+      to obtain a lease (closes: #219392).
 
  -- Joey Hess <joeyh@debian.org>  Tue,  4 Nov 2003 16:36:56 -0500
 

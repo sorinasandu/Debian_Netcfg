@@ -111,7 +111,7 @@ static void netcfg_activate_dhcp()
                 break;
 
         case DHCLIENT:
-                snprintf(buf, sizeof(buf), "/sbin/dhclient %s", interface);
+                snprintf(buf, sizeof(buf), "/sbin/dhclient -e %s", interface);
                 break;
 
         case UDHCPC:
