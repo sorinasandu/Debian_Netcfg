@@ -1,4 +1,3 @@
-# translation of de.po to 
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -11,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-05-12 17:50+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"PO-Revision-Date: 2004-04-17 19:15+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +56,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Der Domainname ist der rechte Teil Ihrer Internetadresse nach Ihrem "
+"Der Domainname ist der rechte Teil Ihrer Internetadresse nach Ihren "
 "Rechnernamen. Er endet oft mit .de, .com, .net oder .org. Wenn Sie ein "
 "lokales Heimnetz aufbauen, ist es egal, was Sie angeben. Diese Information "
 "sollte dann aber auf allen Rechnern gleich sein."
@@ -431,19 +430,44 @@ msgstr "Konfiguriere das Netzwerk ..."
 msgid "Configure the network"
 msgstr "Netzwerk einrichten"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP Hostname:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
+"selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
+"besitzen, muss hier oft eine Benutzernummer angegeben werden."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Sind diese Informationen richtig?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Gegenwärtig konfigurierte Netzwerk-Parameter:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -459,67 +483,73 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Konfiguriere das Netzwerk mit DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Dies kann einige Zeit dauern."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "Kein DHCP-Client gefunden"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "Der DHCP-Konfigurationsprozess wird abgebrochen."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
+msgstr "Statische Netzwerkkonfiguration"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Netzwerk-Autokonfiguration nochmals mit DHCP-Hostname versuchen"
+msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Configure network manually"
-msgstr "Netzwerk manuell konfigurieren"
+msgstr "Netzwerk einrichten"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Netzwerk jetzt nicht konfigurieren"
+msgstr "Netzwerk einrichten"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
+#, fuzzy
 msgid "Next network configuration step:"
-msgstr "Nächster Netzwerkkonfigurations-Schritt:"
+msgstr "Statische Netzwerkkonfiguration"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -527,19 +557,21 @@ msgid ""
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
 msgstr ""
-"Die Netzwerk-Autokonfiguration schlug fehl. Dies liegt häufig an einem "
-"langsamen DHCP-Server im Netzwerk, deshalb möchsten Sie es vielleicht "
-"nochmals versuchen. Sie können auch einen DHCP-Hostnamen angeben, der an "
-"den Server gesendet wird, wenn Sie glauben, dass einer benötigt wird. "
-"Andernfalls können Sie das Netzwerk manuell einrichten oder es jetzt gar "
-"nicht konfigurieren."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -654,11 +686,14 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -685,8 +720,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet oder Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "Möchten Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
 
 #~ msgid ""
@@ -696,21 +733,3 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ "Während der automatischen Netzwerk-Konfiguration mit DHCP wurden keine IP-"
 #~ "Adressen gefunden. DHCP-Server sind manchmal sehr langsam. Wenn Sie "
 #~ "möchten, können Sie es noch einmal versuchen."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet oder Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "DHCP Hostname:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
-#~ "selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein "
-#~ "Kabelmodem besitzen, muss hier oft eine Benutzernummer angegeben werden."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."
-

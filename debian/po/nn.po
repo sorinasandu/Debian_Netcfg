@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-04-30 00:06+0200\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -432,19 +432,43 @@ msgstr "Set opp nettverk ..."
 msgid "Configure the network"
 msgstr "Set opp nettverket"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP-vertsnamn:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Det kan vera du må oppgje eit DHCP-vertsnamn. Viss du brukar eit kabelmodem "
+"må du kanskje oppgje eit kontonummer."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Dei fleste andre brukarar kan la dette feltet stå tomt."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Er denne informasjonen rett?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parameter for nettverksoppsett:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -460,72 +484,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Set opp nettverket med DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Dette kan ta litt tid."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "Fant ingen DHCP-klient"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Fant ingen DHCP-klient. Denne pakken treng pump eller dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "Avbryt oppsettet av DHCP."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statisk nettverksoppsett"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dynamisk nettverksoppsett (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Set opp nettverket"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Set opp nettverket"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Statisk nettverksoppsett"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -536,8 +560,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Dynamisk nettverksoppsett (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Set opp nettverket med dynamisk adressering (DHCP)"
 
@@ -660,6 +691,8 @@ msgstr ""
 "Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller adresse til "
 "standardrutar."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -687,8 +720,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "Vil du prøva å setja opp nettverket ved hjelp av DHCP ein gong til?"
 
 #~ msgid ""
@@ -697,19 +732,3 @@ msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
 #~ msgstr ""
 #~ "Fann ingen IP-adresse under oppsettet av nettverket med DHCP. DHCP-"
 #~ "tenarar er av og til svært trege. Viss du vil kan du prøva igjen."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "DHCP-vertsnamn:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "Det kan vera du må oppgje eit DHCP-vertsnamn. Viss du brukar eit "
-#~ "kabelmodem må du kanskje oppgje eit kontonummer."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "Dei fleste andre brukarar kan la dette feltet stå tomt."

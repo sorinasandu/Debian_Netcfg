@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-04-26 23:30+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -452,19 +452,44 @@ msgstr "Configurando la red ..."
 msgid "Configure the network"
 msgstr "Configurar la red"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nombre de sistema DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"En algunas circunstancias será necesario que indique el nombre de su "
+"servidor DHCP. Si usted es un usuario de cable modem, puede necesitar "
+"indicar un número de cuenta aquí."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "La mayoría de los usuarios pueden simplemente dejar esto en blanco."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "¿Es esta información correcta?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parámetros de red configurados hasta el momento:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -480,25 +505,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Configurando la red con DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Esto puede tomar cierto tiempo."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "No se encontró un cliente DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "No se ha encontrado un cliente DHCP. Este paquete requiere pump o dhcp-"
@@ -506,48 +531,48 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "La configuración con DHCP se abortará."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Configuración estática de la red"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Configuración de red dinámica (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Configurar la red"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Ahora se configurará su red."
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Método para configuración de red:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -558,8 +583,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Configuración de red dinámica (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurar la red usando direccionamiento dinámico (DHCP)"
 
@@ -681,6 +713,8 @@ msgstr ""
 "Puede haberse equivocado al introducir la dirección IP, máscara de red y/o "
 "pasarela."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -708,8 +742,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configurar la red usando direccionamiento estático"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
 
 #~ msgid ""
@@ -719,23 +755,6 @@ msgstr "Configurar la red usando direccionamiento estático"
 #~ "No se ha conseguido ninguna dirección IP durante la configuración de la "
 #~ "red por DHCP. Los servidores DHCP son, a veces, realmente lentos. Si lo "
 #~ "desea, puede reintentarlo."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "Nombre de sistema DHCP:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "En algunas circunstancias será necesario que indique el nombre de su "
-#~ "servidor DHCP. Si usted es un usuario de cable modem, puede necesitar "
-#~ "indicar un número de cuenta aquí."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "La mayoría de los usuarios pueden simplemente dejar esto en blanco."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuración de red"

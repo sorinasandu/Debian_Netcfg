@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-04-14 02:01+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -427,19 +427,44 @@ msgstr "S'està configurant la xarxa..."
 msgid "Configure the network"
 msgstr "Configura la xarxa"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nom de l'ordinador DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"És possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
+"utilitzant un mòdem de cable, és possible que tingueu que especificar un "
+"nombre de compte ací."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "La major part dels altres usuaris poden deixar això en blanc."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "És aquesta informació correcta?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Paràmetres de la xarxa actualment configurada:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -455,73 +480,73 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "S'està configurant la xarxa amb DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Això pot trigar un temps."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "No s'ha trobat cap client DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "No s'ha trobat cap client DHCP. Aquest paquet requereix pump o dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "S'avortarà el procés de configuració per DHCP."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Configuració de xarxa estàtica"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Configuració dinàmica de la xarxa (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Configura la xarxa"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Configura la xarxa"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Mètode de configuració de la xarxa:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -532,8 +557,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Configuració dinàmica de la xarxa (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura la xarxa utilitzant adreçament dinàmic (DHCP)"
 
@@ -656,6 +688,8 @@ msgstr ""
 "Pot ser heu comés un error en introduir la vostra adreça IP, màscara de "
 "xarxa i/o pasarel·la."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -683,8 +717,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "Voleu tornar a provar la configuració de la xarxa per DHCP?"
 
 #~ msgid ""
@@ -694,23 +730,6 @@ msgstr "Configura una xarxa utilitzant adreçament estàtic"
 #~ "No s'ha trobat cap adreça IP durant la configuració de la xarxa per DHCP. "
 #~ "A vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a "
 #~ "provar."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "Nom de l'ordinador DHCP:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "És possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
-#~ "utilitzant un mòdem de cable, és possible que tingueu que especificar un "
-#~ "nombre de compte ací."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "La major part dels altres usuaris poden deixar això en blanc."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuració de la xarxa"

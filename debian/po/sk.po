@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_tools_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-04-19 07:15+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -430,19 +430,43 @@ msgstr "Nastavujem sie» ..."
 msgid "Configure the network"
 msgstr "Nastavenie siete"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP názov poèítaèa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Mo¾no budete musie» zada» DHCP meno poèítaèa. Ak pou¾ívate káblový modem, "
+"asi bude potrebné zada» èíslo úètu."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Väè¹ina pou¾ívateµov nemusí niè zadáva»."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Sú tieto informácie správne?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Aktuálne nastavené parametre siete:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -458,25 +482,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Nastavujem sie» pomocou DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Mô¾e to chvíµu trva»."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "Nena¹iel sa ¾iaden DHCP klient"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nebol nájdený ¾iaden DHCP klient. Tento balík vy¾aduje pump alebo dhcp-"
@@ -484,48 +508,48 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "Priebeh DHCP nastavenia bude preru¹ený."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statické nastavenie siete"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dynamické nastavenie siete (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Nastavenie siete"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Nastavenie siete"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Spôsob nastavenia siete:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -536,8 +560,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Dynamické nastavenie siete (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Nastavenie siete s dynamickými adresami (DHCP)"
 
@@ -655,6 +686,8 @@ msgid ""
 msgstr ""
 "Mo¾no ste urobili chybu pri zadávaní IP adresy, sie»ovej masky a/alebo brány."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -682,8 +715,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Nastavenie siete so statickými adresami"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet alebo Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "Chcete zopakova» nastavenie siete pomocou DHCP?"
 
 #~ msgid ""
@@ -692,22 +727,6 @@ msgstr "Nastavenie siete so statickými adresami"
 #~ msgstr ""
 #~ "Poèas automatického nastavenia siete pomocou DHCP sme nedostali ¾iadnu IP "
 #~ "adresu. DHCP servery sú obèas tro¹ku pomal¹ie. Zopakujte to, ak chcete."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet alebo Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "DHCP názov poèítaèa:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "Mo¾no budete musie» zada» DHCP meno poèítaèa. Ak pou¾ívate káblový modem, "
-#~ "asi bude potrebné zada» èíslo úètu."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "Väè¹ina pou¾ívateµov nemusí niè zadáva»."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Nastavenie siete"

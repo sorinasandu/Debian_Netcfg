@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-05-12 20:06+0900\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"PO-Revision-Date: 2004-04-15 11:19+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -432,19 +432,43 @@ msgstr "ネットワークを設定しています ..."
 msgid "Configure the network"
 msgstr "ネットワークの設定"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "DHCP ホスト名:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"DHCP ホスト名を与える必要があるかもしれません。ケーブルモデルのユーザならば、"
+"アカウント番号をここに指定する必要があるでしょう。"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "ほとんどのユーザでは、単にここは空のままにしておけます。"
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "この情報で正しいですか?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "現在設定されているネットワークパラメータ:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -460,25 +484,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "DHCP でネットワークを設定しています"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "これはしばらくかかります。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "DHCP クライアントがありません"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP クライアントがありません。このパッケージは pump または dhcp-client を必"
@@ -486,55 +510,67 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 設定プロセスが中断されました。"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "ネットワークの自動設定を再試行"
+msgstr "静的ネットワークの設定"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "DHCP ホスト名付きでネットワークの自動設定を再試行"
+msgstr "動的ネットワークの設定 (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Configure network manually"
-msgstr "ネットワークの手動設定"
+msgstr "ネットワークの設定"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "今ネットワークを設定しない"
+msgstr "ネットワークの設定"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
+#, fuzzy
 msgid "Next network configuration step:"
-msgstr "次のネットワークの設定手順:"
+msgstr "静的ネットワークの設定"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
 "specify a DHCP hostname to send to the server if you think it needs one. "
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
-msgstr "ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが遅いためであることがほとんどです。そのため、おそらく再試行したいと思うでしょう。必要であると思うなら、サーバに送る DHCP ホスト名を指定することもできます。さらに、ネットワークを手動で設定するか、現時点ではネットワークを設定しないことを選ぶこともできます。"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "動的ネットワークの設定 (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "動的アドレス (DHCP) を利用してネットワークを設定"
 
@@ -655,6 +691,8 @@ msgstr ""
 "入力された IP アドレス、ネットマスク、ゲートウェイのどこかにエラーがありま"
 "す。"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -681,3 +719,16 @@ msgstr ""
 #: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC カード (PCMCIA) Ethernet または Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
+#~ msgstr "DHCP ネットワーク設定を再試行しますか?"
+
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "IP アドレスが DHCP による自動ネットワーク設定中に発見されませんでした。"
+#~ "DHCP サーバはときにとても遅いことがあります。望むなら、再試行できます。"

@@ -5,9 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-05-12 17:27+0200\n"
-"Last-Translator: Philippe Batailler <philippe.batailler@free.fr>>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"PO-Revision-Date: 2004-04-15 06:37+0100\n"
+"Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
@@ -32,7 +33,7 @@ msgstr ""
 "Pour configurer le réseau, on peut utiliser DHCP ou fournir soi-même toutes "
 "les informations. Si vous choisissez DHCP et si l'installateur ne réussit "
 "pas à configurer correctement le réseau à partir d'un serveur DHCP, vous "
-"pourrez configurer vous-même le réseau après la tentative DHCP."
+"pourrez configurer manuellement votre réseau après la tentative DHCP."
 
 #. Type: string
 #. Description
@@ -124,7 +125,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "Si nécessaire, veuillez indiquer la clé de sécurité WEP pour le périphérique "
-"sans fil ${iface}. Il y a deux façons de le faire :"
+"sans fil ${iface}. Vous pouvez l'indiquer de deux manières différentes :"
 
 #. Type: string
 #. Description
@@ -277,7 +278,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Vous devez sans doute charger un module spécifique à votre carte réseau - si "
-"vous en avez une. Pour cela, revenez à l'étape de détection du matériel "
+"vous en avez un. Pour cela, revenez à l'étape de détection du matériel "
 "réseau."
 
 #. Type: select
@@ -303,7 +304,7 @@ msgstr ""
 "Les réseaux sans fil fonctionnent en mode « infrastructure » (« managed ») "
 "ou en mode « ad-hoc ». Si vous utilisez un point d'accès matériel, votre "
 "réseau est de type « infrastructure ». Si un autre ordinateur fait office de "
-"point d'accès, le réseau est de type « ad-hoc »."
+"point d'accès, le réseau peut être de type « ad-hoc »."
 
 #. Type: text
 #. Description
@@ -421,19 +422,43 @@ msgstr "Configuration du réseau..."
 msgid "Configure the network"
 msgstr "Configurer le réseau"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nom de machine DHCP :"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Parfois, vous devez donner un nom de machine DHCP. Si vous utilisez un modem "
+"câble, vous avez peut-être besoin d'indiquer un numéro de compte."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "La plupart des autres utilisateurs peuvent laisser ce champ vide."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Les informations suivantes sont-elles correctes ?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Paramètres réseau actuels :"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -449,67 +474,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Configuration du réseau avec DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Cette opération peut prendre quelques minutes."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "Aucun client DHCP trouvé"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Aucun client DHCP trouvé. Ce paquet demande pump ou dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "Le processus de configuration DHCP va être interrompu."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Réessayer la configuration automatique du réseau"
+msgstr "Configuration manuelle du réseau"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Réessayer la configuration automatique du réseau avec un nom DHCP"
+msgstr "Configuration automatique du réseau (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Configure network manually"
-msgstr "Configurer le réseau vous-même"
+msgstr "Configurer le réseau"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Ne pas configurer le réseau maintenant"
+msgstr "Configurer le réseau"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
+#, fuzzy
 msgid "Next network configuration step:"
-msgstr "Étape suivante pour la configuration du réseau :"
+msgstr "Configuration manuelle du réseau"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -517,16 +547,18 @@ msgid ""
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
 msgstr ""
-"La configuration automatique du réseau a échoué. Cela est généralement dû à "
-"la lenteur du serveur DHCP : il est donc judicieux de réessayer. Vous pouvez "
-"aussi indiquer un nom d'hôte à envoyer au serveur si vous pensez qu'il en a "
-"besoin. Enfin, vous pouvez choisir de configurer le réseau vous-même ou de "
-"ne pas le configurer maintenant."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Configuration automatique du réseau (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurer automatiquement le réseau (DHCP)"
 
@@ -648,6 +680,8 @@ msgstr ""
 "Il se peut que vous ayez mal indiqué l'adresse IP, le masque-réseau ou la "
 "passerelle."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -674,3 +708,17 @@ msgstr ""
 #: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet ou Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
+#~ msgstr "Voulez-vous refaire la configuration du réseau avec DHCP ?"
+
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Aucune adresse n'a été donnée pendant la configuration du réseau avec "
+#~ "DHCP. Les serveurs DHCP sont parfois très lents. Si vous le souhaitez, "
+#~ "vous pouvez réessayer."

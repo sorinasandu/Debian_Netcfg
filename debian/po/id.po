@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-04-18 22:31+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac."
@@ -421,19 +421,43 @@ msgstr "Sedang mengkonfigurasi jaringan ..."
 msgid "Configure the network"
 msgstr "Mengkonfigurasi jaringan"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nama host DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
+"anda perlu memberikan nomor account anda di sini."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Kebanyakan pengguna dapat membiarkan ruas ini kosong."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Apakah keterangan ini benar?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parameter konfigurasi jaringan saat ini: "
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -449,25 +473,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "Sedang mengkonfigurasi jaringan dengan DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "Ini mungkin memakan waktu."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "Klien DHCP tidak ditemukan"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Tidak ada klien DHCP yang ditemukan. Paket ini memerlukan pump atau dhcp-"
@@ -475,48 +499,48 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "Proses konfigurasi DHCP akan dibatalkan."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Konfigurasi jaringan statis"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Mengkonfigurasi jaringan"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Mengkonfigurasi jaringan"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Konfigurasi jaringan statis"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -527,8 +551,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Melakukan konfigurasi jaringan dengan DHCP."
 
@@ -649,6 +680,8 @@ msgstr ""
 "Anda mungkin melakukan kesalahan dalam memasukkan alamat IP, netmask dan/"
 "atau gerbang."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -676,8 +709,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet atau Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "Anda ingin mengulangi konfigurasi jaringan dengan DHCP?"
 
 #~ msgid ""
@@ -687,22 +722,6 @@ msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 #~ "Tidak ada alamat IP yang ditemukan saat melakukan konfigurasi jaringan "
 #~ "secara otomatis dengan DHCP. Server DHCP kadangkala sangat lambat. Anda "
 #~ "dapat mengulangi lagi."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet atau Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "Nama host DHCP:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
-#~ "anda perlu memberikan nomor account anda di sini."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "Kebanyakan pengguna dapat membiarkan ruas ini kosong."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Konfigurasi Jaringan"

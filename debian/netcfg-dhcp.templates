@@ -1,3 +1,11 @@
+Template: netcfg/dhcp_hostname
+Type: string
+_Description: DHCP hostname:
+ You may need to supply a DHCP host name. If you are using
+ a cable modem, you might need to specify an account number here.
+ .
+ Most other users can just leave this blank.
+
 Template: netcfg/confirm_dhcp
 Type: boolean
 Default: true
@@ -35,6 +43,11 @@ _Description: Next network configuration step:
  specify a DHCP hostname to send to the server if you think it needs one.
  Otherwise, you may configure the network manually, or choose not to configure
  it at all right now.
+
+Template: netcfg/dhcp-title
+Type: text
+#  Title displayed when configuring this package
+_Description: Dynamic network configuration (DHCP)
 
 Template: debian-installer/netcfg-dhcp/title
 Type: text

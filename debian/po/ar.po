@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tools_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 12:32+0200\n"
+"POT-Creation-Date: 2004-05-12 09:37-0700\n"
 "PO-Revision-Date: 2004-01-10 20:50+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -411,19 +411,43 @@ msgstr "أعدّ الشبكة"
 msgid "Configure the network"
 msgstr "أعدّ الشبكة"
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "اسم مضيف DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"قد تحتاج إلى تزويد اسم مضيف DHCP. إن كنت تستخدم كابل مودم، قد تحتاج تحديد "
+"رقم الحساب هنا."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "معظم المستخدمين الآخرين يمكنهم ترك هذا فارغاً."
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "هل هذه المعلومات صحيحة؟"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "متغيّرات الشبكة المعدّة حالياً:"
 
-#: ../netcfg-dhcp.templates:4
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -439,72 +463,72 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "أعدّ الشبكة باستخدام DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "قد يستغرق هذا بعض الوقت."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
 msgstr "لم يوجد أي مستفيد DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "لم يوجد أي مستفيد DHCP. تتطلب هذه الحزمة pump أو مستفيد dhcp."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
 msgstr "عملية الإعداد بواسطة DHCP سيتم إجهاضها."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "إعداد الشبكة الثابت"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "إعداد الشبكة الديناميكي (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Configure network manually"
 msgstr "أعدّ الشبكة"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "أعدّ الشبكة"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "طريقة إعداد الشبكة:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:40
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -515,8 +539,15 @@ msgstr ""
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:50
+msgid "Dynamic network configuration (DHCP)"
+msgstr "إعداد الشبكة الديناميكي (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:55
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "أعدّ الشبكة باستخدام العنونة الديناميكية (DHCP)"
 
@@ -631,6 +662,8 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "قد تكون قمت بخطأ بإدخال عنوان IP، قناع الشبكة و/أو البوابة."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -658,8 +691,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 
-#, fuzzy
-#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
+
+#~ msgid "Do you want to retry DHCP network configuration?"
 #~ msgstr "هل تريد إعادة محاولة إعداد الشبكة بواسطة DHCP؟"
 
 #, fuzzy
@@ -669,22 +704,6 @@ msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 #~ msgstr ""
 #~ "لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP "
 #~ "بعض الأحيان بطيئة. إن رغبت، يمكنك إعادة المحاولة."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
-
-#~ msgid "DHCP hostname:"
-#~ msgstr "اسم مضيف DHCP:"
-
-#~ msgid ""
-#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
-#~ "you might need to specify an account number here."
-#~ msgstr ""
-#~ "قد تحتاج إلى تزويد اسم مضيف DHCP. إن كنت تستخدم كابل مودم، قد تحتاج تحديد "
-#~ "رقم الحساب هنا."
-
-#~ msgid "Most other users can just leave this blank."
-#~ msgstr "معظم المستخدمين الآخرين يمكنهم ترك هذا فارغاً."
 
 #~ msgid "Network Configuration"
 #~ msgstr "إعداد الشبكة"
