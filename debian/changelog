@@ -1,3 +1,10 @@
+netcfg (0.12) unstable; urgency=low
+
+  * Make netcfg-static actually work by calling num2dot at most once per
+    sprintf, since num2dot uses a static buffer.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Tue, 29 Jan 2002 21:12:31 +0100
+
 netcfg (0.11) unstable; urgency=low
 
   * use new dpkg features so build is less cludgy 
@@ -74,6 +81,5 @@ netcfg (0.01) unstable; urgency=low
  -- David Whedon <dwhedon@gordian.com>  Fri,  8 Dec 2000 22:19:20 -0800
 
 Local variables:
-mode: debian-changelog
 add-log-mailing-address "dwhedon@debian.org"
 End:
