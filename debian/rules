@@ -85,6 +85,7 @@ binary-arch: build install
 	dh_shlibdeps
 	$(foreach PACKAGE, $(PACKAGES), \
 	( dpkg-gencontrol -Pdebian/$(PACKAGE) -p$(PACKAGE) \
+	-Tdebian/$(PACKAGE).substvars \
 	-n$(PACKAGE)_$(VERSION)_$(ARCH).udeb ) ; )
 	$(foreach PACKAGE, $(PACKAGES), \
 	(cd debian ; \
