@@ -3,19 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#    Translators, please read /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: netcfg 0.16\n"
 "POT-Creation-Date: 2002-10-20 23:12+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2002-11-03 18:30+0200\n"
+"Last-Translator: Philippe Batailler <pbatailler@teaser.fr>\n"
+"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Type: text/plain; charset=iso-8859-15\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Description
@@ -39,7 +35,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
-msgstr "Choisissez les adresses des serveurs DNS."
+msgstr "Choisissez les adresses de vos serveurs DNS."
 
 #. Description
 #: ../netcfg-common.templates:11
@@ -66,8 +62,9 @@ msgid ""
 "network interface that you will need for installing the Debian system (via "
 "NFS or HTTP)."
 msgstr ""
-"Les interfaces suivantes ont été détectées. Choisissez l'interface réseau "
-"dont vous aurez besoin pour installer le système Debian (via NFS ou HTTP)."
+"Les interfaces suivantes ont été détectées. Choisissez le type de "
+"l'interface réseau primaire dont vous aurez besoin pour installer le système "
+"Debian (via NFS ou HTTP)."
 
 #. Description
 #: ../netcfg-common.templates:27
@@ -100,7 +97,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Le nom \"${hostname}\" n'est pas valable."
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -109,6 +106,9 @@ msgid ""
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
+"Un nom valable ne peut contenir que des caractères alphanumériques et le "
+"signe moins ; sa longueur peut être comprise entre 2 et 63 caractères et il "
+"ne peut ni commencer ni finir par un signe moins."
 
 #. Description
 #: ../netcfg-common.templates:48
@@ -127,7 +127,6 @@ msgstr "Aucune interface n'a été détectée."
 
 #. Description
 #: ../netcfg-common.templates:53
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
@@ -142,26 +141,25 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
-msgstr "Quel est le nom dhcp de votre machine ?"
+msgstr "Quel est votre nom de machine dhcp ?"
 
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "In some situations, you may need to supply a DHCP host name.  These "
 "situations are rare.  Most commonly, it applies to cable modem users. If you "
 "are a cable modem user, you might need to specify an account number here.  "
 "Otherwise, you can just leave this blank."
 msgstr ""
-"Parfois, mais rarement, vous devez fournir un nom d'hôte DHCP. Cela "
-"s'applique principalement aux utilisateurs du câble. Si vous êtes dans ce "
-"cas, vous avez souvent besoin de mettre ici un numéro de compte. Sinon, vous "
+"Parfois, vous devez donner un nom de machine dhcp. Ces cas sont rares et "
+"concernent en général les utilisateurs de modem câble. Si c'est votre cas, "
+"vous avez peut-être besoin d'indiquer un numéro de compte. Sinon, vous "
 "pouvez laisser ce champ vide."
 
 #. Description
 #: ../netcfg-dhcp.templates:12
 msgid "Is this information correct?"
-msgstr "Ces renseignements sont-ils corrects ?"
+msgstr "Les informations suivantes sont-elles correctes ?"
 
 #. Description
 #: ../netcfg-dhcp.templates:12
@@ -172,16 +170,16 @@ msgid ""
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 msgstr ""
-" interface            = ${interface}\n"
-" nom de machine       = ${hostname}\n"
-" domaine              = ${domain}\n"
-" nom dhcp de machine  = ${dhcp_hostname}\n"
-" serveurs de noms     = ${nameservers}"
+"  interface        = ${interface}\n"
+"  nom de machine   = ${hostname}\n"
+"  domaine          = ${domain}\n"
+"  nom dhcp         = ${dhcp_hostname}\n"
+"  serveurs de noms = ${nameservers}"
 
 #. Description
 #: ../netcfg-dhcp.templates:21
 msgid "I will now configure the network."
-msgstr "Je vais maintenant configurer votre réseau."
+msgstr "Le réseau va être configuré maintenant."
 
 #. Description
 #: ../netcfg-dhcp.templates:21
@@ -191,17 +189,17 @@ msgstr "Cela peut prendre du temps, mais pas plus d'une minute ou deux."
 #. Description
 #: ../netcfg-dhcp.templates:26
 msgid "No dhcp client found. I cannot continue."
-msgstr "Aucun client dhcp trouvé. Je ne peux pas continuer."
+msgstr "Aucun client dhcp : je ne peux pas continuer !"
 
 #. Description
 #: ../netcfg-dhcp.templates:26
 msgid "This package requires pump or dhcp-client."
-msgstr "Ce paquet demande les paquets pump ou dhcp-client."
+msgstr "Ce paquet demande pump ou dhcp-client."
 
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
-msgstr "Quelle adresse IP ?"
+msgstr "Quelle adresse IP ?"
 
 #. Description
 #: ../netcfg-static.templates:3
@@ -210,34 +208,32 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"L'adresse IP est spécifique à votre machine ; elle comprend quatre nombres "
-"séparés par des points. Si vous ne savez pas quelle adresse utiliser, "
-"demandez-la à votre administrateur réseau."
+"L'adresse IP est spécifique à votre machine ; elle consiste en quatre "
+"nombres, séparés par des virgules. Si vous ne savez pas quoi mettre ici, "
+"consultez votre administrateur-système."
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Pointopoint address?"
-msgstr "Quelle adresse IP ?"
+msgstr "Quelle adresse point-à-point ?"
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The pointopoint address is used to determine the other endpoint of the point "
 "to point network.  Consult your network administrator if you do not know the "
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
-"Le masque de réseau sert à connaître les machines qui appartiennent à votre "
-"réseau. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
-"administrateur réseau. Le masque de réseau est une adresse comprenant quatre "
-"nombres séparés par des points."
+"L'adresse point-à-point sert à déterminer le point terminal d'un réseau "
+"point-à-point. Si vous ne connaisez pas cette valeur, consultez votre "
+"administrateur. L'adresse point-à-point est une série de quatre nombres "
+"séparés par des points."
 
 #. Description
 #: ../netcfg-static.templates:18
 msgid "Netmask?"
-msgstr "Quel masque de réseau ?"
+msgstr "Quelle valeur de masque-réseau ?"
 
 #. Description
 #: ../netcfg-static.templates:18
@@ -246,15 +242,14 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Le masque de réseau sert à connaître les machines qui appartiennent à votre "
-"réseau. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
-"administrateur réseau. Le masque de réseau est une adresse comprenant quatre "
-"nombres séparés par des points."
+"Le masque-réseau sert à déterminer les machines locales de votre réseau. Si "
+"vous ne connaissez pas cette valeur, consultez votre administrateur. Le "
+"masque-réseau est une série de quatre nombres séparés par des points."
 
 #. Description
 #: ../netcfg-static.templates:26
 msgid "Gateway?"
-msgstr "Quelle passerelle ?"
+msgstr "Quelle valeur de passerelle ?"
 
 #. Description
 #: ../netcfg-static.templates:26
@@ -266,34 +261,33 @@ msgid ""
 "can leave this blank.  If you don't know the proper answer to this question, "
 "consult your network administrator."
 msgstr ""
-"Cette adresse IP (quatre nombres séparés par des points) indique la "
-"passerelle de routage ; on dit aussi le routeur par défaut. Tout le trafic "
-"sortant de votre LAN (p.ex. vers l'Internet) est envoyé à ce routeur. "
-"Parfois, vous n'avez pas besoin de routeur ; vous pouvez alors laisser ce "
-"champ vide. Si vous ne savez pas quelle valeur utiliser, demandez-la à votre "
-"administrateur réseau."
+"C'est une adresse IP (quatre nombres séparés par des points) qui indique la "
+"machine qui joue le rôle de routeur (routeur par défaut). Tout le trafic qui "
+"sort de votre réseau (p. ex. vers internet) passe par ce routeur. Dans "
+"quelques rares circonstances, vous n'avez pas besoin de routeur. Si c'est le "
+"cas, vous pouvez laisser ce champ vide. Consultez votre administrateur si "
+"vous ne connaissez pas la réponse correcte à cette question."
 
 #. Description
 #: ../netcfg-static.templates:36
 msgid "The gateway you entered is unreachable."
-msgstr "On ne peut pas accéder à votre passerelle."
+msgstr "La passerelle choisie ne peut être atteinte."
 
 #. Description
 #: ../netcfg-static.templates:36
 msgid ""
 "You may have made an error entering your ipaddress, netmask and/or gateway."
 msgstr ""
-"Vous avez peut-être fait une erreur en donnant une des adresses IP "
-"demandées, le nom de machine, le masque de réseau ou la passerelle."
+"Il se peut que vous ayez mal indiqué l'adresse IP, le masque-réseau ou la "
+"passerelle."
 
 #. Description
 #: ../netcfg-static.templates:43
 msgid "Is this configuration correct?"
-msgstr "Ces renseignements sont-ils corrects ?"
+msgstr "Cette configuration est-elle correcte ?"
 
 #. Description
 #: ../netcfg-static.templates:43
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -304,16 +298,11 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interface              = ${interface}\n"
-" nom de machine         = ${hostname}\n"
-" domaine                = ${domain}\n"
-" adresse IP             = ${ipaddress}\n"
-" masque de réseau       = ${netmask}\n"
-" passerelle             = ${gateway}\n"
-" serveurs de noms       = ${nameservers}"
-
-#~ msgid "${ifchoices}"
-#~ msgstr "${ifchoices}"
-
-#~ msgid "debian"
-#~ msgstr "debian"
+"  interface         = ${interface}\n"
+"  nom de machine    = ${hostname}\n"
+"  domaine           = ${domain}\n"
+"  adresse IP        = ${ipaddress}\n"
+"  masque-réseau     = ${netmask}\n"
+"  passerelle        = ${gateway}\n"
+"  point-à-point     = ${pointopoint}\n"
+"  serveurs de noms  = ${nameservers}"
