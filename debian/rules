@@ -18,14 +18,7 @@ export DH_COMPAT=2
 # Udebs have no postrm file, don't make one
 export DH_OPTIONS=-n
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	# Add here commands to configure the package.
-
-	touch configure-stamp
-
-build: configure-stamp build-stamp
+build: build-stamp
 build-stamp:
 	dh_testdir
 
@@ -37,7 +30,7 @@ build-stamp:
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
+	rm -f build-stamp
 	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst \
 	   debian/netcfg.postinst
 
@@ -102,4 +95,4 @@ binary-arch: build install
 
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+.PHONY: build clean binary-indep binary-arch binary install
