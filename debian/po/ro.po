@@ -16,19 +16,19 @@ msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-04-08 04:10GMT+2\n"
+"PO-Revision-Date: 2004-04-19 01:16+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <Romanian>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Se autoconfigureazã reşeaua cu DHCP?"
+msgstr "Se autoconfigureazÄƒ reÅ£eaua cu DHCP?"
 
 #. Type: boolean
 #. Description
@@ -40,11 +40,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Reşelistica poate fi configuratã fie prin DHCP, fie manual prin introducerea "
-"tuturor informaşiilor. Dacã alegeşi sã utilizaşi DHCP ºi instalerul nu "
-"reuºeºte sã obşinã o configuraşie funşionalã de la un server de DHCP din "
-"reşeaua dvs. , vi se va oferi posibilitatea sã configuraşi reşeaua manual, "
-"dupã încercarea de configurare prin DHCP."
+"ReÅ£elistica poate fi configuratÄƒ fie prin DHCP, fie manual prin introducerea "
+"tuturor informaÅ£iilor. DacÄƒ alegeÅ£i sÄƒ utilizaÅ£i DHCP ÅŸi instalerul nu "
+"reuÅŸeÅŸte sÄƒ obÅ£inÄƒ o configuraÅ£ie funÅ£ionalÄƒ de la un server de DHCP din "
+"reÅ£eaua dvs. , vi se va oferi posibilitatea sÄƒ configuraÅ£i reÅ£eaua manual, "
+"dupÄƒ Ã®ncercarea de configurare prin DHCP."
 
 #. Type: string
 #. Description
@@ -61,10 +61,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Numele de domeniu este partea din dreapta a adresei dvs. de internet (dupã "
-"numele calculatorului).Adesea este ceva care se terminã în .com, .net, .edu, "
-"sau org. Dacã configuraşi o reşea în casã, puteşi inventa ceva, dar "
-"asiguraşi-vã cã folosişi acelaºi domeniu pe toate calculatoarele."
+"Numele de domeniu este partea din dreapta a adresei dvs. de internet (dupÄƒ "
+"numele calculatorului).Adesea este ceva care se terminÄƒ Ã®n .com, .net, .edu, "
+"sau org. DacÄƒ configuraÅ£i o reÅ£ea Ã®n casÄƒ, puteÅ£i inventa ceva, dar "
+"asiguraÅ£i-vÄƒ cÄƒ folosiÅ£i acelaÅŸi domeniu pe toate calculatoarele."
 
 #. Type: string
 #. Description
@@ -75,7 +75,6 @@ msgstr "Adrese de servere de nume:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -83,16 +82,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Vã rugãm sã introduceşi adresele de IP (nu numele de calculator) a cel mult "
-"3 servere de nume, sparate prin spaşii. Primul server din listã va fi primul "
-"chestionat. Dacã nu dorişi sã utilizaşi nici un server de nume, lãsaşi acest "
-"câmp liber."
+"Serverele de nume sunt folosite pentru a cÄƒuta numele de calculatoare din "
+"reÅ£ea. VÄƒ rugÄƒm sÄƒ introduceÅ£i adresele de IP (nu numele de calculator) a cel "
+"mult 3 servere de nume, sparate prin spaÅ£ii. Primul server din listÄƒ va fi "
+"primul chestionat. DacÄƒ nu doriÅ£i sÄƒ utilizaÅ£i nici un server de nume, lÄƒsaÅ£i "
+"acest cÃ¢mp liber."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Interfaşa de reşea primarã:"
+msgstr "InterfaÅ£a de reÅ£ea primarÄƒ:"
 
 #. Type: select
 #. Description
@@ -101,8 +101,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Sistemul dvs. are mai multe interfeşe de reşea. Alegeşi-o pe aceea care va "
-"fi interfaşa primarã în timul instalãrii Debian."
+"Sistemul dvs. are mai multe interfeÅ£e de reÅ£ea. AlegeÅ£i-o pe aceea care va "
+"fi interfaÅ£a primarÄƒ Ã®n timul instalÄƒrii Debian."
 
 #. Type: string
 #. Description
@@ -118,28 +118,26 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} este o interfaşa de reşea wireless (fãrã fir). Vã rugãm sã "
-"inroduceşi numele (ESSID-ul) reşelei wireless pe care dorişi ca ${iface} sã "
-"o foloseascã. Dacã dorişi sã utilizaşi oricare reşea disponibilã, lãsaşi "
-"acest câmp liber."
+"${iface} este o interfaÅ£a de reÅ£ea wireless (fÄƒrÄƒ fir). VÄƒ rugÄƒm sÄƒ "
+"inroduceÅ£i numele (ESSID-ul) reÅ£elei wireless pe care doriÅ£i ca ${iface} sÄƒ "
+"o foloseascÄƒ. DacÄƒ doriÅ£i sÄƒ utilizaÅ£i oricare reÅ£ea disponibilÄƒ, lÄƒsaÅ£i "
+"acest cÃ¢mp liber."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Cheia WEP pentru ${iface}:"
+msgstr "Cheia WEP pentru dispozitivul wireless ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Dacã e cazul, inroduecşi cheia de securitate WEP pentru dispozitivul "
-"${iface}. Sunt douã moduri de a face acest lucru:"
+"DacÄƒ e cazul, vÄƒ rugÄƒm sÄƒ inroduecÅ£i cheia de securitate WEP pentru "
+"dispozitivul ${iface}. Sunt douÄƒ moduri de a face acest lucru:"
 
 #. Type: string
 #. Description
@@ -148,8 +146,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Dacã chiea dvs. WEP este de forma 'nnnn-nnnn-nn' sau 'nnnnnnnn', unde n este "
-"un numãr, introduceşi-o aºa cum este în acest câmp."
+"DacÄƒ chiea dvs. WEP este de forma 'nnnn-nnnn-nn' sau 'nnnnnnnn', unde n este "
+"un numÄƒr, introduceÅ£i-o aÅŸa cum este Ã®n acest cÃ¢mp."
 
 #. Type: string
 #. Description
@@ -158,8 +156,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Dacã chiea dvs. WEP este sub formã de parolã, introduceşi-o precedatã de "
-"'s:' (fãrã apostrofuri)."
+"DacÄƒ chiea dvs. WEP este sub formÄƒ de parolÄƒ, introduceÅ£i-o precedatÄƒ de "
+"'s:' (fÄƒrÄƒ apostrofuri)."
 
 #. Type: string
 #. Description
@@ -168,14 +166,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Desigur, dacã nu existã cheie WEP pentru reşeaua dvs. wireless, lãsaşi acest "
-"câmp liber."
+"Desigur, dacÄƒ nu existÄƒ cheie WEP pentru reÅ£eaua dvs. wireless, lÄƒsaÅ£i acest "
+"cÃ¢mp liber."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr "Cheie WEP invalidã"
+msgstr "Cheie WEP invalidÄƒ"
 
 #. Type: error
 #. Description
@@ -184,9 +182,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Cheia WEP '${wepkey}' este invalidã. Vã rugãm sã citişi cu atenşie "
-"instrucşiunile din urmãtoarea paginã, referitoare la modul de introducere "
-"corect al cheii WEP, ºi încercaşi din nou."
+"Cheia WEP '${wepkey}' este invalidÄƒ. VÄƒ rugÄƒm sÄƒ citiÅ£i cu atenÅ£ie "
+"instrucÅ£iunile din urmÄƒtoarea paginÄƒ, referitoare la modul de introducere "
+"corect al cheii WEP, ÅŸi Ã®ncercaÅ£i din nou."
 
 #. Type: error
 #. Description
@@ -202,7 +200,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "ESSID-ul \"${essid}\" este invalid. ESSID-urile pot avea maxim 32 de "
-"caractere, dar pot conşine toate tipurile de caractere."
+"caractere, dar pot conÅ£ine toate tipurile de caractere."
 
 #. Type: string
 #. Description
@@ -214,7 +212,7 @@ msgstr "Numele calculatorului:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Vã rugãm sã introduceşi numele calculatorului (pentru acest sistem)."
+msgstr "VÄƒ rugÄƒm sÄƒ introduceÅ£i numele calculatorului (pentru acest sistem)."
 
 #. Type: string
 #. Description
@@ -225,9 +223,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Numele de calculator este un cuvânt care vã identificã sistemul în reşea. "
-"Dacã nu ºtişi care ar trebui sã fie acesta, consutaşi-vã administratorul de "
-"reşea. Dacã vã setaşi propria reşea acasã, atunci puteşi sã inventaşi ceva "
+"Numele de calculator este un cuvÃ¢nt care vÄƒ identificÄƒ sistemul Ã®n reÅ£ea. "
+"DacÄƒ nu ÅŸtiÅ£i care ar trebui sÄƒ fie acesta, consutaÅ£i-vÄƒ administratorul de "
+"reÅ£ea. DacÄƒ vÄƒ setaÅ£i propria reÅ£ea acasÄƒ, atunci puteÅ£i sÄƒ inventaÅ£i ceva "
 "aici."
 
 #. Type: error
@@ -250,9 +248,9 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Un nume de calculator valid poate conşine doar caractere ºi caracterul "
-"minus. Trebuie sã aibã între 2 ºi 63 de caractere, ºi nu poate sã înceapã "
-"sau sã se termine cu un semn minus."
+"Un nume de calculator valid poate conÅ£ine doar caractere ÅŸi caracterul "
+"minus. Trebuie sÄƒ aibÄƒ Ã®ntre 2 ÅŸi 63 de caractere, ÅŸi nu poate sÄƒ Ã®nceapÄƒ "
+"sau sÄƒ se termine cu un semn minus."
 
 #. Type: error
 #. Description
@@ -267,14 +265,14 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"A apãrut o eroare ºi procesul de configurare al reşelei a fost abandonat. "
-"Puteşi încerca din nou acest proces din meniul principal al instalãrii."
+"A apÄƒrut o eroare ÅŸi procesul de configurare al reÅ£elei a fost abandonat. "
+"PuteÅ£i Ã®ncerca din nou acest proces din meniul principal al instalÄƒrii."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
-msgstr "Nu s-a detectat interfaşã de reşea"
+msgstr "Nu s-a detectat interfaÅ£Äƒ de reÅ£ea"
 
 #. Type: error
 #. Description
@@ -283,8 +281,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Nu s-a gãsit nici o interfaşã de reşea. Sistemul de instalare nu a putut "
-"gãsi nici dipozitiv de reşea."
+"Nu s-a gÄƒsit nici o interfaÅ£Äƒ de reÅ£ea. Sistemul de instalare nu a putut "
+"gÄƒsi nici dipozitiv de reÅ£ea."
 
 #. Type: error
 #. Description
@@ -293,47 +291,45 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"S-ar putea sã trebuiascã sã încãrcaşi modulul specific pentru placa dvs. de "
-"reşea, dacã aveşi una. Pentru acesta, întoarceşi-vã la la pasul de detecşie "
-"al dispozitivelor de reşea."
+"S-ar putea sÄƒ trebuiascÄƒ sÄƒ Ã®ncÄƒrcaÅ£i modulul specific pentru placa dvs. de "
+"reÅ£ea, dacÄƒ aveÅ£i una. Pentru acesta, Ã®ntoarceÅ£i-vÄƒ la la pasul de detecÅ£ie "
+"al dispozitivelor de reÅ£ea."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Reşea cu infrastructurã (cu management), Reşea ad-hoc (Peer to peer)"
+msgstr "ReÅ£ea cu infrastructurÄƒ (cu management), ReÅ£ea ad-hoc (Peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
-msgstr "Tipul de reşea wireless:"
+msgstr "Tipul de reÅ£ea wireless:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Reşelele wireless sunt fie cu management, fie ad-hoc. Dacã folosişi vre-un "
-"access point real, reşeaua este Cu management. Dacã un alt calculator este "
-"'access point-ul' dvs., atunci reşeaua este Ad-hoc."
+"ReÅ£elele wireless sunt fie cu management, fie ad-hoc. DacÄƒ folosiÅ£i vre-un "
+"access point real, reÅ£eaua este Cu management. DacÄƒ un alt calculator este "
+"'access point-ul' dvs., atunci reÅ£eaua dvs. ar putea fi Ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Configuraşie de reşea staticã"
+msgstr "ConfiguraÅ£ie de reÅ£ea wireless"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Se cautÄƒ acces-point-uri wireless ..."
 
 #. Type: text
 #. Description
@@ -375,7 +371,7 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:149
 msgid "Serial-line IP"
-msgstr "IP prin linie serialã"
+msgstr "IP prin linie serialÄƒ"
 
 #. Type: text
 #. Description
@@ -393,7 +389,7 @@ msgstr "Protocol Punct-la Punct"
 #. Description
 #: ../netcfg-common.templates:161
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-în-IPv4"
+msgstr "IPv6-Ã®n-IPv4"
 
 #. Type: text
 #. Description
@@ -429,21 +425,21 @@ msgstr "Vehicul de comunicare inter-utilizator"
 #. Description
 #: ../netcfg-common.templates:185
 msgid "Unknown interface"
-msgstr "Interfaşã necunoscutã"
+msgstr "InterfaÅ£Äƒ necunoscutÄƒ"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:190
 msgid "Configuring network ..."
-msgstr "Se configureazã reşeaua ..."
+msgstr "Se configureazÄƒ reÅ£eaua ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:195
 msgid "Configure the network"
-msgstr "Configureazã reşeaua"
+msgstr "ConfigureazÄƒ reÅ£eaua"
 
 #. Type: string
 #. Description
@@ -458,27 +454,27 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"S-ar putea sã trebuiascã sã introduceşi un nume de calculator (DHCP). Dacã "
-"folosişi modem prin cablu s-ar putea sã trebuiascã sã specificaşi un numãr "
+"S-ar putea sÄƒ trebuiascÄƒ sÄƒ introduceÅ£i un nume de calculator (DHCP). DacÄƒ "
+"folosiÅ£i modem prin cablu s-ar putea sÄƒ trebuiascÄƒ sÄƒ specificaÅ£i un numÄƒr "
 "de cont aici."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Majoritatea utilizatorilor pot lãsa acest câmp liber."
+msgstr "Majoritatea utilizatorilor pot lÄƒsa acest cÃ¢mp liber."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Este aceastã informaşie corectã?"
+msgstr "Este aceastÄƒ informaÅ£ie corectÄƒ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Parametrii de reşea configuraşi în prezent:"
+msgstr "Parametrii de reÅ£ea configuraÅ£i Ã®n prezent:"
 
 #. Type: boolean
 #. Description
@@ -490,7 +486,7 @@ msgid ""
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 msgstr ""
-" interfaşa      = ${interface}\n"
+" interfaÅ£a      = ${interface}\n"
 " nume de calculator       = ${hostname}\n"
 " domeniu         = ${domain}\n"
 " numele calcuatorului dhcp  = ${dhcp_hostname}\n"
@@ -500,7 +496,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr "Se configureazã reşeaua cu DHCP"
+msgstr "Se configureazÄƒ reÅ£eaua cu DHCP"
 
 #. Type: text
 #. Description
@@ -512,14 +508,14 @@ msgstr "Aceasta poate dura ceva timp."
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr "Nu s-a gãsit client DHCP"
+msgstr "Nu s-a gÄƒsit client DHCP"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Nu s-a gãsit nici un client DHCP. Acest pachet are nevoie de pump sau de "
+"Nu s-a gÄƒsit nici un client DHCP. Acest pachet are nevoie de pump sau de "
 "dhcp-client."
 
 #. Type: error
@@ -532,7 +528,7 @@ msgstr "Procesul de configurare DHCP va fi abandonat."
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Dorişi sã reîncecaşi configurarea reşelei prin DHCP?"
+msgstr "DoriÅ£i sÄƒ reÃ®ncecaÅ£i configurarea reÅ£elei prin DHCP?"
 
 #. Type: boolean
 #. Description
@@ -541,8 +537,8 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Nu s-a gãsit nici o adresã IP în timpul configurãrii automate cu DHCP. "
-"Uneori serverele DHCP sunt foarte lente. Dacã dorişi, puteşi sã încercaşi "
+"Nu s-a gÄƒsit nici o adresÄƒ IP Ã®n timpul configurÄƒrii automate cu DHCP. "
+"Uneori serverele DHCP sunt foarte lente. DacÄƒ doriÅ£i, puteÅ£i sÄƒ Ã®ncercaÅ£i "
 "din nou."
 
 #. Type: text
@@ -550,20 +546,20 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Configurare dinamicã a reşelei (DHCP)"
+msgstr "Configurare dinamicÄƒ a reÅ£elei (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Configureazã reşeaua dinamic folosind adresare dinamicã (DHCP)"
+msgstr "ConfigureazÄƒ reÅ£eaua dinamic folosind adresare dinamicÄƒ (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "Adresã IP:"
+msgstr "AdresÄƒ IP:"
 
 #. Type: string
 #. Description
@@ -573,15 +569,15 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Adresa IP este unicã pentru calculatorul dvs. ºi constã în patru numere "
-"separate de puncte. Dacã nu ºtişi ce sã folosişi aici, consultaşi-vã "
-"administratorul de reşea."
+"Adresa IP este unicÄƒ pentru calculatorul dvs. ÅŸi constÄƒ Ã®n patru numere "
+"separate de puncte. DacÄƒ nu ÅŸtiÅ£i ce sÄƒ folosiÅ£i aici, consultaÅ£i-vÄƒ "
+"administratorul de reÅ£ea."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Adresã IP malformatã"
+msgstr "AdresÄƒ IP malformatÄƒ"
 
 #. Type: error
 #. Description
@@ -590,15 +586,15 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Adresã IP introdusã de dvs. este malformatã. Ar trebui sã fie sub forma x.x."
-"x.x, unde fiecare 'x' nu este mai mare decât 255. Vã rugãm sã încercaşi din "
+"AdresÄƒ IP introdusÄƒ de dvs. este malformatÄƒ. Ar trebui sÄƒ fie sub forma x.x."
+"x.x, unde fiecare 'x' nu este mai mare decÃ¢t 255. VÄƒ rugÄƒm sÄƒ Ã®ncercaÅ£i din "
 "nou."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Adresã punct-la-punct:"
+msgstr "AdresÄƒ punct-la-punct:"
 
 #. Type: string
 #. Description
@@ -609,16 +605,16 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Adresa IP este unicã pentru calculatorul dvs. ºi constã în patru numere "
-"separate de puncte. Consultaşi-vã administratorul de reşea dacã nu "
-"cunoaºteşi valoarea. Adresa punct-la-punct: ar trebui sã fie introdusã ca "
+"Adresa IP este unicÄƒ pentru calculatorul dvs. ÅŸi constÄƒ Ã®n patru numere "
+"separate de puncte. ConsultaÅ£i-vÄƒ administratorul de reÅ£ea dacÄƒ nu "
+"cunoaÅŸteÅ£i valoarea. Adresa punct-la-punct: ar trebui sÄƒ fie introdusÄƒ ca "
 "patru numere separate prin puncte."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Masca de reşea:"
+msgstr "Masca de reÅ£ea:"
 
 #. Type: string
 #. Description
@@ -628,9 +624,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Masca de reşea este folositã pentru a determina care maºini sunt în reşeaua "
-"dvs. localã. Consultaşi-vã administratorul de reşea dacã nu cunoaºteşi "
-"valoarea. Masca de reşea  ar trebui sã fie introdusã ca patru numere "
+"Masca de reÅ£ea este folositÄƒ pentru a determina care maÅŸini sunt Ã®n reÅ£eaua "
+"dvs. localÄƒ. ConsultaÅ£i-vÄƒ administratorul de reÅ£ea dacÄƒ nu cunoaÅŸteÅ£i "
+"valoarea. Masca de reÅ£ea  ar trebui sÄƒ fie introdusÄƒ ca patru numere "
 "separate prin puncte."
 
 #. Type: string
@@ -650,12 +646,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Gateway-ul este o adresã IP (patru numere separate de puncte) care indicã "
-"spre poarta de rutare (gateway router), cunoscut ºi sub numele de ruter "
-"implicit. Tot traficul în afara reşelei dvs. (de exemplu, cãtre internet) "
-"este trimis prin acest ruter. În puşine circumstanşe, este posibil sã nu "
-"aveşi ruter; în acest caz, puteşi lãsa acest c³mp liber. Dacã nu cunoaºteşi "
-"rãspunsul corect la intrebare, consultaşi-vã administratorul de reşea."
+"Gateway-ul este o adresÄƒ IP (patru numere separate de puncte) care indicÄƒ "
+"spre poarta de rutare (gateway router), cunoscut ÅŸi sub numele de ruter "
+"implicit. Tot traficul Ã®n afara reÅ£elei dvs. (de exemplu, cÄƒtre internet) "
+"este trimis prin acest ruter. Ãn puÅ£ine circumstanÅ£e, este posibil sÄƒ nu "
+"aveÅ£i ruter; Ã®n acest caz, puteÅ£i lÄƒsa acest cÅ‚mp liber. DacÄƒ nu cunoaÅŸteÅ£i "
+"rÄƒspunsul corect la intrebare, consultaÅ£i-vÄƒ administratorul de reÅ£ea."
 
 #. Type: error
 #. Description
@@ -667,16 +663,15 @@ msgstr "Gateway inaccesibil"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Adresa de gateway introdusã este inaccesibilã."
+msgstr "Adresa de gateway introdusÄƒ este inaccesibilÄƒ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Este posibil sã fi comis o eroare când aşi introdus adresa dvs. de IP, masca "
-"de reşea ºi/sau gateway."
+"Este posibil sÄƒ fi comis o eroare cÃ¢nd aÅ£i introdus adresa dvs. de IP, masca "
+"de reÅ£ea ÅŸi/sau gateway."
 
 #. Type: boolean
 #. Description
@@ -691,10 +686,10 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interfaşa      = ${interface}\n"
+" interfaÅ£a      = ${interface}\n"
 " nume de calculator       = ${hostname}\n"
 " domeniu         = ${domain}\n"
-" adresã de IP     = ${ipaddress}\n"
+" adresÄƒ de IP     = ${ipaddress}\n"
 " gateway       = ${gateway}\n"
 " punct-la-punct   = ${pointopoint}\n"
 " servere de nume    = ${nameservers}"
@@ -704,14 +699,15 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:68
 msgid "Static network configuration"
-msgstr "Configuraşie de reşea staticã"
+msgstr "ConfiguraÅ£ie de reÅ£ea staticÄƒ"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
-msgstr "Configureazã reşeaua folosind adresare staticã"
+msgstr "ConfigureazÄƒ reÅ£eaua folosind adresare staticÄƒ"
 
 #~ msgid "Network Configuration"
-#~ msgstr "Configuraşia reşelei"
+#~ msgstr "ConfiguraÅ£ia reÅ£elei"
+
