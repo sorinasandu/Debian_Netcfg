@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-02-04 09:36-0700\n"
+"POT-Creation-Date: 2005-03-16 18:51-0700\n"
 "PO-Revision-Date: 2005-02-13 00:01+0200\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: Debian l10n Hebrew <webmaster@guides.co.il>\n"
@@ -285,7 +285,7 @@ msgstr ""
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
-#. below the 70 columns limit (which means 70 characters for most languages)
+#. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:112
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "רשת מנוהלת, רשת יעודית (peer to peer)"
@@ -491,44 +491,45 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
-#. below the 70 columns limit (which means 70 characters for most languages)
-#: ../netcfg-dhcp.templates:32
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
+#: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
 msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "לנסות להגדיר מחדש את הרשת באופן אוטומטי עם שם שרת DHCP"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "הגדר את הרשת באופן ידני"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "אל תגדיר רשת בשלב זה."
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
 msgstr "שיטת הגדרת רשת:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:35
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -542,13 +543,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
 msgstr "הגדרת רשת באופן אוטומטי נכשלה"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:45
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -558,13 +559,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
 msgstr "להמשיך בלי ניתוב ברירת מחדל?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:51
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -579,7 +580,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:51
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -589,14 +590,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:62
+#: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
 msgstr "מגדיר מחדש את הרשת האלחוטית"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:67
+#: ../netcfg-dhcp.templates:68
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "הגדר את הרשת שלך בעזרת כתובות דינמיות (DHCP)"
 
