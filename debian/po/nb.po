@@ -1,27 +1,17 @@
-# translation of netcfg.po to
-# translation of netcfg.po to Norwegian bokmål
-# translation of netcfg.po to
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
-#    Developers do not need to manually edit POT or PO files.
-# Håvard Korsvoll <korsvoll@stud.ntnu.no>, 2004.
+# translation of debian-installer.po to Norwegian bokmål
+# translation of debian-installer.po to Norwegian Bokmål
+# Norwegian Bokmal messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 # Axel Bojer <axelb@skolelinux.no>, 2004.
-# Knut Yrvin <knuty@skolelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-03-03 22:53GMT+2\n"
-"Last-Translator: Axel Bojer <axelb@skolelinux.no>\n"
+"PO-Revision-Date: 2004-04-20 08:16+0200\n"
+"Last-Translator: Bjørn Steensrud <bjornst@powertech.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,14 +21,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Setter opp nettverket med DHCP"
+msgstr "Vil du sette opp nettverket automatisk med DHCP?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -50,7 +38,7 @@ msgstr ""
 "skrive inn all informasjonen manuelt. Hvis du bruker DHCP og "
 "installasjonsprogrammet ikke klarer å hente et oppsett som fungerer fra DHCP-"
 "tjeneren på nettverket ditt, vil du få anledning til å sette opp nettverket "
-"manuelt. Hvis du er usikker, velg DHCP."
+"etter forsøket på å sette det opp med DHCP."
 
 #. Type: string
 #. Description
@@ -81,7 +69,6 @@ msgstr "Adresser til navnetjenerne:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -89,9 +76,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Oppgi IP-adressene (ikke vertsnavn) for opptil tre navnetjenere, atskilt med "
-"mellomrom. Ikke bruk komma. Tjenerne blir brukt i den rekkefølgen du skriver "
-"dem. Hvis du ikke vil bruke navnetjenere, kan du la feltet stå tomt."
+"Navnetjenere blir brukt til å slå opp vertsnavn på nettverket. Oppgi IP-"
+"adressene (ikke vertsnavnene) til opptil tre navnetjenere, adskilt med "
+"mellomrom. Ikke bruk komma. Tjenerne blir brukte i den rekkefølgen du skriv "
+"de i. Dersom du ikke vil bruke navnetjenere, kan du la feltet stå tomt."
 
 #. Type: select
 #. Description
@@ -130,20 +118,18 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP-nøkkel for ${iface}:"
+msgstr "WEP-nøkkel for den trådløse enheten ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Skriv inn sikkerhetsnøkkelen for WEP hvis dette er nødvendig for "
-"grensesnittet ${iface}. Det er to måter å gjøre dette på:"
+"Skriv inn sikkerhetsnøkkelen for WEP hvis dette er nødvendig for det "
+"trådløse grensesnittet ${iface}. Det er to måter å gjøre dette på:"
 
 #. Type: string
 #. Description
@@ -302,12 +288,13 @@ msgstr ""
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
+"Infrastruktur (Håndtert) nettverk, Ad-hoc-nettverk (mellom datamaskiner)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Type trådløst nettverk:"
 
 #. Type: select
 #. Description
@@ -317,19 +304,22 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
+"Trådløse nettverk er enten håndterte eller ad-hoc. Hvis du bruker et "
+"virkelig tilgangspunkt av en eller annen type, så er nettverket ditt "
+"håndtert. Hvis en annen datamaskin er «tilgangspunktet» ditt, så er "
+"nettverket ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Statisk nettverksoppsett"
+msgstr "Oppsett av trådløst nettverk"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Søker etter trådløse tilgangspunkt ..."
 
 #. Type: text
 #. Description
@@ -419,7 +409,7 @@ msgstr "Hypersokkel"
 #. Description
 #: ../netcfg-common.templates:181
 msgid "Inter-user communication vehicle"
-msgstr "Kommunikasjonsmotor mellom brukere"
+msgstr "Sambandsmiddel mellom brukere"
 
 #. Type: text
 #. Description
@@ -432,14 +422,14 @@ msgstr "Ukjent grensesnitt."
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:190
 msgid "Configuring network ..."
-msgstr "Nettverksoppsett ..."
+msgstr "Setter opp nettverk ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:195
 msgid "Configure the network"
-msgstr "Setter opp nettverket"
+msgstr "Sett opp nettverket"
 
 #. Type: string
 #. Description
@@ -642,7 +632,7 @@ msgstr ""
 "ruteren, også kalt standardruteren. All trafikk ut av lokalnettet (f.eks. "
 "til Internett) sendes gjennom denne ruteren. I sjeldne tilfeller kan det "
 "være at du ikke har noen, la da feltet stå åpent. Hvis du ikke kjenner rett "
-"svar på spørsmålet, spør administratoren av nettverket."
+"svar på spørsmålet, spør den som administrerer nettverket."
 
 #. Type: error
 #. Description
@@ -700,12 +690,3 @@ msgstr "Statisk nettverksoppsett"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Sett opp et nettverk ved hjelp av statisk adressering"
-
-#~ msgid "Network Configuration"
-#~ msgstr "Nettverksoppsett"
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamisk adressering (DHCP), statisk adressering (manuell)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Oppsettsmetode for nettverk:"
