@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-04-27 20:35-0300\n"
+"PO-Revision-Date: 2004-05-16 16:59-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -497,9 +497,8 @@ msgstr "Este processo pode levar algum tempo."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Configuração de rede estática"
+msgstr "Configuração automática de rede finalizada com sucesso !"
 
 #. Type: error
 #. Description
@@ -524,43 +523,38 @@ msgstr "O processo de configuração DHCP será abortado."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Configuração de rede estática"
+msgstr "Tentar novamente configuração automática de rede"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Configuração dinâmica de rede (DHCP)"
+msgstr "Tentar novamente configuração automática de rede com um hostname DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Configurar a rede"
+msgstr "Configurar a rede manualmente"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Sua rede será configurada agora."
+msgstr "Não configurar a rede agora"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuração de Rede"
+msgstr "Método de configuração de rede :"
 
 #. Type: select
 #. Description
@@ -572,13 +566,18 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"A configuração automática de rede falhou. Isso pode ser devido a um "
+"servidor DHCP lento na rede, portanto você pode desejar tentar novamente. "
+"Caso sua rede não use DHCP para configuração automática você poderá "
+"configurá-la manualmente. Alguns servidores DHCP precisam de um hostname "
+"DHCP específico, portanto você pode optar por informar esse hostname "
+"antes de tentar a configuração DHCP novamente."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configurar a rede"
+msgstr "Configurar novamente a rede sem fio"
 
 #. Type: text
 #. Description
@@ -716,7 +715,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -726,8 +724,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " interface           = ${interface}\n"
-" nome de máquina     = ${hostname}\n"
-" domínio             = ${domain}\n"
 " endereço IP         = ${ipaddress}\n"
 " máscara de rede     = ${netmask}\n"
 " gateway             = ${gateway}\n"
