@@ -15,13 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_0.24\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-17 21:02+0100\n"
-"PO-Revision-Date: 2003-11-01 19:22+0100\n"
+"POT-Creation-Date: 2003-11-17 22:06+0000\n"
+"PO-Revision-Date: 2003-11-15 11:45+0100\n"
 "Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #. Type: string
 #. Description
@@ -166,20 +167,15 @@ msgstr ""
 #: ../netcfg-common.templates:59
 #, fuzzy
 msgid "No network interfaces detected"
-msgstr "Interfejsi nisu pronađeni."
+msgstr "Mrežni interfejsi nisu pronađeni."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Mrežni interfejsi nisu pronađeni.   To znači da instalacioni sistem nije "
-"mogao pronaći mrežni uređaj.  Ako imate mrežnu karticu, onda je moguće da "
-"modul za tu karticu još nije bio izabran. Idite nazad na 'Configure network "
-"hardware'."
 
 #. Type: error
 #. Description
@@ -193,92 +189,91 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:68
 msgid "<none>"
-msgstr ""
+msgstr "<none>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:72
 msgid "Ethernet or Fast Ethernet"
-msgstr ""
+msgstr "Ethernet ili Fast Ethernet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:76
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr ""
+msgstr "PC-Card (PCMCIA) Ethernet ili Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:80
 msgid "Token Ring"
-msgstr ""
+msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Arcnet"
-msgstr ""
+msgstr "Arcnet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:88
 msgid "Serial-line IP"
-msgstr ""
+msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:92
 msgid "Parallel-line IP"
-msgstr ""
+msgstr "Parallel-line IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:96
 msgid "Point-to-Point Protocol"
-msgstr ""
+msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:100
 msgid "IPv6-in-IPv4"
-msgstr ""
+msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
 msgid "ISDN Point-to-Point Protocol"
-msgstr ""
+msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:108
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
 msgid "Hypersocket"
-msgstr ""
+msgstr "Hypersocket"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:124
-#, fuzzy
 msgid "Unknown interface"
-msgstr "Odaberite interfejs."
+msgstr "Nepoznati interfejs"
 
 #. Type: string
 #. Description
@@ -294,10 +289,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"U nekim slučajevima, vi trebate unijeti DHCP host name.  Takvi slučajevi su "
-"rijetki.  Najčešće se radi o korisnicima kablovskih modema. Ako koristite "
-"kablovski modem, možda bi ste trebali ovdje navesti broj računa. U "
-"suprotnom, možete samo ostaviti prazno."
+"Ako trebate, unesite DHCP host name. Ako koristite kablovski modem, trebali "
+"biste ovdje navesti broj računa. Većina korisnika može samo ostaviti prazno."
 
 #. Type: string
 #. Description
@@ -337,47 +330,59 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr ""
+msgstr "Podešavam mrežu preko DHCP-a"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
 msgid "This may take a few minutes."
-msgstr ""
+msgstr "Ovo može potrajati nekoliko minuta."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+msgid "No dhcp client found. I cannot continue."
+msgstr "dhcp klijent nije pronađen. Ne mogu nastaviti."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:32
+msgid "This package requires pump or dhcp-client."
+msgstr "Ovaj programski paket zahtijeva pump ili dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:36
 msgid "No DHCP client found"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:36
 #, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Ovaj programski paket zahtijeva pump ili dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:36
 msgid "The DHCP configuration process will be aborted."
 msgstr ""
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:45
 msgid "DHCP Network Configuration"
-msgstr ""
+msgstr "DHCP mrežna konfiguracija"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:50
 #, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Sada ću podesiti mrežu."
+msgstr "Podesi mrežu preko DHCP-a"
 
 #. Type: string
 #. Description
@@ -511,7 +516,7 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
 msgid "Static Network Configuration"
-msgstr ""
+msgstr "Statička mrežna konfiguracija"
 
 #. Type: text
 #. Description
@@ -519,7 +524,7 @@ msgstr ""
 #: ../netcfg-static.templates:67
 #, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Sada ću podesiti mrežu."
+msgstr "Podesi mrežu preko DHCP-a"
 
 #~ msgid "Choose the domain name."
 #~ msgstr "Odaberite domain name."
@@ -542,21 +547,22 @@ msgstr "Sada ću podesiti mrežu."
 #~ msgid "Feel free to retry."
 #~ msgstr "Slobodno pokušajte ponovo."
 
+#~ msgid ""
+#~ "No network interfaces were found.   That means that the installation "
+#~ "system was unable to find a network device.  If you do have a network "
+#~ "card, then it is possible that the module for it hasn't been selected "
+#~ "yet.  Go back to 'Detect network hardware and load kernel drivers for it'."
+#~ msgstr ""
+#~ "Mrežni interfejsi nisu pronađeni.   To znači da instalacioni sistem nije "
+#~ "mogao pronaći mrežni uređaj.  Ako imate mrežnu karticu, onda je moguće da "
+#~ "modul za tu karticu još nije odabran. Idite nazad na 'Detektuj mrežni "
+#~ "hardware i učitajte kernel drivere za njega'."
+
 #~ msgid "What is your dhcp hostname?"
 #~ msgstr "Koji je vaš dhcp hostname?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "dhcp klijent nije pronađen. Ne mogu nastaviti."
 
 #~ msgid "Is this configuration correct?"
 #~ msgstr "Je li ova konfiguracija tačna?"
 
-#, fuzzy
 #~ msgid "Configure a static network"
-#~ msgstr "Sada ću podesiti mrežu."
-
-#~ msgid ""
-#~ "This may take some time.  It shouldn't take more than a minute or two."
-#~ msgstr ""
-#~ "Ovo može potrajati izvjesno vrijeme.  Ne bi trebalo trajati duže od jedne "
-#~ "ili dvije minute."
+#~ msgstr "Podesi statičku mrežu"
