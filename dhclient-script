@@ -69,7 +69,7 @@ case "$reason" in
         fi
 
         if [ -n "$new_interface_mtu" ]; then
-            ip link set $interface mtu $new_interface_mtu
+            ip link set $interface mtu $new_interface_mtu || true
         fi
 
         if [ -z "$old_ip_address" ] || [ "$old_ip_address" != "$new_ip_address" ] || \
