@@ -684,7 +684,15 @@ void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipad
   /* got it? */
   if (err == 0 && res->ai_canonname && !empty_str(res->ai_canonname) &&
       inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
+  {
+    /* remove domain part */
+    char* ptr = strchr(res->ai_canonname, '.');
+
+    if (ptr)
+      *ptr = '\0';
+
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+  }
 
   freeaddrinfo(res);
 }
