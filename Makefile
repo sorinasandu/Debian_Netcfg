@@ -6,12 +6,15 @@ INSTALL=install
 STRIPTOOL=strip
 STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 
+
+OBJS=util.o
+
 all: netcfg
 	$(STRIP) netcfg
 	size netcfg
 
-netcfg: netcfg.c 
-	$(CC) $(CFLAGS) netcfg.c -o netcfg $(INCS) $(LDOPTS)
+netcfg: netcfg.c $(OBJS)
+	$(CC) $(CFLAGS) netcfg.c -o netcfg $(INCS) $(LDOPTS) $(OBJS)
 
 install:
 	mkdir -p $(PREFIX)/bin/

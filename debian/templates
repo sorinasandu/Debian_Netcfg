@@ -1,3 +1,20 @@
+Template: netcfg/no_interfaces
+Type: note
+Description: no network devices found
+ No network interfaces were found.   That means that the installation system
+ was unable to find a network device.  If you do have a network card, then it
+ is possible that the module for it hasn't been selected yet.  Go back to the
+ 'Configure Device Driver Modules' menu and load the required kernel modules
+ first.  If your only network connection is PPP, don't worry -- you will be
+ asked if you want PPP later in the process.
+
+Template: netcfg/choose_interface
+Type: select
+Choices: ${ifchoices}
+Description: Choose an interface
+ The following interfaces were detected. Choose the type of your primary
+ network interface that you will need for installing Debian (via NFS or HTTP).
+
 Template: netcfg/dhcp_option
 Type: boolean
 Default: true
@@ -52,13 +69,6 @@ Type: note
 Description: The gateway you entered is unreachable.
  You may have made an error entering your ipaddress, netmask and/or gateway.
 
-Template: netcfg/get_domain
-Type: string
-Description: Choose the Domain name.
- As with individual systems, every network has a name. This name is called the
- domain name. Please enter your domain name or leave this field empty if you
- don't have a domain.
-
 Template: netcfg/get_nameservers
 Type: string
 Description: Choose the DNS Server Addresses
@@ -72,6 +82,7 @@ Template: netcfg/confirm_static_cfg
 Type: boolean
 Default: true
 Description: Is this configuration correct?
+  interface     = ${interface}	
   hostname      = ${hostname} 
   domain        = ${domain} 
   ipaddress     = ${ipaddress} 
