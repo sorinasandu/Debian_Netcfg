@@ -13,13 +13,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-16 15:47-0700\n"
+"POT-Creation-Date: 2004-06-07 16:46+0200\n"
 "PO-Revision-Date: 2004-06-05 20:54+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #  Type: boolean
 #  Description
@@ -697,8 +697,8 @@ msgstr "הפעולה עלולה לקחת זמן מה..."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-msgid "Network autoconfiguration has succeeded!"
-msgstr "הגדרת רשת באופן אוטומטי הצליחה!"
+msgid "Network autoconfiguration has succeeded"
+msgstr "הגדרת רשת באופן אוטומטי הצליחה"
 
 #  Type: error
 #  Description
@@ -802,7 +802,11 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr "הגדרת רשת באופן אוטומטי נכשלה. זה יכול לקרות בגלל שרת DHCP איטי, כך שאולי תרצה לנסות שוב. אם הרשת שלך לא משתמשת ב-DHCP בשביל הגדרה רשת אוטומטית, תוכל להגדיר את הרשת ידנית. בנוסף, חלק משרתי DHCP צריכים שם מחשב ספציפי, תוכל לבחור להכניס שם מחשב לפני שתנסה שוב להשתמש ב-DHCP."
+msgstr ""
+"הגדרת רשת באופן אוטומטי נכשלה. זה יכול לקרות בגלל שרת DHCP איטי, כך שאולי "
+"תרצה לנסות שוב. אם הרשת שלך לא משתמשת ב-DHCP בשביל הגדרה רשת אוטומטית, תוכל "
+"להגדיר את הרשת ידנית. בנוסף, חלק משרתי DHCP צריכים שם מחשב ספציפי, תוכל "
+"לבחור להכניס שם מחשב לפני שתנסה שוב להשתמש ב-DHCP."
 
 #  Type: text
 #  Description
@@ -1013,8 +1017,6 @@ msgstr "האם המידע נכון?"
 msgid "Currently configured network parameters:"
 msgstr "פרמרטים שנקבעו  כרגע:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -1043,4 +1045,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
-

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-16 15:47-0700\n"
+"POT-Creation-Date: 2004-06-07 16:46+0200\n"
 "PO-Revision-Date: 2004-05-15 10:54+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -110,8 +110,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} bir kablosuz ağ arayüzüdür.  Lütfen ${iface} üzerinden kullanmak "
-"istediğiniz kablosuz ağın adını (ESSID) girin.  Eğer mevcut ağlardan birisini "
-"kullanmak istiyorsanız bu alanı boş bırakın."
+"istediğiniz kablosuz ağın adını (ESSID) girin.  Eğer mevcut ağlardan "
+"birisini kullanmak istiyorsanız bu alanı boş bırakın."
 
 #. Type: string
 #. Description
@@ -460,8 +460,8 @@ msgstr "Bu işlem biraz zaman alabilir."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-msgid "Network autoconfiguration has succeeded!"
-msgstr "Otomatik ağ yapılandırması başarıyla tamamlandı!"
+msgid "Network autoconfiguration has succeeded"
+msgstr "Otomatik ağ yapılandırması başarıyla tamamlandı"
 
 #. Type: error
 #. Description
@@ -530,11 +530,11 @@ msgid ""
 "hostname before retrying DHCP."
 msgstr ""
 "Otomatik ağ yapılandırması başarısız.  Bunun nedeni ağ üzerindeki DHCP "
-"sunucusunun yavaşlığı olabileceğinden tekrar denemeyi isteyebilirsiniz.  Eğer "
-"ağınız otomatik yapılandırma için DHCP kullanmıyorsa, elle yapılandırmayı "
-"tercih edebilirsiniz.  Bazı DHCP sunucuları özel bir DHCP makine adı "
-"gerektirebilir.  Bu tür durumlarda DHCP denemesinden önce böyle bir makine "
-"adını girmeyi seçebilirsiniz."
+"sunucusunun yavaşlığı olabileceğinden tekrar denemeyi isteyebilirsiniz.  "
+"Eğer ağınız otomatik yapılandırma için DHCP kullanmıyorsa, elle "
+"yapılandırmayı tercih edebilirsiniz.  Bazı DHCP sunucuları özel bir DHCP "
+"makine adı gerektirebilir.  Bu tür durumlarda DHCP denemesinden önce böyle "
+"bir makine adını girmeyi seçebilirsiniz."
 
 #. Type: text
 #. Description
@@ -625,8 +625,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Ağ maskesi hangi makinelerin yerel ağ içinde olduğunu belirlemekte "
-"kullanılır.  Girilecek değeri bilmiyorsanız sistem yöneticinize "
-"başvurun.  Ağ maskesi boşluklarla ayrılmış dört rakamdan oluşmalıdır."
+"kullanılır.  Girilecek değeri bilmiyorsanız sistem yöneticinize başvurun.  "
+"Ağ maskesi boşluklarla ayrılmış dört rakamdan oluşmalıdır."
 
 #. Type: string
 #. Description
@@ -685,8 +685,6 @@ msgstr "Bu bilgiler doğru mu?"
 msgid "Currently configured network parameters:"
 msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

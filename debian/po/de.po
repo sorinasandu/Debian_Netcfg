@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-16 15:47-0700\n"
+"POT-Creation-Date: 2004-06-07 16:46+0200\n"
 "PO-Revision-Date: 2004-06-02 00:19GMT\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
@@ -79,10 +79,10 @@ msgid ""
 "this field blank."
 msgstr ""
 "Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte "
-"geben Sie die IP Adresse (nicht die Rechnernamen) von bis zu drei Nameservern "
-"getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der erste Server "
-"in der Liste wird als erstes abgefragt. Wenn Sie keine Nameserver benutzen "
-"wollen, lassen Sie diese Feld bitte einfach leer."
+"geben Sie die IP Adresse (nicht die Rechnernamen) von bis zu drei "
+"Nameservern getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der "
+"erste Server in der Liste wird als erstes abgefragt. Wenn Sie keine "
+"Nameserver benutzen wollen, lassen Sie diese Feld bitte einfach leer."
 
 #. Type: select
 #. Description
@@ -469,8 +469,8 @@ msgstr "Dies kann einige Zeit dauern."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-msgid "Network autoconfiguration has succeeded!"
-msgstr "Die Netzwerk-Autokonfiguration war erfolgreich!"
+msgid "Network autoconfiguration has succeeded"
+msgstr "Die Netzwerk-Autokonfiguration war erfolgreich"
 
 #. Type: error
 #. Description
@@ -482,7 +482,8 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -500,7 +501,8 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
+msgstr ""
+"Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
 
 #. Type: select
 #. Choices
@@ -562,7 +564,8 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -677,7 +680,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -694,8 +698,6 @@ msgstr "Sind diese Informationen richtig?"
 msgid "Currently configured network parameters:"
 msgstr "Gegenwärtig konfigurierte Netzwerk-Parameter:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -717,4 +719,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
-
