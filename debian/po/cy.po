@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-03-30 21:16+0100\n"
+"PO-Revision-Date: 2004-05-26 18:44-0300\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,6 @@ msgstr "Cyfeiriadau gweinyddion enw:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -82,10 +81,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Os gwelwch yn dda, rhowch gyfeiriadau IP (nid enwau gwesteiwr) hyd at 3 "
-"gweinydd enw, wedi eu gwahannu gan fylchau. Peidiwch a defnyddio coma. "
-"Gofynnir y gweinydd cyntaf yn y rhestr  yn gyntaf. Os nad ydych chi eisiau "
-"defnyddio unrhyw weinydd enw, gadewch y maes yma yn wag."
+"Caiff y gweinyddion enw eu defnyddio i chwilio am enwau gwesteiwyr ar y "
+"rhwydwaith. Os gwelwch yn dda, rhowch gyfeiriadau IP (nid enwau gwesteiwr) "
+"hyd at 3 gweinydd enw, wedi eu gwahannu gan fylchau. Peidiwch a defnyddio "
+"coma. Gofynnir y gweinydd cyntaf yn y rhestr yn gyntaf. Os nad ydych chi "
+"eisiau defnyddio unrhyw weinydd enw, gadewch y maes yma yn wag."
 
 #. Type: select
 #. Description
@@ -101,7 +101,7 @@ msgid ""
 "primary network interface while installing Debian."
 msgstr ""
 "Mae gan eich system fwy nag un rhyngwyneb rhwydwaith. Dewiswch yr un i'w "
-"ddefnyddio fel y rhyngwyneb rhwydwaith cynradd wrth sefydli Debian."
+"ddefnyddio fel y rhyngwyneb rhwydwaith cynradd wrth sefydlu Debian."
 
 #. Type: string
 #. Description
@@ -124,20 +124,18 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Allwedd WEP ar gyfer ${iface}:"
+msgstr "Allwedd WEP ar gyfer y ddyfais diwifren ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Os yw'n briodol, rhowch yr allwedd diogelwch WEP ar gyfer y ddyfais ${iface} "
-"os gwelwch yn dda. Mae dau ffordd i wneud hyn: "
+"Os yw'n briodol, rhowch yr allwedd diogelwch WEP ar gyfer y ddyfais diwifren "
+"${iface} os gwelwch yn dda. Mae dau ffordd i wneud hyn:"
 
 #. Type: string
 #. Description
@@ -311,7 +309,6 @@ msgstr "Math rhwydwaith diwifren:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -319,21 +316,20 @@ msgid ""
 msgstr ""
 "Mae rhwydweithiau diwidfren un ai yn rheoledig neu'n ad-hoc. Os ydych chi'n "
 "defnyddio pwynt mynediad go iawn o rhyw fath, mae'ch rhwydwaith yn "
-"Rheoledig. Os mai rhyw gyfrifiadur arall yw eich 'pwynt mynediad', mae'ch "
-"rhwydwaith yn Ad-hoc."
+"Rheoledig. Os mai rhyw gyfrifiadur arall yw eich 'pwynt mynediad', gall fod "
+"eich rhwydwaith yn Ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Cyfluniad rhwydwaith statig"
+msgstr "Cyfluniad rhwydwaith diwifren"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Yn chwilio am bwyntiau mynediad diwifren ..."
 
 #. Type: text
 #. Description
@@ -476,9 +472,8 @@ msgstr "Gall hyn gymryd peth amser."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Cyfluniad rhwydwaith statig"
+msgstr "Mae awtogyfluniad rhwydwaith wedi llwyddo!"
 
 #. Type: error
 #. Description
@@ -501,23 +496,20 @@ msgstr "Caiff y proses cyfluniad DHCP ei erthylu."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Cyfluniad rhwydwaith statig"
+msgstr "Ailgeisio awtogyfluniad rhwydwaith"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
+msgstr "Ailgeisio awtogyfluniad rhwydwaith gyda enw gwesteiwr DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Cyflunio'r rhwydwaith"
+msgstr "Cyflunio'r rhwydwaith â llaw"
 
 #. Type: select
 #. Choices
@@ -528,16 +520,14 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Cyflunio'r rhwydwaith"
+msgstr "Peidio â chyflunio'r rhwydwaith ar hyn o bryd"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Cyfluniad Rhwydwaith"
+msgstr "Dull cyfluniad rhwydwaith:"
 
 #. Type: select
 #. Description
@@ -549,13 +539,17 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Methodd awtogyfluniad rhwydwaith. Fe all hyn fod oherwydd gweinydd DHCP "
+"araf ar y rhwydwaith, felly efallai hoffech ailgeisio. Os nad yw eich "
+"rhwydwaith yn defnyddio DHCP ar gyfer awtogyfluniad, fe allwch ei gyflunio "
+"â llaw yn lle. Hefyd, mae rhai gweinyddion DHCP angen enw gweinydd DHCP "
+"penodol, felly gallwch ddewis rhoi'r fath enw gwesteiwr cyn ailgeisio DHCP."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Cyflunio'r rhwydwaith"
+msgstr "Ailgyflunio'r rhwydwaith diwifren"
 
 #. Type: text
 #. Description
