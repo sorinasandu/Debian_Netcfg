@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -253,33 +253,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
+#, fuzzy
+msgid "Configuring the network with DHCP"
 msgstr "Сейчас я приступаю к настройке сети."
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "Это может занять некоторое время. Не более одной-двух минут."
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr ""
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Клиент dhcp не найден. Работа приостановлена."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Для этого пакета требуется установить пакет pump или dhcp-client."
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Сейчас я приступаю к настройке сети."
@@ -403,6 +404,13 @@ msgstr ""
 #, fuzzy
 msgid "Configure a static network"
 msgstr "Сейчас я приступаю к настройке сети."
+
+#~ msgid "I will now configure the network."
+#~ msgstr "Сейчас я приступаю к настройке сети."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr "Это может занять некоторое время. Не более одной-двух минут."
 
 #~ msgid "${ifchoices}"
 #~ msgstr "${ifchoices}"

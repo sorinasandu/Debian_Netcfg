@@ -15,10 +15,13 @@ _Description: Is this information correct?
   dhcp hostname  = ${dhcp_hostname}
   nameservers    = ${nameservers}
 
-Template: netcfg/do_dhcp
-Type: note
-_Description: I will now configure the network.
- This may take some time.  It shouldn't take more than a minute or two.
+Template: netcfg/dhcp_progress
+Type: text
+_Description: Configuring the network with DHCP
+
+Template: netcfg/dhcp_progress_note
+Type: text
+_Description: This may take a few minutes.
 
 Template: netcfg/no_dhcp_client
 Type: note

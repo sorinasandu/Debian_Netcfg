@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: 2003-04-25 19:53+0200\n"
 "Last-Translator: Gaute Hvoslef Kvalnes <gaute@verdsveven.com>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -263,33 +263,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
+#, fuzzy
+msgid "Configuring the network with DHCP"
 msgstr "Nettverket blir no sett opp."
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "Dette kan ta litt tid, men neppe meir enn eit minutt eller to."
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr ""
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Fann ingen DHCP-klient. Kan ikkje halda fram."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Denne pakken treng pump eller dhcp-client."
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Nettverket blir no sett opp."
@@ -416,3 +417,10 @@ msgstr ""
 #, fuzzy
 msgid "Configure a static network"
 msgstr "Nettverket blir no sett opp."
+
+#~ msgid "I will now configure the network."
+#~ msgstr "Nettverket blir no sett opp."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr "Dette kan ta litt tid, men neppe meir enn eit minutt eller to."

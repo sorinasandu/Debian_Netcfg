@@ -181,8 +181,13 @@ int main(int argc, char *argv[])
 			    nameserver_array);
         netcfg_write_dhcp();
 
+	debconf_progress_start(client, 0, 1, "netcfg/dhcp_progress");
+	netcfg_progress_displayed = 1;
+	debconf_progress_info(client, "netcfg/dhcp_progress_note");
         my_debconf_input("medium", "netcfg/do_dhcp");
         netcfg_activate_dhcp();
+	debconf_progress_stop(client);
+	netcfg_progress_displayed = 0;
 
         return 0;
 }

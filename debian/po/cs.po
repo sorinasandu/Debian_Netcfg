@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: 2003-10-08 16:00+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <czdebian-l@debian.cz>\n"
@@ -69,8 +69,8 @@ msgid ""
 "network interface that you will need for installing the Debian system (via "
 "NFS or HTTP)."
 msgstr ""
-"Byly nalezeny následující rozhraní. Vyberte typ hlavního sí»ového "
-"rozhraní, které pou¾ijete pro instalaci Debianu (pøes NFS nebo HTTP)."
+"Byly nalezeny následující rozhraní. Vyberte typ hlavního sí»ového rozhraní, "
+"které pou¾ijete pro instalaci Debianu (pøes NFS nebo HTTP)."
 
 #. Description
 #: ../netcfg-common.templates:27
@@ -112,8 +112,7 @@ msgid ""
 "minus sign."
 msgstr ""
 "Název poèítaèe smí obsahovat pouze alfanumerické znaky a znaménko mínus, "
-"musí být v rozmezí 2 a 63 znakù a nesmí zaèínat nebo konèit znaménkem "
-"mínus."
+"musí být v rozmezí 2 a 63 znakù a nesmí zaèínat nebo konèit znaménkem mínus."
 
 #. Description
 #: ../netcfg-common.templates:48
@@ -139,9 +138,9 @@ msgid ""
 "'Detect network hardware and load kernel drivers for it'."
 msgstr ""
 "Nebyla nalezena ¾ádná sí»ová rozhraní. To znamená, ¾e instalaèní systém "
-"nena¹el sí»ové zaøízení. Pokud máte sí»ovou kartu, je mo¾né, ¾e jste pro "
-"ni je¹tì nenahráli modul. Jdìte zpìt na krok 'Detekce sí»ového hardwaru "
-"a zavedení pøíslu¹ného modulu'."
+"nena¹el sí»ové zaøízení. Pokud máte sí»ovou kartu, je mo¾né, ¾e jste pro ni "
+"je¹tì nenahráli modul. Jdìte zpìt na krok 'Detekce sí»ového hardwaru a "
+"zavedení pøíslu¹ného modulu'."
 
 #. Description
 #: ../netcfg-common.templates:61
@@ -256,33 +255,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
-msgstr "Pokusím se nastavit sí»."
+#, fuzzy
+msgid "Configuring the network with DHCP"
+msgstr "Nastavení sítì pøes DHCP"
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "Mù¾e to nìjakou dobu trvat, ale obvykle ménì ne¾ jednu nebo dvì minuty."
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr ""
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Nebyl nalezen ¾ádný dhcp klient. Nelze pokraèovat."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Tento balík vy¾aduje pump nebo dhcp-client."
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "Nastavení sítì pøes DHCP"
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "Nastavení sítì pøes DHCP"
 
@@ -315,9 +315,9 @@ msgid ""
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
-"Pointopoint adresa slou¾í k urèení druhého konce point to point sítì. "
-"Pokud nevíte, co zde máte zadat, zeptejte se svého sí»ového správce. "
-"Adresa se zadává jako ètyøi èísla oddìlená teèkami."
+"Pointopoint adresa slou¾í k urèení druhého konce point to point sítì. Pokud "
+"nevíte, co zde máte zadat, zeptejte se svého sí»ového správce. Adresa se "
+"zadává jako ètyøi èísla oddìlená teèkami."
 
 #. Description
 #: ../netcfg-static.templates:19
@@ -332,8 +332,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Sí»ová maska slou¾í k urèení, které poèítaèe patøí k lokální síti. Pokud "
-"neznáte pøesnou hodnotu, zeptejte se svého sí»ového správce. Maska se "
-"zadává jako ètyøi èísla oddìlená teèkami."
+"neznáte pøesnou hodnotu, zeptejte se svého sí»ového správce. Maska se zadává "
+"jako ètyøi èísla oddìlená teèkami."
 
 #. Description
 #: ../netcfg-static.templates:27
@@ -353,8 +353,7 @@ msgstr ""
 "Brána je IP adresa (ètyøi èísla oddìlená teèkami), která urèuje standardní "
 "smìrovaè. Ve¹kerý provoz, který jde mimo va¹i LAN (napøíklad do Internetu), "
 "je poslán pøes tento smìrovaè. Ve výjimeèných pøípadech, kdy¾ smìrovaè "
-"nemáte, zde nic nevyplòujte. Správnou hodnotu ví urèitì vá¹ sí»ový "
-"správce."
+"nemáte, zde nic nevyplòujte. Správnou hodnotu ví urèitì vá¹ sí»ový správce."
 
 #. Description
 #: ../netcfg-static.templates:37
@@ -366,8 +365,7 @@ msgstr "Zadaná brána je nedosa¾itelná."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Mo¾ná jste udìlali chybu pøi zadávání IP adresy, sí»ové masky a/nebo "
-"brány."
+"Mo¾ná jste udìlali chybu pøi zadávání IP adresy, sí»ové masky a/nebo brány."
 
 #. Description
 #: ../netcfg-static.templates:44
@@ -406,3 +404,11 @@ msgstr "Statické nastavení sítì"
 #: ../netcfg-static.templates:62
 msgid "Configure a static network"
 msgstr "Nastavit sí» staticky"
+
+#~ msgid "I will now configure the network."
+#~ msgstr "Pokusím se nastavit sí»."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr ""
+#~ "Mù¾e to nìjakou dobu trvat, ale obvykle ménì ne¾ jednu nebo dvì minuty."

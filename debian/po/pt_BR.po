@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-0.25\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: 2003-10-04 22:08-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -258,35 +258,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
-msgstr "Sua rede será configurada agora."
+#, fuzzy
+msgid "Configuring the network with DHCP"
+msgstr "Configurar a rede via DHCP"
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
 msgstr ""
-"Isto pode demorar algum tempo, mas não deve demorar mais do que um minuto ou "
-"dois."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Nenhum cliente dhcp foi encontrado. Não é possível continuar."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Este pacote requer o pump ou o dhcp-client."
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "Configuração de Rede via DHCP"
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "Configurar a rede via DHCP"
 
@@ -413,3 +412,12 @@ msgstr "Configuração de Rede Estática"
 #: ../netcfg-static.templates:62
 msgid "Configure a static network"
 msgstr "Configurar uma rede estática"
+
+#~ msgid "I will now configure the network."
+#~ msgstr "Sua rede será configurada agora."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr ""
+#~ "Isto pode demorar algum tempo, mas não deve demorar mais do que um minuto "
+#~ "ou dois."

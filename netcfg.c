@@ -34,6 +34,9 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
+/* Set if there is currently a progress bar displayed. */
+int netcfg_progress_displayed = 0;
+
 
 static char *my_debconf_input(struct debconfclient *client, char *priority,
                            char *template)
@@ -227,6 +230,8 @@ char *num2dot(u_int32_t num)
 
 void netcfg_die(struct debconfclient *client)
 {
+	if (netcfg_progress_displayed)
+		debconf_progress_stop(client);
         debconf_input(client, "high", "netcfg/error");
         debconf_go(client);
         exit(1);

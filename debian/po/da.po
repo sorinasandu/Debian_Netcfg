@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: 2003-10-11 18:50+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -227,9 +227,9 @@ msgid ""
 "might need to specify an account number here.  Most other users can just "
 "leave this blank."
 msgstr ""
-"Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et kabelmodem, "
-"skal du muligvis angive et kontonummer her. De fleste andre brugere kan blot "
-"lade feltet være tomt."
+"Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et "
+"kabelmodem, skal du muligvis angive et kontonummer her. De fleste andre "
+"brugere kan blot lade feltet være tomt."
 
 #. Description
 #: ../netcfg-dhcp.templates:11
@@ -253,33 +253,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
-msgstr "Jeg vil nu sætte netværket op."
+#, fuzzy
+msgid "Configuring the network with DHCP"
+msgstr "Sæt nætværket op via DHCP"
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr ""
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Fandt ingen dhcp-klient. Kan ikke fortsætte."
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "DHCP-netværksopsætning"
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "Sæt nætværket op via DHCP"
 
@@ -361,7 +362,8 @@ msgstr "Den angivne gateway kan ikke nåes."
 
 #. Description
 #: ../netcfg-static.templates:37
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -404,9 +406,16 @@ msgstr "Statisk netværksopsætning"
 msgid "Configure a static network"
 msgstr "Sæt statisk netværk op"
 
+#~ msgid "I will now configure the network."
+#~ msgstr "Jeg vil nu sætte netværket op."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr ""
+#~ "Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
+
 #~ msgid "${ifchoices}"
 #~ msgstr "${ifchoices}"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-

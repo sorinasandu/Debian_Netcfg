@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-04 15:08+0200\n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
 "PO-Revision-Date: 2003-10-08 08:46+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -259,33 +259,34 @@ msgstr ""
 
 #. Description
 #: ../netcfg-dhcp.templates:20
-msgid "I will now configure the network."
-msgstr "ネットワークを設定します。"
+#, fuzzy
+msgid "Configuring the network with DHCP"
+msgstr "DHCP 経由でネットワークを設定"
 
 #. Description
-#: ../netcfg-dhcp.templates:20
-msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "しばらく時間がかかりますが、1、2分以上はかからないでしょう。"
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr ""
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "dhcp クライアントが見つかりません。継続できません。"
 
 #. Description
-#: ../netcfg-dhcp.templates:25
+#: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "このパッケージは pump または dhcp-client を必要とします。"
 
 #. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "DHCP ネットワーク設定"
 
 #. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:36
+#: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "DHCP 経由でネットワークを設定"
 
@@ -411,3 +412,10 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:62
 msgid "Configure a static network"
 msgstr "静的ネットワークの設定"
+
+#~ msgid "I will now configure the network."
+#~ msgstr "ネットワークを設定します。"
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr "しばらく時間がかかりますが、1、2分以上はかからないでしょう。"
