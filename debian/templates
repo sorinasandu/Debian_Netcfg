@@ -1,0 +1,62 @@
+Template: netcfg/dhcp_option
+Type: boolean
+Default: true
+Description: Automatic Network Configuration
+ Configuration for  (FIXME) Do you want to use DHCP or BOOTP to automatically
+ configure this interface? You'll need a DHCP or BOOTP server in the local
+ network for this to work.
+
+Template: netcfg/get_hostname
+Type: string
+Default: debian
+Description: Choose the hostname.
+ Every Debian system has a name - even if it is not on a network. This name is
+ called its "hostname". You should now specify a hostname for your new
+ system. If your system is going to be on a network, you should talk to the
+ administrator of the network before you choose a hostname. If not, you may
+ choose any name you like. The hostname must not contain dots or underscores,
+ and you must not append the domain name here. If you can't think of a
+ hostname for your new system, you may press <ENTER> to use the default hostname
+ of "debian".
+
+Template: netcfg/get_ipaddress
+Type: string
+Description: What is the IP address of this system?
+ The ipaddress identifies you system to other computer on the network.
+
+Template: netcfg/get_netmask
+Type: string
+Description: What is your netmask?
+ The ipaddress identifies you system to other computer on the network.
+
+Template: netcfg/get_gateway
+Type: string
+Description: What is your IP gateway address?
+ A gateway system is one that connects your network to other networks such as
+ your company wide-area net or the Internet. If there is no gateway in your
+ subnet just leave this field blank.
+
+Template: netcfg/get_domain
+Type: string
+Description: Choose the Domain name.
+ As with individual systems, every network has a name. This name is called the
+ domain name. Please enter your domain name or leave this field empty if you
+ don't have a domain.
+
+Template: netcfg/get_nameservers
+Type: string
+Description: Choose the DNS Server Addresses
+ Please enter the IP addresses (not host names) of up to 3 name servers,
+ separated by spaces. Do not use commas. The servers will be queried in the
+ order in which you enter them. If you don't want to use any name servers just
+ leave this field blank.
+
+Template: netcfg/get_pcmcia_tranceiver
+Type: string
+Description: PCMCIA Transceiver
+ Some PCMCIA Cards can detect the transceiver type although this might take
+ some time. Others cannot detect it at all. Possible values for this parameter
+ are "auto", "10baseT", "10base2", "aui", and "100baseT", or a blank for cards
+ that don't support transceiver selection. Please specify what transceiver type
+ you would like to use. If you aren't sure, just use the default value of
+ "auto".
