@@ -93,7 +93,7 @@ netcfg_write_dhcp ()
 	       "\n# This entry was created during the Debian installation\n");
       fprintf (fp, "iface %s inet dhcp\n", interface);
       if (dhcp_hostname)
-	fprintf (fp, "\thostname\t%s\n", dhcp_hostname);
+	fprintf (fp, "\thostname %s\n", dhcp_hostname);
       fclose (fp);
     }
 }
