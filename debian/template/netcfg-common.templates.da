@@ -1,0 +1,78 @@
+Template: netcfg/get_domain
+Type: string
+Description: Choose the domain name.
+ The domain name is the part of your Internet address to the right of your
+ host name.  It is often something that ends in .com, .net, .edu, or .org. 
+ If you are setting up a home network, you can make something up, but make
+ sure you use the same domain name on all your computers.
+Description-da: Vælg domænenavn.
+ Domænenavnet er den del af din internetadresse, der er til højre for dit
+ maskinnavn. Det ender oftest på .com, .net, .edu, .org eller .dk.
+ Hvis du er på et hjemmenetværk kan du selv finde på et, men sørg for
+ at alle dine computere bruger samme domænenavn.
+
+Template: netcfg/get_nameservers
+Type: string
+Description: Choose the DNS Server Addresses
+ Please enter the IP addresses (not host names) of up to 3 name servers,
+ separated by spaces. Do not use commas. The servers will be queried in the
+ order in which you enter them. If you don't want to use any name servers
+ just leave this field blank.
+Description-da: Vælg adressen på DNS-serveren
+ Angiv IP-adressen (ikke værtsnavne) på op til tre navneservere adskilt
+ med mellemrum. Brug ikke kommaer. Serverne vil blive forespurgt i den
+ rækkefølge, de er angivet. Hvis du ikke ønsker at bruge navneservere,
+ kan du blot lade dette felt være tomt.
+
+Template: netcfg/choose_interface
+Type: select
+Choices: ${ifchoices}
+Choices-da: ${ifchoices}
+Description: Choose an interface.
+ The following interfaces were detected. Choose the type of your primary
+ network interface that you will need for installing the Debian system (via
+ NFS or HTTP).
+Description-da: Vælg netkort
+ Følgende netkort blev fundet. Vælg typen på det primære netkort, som du
+ vil bruge til at installere Debiansystemet (via NFS eller HTTP).
+
+Template: netcfg/error_cfg
+Type: note
+Description: An error occured.
+ Something went wrong when I tried to activate your network.
+Description-da: Fejl!
+ Noget gik galt, da jeg forsøgte at aktivere dit netværk.
+
+Template: netcfg/get_hostname
+Type: string
+Default: debian
+Default-da: debian
+Description: Enter the system's hostname.
+ The hostname is a single word that identifies your system to the network. 
+ If you don't know what your hostname should be, consult your network
+ administrator.  If you are setting up your own home network, you can make
+ something up here.
+Description-da: Angiv dit systems maskinnavn.
+ Maskinnavnet er et enkelt ord, der identificerer dit system på netværket.
+ Hvis du ikke ved, hvad dit maskinnavn bør være, bør du spørge din
+ netværksadministrator. Hvis du laver dit eget hjemmenetværk, kan du selv
+ finde på et navn.
+
+Template: netcfg/error
+Type: note
+Description: An error occured and I cannot continue.
+ Feel free to retry.
+Description-da: Der skete en fejl og jeg kan ikke fortsætte.
+ Du kan evt. forsøge igen.
+
+Template: netcfg/no_interfaces
+Type: note
+Description: No interfaces were detected.
+ No network interfaces were found.   That means that the installation
+ system was unable to find a network device.  If you do have a network
+ card, then it is possible that the module for it hasn't been selected yet.
+  Go back to 'Configure Network Hardware'.
+Description-da: Der blev ikke fundet nogen netkort.
+ Der blev ikke fundet nogen netkort. Hvis du har et netkort, kan det
+ være at dets modul ikke er blevet valgt endnu.
+  Gå tilbage til 'Sæt netværksudstyr op'.
