@@ -9,15 +9,13 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-04-17 10:41+0300\n"
+"PO-Revision-Date: 2004-05-14 00:42+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -157,8 +155,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -271,8 +268,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -490,9 +486,8 @@ msgstr "Tai gali užtrukti šiek tiek laiko."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statinis tinklo konfigūravimas"
+msgstr "Automatinis tinklo konfigūravimas pavyko sėkmingai!"
 
 #. Type: error
 #. Description
@@ -517,43 +512,38 @@ msgstr "DHCP konfigūravimo procesas bus nutrauktas."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statinis tinklo konfigūravimas"
+msgstr "Kartoti tinklo automatinį konfigūravimą"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
+msgstr "Kartoti automatinį tinklo konfigūravimą su DHCP kompiuterio vardu"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Tinklo konfigūravimas"
+msgstr "Rankinis tinklo konfigūravimas"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Tinklo konfigūravimas"
+msgstr "Nekonfigūruoti tinklo šiuo metu"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Statinis tinklo konfigūravimas"
+msgstr "Tinklo konfigūravimo metodas:"
 
 #. Type: select
 #. Description
@@ -565,13 +555,18 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Automatinis tinklo konfigūravimas nepavyko. Paprastai tai atsitinka dėl lėto "
+"DHCP serverio tinkle, taigi Jūs galite norėti pakartoti. Jei Jūsų tinklas "
+"automatiniam konfigūravimui nenaudoja DHCP, vietoj to Jūs galite konfigūruoti "
+"rankiniu būdu. Be to, kai kuriems DHCP serveriams reikia nurodyti DHCP "
+"kompiuterio vardą (hostname), taigi Jūs galite pasirinkti tokio vardo įvedimą "
+"prieš pakartojant su DHCP."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Tinklo konfigūravimas"
+msgstr "Naujai perkonfigūruoti belaidį tinklą"
 
 #. Type: text
 #. Description
@@ -698,8 +693,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -733,15 +727,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet or Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Ar norite dar kartą bandyti tinklo konfigūravimą su DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Atliekant DHCP tinklo konfigūravimą, nėra pasiūlyta IP adreso. Kartais "
-#~ "DHCP serveriai yra tikrai lėti. Jei norite, galite bandyti pakartoti."
