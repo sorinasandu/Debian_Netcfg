@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-22 15:51-0500\n"
-"PO-Revision-Date: 2004-03-20 13:50+0900\n"
+"PO-Revision-Date: 2004-03-23 09:18+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,25 +26,19 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "DHCP でネットワークを設定しています"
+msgstr "DHCP でネットワークを自動的に設定していますか?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the atempt to "
 "configure it by DHCP."
-msgstr ""
-"ネットワークは DHCP またはすべての情報を手動で入力のいずれでも設定できます。"
-"DHCP を選んだものの、インストーラがあなたのネットワークの DHCP サーバから設定"
-"を取得できないときには、DHCP の設定を試みたあとにあなたのネットワークを手動で"
-"設定する機会があります。よくわからなければ、DHCP を選んでください。"
+msgstr "ネットワークは DHCP またはすべての情報を手動で入力のいずれでも設定できます。DHCP を選んだものの、インストーラがあなたのネットワークの DHCP サーバから動作設定を取得できないときには、DHCP の設定を試みたあとにあなたのネットワークを手動で設定する機会があります。"
 
 #. Type: string
 #. Description
@@ -697,9 +691,3 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "動的アドレス (DHCP), 静的アドレス (手動)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "ネットワーク設定の方法:"
