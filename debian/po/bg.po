@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-02-04 09:36-0700\n"
-"PO-Revision-Date: 2005-01-31 16:56+0200\n"
+"PO-Revision-Date: 2005-03-08 20:58+0200\n"
 "Last-Translator:  Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,8 +99,8 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "Вашата система има няколко мрежови интерфейса. Изберете един, който да служи "
-"за основен интерфейс по време на нисталирането на Debian.  Ако е намерен "
-"такъв, първият свързан мрежов интерфейс е избран за основен."
+"за основен интерфейс по време на инсталирането на Debian.  Ако е намерен "
+"такъв, първият свързан мрежов интерфейс вече е избран за основен."
 
 #. Type: string
 #. Description
@@ -117,8 +117,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} е безжичен мрежов интерфейс. Моля, въведете името (ESSID) на "
-"безжичната мрежа, която желаете да се използва. Ако искате коя да е налична "
-"мрежа, оставете полето празно."
+"безжичната мрежа, която желаете ${iface} да използва. Ако искате коя да е "
+"налична мрежа, оставете полето празно."
 
 #. Type: string
 #. Description
@@ -322,7 +322,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Wireless network configuration"
-msgstr "Безжична мрежова настройка"
+msgstr "Настройване на безжична мрежа"
 
 #. Type: text
 #. Description
