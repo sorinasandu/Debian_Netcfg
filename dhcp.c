@@ -187,8 +187,11 @@ int poll_dhcp_client (struct debconfclient *client)
   debconf_progress_info(client, "netcfg/dhcp_progress_note");
   netcfg_progress_displayed = 1;
 
-  /* wait DHCP_SECONDS seconds for a DHCP lease */
-  while ((dhcp_pid > 0) && (seconds_slept < DHCP_SECONDS)) {
+  /* wait between 2 and DHCP_SECONDS seconds for a DHCP lease */
+  while (
+      ((dhcp_pid > 0) || (seconds_slept < 2))
+      && (seconds_slept < DHCP_SECONDS)
+  ) {
     sleep(1);
     seconds_slept++; /* Not exact but close enough */
     debconf_progress_step(client, 1);

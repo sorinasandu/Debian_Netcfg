@@ -27,6 +27,7 @@ netcfg (0.71) UNRELEASED; urgency=low
       + Write host-name provided to the DHCP client in order to get a lease
         on the "hostname" option line for the interface in /e/n/i
       + If the user backs up from netcfg/get_hostname, go to retry question
+      + Wait at least two seconds for DHCP client to exit  (Closes: #255984)
       + Clean up code
         . Always use spaces for indentation
         . Improve comments
