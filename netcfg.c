@@ -161,6 +161,12 @@ char *get_ifdsc(const char *ifp)
                 "slip", _("Serial-line IP")}
                 , {
                 "plip", _("Parallel-line IP")}
+		, {
+		"ppp", _("Point-to-Point Protoccol")}
+		, {
+		"sit", _("Ipv6-in-IPv4")}
+		, {
+		"ippp", _("ISDN Point-to-Point Protocol")}
                 , {
                 "ctc", _("Channel-to-channel")}
                 , {
