@@ -692,6 +692,9 @@ void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipad
       *ptr = '\0';
 
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+
+    if (!have_domain && (ptr + 1) != '\0')
+      debconf_set(client, "netcfg/get_domain", ptr + 1);
   }
 
   freeaddrinfo(res);
