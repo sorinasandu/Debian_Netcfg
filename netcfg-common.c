@@ -382,7 +382,7 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
           return ret;
         
         debconf_get(client, template);
-        
+       
         free(*hostname);
         *hostname = strdup(client->value);
         len = strlen(*hostname);
@@ -404,11 +404,12 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
         
     } while (!*hostname);
 
-    if ((s = strchr(*hostname, '.')))
+    /* don't strip DHCP hostnames */
+    if (hdset && (s = strchr(*hostname, '.')))
     {
       if (s[1] == '\0') /* "somehostname." <- . should be ignored */
 	*s = '\0';
-      else if (hdset) /* assume we have a valid domain name here */
+      else /* assume we have a valid domain name here */
       {
 	debconf_set(client, "netcfg/get_domain", strdup(s + 1));
         have_domain = 1;

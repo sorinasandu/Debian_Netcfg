@@ -107,7 +107,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
       {
         if ((dc = file_open(DHCLIENT_CONF, "w")))
         {
-          fprintf(dc, "send host-name %s\n", hostname);
+          fprintf(dc, "send host-name \"%s\";\n", dhostname);
           fclose(dc);
         }
       }
@@ -122,7 +122,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
       {
         if ((dc = file_open(DHCLIENT3_CONF, "w")))
         {
-          fprintf(dc, "send host-name %s\n", hostname);
+          fprintf(dc, "send host-name \"%s\";\n", dhostname);
           fclose(dc);
         }
       }
@@ -132,7 +132,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
     case UDHCPC:
       if (dhostname)
-        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", interface, hostname);
+        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", interface, dhostname);
       else
         snprintf(buf, sizeof(buf), "udhcpc -i %s -n", interface);
       
@@ -146,6 +146,8 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
   {
     int ret;
 
+    signal(SIGCHLD, &dhcp_client_sigchld);
+    
     /* these guys log to syslog already */
     if (dhcp_client == DHCLIENT || dhcp_client == DHCLIENT3)
       ret = di_exec_shell(buf);
@@ -159,7 +161,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
   else
   {
     dhcp_running = 1;
-    signal(SIGCHLD, &dhcp_client_sigchld);
     return 0;
   }
 }
@@ -256,7 +257,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case DHCP_HOSTNAME:
-        if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0) == GO_BACK)
+        if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0))
           state = ASK_RETRY;
         else
         {
@@ -293,7 +294,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
           /* dhcp hostname, ask for one with the dhcp hostname
            * as a seed */
-          if (gethostname(buf, sizeof(buf)) == 0)
+          if (gethostname(buf, sizeof(buf)) == 0 && strcmp(buf, "(none)") != 0)
             debconf_set(client, "netcfg/get_hostname", buf);
           else
             seed_hostname_from_dns(client);
@@ -327,19 +328,25 @@ int kill_dhcp_client(void)
 {
   if (dhcp_pid != -1)
   {
-    int s[] = { SIGTERM, SIGKILL, 0 }, *sigs = s;
+    int sig = SIGTERM;
 
-    while (*sigs)
+    for (;;)
     {
       kill(dhcp_pid, 0);
 
       /* looks like it died */
       if (errno == ESRCH)
+      {
         return 1;
+      }
 
-      kill(dhcp_pid, *sigs);
-
+      kill(dhcp_pid, sig);
       sleep(2);
+      
+      if (sig == SIGTERM)
+	sig = SIGKILL;
+      else if (sig == SIGKILL)
+	break;
     }
   }
   

@@ -9,7 +9,7 @@ Standards-Version: 3.6.1.0
 Package: netcfg
 XC-Package-Type: udeb
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
-Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection, libiw27-udeb
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp3-client-udeb | dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection, libiw27-udeb
 Provides: configured-network
 XB-Installer-Menu-Item: 18
 Description: Configure the network

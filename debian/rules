@@ -37,8 +37,9 @@ install: build
 	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
-		mkdir -p debian/$(PACKAGE)/etc/dhcp ; \
-		mkdir -p debian/$(PACKAGE)/var/dhcp ; )
+		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3 ; \
+		mkdir -p debian/$(PACKAGE)/var/dhcp ; \
+		cp dhclient-script debian/$(PACKAGE)/etc/dhcp3/; )
 
 
 # Build architecture-independent files here.
