@@ -6,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.47\n"
+"Project-Id-Version: netcfg 0.51\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-02-25 08:45+0200\n"
+"PO-Revision-Date: 2004-03-03 22:58+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -161,8 +161,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -275,8 +274,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -420,7 +418,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei Jūs naudojate "
-"kabelinį ·modemą, tai gali tekti čia nurodyti paskyros (account) numerį."
+"kabelinį modemą, tai gali tekti čia nurodyti paskyros (account) numerį."
 
 #. Type: string
 #. Description
@@ -453,7 +451,7 @@ msgstr ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
 " domain         = ${domain}\n"
-" dhcp·hostname  = ${dhcp_hostname}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 
 #. Type: text
@@ -497,13 +495,12 @@ msgstr "Ar norite dar kartą bandyti tinklo konfigūravimą su DHCP?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Atliekant DHCP tinklo konfigūravimą, nėra pasiūlyta IP adreso. Kartais DHCP "
-"serveriai yra tikrai lėti. Tokiu atveju jūs galite bandyti pakartoti."
+"serveriai yra tikrai lėti. Jei norite, galite bandyti pakartoti."
 
 #. Type: text
 #. Description
@@ -568,9 +565,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką ·"
+"Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką "
 "(point-to-point) tinklui.  Pasitarkite su savo tinklo administratoriumi, jei "
-"nežinote šio·adreso.  Ryšio adresas turi būti įvestas, kaip keturi skaičiai, "
+"nežinote šio adreso.  Ryšio adresas turi būti įvestas, kaip keturi skaičiai, "
 "atskirti taškais."
 
 #. Type: string
@@ -611,7 +608,7 @@ msgstr ""
 "Tinklų sąsajos IP adresas (keturi skaičiai atskirti taškais) nurodo tinklų "
 "sąsajos kelvedį, taip pat vadinamą numatytuoju kelvedžių (default router). "
 "Visa informacija išeinanti į Jūsų lokalaus tinklo išorę (pvz. į internetą), "
-"yra ·siunčiama per šį kelvedį. Kartais Jūs galite neturėti kelvedžio, tokiu "
+"yra siunčiama per šį kelvedį. Kartais Jūs galite neturėti kelvedžio, tokiu "
 "atveju palikite tuščią. Jei nežinote tinkamo atsakymo, pasitarkite su savo "
 "tinklo administratoriumi."
 
@@ -625,13 +622,12 @@ msgstr "Tinklų sąsaja (gateway) nepasiekiama"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Jūsų nurodytas tinklų·sąsajos (gateway) adresas nepasiekiamas."
+msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -671,3 +667,4 @@ msgstr "Statinis tinklo konfigūravimas"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
+
