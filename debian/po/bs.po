@@ -16,12 +16,13 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-07 16:46+0200\n"
-"PO-Revision-Date: 2004-05-06 18:57+0100\n"
-"Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
+"PO-Revision-Date: 2004-06-13 16:50+0200\n"
+"Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #. Type: boolean
 #. Description
@@ -162,8 +163,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
+msgstr "Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
 
 #. Type: error
 #. Description
@@ -504,16 +504,14 @@ msgstr "DHCP konfiguracijski proces će biti obustavljen."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statička konfiguracija mreže"
+msgstr "Ponovi automatsku konfiguraciju mreže"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dinamička konfiguracija mreže (DHCP)"
+msgstr "Ponovi automatsku konfiguraciju mreže koristeći hostname DHCP servera"
 
 #  Type: text
 #  Description
@@ -521,15 +519,14 @@ msgstr "Dinamička konfiguracija mreže (DHCP)"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Podesi mrežu"
+msgstr "Ručno podesi mrežu"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #  Type: text
 #  Description
@@ -537,16 +534,14 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Podesi mrežu"
+msgstr "Ne podešavaj mrežu sada"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Statička konfiguracija mreže"
+msgstr "Metod podešavanja mreže:"
 
 #. Type: select
 #. Description
@@ -558,6 +553,11 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Automatsko podešavanje mreže nije uspjelo. Ovo može biti zbog sporog DHCP servera "
+"na mreži, tako da možete ponovo pokušati. Ako vaša mreža ne koristi DHCP za "
+"automatsku konfiguraciju, možete je podesiti ručno. Takođe, neki DHCP serveri "
+"zahtijevaju navođenje njihovog hostname, tako da možete odabrati da unesete "
+"takav hostname prije ponovnog pokušaja DHCP konfiguracije."
 
 #  Type: text
 #  Description
@@ -565,9 +565,8 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Podesi mrežu"
+msgstr "Ponovo podesi bežičnu mrežu"
 
 #. Type: text
 #. Description
@@ -691,8 +690,7 @@ msgstr "Gateway adresa koju ste unijeli nije dostupna."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili "
 "gatewaya."
@@ -710,7 +708,6 @@ msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -720,8 +717,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " interfejs     = ${interface}\n"
-" hostname      = ${hostname}\n"
-" domena        = ${domain}\n"
 " ipadresa     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -738,29 +733,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
 
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet ili Token Ring"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " interfejs      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domena         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Da li želite ponovo pokušati DHCP mrežnu konfiguraciju?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "IP adresa nije ponuđena tokom automatske mrežne konfiguracije pomoću DHCP-"
-#~ "a. DHCP serveri su ponekad veoma spori. Ako želite, možete pokušati "
-#~ "ponovo."
