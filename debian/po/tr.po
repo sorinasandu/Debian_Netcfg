@@ -1,0 +1,401 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.034\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-09-18 22:25+0200\n"
+"PO-Revision-Date: 2003-08-03 09:30+0200\n"
+"Last-Translator: Osman Yüksel<yuxel@operamail.com>\n"
+"Language-Team: Debian-l10n-Turkish <debian-l10n-turkish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Alan adýný seçin."
+
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Alan adý internet adresinizin bir bölümüdür. Genelde .com .net .edu veya .org "
+"ile biter. Eðer bir ev aðý ayarlýyorsanýz, kendiniz herhangi birþey yapabilirsiniz "
+"fakat tüm makinelerde ayný alan adýný kullanýdýðýnýzdan emin olun"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Bir arayüz seçin"
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+"Bulunan arayüzler bunlardýr. Debian sistemini kurmak (NFS veya HTTP ile ) "
+"için birincil að arayüzünüzü seçin."
+
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr ""Bir hata oluþtu"
+
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Aðýnýzý aktifleþtirmeye çalýþýrken bir hata oluþtu"
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Sistemin adýný girin"
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Makine adý sisteminiz aða tanýtan tek bir kelimedir. "
+"Eðer makine adýnýzýn ne olacaðýnýz bilmiyorsanýz sistem yöneticinize baþvurun. "
+"Eðer kendi ev aðýnýzý kuruyorsanýz istediðiniz herhangi biþey olarak ayarlayabilirsiniz. "
+
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr "Geçersiz makine adý: \"${hostname}\" "
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+"Geçerli makine adý sadece alfanumerik karakterler ve tre(-) içeren "
+"2 ile 63 karakter uzunluðunda olup tre ile baþlayamaz."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr "Bir hata oluþtu ve devam edilemiyor"
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "Yeniden deneyebilirsiniz"
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No interfaces were detected."
+msgstr "Hiçbir arayüz bulunamadý"
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Detect network hardware and load kernel drivers for it'."
+msgstr ""
+"Hiçbir að arayüzü bulunamadý. Bu, kurulum sistemi bir að aygýtý bulamadý demektir. "
+"Eðer bir að kartýnýz var ise gerekli modül henüz seçilmemiþ demektir. Geri dönüp "
+"'Að donanýmý tespit et ve kernel modüllerini yükle' yi seçin ."
+
+#. Description
+#: ../netcfg-common.templates:61
+msgid "<none>"
+msgstr "<hiçbiri>"
+
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet veya Fast Ethernet"
+
+#. Description
+#: ../netcfg-common.templates:69
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet veya Token Ring"
+
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Description
+#: ../netcfg-common.templates:77
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Description
+#: ../netcfg-common.templates:81
+msgid "Serial-line IP"
+msgstr "Seri-line IP"
+
+#. Description
+#: ../netcfg-common.templates:85
+msgid "Parallel-line IP"
+msgstr "Paralel-line IP"
+
+#. Description
+#: ../netcfg-common.templates:89
+msgid "Point-to-Point Protocol"
+msgstr "Point-to-Point Protocol"
+
+#. Description
+#: ../netcfg-common.templates:93
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Description
+#: ../netcfg-common.templates:97
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN Point-to-Point Protocol"
+
+#. Description
+#: ../netcfg-common.templates:101
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Description
+#: ../netcfg-common.templates:105
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Description
+#: ../netcfg-common.templates:109
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Description
+#: ../netcfg-common.templates:113
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user baðlantý aracý"
+
+#. Description
+#: ../netcfg-common.templates:117
+msgid "Unknown interface"
+msgstr "Bilinmeyen arayüz"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Dhcp makine adýnýz nedir?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here.  Most other users can just "
+"leave this blank."
+msgstr ""
+"Bir DHCP makine adý saðlayabilirsiniz. Eðer bir kablo modem kullanýyorsanýz, "
+"bir kullanýcý numarasý belirleyebilirsiniz. Diðer kullanýcýlar burayý "
+"boþ býrakabilir."
+
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid "Is this information correct?"
+msgstr "Bu bilgiler doðru mu?"
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" arayüz          = ${interface}\n"
+" makine ad ý     = ${hostname}\n"
+" alan adý        = ${domain}\n"
+" dhcp makine adý = ${dhcp_hostname}\n"
+" isim sunucularý = ${nameservers}"
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "I will now configure the network."
+msgstr "Þimdi að ayarlanacak"
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "I will now configure the network."
+msgstr "Þimdi að ayarlanacak"
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr "Bu biraz zaman alabilir. Bir veya iki dakikadan fazla sürmemelidir"
+
+#. Description
+#: ../netcfg-dhcp.templates:25
+msgid "No dhcp client found. I cannot continue."
+msgstr "DHCP istemcisi bulunamadý. Devam edilemiyor"
+
+#. Description
+#: ../netcfg-dhcp.templates:25
+msgid "This package requires pump or dhcp-client."
+msgstr "Bu paket dhcp pump veya dhcp-istemcisine gereksinim duyar"
+
+
+#. Description
+#: ../netcfg-dhcp.templates:30
+msgid "DHCP Network Configuration"
+msgstr "DHCP að ayarlarý"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "IP adresi?"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"IP adresi makinenize özeldir ve periyodlarla ayrýlmýþ rakamlardan oluþur. "
+"Eðer burada ne kullanacaðýnýzý bilmiyorsanýz sistem yöneticinize baþvurun."
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr "Pointopoint adresi?"
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+"Pointopoint adresi diðer uc uca olan networklerin son noktalarýný belirlemede kullanýlýr. "
+"Girilecek deðeri bilmiyorsanýz sistem yöneticinize baþvurun. Bu adres periyodlarla "
+"ayrýlmuþ dört rakamdan oluþur."
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr "Að maskesi?"
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Að maskesi hangi makinelerin yerelde sizin aðýnýzda olduðunu belirlemede kullanýlýr. "
+"Girilecek deðeri bilmiyorsanýz sistem yöneticinize baþvurun. Bu adres periyodlarla "
+"ayrýlmýþ dört rakadan oluþur."
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr "Að geçidi?"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+"Bu periyodlarla ayrýlmýþ dört rakamdan oluþan, öntanýmlý yönlendirici(router) olarak "
+"da bilinen bir að geçidi yönlendiricisidir. LAN'inizden dýþarý giden tüm trafik bu "
+"router üzerinden aktarýlýr. Nadiren, yönlendiriciniz olmayabilir; bu durumda, burayý "
+"boþ býrakabilirsiniz. Eðer doðru cevabý bilmiyorsanýz sistem yöneticinize "
+"baþvurun."
+
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "Girdiðiniz að geçidi eriþilemez"
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"IP adresi, að maskesi ve/veya að geçidini girerken bir hata yapmýþ olabilirsiniz."
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr "Ayarlar doðru mu ?"
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" arayüz          = ${interface}\n"
+" makine adý      = ${hostname}\n"
+" alan adý        = ${domain}\n"
+" ip addresi      = ${ipaddress}\n"
+" að maskesi      = ${netmask}\n"
+" að geçidi       = ${gateway}\n"
+" pointopoint     = ${pointopoint}\n"
+" isim sunucularý = ${nameservers}"
+
+
+
+#. Description
+#: ../netcfg-static.templates:56
+msgid "Static Network Configuration"
+msgstr "Statik Að Ayarlarý"
