@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-23 22:12+0100\n"
-"PO-Revision-Date: 2004-03-20 19:57+0200\n"
+"PO-Revision-Date: 2004-03-24 14:12+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -20,14 +20,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Tinklo konfigūravimas su DHCP"
+msgstr "Automatinis tinklo konfigūravimas su DHCP"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -36,10 +34,9 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Tinklas gali būti konfigūruojamas su DHCP arba įvedant visą informaciją "
-"rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis, po bandymo "
-"konfigūruoti su DHCP, negalės gauti veikiančios konfigūracijos iš DHCP "
-"serverio Jūsų tinkle, Jums bus pasiūlyta konfigūruoti Jūsų tinklą rankiniu "
-"būdu. Jei abejojate, pasirinkite DHCP."
+"rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis negalės gauti "
+"veikiančios konfigūracijos iš DHCP serverio Jūsų tinkle, Jums bus pasiūlyta "
+"konfigūruoti Jūsų tinklą rankiniu būdu, po bandymo konfigūruoti su DHCP."
 
 #. Type: string
 #. Description
@@ -157,8 +154,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -271,8 +267,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -649,8 +644,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -691,8 +685,3 @@ msgstr "Statinis tinklo konfigūravimas"
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dinaminis adresavimas (DHCP), Statinis adresavimas (rankinis)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Tinklo konfigūravimo metodas:"
