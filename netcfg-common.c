@@ -375,7 +375,7 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
 
     do {
 
-        ret = my_debconf_input(client, "medium", "netcfg/get_hostname", &p);
+        ret = my_debconf_input(client, "high", "netcfg/get_hostname", &p);
         if (ret == 30) // backup
             return ret;
         free(*hostname);
