@@ -14,7 +14,7 @@
 int
 execlog (const char *incmd)
 {
-  FILE *logfile, *output;
+  FILE *output;
   char cmd[strlen (incmd) + 6];
   char line[MAXLINE];
   strcpy (cmd, incmd);
