@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: netcfg-templates_ua\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 01:26-0500\n"
-"PO-Revision-Date: 2004-02-22 14:11+0200\n"
+"PO-Revision-Date: 2004-02-23 16:42+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -111,7 +111,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "Бездротовий ESSID для ${iface}:"
 
 #. Type: string
 #. Description
@@ -121,12 +121,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this form blank."
 msgstr ""
+"${iface} є інтерфейсом бездротової мережі. Введіть ім'я (ESSID) бездротової "
+"мережі, яку повинен використовувати ${iface}. Якщо ви бажаєте використовувати "
+"будь-яку доступну мережу, то залиште поле порожнім."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "WEP ключ для ${iface}:"
 
 #. Type: string
 #. Description
@@ -135,6 +138,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Введіть WEP ключ, якщо використовуєте, для пристрою ${iface}. Це можна "
+"зробити двома способами:"
 
 #. Type: string
 #. Description
@@ -143,6 +148,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into the box."
 msgstr ""
+"Якщо ваш WEP ключ в форматі 'nnnn-nnnn-nn' або 'nnnnnnnn', де n -- цифра, "
+"то просто введіть його в поле вводу."
 
 #. Type: string
 #. Description
@@ -150,7 +157,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes.)"
-msgstr ""
+msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс 's:' (без лапок)."
 
 #. Type: string
 #. Description
@@ -159,12 +166,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this form "
 "blank."
 msgstr ""
+"Звичайно, якщо для вашої бездротової мережі немає WEP ключа, залиште поле "
+"порожнім."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Невірний WEP ключ"
 
 #. Type: error
 #. Description
@@ -173,12 +182,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"WEP ключ '${wepkey}' невірний. Уважно прочитайте інструкції щодо введення "
+"WEP ключа та спробуйте знову."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Невірний ESSID"
 
 #. Type: error
 #. Description
@@ -187,6 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID \"${essid}\" невірний. ESSID повинен мати довжину не більше 32 символів, "
+"але він може містити всі види символів."
 
 #. Type: string
 #. Description
@@ -290,7 +303,7 @@ msgstr "<жоден>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Бездротовий Ethernet (802.11x)"
 
 #. Type: text
 #. Description
@@ -469,8 +482,7 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -604,8 +616,7 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
 "шлюзу."
@@ -651,3 +662,4 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
+
