@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.38\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-13 11:31-0500\n"
+"POT-Creation-Date: 2004-01-06 09:35+0100\n"
 "PO-Revision-Date: 2003-12-25 23:21+0100\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -57,7 +57,10 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr "Il nome del dominio è la parte dell'indirizzo a destra del nome del computer. Di solito finisce in .com, .net, .edu o .org. Se si sta usando una rete domestica assicurarsi di inserire lo stesso dominio in tutti i computer."
+msgstr ""
+"Il nome del dominio è la parte dell'indirizzo a destra del nome del "
+"computer. Di solito finisce in .com, .net, .edu o .org. Se si sta usando una "
+"rete domestica assicurarsi di inserire lo stesso dominio in tutti i computer."
 
 #. Type: string
 #. Description
@@ -93,7 +96,10 @@ msgid ""
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
-msgstr "Scegliere l'interfaccia da configurare. Tutte le interfacce rilevate sono elencate sotto. Si scelga il tipo dell'interfaccia principale. Questa interfaccia verrà utilizzata per installare il sistema (via NFS oppure HTTP)."
+msgstr ""
+"Scegliere l'interfaccia da configurare. Tutte le interfacce rilevate sono "
+"elencate sotto. Si scelga il tipo dell'interfaccia principale. Questa "
+"interfaccia verrà utilizzata per installare il sistema (via NFS oppure HTTP)."
 
 #. Type: error
 #. Description
@@ -123,11 +129,14 @@ msgstr "Inserire il nome di questo sistema."
 #. Description
 #: ../netcfg-common.templates:46
 msgid ""
-"The hostname is a single word that identifies your system to the network.  "
-"If you don't know what your hostname should be, consult your network "
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr "Il nome dell'host è una singola parola che identifica il sistema nella rete. Se non lo si conosce è possibile consultare l'amministratore della rete oppure inserire un nome arbitrario se si sta utilizzando una rete domestica."
+msgstr ""
+"Il nome dell'host è una singola parola che identifica il sistema nella rete. "
+"Se non lo si conosce è possibile consultare l'amministratore della rete "
+"oppure inserire un nome arbitrario se si sta utilizzando una rete domestica."
 
 #. Type: error
 #. Description
@@ -148,7 +157,10 @@ msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
-msgstr "Un nome valido contiene solo caratteri alfanumerici e il segno meno, la sua lunghezza è compresa tra 2 e 63 caratteri e non può iniziare o finire con il segno meno."
+msgstr ""
+"Un nome valido contiene solo caratteri alfanumerici e il segno meno, la sua "
+"lunghezza è compresa tra 2 e 63 caratteri e non può iniziare o finire con il "
+"segno meno."
 
 #. Type: error
 #. Description
@@ -162,7 +174,9 @@ msgstr "Errore"
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr "Si è verificato un errore e la configurazione della rete è stata interrotta. È possibile riprovare usando il menu principale."
+msgstr ""
+"Si è verificato un errore e la configurazione della rete è stata interrotta. "
+"È possibile riprovare usando il menu principale."
 
 #. Type: error
 #. Description
@@ -330,8 +344,6 @@ msgstr "Le informazioni inserite sono corrette?"
 msgid "Currently configured network parameters:"
 msgstr "Parametri di rete attualmente configurati:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -510,8 +522,6 @@ msgstr ""
 "Si può aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
 "e/o il gateway."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-13 11:31-0500\n"
+"POT-Creation-Date: 2004-01-06 09:35+0100\n"
 "PO-Revision-Date: 2003-12-24 14:50+0100\n"
 "Last-Translator: KLFMANiK <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -50,8 +50,8 @@ msgid ""
 msgstr ""
 "Sie» mô¾e by» nastavená automaticky pomocou DHCP, alebo manuálne po vlo¾ení "
 "po¾adovaných informácií. Ak si zvolíte DHCP a in¹talaèný program nedostane "
-"správne sie»ové nastavenia z DHCP servera na va¹ej sieti, dostanete príle¾itos» "
-"na manuálne nastavenie. Ak si nie ste istí, skúste DHCP."
+"správne sie»ové nastavenia z DHCP servera na va¹ej sieti, dostanete "
+"príle¾itos» na manuálne nastavenie. Ak si nie ste istí, skúste DHCP."
 
 #. Type: string
 #. Description
@@ -89,9 +89,9 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Zadajte IP adresy (nie názvy) maximálne troch DNS serverov, oddelených "
-"medzerami. Nepou¾ívajte èiarky. Prvý server v zozname bude prvým, ktorý "
-"bude pou¾itý pre DNS po¾iadavky. Ak nechcete pou¾íva» ¾iaden DNS server, "
-"nechajte toto pole prázdne."
+"medzerami. Nepou¾ívajte èiarky. Prvý server v zozname bude prvým, ktorý bude "
+"pou¾itý pre DNS po¾iadavky. Ak nechcete pou¾íva» ¾iaden DNS server, nechajte "
+"toto pole prázdne."
 
 #. Type: select
 #. Description
@@ -141,13 +141,13 @@ msgstr "Vlo¾te názov poèítaèa pre tento systém."
 #. Description
 #: ../netcfg-common.templates:46
 msgid ""
-"The hostname is a single word that identifies your system to the network.  "
-"If you don't know what your hostname should be, consult your network "
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Názov poèítaèa je jednoslovné pomenovanie, ktoré identifikuje vá¹ systém "
-"v sieti. Ak neviete, aký by mal by» názov vá¹ho poèítaèa, kontaktujte správcu "
+"Názov poèítaèa je jednoslovné pomenovanie, ktoré identifikuje vá¹ systém v "
+"sieti. Ak neviete, aký by mal by» názov vá¹ho poèítaèa, kontaktujte správcu "
 "va¹ej siete. Ak nastavujete domácu sie», mô¾ete si nieèo vymyslie»."
 
 #. Type: error
@@ -170,9 +170,9 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Názov poèítaèa mô¾e obsahova» iba alfanumerické znaky a znamienko mínus."
-"Musí by» v rozmedzí od 2 do 63 znakov a nesmie zaèína» alebo konèi» "
-"znamienkom mínus."
+"Názov poèítaèa mô¾e obsahova» iba alfanumerické znaky a znamienko mínus.Musí "
+"by» v rozmedzí od 2 do 63 znakov a nesmie zaèína» alebo konèi» znamienkom "
+"mínus."
 
 #. Type: error
 #. Description
@@ -333,8 +333,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Mo¾no budete musie» zada» DHCP meno poèítaèa. Ak pou¾ívate káblový modem, asi"
-"bude potrebné zada» èíslo úètu."
+"Mo¾no budete musie» zada» DHCP meno poèítaèa. Ak pou¾ívate káblový modem, "
+"asibude potrebné zada» èíslo úètu."
 
 #. Type: string
 #. Description
@@ -354,8 +354,6 @@ msgstr "Sú tieto informácie správne?"
 msgid "Currently configured network parameters:"
 msgstr "Aktuálne nastavené parametre siete:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -392,7 +390,9 @@ msgstr "Nena¹iel sa ¾iaden DHCP klient"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Nebol nájdený ¾iaden DHCP klient. Tento balík vy¾aduje pump alebo dhcp-client."
+msgstr ""
+"Nebol nájdený ¾iaden DHCP klient. Tento balík vy¾aduje pump alebo dhcp-"
+"client."
 
 #. Type: error
 #. Description
@@ -482,8 +482,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Sie»ová maska slú¾i na urèenie poèítaèov, ktoré patria k lokálnej sieti. "
-"Kontaktujte správcu va¹ej siete, ak neviete, èo máte zada». Sie»ová maska "
-"sa zadáva ako ¹tyri èísla oddelené bodkami."
+"Kontaktujte správcu va¹ej siete, ak neviete, èo máte zada». Sie»ová maska sa "
+"zadáva ako ¹tyri èísla oddelené bodkami."
 
 #. Type: string
 #. Description
@@ -503,10 +503,10 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Brána je IP adresa (¹tyri èísla oddelené bodkami), ktorá urèuje smerovaè. "
-"Celá prevádzka, ktorá ide mimo va¹ej lokálnej siete (napríklad do Internetu), "
-"je zasielaná cez tento smerovaè. Vo výnimoèných prípadoch, keï smerovaè nemáte, "
-"mô¾ete necha» toto pole prázdne. Kontaktujte správcu va¹ej siete, ak neviete, "
-"èo máte zada»."
+"Celá prevádzka, ktorá ide mimo va¹ej lokálnej siete (napríklad do "
+"Internetu), je zasielaná cez tento smerovaè. Vo výnimoèných prípadoch, keï "
+"smerovaè nemáte, mô¾ete necha» toto pole prázdne. Kontaktujte správcu va¹ej "
+"siete, ak neviete, èo máte zada»."
 
 #. Type: error
 #. Description
@@ -523,11 +523,11 @@ msgstr "Zadaná adresa brány je nedosiahnuteµná."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Mo¾no ste urobili chybu pri zadávaní IP adresy, sie»ovej masky a/alebo brány."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Mo¾no ste urobili chybu pri zadávaní IP adresy, sie»ovej masky a/alebo brány."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -561,4 +561,3 @@ msgstr "Statické nastavenie siete"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Nastavi» sie» so statickými adresami"
-

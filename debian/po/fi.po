@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-13 11:31-0500\n"
+"POT-Creation-Date: 2004-01-06 09:35+0100\n"
 "PO-Revision-Date: 2003-12-26 17:01+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
@@ -43,10 +43,10 @@ msgid ""
 "configuration from a DHCP server on your network, you will be given the "
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
-msgstr "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse."
-"Jos valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia "
-"verkkosi DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä"
-"asetukset itse."
+msgstr ""
+"Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse.Jos "
+"valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
+"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdäasetukset itse."
 
 #. Type: string
 #. Description
@@ -103,9 +103,9 @@ msgid ""
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet havaittiin. "
-"Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota tarvitset Debian-järjestelmän "
-"asentamiseen (NFS:n tai HTTP:n kautta)."
+"Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
+"havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
+"tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
 
 #. Type: error
 #. Description
@@ -135,14 +135,14 @@ msgstr "Tämän järjestelmän konenimi."
 #. Description
 #: ../netcfg-common.templates:46
 msgid ""
-"The hostname is a single word that identifies your system to the network.  "
-"If you don't know what your hostname should be, consult your network "
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Konenimi·toimii·koneesi·tunnisteena·verkossa.··"
-"Jos·et·tiedä·mikä·isäntänimesi·pitäisi·olla,·kysy·verkon ylläpitäjältä.··"
-"Jos·olet·pystyttämässä·omaa·kotiverkkoasi,·voit·valita nimen vapaasti."
+"Konenimi·toimii·koneesi·tunnisteena·verkossa."
+"··Jos·et·tiedä·mikä·isäntänimesi·pitäisi·olla,·kysy·verkon ylläpitäjältä."
+"··Jos·olet·pystyttämässä·omaa·kotiverkkoasi,·voit·valita nimen vapaasti."
 
 #. Type: error
 #. Description
@@ -180,8 +180,9 @@ msgstr "Virhe"
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr "Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää uudestaan"
-"asennusohjelman päävalikosta. "
+msgstr ""
+"Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää "
+"uudestaanasennusohjelman päävalikosta. "
 
 #. Type: error
 #. Description
@@ -205,7 +206,8 @@ msgstr ""
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr "Mahdollisesti joudut lataamaan tietyn moduulin verkkokortillesi. Jos "
+msgstr ""
+"Mahdollisesti joudut lataamaan tietyn moduulin verkkokortillesi. Jos "
 "semmoinen moduuli on saatavilla, palaa takaisin verkkolaitteiden "
 "tunnistukseen. "
 
@@ -347,8 +349,6 @@ msgstr "Ovatko nämä tiedot oikein?"
 msgid "Currently configured network parameters:"
 msgstr "Verkkoasetukset ovat nyt:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -385,7 +385,8 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr ""
+"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
@@ -405,8 +406,9 @@ msgstr "Yritetäänkö uudestaan verkkoasetusten automaattista hakua?"
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
-msgstr "IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskus"
-"tosi hitaita, jos haluat voidaan yrittää uudestaan. "
+msgstr ""
+"IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskustosi "
+"hitaita, jos haluat voidaan yrittää uudestaan. "
 
 #. Type: text
 #. Description
@@ -455,9 +457,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Point-to-point-osoitetta käytetään määrittämää pisteestä pisteeseen "
-"-verkosi toinen pää.  Kysy verkkosi ylläpitäjältä jos et tiedä tätä arvoa.  "
-"Point-to-point-osoite syötetään neljänä lukuna pistein eroteltuna."
+"Point-to-point-osoitetta käytetään määrittämää pisteestä pisteeseen -verkosi "
+"toinen pää.  Kysy verkkosi ylläpitäjältä jos et tiedä tätä arvoa.  Point-to-"
+"point-osoite syötetään neljänä lukuna pistein eroteltuna."
 
 #. Type: string
 #. Description
@@ -498,8 +500,8 @@ msgstr ""
 "yhdyskäytäväreitittimesi, tunnetaan myös oletusreitittimenä.  Kaikki "
 "lähiverkkosi ulkopuolelle (esimerkiksi Internetiin) menevä liikenne "
 "lähetetään tämän reitittimen kautta. Jos sinulla poikkeuksellisesti ei ole "
-"reititintä, voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa,"
-" kysy verkkosi ylläpitäjältä."
+"reititintä, voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa, kysy "
+"verkkosi ylläpitäjältä."
 
 #. Type: error
 #. Description
@@ -522,8 +524,6 @@ msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -557,4 +557,3 @@ msgstr "Pysyvät verkkoasetukset"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Tee verkkoasetukset itse"
-
