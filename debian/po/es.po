@@ -5,6 +5,9 @@
 # Changes:
 # - Initial translation
 # 	Javier Fernandez-Sanguino Peña <jfs@computer.org>, 2003
+# - Revisions
+#       Teófilo Ruiz Suárez <teo@debian.org>, enero 2004
+#       Javier Fernandez-Sanguino Peña <jfs@computer.org>, febrero 2004
 #
 #
 #  Traductores, si no conoce el formato PO, merece la pena leer la 
@@ -30,8 +33,8 @@ msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-25 06:56+0100\n"
-"PO-Revision-Date: 2004-01-10 18:36+0100\n"
-"Last-Translator: Teófilo Ruiz Suárez <teo@debian.org>\n"
+"PO-Revision-Date: 2004-02-27 21:15+0100\n"
+"Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -131,7 +134,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "ESSID Wireless para ${iface}:"
 
 #. Type: string
 #. Description
@@ -140,13 +143,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
+msgstr "${iface} es una interfaz a una red inalámbrica («wireless»). Introduzca el nombre (el ESSID) de la red inalámbrica a la que quiere que se conecte ${iface}. Deje el nombre en blanco si desea utilizar cualquier red que esté disponible."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "Clave WEP para ${iface}:"
 
 #. Type: string
 #. Description
@@ -154,7 +157,7 @@ msgstr ""
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr ""
+msgstr "Introduzca la clave de seguridad WEP para el dispositivo ${iface} si fuera necesario para su red. Hay dos formas de hacerlo:"
 
 #. Type: string
 #. Description
@@ -162,7 +165,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
+msgstr "Si su clave WEP está en el formato «nnnn-nnnn-nn» o «nnnnnnnn», donde n es un número, simplemente introduzca el valor tal cual en este campo."
 
 #. Type: string
 #. Description
@@ -170,7 +173,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
+msgstr "Si su clave WEP es una palabra de paso, introdúzcala poniendo «s:» como prefijo (sin las comillas dobles)"
 
 #. Type: string
 #. Description
@@ -178,13 +181,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
+msgstr "Deje este campo en blanco si su red inalámbrica no está protegida con una clave WEP."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "La clave WEP no es válida"
 
 #. Type: error
 #. Description
@@ -192,13 +195,13 @@ msgstr ""
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
+msgstr "La clave WEP «${wepkey}» no es válida. Por favor, lea las instrucciones de la próxima pantalla cuidadosamente para saber cómo introducir correctamente su clave WEP e inténtelo de nuevo."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "El identificador ESSID no es válido."
 
 #. Type: error
 #. Description
@@ -206,7 +209,7 @@ msgstr ""
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
+msgstr "El ESSID «${essid}» no es válido. Un ESSID sólo puede tener 32 caracteres, aunque pueden ser de cualquier tipo."
 
 #. Type: string
 #. Description
@@ -314,7 +317,7 @@ msgstr "<none>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Red inalámbrica (802.11x)"
 
 #. Type: text
 #. Description
@@ -411,9 +414,8 @@ msgstr "Configuración de red"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
 msgid "Configuring network ..."
-msgstr "Configurar la red"
+msgstr "Configurando la red ..."
 
 #. Type: text
 #. Description
@@ -558,9 +560,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "Dirección IP:"
+msgstr "Dirección IP malformada"
 
 #. Type: error
 #. Description
@@ -568,7 +569,7 @@ msgstr "Dirección IP:"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
+msgstr "La dirección IP que ha introducido no tiene un formato correcto. Debería tener el formato x.x.x.x donde «x» es un valor numérico inferior a 255. Por favor, inténtelo de nuevo."
 
 #. Type: string
 #. Description
