@@ -41,7 +41,7 @@ int netcfg_get_method(struct debconfclient *client)
     char *method;
     int ret;
 
-    ret = my_debconf_input(client, "high", "netcfg/get_method", &method);
+    ret = my_debconf_input(client, "medium", "netcfg/get_method", &method);
 
     if (strcmp(method, "Dynamic addressing (DHCP)") == 0) 
 	netcfg_method = DHCP;
