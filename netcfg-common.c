@@ -211,6 +211,7 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
       {
 	strcpy(template, "netcfg/internal-wifi");
 	debconf_metaget(client, template, "description");
+	return strdup(client->value);
       }
     }
     debconf_metaget(client, "netcfg/internal-unknown-iface", "description");
@@ -493,7 +494,7 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
     }
 }
 
-int is_valid_ip (char* ipaddr, short is_netmask)
+int is_valid_ip (char* ipaddr)
 {
   int ok = 1, nums = 0;
   
@@ -507,7 +508,7 @@ int is_valid_ip (char* ipaddr, short is_netmask)
       int spaz;
 
       spaz = atoi(tok);
-      if (((!is_netmask && spaz > 0) || (is_netmask && spaz >= 0)) && spaz <= 255)
+      if (spaz >= 0 && spaz <= 255)
       {
 	ok = 1;
 	nums++;
@@ -539,7 +540,7 @@ int netcfg_get_ipaddress(struct debconfclient *client)
       if (ret)
 	return ret;
 
-      ok = is_valid_ip (ptr, 0);
+      ok = is_valid_ip (ptr);
       
       if (!ok)
       {
@@ -563,7 +564,7 @@ int netcfg_get_pointopoint(struct debconfclient *client)
       if (ret)  
 	return ret;
 
-      ok = is_valid_ip(ptr, 0);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
@@ -592,7 +593,7 @@ int netcfg_get_netmask(struct debconfclient *client)
       if (ret)
 	return ret;
 
-      ok = is_valid_ip(ptr, 1);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
@@ -623,7 +624,7 @@ int netcfg_get_gateway(struct debconfclient *client)
       if (ret)  
 	return ret;
 
-      ok = is_valid_ip(ptr, 0);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
