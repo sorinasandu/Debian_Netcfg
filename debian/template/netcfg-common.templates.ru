@@ -14,6 +14,11 @@ Description-ru: Выберите имя домена.
 
 Template: netcfg/get_nameservers
 Type: string
+Description: Choose the DNS Server Addresses
+ Please enter the IP addresses (not host names) of up to 3 name servers,
+ separated by spaces. Do not use commas. The servers will be queried in the
+ order in which you enter them. If you don't want to use any name servers just
+ leave this field blank.
 Description-ru: Выберите адреса серверов DNS.
  Пожалуйста, введите IP адреса (не хостовые имена) до 3 серверов имен,
  разделенные пробелами. Не используйте запятые. Сервера будут опрашиваться в
