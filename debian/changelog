@@ -7,8 +7,9 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Evaluate argv[0] after calling basename on it so that we can strcmp it
       against "ptom".
   * Thomas Hood
-    - Add comment to /e/n/i about who implements the wireless-* options
-      (viz., the wireless-tools package)
+    - static.c:
+      + Add resolvconf support (Closes: #255187)
+      + Add comments to /e/n/i about which packages implement which options
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 

@@ -259,15 +259,44 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
             fprintf(fp, "\tgateway %s\n", inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
         if (pointopoint.s_addr)
             fprintf(fp, "\tpointopoint %s\n", inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
+	/*
+	 * Write wireless-tools options
+	 */
 	if (is_wireless_iface(interface))
 	{
-	  fprintf(fp, "\t# The wireless-* options are implemented by the wireless-tools package\n");
+	  fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
 	  fprintf(fp, "\twireless-mode %s\n",
 	      (mode == MANAGED) ? "managed" : "ad-hoc");
 	  fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
 
 	  if (wepkey != NULL)
 	    fprintf(fp, "\twireless-key %s\n", wepkey);
+	}
+	/*
+	 * Write resolvconf options
+	 *
+	 * This is useful for users who intend to install resolvconf
+	 * after the initial installation.
+	 *
+	 * This code should be kept in sync with the code that writes
+	 * this information to the /etc/resolv.conf file.  If netcfg
+	 * becomes capable of configuring multiple network interfaces
+	 * then the user should be asked for dns information on a
+	 * per-interface basis so that per-interface dns options
+	 * can be written here.
+	 */
+	if (nameservers[0].s_addr || (domain && !empty_str(domain))) {
+		int i = 0;
+		fprintf(fp, "\t# dns-* options are implemented by the resolvconf package, if installed\n");
+		if (nameservers[0].s_addr) {
+			fprintf(fp, "\tdns-nameservers");
+			while (nameservers[i].s_addr)
+				fprintf(fp, " %s",
+					inet_ntop (AF_INET, &nameservers[i++], ptr1, sizeof (ptr1)));
+			fprintf(fp, "\n");
+		}
+		if (domain && !empty_str(domain))
+			fprintf(fp, "\tdns-search %s\n", domain);
 	}
         fclose(fp);
     } else
