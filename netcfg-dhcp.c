@@ -50,7 +50,7 @@ int main(void)
     client = debconfclient_new();
     debconf_capb(client,"backup");
 
-    while (state != QUIT) {
+    for ( ;; ) {
 	switch(state) {
 	case BACKUP:
 	    return 10;
