@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-15 22:13-0700\n"
-"PO-Revision-Date: 2004-05-15 14:49+0300\n"
+"PO-Revision-Date: 2004-06-23 18:20+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -158,8 +158,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -266,7 +265,7 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Виникла помилка і процес налаштовування мережі було перервано. Ви можете "
+"Виникла помилка і процес налаштування мережі було перервано. Ви можете "
 "повторити його з меню встановлення."
 
 #. Type: error
@@ -324,7 +323,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
-msgstr "Налаштовування бездротової мережі"
+msgstr "Налаштування бездротової мережі"
 
 #. Type: text
 #. Description
@@ -427,7 +426,7 @@ msgstr "Невідомий інтерфейс"
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:192
 msgid "Configuring network ..."
-msgstr "Налаштовування мережі..."
+msgstr "Налаштування мережі..."
 
 #. Type: text
 #. Description
@@ -463,7 +462,7 @@ msgstr "Більшість інших користувачів можуть за
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Налаштовування мережі за допомогою DHCP"
+msgstr "Налаштування мережі за допомогою DHCP"
 
 #. Type: text
 #. Description
@@ -487,14 +486,13 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Процес налаштовування DHCP було перервано."
+msgstr "Процес налаштування DHCP було перервано."
 
 #. Type: select
 #. Choices
@@ -530,7 +528,7 @@ msgstr "Не налаштовувати мережу зараз"
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Метод налаштовування мережі:"
+msgstr "Метод налаштування мережі:"
 
 #. Type: select
 #. Description
@@ -544,8 +542,8 @@ msgid ""
 msgstr ""
 "Не вдалося автоматично налаштувати мережу. Це може бути викликано повільним "
 "DHCP сервером вашої мережі, тому вам можливо потрібно повторити. Якщо ваша "
-"мережа не використовує DHCP для автоматичного налаштовування, ви можете "
-"поровести налаштування вручну. Деякі DHCP сервери потребують певного DHCP-"
+"мережа не використовує DHCP для автоматичного налаштування, ви можете "
+"провести налаштування вручну. Деякі DHCP сервери потребують певного DHCP-"
 "імені вузла, тому ви можете ввести це ім'я перед повторенням налаштування за "
 "допомогою DHCP."
 
@@ -553,7 +551,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:41
 msgid "Reconfigure the wireless network"
-msgstr "Повторити налаштовування бездротової мережі"
+msgstr "Повторити налаштування бездротової мережі"
 
 #. Type: text
 #. Description
@@ -674,8 +672,7 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережі та/або адреси "
 "шлюзу."
@@ -690,7 +687,7 @@ msgstr "Чи вірна ця інформація?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Поточні мережеві налаштовування:"
+msgstr "Поточні мережеві налаштування:"
 
 #. Type: boolean
 #. Description
@@ -759,3 +756,4 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
+
