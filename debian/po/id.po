@@ -6,19 +6,21 @@
 # Indonesian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Debian Indonesian L10N Team <debian-l10n-id@gurame.fisika.ui.ac.id>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-13 12:30+0200\n"
-"PO-Revision-Date: 2004-09-16 15:58+0200\n"
-"Last-Translator:  Parlin Imanuel Toh <parlin@ui.edu>\n"
-"Language-Team:  Debian L10n Indonesia <debian-l10n-id@gurame.fisika.ui.ac."
-"id>\n"
+"PO-Revision-Date: 2004-09-28 18:21+0700\n"
+"Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
+"Language-Team: Debian Indonesia L10N Team <debian-l10n-id@gurame.fisika.ui."
+"ac.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #. Type: boolean
 #. Description
@@ -36,10 +38,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Jaringan dapat dikonfigurasikan dengan DHCP atau dengan memasukkan informasi "
-"secara manual. Bila anda memilih menggunakan DHCP dan program instalasi "
-"tidak mendapatkan konfigurasi dari server DHCP, anda akan diberi kesempatan "
-"untuk mengkonfigurasikan secara manual."
+"Jaringan dapat dikonfigurasi dengan DHCP atau dengan memasukkan informasi "
+"secara manual. Bila Anda memilih menggunakan DHCP dan program instalasi "
+"tidak mendapatkan konfigurasi dari server DHCP, Anda akan diberi kesempatan "
+"untuk mengonfigurasikan secara manual."
 
 #. Type: string
 #. Description
@@ -58,8 +60,8 @@ msgid ""
 msgstr ""
 "Nama domain adalah bagian dari alamat Internet yang berada di sebelah kanan "
 "nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Misalnya jojon."
-"com. Bila ini untuk jaringan di rumah, anda bisa mereka-reka, tapi pastikan "
-"domain tersebut sama pada semua komputer anda."
+"com. Bila ini untuk jaringan di rumah, Anda bisa mereka-reka, tapi pastikan "
+"domain tersebut sama pada semua komputer Anda."
 
 #. Type: string
 #. Description
@@ -80,7 +82,7 @@ msgstr ""
 "Server DNS digunakan untuk mencari nama host Internet. Silakan masukkan "
 "alamat IP (bukan nama host) dari server DNS (maksimum 3 server, dipisahkan "
 "dengan spasi, bukan koma). Server pertama merupakan server yang akan "
-"digunakan pertama kali. Bila anda tidak menggunakan server DNS, biarkan ruas "
+"digunakan pertama kali. Bila Anda tidak menggunakan server DNS, biarkan ruas "
 "ini kosong."
 
 #. Type: select
@@ -97,8 +99,8 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Sistem anda memiliki beberapa antarmuka jaringan. Pilih satu yang akan "
-"digunakan sebagai antarmuka jaringan utama saat memasang Debian.Jika "
+"Sistem Anda memiliki beberapa antarmuka jaringan. Pilih satu yang akan "
+"digunakan sebagai antarmuka jaringan utama saat memasang Debian. Jika "
 "memungkinkan, antarmuka jaringan pertama yang ditemukan telah dipilih oleh d-"
 "i."
 
@@ -117,7 +119,7 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
-"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika anda ingin "
+"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika Anda ingin "
 "menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
 
 #. Type: string
@@ -143,7 +145,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' atau 'nnnnnnnn' dengan n "
+"Bila kunci WEP Anda dalam format 'nnnn-nnnn-nn' atau 'nnnnnnnn' dengan n "
 "merupakan angka, langsung isikan saja pada ruas ini."
 
 #. Type: string
@@ -153,7 +155,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Bila kunci WEP anda berupa kata sandi, tambahkan prefiks 's:' (tanpa kutip)."
+"Bila kunci WEP Anda berupa kata sandi, tambahkan prefiks 's:' (tanpa kutip)."
 
 #. Type: string
 #. Description
@@ -162,7 +164,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Tentu saja, bila tidak ada kunci WEP untuk jaringan nirkabel anda, biarkan "
+"Tentu saja, bila tidak ada kunci WEP untuk jaringan nirkabel Anda, biarkan "
 "ruas ini kosong."
 
 #. Type: error
@@ -195,7 +197,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" tidak sah. ESSID hanya boleh sepanjang maksimum 32 "
-"karakter, tapi dapat berisi karakter apa saja."
+"karakter, tetapi dapat berisi karakter apa saja."
 
 #. Type: string
 #. Description
@@ -218,9 +220,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Nama host adalah kata tunggal yang mengidentifikasi sistem anda pada "
-"jaringan. Bila anda tidak tahu apa nama host anda, tanyakan pada "
-"administrator jaringan. Bila anda memasang untuk jaringan di rumah, anda "
+"Nama host adalah kata tunggal yang mengidentifikasi sistem Anda pada "
+"jaringan. Bila Anda tidak tahu apa nama host Anda, tanyakan pada "
+"administrator jaringan. Bila Anda memasang untuk jaringan di rumah, Anda "
 "dapat memberi nama sendiri."
 
 #. Type: error
@@ -267,7 +269,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Antarmuka jaringan tidak terdeteksi"
+msgstr "Antarmuka jaringan tidak ditemukan"
 
 #. Type: error
 #. Description
@@ -286,8 +288,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Anda perlu memuat modul khusus untuk kartu jaringan anda, bila anda "
-"memilikinya. Untuk itu, anda perlu kembali ke langkah deteksi perangkat "
+"Anda perlu memuat modul khusus untuk kartu jaringan Anda, bila Anda "
+"memilikinya. Untuk itu, Anda perlu kembali ke langkah deteksi perangkat "
 "keras jaringan."
 
 #. Type: select
@@ -311,8 +313,8 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "Jaringan nirkabel dapat merupakan 'jaringan dikelola' atau 'ad-hoc'. Bila "
-"anda menggunakan titik akses yang nyata, jaringan anda Dikelola, Bila "
-"komputer lain merupakan 'titik akses', maka jaringan anda Ad-hoc."
+"Anda menggunakan titik akses yang nyata, jaringan Anda Dikelola, Bila "
+"komputer lain merupakan 'titik akses', maka jaringan Anda Ad-hoc."
 
 #. Type: text
 #. Description
@@ -384,7 +386,7 @@ msgstr "Protocol Point-to-Point"
 #. Description
 #: ../netcfg-common.templates:168
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-in-IPv4"
+msgstr "IPv6-dalam-IPv4"
 
 #. Type: text
 #. Description
@@ -414,27 +416,27 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
-msgstr "Sarana komunikasi antar-pemakai"
+msgstr "Sarana komunikasi antarpemakai"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Antar muka tak dikenal"
+msgstr "Antarmuka tak dikenal"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Sedang mengkonfigurasi jaringan ..."
+msgstr "Sedang mengonfigurasi jaringan ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Mengkonfigurasi jaringan"
+msgstr "Mengonfigurasi jaringan"
 
 #. Type: string
 #. Description
@@ -449,8 +451,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
-"anda perlu memberikan nomor account anda di sini."
+"Anda perlu menyediakan nama host DHCP. Bila Anda menggunakan modem kabel, "
+"Anda perlu memberikan nomor akun Anda di sini."
 
 #. Type: string
 #. Description
@@ -474,7 +476,7 @@ msgstr "Ini mungkin memakan waktu."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Autokonfigurasi jaringan selesai dengan sukses"
+msgstr "Otokonfigurasi jaringan telah berhasil."
 
 #. Type: error
 #. Description
@@ -500,19 +502,19 @@ msgstr "Proses konfigurasi DHCP akan dibatalkan."
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Ulangi Autokonfigurasi jaringan"
+msgstr "Ulangi Otokonfigurasi jaringan"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Ulangi autokonfigurasi Jaringan dengan nama host DHCP"
+msgstr "Ulangi otokonfigurasi Jaringan dengan nama host DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Mengkonfigurasikan jaringan secara manual"
+msgstr "Mengonfigurasikan jaringan secara manual"
 
 #. Type: select
 #. Choices
@@ -524,7 +526,7 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Jangan mengkonfigurasikan jaringan saat ini"
+msgstr "Jangan mengonfigurasikan jaringan saat ini"
 
 #. Type: select
 #. Description
@@ -542,18 +544,18 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Dari sini anda dapat memilih mengulangi konfigurasi otomatis jaringan dengan "
-"DHCP (yang mungkin akan sukses bila DHCP server lambat merespon permintaan) "
-"atau mengkonfigurasikan jaringan secara manual. Beberapa server DHCP "
-"membutuhkan nama host DHCP dikirimkan oleh klien, jadi anda dapat juga "
+"Dari sini Anda dapat memilih mengulangi konfigurasi otomatis jaringan dengan "
+"DHCP (yang mungkin akan berhasil bila DHCP server lambat merespon "
+"permintaan) atau mengonfigurasikan jaringan secara manual. Beberapa server "
+"DHCP membutuhkan nama host DHCP dikirimkan oleh klien, jadi Anda dapat juga "
 "mengulangi konfigurasi otomatis jaringan dengan DHCP menggunakan nama host "
-"yang anda berikan."
+"yang Anda berikan."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Konfigurasi otomatis jaringan gagal"
+msgstr "Otokonfigurasi jaringan gagal"
 
 #. Type: note
 #. Description
@@ -562,14 +564,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Jaringan anda mungkin tidak menggunakan protokol DHCP. Mungkin juga server "
+"Jaringan Anda mungkin tidak menggunakan protokol DHCP. Mungkin juga server "
 "DHCP lambat, atau perangkat keras jaringan tidak bekerja dengan baik."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Melanjutkan tanpat rute bawaan?"
+msgstr "Melanjutkan tanpa sebuah rute utama?"
 
 #. Type: boolean
 #. Description
@@ -581,11 +583,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Konfigurasi otomatis jaringan sukses. Namun, rute bawaan tidak diatur: "
-"sistem tidak tahu bagaimana berkomunikasi dengan host-host di Internet. Hal "
-"ini menyebabkan anda tidak dapat melanjutkan instalasi, kecuali anda "
-"memiliki CD-ROM Debian resmi pertama (#1), CD-ROM 'Netinst', atau paket-"
-"paket debian tersedia pada jaringan lokal."
+"Konfigurasi otomatis jaringan telah berjasil. Namun, rute utama tidak "
+"diatur: sistem tidak tahu bagaimana berkomunikasi dengan host-host di "
+"Internet. Hal ini menyebabkan Anda tidak dapat melanjutkan instalasi, "
+"kecuali Anda memiliki CD-ROM Debian resmi pertama (#1), CD-ROM 'Netinst', "
+"atau paket-paket debian tersedia pada jaringan lokal."
 
 #. Type: boolean
 #. Description
@@ -594,14 +596,14 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Jika anda tidak yakin, anda sebaiknya tidak melanjutkan tanpat rute bawaan: "
-"hubungi administrator jaringan lokal anda mengenai masalah ini."
+"Jika Anda tidak yakin, Anda sebaiknya tidak melanjutkan tanpa rute utama: "
+"hubungi administrator jaringan lokal Anda mengenai masalah ini."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Mengkonfigurasikan lagi jaringan nirkabel"
+msgstr "Mengulangi konfigurasi jaringan nirkabel"
 
 #. Type: text
 #. Description
@@ -625,8 +627,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "Alamat IP adalah unik pada tiap komputer dan terdiri dari 4 angka yang "
-"dipisahkan dengan titik. Bila anda tidak mengetahui alamat yang harus  "
-"digunakan, tanyakan pada administrator jaringan anda."
+"dipisahkan dengan titik. Bila Anda tidak mengetahui alamat yang harus  "
+"digunakan, tanyakan pada administrator jaringan Anda."
 
 #. Type: error
 #. Description
@@ -641,8 +643,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Alamat IP yang anda berikan tidak benar. Bentuknya harus sebagai berikut: x."
-"x.x.x dengan tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
+"Alamat IP yang Anda berikan tidak benar. Bentuknya harus sebagai berikut: x."
+"x.x.x dengan tiap 'x' tidak lebih dari 255. Silakan coba lagi."
 
 #. Type: string
 #. Description
@@ -660,7 +662,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Alamat point-to-point digunakan untuk menentukan titik akhir lain dari "
-"jaringan point-to-point. Tanyakan pada administrator jaringan anda bila "
+"jaringan point-to-point. Tanyakan pada administrator jaringan Anda bila "
 "tidak mengetahui nilainya. Alamat point-to-point harus dimasukkan dalam "
 "bentuk 4 angka yang dipisah dengan titik."
 
@@ -679,7 +681,7 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Netmask digunakan untuk menentukan mesin-mesin lokal pada jaringan. Tanyakan "
-"pada administrator jaringan bila anda tidak mengetahui nilainya. Netmask "
+"pada administrator jaringan bila Anda tidak mengetahui nilainya. Netmask "
 "harus dimasukkan dalam bentuk 4 angka yang dipisah dengan titik."
 
 #. Type: string
@@ -703,7 +705,7 @@ msgstr ""
 "menunjukan router gerbang, juga disebut sebagai router utama. Semua lalu "
 "lintas yang keluar dari LAN (misalnya ke Internet) akan dikirim melalui "
 "router ini. Sangat jarang suatu jaringan tidak memiliki router; dalam kasus "
-"ini, biarkan ruas ini kosong. Bila anda tidak tahu jawaban yang benar, "
+"ini, biarkan ruas ini kosong. Bila Anda tidak tahu jawaban yang benar, "
 "tanyakan pada administrator jaringan."
 
 #. Type: error
@@ -716,7 +718,7 @@ msgstr "Gerbang tidak dapat dicapai."
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Alamat gerbang yang anda berikan tidak dapat dicapai."
+msgstr "Alamat gerbang yang Anda berikan tidak dapat dicapai."
 
 #. Type: error
 #. Description
