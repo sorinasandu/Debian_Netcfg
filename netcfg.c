@@ -306,8 +306,7 @@ netcfg_get_interface (struct debconfclient *client, char **interface)
 	  len += newchars + 128;
 	}
 
-      snprintf (ptr + strlen (ptr), len - strlen (ptr), "%s: %s, ", inter,
-		get_ifdsc (inter));
+      snprintfcat (ptr, len, "%s: %s, ", inter, get_ifdsc (inter));
       num_interfaces++;
     }
   getif_end ();

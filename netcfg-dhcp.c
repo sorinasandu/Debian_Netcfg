@@ -105,32 +105,28 @@ netcfg_activate_dhcp ()
   char buf[128];
   char *ptr;
   execlog ("/sbin/ifconfig lo 127.0.0.1");
-  ptr = buf;
 
   switch (dhcp_client)
     {
       case PUMP:
-	ptr += snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
+	snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
 	if (dhcp_hostname)
-	  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s",
-			   dhcp_hostname);
+	  snprintfcat (buf, sizeof (buf), " -h %s", dhcp_hostname);
 	break;
 
       case DHCLIENT:
-	ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient %s", interface);
+	snprintf (buf, sizeof (buf), "/sbin/dhclient %s", interface);
 	break;
 
       case UDHCPC:
-	ptr += snprintf (buf, sizeof (buf), "/sbin/udhcpc -i %s -n", interface);
+	snprintf (buf, sizeof (buf), "/sbin/udhcpc -i %s -n", interface);
 	if (dhcp_hostname)
-	  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " -H %s",
-			   dhcp_hostname);
+	  snprintfcat (buf, sizeof (buf), " -H %s", dhcp_hostname);
 	break;
     }
 
   if (execlog (buf))
     netcfg_die (client);
-
 }
 
 int

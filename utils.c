@@ -23,6 +23,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -66,4 +67,19 @@ check_dir (const char *dirname)
     return -1;
   else
     return S_ISDIR (check.st_mode);
+}
+
+
+int
+snprintfcat (char *str, size_t size, const char *format, ...)
+{
+  va_list ap;
+  int retval;
+  size_t len = strlen (str);
+
+  va_start (ap, format);
+  retval = vsnprintf (str + len, size - len, format, ap);
+  va_end (ap);
+
+  return retval;
 }

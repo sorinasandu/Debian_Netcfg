@@ -134,22 +134,17 @@ static int
 netcfg_activate_static ()
 {
   int rv = 0;
-  char *ptr;
   char buf[128];
 #ifdef __GNU__
 /* I had to do something like this ? */
 /*  execlog ("settrans /servers/socket/2 -fg");  */
   execlog ("settrans /servers/socket/2 --goaway");
-  ptr = buf;
-  ptr +=
-    snprintf (buf, sizeof (buf),
-	      "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s --netmask=%s",
-	      interface, num2dot (ipaddress), num2dot (netmask));
+  snprintf (buf, sizeof (buf),
+	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s --netmask=%s",
+	    interface, num2dot (ipaddress), num2dot (netmask));
 
   if (gateway)
-    ptr +=
-      snprintf (ptr, sizeof (buf) - (ptr - buf), " --gateway=%s",
-		num2dot (gateway));
+    snprintf (buf, sizeof (buf), " --gateway=%s", num2dot (gateway));
 
   rv |= execlog (buf);
 
@@ -164,10 +159,8 @@ netcfg_activate_static ()
 
   if (gateway)
     {
-      ptr = buf;
-      ptr +=
-	snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
-		  num2dot (gateway));
+      snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
+		num2dot (gateway));
       rv |= execlog (buf);
     }
 #endif
