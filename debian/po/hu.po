@@ -15,13 +15,12 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-15 11:59+0200\n"
+"PO-Revision-Date: 2004-07-02 23:44+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
-"Language-Team: Debian Hungarian Localization Team <debian-l10n-"
-"hungarian@lists.debian.org>\n"
+"Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -533,7 +532,6 @@ msgstr "Hálózat konfigurálásának módja:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -541,10 +539,9 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"A hálózat automatikus konfigurálása kudarcot vallott. Ennek oka lehet a "
-"hálózat DHCP-kiszolgálójának lassúsága, ez esetben próbálkozzon újra. Ha a "
-"hálózatot nem lehet DHCP-vel automatikusan konfigurálni, akkor kézi "
-"módszerekhez is folyamodhat. Valamint, egyes DHCP-kiszolgálók csak egy "
+"Ismét kísérletet tehet a hálózat DHCP-vel végzett automatikus konfigurálására "
+"(erre pl. a hálózat DHCP-kiszolgálójának lassúsága adhat okot), vagy kézi "
+"módszerekhez is folyamodhat. Egyes DHCP-kiszolgálók csak egy "
 "bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen kiszolgálót próbál "
 "megszólítani, akkor a DHCP újrapróbálása előtt megadhatja a megfelelő "
 "gépnevet is."
@@ -552,9 +549,8 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Hálózat automatikus konfigurálása sikeresen megtörtént"
+msgstr "Hálózat automatikus konfigurálása sikertelenül zárult"
 
 #. Type: note
 #. Description
@@ -563,12 +559,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"A hálózat valószínűleg nem DHCP-vel működik. Nem kizárható azonban "
+"a DHCP-kiszolgáló lassú volta, illetve a hálózatihardver-hiba sem."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Alapértelmezett útvonal nélkül lép tovább?"
 
 #. Type: boolean
 #. Description
@@ -580,6 +578,12 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"A hálózat automatikus konfigurálása sikeresen lezajlott. Alapértelmezett útvonal "
+"megállapítására azonban nem került sor, a rendszer így nem tud az Interneten "
+"levő gépekkel kapcsolatot teremteni. Vagyis a telepítés sem tud folytatódni, "
+"hacsak nincs kéznél a Debian CD-ROM-telepítőkészlet első lemeze vagy egy ún. "
+"'Netinst' CD-ROM, vagy pedig a helyi hálóról ki nem lehet pótolni a kellő "
+"csomagokat."
 
 #. Type: boolean
 #. Description
@@ -588,6 +592,9 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Ha bizonytalan a helyes döntésben, ne lépjen tovább alapértelmezett "
+"útvonal nélkül: a probléma alapos megoldása érdekében inkább "
+"érdeklődjön rendszere adminisztrátoránál."
 
 #. Type: text
 #. Description
