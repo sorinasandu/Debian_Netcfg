@@ -67,7 +67,7 @@ static void netcfg_get_static()
 
         client->command(client, "subst", "netcfg/confirm_static",
                         "ipaddress",
-                        (ipaddress ? num2dot(ipaddress) : "<none>"), NULL);
+                        (ipaddress ? num2dot(ipaddress) : _("<none>")), NULL);
 
         if (strncmp(interface, "plip", 4) == 0
             || strncmp(interface, "slip", 4) == 0
@@ -102,16 +102,16 @@ static void netcfg_get_static()
         }
 
         client->command(client, "subst", "netcfg/confirm_static",
-                        "netmask", (netmask ? num2dot(netmask) : "<none>"),
+                        "netmask", (netmask ? num2dot(netmask) : _("<none>")),
                         NULL);
 
         client->command(client, "subst", "netcfg/confirm_static",
-                        "gateway", (gateway ? num2dot(gateway) : "<none>"),
+                        "gateway", (gateway ? num2dot(gateway) : _("<none>")),
                         NULL);
 
         client->command(client, "subst", "netcfg/confirm_static",
                         "pointopoint",
-                        (pointopoint ? num2dot(pointopoint) : "<none>"),
+                        (pointopoint ? num2dot(pointopoint) : _("<none>")),
                         NULL);
 
         broadcast = (network | ~netmask);
@@ -211,7 +211,7 @@ int main(int argc, char *argv[])
         char *ptr;
         char *nameservers = NULL;
         client = debconfclient_new();
-        client->command(client, "title", "Static Network Configuration",
+        client->command(client, "title", _("Static Network Configuration"),
                         NULL);
 
 
@@ -226,12 +226,12 @@ int main(int argc, char *argv[])
                                 "hostname", hostname, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_static",
-                                "domain", (domain ? domain : "<none>"),
+                                "domain", (domain ? domain : _("<none>")),
                                 NULL);
 
                 client->command(client, "subst", "netcfg/confirm_static",
                                 "nameservers",
-                                (nameservers ? nameservers : "<none>"),
+                                (nameservers ? nameservers : _("<none>")),
                                 NULL);
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 

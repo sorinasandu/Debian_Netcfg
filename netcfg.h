@@ -14,6 +14,10 @@
 #define DHCPCD_FILE     "/etc/dhcpc/config"
 #define DHCLIENT_DIR	"/var/dhcp"
 
+#ifndef _
+#define _(x)  (x)
+#endif
+
 
 extern int netcfg_mkdir (char *path);
 

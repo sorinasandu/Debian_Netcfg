@@ -150,25 +150,25 @@ char *get_ifdsc(const char *ifp)
                 char *description;
         } interface_alist[] = {
                 {
-                "eth", "Ethernet or Fast Ethernet"}
+                "eth", _("Ethernet or Fast Ethernet")}
                 , {
-                "pcmcia", "PC-Card (PCMCIA) Ethernet or Token Ring"}
+                "pcmcia", _("PC-Card (PCMCIA) Ethernet or Token Ring")}
                 , {
-                "tr", "Token Ring"}
+                "tr", _("Token Ring")}
                 , {
-                "arc", "Arcnet"}
+                "arc", _("Arcnet")}
                 , {
-                "slip", "Serial-line IP"}
+                "slip", _("Serial-line IP")}
                 , {
-                "plip", "Parallel-line IP"}
+                "plip", _("Parallel-line IP")}
                 , {
-                "ctc", "Channel-to-channel"}
+                "ctc", _("Channel-to-channel")}
                 , {
-                "escon", "Real channel-to-channel"}
+                "escon", _("Real channel-to-channel")}
                 , {
-                "hsi", "Hypersocket"}
+                "hsi", _("Hypersocket")}
                 , {
-                "iucv", "Inter-user communication vehicle"}
+                "iucv", _("Inter-user communication vehicle")}
                 , {
                 NULL, NULL}
         };
@@ -177,7 +177,7 @@ char *get_ifdsc(const char *ifp)
                 if (!strncmp(ifp, interface_alist[i].interface,
                              strlen(interface_alist[i].interface)))
                         return interface_alist[i].description;
-        return "unknown interface";
+        return _("unknown interface");
 }
 
 

@@ -75,7 +75,7 @@ static void netcfg_get_dhcp()
 
         client->command(client, "subst", "netcfg/confirm_dhcp",
                         "dhcp_hostname",
-                        (dhcp_hostname ? dhcp_hostname : "<none>"), NULL);
+                        (dhcp_hostname ? dhcp_hostname : _("<none>")), NULL);
 }
 
 
@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
         int finished = 0;
         struct stat buf;
         client = debconfclient_new();
-        client->command(client, "title", "DHCP Network Configuration",
+        client->command(client, "title", _("DHCP Network Configuration"),
                         NULL);
 
 
@@ -161,14 +161,14 @@ int main(int argc, char *argv[])
                                 "hostname", hostname, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "domain", (domain ? domain : "<none>"),
+                                "domain", (domain ? domain : _("<none>")),
                                 NULL);
 
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "nameservers",
-                                (nameservers ? nameservers : "<none>"),
+                                (nameservers ? nameservers : _("<none>")),
                                 NULL);
                 netcfg_get_dhcp();
 
