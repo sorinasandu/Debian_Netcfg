@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-14 11:08+0900\n"
+"PO-Revision-Date: 2004-01-08 17:51+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -93,9 +93,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "インターフェイスが検出されませんでした"
+msgstr "プライマリネットワークインターフェイス:"
 
 #. Type: select
 #. Description
@@ -103,7 +102,7 @@ msgstr "インターフェイスが検出されませんでした"
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
-msgstr ""
+msgstr "システムに複数のネットワークインターフェイスがあります。Debian をインストールする上でのプライマリネットワークインターフェイスとして使うものを 1 つ選択してください。"
 
 #. Type: error
 #. Description
@@ -557,17 +556,3 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid "Interface:"
-#~ msgstr "インターフェイス:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "設定したいインターフェイスを選んでください。あなたのシステムで現在検出され"
-#~ "ているすべてのインターフェイスが以下に示されています。プライマリのネット"
-#~ "ワークインターフェイスのタイプを選択してください。このインターフェイスは、"
-#~ "Debian システムをインストール (NFS または HTTP 経由) するのに使われます。"
