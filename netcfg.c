@@ -138,53 +138,52 @@ int main(int argc, char *argv[])
 
               if (res == NOT_ASKED)
               {
-                switch (ret)
+                if (ret == 2)
                 {
                   /* Supported; no connection */
-                  case 2:
-                    {
-                      int ret;
-                      /* A label's good, a state machine is overkill and cumbersome. */
+                  int ret;
+                  /* A label's good, a state machine is overkill and cumbersome. */
 continue_configure:
-                      debconf_input(client, "high", "netcfg/continue_configure_static");
-                      ret = debconf_go(client);
+                  debconf_subst(client, "netcfg/continue_configure_static", "IFACE", interface);
+                  debconf_input(client, "high", "netcfg/continue_configure_static");
+                  ret = debconf_go(client);
 
-                      if (ret == 10) /* Go Back to get_interface */
-                      {
-                        state = GET_INTERFACE;
-                        break;
-                      }
+                  if (ret == 10) /* Go Back to get_interface */
+                  {
+                    state = GET_INTERFACE;
+                    break;
+                  }
 
-                      debconf_get(client, "netcfg/continue_configure_static");
+                  debconf_get(client, "netcfg/continue_configure_static");
 
-                      if (!strcmp(client->value, "true")) /* don't configure the network */
-                      {
-                        netcfg_write_loopback();
-                        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
-                        {
-                          /* indecisive, i say! */
-                          goto continue_configure;
-                        }
-                        else
-                        {
-                          struct in_addr null_ipaddress;
-                          null_ipaddress.s_addr = 0;
-                          netcfg_write_common(null_ipaddress, hostname, NULL);
-                          return 0;
-                        }
-                        break;
-                      } 
+                  if (!strcmp(client->value, "false")) /* don't configure the network */
+                  {
+                    netcfg_write_loopback();
+                    if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
+                    {
+                      /* indecisive, i say! */
+                      goto continue_configure;
                     }
-                    netcfg_method = STATIC;
-                    break;
-
-                  /* Supported; connected */    
-                  case 0:
-                    /* But don't forget about disable_dhcp. */
-                    debconf_get(client, "netcfg/disable_dhcp");
-                    if (strcmp(client->value, "true") != 0)
-                      netcfg_method = DHCP;
-                    break;
+                    else
+                    {
+                      struct in_addr null_ipaddress;
+                      null_ipaddress.s_addr = 0;
+                      netcfg_write_common(null_ipaddress, hostname, NULL);
+                      return 0;
+                    }
+                    break; /* Should never happen */
+                  }
+                  
+                  netcfg_method = STATIC;
+                  break;
+                }
+                else if (ret == 0)
+                {
+                  /* Supported; connected... But don't forget about disable_dhcp. */
+                  debconf_get(client, "netcfg/disable_dhcp");
+                  if (strcmp(client->value, "true") != 0)
+                    netcfg_method = DHCP;
+                  break;
                 }
               }
               

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-10 19:08+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
@@ -288,8 +288,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Pokraèovat bez nastavení sítì?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Nastavit sí» ruènì"
 
 #. Type: boolean
 #. Description
@@ -304,8 +305,8 @@ msgstr ""
 "Vypadá to, ¾e ${IFACE} není pøipojeno k ¾ádné síti. To mù¾e být zpùsobeno "
 "chybìjícím sí»ovým kabelem, nebo nefunkèní sí»ovou kartou. Buï musíte sí» "
 "o¾elet a nastavit ji programem etherconf a¾ v nainstalovaném systému, nebo "
-"ji budete muset nastavit staticky. Také se mù¾ete vrátit zpìt a vybrat "
-"jiné rozhraní."
+"ji budete muset nastavit staticky. Také se mù¾ete vrátit zpìt a vybrat jiné "
+"rozhraní."
 
 #. Type: select
 #. Choices
@@ -771,3 +772,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavit sí» se statickými adresami"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Pokraèovat bez nastavení sítì?"

@@ -17,14 +17,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-15 19:52+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
@@ -44,8 +44,8 @@ msgid ""
 msgstr ""
 "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse. Jos "
 "valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
-"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä asetukset itse. Jos et "
-"ole varma, käytä DHCP:tä."
+"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä asetukset itse. Jos "
+"et ole varma, käytä DHCP:tä."
 
 #. Type: string
 #. Description
@@ -296,8 +296,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Jatketaanko tekemättä verkkoasetuksia?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Tee verkkoasetukset käsin"
 
 #. Type: boolean
 #. Description
@@ -787,6 +788,9 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Tee verkkoasetukset itse"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Jatketaanko tekemättä verkkoasetuksia?"
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Verkkoasetusten haku automaattisesti (DHCP)"

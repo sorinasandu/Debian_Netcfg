@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-11 18:57+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -242,7 +242,10 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr "有効なホスト名は 0-9、小文字のa-z、マイナス記号だけから構成されます。ホスト名は 2 文字から最長 63 文字までで、マイナス記号で開始または終了することはできません。"
+msgstr ""
+"有効なホスト名は 0-9、小文字のa-z、マイナス記号だけから構成されます。ホスト名"
+"は 2 文字から最長 63 文字までで、マイナス記号で開始または終了することはできま"
+"せん。"
 
 #. Type: error
 #. Description
@@ -290,8 +293,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "ネットワークの設定なしに続けますか?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "ネットワークを手動で設定"
 
 #. Type: boolean
 #. Description
@@ -785,3 +789,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "ネットワークの設定なしに続けますか?"

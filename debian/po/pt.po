@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 1.01\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-10 20:54+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -198,7 +198,8 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
+msgstr ""
+"Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -234,9 +235,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Um nome do computador válido só pode conter os números 0-9, letras minúsculas"
-"a-z, e o sinal menos. Tem de ter entre 2 e 63 caracteres de comprimento, e "
-"não pode iniciar ou terminar com um sinal de menos."
+"Um nome do computador válido só pode conter os números 0-9, letras "
+"minúsculasa-z, e o sinal menos. Tem de ter entre 2 e 63 caracteres de "
+"comprimento, e não pode iniciar ou terminar com um sinal de menos."
 
 #. Type: error
 #. Description
@@ -284,8 +285,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Continuar sem configurar a rede?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Configurar a rede manualmente"
 
 #. Type: boolean
 #. Description
@@ -500,7 +502,9 @@ msgstr "Não foi encontrado nenhum cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-client."
+msgstr ""
+"Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
+"client."
 
 #. Type: error
 #. Description
@@ -776,6 +780,9 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Continuar sem configurar a rede?"
 
 #~ msgid ""
 #~ "This may be due to a slow DHCP server, malfunctioning network equipment, "

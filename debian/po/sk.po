@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-17 11:00+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -293,8 +293,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Pokračovať bez nastavenia siete?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Nastaviť sieť manuálne"
 
 #. Type: boolean
 #. Description
@@ -567,8 +568,8 @@ msgstr ""
 "Teraz si môžete zvoliť medzi zopakovaním automatického nastavenia siete "
 "pomocou DHCP (môže to fungovať, ak má server dlhšie odozvy) a manuálnym "
 "nastavením siete. Niektoré DHCP servery vyžadujú určenie DHCP názvu "
-"počítača, takže musíte zadať názov počítača, kým sa znovu pokúsite "
-"o nastavenie siete pomocou DHCP."
+"počítača, takže musíte zadať názov počítača, kým sa znovu pokúsite o "
+"nastavenie siete pomocou DHCP."
 
 #. Type: note
 #. Description
@@ -780,6 +781,9 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavenie siete so statickými adresami"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Pokračovať bez nastavenia siete?"
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Dynamické nastavenie siete (DHCP)"

@@ -13,13 +13,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 11:45-0600\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-12 00:46+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: Hebrew <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #  Type: boolean
 #  Description
@@ -418,8 +418,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "להמשיך בלי להגדיר את הרשת?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "מגדיר את הרשת"
 
 #. Type: boolean
 #. Description
@@ -431,7 +432,10 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
-"לא נראה שממשק הרשת ${IFACE} מחובר לרשת כלשהי. הבעיה יכולה להיות בכבל רשת חסר, או בתקלה בכרטיס הרשת. תוכל לדחות את הגדרת הרשת עד שתאתחל לתוך דביאן ולהשתמש בכלי etherconf, או להגדיר רשת סטטית. תוכל גם לחזור אחורה ולבחור ממשק רשת שונה."
+"לא נראה שממשק הרשת ${IFACE} מחובר לרשת כלשהי. הבעיה יכולה להיות בכבל רשת "
+"חסר, או בתקלה בכרטיס הרשת. תוכל לדחות את הגדרת הרשת עד שתאתחל לתוך דביאן "
+"ולהשתמש בכלי etherconf, או להגדיר רשת סטטית. תוכל גם לחזור אחורה ולבחור ממשק "
+"רשת שונה."
 
 #  Type: select
 #  Choices
@@ -493,7 +497,7 @@ msgstr "מחפש נקודותת גישה לרשת האלחוטית..."
 #  Description
 #  Type: text
 #  Description
-#. Type: boolean
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:141
 msgid "<none>"
@@ -1098,6 +1102,8 @@ msgstr "האם המידע נכון?"
 msgid "Currently configured network parameters:"
 msgstr "פרמרטים שנקבעו  כרגע:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -1126,6 +1132,15 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
+
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "להמשיך בלי להגדיר את הרשת?"
 
 #~ msgid ""
 #~ "This may be due to a slow DHCP server, malfunctioning network equipment, "

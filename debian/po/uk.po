@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-11 13:31+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -23,7 +23,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -161,7 +162,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr ""
+"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -250,7 +252,10 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr "Вірне ім'я комп'ютера може містити тільки цифри 0-9, малі літери a-z та знак мінус. Воно повинно мати довжину від 2 до 63 символів та не може починатися або закінчуватися знаком мінус."
+msgstr ""
+"Вірне ім'я комп'ютера може містити тільки цифри 0-9, малі літери a-z та знак "
+"мінус. Воно повинно мати довжину від 2 до 63 символів та не може починатися "
+"або закінчуватися знаком мінус."
 
 #. Type: error
 #. Description
@@ -297,8 +302,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Продовжити без налаштування мережі?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Налаштувати мережу вручну"
 
 #. Type: boolean
 #. Description
@@ -309,7 +315,12 @@ msgid ""
 "either forego configuring the network until you reboot into Debian and use "
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
-msgstr "Здається, що інтерфейс ${IFACE} не під'єднаний до мережі. Це може бути тому, що мережевий кабель не під'єднаний або мережевий адаптер невірно функціонує. Ви можете або відкласти налаштування мережі до перезавантаження в Debian та використати програму etherconf, або можете налаштувати мережу статично. Ви також можете повернутися та вибрати інший інтерфейс."
+msgstr ""
+"Здається, що інтерфейс ${IFACE} не під'єднаний до мережі. Це може бути тому, "
+"що мережевий кабель не під'єднаний або мережевий адаптер невірно функціонує. "
+"Ви можете або відкласти налаштування мережі до перезавантаження в Debian та "
+"використати програму etherconf, або можете налаштувати мережу статично. Ви "
+"також можете повернутися та вибрати інший інтерфейс."
 
 #. Type: select
 #. Choices
@@ -509,7 +520,8 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr ""
+"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -563,10 +575,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Звідси ви можете повторити автоматичне налаштування мережі за допомогою DHCP (що може "
-"спрацювати, якщо у вас повільний DHCP сервер) або налаштувати мережу вручну. "
-"Для деяких DHCP серверів потрібно, щоб клієнт надіслав DHCP ім'я вузла, тому "
-"ви також можете повторити автоматичне налаштування з іменем вузла."
+"Звідси ви можете повторити автоматичне налаштування мережі за допомогою DHCP "
+"(що може спрацювати, якщо у вас повільний DHCP сервер) або налаштувати "
+"мережу вручну. Для деяких DHCP серверів потрібно, щоб клієнт надіслав DHCP "
+"ім'я вузла, тому ви також можете повторити автоматичне налаштування з іменем "
+"вузла."
 
 #. Type: note
 #. Description
@@ -741,7 +754,8 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережі та/або адреси "
 "шлюзу."
@@ -782,6 +796,9 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Налаштувати мережу із статичним адресуванням"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Продовжити без налаштування мережі?"
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Налаштовування динамічної адреси (DHCP)"
@@ -825,4 +842,3 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
-

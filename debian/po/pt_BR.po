@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 10:11-0700\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-08-12 21:35-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -243,8 +243,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Um nome de máquina válido pode conter somente números de 0 a 9, as letras "
-"em minúsculo de a até z e o sinal de menos. O mesmo deve ter entre 2 a 63 "
+"Um nome de máquina válido pode conter somente números de 0 a 9, as letras em "
+"minúsculo de a até z e o sinal de menos. O mesmo deve ter entre 2 a 63 "
 "caracteres e não pode iniciar ou finalizar com um sinal de menos."
 
 #. Type: error
@@ -293,8 +293,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-msgid "Continue without configuring the network?"
-msgstr "Continuar sem configurar a rede ?"
+#, fuzzy
+msgid "Configure the network statically?"
+msgstr "Configurar a rede manualmente"
 
 #. Type: boolean
 #. Description
@@ -307,9 +308,9 @@ msgid ""
 "back and choose a different interface."
 msgstr ""
 "${IFACE} não parece estar conectada a nenhum tipo de rede. Isto pode ser "
-"devido a um cabo de rede não conectado ou a um mal funcionamento da placa "
-"de rede. Você pode abri mão da configuração de rede até que você reinicie "
-"no Debian e utilize o utilitário etherconf ou pode configurar a rede "
+"devido a um cabo de rede não conectado ou a um mal funcionamento da placa de "
+"rede. Você pode abri mão da configuração de rede até que você reinicie no "
+"Debian e utilize o utilitário etherconf ou pode configurar a rede "
 "estaticamente. Você também pode voltar e escolher uma interface de rede "
 "diferente."
 
@@ -792,6 +793,9 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "Continuar sem configurar a rede ?"
 
 #~ msgid ""
 #~ "This may be due to a slow DHCP server, malfunctioning network equipment, "

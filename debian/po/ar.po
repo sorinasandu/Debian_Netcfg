@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer.packages.netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-16 08:07+0200\n"
+"POT-Creation-Date: 2004-08-21 18:47-0700\n"
 "PO-Revision-Date: 2004-07-22 10:01+0300\n"
 "Last-Translator: Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -291,8 +291,8 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:109
 #, fuzzy
-msgid "Continue without configuring the network?"
-msgstr "إعداد الشبكة"
+msgid "Configure the network statically?"
+msgstr "إعداد الشّبكة يدويّاً"
 
 #. Type: boolean
 #. Description
@@ -341,7 +341,7 @@ msgstr "إعداد الشّبكة اللّاسلكيّة"
 msgid "Searching for wireless access points ..."
 msgstr "جاري البحث عن نقاط الوصول اللّاسلكي ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:141
 msgid "<none>"
@@ -745,6 +745,8 @@ msgstr "هل هذه المعلومات صحيحة؟"
 msgid "Currently configured network parameters:"
 msgstr "معطيّات الشبكة المعدّة حالياً:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -767,3 +769,7 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "إعداد الشّبكة باستخدام العنونة ساكنة"
+
+#, fuzzy
+#~ msgid "Continue without configuring the network?"
+#~ msgstr "إعداد الشبكة"
