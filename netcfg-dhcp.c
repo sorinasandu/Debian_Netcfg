@@ -70,7 +70,7 @@ static void netcfg_get_dhcp()
         client->command(client, "go", NULL);
         client->command(client, "get", "netcfg/dhcp_hostname", NULL);
 
-        if (client->value)
+        if (strcmp (client->value, "") != 0)
                 dhcp_hostname = strdup(client->value);
 
         client->command(client, "subst", "netcfg/confirm_dhcp",
