@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-23 22:12+0100\n"
-"PO-Revision-Date: 2004-03-11 15:20+0100\n"
+"PO-Revision-Date: 2004-03-24 12:34+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,26 +18,19 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "S'està configurant la xarxa amb DHCP"
+msgstr "Voleu configurar la xarxa automàticament amb DHCP?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr ""
-"Es pot configurar la xarxa mitjançant DHCP o introduint manualment tota la "
-"informació. Si seleccioneu DHCP i l'instal·lador no és capaç d'obtenir una "
-"configuració funcional des d'un servidor de DHCP a la vostra xarxa, tindreu "
-"l'oportunitat de configurar la vostra xarxa manualment després de l'intent "
-"de configurar-la per DHCP. Si no esteu segur, seleccioneu DHCP."
+msgstr "Es pot configurar la xarxa mitjançant DHCP o introduint manualment tota la informació. Si decidiu usar DHCP i l'instal·lador no és capaç d'obtenir una configuració funcional des d'un servidor de DHCP a la vostra xarxa, tindreu l'oportunitat de configurar la vostra xarxa manualment després de l'intent de configurar-la per DHCP."
 
 #. Type: string
 #. Description
@@ -108,10 +101,7 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
-"${iface} és una interfície de xarxa wireless. Introduïu el nom (l'ESSID) de "
-"la xarxa wireless que voleu que utilitze ${iface}. Si voleu utilitzar "
-"qualsevol altra xarxa disponible, deixeu aquest camp en blanc."
+msgstr "${iface} és una interfície de xarxa inalàmbrica. Introduïu el nom (l'ESSID) de la xarxa inalàmbrica que voleu que utilitze ${iface}. Si voleu utilitzar qualsevol altra xarxa disponible, deixeu aquest camp en blanc."
 
 #. Type: string
 #. Description
@@ -155,9 +145,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Per descomptat, si no hi ha una clau WEP per a la vostra xarxa wireless, "
-"deixeu aquest camp en blanc."
+msgstr "Per descomptat, si no hi ha una clau WEP per a la vostra xarxa inalàmbrica, deixeu aquest camp en blanc."
 
 #. Type: error
 #. Description
@@ -289,13 +277,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Xarxa amb infraestructura (gestionada), Xarxa «ad-hoc» (Punt a punt)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Tipus de xarxa inalàmbrica:"
 
 #. Type: select
 #. Description
@@ -304,7 +292,7 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr ""
+msgstr "Les xarxes inalàmbriques són o bé gestionades o bé «ad-hoc». Si useu qualsevol tipus de punt d'accés real, la vostra xarxa és gestionada. Si un altre ordinador és el vostre «punt d'accés», la vostra xarxa és «Ad-hoc»."
 
 #. Type: text
 #. Description
