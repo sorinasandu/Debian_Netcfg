@@ -4,6 +4,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Split out all functions into static.c, dhcp.c, wireless.c.
     - Port wireless fixes back to netcfg-static and netcfg-dhcp, which
       have been rather neglected lately.
+    - Remove the getif() /proc/net/dev-parsing crap with a call to
+      if_nameindex(3).
     - Fix the GO_BACK interaction between WEP and ESSID configuration.
     - Write loopback all the time, even when you abort network config.
       (Closes: #248636)
