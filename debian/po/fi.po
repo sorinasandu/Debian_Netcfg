@@ -1,40 +1,38 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# Tommi Vainikainen <thv+debian@iki.fi>, 2003.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-11-07 15:16+0200\n"
-"Last-Translator: Tommi Vainikainen <thv+debian@iki.fi>\n"
+"PO-Revision-Date: 2003-12-26 17:01+0200\n"
+"Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Hae verkkoasetukset automaattisesti (DHCP) tai tee asetukset itse"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "DHCP-verkkoasetukset"
+msgstr "Miten verkkoasetukset tehdään:"
 
 #. Type: select
 #. Description
@@ -45,13 +43,16 @@ msgid ""
 "configuration from a DHCP server on your network, you will be given the "
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
-msgstr ""
+msgstr "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse."
+"Jos valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia "
+"verkkosi DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä"
+"asetukset itse."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:15
 msgid "Domain name:"
-msgstr ""
+msgstr "Verkkoaluenimi:"
 
 #. Type: string
 #. Description
@@ -70,22 +71,20 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
-msgstr "Valitse DNS-palvelinten osoitteet"
+msgstr "Nimipalvelinten osoitteet:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Ole hyvä ja syötä IP-osoitteet (ei isäntänimiä) korkeintaan kolmelle "
-"nimipalvelimelle eroteltuna välilyönnein. Älä käytä pilkkuja. Palvelimilta "
+"Ole hyvä ja syötä IP-osoitteet (ei konenimiä) korkeintaan kolmelle "
+"nimipalvelimelle välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta "
 "kysytään siinä järjestyksessä kuin syötät ne. Jos et halua käyttää mitään "
 "nimipalvelimia, voit jättää tämän kentän tyhjäksi."
 
@@ -93,92 +92,87 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Interface:"
-msgstr ""
+msgstr "Verkkoliitäntä:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Seuraavat sovittimet havaittiin. Valitse ensisijaisen verkkosovittimesi "
-"tyyppi eli se, jota tarvitset Debian-järjestelmän asentamiseen (NFS:n tai "
-"HTTP:n kautta)."
+"Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet havaittiin. "
+"Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota tarvitset Debian-järjestelmän "
+"asentamiseen (NFS:n tai HTTP:n kautta)."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:40
 msgid "Error while activating the network"
-msgstr ""
+msgstr "Tapahtui virhe käynnistettäessä verkkoa"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:40
-#, fuzzy
 msgid "An error occurred while activating the network."
-msgstr "Tapahtui virhe eikä jatkaminen onnistu."
+msgstr "Virhe verkkoyhteyttä käynnistettäessä."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Hostname:"
-msgstr ""
+msgstr "Konenimi:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Tämän järjestelmän konenimi."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Isäntänimi on yksittäinen erisnimi, jolla verkko tunnistaa järjestelmäsi.  "
-"Jos et tiedä mikä isäntänimesi pitäisi olla, kysy verkkoylläpitäjältäsi.  "
-"Jos olet pystyttämässä omaa kotiverkkoasi, voit keksiä tähän jotain."
+"Konenimi·toimii·koneesi·tunnisteena·verkossa.··"
+"Jos·et·tiedä·mikä·isäntänimesi·pitäisi·olla,·kysy·verkon ylläpitäjältä.··"
+"Jos·olet·pystyttämässä·omaa·kotiverkkoasi,·voit·valita nimen vapaasti."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Konenimi ei kelpaa"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Isäntänimi \"${hostname}\" ei kelpaa."
+msgstr "Konenimi \"${hostname}\" ei kelpaa."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Kelvollinen isäntänimi voi sisältää vain alfanumeerisia ja miinusmerkkejä, "
-"on pituudeltaan kahden ja 63 merkin välillä ja ei voi alkaa tai loppua "
+"Kelvollinen konenimi voi sisältää vain kirjaimia, numeroita ja miinusmerkin. "
+"Se on pituudeltaan kahden ja 63 merkin välillä eikä voi alkaa tai loppua "
 "miinusmerkkiin."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #. Type: error
 #. Description
@@ -186,27 +180,24 @@ msgstr ""
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr ""
+msgstr "Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää uudestaan"
+"asennusohjelman päävalikosta. "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid "No network interfaces detected"
-msgstr "Verkkosovittimia ei havaittu."
+msgstr "Verkkoliitäntöjä ei havaittu"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
 "Verkkosovittimia ei löytynyt.  Tämä tarkoittaa, että asennusjärjestelmä ei "
-"löytänyt verkkolaitetta.  Jos sinulla on verkkokortti, on mahdollista, että "
-"sille ei ole vielä valittu moduulia.  Mene takaisin kohtaan \"Tunnista "
-"verkkokortti\"."
+"löytänyt verkkolaitetta."
 
 #. Type: error
 #. Description
@@ -214,7 +205,9 @@ msgstr ""
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr ""
+msgstr "Mahdollisesti joudut lataamaan tietyn moduulin verkkokortillesi. Jos "
+"semmoinen moduuli on saatavilla, palaa takaisin verkkolaitteiden "
+"tunnistukseen. "
 
 #. Type: text
 #. Description
@@ -255,9 +248,8 @@ msgstr "Sarjalinja-IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
-msgstr "Rinnakkaislinja-IP"
+msgstr "Rinnakkaisportin IP"
 
 #. Type: text
 #. Description
@@ -311,41 +303,37 @@ msgstr "Tuntematon sovitin"
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "DHCP-verkkoasetukset"
+msgstr "Verkkoasetukset"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "Aseta pysyvät verkkoasetukset"
+msgstr "Tee verkkoasetukset"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "DHCP:n konenimi:"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Sinun kenties tarvitsee syöttää DHCP-isäntänimi. Jos käytät kaapelimodeemia, "
-"sinun kenties tarvitsee määrittää käyttäjätunnusluku tähän.  Useimmat "
-"käyttäjät voivat jättää tämän tyhjäksi."
+"Sinun kenties tarvitsee syöttää DHCP-konenimi. Jos käytät kaapelimodeemia, "
+"sinun kenties tarvitsee kirjoittaa käyttäjätunnuksen numero."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr "Useimmiten tämän voi jättää tyhjäksi."
 
 #. Type: boolean
 #. Description
@@ -357,7 +345,7 @@ msgstr "Ovatko nämä tiedot oikein?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Verkkoasetukset ovat nyt:"
 
 #. Type: boolean
 #. Description
@@ -384,35 +372,32 @@ msgstr "Aseta verkko DHCP:lla"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
-msgstr "Tämä voi kestää muutaman minuutin."
+msgstr "Tämä voi kestää hetken aikaa."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "Verkkoasetusten haku automaattisesti keskeytetään"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP-verkkoasetukset"
+msgstr "Yritetäänkö uudestaan verkkoasetusten automaattista hakua?"
 
 #. Type: boolean
 #. Description
@@ -420,28 +405,26 @@ msgstr "DHCP-verkkoasetukset"
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
-msgstr ""
+msgstr "IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskus"
+"tosi hitaita, jos haluat voidaan yrittää uudestaan. "
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Pysyvät verkkoasetukset"
+msgstr "Verkkoasetusten haku automaattisesti (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Aseta verkko DHCP:lla"
+msgstr "Hae verkkoasetukset automaattisesti (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
 msgstr "IP-osoite?"
 
@@ -460,30 +443,27 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "Pointopoint-osoite?"
+msgstr "Point-to-point-osoite:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Pointopoint-osoitetta käytetään määrittämään vastapuoli pisteestä pisteeseen "
-"-verkossasi.  Konsultoi verkkosi ylläpitäjää jos et tiedä tätä arvoa.  "
-"Pointopoint-osoite syötetään neljänä lukuna eroteltuna pistein."
+"Point-to-point-osoitetta käytetään määrittämää pisteestä pisteeseen "
+"-verkosi toinen pää.  Kysy verkkosi ylläpitäjältä jos et tiedä tätä arvoa.  "
+"Point-to-point-osoite syötetään neljänä lukuna pistein eroteltuna."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "Verkkopeite?"
+msgstr "Verkon peite:"
 
 #. Type: string
 #. Description
@@ -500,14 +480,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "Yhdyskäytävä?"
+msgstr "Yhdyskäytävä eli reititin:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -516,25 +494,24 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Tämä on IP-osoite (neljä numeroa eroteltuna pistein), joka kertoo "
-"yhdyskäytäväreitittimesi, joka tunnetaan myös oletusreitittimenä.  Kaikki "
+"Yhdyskäytävä on IP-osoite (neljä numeroa eroteltuna pistein), joka kertoo "
+"yhdyskäytäväreitittimesi, tunnetaan myös oletusreitittimenä.  Kaikki "
 "lähiverkkosi ulkopuolelle (esimerkiksi Internetiin) menevä liikenne "
-"lähetetään tämän reitittimen kautta.  Harvoissa tapauksissa sinulla ei ole "
-"reititintä; tällöin voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa "
-"tähän kysymykseen, konsultoi verkkosi ylläpitäjää."
+"lähetetään tämän reitittimen kautta. Jos sinulla poikkeuksellisesti ei ole "
+"reititintä, voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa,"
+" kysy verkkosi ylläpitäjältä."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Yhdyskäytävään eli reitittimeen ei saatu yhteyttä"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "Syöttämäsi yhdyskäytävä ei ole kantamalla."
+msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 
 #. Type: error
 #. Description
@@ -571,7 +548,6 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
 msgstr "Pysyvät verkkoasetukset"
 
@@ -579,36 +555,6 @@ msgstr "Pysyvät verkkoasetukset"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Aseta verkko DHCP:lla"
+msgstr "Tee verkkoasetukset itse"
 
-#~ msgid "DHCP Network Configuration"
-#~ msgstr "DHCP-verkkoasetukset"
-
-#~ msgid "Choose the domain name."
-#~ msgstr "Valitse toimialueesi nimi."
-
-#~ msgid "Choose an interface."
-#~ msgstr "Valitse sovitin."
-
-#~ msgid "An error occured."
-#~ msgstr "Tapahtui virhe."
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "Jotain meni pieleen yritettäessä aktivoida verkkoasi."
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "Syötä järjestelmän isäntänimi."
-
-#~ msgid "Feel free to retry."
-#~ msgstr "Voit vapaasti yrittää uudelleen."
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "Mikä on dhcp-isäntänimesi?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "Dhcp-asiakasta ei löydy. Jatkaminen ei onnistu."
-
-#~ msgid "Is this configuration correct?"
-#~ msgstr "Ovatko nämä asetukset oikein?"
