@@ -39,7 +39,6 @@ static enum {DHCP, STATIC} netcfg_method = DHCP;
 
 int netcfg_get_method(struct debconfclient *client) 
 {
-
     char *method;
     int ret;
 
@@ -50,14 +49,14 @@ int netcfg_get_method(struct debconfclient *client)
     else 
 	netcfg_method = STATIC;
 
-    return ret;        
+    return ret;
 }
 
 
 int main(void)
 {
-    int num_interfaces =0;
-    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT} state = GET_INTERFACE;
+    int num_interfaces = 0;
+    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
     static char *none;
 
@@ -68,17 +67,15 @@ int main(void)
     client = debconfclient_new();
     debconf_capb(client, "backup");
 
-    debconf_metaget(client,  "netcfg/internal-none", "description");
+    debconf_metaget(client, "netcfg/internal-none", "description");
     none = client->value ? strdup(client->value) : strdup("<none>");
 
-    while (state != QUIT) {
-
+    while (1) {
 	switch(state) {
 	case BACKUP:
-	    exit(10);
-	    break;
+	    return 10;
 	case GET_INTERFACE:
-	    state =  netcfg_get_interface(client, &interface, &num_interfaces) ?
+	    state = netcfg_get_interface(client, &interface, &num_interfaces) ?
 		BACKUP : GET_METHOD;
 	    break;
 	case GET_METHOD:
@@ -111,11 +108,9 @@ int main(void)
 	    }
 	    break;
 	case QUIT:
-	    break;
+	    return 0;
 	}
-                
     }
-
 
     return 0;
 }
