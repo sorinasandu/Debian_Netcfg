@@ -14,9 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-23 22:12+0100\n"
-"PO-Revision-Date: 2004-03-21 02:54+0100\n"
+"PO-Revision-Date: 2004-03-24 17:06+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,26 +25,14 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Netwerk instellen met DHCP"
+msgstr "Wilt u het netwerk automatisch instellen (via DHCP)?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
-msgid ""
-"Networking can either be configured by DHCP or by manually entering all the "
-"information. If you choose to use DHCP and the installer is unable to get a "
-"working configuration from a DHCP server on your network, you will be given "
-"the opportunity to configure your network manually after the attempt to "
-"configure it by DHCP."
-msgstr ""
-"Het netwerk kan ingesteld worden door DHCP, of handmatig waarbij u alle "
-"gegevens aanreikt. Wanneer u voor DHCP kiest en het Debian-"
-"installatieprogramma is niet in staat om van een DHCP-server op uw netwerk "
-"een werkende configuratie te verkrijgen heeft u de mogelijkheid om alsnog "
-"het netwerk handmatig in te stellen. Bij twijfel kiest u best DHCP."
+msgid "Networking can either be configured by DHCP or by manually entering all the information. If you choose to use DHCP and the installer is unable to get a working configuration from a DHCP server on your network, you will be given the opportunity to configure your network manually after the attempt to configure it by DHCP."
+msgstr "Het netwerk kan ingesteld worden door DHCP, of handmatig waarbij u alle gegevens aanreikt. Wanneer u voor DHCP kiest en het Debian-installatieprogramma niet in staat is om van een DHCP-server op uw netwerk een werkende configuratie te verkrijgen heeft u de mogelijkheid om het netwerk alsnog handmatig in te stellen."
 
 #. Type: string
 #. Description
@@ -58,17 +45,8 @@ msgstr "Domeinnaam:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
-msgid ""
-"The domain name is the part of your Internet address to the right of your "
-"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
-"If you are setting up a home network, you can make something up, but make "
-"sure you use the same domain name on all your computers."
-msgstr ""
-"De domeinnaam is het gedeelte van uw Internetadres dat rechts van uw "
-"computernaam staat. Meestal eindigt een domeinnaam in .nl, .com, .net of ."
-"org. Wanneer u een thuisnetwerkje aan het opzetten bent kunt u hier gewoon "
-"iets verzinnen, al dient u er wel op te letten dat u op alle computers "
-"dezelfde domeinnaam gebruikt."
+msgid "The domain name is the part of your Internet address to the right of your host name.  It is often something that ends in .com, .net, .edu, or .org.  If you are setting up a home network, you can make something up, but make sure you use the same domain name on all your computers."
+msgstr "De domeinnaam is het gedeelte van uw Internetadres dat rechts van uw computernaam staat. Meestal eindigt een domeinnaam in .nl, .com, .net of .org. Wanneer u een thuisnetwerkje aan het opzetten bent kunt u hier gewoon iets verzinnen, al dient u er wel op te letten dat u op alle computers dezelfde domeinnaam gebruikt."
 
 #. Type: string
 #. Description
@@ -79,16 +57,8 @@ msgstr "Naamserveradressen:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-msgid ""
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first server in the list will be "
-"the first to be queried. If you don't want to use any name server, just "
-"leave this field blank."
-msgstr ""
-"U kunt hier de IP-adressen (niet de computernamen) van maximaal 3 "
-"naamservers gescheiden door spaties in voeren. Gebruik geen komma's. De "
-"eerste server in de lijst wordt het eerst bevraagd. Wanneer u geen "
-"naamservers wenst te gebruiken dient u dit veld leeg te laten."
+msgid "Please enter the IP addresses (not host names) of up to 3 name servers, separated by spaces. Do not use commas. The first server in the list will be the first to be queried. If you don't want to use any name server, just leave this field blank."
+msgstr "U kunt hier de IP-adressen (niet de computernamen) van maximaal 3 naamservers gescheiden door spaties in voeren. Gebruik geen komma's. De eerste server in de lijst wordt het eerst bevraagd. Wanneer u geen naamservers wenst te gebruiken dient u dit veld leeg te laten."
 
 #. Type: select
 #. Description
@@ -99,13 +69,8 @@ msgstr "Primair netwerkapparaat:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:31
-msgid ""
-"Your system has multiple network interfaces. Choose the one to use as the "
-"primary network interface while installing Debian."
-msgstr ""
-"Uw systeem beschikt over meerdere netwerkapparaten. Welk netwerkapparaat "
-"wilt u tijdens de Debian-installatie gebruiken als het primaire "
-"netwerkapparaat?"
+msgid "Your system has multiple network interfaces. Choose the one to use as the primary network interface while installing Debian."
+msgstr "Uw systeem beschikt over meerdere netwerkapparaten. Welk netwerkapparaat wilt u tijdens de Debian-installatie gebruiken als het primaire netwerkapparaat?"
 
 #  Type: string
 #  Description
@@ -122,13 +87,8 @@ msgstr "draadloos-netwerk-ESSID voor ${iface}:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:37
-msgid ""
-"${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. If you would like to "
-"use any available network, leave this field blank."
-msgstr ""
-"${iface} is een draadloze netwerkapparaat. Wat is de naam (de ESSID) van het "
-"draadloos netwerk waarop u ${iface} wilt gebruiken?"
+msgid "${iface} is a wireless network interface. Please enter the name (the ESSID) of the wireless network you would like ${iface} to use. If you would like to use any available network, leave this field blank."
+msgstr "${iface} is een draadloze netwerkapparaat. Wat is de naam (de ESSID) van het draadloos netwerk waarop u ${iface} wilt gebruiken?"
 
 #  Type: string
 #  Description
@@ -143,48 +103,32 @@ msgstr "WEP-sleutel voor ${iface}:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
-msgid ""
-"If applicable, please enter the WEP security key for device ${iface}. There "
-"are two ways to do this:"
-msgstr ""
-"Indien van toepassing dient u de WEP-beveiligingssleutel voor apparaat "
-"${iface} op te geven. U kunt dit op twee manieren doen:"
+msgid "If applicable, please enter the WEP security key for device ${iface}. There are two ways to do this:"
+msgstr "Indien van toepassing dient u de WEP-beveiligingssleutel voor apparaat ${iface} op te geven. U kunt dit op twee manieren doen:"
 
 #  Type: string
 #  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
-msgid ""
-"If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
-"number, just enter it as it is into this field."
-msgstr ""
-"Als uw WEP-sleutel voldoet aan het 'nnnn-nnnn-nn' of 'nnnnnnnn' (met n een "
-"cijfer) kunt u het gewoon intikken in dit veld."
+msgid "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
+msgstr "Als uw WEP-sleutel voldoet aan het 'nnnn-nnnn-nn' of 'nnnnnnnn' (met n een cijfer) kunt u het gewoon intikken in dit veld."
 
 #  Type: string
 #  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
-msgid ""
-"If your WEP key is in the format of a passphrase, prefix it with "
-"'s:' (without quotes)."
-msgstr ""
-"Als uw WEP-sleutel in de vorm van een wachtwoordzin is dient u de sleutel "
-"door 's:' te laten voorafgaan."
+msgid "If your WEP key is in the format of a passphrase, prefix it with 's:' (without quotes)."
+msgstr "Als uw WEP-sleutel in de vorm van een wachtwoordzin is dient u de sleutel door 's:' te laten voorafgaan."
 
 #  Type: string
 #  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
-msgid ""
-"Of course, if there is no WEP key for your wireless network, leave this "
-"field blank."
-msgstr ""
-"Als er geen WEP-sleutel nodig is voor uw draadloos netwerk kunt u dit veld "
-"leeg laten."
+msgid "Of course, if there is no WEP key for your wireless network, leave this field blank."
+msgstr "Als er geen WEP-sleutel nodig is voor uw draadloos netwerk kunt u dit veld leeg laten."
 
 #  Type: error
 #  Description
@@ -199,13 +143,8 @@ msgstr "Ongeldige WEP-sleutel"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-msgid ""
-"The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
-"next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
-"De WEP-sleutel '${wepkey}' is ongeldig. Op het volgende scherm ziet u "
-"instructies betreffende het juist ingeven van uw WEP-sleutel, gelieve deze "
-"te lezen en vervolgens opnieuw te proberen."
+msgid "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the next screen carefully on how to enter your WEP key correctly, and try again."
+msgstr "De WEP-sleutel '${wepkey}' is ongeldig. Op het volgende scherm ziet u instructies betreffende het juist ingeven van uw WEP-sleutel, gelieve deze te lezen en vervolgens opnieuw te proberen."
 
 #  Type: error
 #  Description
@@ -220,12 +159,8 @@ msgstr "Ongeldige ESSID"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:66
-msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
-msgstr ""
-"De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts 32 karakters groot "
-"zijn (er is geen beperking op de toegelaten karakters)."
+msgid "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, but may contain all kinds of characters."
+msgstr "De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts 32 karakters groot zijn (er is geen beperking op de toegelaten karakters)."
 
 #. Type: string
 #. Description
@@ -242,16 +177,8 @@ msgstr "Wat is de computernaam van dit systeem?"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:73
-msgid ""
-"The hostname is a single word that identifies your system to the network. If "
-"you don't know what your hostname should be, consult your network "
-"administrator. If you are setting up your own home network, you can make "
-"something up here."
-msgstr ""
-"De computernaam is één enkel woord waarmee uw computer in het netwerk bekend "
-"staat. Als u uw computernaam niet weet neemt u best contact op met uw "
-"netwerkbeheerder. Als u uw eigen thuisnetwerkje aan het instellen bent kunt "
-"u hier gewoon iets verzinnen."
+msgid "The hostname is a single word that identifies your system to the network. If you don't know what your hostname should be, consult your network administrator. If you are setting up your own home network, you can make something up here."
+msgstr "De computernaam is één enkel woord waarmee uw computer in het netwerk bekend staat. Als u uw computernaam niet weet neemt u best contact op met uw netwerkbeheerder. Als u uw eigen thuisnetwerkje aan het instellen bent kunt u hier gewoon iets verzinnen."
 
 #. Type: error
 #. Description
@@ -268,14 +195,8 @@ msgstr "De naam '${HOSTNAME}' is ongeldig."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:83
-msgid ""
-"A valid hostname may contain only alphanumeric characters and the minus "
-"sign. It must be between 2 and 63 characters long, and may not begin or end "
-"with a minus sign."
-msgstr ""
-"Een geldige computernaam mag enkel alfanumerieke karakters en mintekens "
-"bevatten, moet minstens 2 en maximaal 63 karakters lang zijn, en mag niet "
-"beginnen of eindigen met een minteken."
+msgid "A valid hostname may contain only alphanumeric characters and the minus sign. It must be between 2 and 63 characters long, and may not begin or end with a minus sign."
+msgstr "Een geldige computernaam mag enkel alfanumerieke karakters en mintekens bevatten, moet minstens 2 en maximaal 63 karakters lang zijn, en mag niet beginnen of eindigen met een minteken."
 
 #. Type: error
 #. Description
@@ -286,12 +207,8 @@ msgstr "Fout"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:92
-msgid ""
-"An error occured and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
-msgstr ""
-"Er is een fout opgetreden en het netwerk-configuratieproces is afgebroken. U "
-"kunt het opnieuw proberen vanuit het hoofdmenu van het installatieprogramma."
+msgid "An error occured and the network configuration process has been aborted. You may retry it from the installation main menu."
+msgstr "Er is een fout opgetreden en het netwerk-configuratieproces is afgebroken. U kunt het opnieuw proberen vanuit het hoofdmenu van het installatieprogramma."
 
 #. Type: error
 #. Description
@@ -302,23 +219,14 @@ msgstr "Er zijn geen netwerkapparaten gedetecteerd."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:98
-msgid ""
-"No network interfaces were found. The installation system was unable to find "
-"a network device."
-msgstr ""
-"Er zijn geen netwerkapparaten gevonden. Dit betekent dat het "
-"installatiesysteem geen netwerkapparaten gedetecteerd heeft."
+msgid "No network interfaces were found. The installation system was unable to find a network device."
+msgstr "Er zijn geen netwerkapparaten gevonden. Dit betekent dat het installatiesysteem geen netwerkapparaten gedetecteerd heeft."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:98
-msgid ""
-"You may need to load a specific module for your network card, if you have "
-"one. For this, go back to the network hardware detection step."
-msgstr ""
-"Mogelijk vereist uw netwerkkaart, als u er een heeft, een specifieke niet-"
-"geladen module. Om deze module te laden dient u terug te gaan naar de "
-"automatische netwerk-hardwareherkenning."
+msgid "You may need to load a specific module for your network card, if you have one. For this, go back to the network hardware detection step."
+msgstr "Mogelijk vereist uw netwerkkaart, als u er een heeft, een specifieke niet-geladen module. Om deze module te laden dient u terug te gaan naar de automatische netwerk-hardwareherkenning."
 
 #. Type: select
 #. Choices
@@ -335,15 +243,8 @@ msgstr "Soort draadloos netwerk:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
-msgid ""
-"Wireless networks are either managed or ad-hoc. If you use a real access "
-"point of some sort, your network is Managed. If another computer is your "
-"'access point', then your network is Ad-hoc."
-msgstr ""
-"Draadloze netwerken lopen in een van twee modussen: 'ad-hoc' of 'managed'. "
-"Wanneer u een echt 'access point' gebruikt loopt uw netwerk normaal in de "
-"'managed'-modus. Als een andere computer uw 'acces point' is loopt uw "
-"netwerk waarschijnlijk in 'ad-hoc'-modus."
+msgid "Wireless networks are either managed or ad-hoc. If you use a real access point of some sort, your network is Managed. If another computer is your 'access point', then your network is Ad-hoc."
+msgstr "Draadloze netwerken lopen in een van twee modussen: 'ad-hoc' of 'managed'. Wanneer u een echt 'access point' gebruikt loopt uw netwerk normaal in de 'managed'-modus. Als een andere computer uw 'acces point' is loopt uw netwerk waarschijnlijk in 'ad-hoc'-modus."
 
 #. Type: text
 #. Description
@@ -476,12 +377,8 @@ msgstr "DHCP-computernaam:"
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Mogelijk dient u hier een DHCP-computernaam in te voeren. Als u een "
-"kabelmodem gebruikt dient u hier wellicht een gebruikersnummer in te voeren."
+msgid "You may need to supply a DHCP host name. If you are using a cable modem, you might need to specify an account number here."
+msgstr "Mogelijk dient u hier een DHCP-computernaam in te voeren. Als u een kabelmodem gebruikt dient u hier wellicht een gebruikersnummer in te voeren."
 
 #. Type: string
 #. Description
@@ -491,13 +388,15 @@ msgstr "De meeste andere gebruikers kunnen dit leeg laten."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12
+#: ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Zijn deze gegevens correct?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:12
+#: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Momenteel ingestelde netwerkparameters:"
 
@@ -539,9 +438,7 @@ msgstr "Er is geen DHCP-client-programma gevonden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Er is geen DHCP-client-programma gevonden. Dit pakket vereist 'pump'- of "
-"'dhcp-client'- programma's."
+msgstr "Er is geen DHCP-client-programma gevonden. Dit pakket vereist 'pump'- of 'dhcp-client'- programma's."
 
 #. Type: error
 #. Description
@@ -560,13 +457,8 @@ msgstr "Wilt u de DHCP-netwerkconfiguratie opnieuw proberen?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr ""
-"De automatische netwerkconfiguratie (d.m.v. DHCP) heeft geen IP-adres "
-"verkregen. DHCP-servers zijn soms erg traag. U kunt later eventueel opnieuw "
-"proberen."
+msgid "No IP address was found during automatic network configuration with DHCP. DHCP servers are sometimes really slow. If you wish, you can retry."
+msgstr "De automatische netwerkconfiguratie (d.m.v. DHCP) heeft geen IP-adres verkregen. DHCP-servers zijn soms erg traag. U kunt later eventueel opnieuw proberen."
 
 #. Type: text
 #. Description
@@ -591,15 +483,8 @@ msgstr "IP-adres:"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-msgid ""
-"The IP address is unique to your computer and consists of four numbers "
-"separated by periods.  If you don't know what to use here, consult your "
-"network administrator."
-msgstr ""
-"Het IP-adres is een uniek getal waarmee uw computer zich in het netwerk "
-"identificeert. Het bestaat uit 4 door punten gescheiden getallen tussen 0 en "
-"255. Als u niet weet wat hier in te vullen neemt u best contact op met uw "
-"netwerkbeheerder."
+msgid "The IP address is unique to your computer and consists of four numbers separated by periods.  If you don't know what to use here, consult your network administrator."
+msgstr "Het IP-adres is een uniek getal waarmee uw computer zich in het netwerk identificeert. Het bestaat uit 4 door punten gescheiden getallen tussen 0 en 255. Als u niet weet wat hier in te vullen neemt u best contact op met uw netwerkbeheerder."
 
 #  Type: error
 #  Description
@@ -614,13 +499,8 @@ msgstr "Misvormd IP-adres"
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-msgid ""
-"The IP address you provided is malformed. It should be in the form x.x.x.x "
-"where each 'x' is no larger than 255. Please try again."
-msgstr ""
-"Het door u opgegeven IP-adres is misvormd. Het dient te voldoen aan de vorm "
-"x.x.x.x waarbij elke 'x' een getal is kleiner dan of gelijk aan 255. U kunt "
-"opnieuw proberen."
+msgid "The IP address you provided is malformed. It should be in the form x.x.x.x where each 'x' is no larger than 255. Please try again."
+msgstr "Het door u opgegeven IP-adres is misvormd. Het dient te voldoen aan de vorm x.x.x.x waarbij elke 'x' een getal is kleiner dan of gelijk aan 255. U kunt opnieuw proberen."
 
 #. Type: string
 #. Description
@@ -631,16 +511,8 @@ msgstr "Punt-naar-punt-adres (PPP-adres):"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-msgid ""
-"The point-to-point address is used to determine the other endpoint of the "
-"point to point network.  Consult your network administrator if you do not "
-"know the value.  The point-to-point address should be entered as four "
-"numbers separated by periods."
-msgstr ""
-"Het punt-naar-punt-adres geeft het andere eindpunt in een punt-naar-punt-"
-"netwerk aan. Als u deze waarde niet weet neemt u best contact op met uw "
-"netwerkbeheerder. Het punt-naar-punt-adres dient te bestaan uit vier door "
-"punten gescheiden getallen tussen 0 en 255."
+msgid "The point-to-point address is used to determine the other endpoint of the point to point network.  Consult your network administrator if you do not know the value.  The point-to-point address should be entered as four numbers separated by periods."
+msgstr "Het punt-naar-punt-adres geeft het andere eindpunt in een punt-naar-punt-netwerk aan. Als u deze waarde niet weet neemt u best contact op met uw netwerkbeheerder. Het punt-naar-punt-adres dient te bestaan uit vier door punten gescheiden getallen tussen 0 en 255."
 
 #. Type: string
 #. Description
@@ -651,15 +523,8 @@ msgstr "Netwerkmasker:"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
-msgid ""
-"The netmask is used to determine which machines are local to your network.  "
-"Consult your network administrator if you do not know the value.  The "
-"netmask should be entered as four numbers separated by periods."
-msgstr ""
-"Het netwerkmasker wordt gebruikt om te bepalen welke machines tot uw lokale "
-"netwerk behoren. Als u deze waarde niet weet neemt u best contact op met uw "
-"netwerkbeheerder. Het netwerkmasker dient te bestaan uit vier door punten "
-"gescheiden getallen tussen 0 en 255 (bijvoorbeeld: 255.255.255.0)."
+msgid "The netmask is used to determine which machines are local to your network.  Consult your network administrator if you do not know the value.  The netmask should be entered as four numbers separated by periods."
+msgstr "Het netwerkmasker wordt gebruikt om te bepalen welke machines tot uw lokale netwerk behoren. Als u deze waarde niet weet neemt u best contact op met uw netwerkbeheerder. Het netwerkmasker dient te bestaan uit vier door punten gescheiden getallen tussen 0 en 255 (bijvoorbeeld: 255.255.255.0)."
 
 #. Type: string
 #. Description
@@ -670,20 +535,8 @@ msgstr "Gateway:"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
-msgid ""
-"The gateway is an IP address (four numbers separated by periods) that "
-"indicates the gateway router, also known as the default router.  All traffic "
-"that goes outside your LAN (for instance, to the Internet) is sent through "
-"this router.  In rare circumstances, you may have no router; in that case, "
-"you can leave this blank.  If you don't know the proper answer to this "
-"question, consult your network administrator."
-msgstr ""
-"De gateway is het IP-adres (vier nummers gescheiden door punten) van de "
-"gateway router (ook wel de default router genoemd). Alle verkeer dat uw LAN "
-"verlaat (bv. naar internet) gaat via deze router. In zeldzame omstandigheden "
-"is het mogelijk dat u geen router heeft; in dat geval kunt u dit veld gewoon "
-"leeg laten. Als u de waarde niet weet kunt u best contact opnemen met uw "
-"netwerkbeheerder."
+msgid "The gateway is an IP address (four numbers separated by periods) that indicates the gateway router, also known as the default router.  All traffic that goes outside your LAN (for instance, to the Internet) is sent through this router.  In rare circumstances, you may have no router; in that case, you can leave this blank.  If you don't know the proper answer to this question, consult your network administrator."
+msgstr "De gateway is het IP-adres (vier nummers gescheiden door punten) van de gateway router (ook wel de default router genoemd). Alle verkeer dat uw LAN verlaat (bv. naar internet) gaat via deze router. In zeldzame omstandigheden is het mogelijk dat u geen router heeft; in dat geval kunt u dit veld gewoon leeg laten. Als u de waarde niet weet kunt u best contact opnemen met uw netwerkbeheerder."
 
 #. Type: error
 #. Description
@@ -700,11 +553,8 @@ msgstr "Het ingevoerde gateway-adres is niet bereikbaar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
-msgstr ""
-"U heeft mogelijk een fout gemaakt bij het invoeren van uw IP-adres, "
-"netwerkmasker en/of gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "U heeft mogelijk een fout gemaakt bij het invoeren van uw IP-adres, netwerkmasker en/of gateway."
 
 #. Type: boolean
 #. Description
@@ -742,14 +592,3 @@ msgstr "Statische netwerkconfiguratie"
 msgid "Configure a network using static addressing"
 msgstr "Netwerk instellen met statische adressen"
 
-#  Type: select
-#  Choices
-#  Type: select
-#  Choices
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamische adressen (DHCP), Statische adressen (handmatig)"
-
-#  Type: select
-#  Description
-#~ msgid "Network configuration method:"
-#~ msgstr "Netwerk-configuratiemethode:"
