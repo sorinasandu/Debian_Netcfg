@@ -6,7 +6,8 @@ netcfg (0.71) UNRELEASED; urgency=low
       against "ptom". It somehow didn't happen in the internal dhclient-script
       context, but appeared during testing in the shell.
     - Write new hostname into dhclient.conf. If a DHCP hostname was specified
-      beforehand, this won't happen, however. (Closes: #236533)
+      beforehand, this won't happen, however. (Would shut #236533 if jdthood
+      hadn't ifendiffed it out --jdthood)
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
@@ -17,9 +18,20 @@ netcfg (0.71) UNRELEASED; urgency=low
       + Add comments to /e/n/i about which packages implement which options
       + Fix race to dhcp_exit_status after dhcp_running set to 0.
       + Count iterations in the polling loop instead of checking the time()
+      + Use waitpid(dhcp_pid,,) instead of wait() to get child status
+        since we don't want the status of, e.g., killall.sh
+      + Eliminate use of dhcp_running and use (dhcp_pid>0) in its place
+      + Eliminate some unnecessary calls to kill_dhcp_client()
       + Mark local variables with "static"
-      + Always use spaces for indentation
-      + Improve comments
+      + Eliminate use of quit_after_hostname by creating HOSTNAME_SANS_NETWORK
+        from HOSTNAME and DOMAIN_SANS_NETWORK from DOMAIN
+      + Use DHCP host-name as the default hostname if no hostname is set
+        (Closes: #239591)
+      + Clean up code
+        . Always use spaces for indentation
+        . Improve comments
+        . Reorder state machine states
+        . Move kill_dhcp_client() to top of file
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 
