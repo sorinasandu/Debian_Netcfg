@@ -1,3 +1,4 @@
+# translation of debian-installer_tools_netcfg_da.po to Danish
 # translation of da.po to Danish
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -7,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: da\n"
+"Project-Id-Version: debian-installer_tools_netcfg_da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-11-17 19:23+0100\n"
+"PO-Revision-Date: 2003-12-14 23:37+0100\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -22,14 +23,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Dynamisk adressering (DHCP), statisk adressering (manuel)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "DHCP-netværksopsætning"
+msgstr "Netværksopsætnings-metode:"
 
 #. Type: select
 #. Description
@@ -41,6 +41,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
+"Netværket kan enten sættes op med DHCP eller ved manuelt at angive alle oplysningerne. "
+"Hvis du vælger DHCP, og installationsprogrammet ikke kan få en brugbar opsætning "
+"fra din DHCP-server på dit netværk, får du mulighed for at sætte netværket op "
+"manuelt, efter at det er forsøgt at sætte det op med DHCP. Hvis du er usikker, "
+"så vælg DHCP."
 
 #. Type: string
 #. Description
@@ -65,7 +70,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
 msgstr "Navneserver-adresser:"
 
@@ -92,7 +96,6 @@ msgstr "Netkort:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
@@ -130,15 +133,14 @@ msgstr "Angiv dette systems værtsnavn."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Maskinnavnet er et enkelt ord, der identificerer dit system på netværket. "
-"Hvis du ikke ved, hvad dit maskinnavn bør være, bør du spørge din "
+"Værtsnavnet er et enkelt ord, der identificerer dit system på netværket. "
+"Hvis du ikke ved, hvad dit værtsnavn bør være, bør du spørge din "
 "netværksadministrator. Hvis du laver dit eget hjemmenetværk, kan du selv "
 "finde på et navn."
 
@@ -157,14 +159,13 @@ msgstr "Navnet \"${hostname}\" er ugyldigt."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. If must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Gyldige maskinnavne indeholder kun bogstaver, tal og minustegn, er mellem 2 "
-"og 63 tegn lange - og starter og slutter ikke med et minustegn."
+"Gyldige værtsnavne indeholder kun bogstaver, tal og minustegn. Det skal være mellem "
+"2 og 63 tegn langt, og må ikke begynde eller ende med et minustegn."
 
 #. Type: error
 #. Description
@@ -175,7 +176,6 @@ msgstr "Fejl"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:65
-#, fuzzy
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -202,14 +202,13 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Det kan være nødvendigt at indlæse et bestemt modul til dit netkort, hvis du "
 "virkelig har sådan et. For at gøre dette, skal du gå tilbage til "
-"netværksudstyrssøgnings-trinnet."
+"trinnet for søgning efter netværksudstyr."
 
 #. Type: text
 #. Description
@@ -250,9 +249,8 @@ msgstr "Seriel-linje IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
-msgstr "Parallel-linje IP"
+msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
@@ -306,17 +304,15 @@ msgstr "Ukendt netkort"
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "DHCP-netværksopsætning"
+msgstr "Netværksopsætning"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "Sæt statisk netværk op"
+msgstr "Sæt netværket op"
 
 #. Type: string
 #. Description
@@ -377,9 +373,8 @@ msgstr "Sætter netværket op via DHCP"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
-msgstr "Det kan tage nogle minutter."
+msgstr "Det kan tage nogen tid."
 
 #. Type: error
 #. Description
@@ -391,8 +386,7 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -403,9 +397,8 @@ msgstr "Opsætningen af DHCP afbrydes."
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP-netværksopsætning"
+msgstr "Vil du forsøge DHCP-netværksopsætningen igen?"
 
 #. Type: boolean
 #. Description
@@ -414,14 +407,15 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
+"Det blev ikke givet nogen IP-adresse under DHCP-netværksopsætningen. Nogle "
+"gange kan DHCP-servere være meget langsomme. Hvis du vil, kan du prøve igen."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Statisk netværksopsætning"
+msgstr "Dynamisk netværksopsætning (DHCP)"
 
 #. Type: text
 #. Description
@@ -524,8 +518,7 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -556,7 +549,6 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
 msgstr "Statisk netværksopsætning"
 
@@ -613,3 +605,4 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
