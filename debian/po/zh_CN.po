@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-09 18:32-0700\n"
+"POT-Creation-Date: 2004-04-12 00:42-0700\n"
 "PO-Revision-Date: 2004-04-10 21:22+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -72,24 +72,26 @@ msgstr "名称服务器地址："
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
+"The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first server in the list will be "
-"the first to be queried. If you don't want to use any name server, just "
-"leave this field blank."
+"separated by spaces. Do not use commas. The first nameserver in the list "
+"will be the first to be queried. If you don't want to use any nameserver, "
+"just leave this field blank."
 msgstr ""
 "请输入最多三个名称服务器的 IP 地址(不是主机名)，以空格分隔，不要使用逗号。列"
 "表中的第一个服务器将首先被查询。如果不想用任何名称服务器，置空就可以了。"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid "Primary network interface:"
 msgstr "主网络接口："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
@@ -97,13 +99,13 @@ msgstr "您的系统有多个网络接口。请选择一个主网络接口来安
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} 的无线 ESSID："
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -114,13 +116,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
 msgstr "${iface} 的 WEP 密钥："
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
@@ -129,7 +131,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -139,7 +141,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -148,7 +150,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -156,13 +158,13 @@ msgstr "当然，如果您的无线网络没有 WEP 密钥，请将此处置空�
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
 msgstr "无效的 WEP 密钥"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -172,13 +174,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
 msgstr "无效的 ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -188,19 +190,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Hostname:"
 msgstr "主机名："
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
 msgstr "请输入系统的主机名。"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -212,19 +214,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "Invalid hostname"
 msgstr "无效的主机名"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
 msgstr "名称“${hostname}”是无效的。"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -235,13 +237,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid "Error"
 msgstr "错误"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -249,13 +251,13 @@ msgstr "有错误产生，网络配置过程已被中止。您可以从安装程
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
 msgstr "未探测到网络接口"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -263,7 +265,7 @@ msgstr "没有检测到网络接口。安装系统无法找到网络设备。"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -273,19 +275,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "共用 (Managed) 网络, Ad-hoc 网络 (点对点)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "无线网络类别："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -297,130 +299,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "无线网络设置"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "正在搜索无线网络接入点(AP) ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:125
 msgid "<none>"
 msgstr "<无>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:129
 msgid "Wireless ethernet (802.11x)"
 msgstr "无线局域网(802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:133
 msgid "Ethernet or Fast Ethernet"
 msgstr "以太网或速以太网"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:137
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC 卡(PCMCIA)以太网或令牌环网"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "令牌环"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:145
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:149
 msgid "Serial-line IP"
 msgstr "串行 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:153
 msgid "Parallel-port IP"
 msgstr "并行口 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:157
 msgid "Point-to-Point Protocol"
 msgstr "点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:161
 msgid "IPv6-in-IPv4"
 msgstr "IPv4-in-IPv6 "
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:165
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:169
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:173
 msgid "Real channel-to-channel"
 msgstr "真实的 channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:177
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:181
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:185
 msgid "Unknown interface"
 msgstr "未知接口"
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-common.templates:189
-msgid "Network Configuration"
-msgstr "网络配置"
-
-#. Type: text
-#. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:190
 msgid "Configuring network ..."
 msgstr "正在配置网络 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:195
 msgid "Configure the network"
 msgstr "配置网络"
 
@@ -677,6 +672,9 @@ msgstr "静态网络设置"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
+
+#~ msgid "Network Configuration"
+#~ msgstr "网络配置"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "动态地址(DHCP), 静态地址(手动设置)"

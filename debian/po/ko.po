@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-09 18:32-0700\n"
+"POT-Creation-Date: 2004-04-12 00:42-0700\n"
 "PO-Revision-Date: 2004-04-11 01:17+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -61,11 +61,13 @@ msgstr "네임 서버 주소:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
+"The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first server in the list will be "
-"the first to be queried. If you don't want to use any name server, just "
-"leave this field blank."
+"separated by spaces. Do not use commas. The first nameserver in the list "
+"will be the first to be queried. If you don't want to use any nameserver, "
+"just leave this field blank."
 msgstr ""
 "네임 서버의 IP 주소를 (호스트 이름이 아닙니다) 3개까지 입력하십시오. 여러 개"
 "일 경우 공백으로 구분합니다. 쉼표를 사용하지 마십시오. 첫 번째 서버에 맨 먼"
@@ -73,13 +75,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid "Primary network interface:"
 msgstr "주 네트워크 인터페이스:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
@@ -89,13 +91,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} 인터페이스의 무선 ESSID:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -107,13 +109,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
 msgstr "${iface} 인터페이스의 WEP 키:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
@@ -123,7 +125,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -133,7 +135,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -141,7 +143,7 @@ msgstr "WEP 키가 열쇠글의 형태라면, 앞에 's:'를 붙이십시오 (�
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -149,13 +151,13 @@ msgstr "물론, 무선 네트워크에 WEP 키가 없으면, 이 필드를 비�
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
 msgstr "WEP 키가 잘못되었습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -165,13 +167,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
 msgstr "ESSID가 잘못되었습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -181,19 +183,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Hostname:"
 msgstr "호스트 이름:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
 msgstr "이 시스템의 호스트 이름을 입력하십시오."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -206,19 +208,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "Invalid hostname"
 msgstr "잘못된 호스트 이름"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
 msgstr "\"${hostname}\" 이름이 잘못되었습니다."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -229,13 +231,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid "Error"
 msgstr "오류"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -245,13 +247,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
 msgstr "네트워크 인터페이스를 찾을 수 없습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -261,7 +263,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -271,19 +273,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "인프라스트럭쳐 (관리) 네트워크, 자체 구성 네트워크 (일대일)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "무선 네트워크 종류:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -295,130 +297,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "무선 네트워크 설정"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "무선 액세스 포인트를 찾는 중입니다 ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:125
 msgid "<none>"
 msgstr "<없음>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:129
 msgid "Wireless ethernet (802.11x)"
 msgstr "무선 네트워크 (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:133
 msgid "Ethernet or Fast Ethernet"
 msgstr "이더넷 혹은 패스트 이더넷"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:137
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC카드 (PCMCIA) 이더넷 혹은 토큰 링"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "토큰 링"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:145
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:149
 msgid "Serial-line IP"
 msgstr "시리얼 라인 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:153
 msgid "Parallel-port IP"
 msgstr "병렬 포트 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:157
 msgid "Point-to-Point Protocol"
 msgstr "포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:161
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:165
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:169
 msgid "Channel-to-channel"
 msgstr "채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:173
 msgid "Real channel-to-channel"
 msgstr "실제 채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:177
 msgid "Hypersocket"
 msgstr "하이퍼소켓"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:181
 msgid "Inter-user communication vehicle"
 msgstr "사용자간 통신 수단"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:185
 msgid "Unknown interface"
 msgstr "알 수 없는 인터페이스"
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-common.templates:189
-msgid "Network Configuration"
-msgstr "네트워크 설정"
-
-#. Type: text
-#. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:190
 msgid "Configuring network ..."
 msgstr "네트워크를 설정하는 중입니다 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:195
 msgid "Configure the network"
 msgstr "네트워크 설정"
 
@@ -681,6 +676,9 @@ msgstr "고정 네트워크 설정"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "고정 주소를 사용해 네트워크를 설정합니다"
+
+#~ msgid "Network Configuration"
+#~ msgstr "네트워크 설정"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "동적 주소 (DHCP), 고정 주소 (수동)"

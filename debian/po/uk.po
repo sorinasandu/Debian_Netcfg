@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-09 18:32-0700\n"
+"POT-Creation-Date: 2004-04-12 00:42-0700\n"
 "PO-Revision-Date: 2004-04-10 15:08+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -24,7 +24,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -81,11 +82,13 @@ msgstr "Адреси серверів імен:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
+"The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first server in the list will be "
-"the first to be queried. If you don't want to use any name server, just "
-"leave this field blank."
+"separated by spaces. Do not use commas. The first nameserver in the list "
+"will be the first to be queried. If you don't want to use any nameserver, "
+"just leave this field blank."
 msgstr ""
 "Введіть IP-адреси серверів імен (не більше 3), розділені пробілами. Не "
 "використовуйте коми. Сервери будуть опитуватися в порядку їх вказування. "
@@ -93,13 +96,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid "Primary network interface:"
 msgstr "Первинний мережевий інтерфейс:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:31
+#: ../netcfg-common.templates:32
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
@@ -109,13 +112,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Бездротовий ESSID для ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:37
+#: ../netcfg-common.templates:38
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -127,13 +130,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
 msgstr "WEP ключ для ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
@@ -143,7 +146,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -153,15 +156,16 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr ""
+"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:45
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -171,13 +175,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
 msgstr "Невірний WEP ключ"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:60
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -187,13 +191,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
 msgstr "Невірний ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:66
+#: ../netcfg-common.templates:67
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -203,19 +207,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Hostname:"
 msgstr "Ім'я комп'ютера:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
 msgstr "Введіть ім'я цього комп'ютера:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:74
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -229,19 +233,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "Invalid hostname"
 msgstr "Невірне ім'я комп'ютера"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Ім'я комп'ютера „${hostname}“ не припустиме."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:83
+#: ../netcfg-common.templates:84
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -253,13 +257,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid "Error"
 msgstr "Помилка"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:93
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -269,13 +273,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
 msgstr "Мережеві інтерфейси не знайдені"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -285,7 +289,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:99
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -295,19 +299,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Централізована мережа, Ad-hoc мережа (точка-точка)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "Тип бездротової мережі:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -319,130 +323,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "Налаштовування бездротової мережі"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "Пошук точок доступу бездротової мережі..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:125
 msgid "<none>"
 msgstr "<жоден>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:129
 msgid "Wireless ethernet (802.11x)"
 msgstr "Бездротовий Ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:133
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet або Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:137
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet або Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:145
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:149
 msgid "Serial-line IP"
 msgstr "IP по послідовній лінії (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:153
 msgid "Parallel-port IP"
 msgstr "IP по паралельній лінії (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:157
 msgid "Point-to-Point Protocol"
 msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:161
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-в-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:165
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:169
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:173
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:177
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:181
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:185
 msgid "Unknown interface"
 msgstr "Невідомий інтерфейс"
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-common.templates:189
-msgid "Network Configuration"
-msgstr "Налаштовування мережі"
-
-#. Type: text
-#. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:190
 msgid "Configuring network ..."
 msgstr "Налаштовування мережі..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:195
 msgid "Configure the network"
 msgstr "Налаштувати мережу"
 
@@ -519,7 +516,8 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr ""
+"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -669,7 +667,8 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
 "шлюзу."
@@ -710,6 +709,9 @@ msgstr "Налаштовування статичної адреси"
 msgid "Configure a network using static addressing"
 msgstr "Налаштувати мережу із статичним адресуванням"
 
+#~ msgid "Network Configuration"
+#~ msgstr "Налаштовування мережі"
+
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Динамічна адреса (DHCP), Статична адреса (вручну)"
 
@@ -721,4 +723,3 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
-
