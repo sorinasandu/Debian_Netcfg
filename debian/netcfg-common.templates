@@ -42,9 +42,9 @@ _Description: Wireless ESSID for ${iface}:
 
 Template: netcfg/wireless_wep
 Type: string
-_Description: WEP key for ${iface}:
- If applicable, please enter the WEP security key for device ${iface}.
- There are two ways to do this:
+_Description: WEP key for wireless device ${iface}:
+ If applicable, please enter the WEP security key for the wireless
+ device ${iface}. There are two ways to do this:
  .
  If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n
  is a number, just enter it as it is into this field.
