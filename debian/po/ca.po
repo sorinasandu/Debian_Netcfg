@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2004-02-01 18:29+0100\n"
+"PO-Revision-Date: 2004-02-05 18:52+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,13 +19,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Adreçament dinàmic (DHCP), adreçament estàtic (manual)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
 msgid "Network configuration method:"
-msgstr ""
+msgstr "Mètode de configuració de la xarxa:"
 
 #. Type: select
 #. Description
@@ -37,6 +37,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
+"Es pot configurar la xarxa mitjançant DHCP o introduïnt manualment tota la "
+"informació. Si seleccioneu DHCP i l'instal·lador no és capaç d'obtenir una "
+"configuració funcional des d'un servidor de DHCP a la vostra xarxa, tindreu "
+"l'oportunitat de configurar la vostra xarxa manualment després de l'intent "
+"de configurar-la per DHCP. Si no esteu segur, seleccioneu DHCP."
 
 #. Type: string
 #. Description
@@ -62,7 +67,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:23
 msgid "Name server addresses:"
-msgstr ""
+msgstr "Adreces dels servidors de noms:"
 
 #. Type: string
 #. Description
@@ -73,6 +78,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
+"Introduïu l'adreça IP (i no els noms dels ordinadors) de fins a 3 servidors "
+"de noms, separats per espais. No utilitzeu comes. El primer servidor de la "
+"llista serà el primer en utilitzar-se. Si no voleu utilitzar cap servidor de "
+"noms, simplement deixeu aquest camp en blanc."
 
 #. Type: select
 #. Description
@@ -165,6 +174,8 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
+"S'ha produït un error i s'ha avortat el procés de configuració de la xarxa. "
+"Podeu tornar a intentar-ho des del menú principal de la instal·lació."
 
 #. Type: error
 #. Description
@@ -179,6 +190,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
+"No s'ha trobat cap interfície de xarxa. El sistema d'instal·lació no ha "
+"pogut trobar un dispositiu de xarxa."
 
 #. Type: error
 #. Description
@@ -187,6 +200,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
+"És possible que necessiteu carregar un mòdul específic per a la vostra "
+"targeta de xarxa, si teniu una. Per fer això, torneu enrere al pas de "
+"detecció de maquinari de xarxa."
 
 #. Type: text
 #. Description
@@ -198,105 +214,106 @@ msgstr "<cap>"
 #. Description
 #: ../netcfg-common.templates:82
 msgid "Ethernet or Fast Ethernet"
-msgstr ""
+msgstr "Ethernet o ethernet ràpida"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:86
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr ""
+msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:90
 msgid "Token Ring"
-msgstr ""
+msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Arcnet"
-msgstr ""
+msgstr "Arcnet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:98
 msgid "Serial-line IP"
-msgstr ""
+msgstr "IP per línia sèrie"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:102
 msgid "Parallel-port IP"
-msgstr ""
+msgstr "IP per port paral·lel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:106
 msgid "Point-to-Point Protocol"
-msgstr ""
+msgstr "Protocol Punt-a-Punt (PPP)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:110
 msgid "IPv6-in-IPv4"
-msgstr ""
+msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:114
 msgid "ISDN Point-to-Point Protocol"
-msgstr ""
+msgstr "Protocol Punt-a-Punt de XDSI"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "Canal-a-canal real"
 
+# La veritat, no se si s'ha de traduir moltes d'aquestes...
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:126
 msgid "Hypersocket"
-msgstr ""
+msgstr "Hipersòcol"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:130
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Vehicle de comunicació entre usuaris"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:134
 msgid "Unknown interface"
-msgstr ""
+msgstr "Interfície desconeguda"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:139
 msgid "Network Configuration"
-msgstr ""
+msgstr "Configuració de la xarxa"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:144
 msgid "Configure the network"
-msgstr ""
+msgstr "Configura la xarxa"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "Nom de l'ordinador DHCP:"
 
 #. Type: string
 #. Description
@@ -305,12 +322,15 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
+"És possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
+"utilitzant un mòdem de cable, és possible que tingueu que especificar un "
+"nombre de compte ací."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr "La major part dels altres usuaris poden deixar això en blanc."
 
 #. Type: boolean
 #. Description
@@ -322,7 +342,7 @@ msgstr "És aquesta informació correcta?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Paràmetres de la xarxa actualment configurada:"
 
 #: ../netcfg-dhcp.templates:12
 msgid ""
@@ -342,37 +362,38 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr ""
+msgstr "S'està configurant la xarxa amb DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
-msgstr ""
+msgstr "Això pot trigar un temps."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "No s'ha trobat cap client DHCP"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
+"No s'ha trobat cap client DHCP. Aquest paquet requereix pump o dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "S'avortarà el procés de configuració per DHCP."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr ""
+msgstr "Voleu tornar a provar la configuració de la xarxa per DHCP?"
 
 #. Type: boolean
 #. Description
@@ -381,26 +402,28 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
+"No s'ha ofert cap adreça IP durant la configuració de la xarxa per DHCP. A "
+"vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a provar."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
-msgstr ""
+msgstr "Configuració dinàmica de la xarxa (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
+msgstr "Configura la xarxa utilitzant adreçament dinàmic (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr ""
+msgstr "Adreça IP:"
 
 #. Type: string
 #. Description
@@ -418,7 +441,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Point-to-point address:"
-msgstr ""
+msgstr "Adreça punt-a-punt:"
 
 #. Type: string
 #. Description
@@ -429,12 +452,16 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
+"L'adreça punt-a-punt s'utilitza per a determinar l'altre extrem de la xarxa "
+"punt-a-punt. Consulteu al vostre administrador de xarxa si no sabeu el "
+"valor. L'adreça punt-a-punt s'ha d'introduir com quatre números separats per "
+"punts."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask:"
-msgstr ""
+msgstr "Màscara de xarxa:"
 
 #. Type: string
 #. Description
@@ -453,7 +480,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway:"
-msgstr ""
+msgstr "Pasarel·la:"
 
 #. Type: string
 #. Description
@@ -466,18 +493,25 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"La pasarel·la és una adreça IP (quatre números separats per punts) que "
+"indica el router pasarel·la, també conegut com el router per defecte. Tot el "
+"tràfic que va fora de la vostra LAN (per exemple, a Internet) s'envia a "
+"través d'aquest router. En algunes circunstàncies no habituals, és possible "
+"no tenir un router; en aquest cas, podeu deixar açò en blanc. Si no sabeu la "
+"resposta adequada per a aquesta pregunta, consulteu al vostre administrador "
+"de xarxa."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Pasarel·la inaccessible"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid "The gateway address you entered is unreachable."
-msgstr ""
+msgstr "L'adreça de pasarel·la que heu introduït és inaccessible."
 
 #. Type: error
 #. Description
