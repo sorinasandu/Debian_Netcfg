@@ -100,6 +100,48 @@ void get_name(char *name, char *p)
 }
 
 
+static FILE *ifs = NULL;
+static char ibuf[512];
+
+void getif_start(void)
+{
+    if (ifs != NULL) {
+        fclose(ifs);
+        ifs = NULL;
+    }
+    if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
+        fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
+        fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
+    }
+    return;
+}
+
+
+char *getif(int all)
+{
+    char rbuf[512];
+    if (ifs == NULL)
+        return NULL;
+
+    if (fgets(rbuf, sizeof(rbuf), ifs) != NULL) {
+        get_name(ibuf, rbuf);
+        if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
+            return getif(all);      /* seriously doubt there is an infinite number of lo devices */
+        if (all || is_interface_up(ibuf) == 1)
+            return ibuf;
+    }
+    return NULL;
+}
+
+
+void getif_end(void)
+{
+    if (ifs != NULL) {
+        fclose(ifs);
+        ifs = NULL;
+    }
+    return;
+}
 
 char *find_in_devnames(const char* iface)
 {
@@ -153,7 +195,7 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
             ptr++;
         *ptr = '\0';
 
-        snprintf(template, sizeof(template), "netcfg/internal-%s", new_ifp);
+        sprintf(template, "netcfg/internal-%s", new_ifp);
         free(new_ifp);
 
         debconf_metaget(client, template, "description");
@@ -221,35 +263,6 @@ void netcfg_die(struct debconfclient *client)
     exit(1);
 }
 
-char** get_ifaces (int all)
-{
-  struct if_nameindex *o = if_nameindex(), *index = o;
-  char** list = NULL;
-  size_t len = 0;
-
-  while (index->if_name)
-  {
-    if (strcmp(index->if_name, "lo"))
-    {
-      if (all || is_interface_up(index->if_name))
-      {
-        list = realloc(list, (len + 1) * sizeof(char**));
-        list[len] = strdup(index->if_name);
-        len++;
-      }
-    }
-    index++;
-  }
-
-  if_freenameindex(o);
-
-  /* terminate the list */
-  list = realloc(list, (len + 1) * sizeof(char**));
-  list[len] = NULL;
-
-  return list;
-}
-
 /**
  * @brief Ask which interface to configure
  * @param client - client 
@@ -260,13 +273,12 @@ char** get_ifaces (int all)
 int netcfg_get_interface(struct debconfclient *client, char **interface,
                          int *numif)
 {
+    char *inter;
     size_t len;
     int ret;
     int num_interfaces = 0;
     char *ptr = NULL;
     char *ifdsc = NULL;
-    char * inter = NULL;
-    char **interfaces;
 
     if (*interface) {
         free(*interface);
@@ -279,12 +291,10 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     len = 128;
     *ptr = '\0';
 
-    interfaces = get_ifaces(1);
+    getif_start();
 
-    while (*interfaces) {
+    while ((inter = getif(1)) != NULL) {
 	size_t newchars;
-        
-        inter = *interfaces;
 
 	ifconfig_down(inter);
 	ifdsc = get_ifdsc(client, inter);
@@ -296,9 +306,9 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         }
         di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
         num_interfaces++;
-        interfaces++;
         free(ifdsc);
     }
+    getif_end();
 
     if (num_interfaces == 0) {
         debconf_input(client, "high", "netcfg/no_interfaces");
