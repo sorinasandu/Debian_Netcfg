@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-05-13 00:58+0300\n"
+"PO-Revision-Date: 2004-05-20 01:47+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
 "MIME-Version: 1.0\n"
@@ -474,9 +474,8 @@ msgstr "Aceasta poate dura ceva timp."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Reîncearcă autoconfigurarea reţelei"
+msgstr "Autoconfigurarea reţelei a reuşit!"
 
 #. Type: error
 #. Description
@@ -531,33 +530,25 @@ msgstr "Nu configura reţeaua acum"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuraţia reţelei"
+msgstr "Metoda de configurare a reţelei:"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
-"Autoconfigurarea reţelei a eşuat. Aceasta se întămplă de obicei datorită "
-"unui server DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. "
-"Puteţi, de asemenea, să specificaţi un nume DHCP pentru a fi trimis către "
-"server dacă credeţi că este necesar. Pe de altă parte, puteţi configura "
-"reţeaua manual sau să nu o configuraţi  acum."
+msgstr "Autoconfigurarea reţelei a eşuat. Motivul probabil al acetui lucru un server DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. Dacă în reţeaua dvs. nu se foloseşte DHCP pentru autoconfigurare, puteţi configura manual. De asemenea, unele server DHCP necesită să specificaţi un nume DHCP, deci puteţi să alegeţi să introduceţi un asemenea nume înainte de a reîncerca DHCP."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configurează reţeaua"
+msgstr "Reconfigurează reţeaua wireless"
 
 #. Type: text
 #. Description
@@ -686,8 +677,7 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -757,3 +747,4 @@ msgstr "Configurează reţeaua folosind adresare statică"
 #~ "Nu s-a găsit nici o adresă IP în timpul configurării automate cu DHCP. "
 #~ "Uneori serverele DHCP sunt foarte lente. Dacă doriţi, puteţi să încercaţi "
 #~ "din nou."
+
