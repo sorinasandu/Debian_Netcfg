@@ -34,6 +34,8 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
+#define DHCP_QUESTION_PRIO "medium"
+
 static method_t netcfg_method = DHCP;
 
 int netcfg_get_method(struct debconfclient *client) 
@@ -41,7 +43,7 @@ int netcfg_get_method(struct debconfclient *client)
     char *result;
     int ret;
 
-    ret = my_debconf_input(client, "medium", "netcfg/use_dhcp", &result);
+    ret = my_debconf_input(client, DHCP_QUESTION_PRIO, "netcfg/use_dhcp", &result);
 
     if (strcmp(result, "true") == 0) 
 	netcfg_method = DHCP;
@@ -89,7 +91,10 @@ int main(void)
 	        /* See if link is established? */
 	        method_t tmp = mii_diag_status_lite(interface);
 		
-		if (tmp != DUNNO)
+		debconf_get(client, "debconf/priority");
+		
+		/* Don't override the user's choice. */
+		if (tmp != DUNNO && !strcmp(client->value, DHCP_QUESTION_PRIO))
 		  netcfg_method = tmp;
 
 		if (netcfg_method == DHCP) 
