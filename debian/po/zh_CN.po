@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 01:26-0500\n"
-"PO-Revision-Date: 2004-02-23 01:35+1300\n"
+"PO-Revision-Date: 2004-02-24 00:40+1300\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -105,7 +105,7 @@ msgstr "您的系统有多个网络接口。请选择一个主网络接口来安
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "${iface} 的无线 ESSID："
 
 #. Type: string
 #. Description
@@ -115,12 +115,14 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this form blank."
 msgstr ""
+"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称(ESSID)"
+"。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "${iface} 的 WEP 密钥："
 
 #. Type: string
 #. Description
@@ -129,6 +131,7 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"如果合适，请为 ${iface} 设备输入 WEP 安全密钥。有两种方法可以完成此任务："
 
 #. Type: string
 #. Description
@@ -137,6 +140,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into the box."
 msgstr ""
+"如果您的 WEP 密钥的格式是“nnnn-nnnn-nn”或“nnnnnnnn”，其中 n 是一个数字，请将"
+"它直接填写到输入框中。"
 
 #. Type: string
 #. Description
@@ -145,6 +150,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes.)"
 msgstr ""
+"如果您的 WEP 密钥的格式是一个密码字符串，请在前面加上“s:”(不包括引号)。"
 
 #. Type: string
 #. Description
@@ -153,12 +159,13 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this form "
 "blank."
 msgstr ""
+"当然，如果您的无线网络没有 WEP 密钥，请将此处置空。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "无效的 WEP 密钥"
 
 #. Type: error
 #. Description
@@ -167,12 +174,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"此 WEP 密钥“${wepkey}”是无效的。请仔细阅读下一屏的指导信息，以了解如何正确地"
+"输入您的 WEP 密钥，并重试。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "无效的 ESSID"
 
 #. Type: error
 #. Description
@@ -181,6 +190,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"此 ESSID“${essid}”是无效的。ESSID 最长仅为 32 个字符，但可以包含所有字符种类。"
 
 #. Type: string
 #. Description
@@ -277,7 +287,7 @@ msgstr "<无>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "无线局域网(802.11x)"
 
 #. Type: text
 #. Description
