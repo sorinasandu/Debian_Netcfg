@@ -1,39 +1,18 @@
-# translation of netcfg_ru.po to Русский язык
-# translation of netcfg_ru.po to Russian
-# translation of debian-installer_tools_netcfg_ru.po to Russian
-# This file is distributed under the same license as the PACKAGE package.
-#
-#    Translators, please read /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
-# Eugene Konev <ejka@imfi.kspu.ru>, 2004.
-# Yuri Kozlov <yuray@id.ru>, 2004.
-# Yuriy Talakan' <yt@amur.elektra.ru>, 2004.
+# Russian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg_ru\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-23 21:23+0200\n"
+"POT-Creation-Date: 2004-08-23 21:37+0200\n"
 "PO-Revision-Date: 2004-07-10 14:16+0400\n"
-"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
-"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
+"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
+"Language-Team: Debian L10n Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -775,8 +754,6 @@ msgstr "Эта информация верна?"
 msgid "Currently configured network parameters:"
 msgstr "Текущие сетевые настройки:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -799,7 +776,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Настроить сеть"
