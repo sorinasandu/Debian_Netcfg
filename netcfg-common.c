@@ -1099,7 +1099,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
 
     /* load kernel module for network sockets silently */
-    di_exec("/sbin/modprobe af_packet");
+    di_exec_shell("modprobe af_packet");
 
     /* get dhcp lease */
     switch (dhcp_client) {

@@ -3,8 +3,7 @@ netcfg (0.64) UNRELEASED; urgency=low
   * Joshua Kwan
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
-    - Silently load af_packet by using di_exec instead of di_exec_shell_log.
-      (Closes: #244441)
+    - Silently load af_packet. (Closes: #244441, #244696)
 
  -- Joshua Kwan <joshk@triplehelix.org>  Sat, 17 Apr 2004 23:20:56 -0700
 
