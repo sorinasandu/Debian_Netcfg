@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg-0.35\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-12-13 13:53-0300\n"
+"PO-Revision-Date: 2003-12-13 15:30-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,6 @@ msgstr "Método de configuração de rede :"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose DHCP and the installer is unable to get a working "
@@ -43,8 +42,8 @@ msgid ""
 msgstr ""
 "A rede pode ser configurada via DHCP ou informando manualmente todos os "
 "dados necessários. Caso você opte por usar a configuração via DHCP e o "
-"instalador Debian não seja capaz de obter uma configuração funcional de um "
-"servidor DHCP em sua rede, você terá a possibilidade de informar os dados "
+"instalador não seja capaz de obter uma configuração funcional de um "
+"servidor DHCP em sua rede, você terá a oportunidade de informar os dados "
 "necessários para sua configuração de rede manualmente após a tentativa de "
 "configuração via DHCP. Caso não tenha certeza sobre o que escolher, escolha "
 "DHCP."
@@ -73,7 +72,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
 msgstr "Endereços dos servidores de nomes :"
 
@@ -138,7 +136,6 @@ msgstr "Por favor, informe o nome de máquina (hostname) para este sistema."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -165,7 +162,6 @@ msgstr "O nome \"${hostname}\" é inválido."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. If must be between 2 and 63 characters long, and may not begin or end "
@@ -210,14 +206,13 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Você pode precisar carregar um módulo específico para sua placa de rede caso "
-"você realmente possua uma. Para fazê-lo, retorne ao passo de detecção de "
-"hardware de rede."
+"Você pode precisar carregar um módulo específico para sua placa de rede, "
+"caso você realmente possua uma. Para fazê-lo, retorne ao passo de detecção "
+"de hardware de rede."
 
 #. Type: text
 #. Description
@@ -258,9 +253,8 @@ msgstr "IP Linha-Serial"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
-msgstr "IP Linha Paralela"
+msgstr "IP Porta-Paralela"
 
 #. Type: text
 #. Description
@@ -417,14 +411,13 @@ msgstr "Você deseja tentar a configuração via DHCP novamente ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Nenhum endereço IP foi oferecido durante a tentativa de configuração da rede "
 "via DHCP. Algumas vezes, alguns servidores DHCP são realmente lentos. Caso "
-"seja esse o caso, você pode tentar novamente."
+"deseje, você pode tentar novamente."
 
 #. Type: text
 #. Description
