@@ -1,3 +1,4 @@
+# translation of tools-netcfg-debian-po-fi.po to Finnish
 # translation of fi.po to Finnish
 # translation of tools/netcfg to Finnish
 # Translators, if you are not familiar with the PO format, gettext
@@ -18,7 +19,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-03-03 18:16+0200\n"
+"PO-Revision-Date: 2004-03-11 07:43+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +51,8 @@ msgid ""
 msgstr ""
 "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse. Jos "
 "valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
-"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdäasetukset itse."
+"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdäasetukset itse. "
+"Jos et ole varma, käytä DHCP:tä."
 
 #. Type: string
 #. Description
@@ -67,10 +69,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Toimialueen nimi on se osa Internet-osoitettasi, joka on tietokoneesi nimen "
-"perässä.  Se on usein jotain, joka loppuu .fi, .com, .net tai .org.  Jos "
+"Verkkoaluenimi on se osa Internet-osoitettasi, joka on tietokoneesi nimen "
+"perässä. Se on usein jotain, joka loppuu .fi, .com, .net tai .org. Jos "
 "olet pystyttämässä kotiverkkoa, voit keksiä tähän jotain, mutta varmista, "
-"että käytät samaa toimialueen nimeä kaikissa tietokoneissasi."
+"että käytät samaa verkkoaluenimeä kaikissa tietokoneissasi."
 
 #. Type: string
 #. Description
@@ -87,7 +89,7 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Ole hyvä ja syötä IP-osoitteet (ei konenimiä) korkeintaan kolmelle "
+"Kirjoita IP-osoitteet (ei konenimiä) korkeintaan kolmelle "
 "nimipalvelimelle välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta "
 "kysytään siinä järjestyksessä kuin syötät ne. Jos et halua käyttää mitään "
 "nimipalvelimia, voit jättää tämän kentän tyhjäksi."
@@ -225,7 +227,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Konenimi toimii koneesi tunnisteena verkossa. Jos et tiedä mikä isäntänimesi "
+"Konenimi toimii koneesi tunnisteena verkossa. Jos et tiedä mikä konenimen "
 "pitäisi olla, kysy verkon ylläpitäjältä. Jos olet pystyttämässä omaa "
 "kotiverkkoasi, voit valita nimen vapaasti."
 
@@ -458,9 +460,9 @@ msgid ""
 " nameservers    = ${nameservers}"
 msgstr ""
 " sovitin        = ${interface}\n"
-" isäntänimi     = ${hostname}\n"
+" konenimi       = ${hostname}\n"
 " toimialue      = ${domain}\n"
-" dhcp-isäntänimi= ${dhcp_hostname}\n"
+" dhcp-konenimi  = ${dhcp_hostname}\n"
 " nimipalvelimet = ${nameservers}"
 
 #. Type: text
@@ -537,9 +539,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP-osoite on uniikki juuri sinun tietokoneellesi ja sisältää neljä lukua "
-"eroteltuna pisteillä.  Jos et tiedä mitä käyttää tässä, konsultoi verkkosi "
-"ylläpitäjää."
+"IP-osoite on yksikäsitteinen tunniste verkon tietokoneille ja sisältää "
+"neljä lukua eroteltuna pisteillä. Jos et tiedä mitä käyttää tässä, kysy "
+"verkkosi ylläpitäjältä."
 
 #. Type: error
 #. Description
@@ -590,9 +592,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Verkkopeitettä käytetään määrittämään, mitkä koneet ovat "
-"paikalliseverkossasi.  Konsultoi verkkosi ylläpitäjää, jos et tiedä tätä "
-"arvoa.  Verkkopeite syötetään neljänä lukuna eroteltuna pistein."
+"Verkon peitettä käytetään määrittämään, mitkä koneet ovat "
+"paikallisverkossasi. Kysy verkkosi ylläpitäjältä, jos et tiedä tätä "
+"arvoa. Verkon peite syötetään neljänä lukuna eroteltuna pistein."
 
 #. Type: string
 #. Description
@@ -652,7 +654,7 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " sovitin       = ${interface}\n"
-" isäntänimi    = ${hostname}\n"
+" konenimi      = ${hostname}\n"
 " toimialue     = ${domain}\n"
 " ip-osoite     = ${ipaddress}\n"
 " verkkopeite   = ${netmask}\n"
