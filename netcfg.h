@@ -1,6 +1,8 @@
 #ifndef _NETCFG_H_
 #define _NETCFG_H_
 #include <sys/types.h>
+#include <stdio.h>
+#include <cdebconf/debconfclient.h>
 
 #define ETC_DIR 	"/etc"
 #define NETWORK_DIR 	"/etc/network"

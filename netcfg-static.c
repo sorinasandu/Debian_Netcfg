@@ -29,7 +29,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <debconfclient.h>
+#include <cdebconf/debconfclient.h>
 #include "utils.h"
 #include "netcfg.h"
 

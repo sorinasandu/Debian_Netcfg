@@ -1,5 +1,5 @@
 /* 
-   netcfg.c - Share functions used to configure the network for 
+   netcfg.c - Shared functions used to configure the network for 
 	   the debian-installer.
    Author - David Whedon
 
@@ -30,7 +30,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <debconfclient.h>
+#include <cdebconf/debconfclient.h>
 #include "utils.h"
 #include "netcfg.h"
 
@@ -219,7 +219,7 @@ dot2num (u_int32_t * num, char *dot)
   unsigned long val;
 
   if (!dot)
-    goto error;
+    goto exit;
 
   *num = 0;
   for (ix = 0; ix < 4; ix++)
@@ -230,17 +230,17 @@ dot2num (u_int32_t * num, char *dot)
       if (e == p)
 	val = 0;
       else if (val > 255)
-	goto error;
+	goto exit;
       *num += val;
       /*printf("%#8x, %#2x\n", *num, val); */
       if (ix < 3 && *e != '.')
-	goto error;
+	goto exit;
       p = e;
     }
 
   return;
 
-error:
+exit:
   *num = 0;
 }
 
@@ -394,14 +394,15 @@ netcfg_nameservers_to_array (char *nameservers, u_int32_t array[])
 
   if (nameservers)
     {
-      save = ptr = strdup (ptr);
-      ns = strtok_r (ptr, " ", &ptr);
+      save = ptr = strdup (nameservers);
+      
+      ns = strtok_r (ptr, " \n\t", &ptr);
       dot2num (&array[0], ns);
 
-      ns = strtok_r (NULL, " ", &ptr);
+      ns = strtok_r (NULL, " \n\t", &ptr);
       dot2num (&array[1], ns);
 
-      ns = strtok_r (NULL, " ", &ptr);
+      ns = strtok_r (NULL, " \n\t", &ptr);
       dot2num (&array[2], ns);
 
       array[3] = 0;
