@@ -354,7 +354,7 @@ void netcfg_die(struct debconfclient *client)
  */
 
 int netcfg_get_interface(struct debconfclient *client, char **interface,
-                         int *numif)
+                         int *numif, char* defif)
 {
     char *inter = NULL, **ifs;
     size_t len;
@@ -391,6 +391,10 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
             len += newchars + 128;
         }
         di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
+
+		if (!strcmp(defif, inter))
+			debconf_subst(client, "netcfg/get_interfaces", "ifdefault", ptr);
+
         free(ifdsc);
     }
 

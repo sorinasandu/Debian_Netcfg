@@ -61,6 +61,8 @@ int main(int argc, char *argv[])
     enum { BACKUP, GET_INTERFACE, GET_HOSTNAME_ONLY, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
+	char **ifaces;
+	char *defiface = NULL;
     response_t res;
 
     /* initialize libd-i */
@@ -90,7 +92,20 @@ int main(int argc, char *argv[])
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
-	    if(netcfg_get_interface(client, &interface, &num_interfaces))
+		/* Choose a default from ethtool-lite */
+		get_all_ifs(1, &ifaces);
+		
+		while (*ifaces)
+		{
+			if (ethtool_lite (*ifaces) == 1) /* CONNECTED */
+			{
+				defiface = strdup(*ifaces);
+				break;
+			}
+			ifaces++;
+		}
+		
+	    if(netcfg_get_interface(client, &interface, &num_interfaces, defiface))
 	      state = BACKUP;
 	    else if (! interface || ! num_interfaces)
 	      state = GET_HOSTNAME_ONLY;

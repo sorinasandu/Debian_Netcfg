@@ -79,7 +79,7 @@ extern FILE *file_open (char *path, const char *opentype);
 
 extern void netcfg_die (struct debconfclient *client);
 
-extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces);
+extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces, char* defif);
 
 extern short verify_hostname (char *hname);
 
@@ -127,4 +127,7 @@ extern void open_sockets (void);
 extern void reap_old_files (void);
 
 extern int netcfg_write_resolv (char*, struct in_addr *);
+
+extern int ethtool_lite (char*);
+
 #endif /* _NETCFG_H_ */

@@ -217,13 +217,14 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 
   wconf.has_key = 1;
   wconf.key_size = keylen;
-  wconf.key_flags = IW_ENCODE_ENABLED | IW_ENCODE_OPEN;
+  wconf.key_flags = 0;
   
   strncpy (wconf.key, buf, keylen);
 
   wepkey = strdup(rv);
 
-  iw_set_basic_config (wfd, iface, &wconf);
+  if (iw_set_basic_config (wfd, iface, &wconf) == -1)
+    fprintf(stderr, "warning: failed to set wep key");
 
   return 0;
 }

@@ -16,7 +16,7 @@ all: $(TARGETS)
 
 netcfg-dhcp: netcfg-dhcp.o dhcp.o
 netcfg-static: netcfg-static.o static.o
-netcfg: netcfg.o dhcp.o static.o
+netcfg: netcfg.o dhcp.o static.o ethtool-lite.o
 
 $(TARGETS): $(COMMON_OBJS)
 	$(CC) -o $@ $^ $(LDOPTS)

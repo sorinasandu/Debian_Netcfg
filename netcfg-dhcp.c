@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
-	    if (netcfg_get_interface(client, &interface, &num_interfaces))
+	    if (netcfg_get_interface(client, &interface, &num_interfaces, NULL))
 	      state = BACKUP;
 	    else if (! interface || ! num_interfaces)
 	      state = GET_HOSTNAME_ONLY;
