@@ -1,7 +1,19 @@
-* put in checks so the user can't enter data that is clearly invalid (perhaps this will be done through debconf.
-* do other sorts of network configurations (pcmcia, ppp)
-* pppconfig would be a good starting point for the ppp udeb.  There is also an example in there of how to use pppd to detect a modem.
+* try to do dhcp first without asking for a specific DHCP hostname, just ask for
+  the hostname that will be written to /etc/hosts.  If DHCP fails then have a
+  dialog indicating that some cable modem providers require you to specify a 
+  special DHCP hostname.  You can enter that here now if you want.
+  
 
-* netcfg-dhcp : when we use dhclient if we don't obtain a lease, dhclient goes
- into the background and the installer thinks that it succeeded.  This isn't
- right.
+* Nameserver and domain are in the common configuration?  Should they be? 
+
+* we should send a dhcp hostname
+
+* put in checks so the user can't enter data that is clearly invalid (perhaps
+  this will be done through debconf.
+
+* do other sorts of network configurations (pcmcia, ppp)
+
+* pppconfig would be a good starting point for the ppp udeb.  There is also an
+  example in there of how to use pppd to detect a modem.
+
+

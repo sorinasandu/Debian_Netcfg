@@ -37,6 +37,12 @@ Description: Enter the system's hostname.
  your network administrator.  If you are setting up your own home
  network, you can make something up here. 
 
+Template: netcfg/invalid_hostname
+Type: note
+Description: The hostname "${hostname}" is invalid.
+ A valid hostname may contain only alphanumeric characters and the minus sign,
+ be between 2 and 63 characters long, and cannot begin or end with a minus sign.
+
 Template: netcfg/error
 Type: note
 Description: An error occured and I cannot continue.

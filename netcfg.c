@@ -1,7 +1,6 @@
 /* 
    netcfg.c - Shared functions used to configure the network for 
 	   the debian-installer.
-   Author - David Kimdon
 
    Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    
@@ -18,6 +17,7 @@
    You should have received a copy of the GNU General Public License
    along with this program; if not, write to the Free Software
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
 */
 
 #include <ctype.h>
@@ -323,28 +323,49 @@ netcfg_get_common(struct debconfclient *client, char **interface,
                   char **hostname, char **domain, char **nameservers)
 {
         char *ptr;
+        static const char *valid_chars =
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
+        size_t len;
 
         netcfg_get_interface(client, interface);
 
-        if (*hostname) {
-                free(*hostname);
-                *hostname = NULL;
-        }
-        *hostname =
-            strdup(debconf_input(client, "medium", "netcfg/get_hostname"));
+        do {
+		free(*hostname);
 
-        if (*domain) {
-                free(*domain);
-        }
-        *domain = NULL;
-        if ((ptr = debconf_input(client, "medium", "netcfg/get_domain")))
+                *hostname =
+                    strdup(debconf_input
+                           (client, "medium", "netcfg/get_hostname"));
+
+                len = strlen(*hostname);
+
+                /* Check the hostname for RFC 1123 compliance.  */
+                if ((len < 2) ||
+                    (len > 63) ||
+                    (strspn(*hostname, valid_chars) != len) ||
+		    (*hostname[len - 1] == '-') ||
+		    (*hostname[0] == '-')) {
+			client->command(client, "subst", "netcfg/invalid_hostname",
+					"hostname", *hostname, NULL);
+                        client->command(client, "input", "high",
+                                        "netcfg/invalid_hostname", NULL);
+                        client->command(client, "go", NULL);
+			free(*hostname);
+			*hostname = NULL;
+		}
+        
+	} while (!hostname);
+
+
+	free(*domain);
+
+	*domain = NULL;
+        
+	if ((ptr = debconf_input(client, "medium", "netcfg/get_domain")))
                 *domain = strdup(ptr);
 
-
-        if (*nameservers) {
-                free(*nameservers);
-        }
-        *nameservers = NULL;
+	free(*nameservers);
+        
+	*nameservers = NULL;
         if ((ptr =
              debconf_input(client, "medium", "netcfg/get_nameservers")))
                 *nameservers = strdup(ptr);
@@ -378,8 +399,8 @@ void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
 
 
 void
-netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname,
-                    u_int32_t nameservers[])
+netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname, 
+		u_int32_t nameservers[])
 {
         FILE *fp;
 
@@ -390,10 +411,10 @@ netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname,
                         if (domain)
                                 fprintf(fp, "%s\t%s.%s\t%s\n",
                                         num2dot(ipaddress), hostname,
-                                        domain, hostname);
+					domain, hostname);
                         else
                                 fprintf(fp, "%s\t%s\n", num2dot(ipaddress),
-                                        hostname);
+						hostname);
                 }
 
                 fclose(fp);

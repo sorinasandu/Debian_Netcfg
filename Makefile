@@ -21,14 +21,9 @@ all: $(TARGETS)
 netcfg-dhcp netcfg-static: netcfg-dhcp.c netcfg.o
 	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) netcfg.o
 	$(STRIP) $@
-	size $@ 
 
 netcfg.o: netcfg.c
 	$(CC) -c $(CFLAGS) netcfg.c  -o $@ $(INCS)
-
-
-test: netcfg.o
-	cc -g test.c netcfg.o -o test
 
 clean:
 	rm -f netcfg-dhcp netcfg-static *.o 

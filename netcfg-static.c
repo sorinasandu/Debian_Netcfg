@@ -1,6 +1,5 @@
 /* 
    netcfg-static.c - Configure a static network for the debian-installer
-   Author - David Kimdon
 
    Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    

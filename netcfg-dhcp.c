@@ -1,6 +1,5 @@
 /* 
    netcfg-dhcp.c - Configure a network via dhcp for the debian-installer
-   Author - David Kimdon
 
    Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    
