@@ -72,16 +72,15 @@ msgstr "名稱伺服器位址："
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr ""
-"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器 (Name Server) 的 IP 位址 "
-"(不是主機名稱)。在進行查詢時將優先使用列表中的第一個伺服器。如果不想用任何名"
+msgstr "名稱伺服器 (Name Server) 是用來在網路上搜尋主機名稱 (Host Name)。"
+"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。"
+"在進行查詢時將優先使用列表中的第一個名稱伺服器。如果您不想用任何名"
 "稱伺服器，直接在欄位中留白即可。"
 
 #. Type: select
@@ -119,19 +118,17 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "${iface} 的 WEP 密鑰："
+msgstr "無線裝置 ${iface} 的 WEP 密鑰："
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"如果適用的話，請輸入 ${iface} 裝置的 WEP 安全密鑰。有兩種方法可以採用："
+"如果適用的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。有兩種方法可以採用："
 
 #. Type: string
 #. Description
@@ -292,14 +289,13 @@ msgstr "無線網路類別："
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "無線網路可以是 Managed 或是 Ad-hoc。如果您是以某些實體裝置做為基地台，您的網"
-"路是 Managed。而或者您的基地台是另一台電腦，您的網路則為 Ad-hoc。"
+"路是 Managed。而或者您的基地台是另一台電腦，您的網路則可能是 Ad-hoc。"
 
 #. Type: text
 #. Description
