@@ -215,10 +215,13 @@ char *find_in_devnames(const char* iface)
 
   fclose(dn);
 
-  len = strlen(result);
+  if (result)
+  {
+    len = strlen(result);
   
-  if (result[len - 1] == '\n')
-    result[len - 1] = '\0';
+    if (result[len - 1] == '\n')
+      result[len - 1] = '\0';
+  }
 
   return result;
 }
