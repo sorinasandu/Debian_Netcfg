@@ -1,3 +1,4 @@
+# translation of tr.po to Turkish
 # Turkish translation of netcfg.
 # This file is distributed under the same license as the netcfg package.
 # Osman Yüksel <yuxel@sonsuzdongu.com>, 2004.
@@ -7,7 +8,7 @@ msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 11:39+0100\n"
-"PO-Revision-Date: 2004-03-26 08:16+0200\n"
+"PO-Revision-Date: 2004-03-26 13:28+0200\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,14 +20,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Ağınız DHCP ile ayarlanıyor"
+msgstr "Ağ DHCP kullanarak otomatik ayarlansın mı ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -35,9 +34,8 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Ağ, DHCP kullanarak veya tüm bilgileri manuel girerek ayarlanabilir. Eğer "
-"DHCP seçerseniz ve bir şekilde çalışır bir DHCP sunucu bulamazsanız, DHCP "
-"denemesinden sonra ağınızı manuel olarak ayarlama fırsatınız var. Emin "
-"değilseniz DHCP'yi seçin."
+"DHCP kullanmayseçerseniz ve bir şekilde çalışır bir DHCP sunucu bulamazsanız, DHCP "
+"denemesinden sonra ağınızı manuel olarak ayarlama fırsatınız var. "
 
 #. Type: string
 #. Description
@@ -636,8 +634,7 @@ msgstr "Girdiğiniz ağ geçidi erişilemez."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "IP adresi, ağ maskesi ve/veya ağ geçidini girerken bir hata yapmış "
 "olabilirsiniz."
@@ -676,8 +673,3 @@ msgstr "Statik Ağ Ayarları"
 msgid "Configure a network using static addressing"
 msgstr "Statik adresleme ile ağı ayarla"
 
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dinamik adresleme (DHCP), Statik adresleme(manuel)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Ağ ayar methodu:"
