@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 11:39+0100\n"
-"PO-Revision-Date: 2004-03-01 01:43+0800\n"
+"POT-Creation-Date: 2004-03-22 15:51-0500\n"
+"PO-Revision-Date: 2004-03-24 17:44+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
 "MIME-Version: 1.0\n"
@@ -27,24 +27,22 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "使用 DHCP 來設定網路"
+msgstr "要使用 DHCP 來自動設定網路嗎？"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
 "working configuration from a DHCP server on your network, you will be given "
-"the opportunity to configure your network manually after the attempt to "
+"the opportunity to configure your network manually after the atempt to "
 "configure it by DHCP."
 msgstr ""
-"網路可以由 DHCP 來加以設定，或者手動輸入所有資訊。如果您選擇使用 DHCP，但安裝"
+"可以使用 DHCP 來設定網路，或者手動輸入所有資訊。如果您選擇了 DHCP，但安裝"
 "程式無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，您仍"
-"然可以經由手動輸入來設定網路。如果不確定，請選擇使用 DHCP。"
+"然可以經由手動輸入來設定網路。"
 
 #. Type: string
 #. Description
@@ -210,7 +208,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"主機名稱 (HostName) 是用來在網路中辨別您的系統的一個單字。如果您不知道系統的"
+"主機名稱 (HostName) 是用來在網路中辨別您的系統的一個單字。如果您不知道這個系統的"
 "主機名稱應該是什麼，請洽詢您的網路管理員。如果您正在設定的是自己的家用網路，"
 "那麼可以隨意取個名字。"
 
@@ -279,13 +277,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "共用 (Managed) 網路, Ad-hoc 網路 (點對點)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "無線網路類別："
 
 #. Type: select
 #. Description
@@ -294,7 +292,8 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr ""
+msgstr "無線網路可以是 Managed 或是 Ad-hoc。如果您是以某些實體裝置做為基地台，"
+"您的網路是 Managed。而或者您的基地台是另一台電腦，您的網路則為 Ad-hoc。"
 
 #. Type: text
 #. Description
@@ -447,6 +446,8 @@ msgstr "這些資訊正確嗎？"
 msgid "Currently configured network parameters:"
 msgstr "當前被設定的網路參數："
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -632,6 +633,8 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
