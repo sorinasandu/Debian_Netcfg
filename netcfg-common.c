@@ -1283,7 +1283,6 @@ automatic:
     }
 
     debconf_progress_stop(client);
-    free(cmd);
 
     if (success)
       return 0;
