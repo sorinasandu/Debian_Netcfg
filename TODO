@@ -1,6 +1,3 @@
-* put in checks so the user can't enter data that is clearly invalid (perhaps
-  this will be done through debconf.
-
 * do other sorts of network configurations (pcmcia, ppp)
 
 * pppconfig would be a good starting point for the ppp udeb.  There is also an
@@ -9,4 +6,10 @@
 * Make netcfg-static smarter about default values, e.g. call ifconfig and
   parse.
 
-* Ask for a hostname if the DHCP server does not provide one.
+* find a smart way to affirm that the network is functional
+
+* allow user to abort network configuration completely (have the postinst
+  exit w/ a successful status though)
+
+* allow user option to reconfigure with static IP, reconfigure wireless,
+  or retry DHCP without sacrificing UI usability
