@@ -1,3 +1,4 @@
+# translation of gl.po to Galego
 # translation of debian-installer_packages_netcfg_gl.po to Galego
 #
 #    Translators, if you are not familiar with the PO format, gettext
@@ -9,26 +10,27 @@
 #            /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
-# Héctor Fernández López <trorrr@yahoo.es>, 2004
+# Héctor Fernández López <trorrr@yahoo.es>, 2004.
+# Héctor Fenández López <trorrr@yahoo.es>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer_packages_netcfg_gl\n"
+"Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-10 06:48-0700\n"
-"PO-Revision-Date: 2004-05-19 19:17+0200\n"
-"Last-Translator: Héctor Fernández López <trorrr@yahoo.es>\n"
+"PO-Revision-Date: 2004-09-14 20:25+0200\n"
+"Last-Translator: Héctor Fenández López <trorrr@yahoo.es>\n"
 "Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "¿Autoconfigura-la rede con DHCP?"
+msgstr "¿Autoconfigura-la rede por DHCP?"
 
 #. Type: boolean
 #. Description
@@ -240,15 +242,11 @@ msgstr "O nome da máquina \"${hostname}\" non é válido."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr ""
-"Un nome de máquina válido debe conter só caracteres alfanuméricos e o signo "
-"menos (-).  Debe ter entre 2 e 63 caracteres de lonxitude e non pode comezar "
-"nin rematar polo símbolo menos (-)."
+msgstr "Un nome de servidor válido conterá só números do 0 ó 9, letras minúsculas da a á z e o signo menos.  Debe ter entre 2 e 63 caracteres de largo, e non debe comezar ou rematar co signo menos."
 
 #. Type: error
 #. Description
@@ -344,7 +342,7 @@ msgstr "Ethernet inalámbrica (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "sen fíos"
 
 #. Type: text
 #. Description
@@ -488,8 +486,7 @@ msgstr "Non se atopou ningún cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Non se atopou un cliente DHCP.  Este paquete require pump ou dhcp-client."
+msgstr "Non se atopou un cliente DHCP.  Este paquete require pump ou dhcp-client."
 
 #. Type: error
 #. Description
@@ -715,8 +712,7 @@ msgstr "Non se puido alcanza-la porta de enlace que escribiches"
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Pode que cometeras un erro ó escribi-la dirección IP, máscara de rede e/ou "
 "porta de enlace."
@@ -758,44 +754,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configurar unha rede usando direccionamento estático"
 
-#, fuzzy
-#~ msgid "Configure the network statically?"
-#~ msgstr "Configura-la rede manualmente"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Configura-la rede"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configuración dinámica da rede (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " interface      = ${interface}\n"
-#~ " nome da máquina= ${hostname}\n"
-#~ " dominio        = ${domain}\n"
-#~ " máquina DHCP   = ${dhcp_hostname}\n"
-#~ " serv. de nomes = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Configuración estática da rede"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet ou Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "¿Queres voltar a proba-la configuración da rede DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Non foi atopada unha dirección IP durante a configuración automática da "
-#~ "rede por DHCP.  Ás veces, os servidores DHCP son moi lentos, se queres "
-#~ "podes probar de novo."
