@@ -1,15 +1,17 @@
 # Hebrew messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-#
+# <>, 2004.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-26 03:36+0200\n"
-"PO-Revision-Date: 2004-08-12 00:46+0300\n"
-"Last-Translator:  <>\n"
-"Language-Team: Debian L10n Hebrew <debian-l10n-hebrew@lists.debian.org>\n"
+"PO-Revision-Date: 2004-08-28 19:50+0300\n"
+"Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
+"Language-Team: Debian L10n Hebrew <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,7 +32,7 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"רשת יכולה להיות מוגדרת או ע\"י DHCP או ע\"י הכנסת המידע אופן ידני. אם תבחר "
+"רשת יכולה להיות מוגדרת או ע\"י DHCP או ע\"י הכנסת המידע באופן ידני. אם תבחר "
 "להשתמש ב-DHCP והמתקין לא יוכל לקבל את המידע משרת ה-DHCP ברשת שלך, תקבל "
 "אפשרות להכניס את המידע ידנית אחרי הניסיון להגדרה ע\"י DHCP."
 
@@ -49,8 +51,8 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"כתובת הדומיין, היא חלק מכתובת האינטרנט שלך, מימין לשרת השרת. הדומיין הוא "
-"משהו שבדרך כלל מסתיים בסיומות כגון .com, .co.il, .org.il או .net.il. אם אתה "
+"כתובת הדומיין, היא חלק מכתובת האינטרנט שלך, מימין לשם השרת. הדומיין הוא משהו "
+"שבדרך כלל מסתיים בסיומות כגון .com, .co.il, .org.il או .net.il ועוד. אם אתה "
 "מגדיר רשת ביתית, תוכל להמציא משהו, אבל שים לב שאתה משתמש באותו שם דומיין בכל "
 "המחשבים."
 
@@ -87,7 +89,7 @@ msgstr "ממשק רשת ראשי:"
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
-msgstr "למערכת שלך יש מספר ממשקי רשת. בחר אחד כממש הראשי בזמן התקנה Debian."
+msgstr "למערכת שלך יש מספר ממשקי רשת. בחר אחד כממשק הראשי בזמן התקנה Debian."
 
 #. Type: string
 #. Description
@@ -204,9 +206,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"שם המחשב היא מילה אחת שמאפיינת את המערכת שלך ברשת. אם אינך יודע מה שם המחשב "
-"שלך צריך להיות, התייעץ עם מנהל הרשת שלך. אם אתה מגדיר רשת ביתית, אתה יכול "
-"להמציא משהו."
+"שם המחשב היא מילה אחת שמאפיינת את המערכת שלך ברשת. אם אינך יודע מה צריך "
+"להיות שם המחשב שלך, התייעץ עם מנהל הרשת שלך. אם אתה מגדיר רשת ביתית, אתה "
+"יכול להמציא משהו."
 
 #. Type: error
 #. Description
@@ -244,7 +246,7 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"קרתה שגיאה ותהליך הגדרת הרשת בוטל. תוכל לעשות אותו מחדש בתפריט ההתקנה הראשי."
+"התרחשה שגיאה ותהליך הגדרת הרשת בוטל. תוכל לעשותו מחדש בתפריט ההתקנה הראשי."
 
 #. Type: error
 #. Description
@@ -258,7 +260,7 @@ msgstr "לא זוהו ממשקי רשת"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "לא נמצא ממשק רשת. מערכת ההתקנה לא מסוגלת למצוא התקן רשת."
+msgstr "לא נמצא ממשקי רשת. מערכת ההתקנה לא מסוגלת למצוא התקן רשת."
 
 #. Type: error
 #. Description
@@ -273,9 +275,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "מגדיר את הרשת"
+msgstr "להגדיר את הרשת באופן סטטי?"
 
 #. Type: boolean
 #. Description
@@ -296,13 +297,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "רשת תשתית או רשת יעודית (peer to peer)"
+msgstr "רשת מנוהלת או רשת יעודית (peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
-msgstr "סוגר רשת אלחוטית:"
+msgstr "סוג רשת אלחוטית:"
 
 #. Type: select
 #. Description
@@ -326,7 +327,7 @@ msgstr "הגדרת רשת אלחוטית"
 #. Description
 #: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
-msgstr "מחפש נקודותת גישה לרשת האלחוטית..."
+msgstr "מחפש נקודות גישה לרשת האלחוטית..."
 
 #. Type: text
 #. Description
@@ -429,14 +430,14 @@ msgstr "ממשק לא מוכר"
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:206
 msgid "Configuring network ..."
-msgstr "מגדיר רשת..."
+msgstr "הגדרות רשת..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:211
 msgid "Configure the network"
-msgstr "מגדיר את הרשת..."
+msgstr "הגדרות רשת"
 
 #. Type: string
 #. Description
@@ -451,7 +452,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"אולי תצטרך לספר שם שרת DHCP. אם אתה משתמש במודם כבלים, תצטרך לפרט שם משתמש "
+"אולי תצטרך לספק שם שרת DHCP. אם אתה משתמש במודם כבלים, תצטרך לפרט שם משתמש "
 "כאן."
 
 #. Type: string
@@ -470,7 +471,7 @@ msgstr "מגדיר את הרשת עם DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "הפעולה עלולה לקחת זמן מה..."
+msgstr "פעולה זאת עלולה להיות ארוכה..."
 
 #. Type: text
 #. Description
@@ -500,19 +501,19 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי?"
+msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "לנסות להגדיר מחדש רשת באופן אוטומטי עם שם שרת DHCP"
+msgstr "לנסות להגדיר מחדש את הרשת באופן אוטומטי עם שם שרת DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "מגדיר את הרשת"
+msgstr "הגדר את הרשת באופן ידני"
 
 #. Type: select
 #. Choices
@@ -559,7 +560,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"הרשת שלך כנראה לא משתמשרת בפרוטוקל DHCP. לחילופין, שרת ה-DHCP שלך יכול להיות "
+"הרשת שלך כנראה לא משתמשת בפרוטוקל DHCP. לחילופין, שרת ה-DHCP שלך יכול להיות "
 "איטי, או שחומרת רשת כלשהי אינה עובדת בצורה תקינה."
 
 #. Type: boolean
@@ -580,7 +581,8 @@ msgid ""
 msgstr ""
 "הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: כלומר המערכת "
 "לא יודעת איך לתקשר עם מחשבים באינטרנט. אי אפשר להמשיך בהתקנה אלא אם יש לך את "
-"הדיסק הרשמי הראשון של Debian, דיסק התקנה מינימלית חבילות על הרשת המקומית שלך."
+"הדיסק הרשמי הראשון של Debian, דיסק התקנה מינימלית, או חבילות על הרשת המקומית "
+"שלך."
 
 #. Type: boolean
 #. Description
@@ -603,7 +605,7 @@ msgstr "מגדיר מחדש את הרשת האלחוטית"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "הגדר את הרשת שלך בעזרת כתובות משתנות (DHCP)"
+msgstr "הגדר את הרשת שלך בעזרת כתובות דינמיות (DHCP)"
 
 #. Type: string
 #. Description
@@ -654,8 +656,8 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "כתובת הנקודה לנקודה שמשתמש כדי לקבוע את הנקודה השניה ברשת הנקודה לנקודה. "
-"התייעץ עם מנהל הרשת שלך, אם אינך יודע את הערך. מסכת הרשת שלך צריכה להיות 4 "
-"מספרים מופרדים בנקודות."
+"התייעץ עם מנהל הרשת שלך, אם אינך יודע את הערך הנכון. מסכת הרשת שלך צריכה "
+"להיות 4 מספרים מופרדים בנקודות."
 
 #. Type: string
 #. Description
@@ -671,8 +673,8 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"מסכת הרשת משתמש כדי לקבוע איזה מכונות הן בתוך הרשת שלך. התייעץ עם מנהל הרשת "
-"שלך, אם אינך יודע את הערך. מסכת הרשת שלך צריכה להיות 4 מספרים מופרדים "
+"מסכת הרשת משמשת כדי לקבוע איזה מחשבים הם בתוך הרשת שלך. התייעץ עם מנהל הרשת "
+"שלך, אם אינך יודע את הערך הנכון. מסכת הרשת שלך צריכה להיות 4 מספרים מופרדים "
 "בנקודות."
 
 #. Type: string
@@ -692,16 +694,16 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"ה-gateway היא כתובת IP (ארבעה מספרים מופרדים בנקודות) שמציינת את נתב היעד/"
-"ברירת המחדל. כל התעבורה שיוצאת מחוץ לרשת המקומית שלך (אינטרנט לדוגמה) נשלחת "
-"דרך נתב זה. במקרים נדירים יכול להיות שאין לך נתב. במקרה זה, השאר את השדה "
-"ריק. אם אין לך מידע וודאי לגבי שדה זה, התייעץ עם מנהל הרשת שלך."
+"ה-gateway היא כתובת IP (ארבעה מספרים מופרדים בנקודות) שמציינת את נתב ברירת "
+"המחדל. כל התעבורה שיוצאת מחוץ לרשת המקומית שלך (אינטרנט לדוגמה) נשלחת דרך "
+"נתב זה. במקרים נדירים יכול להיות שאין לך נתב. במקרה זה, השאר את השדה ריק. אם "
+"אין לך מידע וודאי לגבי שדה זה, התייעץ עם מנהל הרשת שלך."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "gateway לא ניגש"
+msgstr "gateway לא נגיש"
 
 #. Type: error
 #. Description
@@ -726,7 +728,7 @@ msgstr "האם המידע נכון?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "פרמרטים שנקבעו  כרגע:"
+msgstr "פרמרטים שנקבעו כרגע:"
 
 #: ../netcfg-static.templates:53
 msgid ""
