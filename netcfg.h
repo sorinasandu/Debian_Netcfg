@@ -35,6 +35,8 @@ extern char *num2dot (u_int32_t num);
 
 extern void netcfg_die (struct debconfclient *client);
 
+extern void netcfg_get_interface(struct debconfclient *client, char **interface);
+
 extern void netcfg_get_common (struct debconfclient *client, char **interface,
 			       char **hostname, char **domain,
 			       char **nameservers);
