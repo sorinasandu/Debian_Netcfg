@@ -15,11 +15,15 @@ endif
 STRIPTOOL	= strip
 STRIP		= $(STRIPTOOL) -R .note -R .comment
 
-all: $(TARGETS)
+all: $(TARGETS) sleep
 
 netcfg-dhcp: netcfg-dhcp.o dhcp.o
 netcfg-static: netcfg-static.o static.o
 netcfg: netcfg.o dhcp.o static.o
+
+sleep: sleep.c
+	$(CC) $(CFLAGS) -o $@ $<
+	$(STRIP) $@
 
 $(TARGETS): $(COMMON_OBJS)
 	$(CC) -o $@ $^ $(LDOPTS)
@@ -29,6 +33,6 @@ $(TARGETS): $(COMMON_OBJS)
 	$(CC) -c $(CFLAGS) $(DEFS) $(INCS) -o $@ $<
 
 clean:
-	rm -f $(TARGETS) *.o build-stamp
+	rm -f $(TARGETS) *.o build-stamp sleep
 
 .PHONY: all clean

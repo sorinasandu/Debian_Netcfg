@@ -381,7 +381,7 @@ int netcfg_get_static(struct debconfclient *client)
     char ptr1[INET_ADDRSTRLEN];
     char *none;
 
-    enum { BACKUP, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK, GET_GATEWAY, 
+    enum { BACKUP, GET_HOSTNAME, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK, GET_GATEWAY, 
            GATEWAY_UNREACHABLE, GET_NAMESERVERS, CONFIRM, GET_DOMAIN, QUIT } state = GET_IPADDRESS;
 
     ipaddress.s_addr = network.s_addr = broadcast.s_addr = netmask.s_addr = gateway.s_addr = pointopoint.s_addr =
@@ -437,11 +437,19 @@ int netcfg_get_static(struct debconfclient *client)
             break;
         case GET_NAMESERVERS:
             state = (netcfg_get_nameservers (client, &nameservers)) ?
-                GET_GATEWAY : GET_DOMAIN;
+                GET_GATEWAY : GET_HOSTNAME;
             break;
+	case GET_HOSTNAME:
+	    state = (netcfg_get_hostname(client, "netcfg/get_hostname", &hostname, 1)) ?
+	      GET_NAMESERVERS : GET_DOMAIN;
+	    break;
         case GET_DOMAIN:
-            state = (netcfg_get_domain (client, &domain)) ?
-                GET_NAMESERVERS : CONFIRM;
+	    if (!have_domain) {
+	      state = (netcfg_get_domain (client, &domain)) ?
+		GET_HOSTNAME : CONFIRM;
+	    }
+	    else 
+	      state = CONFIRM;
             break;
         case CONFIRM:
             debconf_subst(client, "netcfg/confirm_static", "interface", interface);

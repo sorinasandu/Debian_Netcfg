@@ -102,9 +102,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     {
       case PUMP:
 	if (dhostname)
-	  execlp("pump", "pump", "-i", interface, "-h", dhostname);
+	  execlp("pump", "pump", "-i", interface, "-h", dhostname, NULL);
 	else
-	  execlp("pump", "pump", "-i", interface);
+	  execlp("pump", "pump", "-i", interface, NULL);
 
 	break;
 
@@ -120,7 +120,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 	  }
 	}
 
-	execlp("dhclient", "dhclient", "-e", interface);
+	execlp("dhclient", "dhclient", "-e", interface, NULL);
 	break;
 
       case DHCLIENT3:
@@ -135,14 +135,14 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 	  }
 	}
 
-	execlp("dhclient", "dhclient", "-1", interface);
+	execlp("dhclient", "dhclient", "-1", interface, NULL);
 	break;
 
       case UDHCPC:
 	if (dhostname)
-	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", "-H", dhostname);
+	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", "-H", dhostname, NULL);
 	else
-	  execlp("udhcpc", "udhcpc", "-i", interface, "-n");
+	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", NULL);
 
 	break;
     }
@@ -200,12 +200,6 @@ int poll_dhcp_client (struct debconfclient *client)
     di_info("unsetting PID (was %d)", dhcp_pid);
     dhcp_pid = -1;
     return 0;
-  }
-  else if (dhcp_running)
-  {
-    di_info("end of poll, PID = %d", dhcp_pid);
-    kill_dhcp_client();
-    dhcp_running = 0;
   }
   
   return 1;
@@ -336,32 +330,6 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
 int kill_dhcp_client(void)
 {
-  di_info("about to kill PID %d", dhcp_pid);
-
-  if (dhcp_pid != -1)
-  {
-    int sig = SIGTERM;
-
-    for (;;)
-    {
-      kill(dhcp_pid, 0);
-
-      /* looks like it died */
-      if (errno == ESRCH)
-      {
-	dhcp_pid = -1;
-        return 1;
-      }
-
-      kill(dhcp_pid, sig);
-      sleep(2);
-      
-      if (sig == SIGTERM)
-	sig = SIGKILL;
-      else if (sig == SIGKILL)
-	break;
-    }
-  }
-  
+  system("killall.sh"); 
   return 0;
 }

@@ -34,12 +34,15 @@ install: build
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
 	  cp $(PACKAGE) debian/$(PACKAGE).postinst; \
+	  mkdir -p debian/$(PACKAGE)/usr/bin; \
+	  install -m 755 sleep debian/$(PACKAGE)/usr/bin/sleep; \
 	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
-		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3 ; \
+		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3; \
 		mkdir -p debian/$(PACKAGE)/var/dhcp ; \
-		cp dhclient-script debian/$(PACKAGE)/etc/dhcp3/; )
+		install -m 755 killall.sh debian/$(PACKAGE)/usr/bin/killall.sh; \
+		install -m 755 dhclient-script debian/$(PACKAGE)/etc/dhcp3/dhclient-script; )
 
 
 # Build architecture-independent files here.
