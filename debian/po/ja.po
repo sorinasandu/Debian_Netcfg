@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-06-29 17:19+0900\n"
+"PO-Revision-Date: 2004-06-29 17:50+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -531,17 +531,13 @@ msgstr "ネットワークの設定方法:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr ""
-"ここでは、DHCP ネットワークの自動設定の再試行またはネットワークの手動設定を選"
-"ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要とす"
-"るので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
+msgstr "ここでは、DHCP ネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定を選ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
 
 #. Type: note
 #. Description
@@ -756,14 +752,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#, fuzzy
-#~ msgid ""
-#~ "You may not be able to continue your Debian installation, unless you are "
-#~ "using a CD-ROM with all needed software. If you are unsure, you should "
-#~ "continue and come back to the network configuration step if necessary."
-#~ msgstr ""
-#~ "ネットワークの自動設定には成功しましたが、インターネットのような外部のネッ"
-#~ "トワークへの利用可能なデフォルトルートがないようです。必要なものすべてが "
-#~ "CD にあるという場合以外は、Debian のインストールを続けることができないかも"
-#~ "しれません。よくわからなければ、ネットワーク設定に戻ってください。"
