@@ -7,7 +7,7 @@ CFLAGS		= -W -Wall
 COMMON_OBJS	= netcfg-common.o mii-lite.o wireless.o
 
 ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
-CFLAGS += -O0 -g
+CFLAGS += -O0 -g3
 else
 CFLAGS += -Os -fomit-frame-pointer
 endif
@@ -22,13 +22,13 @@ netcfg-static: netcfg-static.o static.o
 netcfg: netcfg.o dhcp.o static.o
 
 $(TARGETS): $(COMMON_OBJS)
-	$(CC) $(LDOPTS) -o $@ $^
+	$(CC) -o $@ $^ $(LDOPTS)
 	$(STRIP) $@
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $(INCS) -o $@ $<
+	$(CC) -c $(CFLAGS) $(DEFS) $(INCS) -o $@ $<
 
 clean:
-	rm -f $(TARGETS) *.o
+	rm -f $(TARGETS) *.o build-stamp
 
 .PHONY: all clean

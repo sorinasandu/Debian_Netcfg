@@ -1,6 +1,13 @@
 netcfg (0.64) UNRELEASED; urgency=low
 
   * Joshua Kwan
+    - Split out all functions into static.c, dhcp.c, wireless.c.
+    - Redesign DHCP strategy with a new template that uses a select,
+      allowing the user to clearly alternate to static network config
+      (Closes: #244901, #227722)
+    - Now we can ask for a DHCP hostname to add. (Closes: #236533, #239591)
+    - If we didn't use one, see if the server is offering us one and seed
+      netcfg/get_hostname with it. (Closes: #237395, #240701)
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
     - Silently load af_packet. (Closes: #244441)
@@ -12,9 +19,6 @@ netcfg (0.64) UNRELEASED; urgency=low
       up on subsequent questions.
     - Bump the DHCP wait to 15 seconds. The magic number seems to be just
       over 10 for me. (Closes: #244819)
-    - Ask for a hostname at the very beginning. This will be the DHCP
-      hostname for netcfg and netcfg-dhcp.
-    - As such, rip out netcfg_get_dhcp and netcfg_get_dhcp_hostname.
     - Template cleanups: netcfg/static-title, netcfg/dhcp-title,
       netcfg/internal-pcmcia
     - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's

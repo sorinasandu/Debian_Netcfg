@@ -22,6 +22,7 @@
 
 #include "netcfg.h"
 
+#include <errno.h>
 #include <assert.h>
 #include <ctype.h>
 #include <sys/socket.h>
@@ -36,6 +37,7 @@
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
 #include <time.h>
+#include <netdb.h>
 
 /* Set if there is currently a progress bar displayed. */
 int netcfg_progress_displayed = 0;
@@ -46,6 +48,8 @@ char *hostname = NULL;
 char *domain = NULL;
 struct in_addr ipaddress = { 0 };
 int have_domain = 0;
+
+pid_t dhcp_pid = -1;
 
 int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
@@ -285,7 +289,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     int ret;
     int num_interfaces = 0;
     char *ptr = NULL;
-    char *ifdsc;
+    char *ifdsc = NULL;
 
     if (*interface) {
         free(*interface);
@@ -299,6 +303,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     *ptr = '\0';
 
     getif_start();
+
     while ((inter = getif(1)) != NULL) {
 	size_t newchars;
 
@@ -363,7 +368,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
  * Set the hostname. 
  * @return 0 on success, 30 on BACKUP being selected.
  */
-int netcfg_get_hostname(struct debconfclient *client, char **hostname)
+int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname)
 {
     static const char *valid_chars =
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
@@ -373,7 +378,7 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
 
     do {
 	have_domain = 0;
-        ret = my_debconf_input(client, "high", "netcfg/get_hostname", &p);
+        ret = my_debconf_input(client, "high", template, &p);
         if (ret == 30) /* backup */
             return ret;
         free(*hostname);
@@ -392,7 +397,7 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
             debconf_go(client);
             free(*hostname);
             *hostname = NULL;
-            debconf_set(client, "netcfg/get_hostname", "debian");
+            debconf_set(client, template, "debian");
         }
         
     } while (!*hostname);
@@ -419,7 +424,6 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
 void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 			 char *hostname, char *domain)
 {
-    char ptr1[INET_ADDRSTRLEN];
     FILE *fp;
 
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
@@ -443,19 +447,17 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
     }
 
     /* Currently busybox, hostname is not available. */
-    if ((fp = file_open("/proc/sys/kernel/hostname", "w"))) {
-        fprintf(fp, "%s\n", hostname);
-        fclose(fp);
-    }
+    sethostname (hostname, strlen(hostname) + 1);
 
     if ((fp = file_open(HOSTNAME_FILE, "w"))) {
        fprintf(fp, "%s\n", hostname);
        fclose(fp);
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+       di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
                                        HOSTNAME_FILE, "/target" HOSTNAME_FILE);
     }
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
+        char ptr1[INET_ADDRSTRLEN];
         if (ipaddress.s_addr) {
             fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
             if (domain && !empty_str(domain))
@@ -477,43 +479,27 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 }
 
 
-int kill_dhcp_client(void) {
-    FILE *ps;
-    char *pid_char = NULL;
-    int pid_int = 0;
-    size_t linesize = 0;
-    ssize_t ret = 0;
+int kill_dhcp_client(void)
+{
+  if (dhcp_pid != -1)
+  {
+    int s[] = { SIGTERM, SIGKILL, 0 }, *sigs = s;
 
-    /* kill running dhcp client */
+    while (*sigs)
+    {
+      kill(dhcp_pid, 0);
 
-    if ((ps = popen("ps xa | grep 'udhcpc\\|dhclient\\|pump' | grep -v grep | sed 's/^ *//' | cut -d ' ' -f 1", "r")) == NULL)
+      /* looks like it died */
+      if (errno == ESRCH)
         return 1;
 
-    ret = getline(&pid_char, &linesize, ps);
-    if (ret < 1)
-        return 2;
+      kill(dhcp_pid, *sigs);
+
+      sleep(2);
+    }
+  }
   
-    pclose(ps);
-
-    pid_int = atoi(pid_char);
-
-    if (kill(pid_int, SIGTERM) != 0)
-        return 3;
-
-    sleep(2);
-
-    if (kill(pid_int, SIGTERM) == 0)
-        kill(pid_int, SIGKILL);
-    else 
-        return 0;
-
-    sleep(2);
-
-    if (kill(pid_int, SIGTERM) == 0)
-        return 4;
-
-    return 0;
-
+  return 0;
 }
 
 int deconfigure_network(void) {
@@ -565,4 +551,38 @@ int ifconfig_down (char* iface)
   free(cmd);
 
   return ret;
+}
+
+void loop_setup(void)
+{
+  static int afpacket_notloaded = 1;
+
+  deconfigure_network();
+  
+  if (afpacket_notloaded)
+    afpacket_notloaded = di_exec_shell("modprobe af_packet"); /* should become 0 */
+      
+  di_exec_shell_log("ifconfig lo 127.0.0.1 up");
+}
+
+void seed_hostname_from_dns (struct debconfclient * client)
+{
+  struct addrinfo hints = {
+    .ai_family = PF_UNSPEC,
+    .ai_socktype = 0,
+    .ai_protocol = 0,
+    .ai_flags = AI_CANONNAME
+  };
+  struct addrinfo *res;
+  char ip[16]; /* 255.255.255.255 + 1 */
+
+  /* convert ipaddress into a char* */
+  inet_ntop(AF_INET, (void*)&ipaddress, ip, 16);
+
+  /* attempt resolution */
+  getaddrinfo(ip, NULL, &hints, &res);
+
+  /* got it */
+  if (res->ai_canonname && !empty_str(res->ai_canonname))
+    debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
 }

@@ -1,15 +1,23 @@
+/*
+ * DHCP module for netcfg/netcfg-dhcp.
+ *
+ * Licensed under the terms of the GNU General Public License
+ */
+
 #include "netcfg.h"
 #include <stdlib.h>
 #include <unistd.h>
 #include <debian-installer.h>
 #include <stdio.h>
 #include <assert.h>
+#include <sys/param.h>
+#include <sys/socket.h>
 #include <sys/stat.h>
+#include <arpa/inet.h>
 #include <time.h>
+#include <netdb.h>
 
-/* Set if DHCP client exits */
-volatile int dhcp_running = 0; /* not running */
-int dhcp_exit_status = -1; /* failed */
+int dhcp_running = 0, dhcp_exit_status = 1;
 
 /* Signal handler for DHCP client child */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
@@ -17,6 +25,7 @@ static void dhcp_client_sigchld(int sig __attribute__ ((unused)))
     if (dhcp_running == 1) {
 	dhcp_running = 0;
 	wait(&dhcp_exit_status);
+        dhcp_pid = -1;
     } 
 }
 
@@ -51,125 +60,217 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
 
 #define DHCP_SECONDS 15
 
-int netcfg_activate_dhcp(struct debconfclient *client)
+/* 
+ * This function will start whichever DHCP client is available (if
+ * necessary). That's all. The meat of the DHCP code is really in
+ * poll_dhcp_client.
+ *
+ * Its PID will be left in dhcp_pid.
+ * If the client is not running, dhcp_pid will always get set to -1.
+ */
+
+int start_dhcp_client (struct debconfclient *client, char* dhostname)
 {
-    char buf[128];
-    struct stat stat_buf;
-    time_t start_time, now;
-    pid_t pid = 0;
-    int retry = 1;
-    char *ptr;
-    FILE *dc = NULL;
+  char buf[128];
+  FILE *dc = NULL;
+  dhclient_t dhcp_client;
 
-    enum { PUMP, DHCLIENT, DHCLIENT3, UDHCPC } dhcp_client;
+  if (access("/var/lib/dhcp3", F_OK) == 0)
+    dhcp_client = DHCLIENT3;
+  else if (access("/sbin/dhclient", F_OK) == 0)
+    dhcp_client = DHCLIENT;
+  else if (access("/sbin/pump", F_OK) == 0)
+    dhcp_client = PUMP;
+  else if (access("/sbin/udhcpc", F_OK) == 0)
+    dhcp_client = UDHCPC;
+  else {
+    debconf_input(client, "critical", "netcfg/no_dhcp_client");
+    debconf_go(client);
+    exit(1);
+  }
 
-    if (stat("/var/lib/dhcp3", &stat_buf) == 0)
-        dhcp_client = DHCLIENT3;
-    if (stat("/sbin/dhclient", &stat_buf) == 0)
-        dhcp_client = DHCLIENT;
-    else if (stat("/sbin/udhcpc", &stat_buf) == 0)
-        dhcp_client = UDHCPC;
-    else if (stat("/sbin/pump", &stat_buf) == 0)
-        dhcp_client = PUMP;
-    else {
-        debconf_input(client, "critical", "netcfg/no_dhcp_client");
-        debconf_go(client);
-        exit(1);
-    }
-
-    deconfigure_network();
-
-    /* setup loopback */
-    di_exec_shell_log("ifconfig lo 127.0.0.1");
-
-    /* load kernel module for network sockets silently */
-    di_exec_shell("modprobe af_packet");
-
-    /* get dhcp lease */
-    switch (dhcp_client) {
+  /* get dhcp lease */
+  switch (dhcp_client) {
     case PUMP:
-        snprintf(buf, sizeof(buf), "pump -i %s -h %s", interface, hostname);
-        break;
+      if (dhostname)
+        snprintf(buf, sizeof(buf), "pump -i %s -h %s", interface, dhostname);
+      else
+        snprintf(buf, sizeof(buf), "pump -i %s", interface);
+
+      break;
 
     case DHCLIENT:
-	/* First, set up dhclient.conf */
-	if ((dc = file_open(DHCLIENT_CONF, "w")))
-	{
-	  fprintf(dc, "send host-name %s\n", hostname);
-	  fclose(dc);
-	}
-        snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
-        break;
+      /* First, set up dhclient.conf if necessary */
+
+      if (dhostname)
+      {
+        if ((dc = file_open(DHCLIENT_CONF, "w")))
+        {
+          fprintf(dc, "send host-name %s\n", hostname);
+          fclose(dc);
+        }
+      }
+      
+      snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
+      break;
 
     case DHCLIENT3:
-	/* Different place.. */
-	if ((dc = file_open(DHCLIENT3_CONF, "w")))
-	{
-	  fprintf(dc, "send host-name %s\n", hostname);
-	  fclose(dc);
-	}
-	snprintf(buf, sizeof(buf), "dhclient %s", interface);
-	break;
+      /* Different place.. */
+
+      if (dhostname)
+      {
+        if ((dc = file_open(DHCLIENT3_CONF, "w")))
+        {
+          fprintf(dc, "send host-name %s\n", hostname);
+          fclose(dc);
+        }
+      }
+      
+      snprintf(buf, sizeof(buf), "dhclient %s", interface);
+      break;
 
     case UDHCPC:
-        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", hostname, interface);
-        break;
-    }
+      if (dhostname)
+        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", interface, hostname);
+      else
+        snprintf(buf, sizeof(buf), "udhcpc -i %s -n", interface);
+      
+      break;
+  }
 
-    while (retry == 1) {
-        /* show progress bar */
-        debconf_progress_start(client, 0, DHCP_SECONDS, "netcfg/dhcp_progress");
-        debconf_progress_info(client, "netcfg/dhcp_progress_note");
-        netcfg_progress_displayed = 1;
+  if ((dhcp_pid = fork()) == 0) /* child */
+  {
+    int ret;
 
-        now = start_time = time(NULL);
-        if (! (dhcp_running || (dhcp_exit_status == 0))) {
-            if ((pid = fork()) == 0) {
-                int ret = di_exec_shell_log(buf);
-                ((WIFEXITED(ret) && (WEXITSTATUS(ret) != 0)) || WIFSIGNALED(ret)) ?
-                    _exit(EXIT_FAILURE) : _exit(EXIT_SUCCESS);
-            }
-            if (pid)
-                dhcp_running = 1;
-            else
-                return 1;
-            signal(SIGCHLD, &dhcp_client_sigchld);
-        }
+    /* these guys log to syslog already */
+    if (dhcp_client == DHCLIENT || dhcp_client == DHCLIENT3)
+      ret = di_exec_shell(buf);
+    else
+      ret = di_exec_shell_log(buf);
 
-        /* wait 10s for a DHCP lease */
-        while (dhcp_running && ((now - start_time) < DHCP_SECONDS)) {
-            sleep(1);
-            debconf_progress_step(client, 1);
-            now = time(NULL);
-        }
-
-        /* stop progress bar */
-        debconf_progress_stop(client);
-        netcfg_progress_displayed = 0;
-
-        /* got a lease? */
-        if (!dhcp_running && (dhcp_exit_status == 0)) {
-	    assert(hostname != NULL);
-
-            /* write configuration */
-            netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-            netcfg_write_dhcp("40netcfg", interface);
-
-            return 0;
-        }
-
-        /* ask if user wants to retry */
-        if (my_debconf_input(client, "high", "netcfg/dhcp_retry", &ptr) == 30) {
-            if (dhcp_running) {
-                kill(pid, SIGTERM);
-            }
-	    return 30; /* backup */
-	}
-        retry = strstr(ptr, "true") ? 1 : 0;
-    }
-
-    if (dhcp_running) {
-        kill(pid, SIGTERM);
-    }
+    _exit(!!ret);
+  }
+  else if (dhcp_pid == -1)
     return 1;
+  else
+  {
+    dhcp_running = 1;
+    signal(SIGCHLD, &dhcp_client_sigchld);
+    return 0;
+  }
 }
+
+/* Poll the started DHCP cilent for ten seconds, and return 0 if a lease was
+ * acquired, 1 otherwise. The client should die once a lease is acquired.
+ *
+ * It will NOT reap the DHCP client after an unsuccessful poll. 
+ */
+
+int poll_dhcp_client (struct debconfclient *client)
+{
+  time_t start_time, now;
+
+  /* show progress bar */
+  debconf_progress_start(client, 0, DHCP_SECONDS, "netcfg/dhcp_progress");
+  debconf_progress_info(client, "netcfg/dhcp_progress_note");
+  netcfg_progress_displayed = 1;
+
+  now = start_time = time(NULL);
+
+  /* wait 10s for a DHCP lease */
+  while (dhcp_running && ((now - start_time) < DHCP_SECONDS)) {
+    sleep(1);
+    debconf_progress_step(client, 1);
+    now = time(NULL);
+  }
+
+  /* stop progress bar */
+  debconf_progress_stop(client);
+  netcfg_progress_displayed = 0;
+
+  /* got a lease? */
+  if (!dhcp_running && (dhcp_exit_status == 0))
+  {
+    assert(hostname != NULL);
+    assert(dhcp_pid == -1);
+
+    /* write configuration */
+    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+    netcfg_write_dhcp("40netcfg", interface);
+
+    return 0;
+  }
+  
+  return 1;
+}
+
+int ask_dhcp_retry (struct debconfclient *client)
+{
+  return 0;
+}
+
+/* Here comes another Satan machine. */
+int netcfg_activate_dhcp (struct debconfclient *client)
+{
+  enum { START, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
+  
+  loop_setup();
+
+  for (;;)
+  {
+    switch (state)
+    {
+      case START:
+        if (start_dhcp_client(client, NULL))
+          netcfg_die(client); /* change later */
+        else
+          state = POLL;
+        break;
+
+      case DHCP_HOSTNAME:
+        break;
+
+      case POLL:
+        if (poll_dhcp_client(client)) /* could not get a lease */
+        {
+          /* ooh, now it's a select */
+          switch (ask_dhcp_retry (client))
+          {
+            case 0: state = POLL; break;
+            case 1: state = DHCP_HOSTNAME; break;
+            case 2: state = STATIC; break;
+            case 3: /* no net config at this time :( */
+              kill_dhcp_client();
+              exit(0);
+          }
+        }
+        else
+        {
+          char buf[MAXHOSTNAMELEN + 1];
+
+          /* dhcp hostname, ask for one with the dhcp hostname
+           * as a seed */
+          if (gethostname(buf, sizeof(buf)) == 0)
+            debconf_set(client, "netcfg/get_hostname", buf);
+          else
+            seed_hostname_from_dns(client);
+
+          state = HOSTNAME;
+        }
+        break;
+
+      case HOSTNAME:
+        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname))
+          exit(10); /* go back */
+        else
+          state = END;
+        break;
+
+      case STATIC:
+        break;
+        
+      case END:
+        return 0;
+    }
+  }
+} 

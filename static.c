@@ -312,9 +312,6 @@ int netcfg_activate_static(struct debconfclient *client)
 #else
     deconfigure_network();
 
-    /* configure loopback */
-    di_exec_shell_log("ifconfig lo 127.0.0.1");
-
     snprintf(buf, sizeof(buf), "ifconfig %s %s",
              interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
     di_snprintfcat(buf, sizeof(buf), " netmask %s", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));

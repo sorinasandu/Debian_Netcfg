@@ -25,11 +25,13 @@
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
+typedef enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhclient_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd;
 extern int input_result;
 extern int have_domain;
+extern pid_t dhcp_pid;
 
 /* network config */
 extern char *interface;
@@ -65,7 +67,7 @@ extern void netcfg_die (struct debconfclient *client);
 
 extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces);
 
-extern int netcfg_get_hostname(struct debconfclient *client, char **hostname);
+extern int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname);
 
 extern int netcfg_get_nameservers (struct debconfclient *client, char **nameservers);
 
@@ -77,6 +79,8 @@ extern int netcfg_get_static(struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);
 
+extern int kill_dhcp_client(void);
+extern int ask_dhcp_retry (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 
 extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
@@ -99,5 +103,8 @@ extern method_t mii_diag_status_lite (char *ifname);
 
 extern int ifconfig_up (char*);
 extern int ifconfig_down (char*);
+
+extern void loop_setup(void);
+extern void seed_hostname_from_dns(struct debconfclient *client);
 
 #endif /* _NETCFG_H_ */
