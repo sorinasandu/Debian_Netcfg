@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
 
-    enum { BACKUP, GET_INTERFACE, GET_HOSTNAME_ONLY, WCONFIG, WCONFIG_WEP, WCONFIG_ESSID, QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_HOSTNAME_ONLY, WCONFIG, WCONFIG_WEP, WCONFIG_ESSID, GET_DHCP, QUIT } state = GET_INTERFACE;
 
     /* initialize libd-i */
     di_system_init("netcfg-dhcp");
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 	      if (is_wireless_iface(interface))
 		state = WCONFIG;
 	      else
-		state = QUIT;
+		state = GET_DHCP;
 	    }
 	    break;
 	case GET_HOSTNAME_ONLY:
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 	      struct in_addr null_ipaddress;
 	      null_ipaddress.s_addr = 0;
 	      netcfg_write_common(null_ipaddress, hostname, NULL);
-	      return 0;
+	      state = QUIT;
 	    }
 	    break;
 	case WCONFIG:
@@ -96,21 +96,27 @@ int main(int argc, char *argv[])
             if (netcfg_wireless_set_wep (client, interface))
               state = WCONFIG_ESSID;
 	    else
-	      state = QUIT;  
+	      state = GET_DHCP;  
 	    break;
 
-	case QUIT:
-	    switch (netcfg_activate_dhcp(client)) {
+	case GET_DHCP:
+	    switch (netcfg_activate_dhcp(client))
+            {
             case 0:
-		return 0;
+		state = QUIT;
+	        break;
             case 10:
 	        state = BACKUP;
 	        break;
+            case 15:
             default:
 	        return 1;
 	    }
+	    break;
+
+	case QUIT:
+	    return 0;
 	}
     }
 
-    return 0;
 }

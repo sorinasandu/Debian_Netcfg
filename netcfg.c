@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 	      struct in_addr null_ipaddress;
 	      null_ipaddress.s_addr = 0;
 	      netcfg_write_common(null_ipaddress, hostname, NULL);
-	      return 0;
+	      state = QUIT;
 	    }
 	    break;
 	case GET_METHOD:
@@ -142,6 +142,8 @@ int main(int argc, char *argv[])
               case 15:
                 state = GET_STATIC;
                 break;
+              default:
+                return 1;
             }
 	    break;
 
@@ -186,5 +188,4 @@ int main(int argc, char *argv[])
 	}
     }
 
-    return 0;
 }
