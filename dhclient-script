@@ -82,6 +82,9 @@ case "$reason" in
 
         make_resolv_conf
 
+        # Get the domain name into a file suitable for netcfg to read.
+        echo -n "$new_domain_name" > /tmp/domain_name
+
         ;;
 
     EXPIRE|FAIL|RELEASE|STOP)
