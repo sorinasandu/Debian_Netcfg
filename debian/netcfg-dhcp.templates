@@ -27,8 +27,10 @@ _Description: No dhcp client found. I cannot continue.
 
 Template: netcfg/dhcp-title
 Type: text
+#  Title displayed when configuring this package
 _Description: DHCP Network Configuration
 
 Template: debian-installer/netcfg-dhcp/title
 Type: text
+#  Item in the main menu to select this package
 _Description: Configure the network via DHCP
