@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tools_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
 "PO-Revision-Date: 2004-01-10 20:50+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -306,100 +306,100 @@ msgstr "إعداد الشبكة الثابت"
 msgid "Searching for wireless access points ..."
 msgstr ""
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:125
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:129
 msgid "Wireless ethernet (802.11x)"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:133
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet أو Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:137
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "عنوان IP للخط المتوالي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "عنوان IP للمنفذ المتوازي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "بروتوكول Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "بروتوكول ISDN Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "واجهة غير معروفة"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:186
 #, fuzzy
 msgid "Configuring network ..."
 msgstr "أعدّ الشبكة"
@@ -407,7 +407,7 @@ msgstr "أعدّ الشبكة"
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "أعدّ الشبكة"
 
@@ -449,7 +449,7 @@ msgstr "قد يستغرق هذا بعض الوقت."
 #. Description
 #: ../netcfg-dhcp.templates:19
 #, fuzzy
-msgid "Network autoconfiguration has succeeded"
+msgid "Network autoconfiguration has succeeded!"
 msgstr "إعداد الشبكة الثابت"
 
 #. Type: error
@@ -515,64 +515,31 @@ msgstr "إعداد الشبكة"
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid ""
-"From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
-msgstr ""
-
-#. Type: note
-#. Description
-#: ../netcfg-dhcp.templates:42
-#, fuzzy
-msgid "Network autoconfiguration failed"
-msgstr "إعداد الشبكة الثابت"
-
-#. Type: note
-#. Description
-#: ../netcfg-dhcp.templates:42
-msgid ""
-"Your network is probably not using the DHCP protocol. Alternatively, the "
-"DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:48
-msgid "Continue without a default route?"
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:48
-msgid ""
-"The network autoconfiguration was successful. However, no default route was "
-"set: the system does not know how to communicate with hosts on the Internet. "
-"This will make it impossible to continue with the installation unless you "
-"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
-"available on the local network."
-msgstr ""
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:48
-msgid ""
-"If you are unsure, you should not continue without a default route: contact "
-"your local network administrator about this problem."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:60
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "أعدّ الشبكة"
 
 #. Type: text
 #. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "إعداد الشبكة الديناميكي (DHCP)"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:65
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "أعدّ الشبكة باستخدام العنونة الديناميكية (DHCP)"
 
@@ -723,9 +690,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "إعداد الشبكة الديناميكي (DHCP)"
 
 #~ msgid ""
 #~ " interface      = ${interface}\n"
