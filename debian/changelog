@@ -8,8 +8,13 @@ netcfg (1.01) UNRELEASED; urgency=low
       plugged in. (Closes: #264476)
     - netcfg-dhcp.templates: "may work" becomes "may succeed".
       (Closes: #261471)
+    - Remove completely braindamaged pointer handling in
+      seed_hostname_from_dns, caused by myself.
+      (Closes: #261460, #261527, #263187, #265651, #266245, #266549)
+    - Don't let a positive result from mii-diag override netcfg/disable_dhcp.
+      (Closes: #266641)
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sat,  7 Aug 2004 17:12:20 -0700
+ -- Joshua Kwan <joshk@triplehelix.org>  Sat, 21 Aug 2004 15:18:18 -0700
 
 netcfg (1.00) unstable; urgency=low
 

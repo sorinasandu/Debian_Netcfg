@@ -147,7 +147,10 @@ int main(int argc, char *argv[])
 
                   /* Supported; connected */    
                   case 0:
-                    netcfg_method = DHCP;
+                    /* But don't forget about disable_dhcp. */
+                    debconf_get(client, "netcfg/disable_dhcp");
+                    if (strcmp(client->value, "true") != 0)
+                      netcfg_method = DHCP;
                     break;
                 }
               }
