@@ -1,8 +1,8 @@
 /* 
    netcfg-static.c - Configure a static network for the debian-installer
-   Author - David Whedon
+   Author - David Kimdon
 
-   Copyright (C) 2000-2001  David Whedon <dwhedon@debian.org>
+   Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

@@ -1,8 +1,8 @@
 /* 
    netcfg-dhcp.c - Configure a network via dhcp for the debian-installer
-   Author - David Whedon
+   Author - David Kimdon
 
-   Copyright (C) 2000-2001  David Whedon <dwhedon@debian.org>
+   Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -103,7 +103,6 @@ static void
 netcfg_activate_dhcp ()
 {
   char buf[128];
-  char *ptr;
   execlog ("/sbin/ifconfig lo 127.0.0.1");
 
   switch (dhcp_client)

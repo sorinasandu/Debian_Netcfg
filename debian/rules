@@ -35,6 +35,10 @@ clean:
 	dh_testroot
 	rm -f build-stamp configure-stamp
 	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst
+	for TYPE in common dhcp static ; do \
+	  rm -f debian/netcfg-$$TYPE.templates; \
+	done;
+
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
 
@@ -57,6 +61,16 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
+
+	for TYPE in common dhcp static ; do \
+	  TEMPLATES=""; \
+	  for LINGUA in en de ru fr ; do \
+		TEMPLATES="$$TEMPLATES debian/template/netcfg-$$TYPE.templates.$$LINGUA" ; \
+	  done ; \
+	  echo "Creating netcfg-$$TYPE.templates -- $$TEMPLATES "; \
+	  debconf-mergetemplate $$TEMPLATES > debian/netcfg-$$TYPE.templates; \
+	done ;
+
 	dh_installdebconf
 	cat debian/netcfg-common.templates \
 	   >> debian/netcfg-static/DEBIAN/templates	
