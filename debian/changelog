@@ -4,6 +4,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
     - Silently load af_packet. (Closes: #244441, #244696)
+    - Add some code hunks from mii-diag to determine code path on link
+      connection. (Closes: #247178)
   * Pierre Machard
     - Add only hostname after localhost when loopback is alone.
     (Closes: #247734)

@@ -22,7 +22,7 @@ netcfg-dhcp: netcfg-dhcp.o
 netcfg-static: netcfg-static.o
 netcfg: netcfg.o
 
-$(TARGETS): netcfg-common.o
+$(TARGETS): netcfg-common.o mii-lite.o
 	$(CC) $(LDOPTS) -o $@ $^
 	$(STRIP) $@
 

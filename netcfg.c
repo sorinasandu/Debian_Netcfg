@@ -34,7 +34,7 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
-static enum {DHCP, STATIC} netcfg_method = DHCP;
+static method_t netcfg_method = DHCP;
 
 int netcfg_get_method(struct debconfclient *client) 
 {
@@ -85,10 +85,15 @@ int main(void)
 	    if (netcfg_get_method(client))
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
 	    else
+	    {
+	        /* See if link is established? */
+		netcfg_method = mii_diag_status_lite(interface);
+
 		if (netcfg_method == DHCP) 
 		    state = GET_DHCP;
 		else
 		    state = GET_STATIC;
+	    }
 	    break;
 	case GET_DHCP:
 	    if (netcfg_get_dhcp(client))
