@@ -340,6 +340,8 @@ netcfg_get_interface ()
       if (!inter)
 	netcfg_die ();
     }
+  else if (num_interfaces == 1)
+      inter = ptr;
 
   /* grab just the interface name, not the description too */
   interface = inter;
