@@ -1,0 +1,230 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-03-17 07:00-0700\n"
+"PO-Revision-Date: 2003-07-14 16:11+0100\n"
+"Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Kies de domeinnaam."
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "The domain name is the part of your Internet address to the right of your host name.  It is often something that ends in .com, .net, .edu, or .org.  If you are setting up a home network, you can make something up, but make sure you use the same domain name on all your computers."
+msgstr "De domeinnaam is dat deel van je Internetadres rechts van je computernaam. Het is vaak iets dat eindigt in .com, .net, .edu, of, .org. Indien u een thuisnetwerk aan het opzettenbent, kan u zomaar iets verzinnen, u dient er enkel voor te zorgen dat al uw computers dezelfde domeinnaam gebruiken."
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr "Kies het DNS Server adress"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Please enter the IP addresses (not host names) of up to 3 name servers, separated by spaces. Do not use commas. The servers will be queried in the order in which you enter them. If you don't want to use any name servers just leave this field blank."
+msgstr "Gelieve de IP adressen (niet de computernamen) van maximaal 3 nameservers gescheiden door spaties in te voeren. Gebruik geen commas. De servers zullen bevraagd wordenin de volgorde waarin u ze invoert. Indien u geen gebruik wenst te maken van een nameserver laat u dit veld gewoon leeg."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Kies een interface."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "The following interfaces were detected. Choose the type of your primary network interface that you will need for installing the Debian system (via NFS or HTTP)."
+msgstr "De volgende interfaces zijn gedetecteerd. Kies het type van uw primaire netwerk interface dat u nodig heeft voor het installeren van het Debian systeem via NFS of HTTP"
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr "Er is een fout opgetreden"
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Er is iets misgegaan bij het activeren van het netwerk."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Voer de computernaam van het systeem in."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "The hostname is a single word that identifies your system to the network.  If you don't know what your hostname should be, consult your network administrator.  If you are setting up your own home network, you can make something up here."
+msgstr "De computernaam is een enkel woord dat uw systeem naar het netwerk toe identificeert. Indien u niet weet welke naam u moet gebruiken neem dan contact op met uw netwerkbeheerder. Indien u uw eigen thuisnetwerk aan het opzetten bent, kan u gewoon wat verzinnen"
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr "De computernaam \"${HOSTNAME}\" is ongeldig."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "A valid hostname may contain only alphanumeric characters and the minus sign, be between 2 and 63 characters long, and cannot begin or end with a minus sign."
+msgstr "Een geldige computernaam mag enkel alphanumerieke karakters en mintekens bevatten, moet tussen 2 en 63 karakters lang zijn, en mag niet beginnen of eindigen met een minteken."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr "Er is een fout opgetreden, ik kan niet verdergaan."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "het staat u vrij om opnieuw te proberen."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No interfaces were detected."
+msgstr "Er zijn geen interfaces gedetecteerd."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No network interfaces were found.   That means that the installation system was unable to find a network device.  If you do have a network card, then it is possible that the module for it hasn't been selected yet.  Go back to 'Configure network hardware'."
+msgstr "Er zijn geen netwerk interfaces gevonden. Dat betekend dat het installatiesysteem niet in staat was om een netwerk apparaat te vinden. Indien u een netwerk kaart heeft, dan heeft u mogelijks de verkeerde module geselecteerd. Ga terug naar 'Instellen van de netwerk hardware'."
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Wat is uw dhcp computernaam?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "In some situations, you may need to supply a DHCP host name.  These situations are rare.  Most commonly, it applies to cable modem users. If you are a cable modem user, you might need to specify an account number here.  Otherwise, you can just leave this blank."
+msgstr "In sommige situaties dient u een DHCP comuternaam op te geven. Dit is zelden het geval. Dit is voornamelijk van toepassing op kabelmodem gebruikers. Indien u eenkabelmodemgebruiker bent dient u hier mogelijks een accountnummer op te geven. Zoniet kunt u dit gewoon leeg laten."
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid "Is this information correct?"
+msgstr "Is deze informatie correct?"
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" interface      = ${interface}\n"
+" computernaam       = ${hostname}\n"
+" domein         = ${domain}\n"
+" dhcp computernaam  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "I will now configure the network."
+msgstr "Ik zal nu het netwerk instellen."
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr "Dit kan enige tijd duren. Normaliter niet meer dan een minuut of twee."
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "No dhcp client found. I cannot continue."
+msgstr "Er is geen dhcp cliënt gevonden. Ik kan niet verder gaan."
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "This package requires pump or dhcp-client."
+msgstr "Dit pakket vereist pump of dhcp-client."
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "Wat is het IP adres?"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "The IP address is unique to your computer and consists of four numbers separated by periods.  If you don't know what to use here, consult your network administrator."
+msgstr "Het IP adres is uniek voor uw computer en bestaat uit 4 getallen gescheiden met kommas. Gelieve contact op te nemen met uw netwerkbeheerder indien u niet weet wat u hiermoet invullen."
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr "Wat is het puntnaarpunt adres?"
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "The pointopoint address is used to determine the other endpoint of the point to point network.  Consult your network administrator if you do not know the value.  The pointopoint address should be entered as four numbers separated by periods."
+msgstr "Het puntnaarpunt adres wordt gebruikt om het andere eindpunt in een punt naar punt netwerk is. Consulteer uw netwerkbeheerder als u de juiste waarde niet weet. Het puntnaarpunt adres dient ingevoerd te worden als vier getallen gescheiden door punten."
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr "Wat is het netwerkmasker?"
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "The netmask is used to determine which machines are local to your network.  Consult your network administrator if you do not know the value.  The netmask should be entered as four numbers separated by periods."
+msgstr "het netwerkmasker word gebruikt om te bepalen welke machines tot uw lokaal netwerk behoren. Consulteer uw netwerkbeheerder als u niet weet wat hier in te vullen. Het netwerkmasker dient ingevoerd te worden als vier getallen gescheiden door punten."
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr "Wat is de gateway?"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "This is an IP address (four numbers separated by periods) that indicates the gateway router, also known as the default router.  All traffic that goes outside your LAN (for instance, to the Internet) is sent through this router.  In rare circumstances, you may have no router; in that case, you can leave this blank.  If you don't know the proper answer to this question, consult your network administrator."
+msgstr "Dit is het IP adres (vier getallen gescheiden door punten) van de gateway router, ook bekend als de default router. Alle verkeer dat buiten uw LAN gaat (e.g. naar internet) wordtverstuurt via deze router. In zeldzame omstandigheden is het mogelijk dat u geen router heeft; in dat geval kunt u dit leeg laten. Gelieve uw netwerkbeheerder te contacteren indien u het juiste antwoord niet weet."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "De ingevoerde gateway is onbereikbaar."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "U heeft mogelijks een fout gemaakt bij het invoeren van uw IP adres, netwerkmasker en/of gateway."
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr "Is deze configuratie correct?"
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" interface     = ${interface}\n"
+" computernaam      = ${hostname}\n"
+" domein        = ${domain}\n"
+" ipadres     = ${ipaddress}\n"
+" netwerkmasker       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" punnaarpunt   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+
