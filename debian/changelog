@@ -6,7 +6,7 @@ netcfg (0.62) UNRELEASED; urgency=low
     - Re-UTF8ize changelog.
   * Per Olofsson
     - Check for hotpluggable (PCMCIA) network interfaces in
-      /etc/network/hotplug and don't generate auto entries for them.
+      /etc/network/devhotplug and don't generate auto entries for them.
       Also put them in a "mapping hotplug" stanza. Closes: #239284.
 
  -- Per Olofsson <pelle@dsv.su.se>  Fri,  9 Apr 2004 21:46:00 +0200
