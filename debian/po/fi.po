@@ -8,13 +8,13 @@
 # This file is distributed under the same license as debian-installer.
 # Tommi Vainikainen <thv+debian@iki.fi>, 2003 - 2004
 # Tapio Lehtonen <tale@debian.org>, 2004
-# 
+# Thanks to lokalisointi-laatu@linux-aktivaattori.org.
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2004-10-06 04:11-0600\n"
-"PO-Revision-Date: 2004-10-01 02:09+0300\n"
+"PO-Revision-Date: 2004-10-20 13:24+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Hae verkkoasetukset automaattisesti DHCP:llä?"
+msgstr "Haetaanko verkkoasetukset automaattisesti DHCP:llä?"
 
 #. Type: boolean
 #. Description
@@ -39,9 +39,9 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse. Jos "
-"valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
-"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä asetukset itse. Jos "
-"et ole varma, käytä DHCP:tä."
+"valittuasi DHCP:n asennin ei saa haettua toimivia asetuksia verkkosi DHCP-"
+"palvelimelta, saat uudestaan mahdollisuuden tehdä asetukset itse. Jos et ole "
+"varma, käytä DHCP:tä."
 
 #. Type: string
 #. Description
@@ -118,7 +118,7 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} on langattoman verkon liitäntä. Kirjoita sen langattoman verkon "
-"nimi (ESSID) jota haluat liitännän ${iface} käyttävän. Jos haluat käyttää "
+"nimi (ESSID), jota haluat liitännän ${iface} käyttävän. Jos haluat käyttää "
 "mitä tahansa käytettävissä olevaa verkkoa, jätä tämä tyhjäksi."
 
 #. Type: string
@@ -145,7 +145,7 @@ msgid ""
 "number, just enter it as it is into this field."
 msgstr ""
 "Jos WEP-avain on muodossa \"nnnn-nnnn-nn\" tai \"nnnnnnnn\", missä n on "
-"numero, kirjoita se sellaisenaan tähän kenttään."
+"numero, kirjoita avain sellaisenaan tähän kenttään."
 
 #. Type: string
 #. Description
@@ -197,7 +197,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" ei kelpaa. ESSID:ssä voi olla enintään 32 merkkiä, mutta "
-"voivat sisältää kaikenlaisia merkkejä. "
+"se voi sisältää kaikenlaisia merkkejä. "
 
 #. Type: string
 #. Description
@@ -262,13 +262,13 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää "
-"uudestaan asennusohjelman päävalikosta."
+"uudestaan asentimen päävalikosta."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Verkkoliitäntöjä ei havaittu"
+msgstr "Verkkoliitäntöjä ei löydetty"
 
 #. Type: error
 #. Description
@@ -277,7 +277,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Verkkosovittimia ei löytynyt.  Tämä tarkoittaa, että asennusjärjestelmä ei "
+"Verkkosovittimia ei löytynyt. Tämä tarkoittaa, että asennusjärjestelmä ei "
 "löytänyt verkkolaitetta."
 
 #. Type: error
@@ -451,8 +451,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Sinun kenties tarvitsee syöttää DHCP-konenimi. Jos käytät kaapelimodeemia, "
-"sinun kenties tarvitsee kirjoittaa käyttäjätunnuksen numero."
+"Mahdollisesti on kirjoitettava DHCP-konenimi. Jos käytetään kaapelimodeemia, "
+"on kenties kirjoittettava käyttäjätunnuksen numero."
 
 #. Type: string
 #. Description
@@ -470,7 +470,7 @@ msgstr "Tehdään verkkoasetukset DHCP:llä"
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Tämä voi kestää hetken aikaa."
+msgstr "Tämä voi kestää hetken."
 
 #. Type: text
 #. Description
@@ -489,7 +489,8 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+"DHCP-asiakasohjelmaa ei löytynyt Tämä paketti vaatii pump:n tai dhcp-client:"
+"n."
 
 #. Type: error
 #. Description
@@ -583,8 +584,8 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Verkon asetusten teko automaattisesti onnistui. Oletusreittiä ei kuitenkaan "
-"asetettu: järjestelmä ei tiedä miten ollaan yhteydessä Internetin koneiden "
-"kanssa. Tämän takia asennuksen jatkaminen on mahdotonta paitsi jos käytössä "
+"asetettu; järjestelmä ei tiedä miten ollaan yhteydessä Internetin koneiden "
+"kanssa. Tämän takia asennuksen jatkaminen on mahdotonta, paitsi jos käytössä "
 "on ensimmäinen virallinen Debian-romppu, \"Netinst\"-romppu tai "
 "asennuspaketit ovat saatavilla paikallisverkosta."
 
@@ -595,7 +596,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Jos olet epävarma, ei pitäisi jatkaa ilman oletusreittiä: ota yhteys verkon "
+"Jos olet epävarma, ei pitäisi jatkaa ilman oletusreittiä. Ota yhteys verkon "
 "vastuuhenkilöön tässä asiassa. "
 
 #. Type: text
@@ -633,7 +634,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Väärämuotoinen IP-osoite"
+msgstr "Vääränmuotoinen IP-osoite"
 
 #. Type: error
 #. Description
@@ -642,7 +643,7 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Antamasi IP-osoite on väärän muotoinen. Sen pitäisi olla muodossa x.x.x.x "
+"Antamasi IP-osoite on väärän muotoinen. Sen pitäisi olla muodossa x.x.x.x, "
 "missä jokainen x on enintään 255. Yritä uudelleen."
 
 #. Type: string
@@ -661,7 +662,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Kaksipisteosoitetta (Point-to-point) käytetään määrittämään pisteestä "
-"pisteeseen -verkkosi toinen pää. Kysy verkkosi ylläpitäjältä jos et tiedä "
+"pisteeseen -verkkosi toinen pää. Kysy verkkosi ylläpitäjältä, jos et tiedä "
 "tätä arvoa. Kaksipisteosoite syötetään neljänä lukuna pistein eroteltuna."
 
 #. Type: string
