@@ -1,4 +1,5 @@
-# translation of netcfg.po to 
+# translation of netcfg.po to Norwegian bokmål
+# translation of netcfg.po to
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
@@ -10,15 +11,16 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
 # Håvard Korsvoll <korsvoll@stud.ntnu.no>, 2004.
+# Axel Bojer <axelb@skolelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-02-17 23:20+0100\n"
-"Last-Translator: Håvard Korsvoll <korsvoll@stud.ntnu.no>\n"
-"Language-Team:  <nn@li.org>\n"
+"PO-Revision-Date: 2004-03-02 19:43GMT+2\n"
+"Last-Translator: Axel Bojer <axelb@skolelinux.no>\n"
+"Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,21 +29,18 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 msgstr "Dynamisk adressering (DHCP), statisk adressering (manuell)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Metode for konfigurering av nettverk:"
+msgstr "Oppsettsmetode for nettverk:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose DHCP and the installer is unable to get a working "
@@ -49,61 +48,56 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Nettverket kan enten settes opp med DHCP eller ved å skrive inn all "
-"informasjonen manuelt. Hvis du bruker DHCP og installasjonsprogrammet ikke "
-"klarer å hente en fungerende konfigurasjon fra en DHCP-tjener på nettverket "
-"ditt, vil du få anledning til å konfigurere nettevrket manuelt etter "
-"forsøket på å konfigurere det med DHCP. Hvis du er usikker, velg DHCP."
+"Nettverket kan enten settes opp ved hjelp av en DHCP-tjener, eller ved å "
+"skrive inn all informasjonen manuelt. Hvis du bruker DHCP og "
+"installasjonsprogrammet ikke klarer å hente et oppsett som fungerer fra DHCP-"
+"tjeneren på nettverket ditt, vil du få anledning til å sette opp netteverket "
+"manuelt.. Hvis du er usikker, velg DHCP."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:15
-#, fuzzy
 msgid "Domain name:"
 msgstr "Domenenavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:15
-#, fuzzy
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domenenavnet er den delen av Internet-adressen din som står til høyre for "
-"vertsnavnet.  Det er ofte noe som slutter med .no, .com, .net, eller .org.  "
-"Hvis du nå setter opp et hjemme-nettverk, kan du finne på noe, men pass på "
-"at du bruker samme domenenavn på alle maskinene dine."
+"Domenenavnet er den delen av Internett-adressa som står til høyre for "
+"vertsnavnet. Domenenavnet slutter ofte på .no, .com, .net, eller .org. Hvis "
+"du nå setter opp et hjemmenettverk, kan du finne på et domenenavn, men pass "
+"på at du bruker det samme domenenavn på alle maskinene dine."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
-msgstr "Adresser til navnetjenere:"
+msgstr "Adresser til navnetjenerne:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Tast inn IP-adresser (ikke vertsnavn) for opptil tre navnetjenere, atskilt "
-"med mellomrom. Ikke bruk komma. Tjenerne blir spurt i den rekkefølgen du "
-"taster dem inn. Hvis du ikke vil bruke noen navnetjenere, bare la feltet stå "
-"tomt."
+"Oppgi IP-adressene (ikke vertsnavn) for opptil tre navnetjenere, atskilt med "
+"mellomrom. Ikke bruk komma. Tjenerne blir brukt i den rekkefølgen du skriver "
+"dem. Hvis du ikke vil bruke navnetjenere, kan du la feltet stå tomt."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr ""
+msgstr "Primært nettverksgrensesnitt:"
 
 #. Type: select
 #. Description
@@ -112,12 +106,14 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"Systemet ditt har flere nettverksgrensesnitt. Velg det som skal brukes som "
+"primært nettverksgrensesnitt når du installerer Debian."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "Trådløs ESSID for ${iface}:"
 
 #. Type: string
 #. Description
@@ -127,12 +123,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID'en) på "
+"det trådløse nettverket du vil at ${iface} skal bruke. La feltet stå tomt "
+"hvis det er det samme hvilket nettverk du bruker."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "WEP-nøkkel for ${iface}:"
 
 #. Type: string
 #. Description
@@ -141,6 +140,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Skriv inn sikkerhetsnøkkelen for WEP hvis dette er nødvendig for "
+"grensesnittet ${iface}. Det er to måter å gjøre dette på:"
 
 #. Type: string
 #. Description
@@ -149,6 +150,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
+"Hvis WEP-nøkkelen er på formatet «nnnn-nnnn-nn» eller «nnnnnnnn», der n er "
+"et tall, er det bare å skrive det inn som det er i dette feltet."
 
 #. Type: string
 #. Description
@@ -157,6 +160,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Hvis WEP-nøkkelen har format som et passord, skriv inn «s:» foran passordet."
 
 #. Type: string
 #. Description
@@ -165,12 +169,13 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Hvis det trådløse nettverket ikke har noen WEP-nøkkel, så la feltet stå tomt."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Ugyldig WEP-nøkkel"
 
 #. Type: error
 #. Description
@@ -179,12 +184,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"WEP-nøkkelen «${wepkey}» er ugyldig. Følg instruksjonen på neste side om "
+"hvordan du på rett vis skriver inn WEP-nøkkelen, og prøv igjen."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Ugyldig ESSID"
 
 #. Type: error
 #. Description
@@ -193,115 +200,104 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID-en «${essid}» er ugyldig. ESSID-er kan ha opptil 32 tegn, og kan "
+"inneholde alle slags tegn."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
-#, fuzzy
 msgid "Hostname:"
 msgstr "Vertsnavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
-#, fuzzy
 msgid "Please enter the hostname for this system."
 msgstr "Skriv inn vertsnavnet for dette systemet."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Vertsnavnet er ett ord som navngir systemet ditt overfor nettet.  Hvis du "
-"ikke vet hva vertsnavnet bør være, så snakk med nettverksadministratoren "
-"din. Hvis du er i ferd med å sette opp ditt eget hjemmenett kan du bare "
-"finne på noe her."
+"Vertsnavnet er ett ord som navngir systemet ditt på nettet. Hvis du ikke vet "
+"hva vertsnavnet bør være, så snakk med nettverksadministratoren. Hvis du er "
+"i ferd med å sette opp ditt eget hjemmenett, kan du bare finne på et navn "
+"selv."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid "Invalid hostname"
 msgstr "Ugyldig vertsnavn."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Vertsnavnet  «${hostname}» er ugyldig."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Et gyldig vertsnavn må bare inneholde tall, bokstaver og minus-tegn, være "
-"mellom 2 og 63 tegn langt, og kan ikke begynne eller slutte med et minus-"
-"tegn."
+"Et gyldig vertsnavn kan bare inneholde tall, bokstaver og minus-tegn. Det må "
+"ha mellom 2 og 63 tegn, og kan ikke begynne eller slutte med et minus-tegn."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:93
-#, fuzzy
 msgid "Error"
 msgstr "Feil"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:93
-#, fuzzy
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"En feil oppsto, og nettverkskonfigureringen ble avbrutt. Du kan prøve på "
-"nytt fra hovedmenyen i installasjonen."
+"En feil oppsto, og nettverksoppsettet ble avbrutt. Du kan prøve på nytt fra "
+"hovedmenyen i installasjonen."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
-#, fuzzy
 msgid "No network interfaces detected"
-msgstr "Kunne ikke oppdage noen nettverks-grensesnitt."
+msgstr "Fant intet nettverksgrensesnitt"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
-#, fuzzy
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Fant ingen nettverksgrensesnitt. Det betyr at installasjonssystemet ikke "
+"Fant intet nettverksgrensesnitt. Det betyr at installasjonssystemet ikke "
 "klarte å finne en nettverksenhet."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Det kan være du må laste en spesifikk modul for nettverkskortet ditt, hvis "
-"du virkelig har et. For å gjøre dette, gå tilbake til skrittet «Sett opp "
-"nettverks-maskinvare»."
+"Det kan være du må laste en egen modul for nettverkskortet ditt, hvis du har "
+"et. For å gjøre dette, gå tilbake til trinnet der installasjonsystemet "
+"finner nettverksutstyr."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:108
-#, fuzzy
 msgid "<none>"
 msgstr "<ingen>"
 
@@ -309,89 +305,77 @@ msgstr "<ingen>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Trådløst ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
-#, fuzzy
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet eller Fast Ethernet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:120
-#, fuzzy
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:124
-#, fuzzy
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:128
-#, fuzzy
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
-#, fuzzy
 msgid "Serial-line IP"
 msgstr "IP over seriell-linje"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
-#, fuzzy
 msgid "Parallel-port IP"
 msgstr "IP over parallell-linje"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
-#, fuzzy
 msgid "Point-to-Point Protocol"
 msgstr "Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:144
-#, fuzzy
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-i-IPv4"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:148
-#, fuzzy
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:152
-#, fuzzy
 msgid "Channel-to-channel"
 msgstr "Kanal-til-kanal"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:156
-#, fuzzy
 msgid "Real channel-to-channel"
 msgstr "Ekte kanal-til-kanal"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
-#, fuzzy
 msgid "Hypersocket"
 msgstr "Hypersokkel"
 
@@ -405,7 +389,6 @@ msgstr "Mellom-bruker kommunikasjonskjøretøy"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:168
-#, fuzzy
 msgid "Unknown interface"
 msgstr "Ukjent grensesnitt."
 
@@ -413,7 +396,6 @@ msgstr "Ukjent grensesnitt."
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:173
-#, fuzzy
 msgid "Network Configuration"
 msgstr "Nettverksoppsett"
 
@@ -421,62 +403,53 @@ msgstr "Nettverksoppsett"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
 msgid "Configuring network ..."
-msgstr "Konfigurerer nettverket"
+msgstr "Nettverksoppsett ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:183
-#, fuzzy
 msgid "Configure the network"
-msgstr "Konfigurerer nettverket"
+msgstr "Setter opp nettverket"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid "DHCP hostname:"
 msgstr "DHCP-vertsnavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"I noen situasjoner kan det være at du må oppgi et DHCP-vertsnavn.  Slike "
-"situasjoner er sjeldne.  Som regel dreier det seg om kabelmodem-brukere. "
-"Hvis du bruker kabelmodem må du kanskje oppgi en bruker-ID her."
+"Det kan det hende du må oppgi et DHCP-vertsnavn. Hvis du bruker et "
+"kabelmodem må du kanskje oppgi et kontonummer."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid "Most other users can just leave this blank."
-msgstr "Ellers kan du la det stå åpent."
+msgstr "De fleste andre brukere kan la dette feltet stå tomt."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-#, fuzzy
 msgid "Is this information correct?"
-msgstr "Er disse opplysningene riktige?"
+msgstr "Er denne informasjonen riktig?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
-#, fuzzy
 msgid "Currently configured network parameters:"
-msgstr "Nåværende parametre for nettverksoppsett:"
+msgstr "Parametere for nettverksoppsett:"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:12
-#, fuzzy
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -493,44 +466,38 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:23
-#, fuzzy
 msgid "Configuring the network with DHCP"
-msgstr "Konfigurerer nettverket med DHCP"
+msgstr "Setter opp nettverket med DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
-msgstr "Dette kan ta noen få minutter."
+msgstr "Dette kan ta litt tid"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client found"
 msgstr "Fant ingen DHCP-klient"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Fant ingen DHCP-klient. Denne pakken trenger pump eller dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "The DHCP configuration process will be aborted."
-msgstr "Avbryter DHCP-konfigurasjonsprosessen."
+msgstr "Avbryter oppsettet av DHCP"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Ønsker du å prøve DHCP-nettverksoppsett igjen?"
+msgstr "Vil du prøve en gang til å sette opp et DHCP-nettverk?"
 
 #. Type: boolean
 #. Description
@@ -540,51 +507,45 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Ingen IP-adresse ble gitt ut under DHCP-nettverksoppsettet. Noen ganger er "
-"DHCP-tjenere veldig trege. Hvis du ønsker, kan du prøve igjen."
+"Ingen IP-adresse ble angitt ut under oppsettet av DHCP-nettverket. Noen "
+"ganger er DHCP-tjenere veldig trege. Hvis du vil kan du prøve igjen."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Dynamisk nettverkskonfigurasjon (DHCP)"
+msgstr "Dynamisk nettverksoppsett (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sett opp nettverket med dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
 msgstr "IP-adresse:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP-adressen er entydig for din maskin og består av fire tall atskilt med "
-"punktum. Spør din nettverksadministrator hvis du ikke vet hva du skal bruke "
-"her."
+"IP-adressen er unik for din maskin, og består av fire tall med punktum "
+"mellom. Spør din nettverksadministrator hvis du ikke vet hva du skal bruke."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP-adresse:"
+msgstr "Feilformatert IP-adresse"
 
 #. Type: error
 #. Description
@@ -593,18 +554,18 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"IP-adressen du skrev inn er ikke rett formatert. Den må ha formen x.x.x.x "
+"der hver «x» er høyst 255. Prøv igjen."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-#, fuzzy
 msgid "Point-to-point address:"
 msgstr "Punkt-til-punkt-adresse:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -612,40 +573,36 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Punkt-til-punkt-adressen brukes for å finne den andre enden av et punkt-til-"
-"punkt-nett.  Spør nettverksadministratoren din hvis du ikke vet verdien. "
-"Punkt-til-punkt-adressen skal oppgis som fire tall atskilt med punktum."
+"punkt-nett. Spør nettverksadministratoren hvis du ikke vet verdien. Punkt-"
+"til-punkt-adressen skal oppgis som fire tall med punktum mellom."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
-#, fuzzy
 msgid "Netmask:"
 msgstr "Nettmaske:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
-#, fuzzy
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Nettmasken brukes til å bestemme hvilke maskiner som hører til ditt lokale "
-"nettverk. Spør din nettverksadministrator hvis du ikke kjenner v erdien.  "
-"Nettmasken skal oppgis som fire tall atskilt med punktum."
+"Nettmasken brukes til å avgjøre hvilke maskiner som hører til ditt lokale "
+"nettverk. Spør din nettverksadministrator hvis du ikke vet hvilken verdi du "
+"skal bruke. Nettmasken skal ha fire tall med punktum mellom."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
-#, fuzzy
 msgid "Gateway:"
 msgstr "Standardruter:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -654,30 +611,27 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Dette er en IP-adresse (fire tall atskilt med punktum) som tilhører portner-"
-"ruteren, også kalt standardruteren.  All trafikk som går ut av lokalnettet "
-"(f.eks. til Internett) sendes gjennom denne ruteren. I sjeldne tilfeller kan "
-"det være at du ikke har noen, la det da stå åpent. Hvis du ikke kjenner rett "
-"svar på dette spørsmålet, snakk med nettverksadministratoren din."
+"Dette er en IP-adresse (fire tall med punktum mellom) som tilhører portner-"
+"ruteren, også kalt standardruteren. All trafikk ut av lokalnettet (f.eks. "
+"til Internett) sendes gjennom denne ruteren. I sjeldne tilfeller kan det "
+"være at du ikke har noen, la da feltet stå åpent. Hvis du ikke kjenner rett "
+"svar på spørsmålet, spør administratoren av nettverket."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-#, fuzzy
 msgid "Unreachable gateway"
-msgstr "Ikke-nåbar standardruter"
+msgstr "Kommer ikke fram til standardruteren"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "Det går ikke an å komme fram til standardruteren du oppga."
+msgstr "Det går ikke å komme frem til standardruteren du oppga."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-#, fuzzy
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
@@ -687,7 +641,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -711,14 +664,12 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:68
-#, fuzzy
 msgid "Static network configuration"
-msgstr "Statisk nettverkskonfigurasjon"
+msgstr "Statisk nettverksoppsett"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:73
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Sett opp nettverket med statisk adressering"
+msgstr "Set opp et nettverk ved hjelp av statisk adressering"
