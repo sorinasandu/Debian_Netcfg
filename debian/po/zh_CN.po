@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-05-15 22:53+1200\n"
+"PO-Revision-Date: 2004-06-29 21:45+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -510,7 +510,6 @@ msgstr "网络配置方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -518,16 +517,15 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"网络自动设置失败。这可能是由于网络中 DHCP 服务器的速度过慢造成的，您可能会想"
-"重试一次。如果您的网络并不使用 DHCP 进行自动配置，请进行手动设置。另外，某些 "
-"DHCP 服务器需要特定的 DHCP 主机名，因此您也可以在重试 DHCP 之前输入该主机名。"
+"在这里，您可以选择重新尝试 DHCP 网络自动配置(如果您的 DHCP 服务器响应延时很"
+"长，重新设置一遍可能就会成功)或者手动配置网络。另外，某些 DHCP 服务器要求客户"
+"端发送 DHCP 主机名，因此您可以在重试 DHCP 时提供这样一个主机名。"
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "网络自动设置成功！"
+msgstr "网络自动设置失败"
 
 #. Type: note
 #. Description
@@ -536,12 +534,14 @@ msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
 msgstr ""
+"导致失败的原因可能是 DHCP 服务器速度太慢、网络设备故障、或者是您的网络根本就"
+"没有配置 DHCP。"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "无默认路由，继续安装吗？"
 
 #. Type: boolean
 #. Description
@@ -553,6 +553,9 @@ msgid ""
 "all the Debian packages you need on the local network or on a local medium "
 "such as CD-ROM."
 msgstr ""
+"网络自动配置成功，但未设置默认路由，系统将无法连接 Internet 上的主机。除非您"
+"在本地的网络或存储设备(例如光盘)上存有您需要的所有软件包，否则您将无法继续进"
+"行安装。"
 
 #. Type: boolean
 #. Description
@@ -561,6 +564,7 @@ msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
 msgstr ""
+"如果不清楚该如何选择，您也可以继续安装进程，在需要的时候再返回网络配置步骤。"
 
 #. Type: text
 #. Description
