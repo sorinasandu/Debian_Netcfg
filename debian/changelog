@@ -6,6 +6,10 @@ netcfg (0.16) unstable; urgency=low
   * kraai: canonicalize ethdetect description capitalization
   * waldi: add s390 network types
   * kraai: fix handling of empty DHCP hostname
+  * Convert to po-debconf, set Build-Depends: debhelper (>= 4.1.13)
+    to ensure that generated templates are right, and set output encoding
+    to UTF-8.  Update debian/rules to call po2debconf instead of
+    debconf-mergetemplate.
 
  -- Bastian Blank <waldi@debian.org>  Thu, 10 Oct 2002 15:48:35 +0000
 
