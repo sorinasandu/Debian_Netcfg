@@ -712,7 +712,6 @@ int netcfg_activate_static(struct debconfclient *client)
                        num2dot(pointopoint));
 
     rv |= di_exec_shell_log(buf);
-    printf("rv = %i, buf = %s\n", rv, buf);
 
     if (gateway) {
         snprintf(buf, sizeof(buf),
