@@ -255,7 +255,7 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
 
         getif_start();
         while ((inter = getif(1)) != NULL) {
-		ifdsc = get_ifdsc(client, inter);
+                ifdsc = get_ifdsc(client, inter);
                 newchars = strlen(inter) + strlen(ifdsc) + 5;
                 if (len < (strlen(ptr) + newchars)) {
                         if (!(ptr = realloc(ptr, len + newchars + 128)))
