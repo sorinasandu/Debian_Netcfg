@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     di_system_init("netcfg-dhcp");
 
     parse_args(argc, argv);
+    reap_old_files();
     open_sockets();
 
     /* initialize debconf */

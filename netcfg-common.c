@@ -49,8 +49,6 @@ char *domain = NULL;
 struct in_addr ipaddress = { 0 };
 int have_domain = 0;
 
-pid_t dhcp_pid = -1;
-
 /* File descriptors for ioctls and such */
 int skfd = 0;
 int wfd = 0;
@@ -530,7 +528,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 "ff02::2 ip6-allrouters\n" \
 "ff02::3 ip6-allhosts\n"
 
-void netcfg_write_loopback(const char* prebaseconfig)
+void netcfg_write_loopback (void)
 {
   FILE *fp;
 
@@ -540,13 +538,9 @@ void netcfg_write_loopback(const char* prebaseconfig)
     fprintf(fp, "iface lo inet loopback\n\n");
     fclose(fp);
   }
-  di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-      INTERFACES_FILE,
-      "/target" INTERFACES_FILE);
 }
 
-void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
-			 char *hostname, char *domain)
+void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 {
     FILE *fp;
 
@@ -565,10 +559,6 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
         }
 
 	fclose(fp);
-
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       INTERFACES_FILE,
-                                       "/target" INTERFACES_FILE);
     }
 
     /* Currently busybox, hostname is not available. */
@@ -577,8 +567,6 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
     if ((fp = file_open(HOSTNAME_FILE, "w"))) {
        fprintf(fp, "%s\n", hostname);
        fclose(fp);
-       di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       HOSTNAME_FILE, "/target" HOSTNAME_FILE);
     }
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
@@ -599,9 +587,6 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 	fprintf(fp, "\n" IPV6_HOSTS);
 	
         fclose(fp);
-
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       HOSTS_FILE, "/target" HOSTS_FILE);
     }
 }
 
@@ -703,4 +688,15 @@ void parse_args (int argc, char ** argv)
     
     exit(EXIT_FAILURE);
   }
+}
+
+void reap_old_files (void)
+{
+  static char* remove[] =
+    { INTERFACES_FILE, HOSTS_FILE, HOSTNAME_FILE, NETWORKS_FILE,
+      RESOLV_FILE, DHCLIENT_CONF, DHCLIENT3_CONF, DOMAIN_FILE, 0 };
+  char **ptr = remove;
+
+  while (*ptr)
+    unlink(*ptr++);
 }

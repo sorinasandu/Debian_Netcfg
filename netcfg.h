@@ -8,6 +8,7 @@
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCLIENT_CONF	"/etc/dhclient.conf"
 #define DHCLIENT3_CONF	"/etc/dhcp3/dhclient.conf"
+#define DOMAIN_FILE     "/tmp/domain_name"
 
 #define _GNU_SOURCE
 
@@ -31,7 +32,6 @@ extern int netcfg_progress_displayed;
 extern int wfd, skfd;
 extern int input_result;
 extern int have_domain;
-extern pid_t dhcp_pid;
 
 /* network config */
 extern char *interface;
@@ -74,7 +74,6 @@ extern int netcfg_get_domain(struct debconfclient *client,  char **domain);
 extern int netcfg_get_dhcp(struct debconfclient *client);
 
 extern int netcfg_get_static(struct debconfclient *client);
-extern int do_hostname_jig (struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);
 
@@ -82,9 +81,8 @@ extern int kill_dhcp_client(void);
 extern int ask_dhcp_retry (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 
-extern void netcfg_write_loopback (const char* prebaseconfig);
-extern void netcfg_write_common (const char *prebaseconfig,
-				 struct in_addr ipaddress, char *hostname,
+extern void netcfg_write_loopback (void);
+extern void netcfg_write_common (struct in_addr ipaddress, char *hostname,
 				 char *domain);
 
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
@@ -105,8 +103,10 @@ extern void seed_hostname_from_dns(struct debconfclient *client, struct in_addr 
 
 extern int inet_ptom (const char *src, int *dst, struct in_addr * addrp);
 extern const char *inet_mtop (int src, char *dst, socklen_t cnt);
+
 extern void parse_args (int argc, char** argv);
 extern void open_sockets (void);
+extern void reap_old_files (void);
 
 extern void netcfg_rewrite_resolv (char*, struct in_addr *);
 #endif /* _NETCFG_H_ */

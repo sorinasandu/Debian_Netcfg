@@ -232,8 +232,7 @@ void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[])
         array[0].s_addr = 0;
 }
 
-static int netcfg_write_static(char *prebaseconfig, char *domain,
-			       struct in_addr nameservers[])
+static int netcfg_write_static(char *domain, struct in_addr nameservers[])
 {
     char ptr1[INET_ADDRSTRLEN];
     FILE *fp;
@@ -241,10 +240,6 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
     if ((fp = file_open(NETWORKS_FILE, "w"))) {
         fprintf(fp, "localnet %s\n", inet_ntop (AF_INET, &network, ptr1, sizeof (ptr1)));
         fclose(fp);
-        
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       NETWORKS_FILE,
-                                       "/target" NETWORKS_FILE);
     } else
         goto error;
 
@@ -289,9 +284,6 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
         fclose(fp);
     } else
 	goto error;
-
-    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
-				   "/target" RESOLV_FILE);
 
     return 0;
  error:
@@ -481,8 +473,8 @@ int netcfg_get_static(struct debconfclient *client)
             break;
 	    
         case QUIT:
-            netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-            netcfg_write_static("40netcfg", domain, nameserver_array);
+            netcfg_write_common(ipaddress, hostname, domain);
+            netcfg_write_static(domain, nameserver_array);
             return 0;
             break;
         }

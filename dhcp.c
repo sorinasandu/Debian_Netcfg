@@ -15,12 +15,14 @@
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/ioctl.h>
+#include <sys/utsname.h>
 #include <arpa/inet.h>
 #include <net/if.h>
 #include <time.h>
 #include <netdb.h>
 
 int dhcp_running = 0, dhcp_exit_status = 1;
+pid_t dhcp_pid = -1;
 
 /* Signal handler for DHCP client child */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
@@ -31,7 +33,7 @@ static void dhcp_client_sigchld(int sig __attribute__ ((unused)))
     }
 }
 
-static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
+static void netcfg_write_dhcp (char *iface)
 {
     FILE *fp;
 
@@ -55,9 +57,6 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
     if ((fp = file_open(RESOLV_FILE, "a"))) {
       fclose(fp);
     }
-    
-    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
-	"/target" RESOLV_FILE);
 }
 
 #define DHCP_SECONDS 15
@@ -278,7 +277,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           case 2: state = STATIC; break;
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
-		  netcfg_write_loopback("40netcfg");
+		  netcfg_write_loopback();
                   quit_after_hostname = 1;
 		  state = HOSTNAME;
 		  break;
@@ -326,34 +325,30 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           char *ptr = NULL;
           FILE *d = NULL;
 
-          if ((d = fopen("/tmp/domain_name", "r")) != NULL)
+          have_domain = 0;
+          
+          if ((d = fopen(DOMAIN_FILE, "r")) != NULL)
           {
-            fgets(buf, 65, d);
+            char domain[_UTSNAME_LENGTH + 1] = { 0 };
+            fgets(domain, _UTSNAME_LENGTH, d);
             fclose(d);
-            unlink("/tmp/domain_name");
-          }
+            unlink(DOMAIN_FILE);
 
-          /* Seed the domain. We will prefer the domain name passed
-           * by the DHCP server if there is one. */
-          if (!empty_str(buf))
-          {
-            debconf_set(client, "netcfg/get_domain", buf);
-            have_domain = 1;
+            /* Seed the domain. We will prefer the domain name passed
+             * by the DHCP server if there is one. */
+            if (!empty_str(domain))
+            {
+              debconf_set(client, "netcfg/get_domain", domain);
+              have_domain = 1;
+            }
           }
-          else if ((ptr = strchr(buf, '.')) != NULL)
-          {
-            debconf_set(client, "netcfg/get_domain", ptr + 1);
-            have_domain = 1;
-          }
-          else
-            have_domain = 0; /* shouldn't be needed, but what the hell */
           
           /* dhcp hostname, ask for one with the dhcp hostname
            * as a seed */
           if (gethostname(buf, sizeof(buf)) == 0 && !empty_str(buf)
                 && strcmp(buf, "(none)") != 0)
           {
-            di_info("hostname = \"%s\"", buf);
+            di_info("DHCP hostname: \"%s\"", buf);
             debconf_set(client, "netcfg/get_hostname", buf);
           }
           else
@@ -372,6 +367,12 @@ int netcfg_activate_dhcp (struct debconfclient *client)
               di_error("ioctl failed (%s)", strerror(errno));
           }
 
+          if (have_domain == 0 && (ptr = strchr(buf, '.')) != NULL)
+          {
+            debconf_set(client, "netcfg/get_domain", ptr + 1);
+            have_domain = 1;
+          }
+          
           state = HOSTNAME;
         }
         break;
@@ -394,7 +395,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 	  state = HOSTNAME;
 	else if (quit_after_hostname)
 	{
-	  netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+	  netcfg_write_common(ipaddress, hostname, domain);
 	  exit(0);
 	}
 	else
@@ -408,8 +409,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         
       case END:
         /* write configuration */
-        netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-        netcfg_write_dhcp("40netcfg", interface);
+        netcfg_write_common(ipaddress, hostname, domain);
+        netcfg_write_dhcp(interface);
         
         return 0;
     }

@@ -6,6 +6,10 @@ netcfg (0.68) UNRELEASED; urgency=low
     - Rework is_hotpluggable_iface a tad.
     - Fix problem where broadcast address was being used twice.. only on
       some architectures, due to code with unspecified behavior.
+    - Excise our dynamic prebaseconfig system and replace with a static one
+      that copies all available files into /target.
+    - For this, make sure we always start with a clean slate by removing
+      those files at startup.
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 28 May 2004 10:05:29 -0700
 
