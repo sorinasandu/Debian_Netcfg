@@ -530,18 +530,18 @@ int is_valid_ip (char* ipaddr, short is_netmask)
 
 int netcfg_get_ipaddress(struct debconfclient *client)
 {
-    int ret, error = 1;
+    int ret, ok = 0;
     char *ptr;
 
-    while (error == 1)
+    while (!ok)
     {
       ret = my_debconf_input(client,"critical", "netcfg/get_ipaddress", &ptr);
       if (ret)
 	return ret;
 
-      error = is_valid_ip (ptr, 0);
+      ok = is_valid_ip (ptr, 0);
       
-      if (error)
+      if (!ok)
       {
 	debconf_input (client, "critical", "netcfg/bad_ipaddress");
 	debconf_go (client);
@@ -554,16 +554,23 @@ int netcfg_get_ipaddress(struct debconfclient *client)
 
 int netcfg_get_pointopoint(struct debconfclient *client)
 {
-    int ret;
+    int ret, ok = 0;
     char *ptr;
 
-    do
+    while (!ok)
     {
       ret = my_debconf_input(client,"critical", "netcfg/get_pointopoint", &ptr);
       if (ret)  
 	return ret;
+
+      ok = is_valid_ip(ptr, 0);
+      
+      if (!ok)
+      {
+	debconf_input (client, "critical", "netcfg/bad_ipaddress");
+	debconf_go (client);
+      }
     }
-    while (!is_valid_ip(ptr, 0));
 
     dot2num(&pointopoint, ptr);
     dot2num(&netmask, "255.255.255.255");
@@ -575,17 +582,24 @@ int netcfg_get_pointopoint(struct debconfclient *client)
 
 int netcfg_get_netmask(struct debconfclient *client)
 {
-    int ret;
+    int ret, ok = 0;
     char *ptr;
         
-    do
+    while (!ok)
     {
       ret = my_debconf_input(client,"critical", "netcfg/get_netmask", &ptr);
 
       if (ret)
 	return ret;
+
+      ok = is_valid_ip(ptr, 1);
+      
+      if (!ok)
+      {
+	debconf_input (client, "critical", "netcfg/bad_ipaddress");
+	debconf_go (client);
+      }
     }
-    while (!is_valid_ip(ptr, 1));
 
     dot2num(&netmask, ptr);
     network = ipaddress & netmask;
@@ -600,16 +614,23 @@ int netcfg_get_netmask(struct debconfclient *client)
 
 int netcfg_get_gateway(struct debconfclient *client)
 {
-    int ret;
+    int ret, ok = 0;
     char *ptr;
 
-    do
+    while (!ok)
     {
       ret = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
       if (ret)  
 	return ret;
+
+      ok = is_valid_ip(ptr, 0);
+      
+      if (!ok)
+      {
+	debconf_input (client, "critical", "netcfg/bad_ipaddress");
+	debconf_go (client);
+      }
     }
-    while (!is_valid_ip(ptr, 0));
 
     dot2num(&gateway, ptr);
 
