@@ -17,8 +17,8 @@
     IMPORTANT NOTE:  template/*.templates.en must first be renamed into
                      template/*.templates
     
-    For a casual package, one only has to run
-      debconf-gettextize foo.templates
+    NOTE: For a casual package, one only has to run
+             debconf-gettextize foo.templates
     
 2.  Update
     ------
@@ -31,17 +31,21 @@
     -----
 
     The following commands can be run to merge translations, in the
-    debian/ directory:
+    top-level directory:
 
        for TYPE in common dhcp static
        do
-           po2debconf po/netcfg-$TYPE._templates > po/netcfg-$TYPE.templates
+           po2debconf --podir=debian/po debian/po/netcfg-$TYPE._templates \
+               > debian/netcfg-$TYPE.templates
        done
        for TYPE in dhcp static
        do
-           echo >> po/netcfg-$TYPE.templates
-           cat po/netcfg-common.templates >> po/netcfg-$TYPE.templates
+           echo >> debian/netcfg-$TYPE.templates
+           cat debian/netcfg-common.templates >> debian/netcfg-$TYPE.templates
        done
+
+    NOTE:  For a casual package, _templates files are located under
+           debian/ and not debian/po/, so --podir flag is then useless.
 
 4.  Warning
     -------
