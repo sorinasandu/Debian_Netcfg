@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.37\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-06 09:35+0100\n"
-"PO-Revision-Date: 2003-12-25 13:21+0100\n"
+"PO-Revision-Date: 2004-01-06 22:24+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,8 +99,8 @@ msgid ""
 "Debian system (via NFS or HTTP)."
 msgstr ""
 "Väl det nätverkskort som du vill konfigurera. Alla nätverkskort som har "
-"hittats i ditt system visas nedan. Välj typen på ditt primära "
-"nätverkskortet. Detta nätverkskort kommer att användas för att installera "
+"identifierats i ditt system visas nedan. Välj typen på ditt primära "
+"nätverkskort. Detta nätverkskort kommer att användas för att installera "
 "Debiansystemet (via NFS eller HTTP)."
 
 #. Type: error
@@ -125,7 +125,7 @@ msgstr "Värdnamn:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Please enter the hostname for this system."
-msgstr "Ange detta systems värdnamn."
+msgstr "Ange det här systemets värdnamn."
 
 #. Type: string
 #. Description
@@ -151,7 +151,7 @@ msgstr "Ogiltigt värdnamn"
 #. Description
 #: ../netcfg-common.templates:56
 msgid "The name \"${hostname}\" is invalid."
-msgstr "\"${hostname}\" är ett ogiltigt värdnamn."
+msgstr "\"${hostname}\" är ett ogiltigt namn."
 
 #. Type: error
 #. Description
@@ -185,7 +185,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:71
 msgid "No network interfaces detected"
-msgstr "Hittade inga nätverkskort."
+msgstr "Inga nätverkskort identifierades."
 
 #. Type: error
 #. Description
@@ -194,8 +194,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Hittade inga nätverkskort. Installationssystemet kunde inte hitta en "
-"nätverksenhet."
+"Inga nätverkskort identifierades. Installationssystemet kunde inte " 
+"identifiera en nätverksenhet."
 
 #. Type: error
 #. Description
@@ -290,7 +290,7 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:132
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
@@ -389,13 +389,13 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr "Processen med att konfigurera via DHCP kommer att avbrytas"
+msgstr "DHCP-konfigurationsprocessen kommer att avbrytas."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Vill du försöka konfigurera nätverket via DHCP igen?"
+msgstr "Vill du försöka nätverkskonfiguration via DHCP igen?"
 
 #. Type: boolean
 #. Description
@@ -419,7 +419,7 @@ msgstr "Dynamisk nätverkskonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Konfigurera nätverket genom att använda dynamisk addressering (DHCP)"
+msgstr "Konfigurera nätverket via dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
@@ -496,9 +496,9 @@ msgid ""
 msgstr ""
 "Gateway är en IP-adress (fyra nummer åtskilda av punkter) som anger "
 "gatewayroutern, även kallad standardroutern. All trafik som skall ut från "
-"ditt LAN (exempelvis till Internet) sänds via denna router. I sällsynta fall "
-"har du ingen router och då lämnar du det här tomt. Om du inte vet det rätta "
-"svaret på den här frågan bör du fråga din nätverksadministratör."
+"ditt LAN (exempelvis till internet) sänds via denna router. I sällsynta fall "
+"har du ingen router och då lämnar du det här tomt. Om du inte vet svaret på " 
+"den här frågan bör du konsultera din nätverksadministratör."
 
 #. Type: error
 #. Description
@@ -531,9 +531,9 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" nätverkskort     = ${interface}\n"
-" värdnamn         = ${hostname}\n"
-" domän            = ${domain}\n"
+" nätverkskort    = ${interface}\n"
+" värdnamn        = ${hostname}\n"
+" domän           = ${domain}\n"
 " IP-adress        = ${ipaddress}\n"
 " netmask          = ${netmask}\n"
 " gateway          = ${gateway}\n"
