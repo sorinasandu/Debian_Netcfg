@@ -173,6 +173,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   char* rv = NULL;
   int ret, keylen;
   unsigned char buf [IW_ENCODING_TOKEN_MAX];
+  struct iwreq wrq;
   
   iw_get_basic_config (wfd, iface, &wconf);
 
@@ -215,16 +216,12 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     rv = client->value;
   }
 
-  wconf.has_key = 1;
-  wconf.key_size = keylen;
-  wconf.key_flags = 0;
+  wrq.u.data.pointer = buf;
+  wrq.u.data.flags = 0;
+
+  if (iw_set_ext(skfd, iface, SIOCSIWENCODE, &wrq) < 0) {
+    return -1;
+  }
   
-  strncpy (wconf.key, buf, keylen);
-
-  wepkey = strdup(rv);
-
-  if (iw_set_basic_config (wfd, iface, &wconf) == -1)
-    fprintf(stderr, "warning: failed to set wep key");
-
   return 0;
 }
