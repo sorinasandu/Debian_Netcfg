@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-23 09:46-0800\n"
+"POT-Creation-Date: 2004-02-25 06:56+0100\n"
 "PO-Revision-Date: 2004-02-24 12:42EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -29,7 +29,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr "Δυναμική διευθυνσιοδότηση (DHCP), στατική διευθυνσιοδότηση (χειροκίνητη)"
+msgstr ""
+"Δυναμική διευθυνσιοδότηση (DHCP), στατική διευθυνσιοδότηση (χειροκίνητη)"
 
 #. Type: select
 #. Description
@@ -125,8 +126,9 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "Η διασύνδεση ${iface} είναι ασύρματου τύπου. Εισάγετε το όνομα (ESSID) του "
-"ασύρματου δικτύου το οποίο θέλετε να χρησιμοποιείται από το ${iface}. Αν θέλετε "
-"να χρησιμοποιείτε οποιοδήποτε διαθέσιμο ασύρματο δίκτυο, αφήστε το πεδίο κενό."
+"ασύρματου δικτύου το οποίο θέλετε να χρησιμοποιείται από το ${iface}. Αν "
+"θέλετε να χρησιμοποιείτε οποιοδήποτε διαθέσιμο ασύρματο δίκτυο, αφήστε το "
+"πεδίο κενό."
 
 #. Type: string
 #. Description
@@ -141,8 +143,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Αν χρειάζεται, εισάγετε το κλειδί ασφαλείας WEP για τη διασύνδεση ${iface}. Μπορείτε "
-"να χρησιμοποιήσετε έναν από τους δύο τρόπους:"
+"Αν χρειάζεται, εισάγετε το κλειδί ασφαλείας WEP για τη διασύνδεση ${iface}. "
+"Μπορείτε να χρησιμοποιήσετε έναν από τους δύο τρόπους:"
 
 #. Type: string
 #. Description
@@ -151,8 +153,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Αν το κλειδί WEP είναι της μορφής 'nnnn-nnnn-nn' ή 'nnnnnnnn', όπου n ακέραιος, απλώς "
-"εισάγετε το με αυτή τη μορφή."
+"Αν το κλειδί WEP είναι της μορφής 'nnnn-nnnn-nn' ή 'nnnnnnnn', όπου n "
+"ακέραιος, απλώς εισάγετε το με αυτή τη μορφή."
 
 #. Type: string
 #. Description
@@ -170,7 +172,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ""
+"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -185,8 +188,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Το κλειδί WEP '${wepkey}' δεν είναι έγκυρο. Παρακαλώ ανατρέξτε στις οδηγίες της "
-"επόμενης οθόνης για την σωστή εισαγωγή του κλειδιού WEP και ξαναδοκιμάστε."
+"Το κλειδί WEP '${wepkey}' δεν είναι έγκυρο. Παρακαλώ ανατρέξτε στις οδηγίες "
+"της επόμενης οθόνης για την σωστή εισαγωγή του κλειδιού WEP και "
+"ξαναδοκιμάστε."
 
 #. Type: error
 #. Description
@@ -201,8 +205,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Το όνομα ESSID \"${essid}\" δεν είναι έγκυρο. Τα ονόματα ESSID έχουν μέγιστο μήκος "
-"32 χαρακτήρων, αλλά μπορούν να περιέχουν οποιουσδήποτε χαρακτήρες."
+"Το όνομα ESSID \"${essid}\" δεν είναι έγκυρο. Τα ονόματα ESSID έχουν μέγιστο "
+"μήκος 32 χαρακτήρων, αλλά μπορούν να περιέχουν οποιουσδήποτε χαρακτήρες."
 
 #. Type: string
 #. Description
@@ -404,14 +408,16 @@ msgstr "Ρύθμιση Δικτύου"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
-msgid "Configuring network .."
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:178
+#, fuzzy
+msgid "Configuring network ..."
 msgstr "Ρυθμίση των παραμέτρων του δικτύου..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:183
 msgid "Configure the network"
 msgstr "Ρυθμίση των παραμέτρων του δικτύου"
 
@@ -560,8 +566,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Η διεύθυνση IP που εισάγατε είναι εσφαλμένη. Θα πρέπει να είναι της μορφής "
-"x.x.x.x, όπου κάθε 'x' είναι αριθμός από 0 ως 255. Παρακαλώ ξαναδοκιμάστε."
+"Η διεύθυνση IP που εισάγατε είναι εσφαλμένη. Θα πρέπει να είναι της μορφής x."
+"x.x.x, όπου κάθε 'x' είναι αριθμός από 0 ως 255. Παρακαλώ ξαναδοκιμάστε."
 
 #. Type: string
 #. Description
@@ -641,7 +647,8 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
@@ -681,4 +688,3 @@ msgstr "Στατική ρύθμιση δικτύου"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
-

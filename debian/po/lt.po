@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.47\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-23 09:46-0800\n"
+"POT-Creation-Date: 2004-02-25 06:56+0100\n"
 "PO-Revision-Date: 2004-02-24 19:36+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -115,9 +115,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} yra bevielio tinklo sąsaja. Prašau įvesti bevielio tinklo vardą (ESSID), "
-"kurį norite, kad ${iface} naudotų. Jei Jūs norite, kad būtų naudojamas "
-"bet kuris pasiekiamas tinklas, palikite šia lauką tuščią."
+"${iface} yra bevielio tinklo sąsaja. Prašau įvesti bevielio tinklo vardą "
+"(ESSID), kurį norite, kad ${iface} naudotų. Jei Jūs norite, kad būtų "
+"naudojamas bet kuris pasiekiamas tinklas, palikite šia lauką tuščią."
 
 #. Type: string
 #. Description
@@ -132,8 +132,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Jei yra galimybė, įveskite WEP apsaugos raktą įrenginiui ${iface}. Tai padaryti "
-"galima dviem būdais:"
+"Jei yra galimybė, įveskite WEP apsaugos raktą įrenginiui ${iface}. Tai "
+"padaryti galima dviem būdais:"
 
 #. Type: string
 #. Description
@@ -161,7 +161,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr ""
+"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -274,7 +275,8 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr ""
+"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -392,14 +394,16 @@ msgstr "Tinklo konfigūravimas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
-msgid "Configuring network .."
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:178
+#, fuzzy
+msgid "Configuring network ..."
 msgstr "Konfigūruojamas tinklas ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:183
 msgid "Configure the network"
 msgstr "Tinklo konfigūravimas"
 
@@ -626,7 +630,8 @@ msgstr "Jūsų nurodytas tinklų·sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -666,4 +671,3 @@ msgstr "Statinis tinklo konfigūravimas"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
-

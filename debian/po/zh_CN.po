@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-23 09:46-0800\n"
+"POT-Creation-Date: 2004-02-25 06:56+0100\n"
 "PO-Revision-Date: 2004-02-25 00:33+1300\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -115,8 +115,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称(ESSID)"
-"。如果您希望使用任意可用的网络，请将此处置空。"
+"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称"
+"(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: string
 #. Description
@@ -382,14 +382,16 @@ msgstr "网络配置"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
-msgid "Configuring network .."
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:178
+#, fuzzy
+msgid "Configuring network ..."
 msgstr "正在配置网络 .."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:183
 msgid "Configure the network"
 msgstr "配置网络"
 

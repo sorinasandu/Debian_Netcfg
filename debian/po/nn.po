@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-16 13:37-0700\n"
+"POT-Creation-Date: 2004-02-25 06:56+0100\n"
 "PO-Revision-Date: 2004-02-18 22:37+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -49,10 +49,10 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Nettverk kan anten setjast opp ved hjelp av ein DHCP-tenar eller ved å skriva "
-"inn all informasjon manuelt. Viss du vel DHCP og installasjonen ikkje klarer "
-"å henta eit fungerande oppsett frå DHCP-tenaren, vil du bli gjeve høve til å "
-"setja opp nettverket manuelt. Vel DHCP viss du er usikker."
+"Nettverk kan anten setjast opp ved hjelp av ein DHCP-tenar eller ved å "
+"skriva inn all informasjon manuelt. Viss du vel DHCP og installasjonen ikkje "
+"klarer å henta eit fungerande oppsett frå DHCP-tenaren, vil du bli gjeve "
+"høve til å setja opp nettverket manuelt. Vel DHCP viss du er usikker."
 
 #. Type: string
 #. Description
@@ -111,19 +111,100 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:39
+#: ../netcfg-common.templates:38
+msgid "Wireless ESSID for ${iface}:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:38
+msgid ""
+"${iface} is a wireless network interface. Please enter the name (the ESSID) "
+"of the wireless network you would like ${iface} to use. If you would like to "
+"use any available network, leave this field blank."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid "WEP key for ${iface}:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If applicable, please enter the WEP security key for device ${iface}. There "
+"are two ways to do this:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
+"number, just enter it as it is into this field."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If your WEP key is in the format of a passphrase, prefix it with "
+"'s:' (without quotes)."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"Of course, if there is no WEP key for your wireless network, leave this "
+"field blank."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:60
+msgid "Invalid WEP key"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:60
+msgid ""
+"The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
+"next screen carefully on how to enter your WEP key correctly, and try again."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:67
+msgid "Invalid ESSID"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:67
+msgid ""
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
+"but may contain all kinds of characters."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:74
 msgid "Hostname:"
 msgstr "Vertsnamn:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:39
+#: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
 msgstr "Skriv inn vertsnamnet for dette systemet."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:39
+#: ../netcfg-common.templates:74
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -137,19 +218,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:49
+#: ../netcfg-common.templates:84
 msgid "Invalid hostname"
 msgstr "Ugyldig vertsnamn."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:49
+#: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Vertsnamnet «${hostname}» er ugyldig."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:49
+#: ../netcfg-common.templates:84
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -161,13 +242,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:58
+#: ../netcfg-common.templates:93
 msgid "Error"
 msgstr "Feil"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:58
+#: ../netcfg-common.templates:93
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -177,13 +258,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:64
+#: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
 msgstr "Fann ingen nettverksgrensesnitt"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:64
+#: ../netcfg-common.templates:99
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -193,116 +274,130 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:64
+#: ../netcfg-common.templates:99
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Viss du har nettverkskort må du kanskje lasta ein særskilt modul for "
-"det. For å gjera det må du gå tilbake til steget der installasjonsystemet "
-"finn nettverksutstyr."
+"Viss du har nettverkskort må du kanskje lasta ein særskilt modul for det. "
+"For å gjera det må du gå tilbake til steget der installasjonsystemet finn "
+"nettverksutstyr."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:108
 msgid "<none>"
 msgstr "<ingen>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:77
+#: ../netcfg-common.templates:112
+msgid "Wireless ethernet (802.11x)"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:116
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet eller Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:81
+#: ../netcfg-common.templates:120
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:124
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:89
+#: ../netcfg-common.templates:128
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:132
 msgid "Serial-line IP"
 msgstr "IP over seriell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:97
+#: ../netcfg-common.templates:136
 msgid "Parallel-port IP"
 msgstr "IP over parallell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:101
+#: ../netcfg-common.templates:140
 msgid "Point-to-Point Protocol"
 msgstr "Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:105
+#: ../netcfg-common.templates:144
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-i-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:148
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:152
 msgid "Channel-to-channel"
 msgstr "Kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:156
 msgid "Real channel-to-channel"
 msgstr "Ekte kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:160
 msgid "Hypersocket"
 msgstr "Hypersokkel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:125
+#: ../netcfg-common.templates:164
 msgid "Inter-user communication vehicle"
 msgstr "Mellom-brukar kommunikasjonskøyretøy"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:168
 msgid "Unknown interface"
 msgstr "Ukjent grensesnitt."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:173
 msgid "Network Configuration"
 msgstr "Nettverksoppsett"
 
 #. Type: text
 #. Description
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:178
+#, fuzzy
+msgid "Configuring network ..."
+msgstr "Set opp nettverket"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:183
 msgid "Configure the network"
 msgstr "Set opp nettverket"
 
@@ -330,16 +425,18 @@ msgstr "Dei fleste andre brukarar kan la dette feltet stå tomt."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Er denne informasjonen rett?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parameter for nettverksoppsett:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -432,15 +529,30 @@ msgstr ""
 "med punktum. Dersom du ikkje veit kva du skal bruka her, bør du ta kontakt "
 "med nettverksadministratoren."
 
-#. Type: string
+#. Type: error
 #. Description
 #: ../netcfg-static.templates:10
+#, fuzzy
+msgid "Malformed IP address"
+msgstr "IP-adresse:"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The IP address you provided is malformed. It should be in the form x.x.x.x "
+"where each 'x' is no larger than 255. Please try again."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
 msgstr "Punkt-til-punkt-adresse:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:10
+#: ../netcfg-static.templates:16
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -454,13 +566,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:19
+#: ../netcfg-static.templates:25
 msgid "Netmask:"
 msgstr "Nettmaske:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:19
+#: ../netcfg-static.templates:25
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -473,13 +585,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:27
+#: ../netcfg-static.templates:33
 msgid "Gateway:"
 msgstr "Standardrutar:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:27
+#: ../netcfg-static.templates:33
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -497,25 +609,29 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:38
+#: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
 msgstr "Kjem ikkje fram til standardrutar"
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:38
+#: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
+msgstr ""
+"Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+#: ../netcfg-static.templates:44
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller adresse til "
 "standardrutar."
 
-#: ../netcfg-static.templates:47
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -538,14 +654,13 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-static.templates:62
+#: ../netcfg-static.templates:68
 msgid "Static network configuration"
 msgstr "Statisk nettverksoppsett"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:67
+#: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
-
