@@ -24,7 +24,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Voleu configurar la xarxa automàticament amb DHCP?"
+msgstr "Voleu configurar la xarxa automticament amb DHCP?"
 
 #. Type: boolean
 #. Description
@@ -36,11 +36,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Es pot configurar la xarxa mitjançant DHCP o introduint manualment tota la "
-"informació. Si decidiu usar DHCP i l'instal·lador no és capaç d'obtenir una "
-"configuració funcional des d'un servidor de DHCP a la vostra xarxa, tindreu "
-"l'oportunitat de configurar la vostra xarxa manualment després de l'intent "
-"de configurar-la per DHCP."
+"Es pot configurar la xarxa mitjanant DHCP o introduint manualment tota la "
+"informaci. Si decidiu usar DHCP i l'installador no s capa d'obtenir una "
+"configuraci funcional des d'un servidor de DHCP a la vostra xarxa, tindreu "
+"l'oportunitat de configurar la vostra xarxa manualment desprs de l'intent de "
+"configurar-la per DHCP."
 
 #. Type: string
 #. Description
@@ -57,9 +57,9 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"El nom de domini és la part de la vostra adreça d'internet a la dreta del "
+"El nom de domini s la part de la vostra adrea d'internet a la dreta del "
 "vostre nom d'ordinador. Sovint, aquest acaba en .com, .net, .edu o .org. Si "
-"esteu configurant una xarxa domèstica podeu inventar-vos un, però assegureu-"
+"esteu configurant una xarxa domstica podeu inventar-vos un, per assegureu-"
 "vos de que utilitzeu el mateix nom de domini a tots els ordinadors."
 
 #. Type: string
@@ -79,16 +79,16 @@ msgid ""
 "this field blank."
 msgstr ""
 "Els servidors de noms s'utilitzen per a cercar els noms dels ordinadors a la "
-"xarxa. Introduïu l'adreça IP (i no els noms dels ordinadors) de fins a 3 "
+"xarxa. Introduu l'adrea IP (i no els noms dels ordinadors) de fins a 3 "
 "servidors de noms, separats per espais. No utilitzeu comes. El primer "
-"servidor de la llista serà el primer en utilitzar-se. Si no voleu utilitzar "
+"servidor de la llista ser el primer en utilitzar-se. Si no voleu utilitzar "
 "cap servidor de noms, simplement deixeu aquest camp en blanc."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Interfície de xarxa principal:"
+msgstr "Interfcie de xarxa principal:"
 
 #. Type: select
 #. Description
@@ -98,9 +98,9 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"El vostre sistema té múltiples interfícies de xarxa. Seleccioneu la que s'ha "
-"d'utilitzar com interfície primaria mentre s'instal·la Debian. Si és "
-"possible, s'haurà triat la primera interfície de xarxa connectada."
+"El vostre sistema t mltiples interfcies de xarxa. Seleccioneu la que s'ha "
+"d'utilitzar com interfcie primaria mentre s'installa Debian. Si s possible, "
+"s'haur triat la primera interfcie de xarxa connectada."
 
 #. Type: string
 #. Description
@@ -116,15 +116,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} és una interfície de xarxa inalàmbrica. Introduïu el nom (l'ESSID) "
-"de la xarxa inalàmbrica que voleu que utilitze ${iface}. Si voleu utilitzar "
+"${iface} s una interfcie de xarxa inalmbrica. Introduu el nom (l'ESSID) de "
+"la xarxa inalmbrica que voleu que utilitze ${iface}. Si voleu utilitzar "
 "qualsevol altra xarxa disponible, deixeu aquest camp en blanc."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Clau WEP per a la interfície inalàmbrica ${iface}:"
+msgstr "Clau WEP per a la interfcie inalmbrica ${iface}:"
 
 #. Type: string
 #. Description
@@ -133,8 +133,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Si s'aplica, introduïu la clau de seguretat WEP per al dispositiu inalàmbric "
-"${iface}. Hi ha dos maneres de fer açò:"
+"Si s'aplica, introduu la clau de seguretat WEP per al dispositiu inalmbric "
+"${iface}. Hi ha dos maneres de fer a:"
 
 #. Type: string
 #. Description
@@ -143,8 +143,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Si la vostra clau WEP té el format «nnnn-nnnn-nn» o «nnnnnnnn», on n és un "
-"nombre, introduïu-la tal qual en el camp."
+"Si la vostra clau WEP t el format nnnn-nnnn-nn o nnnnnnnn, on n s un nombre, "
+"introduu-la tal qual en el camp."
 
 #. Type: string
 #. Description
@@ -153,8 +153,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Si la vostra clau WEP té el format de contrasenya, introduïu-la amb el "
-"prefix «s:» (sense les cometes)."
+"Si la vostra clau WEP t el format de contrasenya, introduu-la amb el prefix "
+"s: (sense les cometes)."
 
 #. Type: string
 #. Description
@@ -163,14 +163,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Per descomptat, si no hi ha una clau WEP per a la vostra xarxa inalàmbrica, "
+"Per descomptat, si no hi ha una clau WEP per a la vostra xarxa inalmbrica, "
 "deixeu aquest camp en blanc."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "La clau WEP és invàlida"
+msgstr "La clau WEP s invlida"
 
 #. Type: error
 #. Description
@@ -179,15 +179,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La clau WEP «${wepkey}» és invàlida. Si us plau, consulteu les intruccions "
-"de la següent pantalla per a veure com s'introdueix la vostra clau WEP "
+"La clau WEP ${wepkey} s invlida. Si us plau, consulteu les intruccions de la "
+"segent pantalla per a veure com s'introdueix la vostra clau WEP "
 "correctament, i torneu-ho a provar."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "L'ESSID és invàlid"
+msgstr "L'ESSID s invlid"
 
 #. Type: error
 #. Description
@@ -196,8 +196,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"L'ESSID «${essid} és invàlid. Els ESSID només poden contenir fins a 32 "
-"caràcters, però poden contenir qualsevol tipus de caràcters."
+"L'ESSID ${essid} s invlid. Els ESSID noms poden contenir fins a 32 carcters, "
+"per poden contenir qualsevol tipus de carcters."
 
 #. Type: string
 #. Description
@@ -209,7 +209,7 @@ msgstr "Nom:"
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Si us plau, introduïu el nom que voleu assignar a aquest sistema."
+msgstr "Si us plau, introduu el nom que voleu assignar a aquest sistema."
 
 #. Type: string
 #. Description
@@ -220,22 +220,22 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"El nom del sistema és una única paraula que identifica el sistema a la "
-"xarxa. Si no sabeu quin hauria de ser el nom del vostre ordinador, consulteu "
-"amb l'administrador de la xarxa. Si esteu configurant la vostra xarxa "
-"domèstica, podeu inventar-vos qualsevol cosa ací."
+"El nom del sistema s una nica paraula que identifica el sistema a la xarxa. "
+"Si no sabeu quin hauria de ser el nom del vostre ordinador, consulteu amb "
+"l'administrador de la xarxa. Si esteu configurant la vostra xarxa domstica, "
+"podeu inventar-vos qualsevol cosa ac."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "El nom del sistema és invàlid"
+msgstr "El nom del sistema s invlid"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "El nom «${hostname}» és invàlid."
+msgstr "El nom ${hostname} s invlid."
 
 #. Type: error
 #. Description
@@ -245,9 +245,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nom del sistema vàlid només pot contenir els números 0-9, les lletres "
-"minúscules a-z i el signe negatiu. Pot tindre entre 2 i 63 caràcters de "
-"longitud i no pot començar o acabar amb un signe negatiu."
+"Un nom del sistema vlid noms pot contenir els nmeros 0-9, les lletres "
+"minscules a-z i el signe negatiu. Pot tindre entre 2 i 63 carcters de "
+"longitud i no pot comenar o acabar amb un signe negatiu."
 
 #. Type: error
 #. Description
@@ -262,14 +262,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"S'ha produït un error i s'ha avortat el procés de configuració de la xarxa. "
-"Podeu tornar a intentar-ho des del menú principal de la instal·lació."
+"S'ha produt un error i s'ha avortat el procs de configuraci de la xarxa. "
+"Podeu tornar a intentar-ho des del men principal de la installaci."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "No s'ha detectat cap interfície de xarxa"
+msgstr "No s'ha detectat cap interfcie de xarxa"
 
 #. Type: error
 #. Description
@@ -278,8 +278,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"No s'ha trobat cap interfície de xarxa. El sistema d'instal·lació no ha "
-"pogut trobar un dispositiu de xarxa."
+"No s'ha trobat cap interfcie de xarxa. El sistema d'installaci no ha pogut "
+"trobar un dispositiu de xarxa."
 
 #. Type: error
 #. Description
@@ -288,21 +288,21 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"És possible que necessiteu carregar un mòdul específic per a la vostra "
-"targeta de xarxa, si teniu una. Per fer això, torneu enrere al pas de "
-"detecció de maquinari de xarxa."
+"s possible que necessiteu carregar un mdul especfic per a la vostra targeta "
+"de xarxa, si teniu una. Per fer aix, torneu enrere al pas de detecci de "
+"maquinari de xarxa."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Xarxa amb infraestructura (gestionada), Xarxa «ad-hoc» (Punt a punt)"
+msgstr "Xarxa amb infraestructura (gestionada), Xarxa ad-hoc (Punt a punt)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Tipus de xarxa inalàmbrica:"
+msgstr "Tipus de xarxa inalmbrica:"
 
 #. Type: select
 #. Description
@@ -312,22 +312,22 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Les xarxes inalàmbriques són o bé gestionades o bé «ad-hoc». Si useu "
-"qualsevol tipus de punt d'accés real, la vostra xarxa és gestionada. Si un "
-"altre ordinador és el vostre «punt d'accés», és possible que la vostra xarxa "
-"siga «Ad-hoc»."
+"Les xarxes inalmbriques sn o b gestionades o b ad-hoc. Si useu qualsevol "
+"tipus de punt d'accs real, la vostra xarxa s gestionada. Si un altre "
+"ordinador s el vostre punt d'accs, s possible que la vostra xarxa siga Ad-"
+"hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Configuració de xarxa inalàmbrica"
+msgstr "Configuraci de xarxa inalmbrica"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "S'estan cercant els punts d'accés inalàmbrics..."
+msgstr "S'estan cercant els punts d'accs inalmbrics..."
 
 #. Type: text
 #. Description
@@ -351,7 +351,7 @@ msgstr "wireless"
 #. Description
 #: ../netcfg-common.templates:144
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet o ethernet ràpida"
+msgstr "Ethernet o ethernet rpida"
 
 #. Type: text
 #. Description
@@ -369,13 +369,13 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Serial-line IP"
-msgstr "IP per línia sèrie"
+msgstr "IP per lnia srie"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
-msgstr "IP per port paral·lel"
+msgstr "IP per port parallel"
 
 #. Type: text
 #. Description
@@ -411,26 +411,26 @@ msgstr "Canal-a-canal real"
 #. Description
 #: ../netcfg-common.templates:184
 msgid "Hypersocket"
-msgstr "Hipersòcol"
+msgstr "Hiperscol"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
-msgstr "Vehicle de comunicació entre usuaris"
+msgstr "Vehicle de comunicaci entre usuaris"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Interfície desconeguda"
+msgstr "Interfcie desconeguda"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "S'està configurant la xarxa..."
+msgstr "S'est configurant la xarxa..."
 
 #. Type: text
 #. Description
@@ -452,33 +452,33 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"És possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
-"utilitzant un mòdem de cable, és possible que tingueu que especificar un "
-"nombre de compte ací."
+"s possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
+"utilitzant un mdem de cable, s possible que tingueu que especificar un "
+"nombre de compte ac."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "La major part dels altres usuaris poden deixar això en blanc."
+msgstr "La major part dels altres usuaris poden deixar aix en blanc."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "S'està configurant la xarxa amb DHCP"
+msgstr "S'est configurant la xarxa amb DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Això pot trigar un temps."
+msgstr "Aix pot trigar un temps."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "La configuració automàtica de la xarxa ha tingut èxit"
+msgstr "La configuraci automtica de la xarxa ha tingut xit"
 
 #. Type: error
 #. Description
@@ -497,19 +497,19 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "S'avortarà el procés de configuració per DHCP."
+msgstr "S'avortar el procs de configuraci per DHCP."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Reintenta la configuració automàtica de la xarxa"
+msgstr "Reintenta la configuraci automtica de la xarxa"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Reintenta la configuració automàtica amb un nom d'ordinador DHCP"
+msgstr "Reintenta la configuraci automtica amb un nom d'ordinador DHCP"
 
 #. Type: select
 #. Choices
@@ -533,7 +533,7 @@ msgstr "No configures la xarxa ara mateix"
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Mètode de configuració de la xarxa:"
+msgstr "Mtode de configuraci de la xarxa:"
 
 #. Type: select
 #. Description
@@ -545,18 +545,18 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Des d'ací podeu triar tornar a intentar la configuració automàtica de la "
-"xarxa amb DHCP (que és possible que funcione si el vostre servidor de DHCP "
-"triga molt en respondre) o configurar la xarxa manualment. Alguns servidors "
-"de DHCP requereixen que el client envie un nom d'ordinador DHCP, així que "
-"també podeu intentar la configuració automàtica de la xarxa amb DHCP amb el "
-"nom d'ordinador que proveïu."
+"Des d'ac podeu triar tornar a intentar la configuraci automtica de la xarxa "
+"amb DHCP (que s possible que funcione si el vostre servidor de DHCP triga "
+"molt en respondre) o configurar la xarxa manualment. Alguns servidors de "
+"DHCP requereixen que el client envie un nom d'ordinador DHCP, aix que tamb "
+"podeu intentar la configuraci automtica de la xarxa amb DHCP amb el nom "
+"d'ordinador que proveu."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "La configuració automàtica de la xarxa ha fallat"
+msgstr "La configuraci automtica de la xarxa ha fallat"
 
 #. Type: note
 #. Description
@@ -565,9 +565,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"És probable que la vostra xarxa no estiga utilitzant el protocol DHCP. "
+"s probable que la vostra xarxa no estiga utilitzant el protocol DHCP. "
 "Alternativament, el servidor de DHCP pot ser lent o algun maquinari de xarxa "
-"no està funcionant correctament."
+"no est funcionant correctament."
 
 #. Type: boolean
 #. Description
@@ -585,11 +585,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"La configuració de la xarxa ha tingut èxit. No obstant, no s'ha establert "
-"cap ruta per defecte: el sistema no sap com comunicar-se amb els ordinadors "
-"a Internet. Això farà que siga impossible continuar amb la instal·lació si "
-"no teniu el primer CD-ROM de Debian oficial, un CD-ROM «Netinstl», o els "
-"paquets disponibles a la xarxa local."
+"La configuraci de la xarxa ha tingut xit. No obstant, no s'ha establert cap "
+"ruta per defecte: el sistema no sap com comunicar-se amb els ordinadors a "
+"Internet. Aix far que siga impossible continuar amb la installaci si no "
+"teniu el primer CD-ROM de Debian oficial, un CD-ROM Netinstl, o els paquets "
+"disponibles a la xarxa local."
 
 #. Type: boolean
 #. Description
@@ -605,20 +605,20 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Reconfigura la xarxa inalàmbrica"
+msgstr "Reconfigura la xarxa inalmbrica"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Configura la xarxa utilitzant adreçament dinàmic (DHCP)"
+msgstr "Configura la xarxa utilitzant adreament dinmic (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "Adreça IP:"
+msgstr "Adrea IP:"
 
 #. Type: string
 #. Description
@@ -628,15 +628,15 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"L'adreça IP és única per al vostre sistema i consisteix en quatre números "
-"separats per punts. Si no sabeu què ficar ací, consulteu al vostre "
+"L'adrea IP s nica per al vostre sistema i consisteix en quatre nmeros "
+"separats per punts. Si no sabeu qu ficar ac, consulteu al vostre "
 "administrador de xarxa."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "L'adreça IP és malformada"
+msgstr "L'adrea IP s malformada"
 
 #. Type: error
 #. Description
@@ -645,14 +645,14 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"L'adreça IP que heu proveït és malformada. Haura d'estar en el format x.x.x."
-"x on cada «x» no és més gran que 255. Si us plau, proveu de nou."
+"L'adrea IP que heu provet s malformada. Haura d'estar en el format x.x.x.x "
+"on cada x no s ms gran que 255. Si us plau, proveu de nou."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Adreça punt-a-punt:"
+msgstr "Adrea punt-a-punt:"
 
 #. Type: string
 #. Description
@@ -663,16 +663,16 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"L'adreça punt-a-punt s'utilitza per a determinar l'altre extrem de la xarxa "
+"L'adrea punt-a-punt s'utilitza per a determinar l'altre extrem de la xarxa "
 "punt-a-punt. Consulteu al vostre administrador de xarxa si no sabeu el "
-"valor. L'adreça punt-a-punt s'ha d'introduir com quatre números separats per "
+"valor. L'adrea punt-a-punt s'ha d'introduir com quatre nmeros separats per "
 "punts."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Màscara de xarxa:"
+msgstr "Mscara de xarxa:"
 
 #. Type: string
 #. Description
@@ -682,16 +682,16 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"La màscara de xarxa s'utilitza per determinar quins ordinadors són locals a "
-"la vostra xarxa. Si no sabeu el valor, consulteu el vostre administrador de "
-"xarxa. La màscara de xarxa s'ha d'introduir com quatre números separats per "
+"La mscara de xarxa s'utilitza per determinar quins ordinadors sn locals a la "
+"vostra xarxa. Si no sabeu el valor, consulteu el vostre administrador de "
+"xarxa. La mscara de xarxa s'ha d'introduir com quatre nmeros separats per "
 "punts."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Pasarel·la:"
+msgstr "Pasarella:"
 
 #. Type: string
 #. Description
@@ -704,25 +704,24 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"La pasarel·la és una adreça IP (quatre números separats per punts) que "
-"indica el router pasarel·la, també conegut com el router per defecte. Tot el "
-"tràfic que va fora de la vostra LAN (per exemple, a Internet) s'envia a "
-"través d'aquest router. En algunes circunstàncies no habituals, és possible "
-"no tenir un router; en aquest cas, podeu deixar açò en blanc. Si no sabeu la "
-"resposta adequada per a aquesta pregunta, consulteu al vostre administrador "
-"de xarxa."
+"La pasarella s una adrea IP (quatre nmeros separats per punts) que indica el "
+"router pasarella, tamb conegut com el router per defecte. Tot el trfic que "
+"va fora de la vostra LAN (per exemple, a Internet) s'envia a travs d'aquest "
+"router. En algunes circunstncies no habituals, s possible no tenir un "
+"router; en aquest cas, podeu deixar a en blanc. Si no sabeu la resposta "
+"adequada per a aquesta pregunta, consulteu al vostre administrador de xarxa."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Pasarel·la inaccessible"
+msgstr "Pasarella inaccessible"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "L'adreça de pasarel·la que heu introduït és inaccessible."
+msgstr "L'adrea de pasarella que heu introdut s inaccessible."
 
 #. Type: error
 #. Description
@@ -730,20 +729,20 @@ msgstr "L'adreça de pasarel·la que heu introduït és inaccessible."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Pot ser heu comés un error en introduir la vostra adreça IP, màscara de "
-"xarxa i/o pasarel·la."
+"Pot ser heu coms un error en introduir la vostra adrea IP, mscara de xarxa i/"
+"o pasarella."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "És aquesta informació correcta?"
+msgstr "s aquesta informaci correcta?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Paràmetres de la xarxa actualment configurada:"
+msgstr "Parmetres de la xarxa actualment configurada:"
 
 #. Type: boolean
 #. Description
@@ -756,10 +755,10 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interfície         = ${interface}\n"
-" adreça IP          = ${ipaddress}\n"
-" màscara de xarxa   = ${netmask}\n"
-" pasarel·la         = ${gateway}\n"
+" interfcie         = ${interface}\n"
+" adrea IP          = ${ipaddress}\n"
+" mscara de xarxa   = ${netmask}\n"
+" pasarella         = ${gateway}\n"
 " punt a punt        = ${pointtopoint}\n"
 " servidors de noms  = ${nameservers}"
 
@@ -768,4 +767,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Configura una xarxa utilitzant adreçament estàtic"
+msgstr "Configura una xarxa utilitzant adreament esttic"

@@ -24,7 +24,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Autokonfigurēt tīklu ar DHCP?"
+msgstr "Autokonfigurt tklu ar DHCP?"
 
 #. Type: boolean
 #. Description
@@ -36,16 +36,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Tīkls var tikt konfigurēts automātiski, izmantojot DHCP, vai arī manuāli "
-"ievadot visus nepieciešamos parametrus. Ja Jūs izvēlēsieties automātisko "
-"konfigurāciju un tā būs neveiksmīga, Jums būs dota iespēja ievadīt "
-"nepieciešamos parametrus manuāli."
+"Tkls var tikt konfigurts automtiski, izmantojot DHCP, vai ar manuli ievadot "
+"visus nepiecieamos parametrus. Ja Js izvlsieties automtisko konfigurciju un "
+"t bs neveiksmga, Jums bs dota iespja ievadt nepiecieamos parametrus manuli."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
+#, fuzzy
 msgid "Domain name:"
-msgstr ""
+msgstr "Particijas vrds:"
 
 #. Type: string
 #. Description
@@ -173,14 +173,16 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Hostname:"
-msgstr ""
+msgstr "Portvrds:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Ievadiet Debian spoguservera vrdu"
 
 #. Type: string
 #. Description
@@ -195,8 +197,9 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
+#, fuzzy
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Nekorekts partcijas vrds"
 
 #. Type: error
 #. Description
@@ -217,7 +220,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Error"
-msgstr "Kļūda"
+msgstr "Kda"
 
 #. Type: error
 #. Description
@@ -383,20 +386,21 @@ msgstr ""
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Konfigurēju tīklu ..."
+msgstr "Konfigurju tklu ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Konfigurēt tīklu"
+msgstr "Konfigurt tklu"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
+#, fuzzy
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "Portvrds:"
 
 #. Type: string
 #. Description
@@ -416,7 +420,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Konfigurēt tīklu ar DHCP"
+msgstr "Konfigurt tklu ar DHCP"
 
 #. Type: text
 #. Description
@@ -433,8 +437,9 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
+#, fuzzy
 msgid "No DHCP client found"
-msgstr ""
+msgstr "Disks nav atrasts"
 
 #. Type: error
 #. Description
@@ -464,7 +469,7 @@ msgstr ""
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Konfigurēt tīklu manuāli"
+msgstr "Konfigurt tklu manuli"
 
 #. Type: select
 #. Choices
@@ -475,14 +480,16 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr ""
+msgstr "Konfigurt tkla iekrtu"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid "Network configuration method:"
-msgstr ""
+msgstr "LVM konfigurcijas darbbas"
 
 #. Type: select
 #. Description
@@ -498,8 +505,9 @@ msgstr ""
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
+#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr ""
+msgstr "Kda ieldjot prekonfigurcijas failu"
 
 #. Type: note
 #. Description
@@ -512,8 +520,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Turpint bez sakoanas ldtja"
 
 #. Type: boolean
 #. Description
@@ -537,15 +546,17 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
+#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr ""
+msgstr "Konfigurt tklu"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
+#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
+msgstr "Konfigurt tkla iekrtu"
 
 #. Type: string
 #. Description
@@ -653,8 +664,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+#, fuzzy
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Konfigurt tklu manuli"
 
 #. Type: boolean
 #. Description
@@ -672,5 +684,6 @@ msgstr ""
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
+#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr "Konfigurt tkla iekrtu"

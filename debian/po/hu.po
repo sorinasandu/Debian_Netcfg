@@ -23,7 +23,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Automatikusan konfigurálja a hálózatot DHCP-vel?"
+msgstr "Automatikusan konfigurlja a hlzatot DHCP-vel?"
 
 #. Type: boolean
 #. Description
@@ -35,16 +35,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"A hálózat konfigurálása vagy DHCP-vel, vagy az összes szükséges adat kézi "
-"beírásával történhet. Ha a DHCP-t választja és a Debian-telepítő nem tud az "
-"aktuális hálózaton levő DHCP-kiszolgálótól használható adatokat szerezni, a "
-"DHCP-s kísérlet után lehetősége nyílik a hálózat kézi konfigurációjára."
+"A hlzat konfigurlsa vagy DHCP-vel, vagy az sszes szksges adat kzi bersval "
+"trtnhet. Ha a DHCP-t vlasztja s a Debian-telept nem tud az aktulis hlzaton "
+"lev DHCP-kiszolgltl hasznlhat adatokat szerezni, a DHCP-s ksrlet utn "
+"lehetsge nylik a hlzat kzi konfigurcijra."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Hálózati domain:"
+msgstr "Hlzati domain:"
 
 #. Type: string
 #. Description
@@ -55,16 +55,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"A hálózati domain az gép Internet-címének gépnévtől jobbra eső része. A "
-"végződése sok esetben .com, .net, .edu, .org vagy .hu. Ha otthoni hálózatot "
-"telepít, akkor akár egy tetszőleges domaint is kitalálhat, de azért minden "
-"gépén ugyanarra állítsa be."
+"A hlzati domain az gp Internet-cmnek gpnvtl jobbra es rsze. A vgzdse sok "
+"esetben .com, .net, .edu, .org vagy .hu. Ha otthoni hlzatot telept, akkor "
+"akr egy tetszleges domaint is kitallhat, de azrt minden gpn ugyanarra lltsa "
+"be."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Névszolgáltatók címei:"
+msgstr "Nvszolgltatk cmei:"
 
 #. Type: string
 #. Description
@@ -76,17 +76,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"A névszolgáltatók a hálózaton található gépek neveinek feloldására "
-"használatosak. Szóközökkel elválasztva adja meg a (legfeljebb 3) "
-"névszolgáltató IP-címét (nem gépnevét). Ne tegyen közéjük vesszőket. Az "
-"elsőnek megadott kiszolgálóhoz fordul majd először. Ha nem vesz igénybe "
-"névszolgáltatót, hagyja üresen a mezőt."
+"A nvszolgltatk a hlzaton tallhat gpek neveinek feloldsra hasznlatosak. "
+"Szkzkkel elvlasztva adja meg a (legfeljebb 3) nvszolgltat IP-cmt (nem "
+"gpnevt). Ne tegyen kzjk vesszket. Az elsnek megadott kiszolglhoz fordul majd "
+"elszr. Ha nem vesz ignybe nvszolgltatt, hagyja resen a mezt."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Elsődleges hálózati csatoló:"
+msgstr "Elsdleges hlzati csatol:"
 
 #. Type: select
 #. Description
@@ -96,15 +95,15 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"A gép több hálózati csatolóval is rendelkezik. Válassza ki a Debian "
-"telepítésére használni kívánt elsődleges csatolót. Az első hálózati csatoló "
-"már ki is van választva (ha van ilyen)."
+"A gp tbb hlzati csatolval is rendelkezik. Vlassza ki a Debian teleptsre "
+"hasznlni kvnt elsdleges csatolt. Az els hlzati csatol mr ki is van vlasztva "
+"(ha van ilyen)."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Drótnélküli hálózati csatoló (${iface}) hálózati azonosítója (ESSID):"
+msgstr "Drtnlkli hlzati csatol (${iface}) hlzati azonostja (ESSID):"
 
 #. Type: string
 #. Description
@@ -114,15 +113,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"A rendszer felderítése drótnélküli hálózati csatolót (${iface}) talált. Adja "
-"meg az e csatoló révén használni kívánt drótnélküli hálózat nevét (ESSID). "
-"Ha bármely elérhető hálózat megfelel, hagyja üresen."
+"A rendszer feldertse drtnlkli hlzati csatolt (${iface}) tallt. Adja meg az e "
+"csatol rvn hasznlni kvnt drtnlkli hlzat nevt (ESSID). Ha brmely elrhet hlzat "
+"megfelel, hagyja resen."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Drótnélküli eszköz (${iface}) WEP-kulcsa:"
+msgstr "Drtnlkli eszkz (${iface}) WEP-kulcsa:"
 
 #. Type: string
 #. Description
@@ -131,8 +130,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Adja meg a drótnélküli eszköz (${iface}) biztonsági WEP-kulcsát (ha van "
-"ilyen). Ezt kétféle módon teheti:"
+"Adja meg a drtnlkli eszkz (${iface}) biztonsgi WEP-kulcst (ha van ilyen). "
+"Ezt ktfle mdon teheti:"
 
 #. Type: string
 #. Description
@@ -141,8 +140,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Ha a WEP-kulcs 'nnnn-nnnn-nn' vagy 'nnnnnnnn' formátumú (az n-ek helyén "
-"számok állnak), akkor írja be a mezőbe úgy, ahogy van."
+"Ha a WEP-kulcs 'nnnn-nnnn-nn' vagy 'nnnnnnnn' formtum (az n-ek helyn szmok "
+"llnak), akkor rja be a mezbe gy, ahogy van."
 
 #. Type: string
 #. Description
@@ -151,8 +150,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ha a WEP-kulcs egy jelmondat, akkor azt egy 's:' előtaggal ellátva adja meg "
-"(az aposztrófok nélkül)."
+"Ha a WEP-kulcs egy jelmondat, akkor azt egy 's:' eltaggal elltva adja meg "
+"(az aposztrfok nlkl)."
 
 #. Type: string
 #. Description
@@ -161,14 +160,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Ha a drótnélküli hálózathoz nem szükséges WEP-kulcs, akkor a mezőt "
-"természetesen hagyja üresen."
+"Ha a drtnlkli hlzathoz nem szksges WEP-kulcs, akkor a mezt termszetesen "
+"hagyja resen."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Érvénytelen WEP-kulcs"
+msgstr "rvnytelen WEP-kulcs"
 
 #. Type: error
 #. Description
@@ -177,14 +176,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"A WEP-kulcs (${wepkey}) érvénytelen. A következő szabályok szerint újból "
-"megadhatja a WEP-kulcsot."
+"A WEP-kulcs (${wepkey}) rvnytelen. A kvetkez szablyok szerint jbl megadhatja "
+"a WEP-kulcsot."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "Érvénytelen ESSID"
+msgstr "rvnytelen ESSID"
 
 #. Type: error
 #. Description
@@ -193,20 +192,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Az ESSID \"${essid}\" érvénytelen. Az ESSID-k legfeljebb 32 karakterből "
-"állhatnak, és mindenféle karaktert tartalmazhatnak."
+"Az ESSID \"${essid}\" rvnytelen. Az ESSID-k legfeljebb 32 karakterbl "
+"llhatnak, s mindenfle karaktert tartalmazhatnak."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Gépnév:"
+msgstr "Gpnv:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Adja meg a rendszer gépnevét."
+msgstr "Adja meg a rendszer gpnevt."
 
 #. Type: string
 #. Description
@@ -217,22 +216,21 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"A gépnév egy szóból áll, és a hálózaton belül azonosítja a rendszert. Ha nem "
-"tudja, mi legyen a gépnév, beszéljen az illetékes hálózati "
-"adminisztrátorral. Ha saját otthoni hálózatot épít ki, akkor tetszőleges "
-"nevet megadhat."
+"A gpnv egy szbl ll, s a hlzaton bell azonostja a rendszert. Ha nem tudja, mi "
+"legyen a gpnv, beszljen az illetkes hlzati adminisztrtorral. Ha sajt otthoni "
+"hlzatot pt ki, akkor tetszleges nevet megadhat."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Érvénytelen gépnév"
+msgstr "rvnytelen gpnv"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "A gépnév (\"${hostname}\") érvénytelen."
+msgstr "A gpnv (\"${hostname}\") rvnytelen."
 
 #. Type: error
 #. Description
@@ -242,9 +240,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Egy érvényes gépnév csak számokból (0-9), ékezet nélküli kisbetűkből (a-z) "
-"és a mínuszjelből áll. Legalább 2, legfeljebb 63 karakter hosszú, és "
-"mínuszjel se az elején, se a végén nincs."
+"Egy rvnyes gpnv csak szmokbl (0-9), kezet nlkli kisbetkbl (a-z) s a "
+"mnuszjelbl ll. Legalbb 2, legfeljebb 63 karakter hossz, s mnuszjel se az "
+"elejn, se a vgn nincs."
 
 #. Type: error
 #. Description
@@ -259,14 +257,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Hiba történt és a hálózat konfigurálásának folyamata megszakadt. A telepítés "
-"főmenüjéből újra megpróbálhatja."
+"Hiba trtnt s a hlzat konfigurlsnak folyamata megszakadt. A telepts fmenjbl "
+"jra megprblhatja."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "A felderítés nem talált hálózati csatolót"
+msgstr "A felderts nem tallt hlzati csatolt"
 
 #. Type: error
 #. Description
@@ -275,8 +273,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"A felderítés nem talált hálózati csatolót. A telepítőrendszer hálózati "
-"eszköz híján van."
+"A felderts nem tallt hlzati csatolt. A teleptrendszer hlzati eszkz hjn van."
 
 #. Type: error
 #. Description
@@ -285,23 +282,22 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Ha tényleg van hálózati kártyája, akkor ahhoz esetleg egy külön "
-"meghajtómodult kell betöltenie. Ehhez menjen vissza a hálózatihardver-"
-"felderítő lépéshez."
+"Ha tnyleg van hlzati krtyja, akkor ahhoz esetleg egy kln meghajtmodult kell "
+"betltenie. Ehhez menjen vissza a hlzatihardver-feldert lpshez."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
-"Infrastruktúrával rendelkező (Kiépített) hálózat, Ad-hoc hálózat (Egyenrangú "
-"végpontokból)"
+"Infrastruktrval rendelkez (Kiptett) hlzat, Ad-hoc hlzat (Egyenrang "
+"vgpontokbl)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Drótnélküli hálózat fajtája:"
+msgstr "Drtnlkli hlzat fajtja:"
 
 #. Type: select
 #. Description
@@ -311,22 +307,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"A drótnélküli hálózatok vagy kiépítettek, vagy ad-hoc jellegűek. Ha "
-"valamilyen hálózatelérési ponton át kapcsolódik, akkor a hálózat Kiépített. "
-"Ha a 'hálózatelérési pont' egy másik számítógép, akkor a hálózat inkább Ad-"
-"hoc."
+"A drtnlkli hlzatok vagy kiptettek, vagy ad-hoc jellegek. Ha valamilyen "
+"hlzatelrsi ponton t kapcsoldik, akkor a hlzat Kiptett. Ha a 'hlzatelrsi "
+"pont' egy msik szmtgp, akkor a hlzat inkbb Ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Drótnélküli hálózat konfigurálása"
+msgstr "Drtnlkli hlzat konfigurlsa"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Drótnélkülihálózat-elérési pontok felderítése folyamatban..."
+msgstr "Drtnlklihlzat-elrsi pontok feldertse folyamatban..."
 
 #. Type: text
 #. Description
@@ -338,13 +333,13 @@ msgstr "<semmi>"
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "Drótnélküli ethernet (802.11x)"
+msgstr "Drtnlkli ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "drótnélküli"
+msgstr "drtnlkli"
 
 #. Type: text
 #. Description
@@ -368,13 +363,13 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Serial-line IP"
-msgstr "Soros vonali·IP (SLIP)"
+msgstr "Soros vonaliIP (SLIP)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
-msgstr "Párhuzamos vonali IP (PLIP)"
+msgstr "Prhuzamos vonali IP (PLIP)"
 
 #. Type: text
 #. Description
@@ -404,7 +399,7 @@ msgstr "Csatorna-Csatorna (CTC)"
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Real channel-to-channel"
-msgstr "Valós csatorna-csatorna"
+msgstr "Vals csatorna-csatorna"
 
 #. Type: text
 #. Description
@@ -416,33 +411,33 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
-msgstr "Felhasználók közti kommunikációs eszköz (IUCV)"
+msgstr "Felhasznlk kzti kommunikcis eszkz (IUCV)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Ismeretlen hálózati csatoló"
+msgstr "Ismeretlen hlzati csatol"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Hálózat konfigurálása folyamatban..."
+msgstr "Hlzat konfigurlsa folyamatban..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Hálózat konfigurálása"
+msgstr "Hlzat konfigurlsa"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP-gépnév:"
+msgstr "DHCP-gpnv:"
 
 #. Type: string
 #. Description
@@ -451,20 +446,20 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Itt megadhat egy DHCP-gépnevet. Ha kábelmodemet használ, akkor a "
-"felhasználói nevét adja meg."
+"Itt megadhat egy DHCP-gpnevet. Ha kbelmodemet hasznl, akkor a felhasznli "
+"nevt adja meg."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Más felhasználók nyugodtan hagyhatják üresen."
+msgstr "Ms felhasznlk nyugodtan hagyhatjk resen."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Hálózat konfigurálása DHCP-vel"
+msgstr "Hlzat konfigurlsa DHCP-vel"
 
 #. Type: text
 #. Description
@@ -476,45 +471,45 @@ msgstr "Ez percekbe is beletelhet."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Hálózat automatikus konfigurálása sikeresen megtörtént"
+msgstr "Hlzat automatikus konfigurlsa sikeresen megtrtnt"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "DHCP-kliens keresése eredménytelen"
+msgstr "DHCP-kliens keresse eredmnytelen"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP-kliens keresése eredménytelen. Ez a csomag a pump vagy a dhcp-client "
-"csomaggal működik."
+"DHCP-kliens keresse eredmnytelen. Ez a csomag a pump vagy a dhcp-client "
+"csomaggal mkdik."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "A DHCP-konfiguráció folyamata megszakad."
+msgstr "A DHCP-konfigurci folyamata megszakad."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Hálózat automatikus konfigurálásának újrapróbálása"
+msgstr "Hlzat automatikus konfigurlsnak jraprblsa"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Hálózat automatikus konfigurálásának újrapróbálása DHCP-gépnévvel"
+msgstr "Hlzat automatikus konfigurlsnak jraprblsa DHCP-gpnvvel"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Hálózat kézi konfigurálása"
+msgstr "Hlzat kzi konfigurlsa"
 
 #. Type: select
 #. Choices
@@ -526,13 +521,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Hálózatkonfigurálás elhalasztása"
+msgstr "Hlzatkonfigurls elhalasztsa"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Hálózat konfigurálásának módja:"
+msgstr "Hlzat konfigurlsnak mdja:"
 
 #. Type: select
 #. Description
@@ -544,17 +539,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Ismét kísérletet tehet a hálózat DHCP-vel végzett automatikus "
-"konfigurálására (ha a hálózat DHCP-kiszolgálójának lassúsága lehet a "
-"magyarázat, akkor érdemes), vagy kézi módszerekhez is folyamodhat. Egyes "
-"DHCP-kiszolgálók csak egy bizonyos DHCP-gépnév megadására válaszolnak, ezért "
-"az automatikus DHCP-konfigurálást egy gépnév megadásával is újrapróbálhatja."
+"Ismt ksrletet tehet a hlzat DHCP-vel vgzett automatikus konfigurlsra (ha a "
+"hlzat DHCP-kiszolgljnak lasssga lehet a magyarzat, akkor rdemes), vagy kzi "
+"mdszerekhez is folyamodhat. Egyes DHCP-kiszolglk csak egy bizonyos DHCP-gpnv "
+"megadsra vlaszolnak, ezrt az automatikus DHCP-konfigurlst egy gpnv megadsval "
+"is jraprblhatja."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Hálózat automatikus konfigurálása sikertelenül zárult"
+msgstr "Hlzat automatikus konfigurlsa sikertelenl zrult"
 
 #. Type: note
 #. Description
@@ -563,14 +558,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"A hálózat valószínűleg nem DHCP-vel működik. Nem kizárható azonban a DHCP-"
-"kiszolgáló lassú volta, illetve a hálózatihardver-hiba sem."
+"A hlzat valsznleg nem DHCP-vel mkdik. Nem kizrhat azonban a DHCP-kiszolgl "
+"lass volta, illetve a hlzatihardver-hiba sem."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Alapértelmezett útvonal nélkül lép tovább?"
+msgstr "Alaprtelmezett tvonal nlkl lp tovbb?"
 
 #. Type: boolean
 #. Description
@@ -582,12 +577,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"A hálózat automatikus konfigurálása sikeresen lezajlott. Alapértelmezett "
-"útvonal megállapítására azonban nem került sor, a rendszer így nem tud az "
-"Interneten levő gépekkel kapcsolatot teremteni. Vagyis a telepítés sem tud "
-"folytatódni, hacsak nincs kéznél a Debian CD-ROM-telepítőkészlet első lemeze "
-"vagy egy ún. 'Netinst' CD-ROM, vagy pedig a helyi hálóról ki nem lehet "
-"pótolni a kellő csomagokat."
+"A hlzat automatikus konfigurlsa sikeresen lezajlott. Alaprtelmezett tvonal "
+"megllaptsra azonban nem kerlt sor, a rendszer gy nem tud az Interneten lev "
+"gpekkel kapcsolatot teremteni. Vagyis a telepts sem tud folytatdni, hacsak "
+"nincs kznl a Debian CD-ROM-teleptkszlet els lemeze vagy egy n. 'Netinst' CD-"
+"ROM, vagy pedig a helyi hlrl ki nem lehet ptolni a kell csomagokat."
 
 #. Type: boolean
 #. Description
@@ -596,28 +590,27 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ha bizonytalan a helyes döntésben, ne lépjen tovább alapértelmezett útvonal "
-"nélkül: a probléma alapos megoldása érdekében inkább érdeklődjön rendszere "
-"adminisztrátoránál."
+"Ha bizonytalan a helyes dntsben, ne lpjen tovbb alaprtelmezett tvonal nlkl: "
+"a problma alapos megoldsa rdekben inkbb rdekldjn rendszere adminisztrtornl."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Drótnélküli hálózat újrakonfigurálása"
+msgstr "Drtnlkli hlzat jrakonfigurlsa"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "A hálózat konfigurálása dinamikus címzéssel (DHCP)"
+msgstr "A hlzat konfigurlsa dinamikus cmzssel (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "IP-cím:"
+msgstr "IP-cm:"
 
 #. Type: string
 #. Description
@@ -627,15 +620,14 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Az IP-cím számítógépenként egyedi, és négy darab, pontokkal elválasztott "
-"számból áll. Ha nem tudja, mit írjon ide, beszéljen az illetékes hálózati "
-"adminisztrátorral."
+"Az IP-cm szmtgpenknt egyedi, s ngy darab, pontokkal elvlasztott szmbl ll. Ha "
+"nem tudja, mit rjon ide, beszljen az illetkes hlzati adminisztrtorral."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Hibás IP-cím"
+msgstr "Hibs IP-cm"
 
 #. Type: error
 #. Description
@@ -644,14 +636,14 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"A megadott IP-cím hibás, az x.x.x.x mintát kellene követnie, ahol az x-ek "
-"255-nél nem nagyobb természetes számokat jelölnek. Írja be ismét."
+"A megadott IP-cm hibs, az x.x.x.x mintt kellene kvetnie, ahol az x-ek 255-nl "
+"nem nagyobb termszetes szmokat jellnek. rja be ismt."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Pont-pont cím:"
+msgstr "Pont-pont cm:"
 
 #. Type: string
 #. Description
@@ -662,16 +654,15 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"A pont-pont cím a pont-pont hálózat másik végpontját állapítja meg. Ha nem "
-"tudja a megfelelő értéket, beszéljen az illetékes hálózati "
-"adminisztrátorral. A pont-pont cím négy darab, pontokkal elválasztott "
-"számból áll."
+"A pont-pont cm a pont-pont hlzat msik vgpontjt llaptja meg. Ha nem tudja a "
+"megfelel rtket, beszljen az illetkes hlzati adminisztrtorral. A pont-pont cm "
+"ngy darab, pontokkal elvlasztott szmbl ll."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Hálózati maszk:"
+msgstr "Hlzati maszk:"
 
 #. Type: string
 #. Description
@@ -681,16 +672,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"A hálózati maszk a jelen géppel egy alhálózatba tartozó gépeket jelöli ki. "
-"Ha nem tudja a megfelelő értéket, beszéljen az illetékes hálózati "
-"adminisztrátorral. A hálózati maszk négy darab, pontokkal elválasztott "
-"számból áll."
+"A hlzati maszk a jelen gppel egy alhlzatba tartoz gpeket jelli ki. Ha nem "
+"tudja a megfelel rtket, beszljen az illetkes hlzati adminisztrtorral. A "
+"hlzati maszk ngy darab, pontokkal elvlasztott szmbl ll."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Átjáró:"
+msgstr "tjr:"
 
 #. Type: string
 #. Description
@@ -703,43 +693,42 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Az átjáró egy IP-cím (vagyis négy darab, pontokkal elválasztott számból "
-"áll), ami az átjáró-útválasztót (alapértelmezett útválasztót) jelöli ki. A "
-"helyi hálóból kifelé (például az Internetre) irányuló forgalmat ez az "
-"útválasztó kezeli. Egyes ritka esetekben (amikor nincs közbeeső "
-"útvonalválasztó) ezt a mezőt üresen hagyhatja. Ha a kérdésre nem tudja a "
-"helyes választ, beszéljen az illetékes hálózati adminisztrátorral."
+"Az tjr egy IP-cm (vagyis ngy darab, pontokkal elvlasztott szmbl ll), ami az "
+"tjr-tvlasztt (alaprtelmezett tvlasztt) jelli ki. A helyi hlbl kifel (pldul "
+"az Internetre) irnyul forgalmat ez az tvlaszt kezeli. Egyes ritka esetekben "
+"(amikor nincs kzbees tvonalvlaszt) ezt a mezt resen hagyhatja. Ha a krdsre "
+"nem tudja a helyes vlaszt, beszljen az illetkes hlzati adminisztrtorral."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Elérhetetlen átjáró"
+msgstr "Elrhetetlen tjr"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "A megadott átjárócím nem elérhető."
+msgstr "A megadott tjrcm nem elrhet."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
+msgstr "Taln a megadott IP-cm, hlzati maszk s/vagy tjrcm hibs."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Az információk megfelelnek a valóságnak?"
+msgstr "Az informcik megfelelnek a valsgnak?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "A jelenleg beállított hálózati paraméterek:"
+msgstr "A jelenleg belltott hlzati paramterek:"
 
 #. Type: boolean
 #. Description
@@ -752,16 +741,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" csatoló         = ${interface}\n"
-" IP-cím          = ${ipaddress}\n"
-" hálózati maszk  = ${netmask}\n"
-" átjáró          = ${gateway}\n"
+" csatol         = ${interface}\n"
+" IP-cm          = ${ipaddress}\n"
+" hlzati maszk  = ${netmask}\n"
+" tjr          = ${gateway}\n"
 " pont-pont       = ${pointopoint}\n"
-" névszolgáltatók = ${nameservers}"
+" nvszolgltatk = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Hálózat konfigurálása statikus címzéssel"
+msgstr "Hlzat konfigurlsa statikus cmzssel"

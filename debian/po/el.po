@@ -39,7 +39,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Να ρυθμιστεί αυτόματα το δίκτυο μέσω DHCP;"
+msgstr "      DHCP;"
 
 #. Type: boolean
 #. Description
@@ -50,17 +50,13 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr ""
-"Η ρύθμιση του δικτύου μπορεί να γίνει είτε μέσω DHCP ή με χειροκίνητη "
-"εισαγωγή όλων των παραμέτρων. Αν επιλέξετε DHCP και το πρόγραμμα "
-"εγκατάστασης αδυνατεί να βρει λειτουργικές ρυθμίσεις από κάποιο διακομιστή "
-"DHCP στο δίκτυό σας, θα σας ζητηθεί να ρυθμίσετε το δίκτυο χειροκίνητα."
+msgstr "         DHCP       .   DHCP             DHCP   ,        ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Τομέας δικτύου:"
+msgstr " :"
 
 #. Type: string
 #. Description
@@ -71,17 +67,14 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Το όνομα του τομέα δικτύου (domain name) είναι το τμήμα της διεύθυνσής σας "
-"στο Internet μετά το όνομα του υπολογιστή (hostname). Συνήθως, λήγει σε ."
-"com, .net, .edu, .org, .gr. Αν εγκαθιστάτε ένα οικιακό δίκτυο μπορείτε να "
-"χρησιμοποιήσετε οποιοδήποτε όνομα, αλλά βεβαιωθείτε ότι χρησιμοποιείτε το "
-"ίδιο σε όλους τους υπολογιστές σας."
+"     (domain name)        Internet      (hostname). ,   .com, .net, .edu, ."
+"org, .gr.          ,           ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Διευθύνσεις διακομιστών ονομάτων:"
+msgstr "  :"
 
 #. Type: string
 #. Description
@@ -92,18 +85,13 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr ""
-"Οι διακομιστές ονομάτων χρησιμοποιούνται για την εύρεση ονομάτων κόμβων στο "
-"δίκτυο. Παρακαλώ δώστε τις διευθύνσεις IP (όχι τα ονόματα host) έως 3 "
-"διακομιστών ονομάτων χωρισμένων με κενά. Μη χρησιμοποιήσετε κόμματα. Οι "
-"διακομιστές θα ερωτώνται με τη σειρά που τους δίνετε εδω. Αν δεν επιθυμείτε "
-"να χρησιμοποιήσετε διακομιστές ονομάτων, αφήστε το πεδίο κενό."
+msgstr "          .     IP (   host)  3     .   .           .       ,    ."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Κύρια διασύνδεση δικτύου:"
+msgstr "  :"
 
 #. Type: select
 #. Description
@@ -112,16 +100,13 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
-msgstr ""
-"Το σύστημά σας έχει πολλαπλές διασυνδέσεις δικτύου. Επιλέξτε αυτή που θέλετε "
-"να χρησιμοποιήσετε ως κύρια διασύνδεση κατά την εγκατάσταση του Debian. Αν "
-"κατέστη δυνατό, επιλέχθηκε η πρώτη διασύνδεση που βρέθηκε."
+msgstr "      .              Debian.   ,      ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Ασύρματο ESSID για το ${iface}:"
+msgstr " ESSID   ${iface}:"
 
 #. Type: string
 #. Description
@@ -130,17 +115,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
-"Η διασύνδεση ${iface} είναι ασύρματου τύπου. Εισάγετε το όνομα (ESSID) του "
-"ασύρματου δικτύου το οποίο θέλετε να χρησιμοποιείται από το ${iface}. Αν "
-"θέλετε να χρησιμοποιείτε οποιοδήποτε διαθέσιμο ασύρματο δίκτυο, αφήστε το "
-"πεδίο κενό."
+msgstr "  ${iface}   .    (ESSID)           ${iface}.        ,    ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Κλειδί WEP για την ασύρματη συσκευή ${iface}:"
+msgstr " WEP     ${iface}:"
 
 #. Type: string
 #. Description
@@ -148,9 +129,7 @@ msgstr "Κλειδί WEP για την ασύρματη συσκευή ${iface}:
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr ""
-"Αν χρειάζεται, εισάγετε το κλειδί ασφαλείας WEP για την ασύρματη συσκευή "
-"${iface}. Μπορείτε να χρησιμοποιήσετε έναν από τους δύο τρόπους:"
+msgstr " ,     WEP     ${iface}.        :"
 
 #. Type: string
 #. Description
@@ -158,9 +137,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
-"Αν το κλειδί WEP είναι της μορφής 'nnnn-nnnn-nn' ή 'nnnnnnnn', όπου n "
-"ακέραιος, απλώς εισάγετε το με αυτή τη μορφή."
+msgstr "   WEP    'nnnn-nnnn-nn'  'nnnnnnnn',  n ,       ."
 
 #. Type: string
 #. Description
@@ -168,9 +145,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Αν το κλειδί WEP είναι σε μορφή φράσης, προσθέστε στην αρχή ένα 's:' (χωρίς "
-"αποστρόφους)."
+msgstr "   WEP    ,     's:' ( )."
 
 #. Type: string
 #. Description
@@ -178,14 +153,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ",        WEP,    ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Μη έγκυρο κλειδί WEP."
+msgstr "   WEP."
 
 #. Type: error
 #. Description
@@ -193,16 +167,13 @@ msgstr "Μη έγκυρο κλειδί WEP."
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
-"Το κλειδί WEP '${wepkey}' δεν είναι έγκυρο. Παρακαλώ ανατρέξτε στις οδηγίες "
-"της επόμενης οθόνης για την σωστή εισαγωγή του κλειδιού WEP και "
-"ξαναδοκιμάστε."
+msgstr "  WEP '${wepkey}'   .              WEP  ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "Μη έγκυρο ESSID"
+msgstr "  ESSID"
 
 #. Type: error
 #. Description
@@ -210,21 +181,19 @@ msgstr "Μη έγκυρο ESSID"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
-"Το όνομα ESSID \"${essid}\" δεν είναι έγκυρο. Τα ονόματα ESSID έχουν μέγιστο "
-"μήκος 32 χαρακτήρων, αλλά μπορούν να περιέχουν οποιουσδήποτε χαρακτήρες."
+msgstr "  ESSID \"${essid}\"   .   ESSID    32 ,      ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Όνομα υπολογιστή (hostname):"
+msgstr "  (hostname):"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Παρακαλώ, εισάγετε το όνομα αυτού του υπολογιστή."
+msgstr ",      ."
 
 #. Type: string
 #. Description
@@ -234,24 +203,19 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr ""
-"Το όνομα του υπολογιστή (hostname) είναι μια μοναδική λέξη που προσδιορίζει "
-"την ταυτότητα του υπολογιστή σας στο δίκτυο. Αν δεν γνωρίζετε ποιο θα πρέπει "
-"να είναι το όνομα του υπολογιστή σας, συμβουλευτείτε τον διαχειριστή του "
-"δικτύου σας. Αν πρόκειται για οικιακό δίκτυο, μπορείτε να δώσετε όποιο όνομα "
-"θέλετε."
+msgstr "    (hostname)             .             ,      .     ,      ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Μη έγκυρο όνομα υπολογιστή"
+msgstr "   "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Το όνομα του υπολογιστή \"${hostname}\" δεν είναι έγκυρο."
+msgstr "    \"${hostname}\"   ."
 
 #. Type: error
 #. Description
@@ -260,16 +224,14 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr ""
-"Ένα έγκυρο όνομα υπολογιστή μπορεί να περιέχει μόνο πεζούς αλφαριθμητικούς "
-"χαρακτήρες και το σύμβολο μείον. Πρέπει να έχει μέγεθος από 2 έως 63 "
-"χαρακτήρες. Δε πρέπει να αρχίζει ή να τελειώνει με το σύμβολο μείον."
+msgstr "              .      2  63 .           ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
+#, fuzzy
 msgid "Error"
-msgstr "Σφάλμα"
+msgstr "${error}"
 
 #. Type: error
 #. Description
@@ -277,16 +239,13 @@ msgstr "Σφάλμα"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr ""
-"Κάποιο σφάλμα παρουσιάστηκε και ακυρώθηκε η διαδικασία ρύθμισης του δικτύου. "
-"Μπορείτε να ξαναπροσπαθήσετε από την αντίστοιχη επιλογή του κυρίως μενού της "
-"εγκατάστασης."
+msgstr "         .            ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Δε βρέθηκαν διασυνδέσεις δικτύου"
+msgstr "   "
 
 #. Type: error
 #. Description
@@ -294,9 +253,7 @@ msgstr "Δε βρέθηκαν διασυνδέσεις δικτύου"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Δε βρέθηκαν διασυνδέσεις δικτύου. Το σύστημα εγκατάστασης δεν ανίχνευσε "
-"κάποια συσκευή δικτύου."
+msgstr "   .        ."
 
 #. Type: error
 #. Description
@@ -304,23 +261,19 @@ msgstr ""
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr ""
-"Πιθανόν να χρειάζεται να φορτώσετε τον οδηγό για την συσκευή δικτύου σας, αν "
-"χρησιμοποιείτε κάποια. Για το σκοπό αυτό, μεταβείτε στο στάδιο της "
-"ανίχνευσης συσκευών δικτύου."
+msgstr "           ,   .    ,       ."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
-"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr "  (),   (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Τύπος ασύρματου δικτύου:"
+msgstr "  :"
 
 #. Type: select
 #. Description
@@ -330,46 +283,44 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Τα ασύρματα δίκτυα είναι είτε διαχειριζόμενα (managed) ή τυχαίας τοπολογίας"
-"(ad-hoc). Αν χρησιμοποιείτε κάποιο σημείο πρόσβασης (access point), το "
-"δίκτυό σας είναι Διαχειριζόμενο. Αν κάποιος άλλος υπολογιστής παίζει το ρόλο "
-"του 'σημείου πρόσβασης' τότε το δίκτυό σας είναι τυχαίας τοπολογίας (Ad-hoc)."
+"      (managed)   (ad-hoc).      (access point),     .         ' "
+"'        (Ad-hoc)."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Ασύρματη ρύθμιση δικτύου"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Ανίχνευση για ασύρματα σημεία πρόσβασης ..."
+msgstr "     ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "<none>"
-msgstr "<καμία>"
+msgstr "<>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "Ασύρματο ethernet (802.11x)"
+msgstr " ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "ασύρματο"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:144
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet ή Fast Ethernet"
+msgstr "Ethernet  Fast Ethernet"
 
 #. Type: text
 #. Description
@@ -387,19 +338,19 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Serial-line IP"
-msgstr "IP σειριακής σύνδεσης"
+msgstr "IP  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
-msgstr "IP παράλληλης θύρας"
+msgstr "IP  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
-msgstr "Πρωτόκολλο σύνδεσης σημείου-προς-σημείο (PPP)"
+msgstr "  -- (PPP)"
 
 #. Type: text
 #. Description
@@ -411,19 +362,19 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
-msgstr "Πρωτόκολλο σύνδεσης ISDN σημείου-προς-σημείο (PPP)"
+msgstr "  ISDN -- (PPP)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Channel-to-channel"
-msgstr "Διασύνδεση διαύλων"
+msgstr " "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Real channel-to-channel"
-msgstr "Πραγματική διασύνδεση διαύλων"
+msgstr "  "
 
 #. Type: text
 #. Description
@@ -435,33 +386,33 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
-msgstr "Πλαίσιο επικοινωνίας χρηστών"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Άγνωστη διασύνδεση"
+msgstr " "
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Ρύθμιση δικτύου ..."
+msgstr "  ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Ρυθμίση των παραμέτρων του δικτύου"
+msgstr "    "
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Όνομα υπολογιστή DHCP:"
+msgstr "  DHCP:"
 
 #. Type: string
 #. Description
@@ -469,72 +420,67 @@ msgstr "Όνομα υπολογιστή DHCP:"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr ""
-"Πιθανόν να χρειάζεται να δώσετε το όνομα υπολογιστή DHCP. Αν χρησιμοποιείτε "
-"κάποια σύνδεση με Cable modem, ίσως να χρειάζεται να δώσετε κάποιον αριθμό "
-"λογαριασμού στο πεδίο αυτό."
+msgstr "        DHCP.      Cable modem,           ."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Οι περισσότεροι χρήστες μπορούν να αφήσουν το πεδίο κενό."
+msgstr "        ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Ρύθμιση του δικτύου μέσω DHCP"
+msgstr "    DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Η διαδικασία ίσως διαρκέσει μερικά λεπτά."
+msgstr "     ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής"
+msgstr "      "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "Δε βρέθηκε πρόγραμμα πελάτης DHCP"
+msgstr "    DHCP"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Δε βρέθηκε πρόγραμμα πελάτης DHCP. Το πακέτο αυτό απαιτεί την ύπαρξη του "
-"προγράμματος pump ή του dhcp-client."
+msgstr "    DHCP.         pump   dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Η διαδικασία ρύθμισης DHCP θα τερματιστεί."
+msgstr "   DHCP  ."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δικτύου"
+msgstr "   "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δικτύου με όνομα DHCP"
+msgstr "      DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Χειροκίνητη ρυθμίση του δικτύου"
+msgstr "   "
 
 #. Type: select
 #. Choices
@@ -546,13 +492,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Να μη γίνει ρυθμίση του δικτύου σε αυτό το σημείο"
+msgstr "         "
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Μέθοδος ρύθμισης δικτύου: "
+msgstr "  : "
 
 #. Type: select
 #. Description
@@ -564,18 +510,13 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Εδώ μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP (που "
-"μπορεί να πετύχει αν ο εξυπηρετητής DHCP αργεί να αποκριθεί σε αιτήσεις) ή "
-"να ρυθμίσετε το δίκτυο χειροκίνητα. Επίσης, ορισμένοι εξυπηρετητές DHCP "
-"απαιτούν να τους αποσταλεί κάποιο συγκεκριμένο όνομα υπολογιστή, οπότε "
-"μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP παρέχοντας "
-"ένα προκαθορισμένο όνομα υπολογιστή."
+"        DHCP (       DHCP     )      . ,   DHCP        ,         DHCP     ."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Η αυτόματη ρύθμιση του δικτύου απέτυχε"
+msgstr "     "
 
 #. Type: note
 #. Description
@@ -583,16 +524,13 @@ msgstr "Η αυτόματη ρύθμιση του δικτύου απέτυχε"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
-"Στο δίκτυο σας προφανώς δεν χρησιμοποιείται το πρωτόκολλο DHCP. Αλλη αιτία "
-"μπορεί να είναι η αργή απόκριση του εξυπηρετητή ή πιθανόν κάποιο υλικό δεν "
-"λειτουργεί σωστά."
+msgstr "        DHCP.                 ."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Συνέχεια χωρίς προκαθορισμένη δρομολόγηση;"
+msgstr "   ;"
 
 #. Type: boolean
 #. Description
@@ -603,12 +541,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
-"Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής. Πάραυτα δεν έχει καθοριστεί "
-"προκαθορισμένη δρομολόγηση: το σύστημα δεν γνωρίζει πως να επικοινωνήσει με "
-"άλλους υπολογιστές στο Διαδίκτυο. Αυτό ίσως κάνει αδύνατη τη συνέχιση της "
-"διαδικασίας εγκατάστασης εκτός και αν διαθέτετε τον επίσημο πρώτο δίσκο της "
-"διανομής, ή ένα δίσκο 'Netinst ή τα απαραίτητα πακέτα σε ένα τοπικό δίκτυο."
+msgstr "      .      :            .                   ,    'Netinst        ."
 
 #. Type: boolean
 #. Description
@@ -616,28 +549,26 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
-"Αν δεν είστε σίγουροι, μην συνεχίσετε χωρίς προκαθορισμένη δρομολόγηση: "
-"επικοινωνήστε με τον διαχειριστή του δικτύου σας σχετικά με αυτό το πρόβλημα."
+msgstr "   ,     :            ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Επαναρυθμίση ασύρματου δικτύου"
+msgstr "  "
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Αυτόματη ρύθμιση δικτύου μέσω δυναμικής διευθυνσιοδότησης DHCP."
+msgstr "      DHCP."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "Διεύθυνση IP:"
+msgstr " IP:"
 
 #. Type: string
 #. Description
@@ -646,16 +577,13 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr ""
-"Η διεύθυνση IP είναι μοναδική για τον υπολογιστή σας και αποτελείται από "
-"τέσσερις αριθμούς χωρισμένους με τελείες.  Αν δε γνωρίζετε τί πρέπει να "
-"χρησιμοποιήσετε για διεύθυνση IP, συμβουλευτείτε το διαχειριστή δικτύου σας."
+msgstr "  IP              .           IP,     ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Εσφαλμένη διεύθυνση IP"
+msgstr "  IP"
 
 #. Type: error
 #. Description
@@ -663,15 +591,13 @@ msgstr "Εσφαλμένη διεύθυνση IP"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
-"Η διεύθυνση IP που εισάγατε είναι εσφαλμένη. Θα πρέπει να είναι της μορφής x."
-"x.x.x, όπου κάθε 'x' είναι αριθμός από 0 ως 255. Παρακαλώ ξαναδοκιμάστε."
+msgstr "  IP    .       x.x.x.x,   'x'    0  255.  ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Διεύθυνση Point-To-Point:"
+msgstr " Point-To-Point:"
 
 #. Type: string
 #. Description
@@ -682,16 +608,14 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Η διεύθυνση Point-to-Point χρησιμοποιείται για τον προσδιορισμό του άλλου "
-"άκρου της σύνδεσης Point-to-Point.  Αν δε γνωρίζετε την τιμή της διεύθυνσης "
-"Point-to-Point, συμβουλευτείτε το διαχειριστή δικτύου σας.  Η διεύθυνση "
-"Point-to-Point αποτελείται από τέσσερις αριθμούς χωρισμένους με τελείες."
+"  Point-to-Point          Point-to-Point.         Point-to-Point,     .    "
+"Point-to-Point       ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Μάσκα δικτύου:"
+msgstr " :"
 
 #. Type: string
 #. Description
@@ -700,17 +624,13 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr ""
-"Η μάσκα δικτύου (netmask) χρησιμοποιείται για τον προσδιορισμό των "
-"υπολογιστών που θεωρούνται τοπικά στο δίκτυό σας. Αν δε γνωρίζετε τη τιμή "
-"της μάσκας δικτύου, συμβουλευτείτε τον διαχειριστή του δικτύου σας. Η μάσκα "
-"δικτύου έχει τη μορφή τεσσάρων αριθμών χωρισμένων με τελείες."
+msgstr "   (netmask)            .        ,      .           ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Πύλη δικτύου:"
+msgstr " :"
 
 #. Type: string
 #. Description
@@ -723,45 +643,39 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Η πύλη δικτύου είναι μια διεύθυνση IP (τέσσερις αριθμοί δικτύου χωρισμένοι "
-"με τελείες). Όλη η δικτυακή επικοινωνία που προορίζεται εκτός του δικτύου "
-"σας (π.χ. στο Internet) δρομολογείται μέσω της πύλης δικτύου (αλλιώς γνωστής "
-"ως δρομολογητής).  Σε σπάνιες περιπτώσεις, μπορεί να μην υπάρχει "
-"δρομολογητής, οπότε μπορείτε να αφήσετε το πεδίο κενό. Αν δε γνωρίζετε την "
-"απάντηση στην ερώτηση αυτή, συμβουλευτείτε το διαχειριστή του δικτύου σας."
+"      IP (     ).           (..  Internet)      "
+"(   ).    ,     ,       .        ,      ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Αδύνατη η πρόσβαση στην πύλη"
+msgstr "    "
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Η πύλη δικτύου που δώσατε δεν είναι προσβάσιμη."
+msgstr "       ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr ""
-"Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
-"μάσκας ή/και της πύλης δικτύου."
+msgstr "          IP,   /   ."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Είναι οι παρακάτω ρυθμίσεις σωστές;"
+msgstr "    ;"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Τρέχουσες ρυθμίσεις δικτύου:"
+msgstr "  :"
 
 #. Type: boolean
 #. Description
@@ -774,16 +688,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" Διασύνδεση            = ${interface}\n"
-" Διεύθυνση IP          = $[ipaddress}\n"
-" Mάσκα δικτύου         = ${netmask}\n"
-" Πύλη δικτύου          = ${gateway}\n"
+"             = ${interface}\n"
+"  IP          = $[ipaddress}\n"
+" M          = ${netmask}\n"
+"            = ${gateway}\n"
 " Point-to-Point        = {pointtopoint}\n"
-" Διακομιστές ονομάτων  = ${nameservers}"
+"    = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
+msgstr "     "

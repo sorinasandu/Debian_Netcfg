@@ -26,7 +26,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Hae verkkoasetukset automaattisesti DHCP:llä?"
+msgstr "Hae verkkoasetukset automaattisesti DHCP:ll?"
 
 #. Type: boolean
 #. Description
@@ -38,10 +38,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Verkkoasetukset voidaan hakea automaattisesti DHCP:llä tai tehdä itse. Jos "
+"Verkkoasetukset voidaan hakea automaattisesti DHCP:ll tai tehd itse. Jos "
 "valittuasi DHCP:n asennusohjelma ei saa haettua toimivia asetuksia verkkosi "
-"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehdä asetukset itse. Jos "
-"et ole varma, käytä DHCP:tä."
+"DHCP-palvelimelta, saat uudestaan mahdollisuuden tehd asetukset itse. Jos et "
+"ole varma, kyt DHCP:t."
 
 #. Type: string
 #. Description
@@ -59,9 +59,9 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "Verkkoaluenimi on se osa Internet-osoitettasi, joka on tietokoneesi nimen "
-"perässä. Se on usein jotain, joka loppuu .fi, .com, .net tai .org. Jos olet "
-"pystyttämässä kotiverkkoa, voit keksiä tähän jotain, mutta varmista, että "
-"käytät samaa verkkoaluenimeä kaikissa tietokoneissasi."
+"perss. Se on usein jotain, joka loppuu .fi, .com, .net tai .org. Jos olet "
+"pystyttmss kotiverkkoa, voit keksi thn jotain, mutta varmista, ett kytt "
+"samaa verkkoaluenime kaikissa tietokoneissasi."
 
 #. Type: string
 #. Description
@@ -79,17 +79,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Nimipalvelimia käytetään verkon konenimien selvittämiseen. Kirjoita IP-"
-"osoitteet (ei konenimiä) korkeintaan kolmelle nimipalvelimelle välilyönnein "
-"eroteltuna. Älä käytä pilkkuja. Palvelimilta kysytään siinä järjestyksessä "
-"kuin syötät ne. Jos et halua käyttää mitään nimipalvelimia, voit jättää "
-"tämän kentän tyhjäksi."
+"Nimipalvelimia kytetn verkon konenimien selvittmiseen. Kirjoita IP-osoitteet "
+"(ei konenimi) korkeintaan kolmelle nimipalvelimelle vlilynnein eroteltuna. l "
+"kyt pilkkuja. Palvelimilta kysytn siin jrjestyksess kuin sytt ne. Jos et "
+"halua kytt mitn nimipalvelimia, voit jtt tmn kentn tyhjksi."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Ensisijainen verkkoliitäntä:"
+msgstr "Ensisijainen verkkoliitnt:"
 
 #. Type: select
 #. Description
@@ -99,15 +98,15 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Järjestelmässä on useita verkkoliitäntöjä. Valitse mitä niistä käytetään "
-"ensisijaisena verkkoliitäntänä Debiania asennettaessa. Ensimmäinen löydetty "
-"kytkettynä oleva verkkoliitäntä on valittu, mikäli mahdollista."
+"Jrjestelmss on useita verkkoliitntj. Valitse mit niist kytetn ensisijaisena "
+"verkkoliitntn Debiania asennettaessa. Ensimminen lydetty kytkettyn oleva "
+"verkkoliitnt on valittu, mikli mahdollista."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Langattoman verkon ESSID liitännälle ${iface}:"
+msgstr "Langattoman verkon ESSID liitnnlle ${iface}:"
 
 #. Type: string
 #. Description
@@ -117,9 +116,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} on langattoman verkon liitäntä. Kirjoita sen langattoman verkon "
-"nimi (ESSID) jota haluat liitännän ${iface} käyttävän. Jos haluat käyttää "
-"mitä tahansa käytettävissä olevaa verkkoa, jätä tämä tyhjäksi."
+"${iface} on langattoman verkon liitnt. Kirjoita sen langattoman verkon nimi "
+"(ESSID) jota haluat liitnnn ${iface} kyttvn. Jos haluat kytt mit tahansa "
+"kytettviss olevaa verkkoa, jt tm tyhjksi."
 
 #. Type: string
 #. Description
@@ -134,8 +133,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Jos käytössä, kirjoita langattoman laitteen ${iface} WEP-salausavain. Tämän "
-"voi tehdä kahdella tavalla:"
+"Jos kytss, kirjoita langattoman laitteen ${iface} WEP-salausavain. Tmn voi "
+"tehd kahdella tavalla:"
 
 #. Type: string
 #. Description
@@ -144,8 +143,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Jos WEP-avain on muodossa \"nnnn-nnnn-nn\" tai \"nnnnnnnn\", missä n on "
-"numero, kirjoita se sellaisenaan tähän kenttään."
+"Jos WEP-avain on muodossa \"nnnn-nnnn-nn\" tai \"nnnnnnnn\", miss n on "
+"numero, kirjoita se sellaisenaan thn kenttn."
 
 #. Type: string
 #. Description
@@ -155,7 +154,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Jos WEP-avain on tunnuslause, kirjoita sen eteen \"s:\" (ilman "
-"lainausmerkkejä)."
+"lainausmerkkej)."
 
 #. Type: string
 #. Description
@@ -164,8 +163,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Jos langattomassa verkossasi ei ole WEP-avainta, jätät tämän kentän "
-"tietenkin tyhjäksi. "
+"Jos langattomassa verkossasi ei ole WEP-avainta, jtt tmn kentn tietenkin "
+"tyhjksi. "
 
 #. Type: error
 #. Description
@@ -181,7 +180,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "WEP-avain ${wepkey} ei kelpaa. Noudata tarkasti seuraavan ruudun ohjeita WEP-"
-"avaimen oikeasta kirjoittamisesta ja yritä uudestaan."
+"avaimen oikeasta kirjoittamisesta ja yrit uudestaan."
 
 #. Type: error
 #. Description
@@ -196,8 +195,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ei kelpaa. ESSID:ssä voi olla enintään 32 merkkiä, mutta "
-"voivat sisältää kaikenlaisia merkkejä. "
+"ESSID \"${essid}\" ei kelpaa. ESSID:ss voi olla enintn 32 merkki, mutta "
+"voivat sislt kaikenlaisia merkkej. "
 
 #. Type: string
 #. Description
@@ -209,7 +208,7 @@ msgstr "Konenimi:"
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Tämän järjestelmän konenimi."
+msgstr "Tmn jrjestelmn konenimi."
 
 #. Type: string
 #. Description
@@ -220,9 +219,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Konenimi toimii koneesi tunnisteena verkossa. Jos et tiedä mikä konenimen "
-"pitäisi olla, kysy verkon ylläpitäjältä. Jos olet pystyttämässä omaa "
-"kotiverkkoasi, voit valita nimen vapaasti."
+"Konenimi toimii koneesi tunnisteena verkossa. Jos et tied mik konenimen "
+"pitisi olla, kysy verkon yllpitjlt. Jos olet pystyttmss omaa kotiverkkoasi, "
+"voit valita nimen vapaasti."
 
 #. Type: error
 #. Description
@@ -244,9 +243,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Kelvollinen konenimi voi sisältää vain numeroita 0-9, pieniä kirjaimia a-z "
-"ja miinusmerkin. Se on pituudeltaan kahden ja 63 merkin välillä eikä voi "
-"alkaa tai loppua miinusmerkkiin."
+"Kelvollinen konenimi voi sislt vain numeroita 0-9, pieni kirjaimia a-z ja "
+"miinusmerkin. Se on pituudeltaan kahden ja 63 merkin vlill eik voi alkaa tai "
+"loppua miinusmerkkiin."
 
 #. Type: error
 #. Description
@@ -261,14 +260,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää "
-"uudestaan asennusohjelman päävalikosta."
+"Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yritt uudestaan "
+"asennusohjelman pvalikosta."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Verkkoliitäntöjä ei havaittu"
+msgstr "Verkkoliitntj ei havaittu"
 
 #. Type: error
 #. Description
@@ -277,8 +276,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Verkkosovittimia ei löytynyt.  Tämä tarkoittaa, että asennusjärjestelmä ei "
-"löytänyt verkkolaitetta."
+"Verkkosovittimia ei lytynyt.  Tm tarkoittaa, ett asennusjrjestelm ei lytnyt "
+"verkkolaitetta."
 
 #. Type: error
 #. Description
@@ -296,7 +295,7 @@ msgstr ""
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
-"Runkoverkko (hallinnoitu), verkon solmujen omin päin luoma (vertaisverkko)"
+"Runkoverkko (hallinnoitu), verkon solmujen omin pin luoma (vertaisverkko)"
 
 #. Type: select
 #. Description
@@ -312,8 +311,8 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Langattomat verkot ovat joko hallinnoituja tai verkon solmujen omin päin "
-"muodostamia (ad-hoc). Jos käytössä on tukiasema, verkko on hallinnoitu. Jos "
+"Langattomat verkot ovat joko hallinnoituja tai verkon solmujen omin pin "
+"muodostamia (ad-hoc). Jos kytss on tukiasema, verkko on hallinnoitu. Jos "
 "toinen tietokone on \"tukiasema\", verkko saattaa olla ad-hoc."
 
 #. Type: text
@@ -326,13 +325,13 @@ msgstr "Langattoman verkon asetukset"
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Etsitään langattomia tukiasemia ..."
+msgstr "Etsitn langattomia tukiasemia ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "<none>"
-msgstr "<ei mitään>"
+msgstr "<ei mitn>"
 
 #. Type: text
 #. Description
@@ -380,7 +379,7 @@ msgstr "Rinnakkaisportin IP"
 #. Description
 #: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
-msgstr "Kaksipisteyhteyskäytäntö (point-to-point)"
+msgstr "Kaksipisteyhteyskytnt (point-to-point)"
 
 #. Type: text
 #. Description
@@ -392,7 +391,7 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN-kaksipisteyhteyskäytäntö (point-to-point)"
+msgstr "ISDN-kaksipisteyhteyskytnt (point-to-point)"
 
 #. Type: text
 #. Description
@@ -429,7 +428,7 @@ msgstr "Tuntematon sovitin"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Tehdään verkkoasetukset ..."
+msgstr "Tehdn verkkoasetukset ..."
 
 #. Type: text
 #. Description
@@ -451,70 +450,70 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Sinun kenties tarvitsee syöttää DHCP-konenimi. Jos käytät kaapelimodeemia, "
-"sinun kenties tarvitsee kirjoittaa käyttäjätunnuksen numero."
+"Sinun kenties tarvitsee sytt DHCP-konenimi. Jos kytt kaapelimodeemia, sinun "
+"kenties tarvitsee kirjoittaa kyttjtunnuksen numero."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Useimmiten tämän voi jättää tyhjäksi."
+msgstr "Useimmiten tmn voi jtt tyhjksi."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Tehdään verkkoasetukset DHCP:llä"
+msgstr "Tehdn verkkoasetukset DHCP:ll"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Tämä voi kestää hetken aikaa."
+msgstr "Tm voi kest hetken aikaa."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Verkkoasetukset saatiin tehtyä automaattisesti"
+msgstr "Verkkoasetukset saatiin tehty automaattisesti"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "DHCP-asiakasohjelmaa ei löytynyt"
+msgstr "DHCP-asiakasohjelmaa ei lytynyt"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+"DHCP-asiakasohjelmaa ei lydy. Tm paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Verkkoasetusten haku automaattisesti keskeytetään"
+msgstr "Verkkoasetusten haku automaattisesti keskeytetn"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Yritä uudestaan verkkoasetusten tekoa automaattisesti"
+msgstr "Yrit uudestaan verkkoasetusten tekoa automaattisesti"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
-"Yritä uudestaan verkkoasetusten tekoa automaattisesti käyttäen DHCP-konenimeä"
+"Yrit uudestaan verkkoasetusten tekoa automaattisesti kytten DHCP-konenime"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Tee verkkoasetukset käsin"
+msgstr "Tee verkkoasetukset ksin"
 
 #. Type: select
 #. Choices
@@ -526,7 +525,7 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Älä tee verkkoasetuksia tällä kertaa"
+msgstr "l tee verkkoasetuksia tll kertaa"
 
 #. Type: select
 #. Description
@@ -544,17 +543,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Tässä voit yrittää uudelleen verkon asetusten tekoa automaattisesti DHCP:llä "
-"(se voi toimia jos DHCP-palvelin vastaa hitaasti) tai tehdä verkon asetukset "
-"itse. Jotkin DHCP-palvelimet vaativat asiakkaan lähettämän konenimen, joten "
-"voit kokeilla myös verkon asetusten tekoa automaattiseti DHCP:llä antamasi "
+"Tss voit yritt uudelleen verkon asetusten tekoa automaattisesti DHCP:ll (se "
+"voi toimia jos DHCP-palvelin vastaa hitaasti) tai tehd verkon asetukset "
+"itse. Jotkin DHCP-palvelimet vaativat asiakkaan lhettmn konenimen, joten "
+"voit kokeilla mys verkon asetusten tekoa automaattiseti DHCP:ll antamasi "
 "konenimen kera."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Verkkoasetusten teko automaattisesti epäonnistui"
+msgstr "Verkkoasetusten teko automaattisesti eponnistui"
 
 #. Type: note
 #. Description
@@ -563,14 +562,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Verkko ei luultavasti käytä DHCP-protokollaa, tai sitten DHCP-palvelin "
-"saattaa olla hidas tai jokin verkon laite ei toimi kunnolla."
+"Verkko ei luultavasti kyt DHCP-protokollaa, tai sitten DHCP-palvelin saattaa "
+"olla hidas tai jokin verkon laite ei toimi kunnolla."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Jatketaanko ilman oletusreittiä?"
+msgstr "Jatketaanko ilman oletusreitti?"
 
 #. Type: boolean
 #. Description
@@ -582,11 +581,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Verkon asetusten teko automaattisesti onnistui. Oletusreittiä ei kuitenkaan "
-"asetettu: järjestelmä ei tiedä miten ollaan yhteydessä Internetin koneiden "
-"kanssa. Tämän takia asennuksen jatkaminen on mahdotonta paitsi jos käytössä "
-"on ensimmäinen virallinen Debian-romppu, \"Netinst\"-romppu tai "
-"asennuspaketit ovat saatavilla paikallisverkosta."
+"Verkon asetusten teko automaattisesti onnistui. Oletusreitti ei kuitenkaan "
+"asetettu: jrjestelm ei tied miten ollaan yhteydess Internetin koneiden "
+"kanssa. Tmn takia asennuksen jatkaminen on mahdotonta paitsi jos kytss on "
+"ensimminen virallinen Debian-romppu, \"Netinst\"-romppu tai asennuspaketit "
+"ovat saatavilla paikallisverkosta."
 
 #. Type: boolean
 #. Description
@@ -595,8 +594,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Jos olet epävarma, ei pitäisi jatkaa ilman oletusreittiä: ota yhteys verkon "
-"vastuuhenkilöön tässä asiassa. "
+"Jos olet epvarma, ei pitisi jatkaa ilman oletusreitti: ota yhteys verkon "
+"vastuuhenkiln tss asiassa. "
 
 #. Type: text
 #. Description
@@ -625,15 +624,14 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP-osoite on yksikäsitteinen tunniste verkon tietokoneille ja sisältää neljä "
-"lukua eroteltuna pisteillä. Jos et tiedä mitä käyttää tässä, kysy verkkosi "
-"ylläpitäjältä."
+"IP-osoite on yksiksitteinen tunniste verkon tietokoneille ja sislt nelj "
+"lukua eroteltuna pisteill. Jos et tied mit kytt tss, kysy verkkosi yllpitjlt."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Väärämuotoinen IP-osoite"
+msgstr "Vrmuotoinen IP-osoite"
 
 #. Type: error
 #. Description
@@ -642,8 +640,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Antamasi IP-osoite on väärän muotoinen. Sen pitäisi olla muodossa x.x.x.x "
-"missä jokainen x on enintään 255. Yritä uudelleen."
+"Antamasi IP-osoite on vrn muotoinen. Sen pitisi olla muodossa x.x.x.x miss "
+"jokainen x on enintn 255. Yrit uudelleen."
 
 #. Type: string
 #. Description
@@ -660,9 +658,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Kaksipisteosoitetta (Point-to-point) käytetään määrittämään pisteestä "
-"pisteeseen -verkkosi toinen pää. Kysy verkkosi ylläpitäjältä jos et tiedä "
-"tätä arvoa. Kaksipisteosoite syötetään neljänä lukuna pistein eroteltuna."
+"Kaksipisteosoitetta (Point-to-point) kytetn mrittmn pisteest pisteeseen -"
+"verkkosi toinen p. Kysy verkkosi yllpitjlt jos et tied tt arvoa. "
+"Kaksipisteosoite sytetn neljn lukuna pistein eroteltuna."
 
 #. Type: string
 #. Description
@@ -678,15 +676,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Verkon peitettä käytetään määrittämään, mitkä koneet ovat "
-"paikallisverkossasi. Kysy verkkosi ylläpitäjältä, jos et tiedä tätä arvoa. "
-"Verkon peite syötetään neljänä lukuna eroteltuna pistein."
+"Verkon peitett kytetn mrittmn, mitk koneet ovat paikallisverkossasi. Kysy "
+"verkkosi yllpitjlt, jos et tied tt arvoa. Verkon peite sytetn neljn lukuna "
+"eroteltuna pistein."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Yhdyskäytävä eli reititin:"
+msgstr "Yhdyskytv eli reititin:"
 
 #. Type: string
 #. Description
@@ -699,24 +697,23 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Yhdyskäytävä on IP-osoite (neljä numeroa eroteltuna pistein), joka kertoo "
-"yhdyskäytäväreitittimesi, tunnetaan myös oletusreitittimenä. Kaikki "
-"lähiverkkosi ulkopuolelle (esimerkiksi Internetiin) menevä liikenne "
-"lähetetään tämän reitittimen kautta. Jos sinulla poikkeuksellisesti ei ole "
-"reititintä, voit jättää tämän tyhjäksi. Jos et tiedä oikeaa arvoa, kysy "
-"verkkosi ylläpitäjältä."
+"Yhdyskytv on IP-osoite (nelj numeroa eroteltuna pistein), joka kertoo "
+"yhdyskytvreitittimesi, tunnetaan mys oletusreitittimen. Kaikki lhiverkkosi "
+"ulkopuolelle (esimerkiksi Internetiin) menev liikenne lhetetn tmn "
+"reitittimen kautta. Jos sinulla poikkeuksellisesti ei ole reititint, voit "
+"jtt tmn tyhjksi. Jos et tied oikeaa arvoa, kysy verkkosi yllpitjlt."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Yhdyskäytävään eli reitittimeen ei saatu yhteyttä"
+msgstr "Yhdyskytvn eli reitittimeen ei saatu yhteytt"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
+msgstr "Ei saatu yhteytt antamaasi yhdyskytvn."
 
 #. Type: error
 #. Description
@@ -724,14 +721,14 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
-"yhdyskäytävän."
+"Olet kenties syttnyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
+"yhdyskytvn."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Ovatko nämä tiedot oikein?"
+msgstr "Ovatko nm tiedot oikein?"
 
 #. Type: boolean
 #. Description
@@ -753,7 +750,7 @@ msgstr ""
 " sovitin       = ${interface}\n"
 " ip-osoite     = ${ipaddress}\n"
 " verkkopeite   = ${netmask}\n"
-" yhdyskäytävä  = ${gateway}\n"
+" yhdyskytv  = ${gateway}\n"
 " pointopoint   = ${pointopoint}\n"
 " nimipalvelimet= ${nameservers}"
 

@@ -24,7 +24,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "是否使用 DHCP 來自動設定網路？"
+msgstr " DHCP "
 
 #. Type: boolean
 #. Description
@@ -35,16 +35,13 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr ""
-"您可以使用 DHCP 來設定網路，或者手動輸入所有資訊。如果您選擇了使用 DHCP，但安"
-"裝程式卻無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，"
-"您仍然可以替由手動輸入來設定網路。"
+msgstr " DHCP  DHCP DHCP  DHCP "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "網域名稱："
+msgstr ""
 
 #. Type: string
 #. Description
@@ -54,16 +51,13 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr ""
-"網域名稱 (Domain Name) 是您的網際網路位址中，主機名稱之後的那一部分。它通常是"
-"以 .com、.net、.edu 或 .org 結尾。如果您正在設定的是家用網路，您可以隨意取一"
-"個，但是要確保您在所有電腦上所使用的網域名稱都是一樣的。"
+msgstr " (Domain Name)  .com.net.edu  .org "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "名稱伺服器位址："
+msgstr ""
 
 #. Type: string
 #. Description
@@ -74,17 +68,13 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr ""
-"名稱伺服器 (Name Server) 是用來在網路上查詢主機名稱 (Host Name) 的。請以空格"
-"分隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。在進行查"
-"詢時將優先使用列表中的第一個名稱伺服器。如果您不想使用任何名稱伺服器，直接在"
-"欄位中留白即可。"
+msgstr " (Name Server)  (Host Name)  IP  ()"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "主要網路介面："
+msgstr ""
 
 #. Type: select
 #. Description
@@ -93,15 +83,13 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
-msgstr ""
-"您的系統有多個網路介面。請選擇其中之一來做為安裝 Debian 時的主要網路介面。如"
-"果可以的話，已指定為第一個被找到的已連線之網路介面。"
+msgstr " Debian "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "${iface} 的無線 ESSID："
+msgstr "${iface}  ESSID"
 
 #. Type: string
 #. Description
@@ -110,15 +98,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
-"${iface} 是一個無線網路的介面。請輸入 ${iface} 所要使用的無線網路的名稱 "
-"(ESSID)。如果您想使用任何可用的網路，直接在欄位中留白即可。"
+msgstr "${iface}  ${iface}  (ESSID)"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "無線裝置 ${iface} 的 WEP 密鑰："
+msgstr " ${iface}  WEP "
 
 #. Type: string
 #. Description
@@ -126,8 +112,7 @@ msgstr "無線裝置 ${iface} 的 WEP 密鑰："
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr ""
-"如果需要的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。輸入方式有兩種："
+msgstr " ${iface}  WEP "
 
 #. Type: string
 #. Description
@@ -135,9 +120,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
-"如果您的 WEP 密鑰使用的是 nnnn-nnnn-nn 或 nnnnnnnn (其中的 n 是數字) 這種格式"
-"的話，請直接在欄位中依原樣輸入即可。"
+msgstr " WEP  nnnn-nnnn-nn  nnnnnnnn ( n ) "
 
 #. Type: string
 #. Description
@@ -145,7 +128,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "如果您的 WEP 密鑰使用的是密碼文字的話，請在前面加上 s:。"
+msgstr " WEP  s:"
 
 #. Type: string
 #. Description
@@ -153,13 +136,13 @@ msgstr "如果您的 WEP 密鑰使用的是密碼文字的話，請在前面加�
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "當然囉，如果您的無線網路中並沒有使用 WEP 密鑰，在欄位中留白即可。"
+msgstr " WEP "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "不正確的 WEP 密鑰"
+msgstr " WEP "
 
 #. Type: error
 #. Description
@@ -167,15 +150,13 @@ msgstr "不正確的 WEP 密鑰"
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
-"這個 WEP 密鑰，${wepkey} 是不正確的。請仔細參考下一個畫面裡的說明來了解如何正"
-"確得輸入 WEP 密鑰，然後再試一次。"
+msgstr " WEP ${wepkey}  WEP "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "不正確的 ESSID"
+msgstr " ESSID"
 
 #. Type: error
 #. Description
@@ -183,21 +164,21 @@ msgstr "不正確的 ESSID"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
-"這個 ESSID，${essid} 是不正確的。ESSID 最多只能長至 32 個字元，不過任何類型的"
-"字元都可以使用。"
+msgstr " ESSID${essid} ESSID  32 "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Hostname:"
-msgstr "主機名稱："
+msgstr "DHCP "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Please enter the hostname for this system."
-msgstr "請輸入系統的主機名稱。"
+msgstr " VM peer "
 
 #. Type: string
 #. Description
@@ -207,22 +188,20 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr ""
-"主機名稱 (HostName) 是用來在網路中辨別您的系統的一個單字。如果您不知道這個系"
-"統的主機名稱應該是什麼，請洽詢您的網路管理員。如果您正在設定的是自己的家用網"
-"路，那麼可以隨意取個名字。"
+msgstr " (HostName) "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
+#, fuzzy
 msgid "Invalid hostname"
-msgstr "不正確的主機名稱"
+msgstr "DHCP "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "名稱「${hostname}」是不正確的。"
+msgstr "${hostname}"
 
 #. Type: error
 #. Description
@@ -231,15 +210,14 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr ""
-"正確的主機名稱應當只包含了 數字 0-9、小寫字母 a-z 和 減號。它的長度必須在 2 "
-"至 63 個字元之間，且應當不能以減號開頭或結尾。"
+msgstr "  0-9 a-z   2  63 "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
+#, fuzzy
 msgid "Error"
-msgstr "錯誤"
+msgstr "${error}"
 
 #. Type: error
 #. Description
@@ -247,13 +225,13 @@ msgstr "錯誤"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr "發生錯誤，網路設定程序已經中止。您可以從安裝程序主選單來再重新嘗試。"
+msgstr ""
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "探測不到任何網路介面"
+msgstr ""
 
 #. Type: error
 #. Description
@@ -261,7 +239,7 @@ msgstr "探測不到任何網路介面"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "探測不到任何的網路介面。安裝系統無法找到網路裝置。"
+msgstr ""
 
 #. Type: error
 #. Description
@@ -270,20 +248,18 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"如果有的話，您可能必須載入您的網路卡的專用模組。請返回至網路硬體裝置偵測步驟"
-"來進行這個動作。"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "共用 (Managed) 網路, Ad-hoc 網路 (點對點)"
+msgstr " (Managed) , Ad-hoc  ()"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "無線網路類別："
+msgstr ""
 
 #. Type: select
 #. Description
@@ -292,46 +268,44 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
-msgstr ""
-"無線網路可以為 Managed 或 Ad-hoc 其中之一。如果您是以某些實體裝置做為基地台，"
-"您的網路就是 Managed。而或者您的基地台是另一台電腦，那麼您的網路則可能是 Ad-"
-"hoc。"
+msgstr " Managed  Ad-hoc  Managed Ad-hoc"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
+#, fuzzy
 msgid "Wireless network configuration"
-msgstr "無線網路設定"
+msgstr " quik "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "正在尋找無線基地台 ..."
+msgstr " ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "<none>"
-msgstr "<無>"
+msgstr "<>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "無線網路卡 (802.11x)"
+msgstr " (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "無線網路"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:144
 msgid "Ethernet or Fast Ethernet"
-msgstr "網路卡或高速網路卡"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -361,7 +335,7 @@ msgstr "Parallel-port IP (PLIP)"
 #. Description
 #: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
-msgstr "點對點通訊協定 (PPP)"
+msgstr " (PPP)"
 
 #. Type: text
 #. Description
@@ -373,7 +347,7 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN 點對點通訊協定"
+msgstr "ISDN "
 
 #. Type: text
 #. Description
@@ -403,27 +377,28 @@ msgstr "Inter-user communication vehicle"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "不明介面"
+msgstr ""
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "正在設定網路 ..."
+msgstr " ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
+#, fuzzy
 msgid "Configure the network"
-msgstr "網路設定"
+msgstr "..."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP 主機名稱："
+msgstr "DHCP "
 
 #. Type: string
 #. Description
@@ -431,69 +406,70 @@ msgstr "DHCP 主機名稱："
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr ""
-"您可能需要提供一個 DHCP 主機名稱。如果您所使用的是 cable modem，可能還得在此"
-"指定一個帳號。"
+msgstr " DHCP  cable modem"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "其他大多數的使用者可以在此直接留白。"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "使用 DHCP 來設定網路"
+msgstr " DHCP "
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "這也許會花上一些時間。"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
+#, fuzzy
 msgid "Network autoconfiguration has succeeded"
-msgstr "網路自動設定作業已經完成！"
+msgstr " DHCP "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "找不到 DHCP 用戶端程式"
+msgstr " DHCP "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "找不到 DHCP 用戶端程式。這個套件需要安裝了 pump 或者 dhcp-client。"
+msgstr " DHCP  pump  dhcp-client"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "DHCP 的網路設定程序將被中止。"
+msgstr "DHCP "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
+#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "再次嘗試網路自動設定"
+msgstr " DHCP "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "使用 DHCP 主機名稱來再次嘗試網路自動設定"
+msgstr " DHCP "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
+#, fuzzy
 msgid "Configure network manually"
-msgstr "手動設定網路"
+msgstr " ..."
 
 #. Type: select
 #. Choices
@@ -504,14 +480,16 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "不要在此時進行網路的設定"
+msgstr " DHCP "
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid "Network configuration method:"
-msgstr "網路的設定方式："
+msgstr "LVM "
 
 #. Type: select
 #. Description
@@ -522,17 +500,14 @@ msgid ""
 "the network manually. Some DHCP servers require a DHCP hostname to be sent "
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
-msgstr ""
-"您可以在此選擇再一次試著使用 DHCP 來自動設定網路，（如果是因為您的 DHCP 伺服"
-"器的回應時間較長，那可能會奏效）﹔或是試著手動來設定網路。有些 DHCP 伺服器會"
-"要求用戶端傳送特定的 DHCP 主機名稱，因而您可以選擇提供這個主機名稱並再次試著"
-"使用 DHCP 來自動設定網路。"
+msgstr " DHCP  DHCP  DHCP  DHCP  DHCP "
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
+#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "網路自動設定作業失敗了"
+msgstr "LVM "
 
 #. Type: note
 #. Description
@@ -540,15 +515,13 @@ msgstr "網路自動設定作業失敗了"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
-"您的網路很可能並不使用 DHCP 協定。而或者，是 DHCP 伺服器回應過慢，或是某些網"
-"路硬體未能正常運作。"
+msgstr " DHCP  DHCP "
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "是否不使用 Default Route 並繼續進行？"
+msgstr " Default Route "
 
 #. Type: boolean
 #. Description
@@ -559,11 +532,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
-"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)；那麼系統"
-"會無法得知該如何和 Internet 上的主機進行連線。除非您手上有 Debian 官方的第一"
-"張光碟、或是 Netinst 光碟、或是在您區域網路中可以取得所需套件，否則將會導致安"
-"裝作業無法繼續進行。"
+msgstr " (Default Route) Internet  Debian  Netinst "
 
 #. Type: boolean
 #. Description
@@ -571,28 +540,26 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
-"如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行；請向您區域網"
-"路的管理員反應這個問題。"
+msgstr " Default Route "
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "重新設定無線網路"
+msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "使用動態位址 (DHCP) 來設定網路"
+msgstr " (DHCP) "
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "IP 位址："
+msgstr "IP "
 
 #. Type: string
 #. Description
@@ -601,15 +568,13 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr ""
-"您的電腦有個獨一無二的 IP 位址，它是由四個由句點分隔的數字所組成。如果您不知"
-"道在這裡應該填什麼，請洽詢您的網路管理員。"
+msgstr " IP "
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "IP 位址格式有誤"
+msgstr "IP "
 
 #. Type: error
 #. Description
@@ -617,15 +582,14 @@ msgstr "IP 位址格式有誤"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
-"您所提供的 IP 位址的格式是錯誤的。它的格式應該像是 x.x.x.x，其中的每一個 x 都"
-"不可以超過 255。請再試一次。"
+msgstr " IP  x.x.x.x x  255"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
+#, fuzzy
 msgid "Point-to-point address:"
-msgstr "點對點位址："
+msgstr " (PPP)"
 
 #. Type: string
 #. Description
@@ -635,16 +599,13 @@ msgid ""
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr ""
-"點對點位址 (Point-to-Point Address) 是用來決定點對點網路的另一個端點。如果您"
-"不知道位址，請洽詢您的網路管理員。所輸入的點對點位址應該是由四個由句點分隔的"
-"數字所組成。"
+msgstr " (Point-to-Point Address) "
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "網路遮罩："
+msgstr ""
 
 #. Type: string
 #. Description
@@ -653,16 +614,13 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr ""
-"網路遮罩 (NetMask) 是用來決定哪些機器是位於您的區域網路中。如果您不知道這個遮"
-"罩值，請洽詢您的網路管理員。所輸入的網路遮罩應該是由四個由句點分隔的數字所組"
-"成。"
+msgstr " (NetMask) "
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "閘道："
+msgstr ""
 
 #. Type: string
 #. Description
@@ -674,42 +632,38 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr ""
-"閘道 (Gateway) 是用來指定閘道路由器（也常叫做預設路由器）的 IP 位址（四個由句"
-"點分隔的數字）。所有通往區域網路外部的連線（例如，連接上網際網路）都要藉由這"
-"個路由器來傳送。在某些罕見情況裡，您可能沒有路由器﹔在此情況下，直接在欄位中"
-"留白即可。如果您不知道這個問題的適切答案，請洽詢您的網路管理員。"
+msgstr " (Gateway)  IP "
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "無法通連的閘道"
+msgstr ""
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "您所輸入的閘道位址是無法通連的。"
+msgstr ""
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
+msgstr " IP  /  "
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "這些資訊是否正確？"
+msgstr ""
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "目前所設定的網路參數："
+msgstr ""
 
 #. Type: boolean
 #. Description
@@ -722,16 +676,17 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" 介面          = ${interface}\n"
-" IP 位址       = ${ipaddress}\n"
-" 網路遮罩      = ${netmask}\n"
-" 閘道          = ${gateway}\n"
-" 點對點        = ${pointopoint}\n"
-" 名稱伺服器    = ${nameservers}"
+"           = ${interface}\n"
+" IP        = ${ipaddress}\n"
+"       = ${netmask}\n"
+"           = ${gateway}\n"
+"         = ${pointopoint}\n"
+"     = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
+#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "使用靜態位址來設定網路"
+msgstr " (DHCP) "

@@ -23,7 +23,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Nastaviť sieť automaticky pomocou DHCP?"
+msgstr "Nastavi sie automaticky pomocou DHCP?"
 
 #. Type: boolean
 #. Description
@@ -35,16 +35,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Sieť môže byť nastavená automaticky pomocou DHCP, alebo manuálne po vložení "
-"požadovaných informácií. Ak si zvolíte DHCP a inštalačný program nedostane "
-"správne sieťové nastavenia z DHCP servera na vašej sieti, po pokuse o "
-"konfiguráciu pomocou DHCP dostanete príležitosť na manuálne nastavenie."
+"Sie me by nastaven automaticky pomocou DHCP, alebo manulne po vloen "
+"poadovanch informci. Ak si zvolte DHCP a intalan program nedostane sprvne "
+"sieov nastavenia z DHCP servera na vaej sieti, po pokuse o konfigurciu "
+"pomocou DHCP dostanete prleitos na manulne nastavenie."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Názov domény:"
+msgstr "Nzov domny:"
 
 #. Type: string
 #. Description
@@ -55,10 +55,9 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Názov domény je časť vašej internetovej adresy napravo od mena počítača. "
-"Často končí na .org, .net, .edu alebo .sk. Ak nastavujete domácu sieť, "
-"môžete si niečo vymyslieť, ale používajte rovnakú doménu pre všetky vaše "
-"počítače."
+"Nzov domny je as vaej internetovej adresy napravo od mena potaa. asto kon "
+"na .org, .net, .edu alebo .sk. Ak nastavujete domcu sie, mete si nieo "
+"vymyslie, ale pouvajte rovnak domnu pre vetky vae potae."
 
 #. Type: string
 #. Description
@@ -76,17 +75,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Vami zadané DNS servery sa použijú na zisťovanie mien a názvov počítačov na "
-"sieti. Zadajte IP adresy (nie názvy) maximálne troch DNS serverov, "
-"oddelených medzerami. Nepoužívajte čiarky. Prvý server v zozname bude prvým, "
-"ktorý bude použitý pre DNS požiadavky. Ak nechcete používať žiaden DNS "
-"server, nechajte toto pole prázdne."
+"Vami zadan DNS servery sa pouij na zisovanie mien a nzvov potaov na sieti. "
+"Zadajte IP adresy (nie nzvy) maximlne troch DNS serverov, oddelench "
+"medzerami. Nepouvajte iarky. Prv server v zozname bude prvm, ktor bude pouit "
+"pre DNS poiadavky. Ak nechcete pouva iaden DNS server, nechajte toto pole "
+"przdne."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Základné sieťové rozhranie:"
+msgstr "Zkladn sieov rozhranie:"
 
 #. Type: select
 #. Description
@@ -96,15 +95,15 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Váš systém má viac sieťových rozhraní. Vyberte to z nich, ktoré chcete "
-"použiť ako základné sieťové rozhranie počas inštalácie Debianu. Ak je to "
-"možné, bude zvolené prvé nájdené sieťové rozhranie."
+"V systm m viac sieovch rozhran. Vyberte to z nich, ktor chcete poui ako "
+"zkladn sieov rozhranie poas intalcie Debianu. Ak je to mon, bude zvolen prv "
+"njden sieov rozhranie."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID pre bezdrôtové ${iface}:"
+msgstr "ESSID pre bezdrtov ${iface}:"
 
 #. Type: string
 #. Description
@@ -114,15 +113,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} je rozhranie pre bezdrôtovú sieť. Zadajte názov (ESSID) bezdrôtovej "
-"siete, ktorú chcete používať cez rozhranie ${iface}. Ak chcete používať "
-"ľubovoľnú dostupnú sieť, nič nevzplňujte."
+"${iface} je rozhranie pre bezdrtov sie. Zadajte nzov (ESSID) bezdrtovej "
+"siete, ktor chcete pouva cez rozhranie ${iface}. Ak chcete pouva ubovon "
+"dostupn sie, ni nevzplujte."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP kľúč pre bezdrôtové zariadenie ${iface}:"
+msgstr "WEP k pre bezdrtov zariadenie ${iface}:"
 
 #. Type: string
 #. Description
@@ -131,8 +130,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Ak môžete, zadajte WEP bezpečnostný kľúč pre bezdrôtové zariadenie ${iface}. "
-"Sú na to dve možnosti:"
+"Ak mete, zadajte WEP bezpenostn k pre bezdrtov zariadenie ${iface}. S na to "
+"dve monosti:"
 
 #. Type: string
 #. Description
@@ -141,8 +140,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Ak je váš WEP kľúč v tvare 'nnnn-nnnn-nn' alebo 'nnnnnnnn', kde n je číslo, "
-"jednoducho ho prepíšte tak ako je."
+"Ak je v WEP k v tvare 'nnnn-nnnn-nn' alebo 'nnnnnnnn', kde n je slo, "
+"jednoducho ho prepte tak ako je."
 
 #. Type: string
 #. Description
@@ -150,8 +149,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Ak je váš WEP kľúč v tvare hesla, napíšte pred neho 's:' (bez apostrofov)."
+msgstr "Ak je v WEP k v tvare hesla, napte pred neho 's:' (bez apostrofov)."
 
 #. Type: string
 #. Description
@@ -160,14 +158,13 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Samozrejme, ak na vašej bezdrôtovej sieti nepoužívate WEP kľúč, nemusíte nič "
-"vyplňovať."
+"Samozrejme, ak na vaej bezdrtovej sieti nepouvate WEP k, nemuste ni vyplova."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Neplatný WEP kľúč"
+msgstr "Neplatn WEP k"
 
 #. Type: error
 #. Description
@@ -176,14 +173,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP kľúč '${wepkey}' je neplatný. Pozorne si prečítajte pokyny na správne "
-"zadanie vášho WEP kľúča na nasledovnej obrazovke a skúste to znova."
+"WEP k '${wepkey}' je neplatn. Pozorne si pretajte pokyny na sprvne zadanie "
+"vho WEP ka na nasledovnej obrazovke a skste to znova."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "Neplatné ESSID"
+msgstr "Neplatn ESSID"
 
 #. Type: error
 #. Description
@@ -192,20 +189,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" je neplatné. ESSID môže obsahovať maximálne 32 znakov, "
-"ktoré môžu bzť ľubovoľné."
+"ESSID \"${essid}\" je neplatn. ESSID me obsahova maximlne 32 znakov, ktor mu "
+"bz ubovon."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Názov počítača:"
+msgstr "Nzov potaa:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Vložte názov počítača pre tento systém."
+msgstr "Vlote nzov potaa pre tento systm."
 
 #. Type: string
 #. Description
@@ -216,21 +213,21 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Názov počítača je jednoslovné pomenovanie, ktoré identifikuje váš systém v "
-"sieti. Ak neviete, aký by mal byť názov vášho počítača, kontaktujte správcu "
-"vašej siete. Ak nastavujete domácu sieť, môžete si niečo vymyslieť."
+"Nzov potaa je jednoslovn pomenovanie, ktor identifikuje v systm v sieti. Ak "
+"neviete, ak by mal by nzov vho potaa, kontaktujte sprvcu vaej siete. Ak "
+"nastavujete domcu sie, mete si nieo vymyslie."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Neplatný názov počítača"
+msgstr "Neplatn nzov potaa"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Názov počítača \"${hostname}\" je neplatný."
+msgstr "Nzov potaa \"${hostname}\" je neplatn."
 
 #. Type: error
 #. Description
@@ -240,9 +237,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Názov počítača môže obsahovať iba číslice 0-9, malé písmená a-z a znamienko "
-"mínus. Musí byť v rozmedzí od 2 do 63 znakov a nesmie začínať alebo končiť "
-"znamienkom mínus."
+"Nzov potaa me obsahova iba slice 0-9, mal psmen a-z a znamienko mnus. Mus by "
+"v rozmedz od 2 do 63 znakov a nesmie zana alebo koni znamienkom mnus."
 
 #. Type: error
 #. Description
@@ -257,14 +253,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Pri nastavovaní siete nastala chyba a proces bol prerušený. Môžete to znova "
-"skúsiť z hlavného menu inštalačného programu."
+"Pri nastavovan siete nastala chyba a proces bol preruen. Mete to znova sksi "
+"z hlavnho menu intalanho programu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Neboli rozpoznané žiadne sieťové rozhrania"
+msgstr "Neboli rozpoznan iadne sieov rozhrania"
 
 #. Type: error
 #. Description
@@ -273,8 +269,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Neboli nájdené žiadne sieťové rozhrania. Inštalačný program nenašiel žiadne "
-"sieťové zariadenie."
+"Neboli njden iadne sieov rozhrania. Intalan program nenaiel iadne sieov "
+"zariadenie."
 
 #. Type: error
 #. Description
@@ -283,20 +279,20 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Ak máte sieťovú kartu, možno pre ňu potrebujete načítať špecifický modul. "
-"Môžete to urobiť pri návrate späť do kroku rozpoznania sieťových zariadení."
+"Ak mte sieov kartu, mono pre u potrebujete nata pecifick modul. Mete to "
+"urobi pri nvrate sp do kroku rozpoznania sieovch zariaden."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Riadená (štruktúrovaná) sieť, Náhodná (peer to peer) sieť"
+msgstr "Riaden (truktrovan) sie, Nhodn (peer to peer) sie"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Typ bezdrôtovej siete:"
+msgstr "Typ bezdrtovej siete:"
 
 #. Type: select
 #. Description
@@ -306,39 +302,39 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Bezdrôtové siete sú riadené alebo náhodné. Ak používate skutočný prístupový "
-"bod, je táto sieť riadená (managed). Ak je vašim 'prístupovým bodom' priamo "
-"iný počítač, jedná sa o náhodnú sieť (ad-hoc)."
+"Bezdrtov siete s riaden alebo nhodn. Ak pouvate skuton prstupov bod, je tto "
+"sie riaden (managed). Ak je vaim 'prstupovm bodom' priamo in pota, jedn sa o "
+"nhodn sie (ad-hoc)."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Nastavenie bezdrôtovej siete"
+msgstr "Nastavenie bezdrtovej siete"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Hľadajú sa bezdrôtové prístupové body ..."
+msgstr "Hadaj sa bezdrtov prstupov body ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "<none>"
-msgstr "<nič>"
+msgstr "<ni>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "Bezdrôtový ethernet (802.11x)"
+msgstr "Bezdrtov ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "bezdrôtový"
+msgstr "bezdrtov"
 
 #. Type: text
 #. Description
@@ -398,7 +394,7 @@ msgstr "Channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Real channel-to-channel"
-msgstr "Skutočný channel-to-channel"
+msgstr "Skuton channel-to-channel"
 
 #. Type: text
 #. Description
@@ -416,14 +412,14 @@ msgstr "Inter-user communication vehicle"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Neznáme rozhranie"
+msgstr "Neznme rozhranie"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Nastavujem sieť ..."
+msgstr "Nastavujem sie ..."
 
 #. Type: text
 #. Description
@@ -436,7 +432,7 @@ msgstr "Nastavenie siete"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP názov počítača:"
+msgstr "DHCP nzov potaa:"
 
 #. Type: string
 #. Description
@@ -445,70 +441,69 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Možno budete musieť zadať DHCP meno počítača. Ak používate káblový modem, "
-"asi bude potrebné zadať číslo účtu."
+"Mono budete musie zada DHCP meno potaa. Ak pouvate kblov modem, asi bude "
+"potrebn zada slo tu."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Väčšina používateľov nemusí nič zadávať."
+msgstr "Vina pouvateov nemus ni zadva."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Nastavujem sieť pomocou DHCP"
+msgstr "Nastavujem sie pomocou DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Môže to chvíľu trvať."
+msgstr "Me to chvu trva."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Automatické nastavenie siete prebehlo úspešne"
+msgstr "Automatick nastavenie siete prebehlo spene"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "Nenašiel sa žiaden DHCP klient"
+msgstr "Nenaiel sa iaden DHCP klient"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Nebol nájdený žiaden DHCP klient. Tento balík vyžaduje pump alebo dhcp-"
-"client."
+"Nebol njden iaden DHCP klient. Tento balk vyaduje pump alebo dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Priebeh DHCP nastavenia bude prerušený."
+msgstr "Priebeh DHCP nastavenia bude preruen."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Zopakovať automatické nastavenie siete"
+msgstr "Zopakova automatick nastavenie siete"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Zopakovať automatické nastavenie siete s DHCP názvom počítača"
+msgstr "Zopakova automatick nastavenie siete s DHCP nzvom potaa"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Nastaviť sieť manuálne"
+msgstr "Nastavi sie manulne"
 
 #. Type: select
 #. Choices
@@ -520,13 +515,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Nenastavovať (teraz) sieť"
+msgstr "Nenastavova (teraz) sie"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Spôsob nastavenia siete:"
+msgstr "Spsob nastavenia siete:"
 
 #. Type: select
 #. Description
@@ -538,17 +533,16 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Teraz si môžete zvoliť medzi zopakovaním automatického nastavenia siete "
-"pomocou DHCP (môže to fungovať, ak má server dlhšie odozvy) a manuálnym "
-"nastavením siete. Niektoré DHCP servery vyžadujú určenie DHCP názvu "
-"počítača, takže musíte zadať názov počítača, kým sa znovu pokúsite o "
-"nastavenie siete pomocou DHCP."
+"Teraz si mete zvoli medzi zopakovanm automatickho nastavenia siete pomocou "
+"DHCP (me to fungova, ak m server dlhie odozvy) a manulnym nastavenm siete. "
+"Niektor DHCP servery vyaduj urenie DHCP nzvu potaa, take muste zada nzov "
+"potaa, km sa znovu poksite o nastavenie siete pomocou DHCP."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Automatické nastavenie siete zlyhalo"
+msgstr "Automatick nastavenie siete zlyhalo"
 
 #. Type: note
 #. Description
@@ -557,14 +551,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Na vašej sieti sa pravdepodobne nepoužíva DHCP. Príčinou neúspechu môže byť "
-"aj zaťaženie DHCP servera alebo chyba niektorého sieťového prvku."
+"Na vaej sieti sa pravdepodobne nepouva DHCP. Prinou nespechu me by aj "
+"zaaenie DHCP servera alebo chyba niektorho sieovho prvku."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Pokračovať bez predvoleného smerovania?"
+msgstr "Pokraova bez predvolenho smerovania?"
 
 #. Type: boolean
 #. Description
@@ -576,10 +570,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Automatické nastavenie siete prebehlo úspešne. Avšak nebolo nastavené "
-"smerovanie: systém teda nevie, ako má komunikovať s počítačmi na Internete. "
-"Nebude možné dokončiť inštaláciu, pokiaľ nemáte prvé oficiálne Debian CD, "
-"'Netinst' CD alebo balíky dostupné na lokálnej sieti."
+"Automatick nastavenie siete prebehlo spene. Avak nebolo nastaven smerovanie: "
+"systm teda nevie, ako m komunikova s potami na Internete. Nebude mon dokoni "
+"intalciu, pokia nemte prv oficilne Debian CD, 'Netinst' CD alebo balky "
+"dostupn na loklnej sieti."
 
 #. Type: boolean
 #. Description
@@ -588,21 +582,21 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ak si nie ste istí, nemali by ste pokračovať bez predvoleného smerovania. "
-"Informujte o tomto probléme vášho správcu siete."
+"Ak si nie ste ist, nemali by ste pokraova bez predvolenho smerovania. "
+"Informujte o tomto problme vho sprvcu siete."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Znovunastavenie bezdrôtovej siete"
+msgstr "Znovunastavenie bezdrtovej siete"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Nastavenie siete s dynamickými adresami (DHCP)"
+msgstr "Nastavenie siete s dynamickmi adresami (DHCP)"
 
 #. Type: string
 #. Description
@@ -618,15 +612,14 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP adresa je jedinečná pre každý počítač a skladá sa zo štyroch čísiel "
-"oddelených bodkami. Ak neviete, akú IP adresu máte použiť, kontaktujte "
-"správcu vašej siete."
+"IP adresa je jedinen pre kad pota a sklad sa zo tyroch siel oddelench "
+"bodkami. Ak neviete, ak IP adresu mte poui, kontaktujte sprvcu vaej siete."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Nesprávna IP adresa"
+msgstr "Nesprvna IP adresa"
 
 #. Type: error
 #. Description
@@ -635,8 +628,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Vami zadaná IP adresa je nesprávna. Mala by byť v tvare x.x.x.x, kde žiadne "
-"'x' nie je väčšie ako 255. Skúste to znova."
+"Vami zadan IP adresa je nesprvna. Mala by by v tvare x.x.x.x, kde iadne 'x' "
+"nie je vie ako 255. Skste to znova."
 
 #. Type: string
 #. Description
@@ -653,15 +646,15 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Point-to-point adresa slúži na určenie opačného konca point to point siete. "
-"Kontaktujte správcu vašej siete, ak neviete, čo máte zadať. Point-to-point "
-"adresa sa zadáva ako štyri čísla oddelené bodkami."
+"Point-to-point adresa sli na urenie opanho konca point to point siete. "
+"Kontaktujte sprvcu vaej siete, ak neviete, o mte zada. Point-to-point adresa "
+"sa zadva ako tyri sla oddelen bodkami."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Sieťová maska:"
+msgstr "Sieov maska:"
 
 #. Type: string
 #. Description
@@ -671,15 +664,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Sieťová maska slúži na určenie počítačov, ktoré patria k lokálnej sieti. "
-"Kontaktujte správcu vašej siete, ak neviete, čo máte zadať. Sieťová maska sa "
-"zadáva ako štyri čísla oddelené bodkami."
+"Sieov maska sli na urenie potaov, ktor patria k loklnej sieti. Kontaktujte "
+"sprvcu vaej siete, ak neviete, o mte zada. Sieov maska sa zadva ako tyri sla "
+"oddelen bodkami."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Brána:"
+msgstr "Brna:"
 
 #. Type: string
 #. Description
@@ -692,23 +685,23 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Brána je IP adresa (štyri čísla oddelené bodkami), ktorá určuje smerovač. "
-"Celá prevádzka, ktorá ide mimo vašej lokálnej siete (napríklad do "
-"Internetu), je zasielaná cez tento smerovač. Vo výnimočných prípadoch, keď "
-"smerovač nemáte, môžete nechať toto pole prázdne. Kontaktujte správcu vašej "
-"siete, ak neviete, čo máte zadať."
+"Brna je IP adresa (tyri sla oddelen bodkami), ktor uruje smerova. Cel "
+"prevdzka, ktor ide mimo vaej loklnej siete (naprklad do Internetu), je "
+"zasielan cez tento smerova. Vo vnimonch prpadoch, ke smerova nemte, mete "
+"necha toto pole przdne. Kontaktujte sprvcu vaej siete, ak neviete, o mte "
+"zada."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Nedosiahnuteľná brána"
+msgstr "Nedosiahnuten brna"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Zadaná adresa brány je nedosiahnuteľná."
+msgstr "Zadan adresa brny je nedosiahnuten."
 
 #. Type: error
 #. Description
@@ -716,19 +709,19 @@ msgstr "Zadaná adresa brány je nedosiahnuteľná."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Možno ste urobili chybu pri zadávaní IP adresy, sieťovej masky a/alebo brány."
+"Mono ste urobili chybu pri zadvan IP adresy, sieovej masky a/alebo brny."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Sú tieto informácie správne?"
+msgstr "S tieto informcie sprvne?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Aktuálne nastavené parametre siete:"
+msgstr "Aktulne nastaven parametre siete:"
 
 #. Type: boolean
 #. Description
@@ -743,8 +736,8 @@ msgid ""
 msgstr ""
 " rozhranie      = ${interface}\n"
 " IP adresa      = ${ipaddress}\n"
-" sieťová maska  = ${netmask}\n"
-" brána          = ${gateway}\n"
+" sieov maska  = ${netmask}\n"
+" brna          = ${gateway}\n"
 " pointopoint    = ${pointopoint}\n"
 " DNS servery    = ${nameservers}"
 
@@ -753,4 +746,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Nastavenie siete so statickými adresami"
+msgstr "Nastavenie siete so statickmi adresami"

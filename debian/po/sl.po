@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2004-10-06 04:11-0600\n"
 "PO-Revision-Date: 2004-09-30 22:28+0100\n"
-"Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
+"Last-Translator: Jure uhalev <gandalf@owca.info>\n"
 "Language-Team:  LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Samodejno nastavim omrežje z DHCP?"
+msgstr "Samodejno nastavim omreje z DHCP?"
 
 #. Type: boolean
 #. Description
@@ -35,10 +35,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Omrežje lahko nastavite z DHCP ali z ročnim vnašanjem vseh informacij. Če "
-"boste izbrali DHCP in namestilnik ne bo mogel dobiti delujočih nastavitev od "
-"DHCP strežnika na vašem omrežju, boste po poizkusu nastavitve omrežja z DHCP "
-"dobili možnost nastaviti omrežje ročno."
+"Omreje lahko nastavite z DHCP ali z ronim vnaanjem vseh informacij. e boste "
+"izbrali DHCP in namestilnik ne bo mogel dobiti delujoih nastavitev od DHCP "
+"strenika na vaem omreju, boste po poizkusu nastavitve omreja z DHCP dobili "
+"monost nastaviti omreje rono."
 
 #. Type: string
 #. Description
@@ -55,16 +55,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Ime domene je del vašega Internetnega naslova desno od vašega gostiteljskega "
-"imena. Pogosto se konča z com, .net, .edu, or .org.  Če nastavljate domače "
-"omrežje si lahko nekaj izmislite, vendar se prepričajte, da na vseh "
-"računalnikih uporabljate isto ime domene."
+"Ime domene je del vaega Internetnega naslova desno od vaega gostiteljskega "
+"imena. Pogosto se kona z com, .net, .edu, or .org.  e nastavljate domae "
+"omreje si lahko nekaj izmislite, vendar se prepriajte, da na vseh "
+"raunalnikih uporabljate isto ime domene."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Naslovi imenskih strežnikov:"
+msgstr "Naslovi imenskih strenikov:"
 
 #. Type: string
 #. Description
@@ -76,17 +76,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Imenski strežniki se uporabljajo za iskanje gostiteljskih imen računalnikov "
-"v omrežju. Vnesite naslove IP (ne gostiteljska imena) do treh imenskih "
-"strežnikov, ločenih s presledki. Ne uporabljajte vejic. Vaš računalnik se bo "
-"z njimi posvetoval v vrstnem po redu po katerem ste jih vnesli. Če imenskih "
-"strežnikov ne želite uporabljati, to polje pustite prazno."
+"Imenski streniki se uporabljajo za iskanje gostiteljskih imen raunalnikov v "
+"omreju. Vnesite naslove IP (ne gostiteljska imena) do treh imenskih "
+"strenikov, loenih s presledki. Ne uporabljajte vejic. Va raunalnik se bo z "
+"njimi posvetoval v vrstnem po redu po katerem ste jih vnesli. e imenskih "
+"strenikov ne elite uporabljati, to polje pustite prazno."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Primarni mrežni vmesnik:"
+msgstr "Primarni mreni vmesnik:"
 
 #. Type: select
 #. Description
@@ -96,15 +96,15 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Vaš sistem ima več mrežnih naprav. Izberite napravo, ki jo želite uporabiti "
-"kot primarno mrežno napravo med namestitvijo Debiana. Namestilnik je "
-"poskusil izbrati prvi povezan mrežni vmesnik."
+"Va sistem ima ve mrenih naprav. Izberite napravo, ki jo elite uporabiti kot "
+"primarno mreno napravo med namestitvijo Debiana. Namestilnik je poskusil "
+"izbrati prvi povezan mreni vmesnik."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Brezžični ESSID za ${iface}:"
+msgstr "Brezini ESSID za ${iface}:"
 
 #. Type: string
 #. Description
@@ -114,15 +114,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} je brezžična mrežna naprava. Prosim vnesite ime (ESSID) brezžičnega "
-"omrežja za katerega želite, da ga ${iface} uporablja. Če želite uporabiti "
-"katerokoli omrežje, ki je na voljo, pustite to polje prazno."
+"${iface} je brezina mrena naprava. Prosim vnesite ime (ESSID) brezinega "
+"omreja za katerega elite, da ga ${iface} uporablja. e elite uporabiti "
+"katerokoli omreje, ki je na voljo, pustite to polje prazno."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP ključ za brezžično napravo ${iface}:"
+msgstr "WEP klju za brezino napravo ${iface}:"
 
 #. Type: string
 #. Description
@@ -131,8 +131,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Če je potrebno, vnesite varnostni ključ WEP za brezžično napravo ${iface}. "
-"To lahko storite na dva načina:"
+"e je potrebno, vnesite varnostni klju WEP za brezino napravo ${iface}. To "
+"lahko storite na dva naina:"
 
 #. Type: string
 #. Description
@@ -141,8 +141,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Če je vaš WEP ključ v obliki 'nnnn-nnnn-nn' ali 'nnnnnnnn', kjer je n "
-"številka, ga vnesite v to polje."
+"e je va WEP klju v obliki 'nnnn-nnnn-nn' ali 'nnnnnnnn', kjer je n tevilka, "
+"ga vnesite v to polje."
 
 #. Type: string
 #. Description
@@ -151,8 +151,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Če je vaš WEP ključ v obliki gesla pred njega vstavite 's:' (brez "
-"narekovajev)."
+"e je va WEP klju v obliki gesla pred njega vstavite 's:' (brez narekovajev)."
 
 #. Type: string
 #. Description
@@ -161,14 +160,13 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Seveda, če ne potrebujete WEP ključa za vaše omrežje, pustite to polje "
-"prazno."
+"Seveda, e ne potrebujete WEP kljua za vae omreje, pustite to polje prazno."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Nepravilen WEP ključ"
+msgstr "Nepravilen WEP klju"
 
 #. Type: error
 #. Description
@@ -177,8 +175,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP kluč '${wepkey}' ni pravilen. Pozorno sledite navodilom na naslednjem "
-"zaslonu kako pravilno vnesti WEP ključ in poskusite ponovno."
+"WEP klu '${wepkey}' ni pravilen. Pozorno sledite navodilom na naslednjem "
+"zaslonu kako pravilno vnesti WEP klju in poskusite ponovno."
 
 #. Type: error
 #. Description
@@ -193,8 +191,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ni pravilen. Dolžina ESSID-jev je laho do 32 znakov "
-"vendar lahko vsebuje vse vrste znakov."
+"ESSID \"${essid}\" ni pravilen. Dolina ESSID-jev je laho do 32 znakov vendar "
+"lahko vsebuje vse vrste znakov."
 
 #. Type: string
 #. Description
@@ -217,10 +215,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Gostiteljsko ime je ena beseda, ki predstavlja vaš sistem v omrežju.  Če ne "
-"veste kakšno mora biti vaše gostiteljsko ime, se posvetujte z vašim "
-"skrbnikom omrežja.  Če postavljate svoje domače omrežje, si tu lahko nekaj "
-"izmislite."
+"Gostiteljsko ime je ena beseda, ki predstavlja va sistem v omreju.  e ne "
+"veste kakno mora biti vae gostiteljsko ime, se posvetujte z vaim skrbnikom "
+"omreja.  e postavljate svoje domae omreje, si tu lahko nekaj izmislite."
 
 #. Type: error
 #. Description
@@ -242,9 +239,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Veljavno ime gostitelja lahko vsebuje le številke 0-9, majhne črke a-z in "
-"znak minus. Dolgo je lahko od 2 do 63 znakov in se ne sme začeti ali končati "
-"z minusom."
+"Veljavno ime gostitelja lahko vsebuje le tevilke 0-9, majhne rke a-z in znak "
+"minus. Dolgo je lahko od 2 do 63 znakov in se ne sme zaeti ali konati z "
+"minusom."
 
 #. Type: error
 #. Description
@@ -259,14 +256,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Prišlo je do napake in proces nastavljanja omrežja je bil prekinjen. Ponovno "
-"ga lahko poženete iz glavnega menija."
+"Prilo je do napake in proces nastavljanja omreja je bil prekinjen. Ponovno "
+"ga lahko poenete iz glavnega menija."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Nisem zaznal nobenega mrežnega vmesnika"
+msgstr "Nisem zaznal nobenega mrenega vmesnika"
 
 #. Type: error
 #. Description
@@ -275,8 +272,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Nisem našel nobenega mrežnega vmesnika. Namestitevni sistem ni mogel najti "
-"nobene mrežne naprave."
+"Nisem nael nobenega mrenega vmesnika. Namestitevni sistem ni mogel najti "
+"nobene mrene naprave."
 
 #. Type: error
 #. Description
@@ -285,23 +282,22 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Morda morate naložiti točno določen modul za vašo mrežno kartico, če ga "
-"imate. Če želite to storiti pojdite nazaj na korak za zaznavo omrežne "
-"strojne opreme."
+"Morda morate naloiti tono doloen modul za vao mreno kartico, e ga imate. e "
+"elite to storiti pojdite nazaj na korak za zaznavo omrene strojne opreme."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
-"Omrežje z infrastrukturo (upravljano), neposredno omrežje (uporabnik do "
+"Omreje z infrastrukturo (upravljano), neposredno omreje (uporabnik do "
 "uporabnika)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Tip brezžičnega omrežja:"
+msgstr "Tip brezinega omreja:"
 
 #. Type: select
 #. Description
@@ -311,21 +307,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Brezžična omrežja so ali upravljana ali pa ad-hoc. Če uporabljate pravo "
-"dostopno točko določene vrste imate upravljano omrežje. Če je drugi "
-"računalnik vaša 'dostopna točka', potem je vaše omrežje Ad-hoc."
+"Brezina omreja so ali upravljana ali pa ad-hoc. e uporabljate pravo dostopno "
+"toko doloene vrste imate upravljano omreje. e je drugi raunalnik vaa "
+"'dostopna toka', potem je vae omreje Ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Mrežne nastavitve brezžičnega omrežja"
+msgstr "Mrene nastavitve brezinega omreja"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Iščem brezžične dostopne točke ..."
+msgstr "Iem brezine dostopne toke ..."
 
 #. Type: text
 #. Description
@@ -337,13 +333,13 @@ msgstr "<nobeden>"
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "Brezžični ethernet (802.11x)"
+msgstr "Brezini ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "brezžično"
+msgstr "brezino"
 
 #. Type: text
 #. Description
@@ -379,7 +375,7 @@ msgstr "Paralelna vrata IP"
 #. Description
 #: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
-msgstr "Točka-do-Točka Protokol (Point-to-Point Protocol)"
+msgstr "Toka-do-Toka Protokol (Point-to-Point Protocol)"
 
 #. Type: text
 #. Description
@@ -391,7 +387,7 @@ msgstr "IPv6-v-IPv4"
 #. Description
 #: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN Točka-do-Točka Protokol (Point-to-Point)"
+msgstr "ISDN Toka-do-Toka Protokol (Point-to-Point)"
 
 #. Type: text
 #. Description
@@ -428,14 +424,14 @@ msgstr "Neznani vmesniki"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Nastavljam omrežje ..."
+msgstr "Nastavljam omreje ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Nastavi omrežje"
+msgstr "Nastavi omreje"
 
 #. Type: string
 #. Description
@@ -450,45 +446,45 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Morda morate vnesti gostiteljsko ime DHCP. Če uporabljate kabelski modem, "
-"boste morali mora vnesti vašo številko računa."
+"Morda morate vnesti gostiteljsko ime DHCP. e uporabljate kabelski modem, "
+"boste morali mora vnesti vao tevilko rauna."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Večina ostalih uporabnikov lahko to pusti prazno."
+msgstr "Veina ostalih uporabnikov lahko to pusti prazno."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Nastavljam omrežje z DHCP"
+msgstr "Nastavljam omreje z DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "To lahko traja nekaj časa."
+msgstr "To lahko traja nekaj asa."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Samodejna nastavitev mreže je uspela"
+msgstr "Samodejna nastavitev mree je uspela"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "Nisem našel nobenega DHCP vmesnika."
+msgstr "Nisem nael nobenega DHCP vmesnika."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Nisem našel nobenega DHCP odjemalca. Ta paket potrebuje pump ali dhcp-client."
+"Nisem nael nobenega DHCP odjemalca. Ta paket potrebuje pump ali dhcp-client."
 
 #. Type: error
 #. Description
@@ -500,19 +496,19 @@ msgstr "Proces DHCP nastavitve bo prekinjen."
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Ponovno poskusi s samodejno nastavitvijo mreže"
+msgstr "Ponovno poskusi s samodejno nastavitvijo mree"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Ponovno poskusi s samodejno nastavitvijo omrežja z DHCP imenom"
+msgstr "Ponovno poskusi s samodejno nastavitvijo omreja z DHCP imenom"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Ročno nastavi omrežje"
+msgstr "Rono nastavi omreje"
 
 #. Type: select
 #. Choices
@@ -524,13 +520,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Ne nastavi omrežja sedaj"
+msgstr "Ne nastavi omreja sedaj"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Način nastavitve mreže:"
+msgstr "Nain nastavitve mree:"
 
 #. Type: select
 #. Description
@@ -542,17 +538,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Tu lahko izberete ponovno samonastavitev omrežja DHCP (ki lahko uspe, če se "
-"vaš strežnik DHCP dolgo odziva) ali ročno nastavitev omrežja. Nekateri "
-"strežniki DHCP zahtevajo, da odjemalec pošlje določeno ime gostitelja DHCP, "
-"zato lahko tudi ponovno poskusite s samonastavitvijo omrežja DHCP z imenom "
-"gostitelja, ki ga podate sami."
+"Tu lahko izberete ponovno samonastavitev omreja DHCP (ki lahko uspe, e se va "
+"strenik DHCP dolgo odziva) ali rono nastavitev omreja. Nekateri streniki "
+"DHCP zahtevajo, da odjemalec polje doloeno ime gostitelja DHCP, zato lahko "
+"tudi ponovno poskusite s samonastavitvijo omreja DHCP z imenom gostitelja, "
+"ki ga podate sami."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Samodejna nastavitev mreže ni uspela"
+msgstr "Samodejna nastavitev mree ni uspela"
 
 #. Type: note
 #. Description
@@ -561,8 +557,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Vaše omrežje verjetno ne uporablja protokola DHCP. Morda pa je strežnik DHCP "
-"počasen ali določen kos strojne omrežne opreme ne deluje pravilno."
+"Vae omreje verjetno ne uporablja protokola DHCP. Morda pa je strenik DHCP "
+"poasen ali doloen kos strojne omrene opreme ne deluje pravilno."
 
 #. Type: boolean
 #. Description
@@ -580,10 +576,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Samodejna nastavitev omrežja je uspela. Kljub temu ni bila nastavljena "
+"Samodejna nastavitev omreja je uspela. Kljub temu ni bila nastavljena "
 "privzeta smer, zato sistem ne ve, kako naj komunicira z gostitelji na "
-"internetu. Nadaljevanje namestitve je mogoče samo v primeru, če imate prvo "
-"uradno zgoščenko Debiana, zgoščenko 'Netinst' ali pakete v lokalnem omrežju."
+"internetu. Nadaljevanje namestitve je mogoe samo v primeru, e imate prvo "
+"uradno zgoenko Debiana, zgoenko 'Netinst' ali pakete v lokalnem omreju."
 
 #. Type: boolean
 #. Description
@@ -592,21 +588,21 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Če niste prepričani, raje ne nadaljujte brez privzete smeri. Obrnite se na "
-"skrbnika vašega omrežja."
+"e niste prepriani, raje ne nadaljujte brez privzete smeri. Obrnite se na "
+"skrbnika vaega omreja."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Ponastavi brezžično omrežje"
+msgstr "Ponastavi brezino omreje"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Nastavi omrežje z uporabo dinamičnega naslavljanja (DHCP)"
+msgstr "Nastavi omreje z uporabo dinaminega naslavljanja (DHCP)"
 
 #. Type: string
 #. Description
@@ -622,9 +618,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Naslov IP je edinstven in je sestavljen iz štirih številk, ki so med seboj "
-"ločene s pikami.  Če ne veste kaj morate uporabiti, se posvetujte z vašim "
-"skrbnikom omrežja."
+"Naslov IP je edinstven in je sestavljen iz tirih tevilk, ki so med seboj "
+"loene s pikami.  e ne veste kaj morate uporabiti, se posvetujte z vaim "
+"skrbnikom omreja."
 
 #. Type: error
 #. Description
@@ -640,13 +636,13 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "IP naslov, ki ste ga vnesli je nepravilne oblike. Mora biti v obliki x.x.x.x "
-"kjer vsak 'x' ni večji od 255. Poskusite ponovno."
+"kjer vsak 'x' ni veji od 255. Poskusite ponovno."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Točkovni naslov:"
+msgstr "Tokovni naslov:"
 
 #. Type: string
 #. Description
@@ -657,15 +653,15 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Točkovni naslov označuje končno točko točkovnega omrežja. Če te vrednosti ne "
-"poznate, se posvetujte s skrbnikom omrežja. Točkovni naslov sestavljajo "
-"štiri številke ločene s pikami."
+"Tokovni naslov oznauje konno toko tokovnega omreja. e te vrednosti ne "
+"poznate, se posvetujte s skrbnikom omreja. Tokovni naslov sestavljajo tiri "
+"tevilke loene s pikami."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Omrežna maska:"
+msgstr "Omrena maska:"
 
 #. Type: string
 #. Description
@@ -675,9 +671,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Omrežna maska vam pove kateri računalniki so glede na vaše omežje krajevni. "
-"Če vrednosti ne poznate, se posvetujte s skrbnikom omrežja.  Omrežno masko "
-"morate vnesti kot štiri številke, med seboj ločene s pikami."
+"Omrena maska vam pove kateri raunalniki so glede na vae omeje krajevni. e "
+"vrednosti ne poznate, se posvetujte s skrbnikom omreja.  Omreno masko morate "
+"vnesti kot tiri tevilke, med seboj loene s pikami."
 
 #. Type: string
 #. Description
@@ -696,12 +692,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Prehod je naslov IP (štiri številke med seboj ločene s pikami), ki poimenuje "
+"Prehod je naslov IP (tiri tevilke med seboj loene s pikami), ki poimenuje "
 "prehodni usmerjevalnik, znan tudi kot privzeti usmerjevalnik.  Ves promet, "
-"ki gre izven vašega LAN-a (na primer v Internet), se steka prek "
+"ki gre izven vaega LAN-a (na primer v Internet), se steka prek "
 "usmerjevalnika. V redkih primerih morda nimate usmerjevalnika in v tem "
-"primeru to polje lahko pustite prazno. Če na to vprašanje ne veste "
-"pravilnega odgovora, se posvetujte s skrbnikom omrežja."
+"primeru to polje lahko pustite prazno. e na to vpraanje ne veste pravilnega "
+"odgovora, se posvetujte s skrbnikom omreja."
 
 #. Type: error
 #. Description
@@ -721,7 +717,7 @@ msgstr "Vneseni prehod ni dosegljiv."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Verjetno ste se zmotili pri vnosu naslova IP, omrežne maske in/ali prehoda."
+"Verjetno ste se zmotili pri vnosu naslova IP, omrene maske in/ali prehoda."
 
 #. Type: boolean
 #. Description
@@ -733,7 +729,7 @@ msgstr "Ali so te informacije pravilne?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Trenutne nastavitve omrežja:"
+msgstr "Trenutne nastavitve omreja:"
 
 #. Type: boolean
 #. Description
@@ -750,12 +746,12 @@ msgstr ""
 " naslov ip          = ${ipaddress}\n"
 " maska              = ${netmask}\n"
 " prehod             = ${gateway}\n"
-" točkovni naslov    = ${pointopoint}\n"
-" imenski srežniki   = ${nameservers}"
+" tokovni naslov    = ${pointopoint}\n"
+" imenski sreniki   = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Nastavi omrežje z uporabo statičnega naslavljanja"
+msgstr "Nastavi omreje z uporabo statinega naslavljanja"

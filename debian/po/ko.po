@@ -23,7 +23,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "네트워크를 DHCP로 자동 설정하시겠습니까?"
+msgstr " DHCP  ?"
 
 #. Type: boolean
 #. Description
@@ -34,17 +34,13 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr ""
-"네트워크는 DHCP로 설정할 수도 있고, 수동으로 모든 정보를 입력해서 설정할 수"
-"도 있습니다. DHCP를 사용했을 때 네트워크의 DHCP 서버에서 올바른 설정을 가져오"
-"지 못하는 경우에는, DHCP 설정 시도 후에 수동으로 네트워크를 설정할 기회가 있"
-"습니다."
+msgstr " DHCP   ,       . DHCP    DHCP      , DHCP        ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "도메인 이름:"
+msgstr " :"
 
 #. Type: string
 #. Description
@@ -54,17 +50,13 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr ""
-"도메인 이름은 인터넷 주소에서 호스트 이름 바로 오른쪽에 있는 부분을 말합니"
-"다.  보통 .com, .net, .org, .kr과 같이 끝납니다.  홈 네트워크를 설정하는 경우"
-"라면, 직접 도메인 이름을 만들 수 있습니다.  하지만 모든 컴퓨터가 같은 도메인 "
-"이름을 사용하도록 하십시오."
+msgstr "          .   .com, .net, .org, .kr  .     ,      .         ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "네임 서버 주소:"
+msgstr "  :"
 
 #. Type: string
 #. Description
@@ -75,17 +67,13 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr ""
-"네임 서버는 인터넷의 호스트 이름을 찾아 볼 때 사용합니다. 네임 서버의 IP 주소"
-"를 (호스트 이름이 아닙니다) 3개까지 입력하십시오. 여러 개일 경우 공백으로 구"
-"분합니다. 쉼표를 사용하지 마십시오. 첫 번째 서버에 맨 먼저 접근합니다. 네임 "
-"서버를 사용하지 않으려면, 이 필드를 비워 두십시오."
+msgstr "        .   IP  (  ) 3 .     .   .      .    ,    ."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "주 네트워크 인터페이스:"
+msgstr "  :"
 
 #. Type: select
 #. Description
@@ -94,16 +82,13 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
-msgstr ""
-"시스템에 네트워크 인터페이스가 여러 개입니다. 데비안을 설치할 때 주 네트워크 "
-"인터페이스로 사용할 인터페이스를 하나 고르십시오. 첫 번째로 연결된 네트워크 "
-"인터페이스가 (가능한 경우) 이미 선택되어 있습니다."
+msgstr "    .          .      ( )   ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "${iface} 인터페이스의 무선 ESSID:"
+msgstr "${iface}   ESSID:"
 
 #. Type: string
 #. Description
@@ -112,16 +97,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
-"${iface} 인터페이스는 무선 네트워크 인터페이스입니다. ${iface} 인터페이스가 "
-"사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 다른 네트워크를 사용할 수 "
-"있고 그걸 사용하려면, 다음 칸을 비워 두십시오."
+msgstr "${iface}    . ${iface}     (ESSID) .       ,    ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "${iface} 무선 장치의 WEP 키:"
+msgstr "${iface}   WEP :"
 
 #. Type: string
 #. Description
@@ -129,9 +111,7 @@ msgstr "${iface} 무선 장치의 WEP 키:"
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr ""
-"해당된다면, ${iface} 무선 장치의 WEP 보안 키를 입력하십시오. 두 가지 방법이 "
-"있습니다:"
+msgstr ", ${iface}   WEP   .    :"
 
 #. Type: string
 #. Description
@@ -139,9 +119,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
-"WEP 키가 'nnnn-nnnn-nn'이나 'nnnnnnnn'의 형식이라면 (n은 숫자), 그 키를 그대"
-"로 여기에 입력하십시오."
+msgstr "WEP  'nnnn-nnnn-nn' 'nnnnnnnn'  (n ),     ."
 
 #. Type: string
 #. Description
@@ -149,7 +127,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "WEP 키가 열쇠글의 형태라면, 앞에 's:'를 붙이십시오 (따옴표 없이)."
+msgstr "WEP   ,  's:'  ( )."
 
 #. Type: string
 #. Description
@@ -157,13 +135,13 @@ msgstr "WEP 키가 열쇠글의 형태라면, 앞에 's:'를 붙이십시오 (�
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "물론, 무선 네트워크에 WEP 키가 없으면, 이 필드를 비워 두십시오."
+msgstr ",   WEP  ,    ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "WEP 키가 잘못되었습니다"
+msgstr "WEP  "
 
 #. Type: error
 #. Description
@@ -171,15 +149,13 @@ msgstr "WEP 키가 잘못되었습니다"
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
-"'${wepkey} WEP 키가 잘못되었습니다. WEP 키를 입력하는 방법에 대한 다음 화면"
-"의 안내를 잘 읽어보고, 다시 시도하십시오."
+msgstr "'${wepkey} WEP  . WEP         ,  ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "ESSID가 잘못되었습니다"
+msgstr "ESSID "
 
 #. Type: error
 #. Description
@@ -187,21 +163,19 @@ msgstr "ESSID가 잘못되었습니다"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
-"\"${essid}\" ESSID가 잘못되었습니다. ESSID는 32글자까지 가능하지만, 모든 종류"
-"의 문자를 다 쓸 수 있습니다."
+msgstr "\"${essid}\" ESSID . ESSID 32 ,       ."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "호스트 이름:"
+msgstr " :"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "이 시스템의 호스트 이름을 입력하십시오."
+msgstr "    ."
 
 #. Type: string
 #. Description
@@ -211,22 +185,19 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr ""
-"호스트 이름은 네트워크에서 시스템을 구별하는 한 개의 단어입니다. 호스트 이름"
-"이 뭐가 되야 할 지 모르겠다면, 네트워크 관리자에게 문의하십시오. 홈 네트워크"
-"를 구성하는 경우라면, 직접 호스트 이름을 만드십시오."
+msgstr "       .       ,   .    ,    ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "잘못된 호스트 이름"
+msgstr "  "
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "\"${hostname}\" 이름이 잘못되었습니다."
+msgstr "\"${hostname}\"  ."
 
 #. Type: error
 #. Description
@@ -235,16 +206,14 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr ""
-"올바른 호스트 이름은 0-9까지 숫자, a-z까지의 소문자 알파벳, 빼기 기호(-)만 들"
-"어 있어야 합니다. 길이는 2글자에서 63글자 사이여야 하고, 빼기 기호로 시작하거"
-"나 끝나면 안 됩니다."
+msgstr "   0-9 , a-z  ,  (-)   .  2 63  ,      ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
+#, fuzzy
 msgid "Error"
-msgstr "오류"
+msgstr "${error}"
 
 #. Type: error
 #. Description
@@ -252,15 +221,13 @@ msgstr "오류"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr ""
-"오류가 발생했고 네트워크 설정 과정이 중지되었습니다. 설치 메인 메뉴에서 다시 "
-"시도할 수 있습니다."
+msgstr "     .       ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "네트워크 인터페이스를 찾을 수 없습니다"
+msgstr "    "
 
 #. Type: error
 #. Description
@@ -268,9 +235,7 @@ msgstr "네트워크 인터페이스를 찾을 수 없습니다"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"네트워크 인터페이스를 찾을 수 없습니다. 설치 시스템에서 네트워크 장치를 찾을 "
-"수 없습니다."
+msgstr "    .       ."
 
 #. Type: error
 #. Description
@@ -278,21 +243,19 @@ msgstr ""
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr ""
-"네트워크 카드를 위해 특정 모듈을 읽어들여야 할 수도 있습니다. 그렇게 하려면, "
-"네트워크 하드웨어 찾기 단계로 돌아가십시오."
+msgstr "        .  ,     ."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "인프라스트럭쳐 (관리) 네트워크, 자체 구성 네트워크 (일대일)"
+msgstr " () ,    ()"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "무선 네트워크 종류:"
+msgstr "  :"
 
 #. Type: select
 #. Description
@@ -301,52 +264,49 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
-msgstr ""
-"무선 네트워크는 관리되는 네트워크일 수도 있고 자체 구성한 네트워크일 수 있습"
-"니다. 실제 엑세스 포인트가 있다면 관리되는 네트워크입니다. 또 다른 컴퓨터가 "
-"'엑세스 포인트'라면 자체 구성 네트워크입니다."
+msgstr "          .      .    ' '   ."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "무선 네트워크 설정"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "무선 액세스 포인트를 찾는 중입니다 ..."
+msgstr "     ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "<none>"
-msgstr "<없음>"
+msgstr "<>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "무선 네트워크 (802.11x)"
+msgstr "  (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "무선"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:144
 msgid "Ethernet or Fast Ethernet"
-msgstr "이더넷 혹은 패스트 이더넷"
+msgstr "   "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:148
 msgid "Token Ring"
-msgstr "토큰 링"
+msgstr " "
 
 #. Type: text
 #. Description
@@ -358,19 +318,19 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Serial-line IP"
-msgstr "시리얼 라인 IP"
+msgstr "  IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
-msgstr "병렬 포트 IP"
+msgstr "  IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
-msgstr "포인트 투 포인트 프로토콜"
+msgstr "   "
 
 #. Type: text
 #. Description
@@ -382,57 +342,57 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN 포인트 투 포인트 프로토콜"
+msgstr "ISDN    "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Channel-to-channel"
-msgstr "채널 투 채널"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Real channel-to-channel"
-msgstr "실제 채널 투 채널"
+msgstr "   "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:184
 msgid "Hypersocket"
-msgstr "하이퍼소켓"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
-msgstr "사용자간 통신 수단"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "알 수 없는 인터페이스"
+msgstr "   "
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "네트워크를 설정하는 중입니다 ..."
+msgstr "   ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "네트워크 설정"
+msgstr " "
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP 호스트 이름:"
+msgstr "DHCP  :"
 
 #. Type: string
 #. Description
@@ -440,71 +400,67 @@ msgstr "DHCP 호스트 이름:"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr ""
-"DHCP 호스트 이름을 입력해야 할 수도 있습니다. 케이블 모뎀을 사용한다면, 여기"
-"에 계정 번호를 지정해야 할 수도 있습니다."
+msgstr "DHCP      .   ,       ."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "대부분의 사용자들은 이 칸은 비워두면 됩니다."
+msgstr "     ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "DHCP로 네트워크를 설정하는 중입니다"
+msgstr "DHCP   "
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "시간이 좀 걸릴 수도 있습니다."
+msgstr "    ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "네트워크 자동 설정이 성공했습니다"
+msgstr "   "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "DHCP 클라이언트를 찾을 수 없습니다"
+msgstr "DHCP    "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"DHCP 클라이언트를 찾을 수 없습니다. 이 꾸러미는 pump나 dhcp-client가 필요합니"
-"다."
+msgstr "DHCP    .   pump dhcp-client ."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "DHCP 설정 단계가 중지되었습니다."
+msgstr "DHCP   ."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "네트워크 자동 설정 다시 시도"
+msgstr "    "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "네트워크 자동 설정 (DHCP 호스트 이름 포함) 다시 시도"
+msgstr "   (DHCP   )  "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "네트워크 수동 설정"
+msgstr "  "
 
 #. Type: select
 #. Choices
@@ -516,13 +472,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "일단 네트워크 설정하지 않기"
+msgstr "   "
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "네트워크 설정 방법:"
+msgstr "  :"
 
 #. Type: select
 #. Description
@@ -534,17 +490,14 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"여기에서 DHCP 네트워크 자동 설정을 다시 시도할 수도 있고 (DHCP 서버 응답이 너"
-"무 느린 경우에 다시 디소하면 성공할 수도 있습니다) 아니면 네트워크를 수동으"
-"로 직접 설정할 수도 있습니다.  또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 "
-"클라이언트에서 보내야 하는 경우가 있으므로, 호스트 이름을 입력한 다음에 DHCP "
-"네트워크 자동 설정을 다시 시도할 수도 있습니다."
+" DHCP        (DHCP          )       .  ,  DHCP   DHCP       ,     "
+"DHCP       ."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "네트워크 자동 설정이 실패했습니다"
+msgstr "   "
 
 #. Type: note
 #. Description
@@ -552,15 +505,13 @@ msgstr "네트워크 자동 설정이 실패했습니다"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
-"아마도 이 네트워크는 DHCP 프로토콜을 사용하지 않을 것입니다. 아니면, DHCP 서"
-"버가 너무 느리거나 네트워크 하드웨어가 동작하지 않는 경우일 수도 있습니다."
+msgstr "   DHCP    . , DHCP          ."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "기본 라우팅 없이 계속 하시겠습니까?"
+msgstr "    ?"
 
 #. Type: boolean
 #. Description
@@ -571,12 +522,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
-"네트워크 자동 설정이 성공했습니다. 하지만 기본 라우팅이 설정되어 있지 않습니"
-"다: 즉 현재 시스템은 인터넷에 있는 호스트와 통신하는 방법을 알 지 못합니다. "
-"이렇게 되면 설치가 불가능합니다. 단, 공식 데비안 CD-ROM의 첫 번째 장이 있거"
-"나, 'netinst' CD-ROM이 있거나, 로컬 네트워크에 꾸러미가 있다면 설치가 가능합"
-"니다."
+msgstr "   .      :           .    . ,   CD-ROM    , 'netinst' CD-ROM ,      ."
 
 #. Type: boolean
 #. Description
@@ -584,28 +530,26 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
-"잘 모르겠으면, 기본 라우팅 없이 진행하면 안 됩니다: 이 문제에 관해선ㄴ 로컬 "
-"네트워크의 관리자에게 문의하십시오."
+msgstr " ,      :       ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "무선 네트워크 다시 설정"
+msgstr "   "
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "동적 주소를 사용해 네트워크 설정 (DHCP)"
+msgstr "     (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "IP 주소:"
+msgstr "IP :"
 
 #. Type: string
 #. Description
@@ -614,15 +558,13 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr ""
-"IP 주소는 컴퓨터의 고유한 주소로 점으로 구분된 4개의 수로 구성되어 있습니다. "
-"IP 주소를 모르면, 네트워크 관리자에게 문의하십시오."
+msgstr "IP       4   . IP  ,   ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "IP 주소가 잘못되었습니다"
+msgstr "IP  "
 
 #. Type: error
 #. Description
@@ -630,15 +572,13 @@ msgstr "IP 주소가 잘못되었습니다"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
-"입력한 IP 주소의 형식이 틀렸습니다.  x.x.x.x의 형태여야 하며, 여기서 x는 255"
-"보다 크지 않아야 합니다. 다시 시도하십시오."
+msgstr " IP   .  x.x.x.x  ,  x 255   .  ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "포인트 투 포인트 주소:"
+msgstr "   :"
 
 #. Type: string
 #. Description
@@ -648,16 +588,13 @@ msgid ""
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr ""
-"포인트 투 포인트 주소는 포인트 투 포인트 네트워크에서 반대편의 주소를 말합니"
-"다.  무슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오.  포인트 투 "
-"포인트 주소는 점으로 구분된 4개의 수입니다."
+msgstr "          .         .        4 ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "네트마스크:"
+msgstr ":"
 
 #. Type: string
 #. Description
@@ -666,16 +603,13 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr ""
-"네트마스크는 어떤 기계가 네트워크에서 로컬 기계인지 판별하는 데 쓰입니다.  무"
-"슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오.  네트마스크는 점으"
-"로 구분된 4개의 수입니다."
+msgstr "        .         .     4 ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "게이트웨이:"
+msgstr ":"
 
 #. Type: string
 #. Description
@@ -687,43 +621,38 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr ""
-"게이트웨이는 게이트웨이 라우터를 가리키는 IP 주소입니다 (점으로 구분된 4개의 "
-"수).  게이트웨이는 기본 라우터라고도 합니다.  LAN 바깥과의 통신은 (예를 들어 "
-"인터넷) 이 라우터를 통해서 밖으로 나갑니다.  드문 경우에, 라우터가 없을 수도 "
-"있습니다. 그 경우에 이 칸을 비워 두십시오. 게이트웨이의 IP주소를 모르면, 네트"
-"워크 관리자에게 문의하십시오."
+msgstr "    IP  (  4 ).     .  LAN   (  )     .   ,    .      .  IP ,   ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "게이트웨이에 접근할 수 없습니다"
+msgstr "   "
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "입력한 게이트웨이 주소에 접근할 수 없습니다."
+msgstr "     ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "IP 주소, 네트마스크, 게이트웨이중에 잘못 입력한 게 있을 것입니다."
+msgstr "IP , ,      ."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "이 정보가 맞습니까?"
+msgstr "  ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "현재 설정된 네트워크 인수:"
+msgstr "   :"
 
 #. Type: boolean
 #. Description
@@ -736,16 +665,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" 인터페이스     = ${interface}\n"
-" IP주소         = ${ipaddress}\n"
-" 네트마스크     = ${netmask}\n"
-" 게이트웨이     = ${gateway}\n"
-" 포인트투포인트 = ${pointopoint}\n"
-" 네임서버       = ${nameservers}"
+"      = ${interface}\n"
+" IP         = ${ipaddress}\n"
+"      = ${netmask}\n"
+"      = ${gateway}\n"
+"  = ${pointopoint}\n"
+"        = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "고정 주소를 사용해 네트워크를 설정합니다"
+msgstr "    "

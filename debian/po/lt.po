@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2004-10-06 04:11-0600\n"
 "PO-Revision-Date: 2004-09-30 11:29+0300\n"
-"Last-Translator: Kęstutis Biliūnas\n"
+"Last-Translator: Kstutis Bilinas\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Automatinis tinklo konfigūravimas su DHCP"
+msgstr "Automatinis tinklo konfigravimas su DHCP"
 
 #. Type: boolean
 #. Description
@@ -37,11 +37,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Tinklas gali būti konfigūruojamas su DHCP arba įvedant visą informaciją "
-"rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis negalės gauti "
-"veikiančios konfigūracijos iš DHCP serverio Jūsų tinkle, po bandymo "
-"konfigūruoti su DHCP, Jums bus pasiūlyta konfigūruoti Jūsų tinklą rankiniu "
-"būdu."
+"Tinklas gali bti konfigruojamas su DHCP arba vedant vis informacij rankiniu "
+"bdu. Jei pasirinksite DHCP ir debian'o diegiklis negals gauti veikianios "
+"konfigracijos i DHCP serverio Js tinkle, po bandymo konfigruoti su DHCP, "
+"Jums bus pasilyta konfigruoti Js tinkl rankiniu bdu."
 
 #. Type: string
 #. Description
@@ -58,16 +57,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Srities vardas - tai Jūsų internetinio adreso dalis, esanti dešiniau Jūsų "
-"kompiuterio vardo. Tankiausiai tai yra .com, .net, .edu ar ,org. Jei Jūs "
-"įrenginėjate namų tinklą, galite nurodyti kažką savo, bet įsitikinkite, kad "
-"Jūs naudojate tą patį srities vardą visuose savo kompiuteriuose."
+"Srities vardas - tai Js internetinio adreso dalis, esanti deiniau Js "
+"kompiuterio vardo. Tankiausiai tai yra .com, .net, .edu ar ,org. Jei Js "
+"renginjate nam tinkl, galite nurodyti kak savo, bet sitikinkite, kad Js "
+"naudojate t pat srities vard visuose savo kompiuteriuose."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Vardų serverio adresai:"
+msgstr "Vard serverio adresai:"
 
 #. Type: string
 #. Description
@@ -79,16 +78,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Vardų serveriai naudojami kompiuterių vardų tinkle ieškojimui. Prašau įvesti "
-"iki 3-jų serverių IP adresus (ne kompiuterių vardus), atskirdami tarpais. "
-"Nenaudokite kablelių. Pirmasis serveris sąraše bus apklausiamas pirmuoju. "
-"Jei Jūs nenorite naudoti jokio serverio, tai palikite šį lauką tuščią."
+"Vard serveriai naudojami kompiuteri vard tinkle iekojimui. Praau vesti iki 3-"
+"j serveri IP adresus (ne kompiuteri vardus), atskirdami tarpais. Nenaudokite "
+"kableli. Pirmasis serveris srae bus apklausiamas pirmuoju. Jei Js nenorite "
+"naudoti jokio serverio, tai palikite  lauk tui."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Pagrindinė tinklo sąsaja:"
+msgstr "Pagrindin tinklo ssaja:"
 
 #. Type: select
 #. Description
@@ -98,15 +97,15 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Jūsų sistemoje yra kelios tinklo sąsajos. Pasirinkite vieną iš jų, kuri bus "
-"naudojama kaip pagrindinė Debian'o diegimo metu. Jei įmanoma, pirmoji rasta "
-"prie tinklo prijungta sąsaja yra pasirinkta."
+"Js sistemoje yra kelios tinklo ssajos. Pasirinkite vien i j, kuri bus "
+"naudojama kaip pagrindin Debian'o diegimo metu. Jei manoma, pirmoji rasta "
+"prie tinklo prijungta ssaja yra pasirinkta."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Bevielis (wireless) ESSID sąsajai ${iface}:"
+msgstr "Bevielis (wireless) ESSID ssajai ${iface}:"
 
 #. Type: string
 #. Description
@@ -116,15 +115,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} yra bevielio tinklo sąsaja. Prašau įvesti bevielio tinklo vardą "
-"(ESSID), kurį norite, kad ${iface} naudotų. Jei Jūs norite, kad būtų "
-"naudojamas bet kuris pasiekiamas tinklas, palikite šia lauką tuščią."
+"${iface} yra bevielio tinklo ssaja. Praau vesti bevielio tinklo vard "
+"(ESSID), kur norite, kad ${iface} naudot. Jei Js norite, kad bt naudojamas "
+"bet kuris pasiekiamas tinklas, palikite ia lauk tui."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP raktas belaidžio tinklo įrenginiui ${iface}:"
+msgstr "WEP raktas belaidio tinklo renginiui ${iface}:"
 
 #. Type: string
 #. Description
@@ -133,8 +132,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Jei yra galimybė, įveskite WEP apsaugos raktą belaidžio tinklo įrenginiui "
-"${iface}. Tai padaryti galima dviem būdais:"
+"Jei yra galimyb, veskite WEP apsaugos rakt belaidio tinklo renginiui "
+"${iface}. Tai padaryti galima dviem bdais:"
 
 #. Type: string
 #. Description
@@ -143,8 +142,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Jei Jūsų WEP rakto formatas yra 'nnnn-nnnn-nn' ar 'nnnnnnnn', kur n yra "
-"skaitmuo, tik įveskite jį tokį, koks jis yra, į šį lauką."
+"Jei Js WEP rakto formatas yra 'nnnn-nnnn-nn' ar 'nnnnnnnn', kur n yra "
+"skaitmuo, tik veskite j tok, koks jis yra,   lauk."
 
 #. Type: string
 #. Description
@@ -153,8 +152,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Jei Jūsų WEP rakto formatas - slaptažodžio frazė, įveskite ją su priešdėliu "
-"'s:' (be kabučių)."
+"Jei Js WEP rakto formatas - slaptaodio fraz, veskite j su priedliu 's:' (be "
+"kabui)."
 
 #. Type: string
 #. Description
@@ -162,8 +161,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "inoma, jei nra WEP rakto js bevieliam tinklui, palikite  lauk tui."
 
 #. Type: error
 #. Description
@@ -178,9 +176,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP raktas '${wepkey}' netinkamas. Prašau įdėmiai pažiūrėkite nurodymus "
-"sekančiame ekrane, apie tai kaip teisingai įvesti WEP raktą, ir pabandykite "
-"dar kartą."
+"WEP raktas '${wepkey}' netinkamas. Praau dmiai pairkite nurodymus sekaniame "
+"ekrane, apie tai kaip teisingai vesti WEP rakt, ir pabandykite dar kart."
 
 #. Type: error
 #. Description
@@ -195,8 +192,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" yra netinkamas. Šis vardas gali būti iki 32 simbolių, bet "
-"gali turėti visų rūšių simbolius."
+"ESSID \"${essid}\" yra netinkamas. is vardas gali bti iki 32 simboli, bet "
+"gali turti vis ri simbolius."
 
 #. Type: string
 #. Description
@@ -208,7 +205,7 @@ msgstr "Kompiuterio vardas:"
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Prašau įvesti šio kompiuterio vardą."
+msgstr "Praau vesti io kompiuterio vard."
 
 #. Type: string
 #. Description
@@ -219,10 +216,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Kompiuterio vardas - tai vienas žodis, kuris identifikuoja Jūsų kompiuterį "
-"tinkle. Jei nežinote, koks Jūsų kompiuterio vardas turėtų būti, pasitarkite "
-"su Jūsų tinklo administratoriumi. Jei Jūs įrenginėjate savo nuosavą namų "
-"tinklą, įveskite ką nors pagal savo skonį."
+"Kompiuterio vardas - tai vienas odis, kuris identifikuoja Js kompiuter "
+"tinkle. Jei neinote, koks Js kompiuterio vardas turt bti, pasitarkite su Js "
+"tinklo administratoriumi. Jei Js renginjate savo nuosav nam tinkl, veskite k "
+"nors pagal savo skon."
 
 #. Type: error
 #. Description
@@ -244,9 +241,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Tinkamą kompiuterio vardą gali sudaryti tik skaitmenys 0-9, mažosios raidės "
-"a-z ir minuso ženklas. Vardas turi būtį nuo 2-jų iki 63-jų simbolių ilgio, "
-"ir negali prasidėti ar baigtis minuso ženklu."
+"Tinkam kompiuterio vard gali sudaryti tik skaitmenys 0-9, maosios raids a-z "
+"ir minuso enklas. Vardas turi bt nuo 2-j iki 63-j simboli ilgio, ir negali "
+"prasidti ar baigtis minuso enklu."
 
 #. Type: error
 #. Description
@@ -261,14 +258,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Įvyko klaida ir tinklo konfigūravimo procesas nutrauktas. Jūs galite "
-"pakartoti konfigūravimą iš įdiegiklio pagrindinio meniu."
+"vyko klaida ir tinklo konfigravimo procesas nutrauktas. Js galite pakartoti "
+"konfigravim i diegiklio pagrindinio meniu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Tinklo sąsajų neaptikta"
+msgstr "Tinklo ssaj neaptikta"
 
 #. Type: error
 #. Description
@@ -276,8 +273,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko ssaj nerasta. Diegimo sistemai nepavyko rasti tinklo renginio."
 
 #. Type: error
 #. Description
@@ -286,21 +282,20 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Jums gali tekti įkelti specialų modulį Jūsų tinklo plokštei, jei Jūs tikrai "
-"ją turite. Tuo tikslu, grįžkite atgal į tinklo aparatūros detektavimo "
-"žingsnį."
+"Jums gali tekti kelti special modul Js tinklo ploktei, jei Js tikrai j "
+"turite. Tuo tikslu, grkite atgal  tinklo aparatros detektavimo ingsn."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastruktūrinis (Managed) tinklas, Ad-hoc tinklas (Peer to peer)"
+msgstr "Infrastruktrinis (Managed) tinklas, Ad-hoc tinklas (Peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Bevielio tinklo rūšis:"
+msgstr "Bevielio tinklo ris:"
 
 #. Type: select
 #. Description
@@ -310,21 +305,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Bevieliai tinklai būna \"managed\" bei \"ad-hoc\". Jei naudojate tikrą "
-"pasiekimo tašką (Access Point), tuomet rinkitės \"managed\". Jei jungiatės "
-"tiesiogiai prie kito kompiuterio, rinkitės \"ad-hoc\"."
+"Bevieliai tinklai bna \"managed\" bei \"ad-hoc\". Jei naudojate tikr "
+"pasiekimo tak (Access Point), tuomet rinkits \"managed\". Jei jungiats "
+"tiesiogiai prie kito kompiuterio, rinkits \"ad-hoc\"."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Belaidžio tinklo konfigūravimas"
+msgstr "Belaidio tinklo konfigravimas"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Ieškoma belaidžio tinklo pasiekimo taškų (access points) ..."
+msgstr "Iekoma belaidio tinklo pasiekimo tak (access points) ..."
 
 #. Type: text
 #. Description
@@ -366,13 +361,13 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Serial-line IP"
-msgstr "IP per nuoseklią liniją"
+msgstr "IP per nuosekli linij"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
-msgstr "IP per lygiagrečią liniją (PLIP)"
+msgstr "IP per lygiagrei linij (PLIP)"
 
 #. Type: text
 #. Description
@@ -420,21 +415,21 @@ msgstr "Inter-user communication vehicle"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Unknown interface"
-msgstr "Nežinoma sąsaja"
+msgstr "Neinoma ssaja"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:197
 msgid "Configuring network ..."
-msgstr "Konfigūruojamas tinklas ..."
+msgstr "Konfigruojamas tinklas ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:202
 msgid "Configure the network"
-msgstr "Tinklo konfigūravimas"
+msgstr "Tinklo konfigravimas"
 
 #. Type: string
 #. Description
@@ -449,32 +444,32 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei Jūs naudojate "
-"kabelinį modemą, tai gali tekti čia nurodyti paskyros (account) numerį."
+"Jums gali reikti pateikti DHCP kompiuterio vard. Jei Js naudojate kabelin "
+"modem, tai gali tekti ia nurodyti paskyros (account) numer."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Dauguma kitų naudotojų gali palikti čia tuščią."
+msgstr "Dauguma kit naudotoj gali palikti ia tui."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Tinklo konfigūravimas su DHCP"
+msgstr "Tinklo konfigravimas su DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Tai gali užtrukti šiek tiek laiko."
+msgstr "Tai gali utrukti iek tiek laiko."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Automatinis tinklo konfigūravimas pavyko sėkmingai"
+msgstr "Automatinis tinklo konfigravimas pavyko skmingai"
 
 #. Type: error
 #. Description
@@ -487,32 +482,32 @@ msgstr "Nerastas DHCP klientas"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas pump "
-"arba dhcp-client."
+"Nerastas DHCP klientas. iam paketui reikia, kad bt diegtas paketas pump arba "
+"dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "DHCP konfigūravimo procesas bus nutrauktas."
+msgstr "DHCP konfigravimo procesas bus nutrauktas."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Kartoti tinklo automatinį konfigūravimą"
+msgstr "Kartoti tinklo automatin konfigravim"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Kartoti automatinį tinklo konfigūravimą su DHCP kompiuterio vardu"
+msgstr "Kartoti automatin tinklo konfigravim su DHCP kompiuterio vardu"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "Rankinis tinklo konfigūravimas"
+msgstr "Rankinis tinklo konfigravimas"
 
 #. Type: select
 #. Choices
@@ -524,13 +519,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Nekonfigūruoti tinklo šiuo metu"
+msgstr "Nekonfigruoti tinklo iuo metu"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Tinklo konfigūravimo metodas:"
+msgstr "Tinklo konfigravimo metodas:"
 
 #. Type: select
 #. Description
@@ -542,18 +537,18 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Čia Jūs galite pasirinkti automatinio tinklo konfigūravimo su DHCP "
-"pakartojimą (kuris gali suveikti, jei yra dideli Jūsų DHCP serverio atsakymų "
-"laikai) arba konfigūruoti tinklą rankiniu būdu. Kai kuriems DHCP serveriams "
-"reikia, kad klientinė programa siųstų DHCP kompiuterio vardą (hostname), "
-"taigi Jūs galite pasirinkti pakartotiną automatinį tinklo konfigūravimą su "
-"su DHCP, nurodant tą kompiuterio vardą."
+"ia Js galite pasirinkti automatinio tinklo konfigravimo su DHCP pakartojim "
+"(kuris gali suveikti, jei yra dideli Js DHCP serverio atsakym laikai) arba "
+"konfigruoti tinkl rankiniu bdu. Kai kuriems DHCP serveriams reikia, kad "
+"klientin programa sist DHCP kompiuterio vard (hostname), taigi Js galite "
+"pasirinkti pakartotin automatin tinklo konfigravim su su DHCP, nurodant t "
+"kompiuterio vard."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Automatinis tinklo konfigūravimas nepavyko"
+msgstr "Automatinis tinklo konfigravimas nepavyko"
 
 #. Type: note
 #. Description
@@ -562,14 +557,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Tai gali būti dėl lėto DHCP serverio, tinklo įrenginių veikimo sutrikimų, "
-"arba tiesiog Jūsų tinkle nenumatytas dinaminio adresavimo (DHCP) naudojimas."
+"Tai gali bti dl lto DHCP serverio, tinklo rengini veikimo sutrikim, arba "
+"tiesiog Js tinkle nenumatytas dinaminio adresavimo (DHCP) naudojimas."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Ar tęsti be numatytojo pagal nutylėjimą maršruto?"
+msgstr "Ar tsti be numatytojo pagal nutyljim marruto?"
 
 #. Type: boolean
 #. Description
@@ -581,11 +576,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Tinklo konfigūravimas pavyko sėkmingai. Tačiau nėra nustatytas pagal "
-"nutylėjimą numatytasis maršrutas (default route): sistema nežino kaip "
-"susirišti su kompiuteriais Internete. Jei Jūs neturite pirmojo oficialaus "
-"Debian'o kompaktinio disko, 'Netinst' disko arba paketų, prieinamų lokaliame "
-"tinkle, - įdiegimo tęsimas bus nebeįmanomas."
+"Tinklo konfigravimas pavyko skmingai. Taiau nra nustatytas pagal nutyljim "
+"numatytasis marrutas (default route): sistema neino kaip susiriti su "
+"kompiuteriais Internete. Jei Js neturite pirmojo oficialaus Debian'o "
+"kompaktinio disko, 'Netinst' disko arba paket, prieinam lokaliame tinkle, - "
+"diegimo tsimas bus nebemanomas."
 
 #. Type: boolean
 #. Description
@@ -594,21 +589,21 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Jei abejojate, nebetęskite diegimo be pagal nutylėjimą numatytojo maršruto: "
-"susisiekite su Jūsų lokalaus tinklo administratoriumi dėl šios problemos."
+"Jei abejojate, nebetskite diegimo be pagal nutyljim numatytojo marruto: "
+"susisiekite su Js lokalaus tinklo administratoriumi dl ios problemos."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Naujai perkonfigūruoti belaidį tinklą"
+msgstr "Naujai perkonfigruoti belaid tinkl"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Tinklo konfigūravimas naudojant dinaminį adresavimą (DHCP)"
+msgstr "Tinklo konfigravimas naudojant dinamin adresavim (DHCP)"
 
 #. Type: string
 #. Description
@@ -624,15 +619,15 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Jūsų kompiuterio IP adresas yra unikalus ir sudarytas iš keturių skaičių, "
-"atskirtų taškais. Jei Jūs nežinote, ką čia reikia nurodyti, "
-"pasikonsultuokite su savo tinklo administratoriumi."
+"Js kompiuterio IP adresas yra unikalus ir sudarytas i keturi skaii, atskirt "
+"takais. Jei Js neinote, k ia reikia nurodyti, pasikonsultuokite su savo "
+"tinklo administratoriumi."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Išsigimęs IP adresas"
+msgstr "Isigims IP adresas"
 
 #. Type: error
 #. Description
@@ -641,14 +636,14 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Jūsų pateiktas IP adresas yra išsigimęs. Jis turi būti x.x.x.x formos, kur "
-"kiekvienas 'x' yra ne didesnis kaip 255. Prašau pabandyti dar kartą."
+"Js pateiktas IP adresas yra isigims. Jis turi bti x.x.x.x formos, kur "
+"kiekvienas 'x' yra ne didesnis kaip 255. Praau pabandyti dar kart."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Ryšio (point-to-point) adresas:"
+msgstr "Ryio (point-to-point) adresas:"
 
 #. Type: string
 #. Description
@@ -659,10 +654,10 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką "
-"(point-to-point) tinklui.  Pasitarkite su savo tinklo administratoriumi, jei "
-"nežinote šio adreso.  Ryšio adresas turi būti įvestas, kaip keturi skaičiai, "
-"atskirti taškais."
+"Ryio adresas nurodo kito galinio tako adres, esant i tako  tak (point-to-"
+"point) tinklui.  Pasitarkite su savo tinklo administratoriumi, jei neinote "
+"io adreso.  Ryio adresas turi bti vestas, kaip keturi skaiiai, atskirti "
+"takais."
 
 #. Type: string
 #. Description
@@ -678,15 +673,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Tinklo trafaretas apibrėžia, kurie kompiuteriai yra lokalūs Jūsų tinkle. "
-"Pasitarkite su savo tinklo administratoriumi, jei nežinote šios reikšmės. "
-"Tinklo trafaretas turi būti įvestas, kaip keturi skaičiai, atskirti taškais."
+"Tinklo trafaretas apibria, kurie kompiuteriai yra lokals Js tinkle. "
+"Pasitarkite su savo tinklo administratoriumi, jei neinote ios reikms. Tinklo "
+"trafaretas turi bti vestas, kaip keturi skaiiai, atskirti takais."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Tinklų sąsaja (gateway):"
+msgstr "Tinkl ssaja (gateway):"
 
 #. Type: string
 #. Description
@@ -699,24 +694,23 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Tinklų sąsajos IP adresas (keturi skaičiai atskirti taškais) nurodo tinklų "
-"sąsajos kelvedį, taip pat vadinamą numatytuoju kelvedžių (default router). "
-"Visa informacija išeinanti į Jūsų lokalaus tinklo išorę (pvz. į internetą), "
-"yra siunčiama per šį kelvedį. Kartais Jūs galite neturėti kelvedžio, tokiu "
-"atveju palikite tuščią. Jei nežinote tinkamo atsakymo, pasitarkite su savo "
-"tinklo administratoriumi."
+"Tinkl ssajos IP adresas (keturi skaiiai atskirti takais) nurodo tinkl ssajos "
+"kelved, taip pat vadinam numatytuoju kelvedi (default router). Visa "
+"informacija ieinanti  Js lokalaus tinklo ior (pvz.  internet), yra siuniama "
+"per  kelved. Kartais Js galite neturti kelvedio, tokiu atveju palikite tui. "
+"Jei neinote tinkamo atsakymo, pasitarkite su savo tinklo administratoriumi."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Tinklų sąsaja (gateway) nepasiekiama"
+msgstr "Tinkl ssaja (gateway) nepasiekiama"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
+msgstr "Js nurodytas tinkl ssajos (gateway) adresas nepasiekiamas."
 
 #. Type: error
 #. Description
@@ -724,20 +718,19 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Jūs galbūt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
-"sąsają."
+"Js galbt padarte klaid vedant IP adres, tinklo trafaret ir/ar tinkl ssaj."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Ar ši informacija teisinga?"
+msgstr "Ar i informacija teisinga?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Dabartiniai tinklo konfigūravimo parametrai:"
+msgstr "Dabartiniai tinklo konfigravimo parametrai:"
 
 #. Type: boolean
 #. Description
@@ -762,4 +755,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
+msgstr "Tinklo konfigravimas naudojant statin adresavim"
