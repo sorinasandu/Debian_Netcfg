@@ -58,7 +58,6 @@ int main(void)
     int num_interfaces = 0;
     enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
-    static char *none;
 
     /* initialize libd-i */
     di_system_init("netcfg");
@@ -66,9 +65,6 @@ int main(void)
     /* initialize debconf */
     client = debconfclient_new();
     debconf_capb(client, "backup");
-
-    debconf_metaget(client, "netcfg/internal-none", "description");
-    none = client->value ? strdup(client->value) : strdup("<none>");
 
     while (1) {
 	switch(state) {
