@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-01 09:36+0200\n"
-"PO-Revision-Date: 2004-08-30 14:52+0200\n"
-"Last-Translator:  Matjaz Horvat <matjaz@owca.info>\n"
+"PO-Revision-Date: 2004-09-07 00:17+0100\n"
+"Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
 "Language-Team:  LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -235,14 +235,14 @@ msgstr "Ime \"${hostname}\" ni veljavno."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Veljavno gostiteljsko ime lahko vsebuje le črke A-Z, številke in znak minus, "
-"dolgo je lahko od 2 do 63 znakov in se ne sme začeti ali končati z minusom."
+"Veljavno ime gostitelja lahko vsebuje le številke 0-9, majhne črke a-z in "
+"znak minus. Dolgo je lahko od 2 do 63 znakov in se ne sme začeti ali končati "
+"z minusom."
 
 #. Type: error
 #. Description
@@ -341,7 +341,7 @@ msgstr "Brezžični ethernet (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "brezžično"
 
 #. Type: text
 #. Description
@@ -533,7 +533,6 @@ msgstr "Način nastavitve mreže:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -541,18 +540,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Samodejna nastavitev mreže ni uspela. To je morda posledica počasnega DHCP "
-"strežnika na mreži, tako da boste morda želeti ponovno poskusiti. Če vašo "
-"omrežje ne uporablja DHCP-ja za samodejno nastavitev, ga lahko nastavite "
-"ročno. Prav tako nekateri DHCP strežniki potrebujejo določeno DHCP ime, ki "
-"ga lahko vnesete preden ponovno poskusite z DHCP."
+"Tu lahko izberete ponovno samonastavitev omrežja DHCP (ki lahko uspe, če se "
+"vaš strežnik DHCP dolgo odziva) ali ročno nastavitev omrežja. Nekateri "
+"strežniki DHCP zahtevajo, da odjemalec pošlje določeno ime gostitelja DHCP, "
+"zato lahko tudi ponovno poskusite s samonastavitvijo omrežja DHCP z imenom "
+"gostitelja, ki ga podate sami."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Samodejna nastavitev mreže je uspela"
+msgstr "Samodejna nastavitev mreže ni uspela"
 
 #. Type: note
 #. Description
@@ -561,12 +559,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Vaše omrežje verjetno ne uporablja protokola DHCP. Morda pa je strežnik DHCP "
+"počasen ali določen kos strojne omrežne opreme ne deluje pravilno."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Nadaljujem brez privzete smeri?"
 
 #. Type: boolean
 #. Description
@@ -578,6 +578,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Samodejna nastavitev omrežja je uspela. Kljub temu ni bila nastavljena "
+"privzeta smer, zato sistem ne ve, kako naj komunicira z gostitelji na "
+"internetu. Nadaljevanje namestitve je mogoče samo v primeru, če imate prvo "
+"uradno zgoščenko Debiana, zgoščenko 'Netinst' ali pakete v lokalnem omrežju."
 
 #. Type: boolean
 #. Description
@@ -586,6 +590,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Če niste prepričani, raje ne nadaljujte brez privzete smeri. Obrnite se na "
+"skrbnika vašega omrežja."
 
 #. Type: text
 #. Description
