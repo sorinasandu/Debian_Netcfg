@@ -1,4 +1,4 @@
-# translation of de.po to 
+# translation of de.po to
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -12,13 +12,13 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-05-27 21:15-0300\n"
+"PO-Revision-Date: 2004-06-02 00:19GMT\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
-"Language-Team:  <gnome-de@gnome.org>\n"
+"Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #. Type: boolean
 #. Description
@@ -79,7 +79,7 @@ msgid ""
 "this field blank."
 msgstr ""
 "Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte "
-"geben Sie die IP Adresse (nicht die Hostnamen) von bis zu drei Nameservern "
+"geben Sie die IP Adresse (nicht die Rechnernamen) von bis zu drei Nameservern "
 "getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der erste Server "
 "in der Liste wird als erstes abgefragt. Wenn Sie keine Nameserver benutzen "
 "wollen, lassen Sie diese Feld bitte einfach leer."
@@ -201,13 +201,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Hostname:"
-msgstr "Hostname:"
+msgstr "Rechnername:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Bitte geben Sie den Hostnamen dieses Rechners ein."
+msgstr "Bitte geben Sie den Namen dieses Rechners ein."
 
 #. Type: string
 #. Description
@@ -218,7 +218,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Der Hostname ist ein einzelnes Wort, der Ihren Rechner im Netzwerk "
+"Der Rechnername ist ein einzelnes Wort, der Ihren Rechner im Netzwerk "
 "identifiziert. Wenn Sie Ihren Rechnernamen nicht kennen, fragen Sie den "
 "Netzwerkadministrator. Wenn Sie ein lokales Heimnetz aufbauen, ist es egal, "
 "was Sie angeben."
@@ -227,7 +227,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Invalid hostname"
-msgstr "Ungültiger Hostname"
+msgstr "Ungültiger Rechnername"
 
 #. Type: error
 #. Description
@@ -435,7 +435,7 @@ msgstr "Netzwerk einrichten"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP Hostname:"
+msgstr "DHCP Rechnername:"
 
 #. Type: string
 #. Description
@@ -444,7 +444,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
+"In einigen Situationen muss man einen DHCP Rechnername angeben. Das kommt "
 "selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
 "besitzen, muss hier oft eine Benutzernummer angegeben werden."
 
@@ -482,8 +482,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -501,7 +500,7 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Hostnamen versuchen"
+msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
 
 #. Type: select
 #. Choices
@@ -541,7 +540,7 @@ msgstr ""
 "DHCP-Server in Ihrem Netzwerk liegen, daher möchten Sie es vielleicht "
 "nochmals versuchen. Wenn Ihr Netzwerk kein DHCP zur Autokonfiguration "
 "verwendet, können Sie es stattdessen manuell einrichten. Davon abgesehen "
-"benötigen manche DHCP-Server einen speziellen DHCP-Hostnamen, daher können "
+"benötigen manche DHCP-Server einen speziellen DHCP-Rechnername, daher können "
 "Sie einen solchen Namen eingeben, bevor Sie die DHCP-Autokonfiguration "
 "nochmals probieren."
 
@@ -563,8 +562,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -679,8 +677,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -721,29 +718,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " Interface      = ${interface}\n"
-#~ " Rechnername    = ${hostname}\n"
-#~ " Domain         = ${domain}\n"
-#~ " DHCP Rechnern. = ${dhcp_hostname}\n"
-#~ " Nameserver     = ${nameservers}"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet oder Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Möchten Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Während der automatischen Netzwerk-Konfiguration mit DHCP wurden keine IP-"
-#~ "Adressen gefunden. DHCP-Server sind manchmal sehr langsam. Wenn Sie "
-#~ "möchten, können Sie es noch einmal versuchen."
