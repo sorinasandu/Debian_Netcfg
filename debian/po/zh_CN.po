@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-15 18:27+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -420,42 +420,21 @@ msgstr "正在设置网络 ..."
 msgid "Configure the network"
 msgstr "网络设置"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP 主机名："
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"您需要提供一个 DHCP 主机名。如果您用的是 cable modem，可能还得指定一个帐号。"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "大多数其他用户可以将此栏置空。"
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "这些信息正确吗？"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "当前配置的网络参数："
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -471,43 +450,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "使用 DHCP 来配置网络"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "这将花费一些时间。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "没有找到 DHCP 客户程序"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "没有找到 DHCP 客户程序。需要安装 pump 或者 dhcp-client。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 配置过程被中止。"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "要重试 DHCP 网络配置吗？"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -518,14 +497,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "动态网络配置(DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用动态地址(DHCP)配置网络"
 
@@ -673,3 +652,16 @@ msgstr "静态网络设置"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP 主机名："
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "您需要提供一个 DHCP 主机名。如果您用的是 cable modem，可能还得指定一个帐"
+#~ "号。"
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "大多数其他用户可以将此栏置空。"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-16 00:56+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -428,44 +428,21 @@ msgstr "Ağ yapılandırılıyor ..."
 msgid "Configure the network"
 msgstr "Ağı yapılandır"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP makine adı:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Bir DHCP makine adı vermeniz gerekebilir. Eğer bir kablo modem "
-"kullanıyorsanız, bu aşamada bir kullanıcı hesap adı girmeniz zorunlu "
-"olabilir."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Çoğu durumda bu alan boş bırakabilir."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Bu bilgiler doğru mu?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -481,25 +458,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Ağınız DHCP ile yapılandırılıyor"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Bu işlem biraz zaman alabilir."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Herhangi bir DHCP istemcisi bulunamadı"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Herhangi bir DHCP istemcisi bulunamadı. Bu paket pump veya dhcp-client "
@@ -507,19 +484,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP yapılandırması iptal edilecek."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "DHCP ağ yapılandırmasını tekrar denemek ister misiniz?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -531,14 +508,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinamik ağ yapılandırması (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Ağı dinamik adresleme (DHCP) ile yapılandır"
 
@@ -694,6 +671,20 @@ msgstr "Statik ağ yapılandırması"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Ağı statik adresleme ile yapılandır"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP makine adı:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Bir DHCP makine adı vermeniz gerekebilir. Eğer bir kablo modem "
+#~ "kullanıyorsanız, bu aşamada bir kullanıcı hesap adı girmeniz zorunlu "
+#~ "olabilir."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Çoğu durumda bu alan boş bırakabilir."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Ağ Yapılandırması"

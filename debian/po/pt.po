@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.63\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-15 23:24+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -428,45 +428,21 @@ msgstr "A configurar a rede ..."
 msgid "Configure the network"
 msgstr "Configurar a rede"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Nome do computador DHCP :"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Voce pode precisar de fornecer um nome de computador DHCP. Caso esteja a "
-"utilizarum modem por cabo, pode precisar de especificar um número de conta "
-"neste campo."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr ""
-"A maioria dos outros utilizadores pode somente deixar este campo em branco."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Esta informação está correcta?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parâmetros de rede actualmente configurados:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -482,25 +458,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Configuração da rede com DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Este processo pode demorar algum tempo."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Não foi encontrado nenhum cliente DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
@@ -508,19 +484,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "O processo de configuração DHCP vai ser terminado."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Deseja tentar novamente a configuração via DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -532,14 +508,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configuração dinâmica de rede (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurar a rede usando endereçamento dinâmico (DHCP)"
 
@@ -696,6 +672,22 @@ msgstr "Configuração de rede estática"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "Nome do computador DHCP :"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Voce pode precisar de fornecer um nome de computador DHCP. Caso esteja a "
+#~ "utilizarum modem por cabo, pode precisar de especificar um número de "
+#~ "conta neste campo."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr ""
+#~ "A maioria dos outros utilizadores pode somente deixar este campo em "
+#~ "branco."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuração de Rede"

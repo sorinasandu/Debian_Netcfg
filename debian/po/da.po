@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-15 11:45+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -129,8 +129,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Angiv WEB-sikkerhedsnøgle for den trådløse enhed ${iface}, hvis der skal bruges "
-"en sådan nøgle. Der er to måder at gøre dette på:"
+"Angiv WEB-sikkerhedsnøgle for den trådløse enhed ${iface}, hvis der skal "
+"bruges en sådan nøgle. Der er to måder at gøre dette på:"
 
 #. Type: string
 #. Description
@@ -432,43 +432,21 @@ msgstr "Sætter netværket op ..."
 msgid "Configure the network"
 msgstr "Sæt netværket op"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP-værtsnavn:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et "
-"kabelmodem, skal du muligvis angive et kontonummer her."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr " De fleste andre brugere kan blot lade feltet være tomt."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Er disse oplysninger korrekte?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Aktuel netværksopsætning:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -484,43 +462,44 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Sætter netværket op via DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Det kan tage nogen tid."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Fandt ingen DHCP-klient"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Opsætningen af DHCP afbrydes."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Vil du forsøge DHCP-netværksopsætningen igen?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -531,14 +510,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamisk netværksopsætning (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sæt nætværket op med dynamisk adressering (DHCP)"
 
@@ -652,7 +631,8 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -692,6 +672,19 @@ msgstr "Statisk netværksopsætning"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Sæt nætværket op med statisk adressering"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP-værtsnavn:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et "
+#~ "kabelmodem, skal du muligvis angive et kontonummer her."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr " De fleste andre brugere kan blot lade feltet være tomt."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Netværksopsætning"
@@ -764,4 +757,3 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-

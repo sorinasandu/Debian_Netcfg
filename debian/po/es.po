@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-26 23:30+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -98,7 +98,12 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr "Los servidores nombre se utilizan para buscar los nombres de servidores en la red. Por favor, introduzca la dirección IP (no nombre de sistema) de hasta tres servidores de nombres, separados por espacios. No utilice comas. Los servidores serán consultados en el orden en que se introduzcan. Si no quiere utilizar ningún servidor de nombres deje este campo en blanco."
+msgstr ""
+"Los servidores nombre se utilizan para buscar los nombres de servidores en "
+"la red. Por favor, introduzca la dirección IP (no nombre de sistema) de "
+"hasta tres servidores de nombres, separados por espacios. No utilice comas. "
+"Los servidores serán consultados en el orden en que se introduzcan. Si no "
+"quiere utilizar ningún servidor de nombres deje este campo en blanco."
 
 #. Type: select
 #. Description
@@ -147,7 +152,10 @@ msgstr "Clave WEP para dispositivo inalámbrico ${iface}:"
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr "Por favor, introduzca la clave de seguridad WEP para el dispositivo inalámbrico ${iface} si fuera necesario para su red. Hay dos formas de hacerlo:"
+msgstr ""
+"Por favor, introduzca la clave de seguridad WEP para el dispositivo "
+"inalámbrico ${iface} si fuera necesario para su red. Hay dos formas de "
+"hacerlo:"
 
 #. Type: string
 #. Description
@@ -450,44 +458,21 @@ msgstr "Configurando la red ..."
 msgid "Configure the network"
 msgstr "Configurar la red"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Nombre de sistema DHCP:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"En algunas circunstancias será necesario que indique el nombre de su "
-"servidor DHCP. Si usted es un usuario de cable modem, puede necesitar "
-"indicar un número de cuenta aquí."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "La mayoría de los usuarios pueden simplemente dejar esto en blanco."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "¿Es esta información correcta?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parámetros de red configurados hasta el momento:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -503,25 +488,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Configurando la red con DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Esto puede tomar cierto tiempo."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "No se encontró un cliente DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "No se ha encontrado un cliente DHCP. Este paquete requiere pump o dhcp-"
@@ -529,19 +514,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "La configuración con DHCP se abortará."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -553,14 +538,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configuración de red dinámica (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurar la red usando direccionamiento dinámico (DHCP)"
 
@@ -717,6 +702,20 @@ msgstr "Configuración estática de la red"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurar la red usando direccionamiento estático"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "Nombre de sistema DHCP:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "En algunas circunstancias será necesario que indique el nombre de su "
+#~ "servidor DHCP. Si usted es un usuario de cable modem, puede necesitar "
+#~ "indicar un número de cuenta aquí."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "La mayoría de los usuarios pueden simplemente dejar esto en blanco."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuración de red"

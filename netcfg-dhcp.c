@@ -40,7 +40,7 @@ int main(void)
     int num_interfaces;
     static struct debconfclient *client;
 
-    enum { BACKUP, GET_INTERFACE, GET_DHCP, WCONFIG, QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, WCONFIG, QUIT } state = GET_INTERFACE;
 
     wfd = iw_sockets_open();
 
@@ -63,7 +63,7 @@ int main(void)
 	      if (is_wireless_iface(interface))
 		state = WCONFIG;
 	      else
-		state = GET_DHCP;
+		state = QUIT;
 	    }
 	    break;
 	case WCONFIG:
@@ -73,13 +73,7 @@ int main(void)
 	      state = BACKUP;
 	      break;
 	    }
-	    state = GET_DHCP;	    
-	    break;
-	case GET_DHCP:
-	    if (netcfg_get_dhcp(client)) 
-		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
-	    else
-		state = QUIT;
+	    state = QUIT;  
 	    break;
 	case QUIT:
 	    switch (netcfg_activate_dhcp(client)) {

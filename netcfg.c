@@ -138,9 +138,6 @@ int main(void)
 	    break;
 
 	case GET_DHCP:
-	    if (netcfg_get_dhcp(client))
-		state = GET_METHOD;
-	    else {
 	        switch (netcfg_activate_dhcp(client)) {
                 case 0:
 		    state = QUIT;
@@ -152,7 +149,6 @@ int main(void)
 		    state = GET_STATIC;
 		    break;
 	        }
-	    }
 	    break;
 	case GET_STATIC:
 	    if (netcfg_get_static(client))

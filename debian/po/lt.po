@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-17 10:41+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
@@ -156,7 +157,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr ""
+"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -269,7 +271,8 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr ""
+"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -428,43 +431,21 @@ msgstr "Konfigūruojamas tinklas ..."
 msgid "Configure the network"
 msgstr "Tinklo konfigūravimas"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP kompiuterio vardas:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei Jūs naudojate "
-"kabelinį modemą, tai gali tekti čia nurodyti paskyros (account) numerį."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Dauguma kitų naudotojų gali palikti čia tuščią."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Ar ši informacija teisinga?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Dabartiniai tinklo konfigūravimo parametrai:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -480,25 +461,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Tinklo konfigūravimas su DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Tai gali užtrukti šiek tiek laiko."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Nerastas DHCP klientas"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas pump "
@@ -506,19 +487,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP konfigūravimo procesas bus nutrauktas."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Ar norite dar kartą bandyti tinklo konfigūravimą su DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -529,14 +510,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Tinklo konfigūravimas naudojant dinaminį adresavimą (DHCP)"
 
@@ -651,7 +632,8 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -692,3 +674,15 @@ msgstr "Statinis tinklo konfigūravimas"
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP kompiuterio vardas:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei Jūs naudojate "
+#~ "kabelinį modemą, tai gali tekti čia nurodyti paskyros (account) numerį."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Dauguma kitų naudotojų gali palikti čia tuščią."

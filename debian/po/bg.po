@@ -15,13 +15,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-22 21:07+0300\n"
 "Last-Translator: Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -80,7 +80,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"DNS сървърите се използват за търсене на имена на хостове в мрежата. Моля въведете IP адреси (не имена на хостове) на не повече от 3 DNS сървъра, разделени с интервали. Не използвайте запетайки. Първият сървър в списъка ще бъде първият, който ще се пита. Ако не искате да използвате DNS сървър, просто оставете полето празно."
+"DNS сървърите се използват за търсене на имена на хостове в мрежата. Моля "
+"въведете IP адреси (не имена на хостове) на не повече от 3 DNS сървъра, "
+"разделени с интервали. Не използвайте запетайки. Първият сървър в списъка ще "
+"бъде първият, който ще се пита. Ако не искате да използвате DNS сървър, "
+"просто оставете полето празно."
 
 #. Type: select
 #. Description
@@ -129,7 +133,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Ако има такава възможност, въведете WEP security key за безжичното устройство ${iface}. Има два начина да направите това:"
+"Ако има такава възможност, въведете WEP security key за безжичното "
+"устройство ${iface}. Има два начина да направите това:"
 
 #. Type: string
 #. Description
@@ -306,7 +311,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Безжичните мрежи са или managed, или ad-hoc. Ако използвате действителна точка на достъп от някакъв вид, Вашата мрежа е Managed. Ако друг компютър е Вашата точка на достъп (access point), тогава мрежата е ad-hoc."
+"Безжичните мрежи са или managed, или ad-hoc. Ако използвате действителна "
+"точка на достъп от някакъв вид, Вашата мрежа е Managed. Ако друг компютър е "
+"Вашата точка на достъп (access point), тогава мрежата е ad-hoc."
 
 #. Type: text
 #. Description
@@ -430,43 +437,21 @@ msgstr "Настройка на мрежата..."
 msgid "Configure the network"
 msgstr "Настройка на мрежата"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP сървър:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Може да е нужно да доставите име на DHCP сървър. Ако използвате кабелен "
-"модем, може да се наложи да предоставите номер на акаунт."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Повечето други потребители може да оставят това поле празно."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Вярна ли е тази информация?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Текущите настроени параметри на мрежата:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -482,43 +467,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Настройка на мрежата чрез DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Това може да отнеме известно време."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Няма намерен DHCP клиент"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Не беше намерен DHCP клиент. Този пакет изисква pump или dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Процесът на настройка на DHCP ще бъде прекъснат."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Искате ли да пробвате отново да настроите мрежата чрез DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -529,14 +514,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Динамична мрежова настройка (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Настройка на мрежата, използвайки динамично адресиране (DHCP)"
 
@@ -692,6 +677,19 @@ msgstr "Статична мрежова настройка"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Настройка на мрежа чрез статични адреси"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP сървър:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Може да е нужно да доставите име на DHCP сървър. Ако използвате кабелен "
+#~ "модем, може да се наложи да предоставите номер на акаунт."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Повечето други потребители може да оставят това поле празно."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Мрежова Настройка"

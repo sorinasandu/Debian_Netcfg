@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-20 04:00+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -83,11 +83,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Nimipalvelimia käytetään verkon konenimien selvittämiseen."
-"Kirjoita IP-osoitteet (ei konenimiä) korkeintaan kolmelle nimipalvelimelle "
-"välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta kysytään siinä "
-"järjestyksessä kuin syötät ne. Jos et halua käyttää mitään nimipalvelimia, "
-"voit jättää tämän kentän tyhjäksi."
+"Nimipalvelimia käytetään verkon konenimien selvittämiseen.Kirjoita IP-"
+"osoitteet (ei konenimiä) korkeintaan kolmelle nimipalvelimelle välilyönnein "
+"eroteltuna. Älä käytä pilkkuja. Palvelimilta kysytään siinä järjestyksessä "
+"kuin syötät ne. Jos et halua käyttää mitään nimipalvelimia, voit jättää "
+"tämän kentän tyhjäksi."
 
 #. Type: select
 #. Description
@@ -297,7 +297,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Runkoverkko (hallinnoitu), verkon solmujen omin päin luoma (vertaisverkko)"
+msgstr ""
+"Runkoverkko (hallinnoitu), verkon solmujen omin päin luoma (vertaisverkko)"
 
 #. Type: select
 #. Description
@@ -314,8 +315,8 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "Langattomat verkot ovat joko hallinnoituja tai verkon solmujen omin päin "
-"muodostamia (ad-hoc). Jos käytössä on tukiasema, verkko on hallinnoitu. "
-"Jos toinen tietokone on \"tukiasema\", verkko saattaa olla ad-hoc."
+"muodostamia (ad-hoc). Jos käytössä on tukiasema, verkko on hallinnoitu. Jos "
+"toinen tietokone on \"tukiasema\", verkko saattaa olla ad-hoc."
 
 #. Type: text
 #. Description
@@ -439,43 +440,21 @@ msgstr "Tehdään verkkoasetukset ..."
 msgid "Configure the network"
 msgstr "Tee verkkoasetukset"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP:n konenimi:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Sinun kenties tarvitsee syöttää DHCP-konenimi. Jos käytät kaapelimodeemia, "
-"sinun kenties tarvitsee kirjoittaa käyttäjätunnuksen numero."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Useimmiten tämän voi jättää tyhjäksi."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Ovatko nämä tiedot oikein?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Verkkoasetukset ovat nyt:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -491,43 +470,44 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Aseta verkko DHCP:lla"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Tämä voi kestää hetken aikaa."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr ""
+"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Verkkoasetusten haku automaattisesti keskeytetään"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Yritetäänkö uudestaan verkkoasetusten automaattista hakua?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -538,14 +518,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Verkkoasetusten haku automaattisesti (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Hae verkkoasetukset automaattisesti (DHCP)"
 
@@ -659,7 +639,8 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
@@ -700,6 +681,20 @@ msgstr "Pysyvät verkkoasetukset"
 msgid "Configure a network using static addressing"
 msgstr "Tee verkkoasetukset itse"
 
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP:n konenimi:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Sinun kenties tarvitsee syöttää DHCP-konenimi. Jos käytät "
+#~ "kaapelimodeemia, sinun kenties tarvitsee kirjoittaa käyttäjätunnuksen "
+#~ "numero."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Useimmiten tämän voi jättää tyhjäksi."
+
 #~ msgid "Network Configuration"
 #~ msgstr "Verkkoasetukset"
 
@@ -727,4 +722,3 @@ msgstr "Tee verkkoasetukset itse"
 #~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
 #~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
 #~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
-

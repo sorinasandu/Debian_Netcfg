@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.58\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-15 23:02+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -71,7 +71,12 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr "I DNS sono utilizzati per ritrovare un host nella rete a partire dal suo nome. Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre DNS separati da spazi, senza usare virgole. I server verranno interrogati nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è sufficiente lasciare vuoto questo campo."
+msgstr ""
+"I DNS sono utilizzati per ritrovare un host nella rete a partire dal suo "
+"nome. Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre "
+"DNS separati da spazi, senza usare virgole. I server verranno interrogati "
+"nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è "
+"sufficiente lasciare vuoto questo campo."
 
 #. Type: select
 #. Description
@@ -119,7 +124,9 @@ msgstr "Chiave WEP per il dispositivo wireless ${iface}:"
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr "Se applicabile, inserire la chiave di sicurezza WEP per il dispositivo wireless ${iface}. Ci sono due modi per farlo:"
+msgstr ""
+"Se applicabile, inserire la chiave di sicurezza WEP per il dispositivo "
+"wireless ${iface}. Ci sono due modi per farlo:"
 
 #. Type: string
 #. Description
@@ -296,7 +303,10 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
-msgstr "Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero «access point» di qualsiasi tipo allora la rete è «Managed». Se invece l'«access point» è fatto da un altro computer allora la rete è «Ad-hoc»."
+msgstr ""
+"Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero "
+"«access point» di qualsiasi tipo allora la rete è «Managed». Se invece "
+"l'«access point» è fatto da un altro computer allora la rete è «Ad-hoc»."
 
 #. Type: text
 #. Description
@@ -420,44 +430,21 @@ msgstr "Configurazione della rete in corso,"
 msgid "Configure the network"
 msgstr "Configura la rete"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Hostname DHCP:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"In alcune situazioni è necessario specificare un hostname DHCP. Se si usa un "
-"cable modem potrebbe essere necessario specificare qui il numero "
-"dell'account."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "La maggior parte degli altri utenti può lasciare il campo vuoto."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Le informazioni inserite sono corrette?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parametri di rete attualmente configurati:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -473,25 +460,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Configurazione della rete con DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "L'operazione potrebbe richiedere un po' di tempo."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Client DHCP non trovato"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Non è stato trovato alcun client DHCP. Questo pacchetto richiede pump o dhcp-"
@@ -499,19 +486,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "La configurazione con DHCP verrà terminata."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Riprovare la configurazione della rete con DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -523,14 +510,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configurazione dinamica della rete (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura la rete con indirizzamento dinamico (DHCP)"
 
@@ -686,6 +673,20 @@ msgstr "Configurazione della rete con indirizzi statici"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configura la rete usando indirizzi statici"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "Hostname DHCP:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "In alcune situazioni è necessario specificare un hostname DHCP. Se si usa "
+#~ "un cable modem potrebbe essere necessario specificare qui il numero "
+#~ "dell'account."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "La maggior parte degli altri utenti può lasciare il campo vuoto."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configurazione della rete"

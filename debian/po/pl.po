@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-16 12:09+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -315,8 +315,8 @@ msgid ""
 msgstr ""
 "Sieci bezprzewodowe s± albo zarz±dzalne albo typu ad-hoc. Je¶li u¿ywasz "
 "jakiego¶ prawdziwego punktu dostêpowego, Twoja sieæ jest zarz±dzalna. Je¶li "
-"inny komputer jest punktem dostêpowym, wtedy jest to prawdopodobnie "
-"sieæ typu Ad-hoc."
+"inny komputer jest punktem dostêpowym, wtedy jest to prawdopodobnie sieæ "
+"typu Ad-hoc."
 
 #. Type: text
 #. Description
@@ -440,43 +440,21 @@ msgstr "Konfigurowanie sieci ..."
 msgid "Configure the network"
 msgstr "Konfiguruj sieæ"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "nazwa hosta DHCP:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Mo¿liwe, ¿e musisz podaæ nazwê hosta DHCP. Je¶li korzystasz z modemu "
-"kablowego, mo¿e byæ konieczne podanie numeru dostêpowego. "
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Wiêkszo¶æ u¿ytkowników powinna pozostawiæ to pole puste."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Czy podane informacje s± prawid³owe?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Aktualnie skonfigurowane parametry sieci:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -492,43 +470,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Konfiguruj sieæ przez DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "To mo¿e chwilê potrwaæ."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Nie odnaleziono klienta DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Nie odnaleziono klienta DHCP. Ten pakiet wymaga pump lub dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Proces konfiguracji DHCP zostanie przerwany."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Czy chcesz powtórzyæ konfiguracje sieci poprzez DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -540,14 +518,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamiczna konfiguracja sieci (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Konfiguruj sieæ za pomoc± dynamicznego adresowania (DHCP)"
 
@@ -701,3 +679,16 @@ msgstr "Statyczna konfiguracja sieci"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "nazwa hosta DHCP:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Mo¿liwe, ¿e musisz podaæ nazwê hosta DHCP. Je¶li korzystasz z modemu "
+#~ "kablowego, mo¿e byæ konieczne podanie numeru dostêpowego. "
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Wiêkszo¶æ u¿ytkowników powinna pozostawiæ to pole puste."

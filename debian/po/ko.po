@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-16 23:18+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -119,7 +119,9 @@ msgstr "${iface} 무선 장치의 WEP 키:"
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr "해당된다면, ${iface} 무선 장치의 WEP 보안 키를 입력하십시오. 두 가지 방법이 있습니다:"
+msgstr ""
+"해당된다면, ${iface} 무선 장치의 WEP 보안 키를 입력하십시오. 두 가지 방법이 "
+"있습니다:"
 
 #. Type: string
 #. Description
@@ -415,43 +417,21 @@ msgstr "네트워크를 설정하는 중입니다 ..."
 msgid "Configure the network"
 msgstr "네트워크 설정"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP 호스트 이름:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"DHCP 호스트 이름을 입력해야 할 수도 있습니다. 케이블 모뎀을 사용한다면, 여기"
-"에 계정 번호를 지정해야 할 수도 있습니다."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "대부분의 사용자들은 이 칸은 비워두면 됩니다."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "이 정보가 맞습니까?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "현재 설정된 네트워크 인수:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -467,25 +447,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "DHCP로 네트워크를 설정하는 중입니다"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "시간이 좀 걸릴 수도 있습니다."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "DHCP 클라이언트를 찾을 수 없습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP 클라이언트를 찾을 수 없습니다. 이 꾸러미는 pump나 dhcp-client가 필요합니"
@@ -493,19 +473,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 설정 단계가 중지되었습니다."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "DHCP 네트워크 설정을 다시 시도하시겠습니까?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -516,14 +496,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "동적 네트워크 설정 (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "동적 주소를 사용해 네트워크 설정 (DHCP)"
 
@@ -674,6 +654,19 @@ msgstr "고정 네트워크 설정"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "고정 주소를 사용해 네트워크를 설정합니다"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP 호스트 이름:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "DHCP 호스트 이름을 입력해야 할 수도 있습니다. 케이블 모뎀을 사용한다면, 여"
+#~ "기에 계정 번호를 지정해야 할 수도 있습니다."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "대부분의 사용자들은 이 칸은 비워두면 됩니다."
 
 #~ msgid "Network Configuration"
 #~ msgstr "네트워크 설정"

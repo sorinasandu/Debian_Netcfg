@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-17 19:15+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
@@ -77,8 +77,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte geben "
-"Sie die IP Adresse (nicht die Hostnamen) von bis zu drei Nameservern "
+"Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte "
+"geben Sie die IP Adresse (nicht die Hostnamen) von bis zu drei Nameservern "
 "getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der erste Server "
 "in der Liste wird als erstes abgefragt. Wenn Sie keine Nameserver benutzen "
 "wollen, lassen Sie diese Feld bitte einfach leer."
@@ -130,8 +130,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Falls notwendig, geben Sie den WEP-Schlüssel für das Gerät "
-"${iface} an. Dazu gibt es zwei Möglichkeiten:"
+"Falls notwendig, geben Sie den WEP-Schlüssel für das Gerät ${iface} an. Dazu "
+"gibt es zwei Möglichkeiten:"
 
 #. Type: string
 #. Description
@@ -309,9 +309,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Drahtlose Netzwerke sind entweder \"managed\" oder \"ad-hoc\". Wenn Sie einen "
-"echten Access Point benutzen, ist Ihr Netzwerk \"managed\". Wenn ein anderer "
-"Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich \"ad-hoc\"."
+"Drahtlose Netzwerke sind entweder \"managed\" oder \"ad-hoc\". Wenn Sie "
+"einen echten Access Point benutzen, ist Ihr Netzwerk \"managed\". Wenn ein "
+"anderer Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich "
+"\"ad-hoc\"."
 
 #. Type: text
 #. Description
@@ -435,44 +436,21 @@ msgstr "Konfiguriere das Netzwerk ..."
 msgid "Configure the network"
 msgstr "Netzwerk einrichten"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP Hostname:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
-"selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
-"besitzen, muss hier oft eine Benutzernummer angegeben werden."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Sind diese Informationen richtig?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Gegenwärtig konfigurierte Netzwerk-Parameter:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -488,43 +466,44 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Konfiguriere das Netzwerk mit DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Dies kann einige Zeit dauern."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Kein DHCP-Client gefunden"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Der DHCP-Konfigurationsprozess wird abgebrochen."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Möchten Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -536,16 +515,17 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -660,7 +640,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -700,3 +681,16 @@ msgstr "Statische Netzwerkkonfiguration"
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP Hostname:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
+#~ "selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein "
+#~ "Kabelmodem besitzen, muss hier oft eine Benutzernummer angegeben werden."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."

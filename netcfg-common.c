@@ -55,7 +55,6 @@ volatile int dhcp_exit_status = -1; /* failed */
 /* network config */
 char *interface = NULL;
 char *hostname = NULL;
-char *dhcp_hostname = NULL;
 char *domain = NULL;
 struct in_addr ipaddress = { 0 };
 struct in_addr old_ipaddress = { 0 };
@@ -1007,27 +1006,7 @@ int netcfg_get_static(struct debconfclient *client)
 }
 
 
-static int netcfg_get_dhcp_hostname(struct debconfclient *client, char **dhcp_hostname)
-{
-    int ret;
-
-    debconf_input(client, "low", "netcfg/dhcp_hostname");
-    ret = debconf_go(client);
-    if (ret == 30)
-        return ret;
-    if (*dhcp_hostname) {
-        free(*dhcp_hostname);
-        *dhcp_hostname = NULL;
-    }
-    debconf_get(client, "netcfg/dhcp_hostname");
-
-    if (strcmp (client->value, "") != 0)
-        *dhcp_hostname = strdup(client->value);
-    return 0;
-}
-
-
-static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
+static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
 {
     FILE *fp;
 
@@ -1037,8 +1016,6 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
         if (!iface_is_hotpluggable(iface))
             fprintf(fp, "auto %s\n", iface);
         fprintf(fp, "iface %s inet dhcp\n", iface);
-        if (host)
-            fprintf(fp, "\thostname %s\n", host);
 	if (is_wireless_iface(iface))
 	{
 	  fprintf(fp, "\twireless_mode %s\n",
@@ -1097,18 +1074,14 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     /* get dhcp lease */
     switch (dhcp_client) {
     case PUMP:
-        snprintf(buf, sizeof(buf), "pump -i %s", interface);
-        if (dhcp_hostname)
-            di_snprintfcat(buf, sizeof(buf), " -h %s",
-                           dhcp_hostname);
+        snprintf(buf, sizeof(buf), "pump -i %s -h %s", interface, hostname);
         break;
 
     case DHCLIENT:
 	/* First, set up dhclient.conf */
 	if ((dc = file_open(DHCLIENT_CONF, "w")))
 	{
-	  fprintf(dc, "send host-name %s\n",
-	      dhcp_hostname ? dhcp_hostname : hostname);
+	  fprintf(dc, "send host-name %s\n", hostname);
 	  fclose(dc);
 	}
         snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
@@ -1116,24 +1089,16 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
     case DHCLIENT3:
 	/* Different place.. */
-	if (access("/etc/dhcp3", F_OK))
-	  mkdir("/etc/dhcp3", 0775);
-	
 	if ((dc = file_open(DHCLIENT3_CONF, "w")))
 	{
-	  fprintf(dc, "send host-name %s\n",
-	      dhcp_hostname ? dhcp_hostname : hostname);
+	  fprintf(dc, "send host-name %s\n", hostname);
 	  fclose(dc);
 	}
 	snprintf(buf, sizeof(buf), "dhclient %s", interface);
 	break;
 
     case UDHCPC:
-        snprintf(buf, sizeof(buf), "udhcpc -i %s -n",
-                 interface);
-        if (dhcp_hostname)
-            di_snprintfcat(buf, sizeof(buf), " -H %s",
-                           dhcp_hostname);
+        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", hostname, interface);
         break;
     }
 
@@ -1174,7 +1139,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
             /* write configuration */
             netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-            netcfg_write_dhcp("40netcfg", interface, dhcp_hostname);
+            netcfg_write_dhcp("40netcfg", interface);
 
             return 0;
         }
@@ -1193,25 +1158,6 @@ int netcfg_activate_dhcp(struct debconfclient *client)
         kill(pid, SIGTERM);
     }
     return 1;
-}
-
-int netcfg_get_dhcp(struct debconfclient *client) {
-
-    enum { BACKUP, GET_DHCP_HOSTNAME, QUIT } state = GET_DHCP_HOSTNAME;
-
-    while (1) {
-        switch (state) {
-        case BACKUP:
-            return 10; /* Back to main */
-        case GET_DHCP_HOSTNAME:
-            state = netcfg_get_dhcp_hostname(client, &dhcp_hostname) ?
-                BACKUP : QUIT;
-            break;
-        case QUIT:
-            return 0;
-        }
-    }
-    return 0;
 }
 
 int is_wireless_iface (const char* iface)

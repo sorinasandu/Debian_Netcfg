@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-03-30 21:16+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -445,43 +445,21 @@ msgstr "Yn cyflunio'r rhwydwaith ..."
 msgid "Configure the network"
 msgstr "Cyflunio'r rhwydwaith"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Enw gwesteiwr DHCP:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Efalli bydd rhaid i chi ddarparu enw gwesteiwr DHCP. Os ydych chi'n "
-"defnyddio modem cêbl, efallai bydd rhaid i chi benodi rhif cyfrif yma."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Gall y rhan fwyaf o ddefnyddwyr eraill adael hyn yn wag."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Ydy'r wybodaeth hyn yn gywir?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Paramedrau rhwydwatih cyfluniedig cyfredol:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -497,43 +475,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Yn cyflunio'r rhwydwaith efo DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Gall hyn gymryd peth amser."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Ni chanfuwyd cleient DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Ni chanfuwyd cleient DHCP. Mae'r pecyn yma angen pump neu dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Caiff y proses cyfluniad DHCP ei erthylu."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "A hoffech ailgeisio cyfluniad rhwydwaith DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -544,14 +522,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Cyflunio'r rhwydwaith gan ddefnuddio cyfeiriadaeth deinamig (DHCP)"
 
@@ -709,6 +687,19 @@ msgstr "Cyfluniad rhwydwaith statig"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "Enw gwesteiwr DHCP:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Efalli bydd rhaid i chi ddarparu enw gwesteiwr DHCP. Os ydych chi'n "
+#~ "defnyddio modem cêbl, efallai bydd rhaid i chi benodi rhif cyfrif yma."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Gall y rhan fwyaf o ddefnyddwyr eraill adael hyn yn wag."
 
 #~ msgid "Network Configuration"
 #~ msgstr "Cyfluniad Rhwydwaith"

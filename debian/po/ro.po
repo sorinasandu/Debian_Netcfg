@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-05-02 20:48+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -84,10 +84,10 @@ msgid ""
 "this field blank."
 msgstr ""
 "Serverele de nume sunt folosite pentru a căuta numele de calculatoare din "
-"reţea. Vă rugăm să introduceţi adresele de IP (nu numele de calculator) a cel "
-"mult 3 servere de nume, sparate prin spaţii. Primul server din listă va fi "
-"primul chestionat. Dacă nu doriţi să utilizaţi nici un server de nume, lăsaţi "
-"acest câmp liber."
+"reţea. Vă rugăm să introduceţi adresele de IP (nu numele de calculator) a "
+"cel mult 3 servere de nume, sparate prin spaţii. Primul server din listă va "
+"fi primul chestionat. Dacă nu doriţi să utilizaţi nici un server de nume, "
+"lăsaţi acest câmp liber."
 
 #. Type: select
 #. Description
@@ -442,44 +442,21 @@ msgstr "Se configurează reţeaua ..."
 msgid "Configure the network"
 msgstr "Configurează reţeaua"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Numele de calculator DHCP:"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"S-ar putea să trebuiască să introduceţi un nume de calculator (DHCP). Dacă "
-"folosiţi modem prin cablu s-ar putea să trebuiască să specificaţi un număr "
-"de cont aici."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "Majoritatea utilizatorilor pot lăsa acest câmp liber."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Este această informaţie corectă?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Parametrii de reţea configuraţi în prezent:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -495,25 +472,25 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Se configurează reţeaua cu DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Aceasta poate dura ceva timp."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Nu s-a găsit client DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nu s-a găsit nici un client DHCP. Acest pachet are nevoie de pump sau de "
@@ -521,19 +498,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Procesul de configurare DHCP va fi abandonat."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Doriţi să reîncecaţi configurarea reţelei prin DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -545,14 +522,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configurare dinamică a reţelei (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurează reţeaua dinamic folosind adresare dinamică (DHCP)"
 
@@ -669,7 +646,8 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -709,6 +687,19 @@ msgstr "Configuraţie de reţea statică"
 msgid "Configure a network using static addressing"
 msgstr "Configurează reţeaua folosind adresare statică"
 
+#~ msgid "DHCP hostname:"
+#~ msgstr "Numele de calculator DHCP:"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "S-ar putea să trebuiască să introduceţi un nume de calculator (DHCP). "
+#~ "Dacă folosiţi modem prin cablu s-ar putea să trebuiască să specificaţi un "
+#~ "număr de cont aici."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "Majoritatea utilizatorilor pot lăsa acest câmp liber."
+
 #~ msgid "Network Configuration"
 #~ msgstr "Configuraţia reţelei"
-

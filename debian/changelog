@@ -13,7 +13,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Bump the DHCP wait to 15 seconds. The magic number seems to be just
       over 10 for me. (Closes: #244819)
     - Ask for a hostname at the very beginning. This will be the DHCP
-      hostname for netcfg and netcfg-dhcp (sooner or later.)
+      hostname for netcfg and netcfg-dhcp.
+    - As such, rip out netcfg_get_dhcp and netcfg_get_dhcp_hostname.
     - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's
       rant on debian-boot.
 

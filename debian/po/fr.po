@@ -5,7 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-10 09:15-0700\n"
 "PO-Revision-Date: 2004-04-15 06:37+0100\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -427,43 +428,21 @@ msgstr "Configuration du réseau..."
 msgid "Configure the network"
 msgstr "Configurer le réseau"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "Nom de machine DHCP :"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"Parfois, vous devez donner un nom de machine DHCP. Si vous utilisez un modem "
-"câble, vous avez peut-être besoin d'indiquer un numéro de compte."
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "La plupart des autres utilisateurs peuvent laisser ce champ vide."
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "Les informations suivantes sont-elles correctes ?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "Paramètres réseau actuels :"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -479,43 +458,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "Configuration du réseau avec DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "Cette opération peut prendre quelques minutes."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "Aucun client DHCP trouvé"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Aucun client DHCP trouvé. Ce paquet demande pump ou dhcp-client."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "Le processus de configuration DHCP va être interrompu."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid "Do you want to retry DHCP network configuration?"
 msgstr "Voulez-vous refaire la configuration du réseau avec DHCP ?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:31
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -527,14 +506,14 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:38
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configuration automatique du réseau (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:43
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurer automatiquement le réseau (DHCP)"
 
@@ -630,10 +609,10 @@ msgstr ""
 "La passerelle est une adresse IP (quatre nombres séparés par des points) qui "
 "indique la machine qui joue le rôle de routeur ; cette machine est aussi "
 "appelée le routeur par défaut. Tout le trafic qui sort de votre réseau (p. "
-"ex. vers l'Internet) passe par ce routeur. Dans quelques rares circonstances, "
-"vous n'avez pas besoin de routeur. Si c'est le cas, vous pouvez laisser ce "
-"champ vide. Consultez votre administrateur si vous ne connaissez pas la "
-"réponse correcte à cette question."
+"ex. vers l'Internet) passe par ce routeur. Dans quelques rares "
+"circonstances, vous n'avez pas besoin de routeur. Si c'est le cas, vous "
+"pouvez laisser ce champ vide. Consultez votre administrateur si vous ne "
+"connaissez pas la réponse correcte à cette question."
 
 #. Type: error
 #. Description
@@ -691,3 +670,16 @@ msgstr "Configuration manuelle du réseau"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "Nom de machine DHCP :"
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "Parfois, vous devez donner un nom de machine DHCP. Si vous utilisez un "
+#~ "modem câble, vous avez peut-être besoin d'indiquer un numéro de compte."
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "La plupart des autres utilisateurs peuvent laisser ce champ vide."
