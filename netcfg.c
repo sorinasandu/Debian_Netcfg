@@ -123,12 +123,20 @@ int main(void)
 	      di_exec_shell_log("apt-install wireless-tools");
 	      requested_wireless_tools = 1;
 	    }
-	    if (netcfg_wireless_set_essid (client, interface) == 30
-		|| netcfg_wireless_set_wep (client, interface) == 30)
+	    /* Must make sure WEP question is always asked, independent
+	     * of whether set essid question was asked. */
+	    if (netcfg_wireless_set_essid (client, interface) == GO_BACK)
 	    {
 	      state = BACKUP;
 	      break;
 	    }
+            
+	    if (netcfg_wireless_set_wep (client, interface) == GO_BACK)
+	    {
+	      state = BACKUP;
+	      break;
+	    }
+	    
 	    state = GET_METHOD;
 	    break;
 	case QUIT:

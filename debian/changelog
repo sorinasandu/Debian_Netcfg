@@ -7,11 +7,14 @@ netcfg (0.57) UNRELEASED; urgency=low
       instead of using well tested default functions?
     - Only recalculate gateway if ipaddress or netmask is changed.
     - Never recalculate nameserver.
+  * Joshua Kwan
+    - Make the question about adhoc/managed actually do something.
+    - Make sure the WEP question, priority high, always gets asked.
   * Translators: do not modify this changelog to record changes you make to
     po files. A record of your contributions will be added to the changelog
     at package release time by the output-l10n-changes program.
 
- -- Jure Cuhalev <gandalf@a1200.rozica.com>  Mon, 15 Mar 2004 00:40:00 +0100
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 16 Mar 2004 21:17:25 -0800
 
 netcfg (0.56) unstable; urgency=low
 

@@ -18,6 +18,8 @@
 
 #define _GNU_SOURCE
 
+enum { NOT_ASKED = 30, GO_BACK };
+
 extern int netcfg_progress_displayed;
 extern int wfd;
 

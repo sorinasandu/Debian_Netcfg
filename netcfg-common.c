@@ -673,6 +673,9 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 	{
 	  if (essid != NULL)
 	    fprintf(fp, "\twireless_essid %s\n", essid);
+	  else /* Some cards need an explicit set to 'any' */
+	    fprintf(fp, "\twireless_essid any\n");
+
 	  if (wepkey != NULL)
 	    fprintf(fp, "\twireless_key %s\n", wepkey);
 	}
@@ -1127,29 +1130,36 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
   debconf_subst(client, "netcfg/wireless_adhoc_managed", "iface", iface);
 
-  ret = my_debconf_input(client, "low", "netcfg/wireless_adhoc_managed", &tf);
+  ret = debconf_input(client, "low", "netcfg/wireless_adhoc_managed");
 
   if (ret == 30)
-    return ret;
+    return NOT_ASKED;
 
-  if (!strcmp(tf, "Ad-hoc network (Peer to peer)"))
+  if (debconf_go(client))
+    return GO_BACK;
+
+  debconf_get(client, "netcfg/wireless_adhoc_managed");
+
+  if (!strcmp(client->value, "Ad-hoc network (Peer to peer)"))
     mode = ADHOC;
 
-  tf = NULL;
+  wconf.has_mode = 1;
+  wconf.mode = (mode == ADHOC) ? 1 : 2;
   
-  ret = my_debconf_input(client, "low", "netcfg/wireless_essid", &tf);
-
-  if (ret == 30)
-    return ret;
+  debconf_input(client, "low", "netcfg/wireless_essid");
+  
+  if (debconf_go(client) == 30)
+    return GO_BACK;
+  
+  debconf_get(client, "netcfg/wireless_essid");
+  tf = client->value;
   
   /* question not asked or user doesn't care or we're successfully associated */
-  if (!empty_str(wconf.essid) || empty_str(tf)) 
+  if (!empty_str(wconf.essid) || empty_str(client->value)) 
   {
-    /* Default to mode managed, AP any */
+    /* Default to any AP */
     wconf.essid[0] = '\0';
     wconf.essid_on = 0;
-    wconf.has_mode = 1;
-    wconf.mode = 2; /* MANAGED */
 
     iw_set_basic_config (wfd, iface, &wconf);
     
@@ -1170,8 +1180,15 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
       debconf_input(client, "high", "netcfg/invalid_essid");
       debconf_go(client);
       
-      ret = my_debconf_input(client, "low", "netcfg/wireless_essid", &user_essid);
+      ret = debconf_input(client, "low", "netcfg/wireless_essid");
+      /* we asked the question once, why can't we ask it again? */
       assert (ret != 30);
+      
+      if (debconf_go(client) == 30) /* well, we did, but he wants to go back */
+	return GO_BACK;
+
+      debconf_get(client, "netcfg/wireless_essid");
+      user_essid = client->value;
     }
 
     essid = strdup (user_essid);
