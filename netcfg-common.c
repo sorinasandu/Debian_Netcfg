@@ -493,9 +493,9 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
     }
 }
 
-static int is_valid_ip (char* ipaddr, short is_netmask)
+int is_valid_ip (char* ipaddr, short is_netmask)
 {
-  int error = 1, nums = 0;
+  int ok = 1, nums = 0;
   
   if (!empty_str(ipaddr))
   {
@@ -509,12 +509,12 @@ static int is_valid_ip (char* ipaddr, short is_netmask)
       spaz = atoi(tok);
       if (((!is_netmask && spaz > 0) || (is_netmask && spaz >= 0)) && spaz <= 255)
       {
-	error = 0;
+	ok = 1;
 	nums++;
       }
       else
       {
-	error = 1;
+	ok = 0;
 	break;
       }
 
@@ -523,9 +523,9 @@ static int is_valid_ip (char* ipaddr, short is_netmask)
   }
 
   if (nums != 4)
-    error = 1;
-
-  return error;
+    ok = 0;
+  
+  return ok;
 }
 
 int netcfg_get_ipaddress(struct debconfclient *client)
