@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-26 03:36+0200\n"
+"POT-Creation-Date: 2004-08-31 21:51-0700\n"
 "PO-Revision-Date: 2004-08-23 17:10+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Debian L10n Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -285,39 +285,21 @@ msgstr ""
 "targeta de xarxa, si teniu una. Per fer això, torneu enrere al pas de "
 "detecció de maquinari de xarxa."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-#, fuzzy
-msgid "Configure the network statically?"
-msgstr "Configura el dispositiu de xarxa"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid ""
-"${IFACE} does not seem to be connected to any sort of network. This could be "
-"due to a missing network cable or network adapter malfunction. You can "
-"either forego configuring the network until you reboot into Debian and use "
-"the etherconf utility, or configure the network statically. You can also go "
-"back and choose a different interface."
-msgstr ""
-
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Xarxa amb infraestructura (gestionada), Xarxa «ad-hoc» (Punt a punt)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "Tipus de xarxa inalàmbrica:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -330,123 +312,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:127
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "Configuració de xarxa inalàmbrica"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "S'estan cercant els punts d'accés inalàmbrics..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:131
 msgid "<none>"
 msgstr "<cap>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:135
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet Wireless (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:139
 msgid "wireless"
 msgstr "wireless"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o ethernet ràpida"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP per línia sèrie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP per port paral·lel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt de XDSI"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hipersòcol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Vehicle de comunicació entre usuaris"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interfície desconeguda"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:206
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "S'està configurant la xarxa..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:211
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configura la xarxa"
 
@@ -757,6 +739,8 @@ msgstr "És aquesta informació correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Paràmetres de la xarxa actualment configurada:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -779,3 +763,7 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
+
+#, fuzzy
+#~ msgid "Configure the network statically?"
+#~ msgstr "Configura el dispositiu de xarxa"

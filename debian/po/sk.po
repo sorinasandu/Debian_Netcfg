@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-26 03:36+0200\n"
+"POT-Creation-Date: 2004-08-31 21:51-0700\n"
 "PO-Revision-Date: 2004-08-30 16:22+0200\n"
 "Last-Translator:  Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team:  Slovak <sk-i18n@lists.linux.sk>\n"
@@ -279,43 +279,21 @@ msgstr ""
 "Ak máte sieťovú kartu, možno pre ňu potrebujete načítať špecifický modul. "
 "Môžete to urobiť pri návrate späť do kroku rozpoznania sieťových zariadení."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid "Configure the network statically?"
-msgstr "Nastaviť sieť staticky?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid ""
-"${IFACE} does not seem to be connected to any sort of network. This could be "
-"due to a missing network cable or network adapter malfunction. You can "
-"either forego configuring the network until you reboot into Debian and use "
-"the etherconf utility, or configure the network statically. You can also go "
-"back and choose a different interface."
-msgstr ""
-"Zdá sa, že ${IFACE} nie je pripojené k žiadnej sieti. Môže to byť spôsobené "
-"chýbajúcim sieťovým káblom alebo nefunkčnou sieťovou kartou. Teraz sa musíte "
-"zaobísť bez siete, pričom ju neskôr nastavíte až v nainštalovanom systéme "
-"pomocou programu etherconf, alebo ju budete musieť nastaviť staticky. Tiež "
-"sa môžete vrátiť späť a zvoliť si iné sieťové rozhranie."
-
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Riadená (štruktúrovaná) sieť, Náhodná (peer to peer) sieť"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "Typ bezdrôtovej siete:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -327,123 +305,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:127
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "Nastavenie bezdrôtovej siete"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "Hľadajú sa bezdrôtové prístupové body ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:131
 msgid "<none>"
 msgstr "<nič>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:135
 msgid "Wireless ethernet (802.11x)"
 msgstr "Bezdrôtový ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:139
 msgid "wireless"
 msgstr "bezdrôtový"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet alebo Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Skutočný channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Neznáme rozhranie"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:206
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Nastavujem sieť ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:211
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Nastavenie siete"
 
@@ -745,6 +723,8 @@ msgstr "Sú tieto informácie správne?"
 msgid "Currently configured network parameters:"
 msgstr "Aktuálne nastavené parametre siete:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -767,3 +747,20 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavenie siete so statickými adresami"
+
+#~ msgid "Configure the network statically?"
+#~ msgstr "Nastaviť sieť staticky?"
+
+#~ msgid ""
+#~ "${IFACE} does not seem to be connected to any sort of network. This could "
+#~ "be due to a missing network cable or network adapter malfunction. You can "
+#~ "either forego configuring the network until you reboot into Debian and "
+#~ "use the etherconf utility, or configure the network statically. You can "
+#~ "also go back and choose a different interface."
+#~ msgstr ""
+#~ "Zdá sa, že ${IFACE} nie je pripojené k žiadnej sieti. Môže to byť "
+#~ "spôsobené chýbajúcim sieťovým káblom alebo nefunkčnou sieťovou kartou. "
+#~ "Teraz sa musíte zaobísť bez siete, pričom ju neskôr nastavíte až v "
+#~ "nainštalovanom systéme pomocou programu etherconf, alebo ju budete musieť "
+#~ "nastaviť staticky. Tiež sa môžete vrátiť späť a zvoliť si iné sieťové "
+#~ "rozhranie."

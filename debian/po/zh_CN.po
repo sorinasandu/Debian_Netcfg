@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
+"POT-Creation-Date: 2004-08-31 21:51-0700\n"
 "PO-Revision-Date: 2004-08-28 03:11+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -274,41 +274,21 @@ msgstr ""
 "如果您的网卡使用其特有的模块，您可能还需要加载它。要完成此任务，请返回到网络"
 "硬件探测步骤。"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid "Configure the network statically?"
-msgstr "进行静态网络设置吗？"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid ""
-"${IFACE} does not seem to be connected to any sort of network. This could be "
-"due to a missing network cable or network adapter malfunction. You can "
-"either forego configuring the network until you reboot into Debian and use "
-"the etherconf utility, or configure the network statically. You can also go "
-"back and choose a different interface."
-msgstr ""
-"${IFACE} 并未连接到任何网络。这可能是由网线脱落或网卡故障造成的。您在此可以不"
-"配置网络，等到重启进入 Debian 后再使用 etherconf 工具进行设定，或者进行静态网"
-"络设置。当然，您也可以返回并选择其它的网络接口。"
-
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "共用 (Managed) 网络, Ad-hoc 网络 (点对点)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "无线网络类别："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -320,123 +300,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:127
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "无线网络设置"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "正在搜索无线网络接入点(AP) ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:131
 msgid "<none>"
 msgstr "<无>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:135
 msgid "Wireless ethernet (802.11x)"
 msgstr "无线局域网(802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:139
 msgid "wireless"
 msgstr "无线网络"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "以太网或高速以太网"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "令牌环"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "串行 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "并行口 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv4-in-IPv6 "
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "真实的 channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "未知接口"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:206
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "正在设置网络 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:211
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "网络设置"
 
@@ -751,6 +731,20 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
+
+#~ msgid "Configure the network statically?"
+#~ msgstr "进行静态网络设置吗？"
+
+#~ msgid ""
+#~ "${IFACE} does not seem to be connected to any sort of network. This could "
+#~ "be due to a missing network cable or network adapter malfunction. You can "
+#~ "either forego configuring the network until you reboot into Debian and "
+#~ "use the etherconf utility, or configure the network statically. You can "
+#~ "also go back and choose a different interface."
+#~ msgstr ""
+#~ "${IFACE} 并未连接到任何网络。这可能是由网线脱落或网卡故障造成的。您在此可"
+#~ "以不配置网络，等到重启进入 Debian 后再使用 etherconf 工具进行设定，或者进"
+#~ "行静态网络设置。当然，您也可以返回并选择其它的网络接口。"
 
 #, fuzzy
 #~ msgid "Continue without configuring the network?"

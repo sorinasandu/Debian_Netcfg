@@ -103,16 +103,6 @@ _Description: No network interfaces detected
  You may need to load a specific module for your network card, if you have
  one. For this, go back to the network hardware detection step.
 
-Template: netcfg/continue_configure_static
-Type: boolean
-Default: false
-_Description: Configure the network statically?
- ${IFACE} does not seem to be connected to any sort of network. This could be
- due to a missing network cable or network adapter malfunction. You can either
- forego configuring the network until you reboot into Debian and use the
- etherconf utility, or configure the network statically. You can also go back
- and choose a different interface.
-
 Template: netcfg/wireless_adhoc_managed
 Type: select
 Default: Infrastructure (Managed) network

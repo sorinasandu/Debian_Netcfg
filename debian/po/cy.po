@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-26 03:36+0200\n"
+"POT-Creation-Date: 2004-08-31 21:51-0700\n"
 "PO-Revision-Date: 2004-08-27 17:13+0200\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -285,40 +285,22 @@ msgstr ""
 "rhwydwaith, os oes un gennych. Ar gyfer hyn, ewch yn ôl i'r cam canfod "
 "caledwedd rhwydwaith."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-#, fuzzy
-msgid "Configure the network statically?"
-msgstr "Cyflunio'r rhwydwaith â llaw"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid ""
-"${IFACE} does not seem to be connected to any sort of network. This could be "
-"due to a missing network cable or network adapter malfunction. You can "
-"either forego configuring the network until you reboot into Debian and use "
-"the etherconf utility, or configure the network statically. You can also go "
-"back and choose a different interface."
-msgstr ""
-
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 "Rhwydwaith is-strwythur (Rheoledig), Rhwydwaith ad-hoc (Cydradd-at-Gydradd)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "Math rhwydwaith diwifren:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -331,123 +313,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:127
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "Cyfluniad rhwydwaith diwifren"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "Yn chwilio am bwyntiau mynediad diwifren ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:131
 msgid "<none>"
 msgstr "<dim>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:135
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet diwifren (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:139
 msgid "wireless"
 msgstr "diwifren"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet neu Ethernet Cyflym"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP Llinell Cyfresol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP Porth Paralel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Pwynt-i-Bwynt"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-yn-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol Pwynt-i-Bwynt ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Sianel-i-sianel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Sianel-i-sianel go iawn"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Cerbyd cyfathrebu rhyng-ddefnyddiwr"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Rhyngwyneb anhysbys"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:206
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Yn cyflunio'r rhwydwaith ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:211
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Cyflunio'r rhwydwaith"
 
@@ -756,6 +738,8 @@ msgstr "Ydy'r wybodaeth hyn yn gywir?"
 msgid "Currently configured network parameters:"
 msgstr "Paramedrau rhwydwatih cyfluniedig cyfredol:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -778,3 +762,7 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
+
+#, fuzzy
+#~ msgid "Configure the network statically?"
+#~ msgstr "Cyflunio'r rhwydwaith â llaw"

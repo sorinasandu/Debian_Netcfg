@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
+"POT-Creation-Date: 2004-08-31 21:51-0700\n"
 "PO-Revision-Date: 2004-08-24 22:15+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -331,44 +331,21 @@ msgstr ""
 "geladen module. Om deze module te laden dient u terug te gaan naar de "
 "automatische netwerk-hardwareherkenning."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid "Configure the network statically?"
-msgstr "Wilt u het netwerk handmatig configureren?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-common.templates:109
-msgid ""
-"${IFACE} does not seem to be connected to any sort of network. This could be "
-"due to a missing network cable or network adapter malfunction. You can "
-"either forego configuring the network until you reboot into Debian and use "
-"the etherconf utility, or configure the network statically. You can also go "
-"back and choose a different interface."
-msgstr ""
-"Het lijkt erop dat ${IFACE} niet verbonden is met een netwerk. Mogelijk is "
-"dit het gevolg van een ontbrekende of loszittende netwerkkabel, of van een "
-"stukke netwerkinterface.  U kunt het instellen van het netwerk of voorlopig "
-"overslaan en na de herstart naar uw nieuw Debian-systeem het etherconf-"
-"hulpprogramma gebruiken, of u kunt het netwerk statisch instellen. U kunt "
-"ook terugkeren en een andere netwerkinterface kiezen."
-
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Infrastructuur netwerk (Managed), Ad-hoc netwerk (Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
 msgstr "Soort draadloos netwerk:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:110
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -381,19 +358,19 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:127
+#: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
 msgstr "'Draadloos netwerk'-configuratie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
 msgstr "Er wordt gezocht naar draadloze toegangspunten ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:131
 msgid "<none>"
 msgstr "<geen>"
 
@@ -401,7 +378,7 @@ msgstr "<geen>"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:135
 msgid "Wireless ethernet (802.11x)"
 msgstr "Draadloos ethernet (802.11x)"
 
@@ -409,85 +386,85 @@ msgstr "Draadloos ethernet (802.11x)"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:139
 msgid "wireless"
 msgstr "draadloos"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet of Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "Seriële-lijn IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "Parallelle-poort IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Punt-naar-punt-protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN punt-naar-punt-protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Kanaal-naar-kanaal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Echte kanaal-naar-kanaal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Onderling communicatiemiddel voor gebruikers"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Onbekend netwerkapparaat"
 
@@ -497,14 +474,14 @@ msgstr "Onbekend netwerkapparaat"
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:206
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Netwerk wordt geconfigureerd ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:211
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Het netwerk configureren"
 
@@ -849,3 +826,20 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Netwerk instellen met statische adressen"
+
+#~ msgid "Configure the network statically?"
+#~ msgstr "Wilt u het netwerk handmatig configureren?"
+
+#~ msgid ""
+#~ "${IFACE} does not seem to be connected to any sort of network. This could "
+#~ "be due to a missing network cable or network adapter malfunction. You can "
+#~ "either forego configuring the network until you reboot into Debian and "
+#~ "use the etherconf utility, or configure the network statically. You can "
+#~ "also go back and choose a different interface."
+#~ msgstr ""
+#~ "Het lijkt erop dat ${IFACE} niet verbonden is met een netwerk. Mogelijk "
+#~ "is dit het gevolg van een ontbrekende of loszittende netwerkkabel, of van "
+#~ "een stukke netwerkinterface.  U kunt het instellen van het netwerk of "
+#~ "voorlopig overslaan en na de herstart naar uw nieuw Debian-systeem het "
+#~ "etherconf-hulpprogramma gebruiken, of u kunt het netwerk statisch "
+#~ "instellen. U kunt ook terugkeren en een andere netwerkinterface kiezen."

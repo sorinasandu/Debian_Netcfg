@@ -126,5 +126,5 @@ extern void parse_args (int argc, char** argv);
 extern void open_sockets (void);
 extern void reap_old_files (void);
 
-extern void netcfg_rewrite_resolv (char*, struct in_addr *);
+extern int netcfg_write_resolv (char*, struct in_addr *);
 #endif /* _NETCFG_H_ */

@@ -3,8 +3,14 @@ netcfg (1.02) UNRELEASED; urgency=low
   * Colin Watson
     - Ask netcfg/get_nameservers at priority critical; if you're doing
       static network configuration, you probably need to be asked this.
+  * Joshua Kwan
+    - Rip out mii-diag support. Incidentally, this closes the 'Go Back'
+      bugs regarding a template that now no longer exists.
+      (Closes: #269081, #269236)
+    - Code consolidation - don't replicate the code that writes resolv.conf
+      twice.
 
- -- Colin Watson <cjwatson@debian.org>  Fri, 27 Aug 2004 16:41:41 +0100
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 31 Aug 2004 21:52:12 -0700
 
 netcfg (1.01) unstable; urgency=medium
 

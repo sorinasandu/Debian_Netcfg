@@ -299,17 +299,7 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
     } else
         goto error;
 
-    if ((fp = file_open(RESOLV_FILE, "w"))) {
-        int i = 0;
-        if (domain && !empty_str(domain))
-            fprintf(fp, "search %s\n", domain);
-
-        while (nameservers[i].s_addr)
-            fprintf(fp, "nameserver %s\n",
-                    inet_ntop (AF_INET, &nameservers[i++], ptr1, sizeof (ptr1)));
-
-        fclose(fp);
-    } else
+    if (netcfg_write_resolv(domain, nameservers))
 	goto error;
 
     return 0;
@@ -317,7 +307,7 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
     return -1;
 }
 
-void netcfg_rewrite_resolv (char* domain, struct in_addr* nameservers)
+int netcfg_write_resolv (char* domain, struct in_addr* nameservers)
 {
   FILE* fp = NULL;
   char ptr1[INET_ADDRSTRLEN];
@@ -332,7 +322,10 @@ void netcfg_rewrite_resolv (char* domain, struct in_addr* nameservers)
           inet_ntop (AF_INET, &nameservers[i++], ptr1, sizeof (ptr1)));
 
     fclose(fp);
+    return 0;
   }
+  else
+    return 1;
 }
 
 int netcfg_activate_static(struct debconfclient *client)
@@ -515,7 +508,7 @@ int netcfg_get_static(struct debconfclient *client)
             if (strstr(client->value, "true"))
             {
               state = GET_HOSTNAME;
-              netcfg_rewrite_resolv(domain, nameserver_array);
+              netcfg_write_resolv(domain, nameserver_array);
               netcfg_activate_static(client);
             }
             else
