@@ -337,7 +337,18 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     getif_start();
     while ((inter = getif(1)) != NULL) {
 	size_t newchars;
+	char *downbuf;
 
+	/* Idempotency hack */
+	if (asprintf(&downbuf, "/sbin/ifconfig %s down", inter) != -1)
+	{
+	  di_exec_shell_log(downbuf);
+	  free(downbuf);
+	}
+	else
+	  di_log(DI_LOG_LEVEL_ERROR, "asprintf failed trying to take interface %s down!",
+	      inter);
+	
 	ifdsc = get_ifdsc(client, inter);
         newchars = strlen(inter) + strlen(ifdsc) + 5;
         if (len < (strlen(ptr) + newchars)) {
@@ -1087,8 +1098,8 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     /* setup loopback */
     di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
 
-    /* load kernel module for network sockets */
-    di_exec_shell_log("/sbin/modprobe af_packet");
+    /* load kernel module for network sockets silently */
+    di_exec("/sbin/modprobe af_packet");
 
     /* get dhcp lease */
     switch (dhcp_client) {
