@@ -1,22 +1,22 @@
 Template: netcfg/get_ipaddress
 Type: string
-_Description: IP address?
+_Description: IP address:
  The IP address is unique to your computer and consists of four numbers
  separated by periods.  If you don't know what to use here, consult your
  network administrator.
 
 Template: netcfg/get_pointopoint
 Type: string
-_Description: Pointopoint address?
- The pointopoint address is used to determine the other endpoint of the
+_Description: Point-to-point address:
+ The point-to-point address is used to determine the other endpoint of the
  point to point network.  Consult your network administrator if you do not
- know the value.  The pointopoint address should be entered as four numbers
+ know the value.  The point-to-point address should be entered as four numbers
  separated by periods.
 
 Template: netcfg/get_netmask
 Type: string
 Default: 255.255.255.0
-_Description: Netmask?
+_Description: Netmask:
  The netmask is used to determine which machines are local to your
  network.  Consult your network administrator if you do not know the
  value.  The netmask should be entered as four numbers separated by
@@ -24,24 +24,29 @@ _Description: Netmask?
 
 Template: netcfg/get_gateway
 Type: string
-_Description: Gateway?
- This is an IP address (four numbers separated by periods) that indicates
- the gateway router, also known as the default router.  All traffic that
- goes outside your LAN (for instance, to the Internet) is sent through this
- router.  In rare circumstances, you may have no router; in that case, you
- can leave this blank.  If you don't know the proper answer to this
- question, consult your network administrator.
+_Description: Gateway:
+ The gateway is an IP address (four numbers separated by periods) that
+ indicates the gateway router, also known as the default router.  All
+ traffic that goes outside your LAN (for instance, to the Internet) is
+ sent through this router.  In rare circumstances, you may have no
+ router; in that case, you can leave this blank.  If you don't know
+ the proper answer to this question, consult your network
+ administrator.
 
 Template: netcfg/gateway_unreachable
-Type: note
-_Description: The gateway you entered is unreachable.
+Type: error
+_Description: Unreachable gateway
+ The gateway address you entered is unreachable.
+ .
  You may have made an error entering your IP address, netmask and/or
  gateway.
 
 Template: netcfg/confirm_static
 Type: boolean
 Default: true
-_Description: Is this configuration correct?
+_Description: Is this information correct?
+ Currently configured network parameters:
+ .
   interface     = ${interface}
   hostname      = ${hostname}
   domain        = ${domain}
@@ -59,4 +64,4 @@ _Description: Static Network Configuration
 Template: debian-installer/netcfg-static/title
 Type: text
 #  Item in the main menu to select this package
-_Description: Configure a static network
+_Description: Configure a network using static addressing

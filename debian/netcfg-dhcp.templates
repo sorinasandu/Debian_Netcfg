@@ -1,14 +1,17 @@
 Template: netcfg/dhcp_hostname
 Type: string
-_Description: What is your dhcp hostname?
+_Description: DHCP hostname:
  You may need to supply a DHCP host name. If you are using
- a cable modem, you might need to specify an account number
- here.  Most other users can just leave this blank.
+ a cable modem, you might need to specify an account number here.  
+ .
+ Most other users can just leave this blank.
 
 Template: netcfg/confirm_dhcp
 Type: boolean
 Default: true
 _Description: Is this information correct?
+ Currently configured network parameters:
+ .
   interface      = ${interface}
   hostname       = ${hostname}
   domain         = ${domain}
@@ -24,9 +27,11 @@ Type: text
 _Description: This may take a few minutes.
 
 Template: netcfg/no_dhcp_client
-Type: note
-_Description: No dhcp client found. I cannot continue.
- This package requires pump or dhcp-client.
+Type: error
+_Description: No DHCP client found
+ No DHCP client was found. This package requires pump or dhcp-client.
+ .
+ The DHCP configuration process will be aborted.
 
 Template: netcfg/dhcp-title
 Type: text
@@ -36,4 +41,4 @@ _Description: DHCP Network Configuration
 Template: debian-installer/netcfg-dhcp/title
 Type: text
 #  Item in the main menu to select this package
-_Description: Configure the network via DHCP
+_Description: Configure the network using dynamic addressing (DHCP)

@@ -1,6 +1,6 @@
 Template: netcfg/get_domain
 Type: string
-_Description: Choose the domain name.
+_Description: Domain name:
  The domain name is the part of your Internet address to the right of your
  host name.  It is often something that ends in .com, .net, .edu, or .org. 
  If you are setting up a home network, you can make something up, but make
@@ -8,29 +8,32 @@ _Description: Choose the domain name.
 
 Template: netcfg/get_nameservers
 Type: string
-_Description: Choose the DNS Server Addresses
+_Description: Name servers addresses:
  Please enter the IP addresses (not host names) of up to 3 name servers,
- separated by spaces. Do not use commas. The servers will be queried in the
- order in which you enter them. If you don't want to use any name servers
+ separated by spaces. Do not use commas. The first server in the list will
+ be the first to be queried. If you don't want to use any name server,
  just leave this field blank.
 
 Template: netcfg/choose_interface
 Type: select
 Choices: ${ifchoices}
-_Description: Choose an interface.
- The following interfaces were detected. Choose the type of your primary
- network interface that you will need for installing the Debian system (via
- NFS or HTTP).
+_Description: Interface:
+ Please choose the interface you want to configure. All currently 
+ detected interfaces on your system are shown below. Please choose the
+ type of your primary network interface. This interface will be used
+ for installing the Debian system (via NFS or HTTP).
 
 Template: netcfg/error_cfg
 Type: error
-_Description: An error occured.
- Something went wrong when I tried to activate your network.
+_Description: Error while activating the network
+ An error occurred while activating the network.
 
 Template: netcfg/get_hostname
 Type: string
 Default: debian
-_Description: Enter the system's hostname.
+_Description: Hostname:
+ Please enter the hostname for this system.
+ .
  The hostname is a single word that identifies your system to the network. 
  If you don't know what your hostname should be, consult your network
  administrator.  If you are setting up your own home network, you can make
@@ -38,23 +41,27 @@ _Description: Enter the system's hostname.
 
 Template: netcfg/invalid_hostname
 Type: error
-_Description: The hostname "${hostname}" is invalid.
+_Description: Invalid hostname
+ The name "${hostname}" is invalid.
+ .
  A valid hostname may contain only alphanumeric characters and the minus
  sign, be between 2 and 63 characters long, and cannot begin or end with a
  minus sign.
 
 Template: netcfg/error
 Type: error
-_Description: An error occured and I cannot continue.
- Feel free to retry.
+_Description: Error
+ An error occured and the network configuration process had been aborted.
+ You may retry it from the installation main menu.
 
 Template: netcfg/no_interfaces
 Type: error
-_Description: No network interfaces were detected.
+_Description: No network interfaces detected
  No network interfaces were found.   That means that the installation
- system was unable to find a network device.  If you do have a network
- card, then it is possible that the module for it hasn't been selected
- yet.  Go back to 'Detect network hardware'.
+ system was unable to find a network device.  
+ . 
+ You may need to load a specific module for your network card, if you really
+ own one. For this, go back to the network hardware detection step.
 
 Template: netcfg/internal-none
 Type: text
