@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2004-11-10 16:40-0500\n"
+"POT-Creation-Date: 2004-11-24 00:33-0700\n"
 "PO-Revision-Date: 2004-11-09 09:49+0100\n"
 "Last-Translator: Russian L10N Team <debian-l10n-russian@lists.debian.org>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -295,19 +295,21 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:110
+#. Note to translators : Please keep your translations of the choices
+#. below the 70 columns limit (which means 70 characters for most languages)
+#: ../netcfg-common.templates:112
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Управляемая сеть, Прямое соединение (Ad hoc)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:113
 msgid "Wireless network kind:"
 msgstr "Тип беспроводной сети:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:113
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -321,123 +323,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:120
 msgid "Wireless network configuration"
 msgstr "Настройка беспроводной сети"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:124
 msgid "Searching for wireless access points ..."
 msgstr "Поиск точек доступа (access point) беспроводной сети..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:134
 msgid "<none>"
 msgstr "<ни один из них>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:138
 msgid "Wireless ethernet (802.11x)"
 msgstr "Беспроводная сеть (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:142
 msgid "wireless"
 msgstr "беспроводная"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:146
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet или Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:150
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:154
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:158
 msgid "Serial-line IP"
 msgstr "IP по последовательной линии (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:162
 msgid "Parallel-port IP"
 msgstr "IP по параллельной линии (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:166
 msgid "Point-to-Point Protocol"
 msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:170
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:174
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:178
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:182
 msgid "Real channel-to-channel"
 msgstr "Реальный channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:186
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:190
 msgid "Inter-user communication vehicle"
 msgstr "Межпользовательская связь (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:194
 msgid "Unknown interface"
 msgstr "Неизвестный интерфейс"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:199
 msgid "Configuring network ..."
 msgstr "Идёт настройка сети..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:202
+#: ../netcfg-common.templates:204
 msgid "Configure the network"
 msgstr "Настроить сеть"
 
@@ -504,13 +506,15 @@ msgstr "Процесс настройки по DHCP был прерван."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#. Note to translators : Please keep your translations of the choices
+#. below the 70 columns limit (which means 70 characters for most languages)
+#: ../netcfg-dhcp.templates:32
 msgid "Retry network autoconfiguration"
 msgstr "Повторить автоматическую настройку сети"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:32
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
 "Повторить автоматическую настройку сети с указанным именем хоста для DHCP "
@@ -518,31 +522,31 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:32
 msgid "Configure network manually"
 msgstr "Настроить сеть вручную"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:32
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:32
 msgid "Do not configure the network at this time"
 msgstr "Не настраивать сеть сейчас"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:34
 msgid "Network configuration method:"
 msgstr "Метод настройки сети:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:34
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -558,13 +562,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:44
 msgid "Network autoconfiguration failed"
 msgstr "Сбой автоматической настройки сети"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:42
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -574,13 +578,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:48
+#: ../netcfg-dhcp.templates:50
 msgid "Continue without a default route?"
 msgstr "Продолжить без пути по умолчанию?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:48
+#: ../netcfg-dhcp.templates:50
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -595,7 +599,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:48
+#: ../netcfg-dhcp.templates:50
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -605,14 +609,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:60
+#: ../netcfg-dhcp.templates:62
 msgid "Reconfigure the wireless network"
 msgstr "Настройка беспроводной сети"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:65
+#: ../netcfg-dhcp.templates:67
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr ""
 "Настройка сети с использованием протокола динамической адресации (DHCP)"
