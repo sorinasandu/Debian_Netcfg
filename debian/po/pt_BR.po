@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-23 22:12+0100\n"
+"POT-Creation-Date: 2004-03-26 11:39+0100\n"
 "PO-Revision-Date: 2004-03-23 20:48-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -36,10 +36,10 @@ msgid ""
 msgstr ""
 "A rede pode ser configurada via DHCP ou informando manualmente todos os "
 "dados necessários. Caso você opte por usar a configuração via DHCP e o "
-"instalador não consiga obter uma configuração funcional de um servidor "
-"DHCP em sua rede, você terá a oportunidade de informar os dados necessários "
-"para sua configuração de rede manualmente após a tentativa de configuração "
-"via DHCP."
+"instalador não consiga obter uma configuração funcional de um servidor DHCP "
+"em sua rede, você terá a oportunidade de informar os dados necessários para "
+"sua configuração de rede manualmente após a tentativa de configuração via "
+"DHCP."
 
 #. Type: string
 #. Description
@@ -466,8 +466,6 @@ msgstr "Esta informação está correta ?"
 msgid "Currently configured network parameters:"
 msgstr "Parâmetros de rede configurados atualmente :"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -664,8 +662,6 @@ msgstr ""
 "Você pode ter cometido um erro ao informar seu endereço IP, máscara de rede "
 "e/ou seu gateway."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

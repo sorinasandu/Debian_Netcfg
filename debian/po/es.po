@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-23 22:12+0100\n"
+"POT-Creation-Date: 2004-03-26 11:39+0100\n"
 "PO-Revision-Date: 2004-03-24 20:44+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -55,7 +55,12 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr "La red puede configurarse, bien mediante DHCP o bien introduciendo manualmente toda la información. Si elige DHCP y el instalador no puede encontrar una configuración que funcione de un servidor DHCP de su red, se le dará oportunidad de configurar su red manualmente tras el intento de hacerlo por DHCP."
+msgstr ""
+"La red puede configurarse, bien mediante DHCP o bien introduciendo "
+"manualmente toda la información. Si elige DHCP y el instalador no puede "
+"encontrar una configuración que funcione de un servidor DHCP de su red, se "
+"le dará oportunidad de configurar su red manualmente tras el intento de "
+"hacerlo por DHCP."
 
 #. Type: string
 #. Description
@@ -323,7 +328,10 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr "Las redes inalámbricas (o «wireless») son bien gestionadas o bien «ad-hoc». Si utiliza algún punto de acceso de cualquier tipo, su red es gestionada. Si otro ordenador es su punto de acceso, entonces su red es «ad-hoc»."
+msgstr ""
+"Las redes inalámbricas (o «wireless») son bien gestionadas o bien «ad-hoc». "
+"Si utiliza algún punto de acceso de cualquier tipo, su red es gestionada. Si "
+"otro ordenador es su punto de acceso, entonces su red es «ad-hoc»."
 
 #. Type: text
 #. Description
@@ -477,8 +485,6 @@ msgstr "¿Es esta información correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Parámetros de red configurados hasta el momento:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -674,8 +680,6 @@ msgstr ""
 "Puede haberse equivocado al introducir la dirección IP, máscara de red y/o "
 "pasarela."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

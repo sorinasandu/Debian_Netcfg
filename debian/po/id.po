@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-25 01:38-0700\n"
+"POT-Creation-Date: 2004-03-26 11:39+0100\n"
 "PO-Revision-Date: 2004-03-25 16:24+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian Indonesia <debid@yahoogroups.com>\n"
@@ -39,8 +39,9 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr "Jaringan dapat dikonfigurasikan dengan DHCP atau dengan memasukkan "
-"informasi secara manual. Bila anda memilih menggunakan DHCP dan installer tidak "
+msgstr ""
+"Jaringan dapat dikonfigurasikan dengan DHCP atau dengan memasukkan informasi "
+"secara manual. Bila anda memilih menggunakan DHCP dan installer tidak "
 "mendapatkan konfigurasi dari DHCP server, anda akan diberi kesempatan untuk "
 "mengkonfigurasikan secara manual kemudian."
 
@@ -58,10 +59,11 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr "Nama domain adalah bagian dari alamat Internet yang berada di sebelah "
-"kanan nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Contoh: jojon.com. "
-"Bila ini untuk jaringan di rumah, anda bisa mereka-reka, tapi pastikan domain "
-"tersebut sama pada semua komputer anda."
+msgstr ""
+"Nama domain adalah bagian dari alamat Internet yang berada di sebelah kanan "
+"nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Contoh: jojon."
+"com. Bila ini untuk jaringan di rumah, anda bisa mereka-reka, tapi pastikan "
+"domain tersebut sama pada semua komputer anda."
 
 #. Type: string
 #. Description
@@ -77,10 +79,11 @@ msgid ""
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
-msgstr "Silakan masukkan alamat IP (bukan nama host) dari name server "
-"(maksimum 3 name server, dipisahkan dengan spasi, bukan koma). Server pertama "
-"merupakan server yang akan dikueri pertama kali. Bila anda tidak menggunakan "
-"name server, biarkan ruas ini kosong."
+msgstr ""
+"Silakan masukkan alamat IP (bukan nama host) dari name server (maksimum 3 "
+"name server, dipisahkan dengan spasi, bukan koma). Server pertama merupakan "
+"server yang akan dikueri pertama kali. Bila anda tidak menggunakan name "
+"server, biarkan ruas ini kosong."
 
 #. Type: select
 #. Description
@@ -94,8 +97,9 @@ msgstr "Antarmuka jaringan utama:"
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
-msgstr "Sistem anda memiliki beberapa antarmuka jaringan. Pilih satu yang "
-"akan digunakan sebagai antarmuka jaringan utama saat memasang Debian."
+msgstr ""
+"Sistem anda memiliki beberapa antarmuka jaringan. Pilih satu yang akan "
+"digunakan sebagai antarmuka jaringan utama saat memasang Debian."
 
 #. Type: string
 #. Description
@@ -110,7 +114,8 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr "${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
+msgstr ""
+"${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
 "(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika anda ingin "
 "menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
 
@@ -126,8 +131,9 @@ msgstr "Kunci WEP untuk ${iface}:"
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr "Bila ada, silakan masukkan kunci keamanan WEP untuk device ${iface}. "
-"Ada dua cara melakukan ini:"
+msgstr ""
+"Bila ada, silakan masukkan kunci keamanan WEP untuk device ${iface}. Ada dua "
+"cara melakukan ini:"
 
 #. Type: string
 #. Description
@@ -135,8 +141,9 @@ msgstr "Bila ada, silakan masukkan kunci keamanan WEP untuk device ${iface}. "
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr "Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' or 'nnnnnnnn' dimana "
-"n merupakan angka, langsung isikan saja pada ruas ini."
+msgstr ""
+"Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' or 'nnnnnnnn' dimana n "
+"merupakan angka, langsung isikan saja pada ruas ini."
 
 #. Type: string
 #. Description
@@ -144,8 +151,8 @@ msgstr "Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' or 'nnnnnnnn' dimana "
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Bila kunci WEP anda berupa kata sandi, tambahkan prefiks "
-"'s:' (tanpa kutip)."
+msgstr ""
+"Bila kunci WEP anda berupa kata sandi, tambahkan prefiks 's:' (tanpa kutip)."
 
 #. Type: string
 #. Description
@@ -153,8 +160,9 @@ msgstr "Bila kunci WEP anda berupa kata sandi, tambahkan prefiks "
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Tentu saja bila tidak ada kunci WEP untuk jaringan nirkabel anda, "
-"biarkan ruas ini kosong."
+msgstr ""
+"Tentu saja bila tidak ada kunci WEP untuk jaringan nirkabel anda, biarkan "
+"ruas ini kosong."
 
 #. Type: error
 #. Description
@@ -168,8 +176,9 @@ msgstr "Kunci WEP tidak sah."
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr "Kunci WEP '${wepkey}' tidak sah. Silakan baca petunjuk pada layar "
-"berikut tentang bagaimana memasukkan kunci WEP dengan benar dan coba lagi."
+msgstr ""
+"Kunci WEP '${wepkey}' tidak sah. Silakan baca petunjuk pada layar berikut "
+"tentang bagaimana memasukkan kunci WEP dengan benar dan coba lagi."
 
 #. Type: error
 #. Description
@@ -183,8 +192,9 @@ msgstr "ESSID tidak sah."
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr "ESSID \"${essid}\" tidak sah. ESSID hanya boleh sepanjang maksimum "
-"32 karakter, tapi dapat berisi karakter apa saja."
+msgstr ""
+"ESSID \"${essid}\" tidak sah. ESSID hanya boleh sepanjang maksimum 32 "
+"karakter, tapi dapat berisi karakter apa saja."
 
 #. Type: string
 #. Description
@@ -206,10 +216,11 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr "Nama host adalah kata tunggal yang mengidentifikasi sistem anda "
-"pada jaringan. Bila anda tidak tahu apa nama host anda, tanyakan pada "
-"administrator jaringan. Bila anda memasang untuk jaringan di rumah, "
-"anda dapat memberi nama sendiri."
+msgstr ""
+"Nama host adalah kata tunggal yang mengidentifikasi sistem anda pada "
+"jaringan. Bila anda tidak tahu apa nama host anda, tanyakan pada "
+"administrator jaringan. Bila anda memasang untuk jaringan di rumah, anda "
+"dapat memberi nama sendiri."
 
 #. Type: error
 #. Description
@@ -230,9 +241,10 @@ msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
-msgstr "Nama host yang sah hanya berisi karakter alfanumerik dan tanda kurang. "
-"Panjangnya antara 2 sampai 63 karakter, dan tidak boleh dimulai atau diakhiri "
-"dengan tanda kurang."
+msgstr ""
+"Nama host yang sah hanya berisi karakter alfanumerik dan tanda kurang. "
+"Panjangnya antara 2 sampai 63 karakter, dan tidak boleh dimulai atau "
+"diakhiri dengan tanda kurang."
 
 #. Type: error
 #. Description
@@ -246,8 +258,9 @@ msgstr "Error"
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr "Error terjadi dan konfigurasi jaringan telah digugurkan. Anda "
-"dapat mencoba lagi dengan memilih dari menu utama instalasi."
+msgstr ""
+"Error terjadi dan konfigurasi jaringan telah digugurkan. Anda dapat mencoba "
+"lagi dengan memilih dari menu utama instalasi."
 
 #. Type: error
 #. Description
@@ -261,8 +274,9 @@ msgstr "Tidak terdeteksi adanya antarmuka jaringan"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Tidak ditemukan antarmuka jaringan. Sistem instalasi tidak dapat "
-"menemukan perangkat keras jaringan."
+msgstr ""
+"Tidak ditemukan antarmuka jaringan. Sistem instalasi tidak dapat menemukan "
+"perangkat keras jaringan."
 
 #. Type: error
 #. Description
@@ -270,9 +284,10 @@ msgstr "Tidak ditemukan antarmuka jaringan. Sistem instalasi tidak dapat "
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr "Anda perlu memuat modul spesifik untuk kartu jaringan anda, bila "
-"anda memilikinya. Untuk itu anda perlu kembali ke langkah deteksi "
-"perangkat keras jaringan."
+msgstr ""
+"Anda perlu memuat modul spesifik untuk kartu jaringan anda, bila anda "
+"memilikinya. Untuk itu anda perlu kembali ke langkah deteksi perangkat keras "
+"jaringan."
 
 #. Type: select
 #. Choices
@@ -293,9 +308,10 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr "Jaringan nirkabel dapat merupakan jaringan dikelola atau ad-hoc. "
-"Bila anda menggunakan titik akses yang nyata, jaringan anda Dikelola, "
-"Bila komputer lain merupakan 'akses poin', maka jaringan anda Ad-hoc."
+msgstr ""
+"Jaringan nirkabel dapat merupakan jaringan dikelola atau ad-hoc. Bila anda "
+"menggunakan titik akses yang nyata, jaringan anda Dikelola, Bila komputer "
+"lain merupakan 'akses poin', maka jaringan anda Ad-hoc."
 
 #. Type: text
 #. Description
@@ -426,7 +442,8 @@ msgstr "Nama host DHCP:"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr "Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
+msgstr ""
+"Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
 "anda perlu memberikan nomor akun anda di sini."
 
 #. Type: string
@@ -483,7 +500,8 @@ msgstr "Tidak ditemukan klien DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Tidak ditemukan klien DHCP. Paket ini memerlukan pump atau dhcp-client."
+msgstr ""
+"Tidak ditemukan klien DHCP. Paket ini memerlukan pump atau dhcp-client."
 
 #. Type: error
 #. Description
@@ -503,8 +521,10 @@ msgstr "Anda ingin mengulang konfigurasi jaringan dengan DHCP?"
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr "Tidak ditemukan alamat IP saat melakukan konfigurasi jaringan secara "
-"otomatis dengan DHCP. server DHCP kadangkala lambat. Anda dapat mengulangi lagi."
+msgstr ""
+"Tidak ditemukan alamat IP saat melakukan konfigurasi jaringan secara "
+"otomatis dengan DHCP. server DHCP kadangkala lambat. Anda dapat mengulangi "
+"lagi."
 
 #. Type: text
 #. Description
@@ -533,9 +553,10 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr "Alamat IP unik pada tiap komputer dan terdiri dari 4 angka yang "
-"dipisahkan dengan titik. Bila anda tidak mengetahui alamat mana yang "
-"mesti digunakan, tanyakan pada administrator jaringan anda."
+msgstr ""
+"Alamat IP unik pada tiap komputer dan terdiri dari 4 angka yang dipisahkan "
+"dengan titik. Bila anda tidak mengetahui alamat mana yang mesti digunakan, "
+"tanyakan pada administrator jaringan anda."
 
 #. Type: error
 #. Description
@@ -549,8 +570,9 @@ msgstr "Alamat IP tidak benar."
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr "Alamat IP yang anda berikan tidak benar. Bentuknya harus sebagai "
-"berikut: x.x.x.x dimana tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
+msgstr ""
+"Alamat IP yang anda berikan tidak benar. Bentuknya harus sebagai berikut: x."
+"x.x.x dimana tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
 
 #. Type: string
 #. Description
@@ -566,10 +588,11 @@ msgid ""
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr "Alamat point-to-point digunakan untuk menentukan titik akhir lain "
-"dari jaringan point-to-point. Tanyakan pada administrator jaringan anda "
-"bila tidak mengetahui nilainya. Alamat point-to-point mesti dimasukkan "
-"dalam bentuk 4 angka yang dipisah dengan titik."
+msgstr ""
+"Alamat point-to-point digunakan untuk menentukan titik akhir lain dari "
+"jaringan point-to-point. Tanyakan pada administrator jaringan anda bila "
+"tidak mengetahui nilainya. Alamat point-to-point mesti dimasukkan dalam "
+"bentuk 4 angka yang dipisah dengan titik."
 
 #. Type: string
 #. Description
@@ -584,9 +607,11 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr "Netmask digunakan untuk menentukan mesin-mesin mana yang lokal pada "
+msgstr ""
+"Netmask digunakan untuk menentukan mesin-mesin mana yang lokal pada "
 "jaringan. Tanyakan pada administrator jaringan bila anda tidak mengetahui "
-"nilainya. Netmask mesti dimasukkan dalam bentuk 4 angka yang dipisah dengan titik."
+"nilainya. Netmask mesti dimasukkan dalam bentuk 4 angka yang dipisah dengan "
+"titik."
 
 #. Type: string
 #. Description
@@ -604,11 +629,13 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr "Gerbang merupakan alamat IP (4 angka yang dipisah dengan titik)"
-"yang menunjukan router gerbang, juga disebut sebagai router bawaan. Semua lalu "
-"lintas yang keluar dari LAN (misalnya ke Internet) akan dikirim melalui router "
-"ini. Sangat jarang suatu jaringan tidak memiliki router; dalam kasus ini, "
-"biarkan ruas ini kosong. Bila anda tidak ragu, tanyakan pada adminitrator jaringan."
+msgstr ""
+"Gerbang merupakan alamat IP (4 angka yang dipisah dengan titik)yang "
+"menunjukan router gerbang, juga disebut sebagai router bawaan. Semua lalu "
+"lintas yang keluar dari LAN (misalnya ke Internet) akan dikirim melalui "
+"router ini. Sangat jarang suatu jaringan tidak memiliki router; dalam kasus "
+"ini, biarkan ruas ini kosong. Bila anda tidak ragu, tanyakan pada "
+"adminitrator jaringan."
 
 #. Type: error
 #. Description
@@ -627,8 +654,9 @@ msgstr "Alamat gerbang yang anda berikan tidak dapat dicapai."
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Anda mungkin melakukan kesalahan dalam memasukkan alamat IP, netmask "
-"dan/atau gerbang."
+msgstr ""
+"Anda mungkin melakukan kesalahan dalam memasukkan alamat IP, netmask dan/"
+"atau gerbang."
 
 #: ../netcfg-static.templates:53
 msgid ""
