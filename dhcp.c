@@ -316,8 +316,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         if (poll_dhcp_client(client))
         {
           /* could not get a lease, show the error, present options */
+          debconf_capb(client, "");
           debconf_input(client, "critical", "netcfg/dhcp_failed");
           debconf_go(client);
+          debconf_capb(client, "backup");
           state = ASK_OPTIONS;
         }
         else
