@@ -7,11 +7,16 @@
 #include <sys/ioctl.h>
 #ifndef TEST
 # include <debian-installer/log.h>
+# define CONNECTED 1
+# define DISCONNECTED 2
+# define UNKNOWN 3
+#else
+# define di_info(fmt, ...) printf(fmt, ## __VA_ARGS__)
+# define di_warning(fmt, ...) fprintf(stderr, fmt, ## __VA_ARGS__)
+# define CONNECTED 0
+# define DISCONNECTED 0
+# define UNKNOWN 1
 #endif
-
-#define CONNECTED 1
-#define DISCONNECTED 2
-#define UNKNOWN 3
 
 #ifndef ETHTOOL_GLINK
 # define ETHTOOL_GLINK 0x0000000a
@@ -44,13 +49,8 @@ int ethtool_lite (char * iface)
 	
 	if (fd < 0)
 	{
-#ifdef TEST
-		fprintf(stderr, "Error: could not open control socket\n");
-		return 1;
-#else
 		di_warning("could not open control socket\n");
 		return UNKNOWN;
-#endif
 	}
 
 #ifdef TEST
@@ -67,24 +67,14 @@ int ethtool_lite (char * iface)
 	strncpy (ifr.ifr_name, iface, IFNAMSIZ);
 	
 	if (ioctl (fd, SIOCETHTOOL, &ifr) < 0)
-	{
-#ifdef TEST
-		printf("ethtool ioctl failed\n");
-#else
-		di_info("ethtool ioctl on %s failed", iface);
-#endif
-	}
+		di_info("ethtool ioctl on %s failed\n", iface);
 	
 	if (edata.data)
 	{
-#ifdef TEST
-		printf("%s is connected.\n", iface);
-#else
 		di_info("%s is connected.\n", iface);
 		return CONNECTED;
-#endif
 	}
-	else
+
 	{
 		u_int16_t *data = (u_int16_t *)&ifr.ifr_data;
 		int ctl;
@@ -96,44 +86,23 @@ int ethtool_lite (char * iface)
 			ctl = SIOCDEVPRIVATE + 1;
 		else
 		{
-#ifdef TEST
-			fprintf(stderr, "Error: couldn't determine MII ioctl to use\n");
-			return 1;
-#else
 			di_warning("couldn't determine MII ioctl to use for %s\n", iface);
 			return UNKNOWN;
-#endif
 		}
 
 		data[1] = 1;
 
 		if (ioctl (fd, ctl, &ifr) >= 0)
 		{
-#ifdef TEST
-			printf("%s is %sconnected. (MII)\n", iface,
-				((data[3] & 0x0004) == 0) ? "dis" : "");
-#else
+			int ret = !(data[3] & 0x0004);
+
 			di_info ("%s is %sconnected. (MII)\n", iface,
-				((data[3] & 0x0004) == 0) ? "dis" : "");
-			
-			return (((data[3] & 0x004) == 0) + 1);
-#endif
-		}
-		else
-		{
-#ifdef TEST
-			fprintf(stderr, "MII ioctl failed\n");
-			return 1;
-#else
-			di_warning("MII ioctl failed for %s\n", iface);
-			return UNKNOWN;
-#endif
+				(ret) ? "dis" : "");
+
+			return ret ? DISCONNECTED : CONNECTED;
 		}
 	}
 
-#ifdef TEST
-	return 0;
-#else
+	di_warning("MII ioctl failed for %s\n", iface);
 	return UNKNOWN;
-#endif
 }
