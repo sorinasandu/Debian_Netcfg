@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-07-16 18:28+0200\n"
+"PO-Revision-Date: 2004-07-28 18:28+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
@@ -63,10 +63,11 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domeinu izena zure ostalari izenaren ezkerraldean dagoen intenet helbide "
+"Domeinu izena zure ostalari izenaren eskubialdean dagoen internet helbide "
 "zatia da. Hau .com, .net, edo .org antzerako batetan bukatu behar da. Etxe "
 "barneko sare bat konfiguratzen ari bazara, nahi duzuna erabil dezakezu, "
-"baina kontu izan zure ordengailu guztientan domeinu izen berdina ipintzeko."
+"baina kontu izan zure ordengailu guztientan domeinu izen berdina ipini behar "
+"duzula."
 
 #. Type: string
 #. Description
@@ -85,7 +86,7 @@ msgid ""
 "this field blank."
 msgstr ""
 "Izen zerbitzariak ostalari izenak ebazteko erabiltzen dira. Mesdez sar IP "
-"helbideak (ez ostalari izena) gehienez hiru hutsune batez bereizirik. Ez "
+"helbideak (ez ostalari izena), gehienez hiru hutsune batez bereizirik. Ez "
 "erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko dena da. Ez "
 "baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz dezakezu."
 
@@ -180,7 +181,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"'${wepkey}'  WEP gakoa baliogabea da. Mesedez begiratu itzazu hurrengo "
+"'${wepkey}' WEP gakoa baliogabea da. Mesedez begiratu itzazu hurrengo "
 "horriko argibideak zure WEP gakoa egoki nola sartu ikusteko eta berriz "
 "saiatu zaitez."
 
@@ -204,7 +205,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Hostname:"
-msgstr "Makinaren izena:"
+msgstr "Ostalari izena:"
 
 #. Type: string
 #. Description
@@ -278,7 +279,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Ez da sare interfazerik aurkitu. Sistema instalatzailea da ez sare gailurik "
+"Ez da sare interfazerik aurkitu. Sistema instalatzailea ez da sare gailurik "
 "aurkitzeko gai."
 
 #. Type: error
@@ -288,8 +289,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Zuk agian, baldin baduzu,  zure sare txartelerako modulu zehatz bat kargatu "
-"behar duzu: Honetarako itzuli zaitez sare hadware atzemate hurratsera."
+"Zuk agian, izatekotan, zure sare txartelerako modulu zehatz bat kargatu "
+"behar duzu: Honetarako itzuli zaitez sare hardware atzemate hurratsera."
 
 #. Type: select
 #. Choices
@@ -368,7 +369,7 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Serial-line IP"
-msgstr "linea serie IP"
+msgstr "serie-lerro IP"
 
 #. Type: text
 #. Description
@@ -386,7 +387,7 @@ msgstr "Puntuz Puntuko Protokoloa"
 #. Description
 #: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-IPv4-n"
+msgstr "IPv6 IPv4-en"
 
 #. Type: text
 #. Description
@@ -507,7 +508,7 @@ msgstr "Sare autokonfiguraizioa berriz saiatu"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Sare autkonfigurazioa berriz saiatu DHCP ostalari izen batekin"
+msgstr "DHCP ostalari izen batez autokonfigurazioa berriz saiatu"
 
 #. Type: select
 #. Choices
@@ -531,7 +532,7 @@ msgstr "Sarea ez momentu honetan konfiguratu"
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "Sare Konfigurazioa modua:"
+msgstr "Sare Konfigurazio modua:"
 
 #. Type: select
 #. Description
@@ -553,7 +554,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Sare autokonfiguraizioak huts egin du"
+msgstr "Sare autokonfigurazioak huts egin du"
 
 #. Type: note
 #. Description
@@ -583,10 +584,10 @@ msgid ""
 msgstr ""
 "Sare autokonfigurazioa arrakastatsuki burutu da. Hala ere ez da "
 "lehenetsitako atebiderik ezarri, beraz sistema ez daki nola harremanetan "
-"jarri intereneteko osatalariekin. Honek sistema instalatzea ezinezko egin "
-"dezake zuk ez baduzu 'sare instalatzaile' CD-ROM bat edo beharrezko diren "
+"jarri interneteko osatalariekin. Honek sistema instalatzea ezinezko egin "
+"dezake zuk ez baduzu 'sare instalatzaile' CD-ROM bat, beharrezko diren "
 "debian pakete guztiak CD-ROM antzerako batetan edo sare lokalaren bidez "
-"eskuragarri ez badituzu."
+"eskuragarri."
 
 #. Type: boolean
 #. Description
@@ -595,8 +596,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ziur ez bazaude zuk ez zenuke lehenetsitako bide bat gabe jarraitu: zure "
-"sare kudeatzailearekin harremanetan jarri zaitez arazo honetaz berri emateko."
+"Ziur ez bazaude zuk ez zenuke lehenetsitako bide bat gabe jarraitu behar: zure "
+"sare kudeatzailearekin harremanetan jarri zaitez arazo honen berri emateko."
 
 #. Type: text
 #. Description
@@ -625,7 +626,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP helbidea zure ordenagailua azagutarazten duen puntuz bereituriko lau "
+"IP helbidea zure ordenagailua ezagutarazten duen puntuz bereiziriko lau "
 "zenbakizko sare zenbaki bakarra da. Hemen zer ipini ez badakizu galdetu zure "
 "sare kudeatzaileari."
 
@@ -642,8 +643,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Zuk emandako IP helbidea gaizki eraturik dago. x.x.x.x formatukoa, non x ez "
-"da 255 baino handiagoa, izan behar du. Saia zaitez berriro."
+"Zuk emandako IP helbidea gaizki eraturik dago. x.x.x.x formatukoa, non x ezin "
+"da 255 baino handiagoa izan. Saia zaitez berriro."
 
 #. Type: string
 #. Description
@@ -660,7 +661,7 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Puntuz-puntuko helbidea puntuz-puntuko sareetan bukara puntua ezartzeko "
+"Puntuz-puntuko helbidea puntuz-puntuko sareetan bukaera puntua ezartzeko "
 "erabiltzen da. Galdetu sare kudeatzaileari ez baduzu balio hau ezagutzen. "
 "Puntuz-puntuko helbidea puntuz bereizitako 4 zenbakiz osaturik egon behar du."
 
@@ -701,7 +702,7 @@ msgid ""
 msgstr ""
 "Atebidea IP helbide bat da (puntuz bereizitako 4 zenbaki) atebide routerra "
 "edo lehentsitako routerra ezartzen duena. Zure LAN saretik kanpo (adib. "
-"Internet) bidaktzen duzun trafiko guztia helbide honetara bidaltzen da.  "
+"Internet) bidaltzen duzun trafiko guztia helbide honetara bidaltzen da.  "
 "Egoera arraro batzuetan zuk ez duzu routerrik beharko, orduan hau hutsik utz "
 "dezakezu.  Ez badakizu galdera honen erantzun egokia galde iezaiozu zure "
 "sare kudeatzaileari."
@@ -716,7 +717,7 @@ msgstr "atebidera ezin ailatu"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Zuk emandako atebidea ezin da ailatu."
+msgstr "Zuk emandako atebidera ezin da ailatu."
 
 #. Type: error
 #. Description
@@ -725,7 +726,7 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo "
-"atebidea sartzerakoan."
+"atebidea ezartzerakoan."
 
 #. Type: boolean
 #. Description
@@ -751,8 +752,8 @@ msgstr ""
 " interfazea          = ${interface}\n"
 " iphelbidea          = ${ipaddress}\n"
 " sare maskara        = ${netmask}\n"
-" korapilunea         = ${gateway}\n"
-" puntuzpuntu         = ${dhcp_hostname}\n"
+" atebidea            = ${gateway}\n"
+" puntuzpuntukoa      = ${dhcp_hostname}\n"
 " izen zerbitzariak   = ${nameservers}"
 
 #. Type: text
@@ -760,7 +761,7 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
+msgstr "Helbide tinkoak erabiliaz sarea konfiguratu"
 
 #~ msgid ""
 #~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
@@ -773,7 +774,7 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ "If you are unsure then you can continue and come back to the network "
 #~ "configuration step later if necessary."
 #~ msgstr ""
-#~ "Ziu ez bazaude aurrera jo eta gero behar izan ezkero sare konfiguraziora "
+#~ "Ziu erz bazaude aurrera jo eta gero behar izan ezkero sare konfiguraziora "
 #~ "itzuli ahal izango zara."
 
 #~ msgid "Dynamic network configuration (DHCP)"
@@ -793,7 +794,7 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ " izen zerbitzariak    = ${nameservers}"
 
 #~ msgid "Next network configuration step:"
-#~ msgstr "Sare konfigurazio hurrengo pausua:"
+#~ msgstr "Sare konfigurazioaren hurrengo pausua:"
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet edo Token Ring"
@@ -807,4 +808,4 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ msgstr ""
 #~ "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
 #~ "DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
-#~ "ebrriz saia zaitezke."
+#~ "berriz saia zaitezke."
