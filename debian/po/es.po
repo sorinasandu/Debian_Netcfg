@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-04-26 23:30+0200\n"
+"PO-Revision-Date: 2004-05-17 11:05+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -490,9 +490,8 @@ msgstr "Esto puede tomar cierto tiempo."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Configuración estática de la red"
+msgstr "¡Tuvo éxito la auto-configuración de la red!"
 
 #. Type: error
 #. Description
@@ -517,23 +516,20 @@ msgstr "La configuración con DHCP se abortará."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Configuración estática de la red"
+msgstr "Reintentar la auto-configuración de la red"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Configuración de red dinámica (DHCP)"
+msgstr "Reintentar la auto-configuración de red con un nombre de servidor DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Configurar la red"
+msgstr "Configurar la red manualmente"
 
 #. Type: select
 #. Choices
@@ -544,16 +540,14 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Ahora se configurará su red."
+msgstr "No configurar la red en este momento."
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuración de red"
+msgstr "Método de configuración de red:"
 
 #. Type: select
 #. Description
@@ -564,14 +558,13 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
+msgstr "Se produjo un fallo al realizar la auto-configuración de la red. Esto puede deberse a que el servidor de DHCP de la red sea lento en responder, así que puede querer reintentarlo. Puede que desee configurar su red manualmente si ésta no utiliza DHCP para auto-configuración. Puede también escoger introducir el nombre de su servidor DHCP antes de reintentar ya que algunos servidores necesitan un nombre DHCP específico."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configurar la red"
+msgstr "Reconfigurar la red inalámbrica"
 
 #. Type: text
 #. Description
@@ -755,9 +748,8 @@ msgstr "Configurar la red usando direccionamiento estático"
 #~ " nombre de dhcp        = ${dhcp_hostname}\n"
 #~ " servidores de nombres = ${nameservers}"
 
-#, fuzzy
 #~ msgid "Next network configuration step:"
-#~ msgstr "Método para configuración de red:"
+#~ msgstr "Siguiente paso de configuración de la red:"
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"
