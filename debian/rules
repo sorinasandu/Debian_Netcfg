@@ -15,7 +15,7 @@ ARCH=$(shell dpkg --print-architecture)
 export DH_COMPAT=2
 
 # Udebs have no postrm file, don't make one
-export DH_OPTIONS="-n"
+export DH_OPTIONS=-n
 
 configure: configure-stamp
 configure-stamp:
