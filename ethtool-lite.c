@@ -87,7 +87,7 @@ int ethtool_lite (char * iface)
 			fprintf(stderr, "Error: couldn't determine MII ioctl to use\n");
 			return 1;
 #else
-			di_error("couldn't determine MII ioctl to use for %s\n", iface);
+			di_warning("couldn't determine MII ioctl to use for %s\n", iface);
 			return UNKNOWN;
 #endif
 		}

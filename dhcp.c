@@ -404,7 +404,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
               seed_hostname_from_dns(client, &d_ipaddr);
             }
             else
-              di_error("ioctl failed (%s)", strerror(errno));
+              di_warning("ioctl failed (%s)", strerror(errno));
           }
 
           /*
