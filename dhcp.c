@@ -146,10 +146,14 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
   }
 }
 
-/* Poll the started DHCP client for ten seconds, and return 0 if a lease was
- * acquired, 1 otherwise. The client should die once a lease is acquired.
+/*
+ * Poll the started DHCP client for DHCP_SECONDS seconds
+ * and return 0 if a lease is known to have been acquired,
+ * 1 otherwise.
  *
- * It will NOT reap the DHCP client after an unsuccessful poll. 
+ * The client should be run such that it dies once a lease is acquired.
+ *
+ * This function will NOT reap the DHCP client after an unsuccessful poll. 
  */
 
 int poll_dhcp_client (struct debconfclient *client)
@@ -164,7 +168,7 @@ int poll_dhcp_client (struct debconfclient *client)
 
   now = start_time = time(NULL);
 
-  /* wait 10s for a DHCP lease */
+  /* wait DHCP_SECONDS seconds for a DHCP lease */
   while (dhcp_running && ((now - start_time) < DHCP_SECONDS)) {
     sleep(1);
     debconf_progress_step(client, 1);
