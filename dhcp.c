@@ -236,6 +236,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
   enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, DOMAIN, STATIC, END } state = START;
+  short quit_after_hostname = 0;
 
   kill_dhcp_client();
   loop_setup();
@@ -267,6 +268,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case ASK_RETRY:
+	quit_after_hostname = 0;
         /* ooh, now it's a select */
         switch (ask_dhcp_retry (client))
         {
@@ -277,7 +279,9 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
 		  netcfg_write_loopback("40netcfg");
-                  return 0;
+                  quit_after_hostname = 1;
+		  state = HOSTNAME;
+		  break;
 	  case 4: /* reconfig wifi */
           {
 	    /* oh god - a NESTED satan machine */
@@ -348,7 +352,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
 	{
 	  kill_dhcp_client();
-          exit(10); /* go back, going back to poll isn't intuitive */
+	  if (quit_after_hostname) /* go back to retry */
+	    state = ASK_RETRY;
+	  else
+            exit(10); /* go back, going back to poll isn't intuitive */
 	}
         else
           state = DOMAIN;
@@ -357,6 +364,11 @@ int netcfg_activate_dhcp (struct debconfclient *client)
       case DOMAIN:
 	if (!have_domain && netcfg_get_domain (client, &domain))
 	  state = HOSTNAME;
+	else if (quit_after_hostname)
+	{
+	  netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+	  exit(0);
+	}
 	else
 	  state = END;
 	break;

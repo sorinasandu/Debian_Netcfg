@@ -514,6 +514,15 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 "\n" \
 "# This entry denotes the loopback (127.0.0.1) interface.\n"
 
+#define IPV6_HOSTS \
+"# The following lines are desirable for IPv6 capable hosts\n" \
+"::1     ip6-localhost ip6-loopback\n" \
+"fe00::0 ip6-localnet\n" \
+"ff00::0 ip6-mcastprefix\n" \
+"ff02::1 ip6-allnodes\n" \
+"ff02::2 ip6-allrouters\n" \
+"ff02::3 ip6-allhosts\n"
+
 void netcfg_write_loopback(const char* prebaseconfig)
 {
   FILE *fp;
@@ -521,7 +530,8 @@ void netcfg_write_loopback(const char* prebaseconfig)
   if ((fp = file_open(INTERFACES_FILE, "w"))) {
     fprintf(fp, HELPFUL_COMMENT);
     fprintf(fp, "auto lo\n");
-    fprintf(fp, "iface lo inet loopback\n");
+    fprintf(fp, "iface lo inet loopback\n\n");
+    fprintf(fp, IPV6_HOSTS);
     fclose(fp);
   }
   di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
@@ -547,6 +557,8 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
             fprintf(fp, "\tscript grep\n");
             fprintf(fp, "\tmap %s\n", interface);
         }
+
+	fprintf(fp, "\n" IPV6_HOSTS);
         fclose(fp);
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
