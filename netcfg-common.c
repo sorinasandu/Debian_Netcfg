@@ -625,6 +625,13 @@ void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipad
   if (err == 0 && res->ai_canonname && !empty_str(res->ai_canonname) &&
       inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+  else
+  {
+    debconf_get(client, "netcfg/get_hostname");
+    /* reset the hostname */
+    if (strcmp(client->value, "debian"))
+      debconf_set(client, "netcfg/get_hostname", "debian");
+  }
 
   freeaddrinfo(res);
 }

@@ -11,6 +11,7 @@ netcfg (0.65) UNRELEASED; urgency=low
     - In static configuration, if the IP address specified turns out to be
       the same as what we suggest for the gateway, nuke the last part of
       the dotted quad because gateway == IP makes no sense. (Closes: #241490)
+    - Turn off backup for error messages in static configuration.
   * Bastian Blank
     - Make it buildable again on s390.
 
