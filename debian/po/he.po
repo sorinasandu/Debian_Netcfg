@@ -1,27 +1,25 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# 
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-04-18 20:42+0200\n"
+"PO-Revision-Date: 2004-06-05 20:54+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
-"Language-Team: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #  Type: boolean
 #  Description
@@ -699,9 +697,8 @@ msgstr "הפעולה עלולה לקחת זמן מה..."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "הגדרת רשת קבועה:"
+msgstr "הגדרת רשת באופן אוטומטי הצליחה!"
 
 #  Type: error
 #  Description
@@ -742,9 +739,8 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "הגדרת רשת קבועה:"
+msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי?"
 
 #  Type: text
 #  Description
@@ -752,9 +748,8 @@ msgstr "הגדרת רשת קבועה:"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "הגדרה משתנה של הרשת (DHCP)"
+msgstr "לנסות להגדיר מחדש רשת באופן אוטומטי עם שם שרת DHCP"
 
 #  Type: text
 #  Description
@@ -765,9 +760,8 @@ msgstr "הגדרה משתנה של הרשת (DHCP)"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "מגדיר את הרשת..."
+msgstr "מגדיר את הרשת"
 
 #. Type: select
 #. Choices
@@ -784,9 +778,8 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "מגדיר את הרשת..."
+msgstr "אל תגדיר רשת בשלב זה."
 
 #  Type: text
 #  Description
@@ -797,9 +790,8 @@ msgstr "מגדיר את הרשת..."
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "הגדרת רשת קבועה:"
+msgstr "שיטת הגדרת רשת:"
 
 #. Type: select
 #. Description
@@ -810,7 +802,7 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
+msgstr "הגדרת רשת באופן אוטומטי נכשלה. זה יכול לקרות בגלל שרת DHCP איטי, כך שאולי תרצה לנסות שוב. אם הרשת שלך לא משתמשת ב-DHCP בשביל הגדרה רשת אוטומטית, תוכל להגדיר את הרשת ידנית. בנוסף, חלק משרתי DHCP צריכים שם מחשב ספציפי, תוכל לבחור להכניס שם מחשב לפני שתנסה שוב להשתמש ב-DHCP."
 
 #  Type: text
 #  Description
@@ -821,9 +813,8 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "מגדיר את הרשת..."
+msgstr "מגדיר מחדש את הרשת האלחוטית"
 
 #  Type: text
 #  Description
@@ -1053,38 +1044,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
 
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " ממשק                 = ${interface}\n"
-#~ "שם שרת              = ${hostname}\n"
-#~ " דומיין               = ${domain}\n"
-#~ " שם שרת DHCP  = ${dhcp_hostname}\n"
-#~ "שרתי שמות        = ${nameservers}"
-
-#  Type: text
-#  Description
-#  Type: text
-#  Description
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet or Token Ring"
-
-#  Type: boolean
-#  Description
-#  Type: boolean
-#  Description
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "האם לנסות שוב להגדיר את בעזרת DHCP?"
-
-#  Type: boolean
-#  Description
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "לא נמצאה כתובת IP בזמן הגדרת רשת עם DHPC. שרתי DHCP הם לפעמים ממש איטיים. "
-#~ "אם תרצה, תוכל לנסות שוב."
