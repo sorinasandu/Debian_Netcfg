@@ -1,0 +1,230 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: netcfg_0.24\n"
+"POT-Creation-Date: 2003-03-17 07:00-0700\n"
+"PO-Revision-Date: 2003-11-01 19:22+0100\n"
+"Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
+"Language-Team: Bosnian <lokal@lugbih.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Odaberite domain name."
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "The domain name is the part of your Internet address to the right of your host name.  It is often something that ends in .com, .net, .edu, or .org.  If you are setting up a home network, you can make something up, but make sure you use the same domain name on all your computers."
+msgstr "domain name je dio vaše Internet adrese desno od vašeg host namea.  To je ime koje se često završava s .com, .net, .edu ili .org.  Ako postavljate kućnu mrežu, možete izmisliti neko ime, ali pobrinite se da koristite isti domain name na svim vašim kompjuterima."
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr "Odaberite adresu DNS servera"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Please enter the IP addresses (not host names) of up to 3 name servers, separated by spaces. Do not use commas. The servers will be queried in the order in which you enter them. If you don't want to use any name servers just leave this field blank."
+msgstr "Molim unesite IP adrese (ne host nameove) do 3 name servera, razdvojene razmaknicama. Nemojte koristiti zareze. Serveri će biti ispitivani redoslijedom kojim ste ih unijeli. Ako ne želite koristiti name servere, samo ostavite ovo polje prazno."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Odaberite interfejs."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "The following interfaces were detected. Choose the type of your primary network interface that you will need for installing the Debian system (via NFS or HTTP)."
+msgstr "Sljedeći interfejsi su pronađeni. Odaberite tip vašeg primarnog mrežnog interfejsa koji ćete trebati za instaliranje Debian sistema (preko NFS-a ili HTTP-a)."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr "Pojavila se greška."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Nešto je krenulo naopako pri pokušaju da aktiviram vašu mrežu."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Unesite hostname sistema."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "The hostname is a single word that identifies your system to the network.  If you don't know what your hostname should be, consult your network administrator.  If you are setting up your own home network, you can make something up here."
+msgstr "hostname je jedna riječ koja identifikuje vaš sistem na mreži.  Ako ne znate kakav bi trebao biti vaš hostname, konsultirajte vašeg mrežnog administratora.  Ako postavljate vašu vlastitu kućnu mrežu, onda možete izmisliti neki hostname."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr "Hostname \"${hostname}\" nije valjan."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "A valid hostname may contain only alphanumeric characters and the minus sign, be between 2 and 63 characters long, and cannot begin or end with a minus sign."
+msgstr "Valjan hostname se može sastojati od alfanumeričkih znakova i minusa, može biti između 2 i 63 znaka dug i ne može počinjati niti završavati sa minusom."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr "Došlo je do greške i ne mogu nastaviti."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "Slobodno pokušajte ponovo."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No interfaces were detected."
+msgstr "Interfejsi nisu pronađeni."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No network interfaces were found.   That means that the installation system was unable to find a network device.  If you do have a network card, then it is possible that the module for it hasn't been selected yet.  Go back to 'Configure network hardware'."
+msgstr "Mrežni interfejsi nisu pronađeni.   To znači da instalacioni sistem nije mogao pronaći mrežni uređaj.  Ako imate mrežnu karticu, onda je moguće da modul za tu karticu još nije bio izabran. Idite nazad na 'Configure network hardware'."
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Koji je vaš dhcp hostname?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "In some situations, you may need to supply a DHCP host name.  These situations are rare.  Most commonly, it applies to cable modem users. If you are a cable modem user, you might need to specify an account number here.  Otherwise, you can just leave this blank."
+msgstr "U nekim slučajevima, vi trebate unijeti DHCP host name.  Takvi slučajevi su rijetki.  Najčešće se radi o korisnicima kablovskih modema. Ako koristite kablovski modem, možda bi ste trebali ovdje navesti broj računa. U suprotnom, možete samo ostaviti prazno."
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid "Is this information correct?"
+msgstr "Jesu li ove informacije tačne?"
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" interfejs      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domena         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "I will now configure the network."
+msgstr "Sada ću podesiti mrežu."
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr "Ovo može potrajati izvjesno vrijeme.  Ne bi trebalo trajati duže od jedne ili dvije minute."
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "No dhcp client found. I cannot continue."
+msgstr "dhcp klijent nije pronađen. Ne mogu nastaviti."
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "This package requires pump or dhcp-client."
+msgstr "Ovaj programski paket zahtijeva pump ili dhcp-client."
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "IP adresa?"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "The IP address is unique to your computer and consists of four numbers separated by periods.  If you don't know what to use here, consult your network administrator."
+msgstr "IP adresa je jedinstvena za vaš računar i sastoji se od četiri brojke razdvojene tačkama.  Ako ne znate šta da unesete ovdje, konsultirajte se sa vašim mrežnim administratorom."
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr "Pointopoint adresa?"
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "The pointopoint address is used to determine the other endpoint of the point to point network.  Consult your network administrator if you do not know the value.  The pointopoint address should be entered as four numbers separated by periods."
+msgstr "pointopoint adresa se koristi da bi se ustanovila krajnja tačka \"point to point\" mreže.  Konsultirajte se sa vašim mrežnim administratorom ako ne znate adresu.  pointtopoint adresa bi se trebala unijeti kao četiri brojke razdvojene tačkama."
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr "Netmask?"
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "The netmask is used to determine which machines are local to your network.  Consult your network administrator if you do not know the value.  The netmask should be entered as four numbers separated by periods."
+msgstr "netmask"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr "Gateway?"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "This is an IP address (four numbers separated by periods) that indicates the gateway router, also known as the default router.  All traffic that goes outside your LAN (for instance, to the Internet) is sent through this router.  In rare circumstances, you may have no router; in that case, you can leave this blank.  If you don't know the proper answer to this question, consult your network administrator."
+msgstr "Ovo je IP adresa (četiri brojke razdvojene tačkama) koja naznačava gateway router, takođe poznat kao default router.  Sav promet koji ide izvan vašeg LAN-a (na primjer, na Internet) se šalje preko ovog routera.U rijetkim prlikama, možete biti bez routera; u tom slučaju, možete ovo ostaviti prazno.  Ako ne znate podesan odgovor na ovo pitanje, konsultirajte se sa vašim mrežnim administratorom."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "gateway koji ste unijeli nije dostupan."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili gatewaya."
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr "Je li ova konfiguracija tačna?"
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" interfejs     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domena        = ${domain}\n"
+" ipadresa     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+
