@@ -186,6 +186,30 @@ int get_all_ifs (int all, char*** ptr)
   return len;
 }
 
+short find_in_stab(const char* iface)
+{
+  FILE *dn = NULL;
+  char buf[128];
+  size_t len = strlen(iface);
+
+  if (access("/var/run/stab", F_OK) == -1)
+    return 0;
+
+  if (!(dn = popen("grep -v '^Socket' /var/run/stab | cut -f5", "r")))
+    return 0;
+
+  while (fgets (buf, 128, dn) != NULL)
+  {
+    if (!strncmp(buf, iface, len))
+    {
+      pclose(dn);
+      return 1;
+    }
+  }
+  pclose(dn);
+  return 0;
+}
+
 char *find_in_devnames(const char* iface)
 {
   FILE* dn = NULL;
@@ -542,7 +566,7 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
         fprintf(fp, "\n# The loopback network interface\n");
         fprintf(fp, "auto lo\n");
         fprintf(fp, "iface lo inet loopback\n");
-        if (interface && iface_is_hotpluggable(interface)) {
+        if (interface && iface_is_hotpluggable(interface) && !find_in_stab(interface)) {
             fprintf(fp, "\n");
             fprintf(fp, "# This is a list of hotpluggable network interfaces.\n");
             fprintf(fp, "# They will be activated automatically by the "

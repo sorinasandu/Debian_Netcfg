@@ -245,7 +245,7 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
 
     if ((fp = file_open(INTERFACES_FILE, "a"))) {
         fprintf(fp, "\n# The primary network interface\n");
-        if (!iface_is_hotpluggable(interface))
+        if (!iface_is_hotpluggable(interface) && !find_in_stab(interface))
             fprintf(fp, "auto %s\n", interface);
         fprintf(fp, "iface %s inet static\n", interface);
         fprintf(fp, "\taddress %s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));

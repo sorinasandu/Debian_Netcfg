@@ -107,6 +107,7 @@ extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface,
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 
 extern int iface_is_hotpluggable(const char *iface);
+extern short find_in_stab (const char *iface);
 extern void deconfigure_network(void);
 
 extern void interface_up (char*);
