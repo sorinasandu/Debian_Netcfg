@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: d-i_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-10 22:44+0300\n"
+"PO-Revision-Date: 2004-08-10 08:53+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
 "MIME-Version: 1.0\n"
@@ -300,9 +300,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Configurează reţeaua"
+msgstr "Se continuă fără a configura reţeaua?"
 
 #. Type: boolean
 #. Description
@@ -313,7 +312,7 @@ msgid ""
 "either forego configuring the network until you reboot into Debian and use "
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
-msgstr ""
+msgstr "Interfaţa ${IFACE} pare a nu fi conectată la nici un fel de reţea. Cauza ar putea fi un cablu de reţea care lipseşte sau o defecţiune a plăcii de reţea. Puteţi fie să treceţi mai departe şi să configuraţi reţeaua până reporniţi în Debian cu utilitarul etherconf, fie să configuraţi reţeaua static. Puteţi să alegeţi, de asemenea, să vă întoarceţi şi să alegeţi o altă interfaţă."
 
 #. Type: select
 #. Choices
@@ -561,7 +560,6 @@ msgstr "Metoda de configurare a reţelei:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -570,7 +568,7 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Aic puteţi să alegeţi să reîncercaţi auto-configurarea nfigurarea reţelei "
-"prin DHCP(care s-ar putea să funcţioneze dacă serverul dvs.dhcp are nevoie "
+"prin DHCP(care s-ar putea să reuşească dacă serverul dvs.dhcp are nevoie "
 "de mult timp pentru a răspunde) sau să configuraţireţeaua manual. Unele "
 "servere DHCP necesită să se specifice un nume DHCP de către client, deci "
 "puteţi să alegeţi să introduceţi un asemenea nume înainte de a reîncerca "
@@ -751,8 +749,7 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -825,3 +822,4 @@ msgstr "Configurează reţeaua folosind adresare statică"
 #~ "Nu s-a găsit nici o adresă IP în timpul configurării automate cu DHCP. "
 #~ "Uneori serverele DHCP sunt foarte lente. Dacă doriţi, puteţi să încercaţi "
 #~ "din nou."
+
