@@ -1,0 +1,542 @@
+# translation of tools_netcfg.po to Arabic
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+# Ossama Khayat <okhayat@yahoo.com>, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tools_netcfg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-12-13 11:31-0500\n"
+"PO-Revision-Date: 2004-01-08 12:55+0300\n"
+"Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
+"Language-Team: Arabic <support@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:4
+msgid "Dynamic addressing (DHCP), Static addressing (manual)"
+msgstr "العنونة الديناميكية (DHCP)، العنونة الثابتة (يدوي)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid "Network configuration method:"
+msgstr "طريقة إعداد الشبكة:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
+msgstr ""
+"يمكن إعداد التشبيك إما باستخدام DHCP أو بإدخال المعلومات يدوياً. إن اخترت DHCP وكان المثبّت غير "
+"قادر على الحصول على إعداد عامل من خادم DHCP على شبكتك، سوف تعطى الفرصة كي تعدّ شبكتك "
+"يدوياً بعد محاولة إعدادها باستخدام DHCP. إن لم تكن متأكداً اختر DHCP."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid "Domain name:"
+msgstr "اسم المجال:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"اسم المجال هو الجزء من عنوان الإنترنت إلى يمين اسم المضيف.  وهو عادة شيئ ينتهي بـ.com، .net، أو .org. "
+"إن كنت تقوم بإعداد شبكة منزلية، يمكنك اختيار شيء ما، ولكن تأكد من استخدام نفس اسم المجال على كل الأجهزة."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid "Name server addresses:"
+msgstr "عناوين خادمات الأسماء:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
+msgstr ""
+"رجاء أدخل عناوين IP (وليس أسماء المضيفين) لثلاثة خادمات أسماء كحد أقصى، مفصولة بمسافات. لا تستخدم "
+"الفواصل. أو خادم في اللائحة سيكون أول من يُستعلم. إن لم تكن تريد استخدام أي خادم اسم، دع هذا فارغاً."
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid "Interface:"
+msgstr "الواجهة:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid ""
+"Please choose the interface you want to configure. All currently detected "
+"interfaces on your system are shown below. Please choose the type of your "
+"primary network interface. This interface will be used for installing the "
+"Debian system (via NFS or HTTP)."
+msgstr ""
+"رجاء اختر الواجهة التي تريد إعدادها. كل الواجهات التي وجدت في نظامك ظاهرة أدناه. رجاء اختر النوع الأولي "
+"لواجهة شبكتك. سوف تستخدم هذه الواجهة لتثبيت نظام ديبيان (من خلال NFS أو HTTP)."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:40
+msgid "Error while activating the network"
+msgstr "حدث خطأ خلال تنشيط الشبكة"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:40
+msgid "An error occurred while activating the network."
+msgstr "حدث خطأ خلال تنشيط الشبكة."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid "Hostname:"
+msgstr "اسم المضيف:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid "Please enter the hostname for this system."
+msgstr "رجاء أدخل اسم المضيف لهذا النظام."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"اسم المضيف هو كلمة واحدة تعرّف عن نظامك للشبكة.  إن لم تكن تعرف ما الاسم الذي يجب أن يكون عليه، فاستشر "
+"مدير الشبكة. إن كنت تقوم بإعداد شبكة منزلك الخاصة، يمكن اختيار ما ترغب به."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid "Invalid hostname"
+msgstr "اسم مضيف غير صالح"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid "The name \"${hostname}\" is invalid."
+msgstr "الاسم \"${hostname}\" غير صالح"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:56
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr ""
+"يمكن أن يحتوي اسم المضيف أحرفاً وأرقاماً وعلامة السالب فقط كي يكون صالحاً. ويجب أن يكون طوله حرفين وحتى "
+"63 حرف، ولا يبدأ أو ينتهي بعلامة السالب."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Error"
+msgstr "خطأ"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:65
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr "حدث خطأ وتمّ إجهاض عملية إعداد الشبكة. قد ترغب بإعادة المحاولة من قائمة التثبيت الرئيسية."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid "No network interfaces detected"
+msgstr "لم يتم العثور على واجهات شبكة"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr "لم يوجد أي واجهات شبكة. نظام التثبيت لم يستطع أن يجد جهاز شبكة."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:71
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr "قد تحتاج إلى تحميل وحدة معيّنة لبطاقة الشبكة، إن كان لديك واحدة. لهذا، ارجع إلى خطوة تفحّص عتاد الشبكة."
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:80
+msgid "<none>"
+msgstr "<none>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:84
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet أو Fast Ethernet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:88
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:92
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:96
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:100
+msgid "Serial-line IP"
+msgstr "عنوان IP للخط المتوالي"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:104
+msgid "Parallel-port IP"
+msgstr "عنوان IP للمنفذ المتوازي"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:108
+msgid "Point-to-Point Protocol"
+msgstr "بروتوكول Point-to-Point"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:112
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:116
+msgid "ISDN Point-to-Point Protocol"
+msgstr "بروتوكول ISDN Point-to-Point"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:128
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:132
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:136
+msgid "Unknown interface"
+msgstr "واجهة غير معروفة"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:141
+msgid "Network Configuration"
+msgstr "إعداد الشبكة"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:146
+msgid "Configure the network"
+msgstr "أعدّ الشبكة"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "اسم مضيف DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr "قد تحتاج إلى تزويد اسم مضيف DHCP. إن كنت تستخدم كابل مودم، قد تحتاج تحديد رقم الحساب هنا."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "معظم المستخدمين الآخرين يمكنهم ترك هذا فارغاً."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Is this information correct?"
+msgstr "هل هذه المعلومات صحيحة؟"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Currently configured network parameters:"
+msgstr "متغيّرات الشبكة المعدّة حالياً:"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" الواجهة      = ${interface}\n"
+" اسم المضيف       = ${hostname}\n"
+" المجال         = ${domain}\n"
+" اسم المضيف لـdhcp   = ${dhcp_hostname}\n"
+" خادمات الأسماء    = ${nameservers}"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "Configuring the network with DHCP"
+msgstr "أعدّ الشبكة باستخدام DHCP"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:27
+msgid "This may take some time."
+msgstr "قد يستغرق هذا بعض الوقت."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr "لم يوجد أي مستفيد DHCP"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "لم يوجد أي مستفيد DHCP. تتطلب هذه الحزمة pump أو مستفيد dhcp."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr "عملية الإعداد بواسطة DHCP سيتم إجهاضها."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "هل تريد إعادة محاولة إعداد الشبكة بواسطة DHCP؟"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. If you wish, you can retry."
+msgstr ""
+"لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP بعض الأحيان بطيئة. "
+"إن رغبت، يمكنك إعادة المحاولة."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "إعداد الشبكة الديناميكي (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "أعدّ الشبكة باستخدام العنونة الديناميكية (DHCP)"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "عنوان IP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"عنوان IP هو خاص بحاسوبك ويتكون من أربعها أرقام تفصلها نقاط.  إن لم تكن تعرف ماذا تستخدم هنا، فاستشر "
+"مدير الشبكة."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Point-to-point address:"
+msgstr "عنوان point-to-point:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr ""
+"يستخدم عنوان point-to-point لتحديد نقطة النهاية الأخرى من شبكة point-to-point. "
+"  استشر مدير الشبكة إن لم تكن تعرف القيمة.  عنوان point-to-point يجب أن يدخل على شكل "
+"أربعة أرقام تفصلها نقاط."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask:"
+msgstr "قناع الشبكة:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"يستخدم قناع الشبكة ليحدّد وجود أي من الأجهزة محلياً في شبكتك. استشر مدير الشبكة إن لم تكن تعرف القيمة. "
+"يجب أن يدخل قناع الشبكة على شكل أربعة أرقام تفصلها نقاط."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway:"
+msgstr "البوابة:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr ""
+"البوابة هي عنوان IP (أربعة أرقام تفصلها نقاط) تحدد موجّه البوابة، وتعرف كذلك بالموجه الافتراضي. كل السّير الذي "
+"يتّجه خارج شبكتك الداخلية (على سبيل المثال، إلى الإنترنت) يرسل من خلال هذا الموجّه. في بعض الحالات النادرة، "
+"قد لا يكون لديك موجّه؛ بتلك الحالة يمكنك ترك هذا الخيار فارغاً.  إن لم تكن تعرف الجواب المناسب لهذا السؤال، "
+"استشر مدير الشبكة."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "Unreachable gateway"
+msgstr "بوابة لا يمكن الوصول إليها"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "The gateway address you entered is unreachable."
+msgstr "عنوان البوابة الذي أدخله لا يمكن الوصول إليه."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "قد تكون قمت بخطأ بإدخال عنوان IP، قناع الشبكة و/أو البوابة."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-static.templates:47
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" الواجهة     = ${interface}\n"
+" اسم المضيف      = ${hostname}\n"
+" المجال        = ${domain}\n"
+" عنوان IP     = ${ipaddress}\n"
+" قناع الشبكة       = ${netmask}\n"
+" البوابة       = ${gateway}\n"
+" نقطة إلى نقطة   = ${pointopoint}\n"
+" خادم النطاقات   = ${nameservers}"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-static.templates:62
+msgid "Static network configuration"
+msgstr "إعداد الشبكة الثابت"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:67
+msgid "Configure a network using static addressing"
+msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
+
