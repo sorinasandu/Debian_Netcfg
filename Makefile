@@ -3,7 +3,7 @@ TARGETS		?= netcfg-dhcp netcfg-static netcfg
 
 LDOPTS		= -ldebconfclient -ldebian-installer -liw
 CFLAGS		= -W -Wall
-COMMON_OBJS	= netcfg-common.o mii-lite.o wireless.o
+COMMON_OBJS	= netcfg-common.o wireless.o
 
 ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -O0 -g3

@@ -2,8 +2,13 @@ netcfg (0.65) UNRELEASED; urgency=low
 
   * Joshua Kwan
     - Fix machine state in static configuration to call QUIT.
+      (Closes: #250074)
+    - Rewrite resolv.conf in static configuration once we acquire a
+      domain name. (Closes: #250021) 
+    - Switch to using mii-diag-udeb instead of mii-lite.c, which doesn't
+      seem to work across the board. (also addresses #250074)
 
- -- Otavio Salvador <otavio@debian.org>  Wed, 19 May 2004 17:01:43 -0300
+ -- Joshua Kwan <joshk@triplehelix.org>  Fri, 21 May 2004 09:44:25 -0700
 
 netcfg (0.64) unstable; urgency=medium
 

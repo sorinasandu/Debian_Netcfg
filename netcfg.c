@@ -96,19 +96,33 @@ int main(int argc, char *argv[])
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
 	    else
 	    {
-	        method_t mii_result;
-		
-		interface_up(interface);
-		mii_result = mii_diag_status_lite(interface);
-		interface_down(interface);
+              char* buf;
+              int ret;
+              size_t len = sizeof("mii-diag -s ") + strlen (interface) + 1;
 
-		if (mii_result != DUNNO && res == NOT_ASKED)
-		  netcfg_method = mii_result;
+              buf = malloc(len);
+              snprintf(buf, len, "mii-diag -s %s", interface);
 
-		if (netcfg_method == DHCP) 
-		    state = GET_DHCP;
-		else
-		    state = GET_STATIC;
+              interface_up(interface);
+              ret = di_exec_shell(buf);
+              interface_down(interface);
+
+              free(buf);
+
+              switch (ret)
+              {
+                /* SIOCGMIIPHY not supported */
+                case 1: di_info("link status for %s is unknown", interface); break;
+                /* Supported; no connection */
+                case 2: if (res == NOT_ASKED) netcfg_method = STATIC; break;
+                /* Supported; connected */    
+                case 0: if (res == NOT_ASKED) netcfg_method = DHCP; break;
+              }
+
+              if (netcfg_method == DHCP) 
+                state = GET_DHCP;
+              else
+                state = GET_STATIC;
 	    }
 	    break;
 

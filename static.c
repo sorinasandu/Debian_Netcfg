@@ -452,6 +452,7 @@ int netcfg_get_static(struct debconfclient *client)
             break;
         case QUIT:
 	    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+            netcfg_rewrite_resolv(domain, nameserver_array);
             return 0;
             break;
         }
@@ -459,3 +460,20 @@ int netcfg_get_static(struct debconfclient *client)
     return 0;
 }
 
+void netcfg_rewrite_resolv (char* domain, struct in_addr* nameservers)
+{
+  FILE* fp = NULL;
+  char ptr1[INET_ADDRSTRLEN];
+
+  if ((fp = file_open(RESOLV_FILE, "w"))) {
+    int i = 0;
+    if (domain && !empty_str(domain))
+      fprintf(fp, "search %s\n", domain);
+
+    while (nameservers[i].s_addr)
+      fprintf(fp, "nameserver %s\n",
+          inet_ntop (AF_INET, &nameservers[i++], ptr1, sizeof (ptr1)));
+
+    fclose(fp);
+  }
+}

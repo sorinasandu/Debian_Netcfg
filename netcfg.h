@@ -112,4 +112,5 @@ extern const char *inet_mtop (int src, char *dst, socklen_t cnt);
 extern void parse_args (int argc, char** argv);
 extern void open_sockets (void);
 
+extern void netcfg_rewrite_resolv (char*, struct in_addr *);
 #endif /* _NETCFG_H_ */
