@@ -83,6 +83,10 @@ static void netcfg_get_static()
         } else {
                 ptr = debconf_input("critical", "netcfg/get_netmask");
                 dot2num(&netmask, ptr);
+                gateway = ipaddress & netmask;
+                
+                client->command(client, "set", "netcfg/get_gateway",
+                                num2dot(gateway+1), NULL);
 
                 ptr = debconf_input("critical", "netcfg/get_gateway");
                 dot2num(&gateway, ptr);
