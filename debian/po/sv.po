@@ -510,7 +510,7 @@ msgstr "Konfigurera nätverket"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
@@ -688,7 +688,6 @@ msgstr "Nätverksparametrar som är konfigurerade:"
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -697,9 +696,7 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" nätverkskort    = ${interface}\n"
-" värdnamn        = ${hostname}\n"
-" domän           = ${domain}\n"
+" nätverkskort     = ${interface}\n"
 " IP-adress        = ${ipaddress}\n"
 " netmask          = ${netmask}\n"
 " gateway          = ${gateway}\n"
