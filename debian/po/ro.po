@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-23 22:12+0100\n"
+"POT-Creation-Date: 2004-04-09 18:32-0700\n"
 "PO-Revision-Date: 2004-04-08 04:10GMT+2\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian\n"
@@ -40,11 +40,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Reþelistica poate fi configuratã fie prin DHCP, fie manual prin "
-"introducerea tuturor informaþiilor. Dacã alegeþi sã utilizaþi DHCP ºi "
-"instalerul nu reuºeºte sã obþinã o configuraþie funþionalã de la un server "
-"de DHCP din reþeaua dvs. , vi se va oferi posibilitatea sã configuraþi "
-"reþeaua manual, dupã încercarea de configurare prin DHCP."
+"Reþelistica poate fi configuratã fie prin DHCP, fie manual prin introducerea "
+"tuturor informaþiilor. Dacã alegeþi sã utilizaþi DHCP ºi instalerul nu "
+"reuºeºte sã obþinã o configuraþie funþionalã de la un server de DHCP din "
+"reþeaua dvs. , vi se va oferi posibilitatea sã configuraþi reþeaua manual, "
+"dupã încercarea de configurare prin DHCP."
 
 #. Type: string
 #. Description
@@ -62,8 +62,8 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "Numele de domeniu este partea din dreapta a adresei dvs. de internet (dupã "
-"numele calculatorului).Adesea este ceva care se terminã în .com, .net, "
-".edu, sau org. Dacã configuraþi o reþea în casã, puteþi inventa ceva, dar "
+"numele calculatorului).Adesea este ceva care se terminã în .com, .net, .edu, "
+"sau org. Dacã configuraþi o reþea în casã, puteþi inventa ceva, dar "
 "asiguraþi-vã cã folosiþi acelaºi domeniu pe toate calculatoarele."
 
 #. Type: string
@@ -81,10 +81,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Vã rugãm sã introduceþi adresele de IP (nu numele de calculator) a cel "
-"mult 3 servere de nume, sparate prin spaþii. Primul server din listã va fi "
-"primul chestionat. Dacã nu doriþi sã utilizaþi nici un server de nume, "
-"lãsaþi acest câmp liber."
+"Vã rugãm sã introduceþi adresele de IP (nu numele de calculator) a cel mult "
+"3 servere de nume, sparate prin spaþii. Primul server din listã va fi primul "
+"chestionat. Dacã nu doriþi sã utilizaþi nici un server de nume, lãsaþi acest "
+"câmp liber."
 
 #. Type: select
 #. Description
@@ -117,8 +117,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} este o interfaþa de reþea wireless (fãrã fir). Vã rugãm sã "
-"inroduceþi numele (ESSID-ul) reþelei wireless pe care doriþi ca ${iface} "
-"sã o foloseascã. Dacã doriþi sã utilizaþi oricare reþea disponibilã, lãsaþi "
+"inroduceþi numele (ESSID-ul) reþelei wireless pe care doriþi ca ${iface} sã "
+"o foloseascã. Dacã doriþi sã utilizaþi oricare reþea disponibilã, lãsaþi "
 "acest câmp liber."
 
 #. Type: string
@@ -164,8 +164,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Desigur, dacã nu existã cheie WEP pentru reþeaua dvs. wireless, lãsaþi "
-"acest câmp liber."
+"Desigur, dacã nu existã cheie WEP pentru reþeaua dvs. wireless, lãsaþi acest "
+"câmp liber."
 
 #. Type: error
 #. Description
@@ -320,117 +320,130 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
+#, fuzzy
+msgid "Wireless network configuration"
+msgstr "Configuraþie de reþea staticã"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Searching for wireless access points ..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
 msgid "<none>"
 msgstr "<nici una>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:128
 msgid "Wireless ethernet (802.11x)"
 msgstr "Wireless ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:132
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet sau Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:136
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet sau Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:140
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:144
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:148
 msgid "Serial-line IP"
 msgstr "IP prin linie serialã"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:152
 msgid "Parallel-port IP"
 msgstr "IP prin port paralel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:156
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punct-la Punct"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:160
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-în-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:164
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol ISDN Punct-la Punct"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:168
 msgid "Channel-to-channel"
 msgstr "Canal-la-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:172
 msgid "Real channel-to-channel"
 msgstr "Canal-la-canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:176
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:180
 msgid "Inter-user communication vehicle"
 msgstr "Vehicul de comunicare inter-utilizator"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:184
 msgid "Unknown interface"
 msgstr "Interfaþã necunoscutã"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:189
 msgid "Network Configuration"
 msgstr "Configuraþia reþelei"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:194
 msgid "Configuring network ..."
 msgstr "Se configureazã reþeaua ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:199
 msgid "Configure the network"
 msgstr "Configureazã reþeaua"
 
@@ -579,9 +592,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Adresã IP introdusã de dvs. este malformatã. Ar trebui sã fie sub forma "
-"x.x.x.x, unde fiecare 'x' nu este mai mare decât 255. Vã rugãm sã încercaþi "
-"din nou."
+"Adresã IP introdusã de dvs. este malformatã. Ar trebui sã fie sub forma x.x."
+"x.x, unde fiecare 'x' nu este mai mare decât 255. Vã rugãm sã încercaþi din "
+"nou."
 
 #. Type: string
 #. Description
@@ -661,7 +674,8 @@ msgstr "Adresa de gateway introdusã este inaccesibilã."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil sã fi comis o eroare când aþi introdus adresa dvs. de IP, masca "
 "de reþea ºi/sau gateway."
@@ -700,4 +714,3 @@ msgstr "Configuraþie de reþea staticã"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configureazã reþeaua folosind adresare staticã"
-

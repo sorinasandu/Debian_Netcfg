@@ -1198,10 +1198,10 @@ int is_wireless_iface (const char* iface)
 
 int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
 {
-  int ret;
-  char* tf = NULL;
+  int ret, couldnt_associate = 0;
   wireless_config wconf;
-  
+  char* tf = NULL, *user_essid = NULL, *ptr = wconf.essid;
+
   if (wfd == 0) /* shouldn't happen */
     wfd = iw_sockets_open();
 
@@ -1222,61 +1222,105 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
 
   wconf.has_mode = 1;
   wconf.mode = (mode == ADHOC) ? 1 : 2;
-  
+
   debconf_input(client, "low", "netcfg/wireless_essid");
-  
+
   if (debconf_go(client) == 30)
     return GO_BACK;
-  
+
   debconf_get(client, "netcfg/wireless_essid");
   tf = client->value;
-  
+
   /* question not asked or user doesn't care or we're successfully associated */
   if (!empty_str(wconf.essid) || empty_str(client->value)) 
   {
+    int i, success = 0;
+    /* Calculate here, we don't want to do it every time */
+    int len = strlen(iface) + sizeof("/sbin/ifconfig  down") + 1;
+    char *cmd = malloc(len);
+
     /* Default to any AP */
     wconf.essid[0] = '\0';
     wconf.essid_on = 0;
 
     iw_set_basic_config (wfd, iface, &wconf);
-    
-    return 0;
-  }
-  /* yes, wants to set an essid by himself */
-  else
-  {
-    char* user_essid = NULL, *ptr = wconf.essid;
 
-    if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
-      user_essid = tf;
-    
-    while (!user_essid || empty_str(user_essid) ||
-	strlen(user_essid) > IW_ESSID_MAX_SIZE)
+    di_debug("Begin wait for association");
+
+    /* Wait for association.. (MAX_SECS seconds)*/
+#define MAX_SECS 5
+
+    debconf_progress_start(client, 0, MAX_SECS, "netcfg/wifi_progress_title");
+    debconf_progress_info(client, "netcfg/wifi_progress_info");
+
+    for (i = 0; i <= MAX_SECS; i++)
     {
-      debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
-      debconf_input(client, "high", "netcfg/invalid_essid");
-      debconf_go(client);
+      snprintf(cmd, len, "/sbin/ifconfig %s up", iface);
+      di_exec_shell_log(cmd);
       
-      ret = debconf_input(client, "low", "netcfg/wireless_essid");
-      /* we asked the question once, why can't we ask it again? */
-      assert (ret != 30);
-      
-      if (debconf_go(client) == 30) /* well, we did, but he wants to go back */
-	return GO_BACK;
+      sleep (1);
 
-      debconf_get(client, "netcfg/wireless_essid");
-      user_essid = client->value;
+      iw_get_basic_config (wfd, iface, &wconf);
+
+      if (!empty_str(wconf.essid))
+      {
+	/* Done! */
+	di_log(DI_LOG_LEVEL_DEBUG, "associated with AP '%s'", wconf.essid);
+	/* Save for later */
+	debconf_set(client, "netcfg/wireless_essid", wconf.essid);
+	debconf_progress_set(client, MAX_SECS);
+	success = 1;
+	break;
+      }
+
+      debconf_progress_step(client, 1);
+      snprintf(cmd, len, "/sbin/ifconfig %s down", iface);
+      di_exec_shell_log(cmd);
     }
 
-    essid = strdup (user_essid);
+    debconf_progress_stop(client);
+    free(cmd);
 
-    memset(ptr, 0, IW_ESSID_MAX_SIZE + 1);
-    snprintf(wconf.essid, IW_ESSID_MAX_SIZE + 1, "%s", essid);
-    wconf.has_essid = 1;
-    wconf.essid_on = 1;
+    if (success)
+      return 0;
 
-    iw_set_basic_config (wfd, iface, &wconf);
+    couldnt_associate = 1;
   }
+  /* yes, wants to set an essid by himself */
+
+  if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
+    user_essid = tf;
+
+  while (!user_essid || empty_str(user_essid) ||
+      strlen(user_essid) > IW_ESSID_MAX_SIZE)
+  {
+    debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
+    debconf_input(client, "high", "netcfg/invalid_essid");
+    debconf_go(client);
+
+    ret = debconf_input(client,
+	couldnt_associate ? "critical" : "low",
+	"netcfg/wireless_essid");
+    
+    /* we asked the question once, why can't we ask it again? */
+    assert (ret != 30);
+
+    if (debconf_go(client) == 30) /* well, we did, but he wants to go back */
+      return GO_BACK;
+
+    debconf_get(client, "netcfg/wireless_essid");
+    di_debug("looks like our essid is '%s'", client->value);
+    user_essid = client->value;
+  }
+
+  essid = strdup (user_essid);
+
+  memset(ptr, 0, IW_ESSID_MAX_SIZE + 1);
+  snprintf(wconf.essid, IW_ESSID_MAX_SIZE + 1, "%s", essid);
+  wconf.has_essid = 1;
+  wconf.essid_on = 1;
+
+  iw_set_basic_config (wfd, iface, &wconf);
 
   return 0;
 }

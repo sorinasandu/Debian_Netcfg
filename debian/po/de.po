@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-01 14:20+0200\n"
+"POT-Creation-Date: 2004-04-09 18:32-0700\n"
 "PO-Revision-Date: 2004-04-01 14:33+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
@@ -319,117 +319,130 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
+#, fuzzy
+msgid "Wireless network configuration"
+msgstr "Statische Netzwerkkonfiguration"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Searching for wireless access points ..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
 msgid "<none>"
 msgstr "<nichts>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:128
 msgid "Wireless ethernet (802.11x)"
 msgstr "Drahtloses Ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:132
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet oder Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:136
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet oder Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:140
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:144
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:148
 msgid "Serial-line IP"
 msgstr "IP über serielle Schnittstelle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:152
 msgid "Parallel-port IP"
 msgstr "IP über parallele Schnittstelle."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:156
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:160
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:164
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:168
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:172
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:176
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:180
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:184
 msgid "Unknown interface"
 msgstr "Unbekanntes Interface"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:189
 msgid "Network Configuration"
 msgstr "Netzwerkkonfiguration"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:194
 msgid "Configuring network ..."
 msgstr "Konfiguriere das Netzwerk ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:199
 msgid "Configure the network"
 msgstr "Netzwerk einrichten"
 
@@ -506,7 +519,8 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -543,7 +557,8 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -658,7 +673,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -753,4 +769,3 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
-

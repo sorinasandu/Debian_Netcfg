@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 11:39+0100\n"
+"POT-Creation-Date: 2004-04-09 18:32-0700\n"
 "PO-Revision-Date: 2004-04-04 19:03+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -33,8 +33,9 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Ağ, DHCP kullanarak veya tüm bilgileri manuel girerek ayarlanabilir. Eğer "
-"DHCP kullanmayı seçerseniz ve bir şekilde çalışır bir DHCP sunucu bulamazsanız, "
-"DHCP denemesinden sonra ağınızı manuel olarak ayarlama fırsatınız var. "
+"DHCP kullanmayı seçerseniz ve bir şekilde çalışır bir DHCP sunucu "
+"bulamazsanız, DHCP denemesinden sonra ağınızı manuel olarak ayarlama "
+"fırsatınız var. "
 
 #. Type: string
 #. Description
@@ -301,117 +302,130 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
+#, fuzzy
+msgid "Wireless network configuration"
+msgstr "Statik Ağ Ayarları"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Searching for wireless access points ..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
 msgid "<none>"
 msgstr "<hiçbiri>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:128
 msgid "Wireless ethernet (802.11x)"
 msgstr "Kablosuz ağ aygıtı(ethernet) (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:132
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet veya Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:136
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet veya Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:140
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:144
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:148
 msgid "Serial-line IP"
 msgstr "Seri-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:152
 msgid "Parallel-port IP"
 msgstr "Paralel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:156
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:160
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:164
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:168
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:172
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:176
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:180
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user bağlantı aracı"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:184
 msgid "Unknown interface"
 msgstr "Bilinmeyen arayüz"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:189
 msgid "Network Configuration"
 msgstr "Ağ Ayarları"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:194
 msgid "Configuring network ..."
 msgstr "Ağ ayarlanıyor ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:199
 msgid "Configure the network"
 msgstr "Ağı ayarla"
 
@@ -449,6 +463,8 @@ msgstr "Bu bilgiler doğru mu?"
 msgid "Currently configured network parameters:"
 msgstr "Halihazırda ayarlanmış ağ parametreleri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -633,11 +649,14 @@ msgstr "Girdiğiniz ağ geçidi erişilemez."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "IP adresi, ağ maskesi ve/veya ağ geçidini girerken bir hata yapmış "
 "olabilirsiniz."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -671,4 +690,3 @@ msgstr "Statik Ağ Ayarları"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Statik adresleme ile ağı ayarla"
-

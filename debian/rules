@@ -34,7 +34,7 @@ install: build
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
 	  cp $(PACKAGE) debian/$(PACKAGE).postinst; \
-	  cp prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
+	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
 		mkdir -p debian/$(PACKAGE)/usr/share/udhcpc ; \

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 11:39+0100\n"
+"POT-Creation-Date: 2004-04-09 18:32-0700\n"
 "PO-Revision-Date: 2004-04-07 01:15+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -41,7 +41,11 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr "Sarea DHCP bidez edo eskuz informazioa sartzen konfiguratu daiteke. Zuk DHCP erabiltzea aukeratzen baduzu eta instalatzaileak ezin badu baliozko konfigurazio bat lortu zure sareko DHCP zerbitzaritik, zuk konfigurazio hori eskuz sartzeko aukera izango duzu DHCP bidez konfiguratzen saiatu eta gero."
+msgstr ""
+"Sarea DHCP bidez edo eskuz informazioa sartzen konfiguratu daiteke. Zuk DHCP "
+"erabiltzea aukeratzen baduzu eta instalatzaileak ezin badu baliozko "
+"konfigurazio bat lortu zure sareko DHCP zerbitzaritik, zuk konfigurazio hori "
+"eskuz sartzeko aukera izango duzu DHCP bidez konfiguratzen saiatu eta gero."
 
 #. Type: string
 #. Description
@@ -57,7 +61,11 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr "Domeinu izena zure hostalari izenaren ezkerraldean dagoen intenet helbide zatia da. Hau .com, .net, edo .org antzerako batetan bukatu behar da. Etxe barneko sare bat konfiguratzen ari bazara, nahi duzuna erabil dezakezu, baina kontu izan zure ordengailu guztientan domeinu izen berdina ipintzeko."
+msgstr ""
+"Domeinu izena zure hostalari izenaren ezkerraldean dagoen intenet helbide "
+"zatia da. Hau .com, .net, edo .org antzerako batetan bukatu behar da. Etxe "
+"barneko sare bat konfiguratzen ari bazara, nahi duzuna erabil dezakezu, "
+"baina kontu izan zure ordengailu guztientan domeinu izen berdina ipintzeko."
 
 #. Type: string
 #. Description
@@ -73,7 +81,11 @@ msgid ""
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
-msgstr "Mesdez sar IP helbideak (ez hostalari izena) gehienez hiru hutsune batez bereizirik. Ez erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko dena da. Ez baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz dezakezu."
+msgstr ""
+"Mesdez sar IP helbideak (ez hostalari izena) gehienez hiru hutsune batez "
+"bereizirik. Ez erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko "
+"dena da. Ez baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz "
+"dezakezu."
 
 #. Type: select
 #. Description
@@ -87,7 +99,9 @@ msgstr "Lehen sare interfazea:"
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
-msgstr "Zure sistemak sare interfaze anitz ditu. Aukeratu bat Debian instalatzerakoan sare lehen interfaze bezala erabiltzeko."
+msgstr ""
+"Zure sistemak sare interfaze anitz ditu. Aukeratu bat Debian "
+"instalatzerakoan sare lehen interfaze bezala erabiltzeko."
 
 #. Type: string
 #. Description
@@ -102,7 +116,10 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr "${iface} wireless sare interfaze bat da. Mesdez sartu ${iface}-k erabilitzea nahi duzun kablegabeko sare izena (ESSID-a). Erabilgarri dagoen edozein sare erabiltzeko hutsik utz dezakezu"
+msgstr ""
+"${iface} wireless sare interfaze bat da. Mesdez sartu ${iface}-k erabilitzea "
+"nahi duzun kablegabeko sare izena (ESSID-a). Erabilgarri dagoen edozein sare "
+"erabiltzeko hutsik utz dezakezu"
 
 #. Type: string
 #. Description
@@ -116,7 +133,9 @@ msgstr "${iface}-ren WEP gakoa:"
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr "Erabilgarri bada. mesedez satu zure ${iface} gailuaren WEP segurtasun kodea. Hau egiteko bi modu daude:"
+msgstr ""
+"Erabilgarri bada. mesedez satu zure ${iface} gailuaren WEP segurtasun kodea. "
+"Hau egiteko bi modu daude:"
 
 #. Type: string
 #. Description
@@ -124,7 +143,9 @@ msgstr "Erabilgarri bada. mesedez satu zure ${iface} gailuaren WEP segurtasun ko
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr "Zure WEP kodea 'nnnn-nnnn-nn' edo 'nnnnnnnn' formatuan, non n zenbaki bat da, badago sartu ezazu horrelaxe "
+msgstr ""
+"Zure WEP kodea 'nnnn-nnnn-nn' edo 'nnnnnnnn' formatuan, non n zenbaki bat "
+"da, badago sartu ezazu horrelaxe "
 
 #. Type: string
 #. Description
@@ -132,7 +153,8 @@ msgstr "Zure WEP kodea 'nnnn-nnnn-nn' edo 'nnnnnnnn' formatuan, non n zenbaki ba
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr ""
+"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -140,7 +162,8 @@ msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik ga
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
+msgstr ""
+"Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -154,7 +177,10 @@ msgstr "Baliogabeko WEP gakoa"
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr "'${wepkey}'  WEP gakoa baliogabea da. Mesedez begiratu itzazu hurrengo horriko argibideak zure WEP gakoa egoki nola sartu ikusteko eta berriz saiatu zaitez."
+msgstr ""
+"'${wepkey}'  WEP gakoa baliogabea da. Mesedez begiratu itzazu hurrengo "
+"horriko argibideak zure WEP gakoa egoki nola sartu ikusteko eta berriz "
+"saiatu zaitez."
 
 #. Type: error
 #. Description
@@ -168,7 +194,9 @@ msgstr "Baliogabeko ESSID-a"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr "\"${essid}\" ESSID-a baliogabea da. ESSID-ek 32 karaketretik gora ezin dute izan, baina edozein karaktere izan ditzakete."
+msgstr ""
+"\"${essid}\" ESSID-a baliogabea da. ESSID-ek 32 karaketretik gora ezin dute "
+"izan, baina edozein karaktere izan ditzakete."
 
 #. Type: string
 #. Description
@@ -190,7 +218,10 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr "Ostalari izena zure ordenagailua sarean ezagutaraziko duen izena da. Zure ostalari izena ez badakizu galde iezaiozu zure sare kudeatzaileari. Etxeko sare bat muntatzen ari bazara, hemen nahi duzuna ipini dezakezu."
+msgstr ""
+"Ostalari izena zure ordenagailua sarean ezagutaraziko duen izena da. Zure "
+"ostalari izena ez badakizu galde iezaiozu zure sare kudeatzaileari. Etxeko "
+"sare bat muntatzen ari bazara, hemen nahi duzuna ipini dezakezu."
 
 #. Type: error
 #. Description
@@ -211,7 +242,10 @@ msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
-msgstr "Baliozko ostalari izenek karaktere alfazenbakizko eta gutxiago ikurra bakarrik izan ditzakete. Berauk 2 eta 63 karaktere artean izan behar ditu, eta ezin da gutxiago ikurraz ez hasi ez bukatu."
+msgstr ""
+"Baliozko ostalari izenek karaktere alfazenbakizko eta gutxiago ikurra "
+"bakarrik izan ditzakete. Berauk 2 eta 63 karaktere artean izan behar ditu, "
+"eta ezin da gutxiago ikurraz ez hasi ez bukatu."
 
 #. Type: error
 #. Description
@@ -225,7 +259,9 @@ msgstr "Errorea"
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr "Errore bat gertatu da eta sare konfigurazio prozesua ezeztatu egin da. Zu instalazio menu nagusitik berriz saiatu zaitezke."
+msgstr ""
+"Errore bat gertatu da eta sare konfigurazio prozesua ezeztatu egin da. Zu "
+"instalazio menu nagusitik berriz saiatu zaitezke."
 
 #. Type: error
 #. Description
@@ -239,7 +275,9 @@ msgstr "Ez da sare interfazerik atzeman"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Ez da sare interfazerik aurkitu. Sistema instalatzailea ez sare gailurik aurkitzeko gai."
+msgstr ""
+"Ez da sare interfazerik aurkitu. Sistema instalatzailea ez sare gailurik "
+"aurkitzeko gai."
 
 #. Type: error
 #. Description
@@ -247,7 +285,9 @@ msgstr "Ez da sare interfazerik aurkitu. Sistema instalatzailea ez sare gailurik
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr "Zuk agian, baldin baduzu,  zure sare txartelerako modulu zehatz bat kargatu behar duzu: Honetarako itzuli zaitez sare hadware atzemate hurratsera."
+msgstr ""
+"Zuk agian, baldin baduzu,  zure sare txartelerako modulu zehatz bat kargatu "
+"behar duzu: Honetarako itzuli zaitez sare hadware atzemate hurratsera."
 
 #. Type: select
 #. Choices
@@ -268,122 +308,139 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr "Kablegabeko sareak kudeaturik edo ad-hoc izan daitezke: Zu benetako sarrera puntu (Acces Point) bat edo antzeko zerbait erabiltzen ari bazara zure sarea kudeatutakoa da. Zure sarrera puntua beste ordenagailu bat baldin bada zure sarea Ad-hoc da."
+msgstr ""
+"Kablegabeko sareak kudeaturik edo ad-hoc izan daitezke: Zu benetako sarrera "
+"puntu (Acces Point) bat edo antzeko zerbait erabiltzen ari bazara zure sarea "
+"kudeatutakoa da. Zure sarrera puntua beste ordenagailu bat baldin bada zure "
+"sarea Ad-hoc da."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
+#, fuzzy
+msgid "Wireless network configuration"
+msgstr "Sare konfigurazio tinkoa"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Searching for wireless access points ..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
 msgid "<none>"
 msgstr "<baterez>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:128
 msgid "Wireless ethernet (802.11x)"
 msgstr "Wireless ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:132
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet edo Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:136
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet edo Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:140
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:144
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:148
 msgid "Serial-line IP"
 msgstr "linea serie IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:152
 msgid "Parallel-port IP"
 msgstr "Ataka paralelo IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:156
 msgid "Point-to-Point Protocol"
 msgstr "Puntuz Puntuko Protokoloa"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:160
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-IPv4-n"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:164
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Puntuz Puntuko Protokoloa"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:168
 msgid "Channel-to-channel"
 msgstr "Kanaletik-kanalera"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:172
 msgid "Real channel-to-channel"
 msgstr "Egiazko Kanaletik-kanalera"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:176
 msgid "Hypersocket"
 msgstr "Hypersocket-a"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:180
 msgid "Inter-user communication vehicle"
 msgstr "Erabiltzaile atreko komunikazio modua"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:184
 msgid "Unknown interface"
 msgstr "Interfaze ezezaguna"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:189
 msgid "Network Configuration"
 msgstr "Sare Konfigurazioa"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:194
 msgid "Configuring network ..."
 msgstr "Sarea Konfiguratzen ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:199
 msgid "Configure the network"
 msgstr "Sarea konfiguratu"
 
@@ -399,7 +456,9 @@ msgstr "DHCP Ostalari izena:"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr "Zuk DHCP ostalari izen bat eman beharko zenuke. Kable modema erabiliaz konektatzen bazara, agian hemen kontu zenbakia ipini behar duzu."
+msgstr ""
+"Zuk DHCP ostalari izen bat eman beharko zenuke. Kable modema erabiliaz "
+"konektatzen bazara, agian hemen kontu zenbakia ipini behar duzu."
 
 #. Type: string
 #. Description
@@ -419,6 +478,8 @@ msgstr "Informazioa hau ondo dago?"
 msgid "Currently configured network parameters:"
 msgstr "Une honetan konfiguratutako sare parametroak:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -455,7 +516,8 @@ msgstr "Ez da DHCP bezeroa aurkitu"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr ""
+"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
@@ -475,7 +537,10 @@ msgstr "DHCP sare konfigurazioaz berriz saiatzea nahi duzu?"
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, ebrriz saia zaitezke."
+msgstr ""
+"Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
+"DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
+"ebrriz saia zaitezke."
 
 #. Type: text
 #. Description
@@ -504,7 +569,10 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr "IP helbidea zure ordenagailua azagutarazten duen puntuz bereituriko lau zenbakizko sare zenbaki bakarra da. Hemen zer ipini ez badakizu galdetu zure sare kudeatzaileari."
+msgstr ""
+"IP helbidea zure ordenagailua azagutarazten duen puntuz bereituriko lau "
+"zenbakizko sare zenbaki bakarra da. Hemen zer ipini ez badakizu galdetu zure "
+"sare kudeatzaileari."
 
 #. Type: error
 #. Description
@@ -518,7 +586,9 @@ msgstr "Gaizki eratutako IP helbidea"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr "Zuk emandako IP helbidea gaizki eraturik dago. x.x.x.x formatukoa, non x ez da 255 baino handiagoa, izan behar du. Saia zaitez berriro."
+msgstr ""
+"Zuk emandako IP helbidea gaizki eraturik dago. x.x.x.x formatukoa, non x ez "
+"da 255 baino handiagoa, izan behar du. Saia zaitez berriro."
 
 #. Type: string
 #. Description
@@ -534,7 +604,10 @@ msgid ""
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr "Puntuz-puntuko helbidea puntuz-puntuko sareetan bukara puntua ezartzeko erabiltzen da. Galdetu sare kudeatzaileari ez baduzu balio hau ezagutzen. Puntuz-puntuko helbidea puntuz bereizitako 4 zenbakiz osaturik egon behar du."
+msgstr ""
+"Puntuz-puntuko helbidea puntuz-puntuko sareetan bukara puntua ezartzeko "
+"erabiltzen da. Galdetu sare kudeatzaileari ez baduzu balio hau ezagutzen. "
+"Puntuz-puntuko helbidea puntuz bereizitako 4 zenbakiz osaturik egon behar du."
 
 #. Type: string
 #. Description
@@ -549,7 +622,10 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr "Sare maskara zure sare lokalan zein makina dauden jakiteko erabiltzen da. Galdetu sare kudeatzaileari ez baduzu balio hau ezagutzen. Sare maskara puntuz bereizitako 4 zenbakiz osaturik egon behar du."
+msgstr ""
+"Sare maskara zure sare lokalan zein makina dauden jakiteko erabiltzen da. "
+"Galdetu sare kudeatzaileari ez baduzu balio hau ezagutzen. Sare maskara "
+"puntuz bereizitako 4 zenbakiz osaturik egon behar du."
 
 #. Type: string
 #. Description
@@ -567,7 +643,13 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr "Atebidea IP helbide bat da (puntuz bereizitako 4 zenbaki) atebide routerra edo lehentsitako routerra ezartzen duena. Zure LAN saretik kanpo (adib. Internet) bidaktzen duzun trafiko guztia helbide honetara bidaltzen da.  Egoera arraro batzuetan zuk ez duzu routerrik beharko, orduan hau hutsik utz dezakezu.  Ez badakizu galdera honen erantzun egokia galde iezaiozu zure sare kudeatzaileari."
+msgstr ""
+"Atebidea IP helbide bat da (puntuz bereizitako 4 zenbaki) atebide routerra "
+"edo lehentsitako routerra ezartzen duena. Zure LAN saretik kanpo (adib. "
+"Internet) bidaktzen duzun trafiko guztia helbide honetara bidaltzen da.  "
+"Egoera arraro batzuetan zuk ez duzu routerrik beharko, orduan hau hutsik utz "
+"dezakezu.  Ez badakizu galdera honen erantzun egokia galde iezaiozu zure "
+"sare kudeatzaileari."
 
 #. Type: error
 #. Description
@@ -584,9 +666,14 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo atebia sartzerakoan."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo atebia "
+"sartzerakoan."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -620,4 +707,3 @@ msgstr "Sare konfigurazio tinkoa"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
-
