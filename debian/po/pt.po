@@ -1,10 +1,10 @@
 # Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.64\n"
+"Project-Id-Version: netcfg 0.71\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-05-13 18:30+0000\n"
+"PO-Revision-Date: 2004-06-29 22:30+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -198,8 +198,7 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr ""
-"Por favor, introduza o nome do computador (hostname) para este sistema."
+msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -473,8 +472,7 @@ msgstr "Não foi encontrado nenhum cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
+msgstr "Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
 "client. (Cliente DHCP)"
 
 #. Type: error
@@ -522,7 +520,6 @@ msgstr "Método de configuração de rede:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -530,18 +527,17 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Falhou a autoconfiguração da rede. Isto pode ser devido a um servidor DHCP "
-"lento na rede, pode tentar de novo. Se a sua rede não utiliza DHCP para "
-"autoconfiguração, pode em vez disso configura-la manualmente. Além disso, "
-"alguns servidores DHCP necessitam de um hostname específico, por isso você "
-"pode introduzir o tal hostname antes de tentar de novo o DHCP."
+"A partir daqui pode escolher tentar de novo a autoconfiguração da rede DHCP "
+"(pode funcionar se o servidor de DHCP demorar muito tempo a responder) ou "
+"configurar a rede manualmente. Alguns servidores DHCP necessitam que o "
+"cliente envie o hostname, por isso pode tentar de novo a autoconfiguração da "
+"rede DHCP com um hostname fornecido por si."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "A configuração automática da rede terminou"
+msgstr "A autoconfiguração da rede falhou"
 
 #. Type: note
 #. Description
@@ -550,12 +546,14 @@ msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
 msgstr ""
+"Isto pode ser devido a um servidor de DHCP lento, equipamento de rede com "
+"mau funcionamento, ou a sua rede simplesmente não está configurada para DHCP."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Continuar sem um route predefinido?"
 
 #. Type: boolean
 #. Description
@@ -567,6 +565,11 @@ msgid ""
 "all the Debian packages you need on the local network or on a local medium "
 "such as CD-ROM."
 msgstr ""
+"A autoconfiguração da rede teve sucesso. No entanto, não está definido nenhum "
+"route predefinido: o sistema não sabe como comunicar com hosts na Internet. "
+"Isto vai fazer com que seja impossível continuar com a instalação a menos "
+"que tenha todos os pacotes Debian que necessita na rede local ou em media "
+"local como um CD-ROM."
 
 #. Type: boolean
 #. Description
@@ -575,6 +578,8 @@ msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
 msgstr ""
+"Se está inseguro pode continuar e voltar atrás à etapa de configuração de "
+"rede posteriormente se necessário."
 
 #. Type: text
 #. Description
