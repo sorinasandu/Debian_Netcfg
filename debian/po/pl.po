@@ -1,0 +1,421 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"PO-Revision-Date: 2003-10-19 16:31+0200\n"
+"Last-Translator: Bartosz Zapa³owski <zapal@debian.linux.org.pl>\n"
+"Language-Team: Polish <pddp@debian.linux.org.pl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Wybierz nazwê domeny."
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Nazwa domeny jest czê¶ci± Twojego Internetowego adresu podawan± po prawej "
+"stronie Twojej nazwy hosta. Zazywczaj koñczy siê na .com, .net, .edu lub ."
+"org. Je¶li robisz domow± sieæ, mo¿esz dowolnie dobraæ nazwê, ale pamiêtaj, "
+"by u¿ywaæ tej samej nazwy domeny na wszystkich komputerach."
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr "Wybierz adresy serwerów DNS"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+"Podaj adresy IP (a nie nazwy hostów) maksymalnie trzech serwerów nazw "
+"oddzielonych spacjami. Nie u¿ywaj przecinków. Serwery bêd± odpytywane w "
+"kolejno¶ci podawania. Je¶li nie chcesz korzystaæ z serwerów nazw, pozostaw "
+"to pole puste."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Wybierz interfejs."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+"Wykryto nastêpuj±ce interfejsy. Wybierz typ Twojego podstawowego interfejsu "
+"sieciowego, którego bêdziesz u¿ywaæ do instalacji systemu Debian (przez NFS "
+"lub HTTP)."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr "Wyst±pi³ b³±d."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Co¶ posz³o nie tak jak powinno, gdy próbowa³em wej¶æ do sieci."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Podaj nazwê hosta systemu."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Nazwa hosta jest pojedynczym s³owem, bêd±cym identyfikatorem Twojego systemu "
+"w sieci. Je¶li nie wiesz, jaka powinna byæ nazwa hosta, skontaktuj siê z "
+"administratorem Twojej sieci. Je¶li samodzielnie robisz sieæ domow±, mo¿esz "
+"spokojnie wpisaæ tu dowoln± warto¶æ."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr "Nazwa hosta \"${hostname}\" jest nieprawid³owa."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+"Prawid³owa nazwa hosta mo¿e zawieraæ tylko znaki alfanumeryczne oraz znak "
+"minus i musi mieæ od 2 do 63 znaków. Nie mo¿e siê zaczynaæ ani koñczyæ "
+"znakiem minus."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr "Wyst±pi³ b³±d i nie mogê dalej i¶æ."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "Nie bój siê spróbowaæ ponownie."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No network interfaces were detected."
+msgstr "Nie wykryto ¿adnych interfejsów sieciowych."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Detect network hardware and load kernel drivers for it'."
+msgstr ""
+"Nie wykryto ¿adnych interfejsów. Oznacza to, ¿e system instalacyjny nie móg³ "
+"znale¼æ ¿adnego urz±dzenia sieciowego. Je¶li posiadasz kartê sieciow±, "
+"mo¿liwe jest, ¿e jej modu³ nie zosta³ jeszcze zaznaczony. Wróæ do 'Wykryj "
+"urz±dzenia sieciowe i za³aduj dla nich sterowniki j±dra'."
+
+#. Description
+#: ../netcfg-common.templates:61
+msgid "<none>"
+msgstr "<brak>"
+
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet lub Fast Ethernet"
+
+#. Description
+#: ../netcfg-common.templates:69
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet lub Token Ring"
+
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Description
+#: ../netcfg-common.templates:77
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Description
+#: ../netcfg-common.templates:81
+msgid "Serial-line IP"
+msgstr "IP po linii szeregowej"
+
+#. Description
+#: ../netcfg-common.templates:85
+msgid "Parallel-line IP"
+msgstr "IP po lini równoleg³ej"
+
+#. Description
+#: ../netcfg-common.templates:89
+msgid "Point-to-Point Protocol"
+msgstr "Point-to-Point Protocol"
+
+#. Description
+#: ../netcfg-common.templates:93
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Description
+#: ../netcfg-common.templates:97
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN Point-to-Point Protocol"
+
+#. Description
+#: ../netcfg-common.templates:101
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Description
+#: ../netcfg-common.templates:105
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Description
+#: ../netcfg-common.templates:109
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Description
+#: ../netcfg-common.templates:113
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Description
+#: ../netcfg-common.templates:117
+msgid "Unknown interface"
+msgstr "Nieznany interfejs"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Jaka jest nazwa hosta dhcp?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here.  Most other users can just "
+"leave this blank."
+msgstr ""
+"Mo¿liwe, ¿e musisz podaæ nazwê hosta DHCP. Je¶li korzystasz z modemu "
+"kablowego, mo¿e byæ konieczne podanie numeru dostêpowego. W przeciwnym "
+"wypadku pozostaw to pole puste."
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid "Is this information correct?"
+msgstr "Czy podane informacje s± prawid³owe?"
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" interfejs        = ${interface}\n"
+" nazwa hosta      = ${hostname}\n"
+" domena           = ${domain}\n"
+" nazwa hosta dhcp = ${dhcp_hostname}\n"
+" serwery nazw     = ${nameservers}"
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "Configuring the network with DHCP"
+msgstr "Konfiguruj sieæ przez DHCP"
+
+#. Description
+#: ../netcfg-dhcp.templates:24
+msgid "This may take a few minutes."
+msgstr "To mo¿e zaj±æ kilka minut."
+
+#. Description
+#: ../netcfg-dhcp.templates:28
+msgid "No dhcp client found. I cannot continue."
+msgstr "Nie odnaleziono klienta dhcp. Nie mogê kontynuowaæ."
+
+#. Description
+#: ../netcfg-dhcp.templates:28
+msgid "This package requires pump or dhcp-client."
+msgstr "Ten pakiet wymaga pump lub dhcp-client."
+
+#. Title displayed when configuring this package
+#. Description
+#: ../netcfg-dhcp.templates:34
+msgid "DHCP Network Configuration"
+msgstr "Konfiguracja sieci DHCP"
+
+#. Item in the main menu to select this package
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Configure the network via DHCP"
+msgstr "Konfiguruj sieæ przez DHCP"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "Adres IP"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"Adres IP jest unikalnym identyfikatorem Twojego komputera i sk³ada siê z "
+"czterech czê¶ci rozdzielonych kropkami. Je¶li nie wiesz, co masz wpisaæ, "
+"skontaktuj siê z administratorem Twojej sieci."
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr "Adres drugiego koñca (sieæ punkt-punkt)"
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+"Adres drugiego koñca okre¶la drugi koniec sieci typu punkt-punkt. Je¶li nie "
+"wiesz co wpisaæ, skontaktuj siê z administratorem sieci. Ten adres powinien "
+"byæ wpisany jako cztery liczby rozdzielone kropkami."
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr "Maska sieci?"
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Maska sieci okre¶la, które komputery s± lokalne w Twojej sieci. Je¶li nie "
+"wiesz co wpisaæ, skontaktuj siê z administratorem sieci. Maska sieci powinna "
+"byæ wpisana jako cztery liczby rozdzielone kropkami."
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr "Brama sieciowa?"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+"Adres bramy sieciowej (cztery liczby rozdzielone kropkami) okre¶la adres "
+"routera bêd±cego bram± sieciow±. Router ten jest te¿ okre¶lany jako domy¶lny "
+"router. Ca³y ruch skierowany poza Twój LAN (np. do Internetu) przechodzi "
+"w³a¶nie przez ten router. W rzadkich przypadkach mo¿e nie byæ routera - "
+"wtedy mo¿esz spokojnie zostawiæ to pole puste. Je¶li nie wiesz co wpisaæ, "
+"skontaktuj siê z administratorem sieci."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "Podana brama sieciowa jest nieosi±galna."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Upewnij siê, ¿e wpisa³e¶ poprawny adres IP, maskê sieci i/lub bramê sieciow±."
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr "Czy podane informacje s± poprawne?"
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" interfejs         = ${interface}\n"
+" nazwa hosta       = ${hostname}\n"
+" domena            = ${domain}\n"
+" adres IP          = ${ipaddress}\n"
+" maska sieci       = ${netmask}\n"
+" brama sieciowa    = ${gateway}\n"
+" adres punkt-punkt = ${pointopoint}\n"
+" serwery nazw      = ${nameservers}"
+
+#. Title displayed when configuring this package
+#. Description
+#: ../netcfg-static.templates:57
+msgid "Static Network Configuration"
+msgstr "Statyczna konfiguracja sieci"
+
+#. Item in the main menu to select this package
+#. Description
+#: ../netcfg-static.templates:62
+msgid "Configure a static network"
+msgstr "Konfiguruj sieæ statycznie"
+
+#~ msgid "I will now configure the network."
+#~ msgstr "Teraz skonfigurujê sieæ."
+
+#~ msgid ""
+#~ "This may take some time.  It shouldn't take more than a minute or two."
+#~ msgstr ""
+#~ "Mo¿e to potrwaæ trochê czasu. Nie powinno to trwaæ d³u¿ej ni¿ minutê czy "
+#~ "dwie."
