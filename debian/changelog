@@ -1,8 +1,17 @@
+netcfg (0.06) unstable; urgency=low
+
+  * added German translations from Michael Bramer <grisu@debian.org> (Closes: #83153, #83159)
+  * automatically choose between dhcp-client or pump
+
+ -- David Whedon <dwhedon@debian.org>  Tue, 23 Jan 2001 20:20:00 -0800
+
 netcfg (0.05) unstable; urgency=low
 
-  * added support for dhclient and pump in addition to dhcpcd 
+  * added support for dhclient and pump.
+  * removed support for dhcpcd. 
+  * split things up more cleanly b/w dhcp and static.
 
- -- David Whedon <dwhedon@gordian.com>  Tue, 16 Jan 2001 21:17:50 -0800
+ -- David Whedon <dwhedon@debian.org>  Sun, 21 Jan 2001 22:07:15 -0800
 
 netcfg (0.04) unstable; urgency=low
 
@@ -31,5 +40,5 @@ netcfg (0.01) unstable; urgency=low
 
 Local variables:
 mode: debian-changelog
-add-log-mailing-address "dwhedon@gordian.com"
+add-log-mailing-address "dwhedon@debian.org"
 End:
