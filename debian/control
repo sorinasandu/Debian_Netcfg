@@ -37,7 +37,7 @@ Description: Configure the network via DHCP
 Package: netcfg-static
 XC-Package-Type: udeb
 Architecture: any
-Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection, mii-diag-udeb, libiw27-udeb
+Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection, libiw27-udeb
 Provides: configured-network
 XB-Installer-Menu-Item: 20
 Description: Configure a static network
