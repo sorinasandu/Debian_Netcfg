@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-05-21 18:01+0200\n"
+"PO-Revision-Date: 2004-06-30 00:26+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -526,27 +526,19 @@ msgstr "Mètode de configuració de la xarxa:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr ""
-"La configuració automàtica de la xarxa ha fallat. Això pot ser per culpa "
-"d'un servidor de DHCP a la xarxa, així que potser voleu tornar a intentar-"
-"ho. Si la vostra xarxa no utilitza DHCP per a la configuració automàtica, "
-"podeu configurar-la manualment. A més, alguns servidors de DHCP necessiten "
-"un nom d'ordinador DHCP específic, que podeu introduïr abans de reintentar "
-"el mètode amb DHCP."
+msgstr "Des d'ací podeu triar tornar a intentar la configuració automàtica de la xarxa amb DHCP (que és possible que això funcione si el vostre servidor de DHCP triga molt en respondre) o configurar la xarxa manualment. Alguns servidors de DHCP requereixen que el client envie un nom d'ordinador DHCP, així que també podeu intentar la configuració automàtica de la xarxa amb DHCP amb el nom d'ordinador que proveïu."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "La configuració automàtica de la xarxa ha tingut èxit"
+msgstr "La configuració automàtica de la xarxa ha fallat"
 
 #. Type: note
 #. Description
@@ -554,13 +546,13 @@ msgstr "La configuració automàtica de la xarxa ha tingut èxit"
 msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
-msgstr ""
+msgstr "Això pot ser degut a un servidor de DHCP lent, mal funcionament de l'equipament de xarxa, o que la vostra xarxa no està configurada per a DHCP."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Voleu continuar sense una ruta per defecte?"
 
 #. Type: boolean
 #. Description
@@ -571,7 +563,7 @@ msgid ""
 "will make it impossible to continue with the installation unless you have "
 "all the Debian packages you need on the local network or on a local medium "
 "such as CD-ROM."
-msgstr ""
+msgstr "La configuració de la xarxa ha tingut èxit. No obstant, no s'ha establert cap ruta per defecte: el sistema no sap com comunicar-se amb els ordinadors a Internet. Això farà que siga impossible continuar amb la instal·lació si no teniu tots els paquets de Debian que necessiteu a la xarxa local o en un medi local com un CD-ROM."
 
 #. Type: boolean
 #. Description
@@ -579,7 +571,7 @@ msgstr ""
 msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
-msgstr ""
+msgstr "Si no esteu segur, podeu continuar i tornar al pas de la configuració de la xarxa més tard, si és necessari."
 
 #. Type: text
 #. Description
