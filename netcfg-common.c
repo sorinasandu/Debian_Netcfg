@@ -613,14 +613,11 @@ int netcfg_get_gateway(struct debconfclient *client)
 
 int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 {
-    char *ptr, *none;
+    char *ptr;
     int ret;
        
-    debconf_metaget(client,  "netcfg/internal-none", "description");
-    none = client->value ? strdup(client->value) : strdup("<none>");
-
-    debconf_subst(client, "netcfg/get_nameservers", "nameservers",
-	(gateway ? num2dot(gateway) : none));
+    debconf_set(client, "netcfg/get_nameservers", (gateway ? num2dot(gateway) :  ""));
+    
     ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
     if (*nameservers)
         free(*nameservers);
