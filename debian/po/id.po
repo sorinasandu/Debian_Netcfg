@@ -1,0 +1,665 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: netcfg\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-25 01:38-0700\n"
+"PO-Revision-Date: 2004-03-25 16:24+0700\n"
+"Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
+"Language-Team: Debian Indonesia <debid@yahoogroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:4
+msgid "Auto-configure network with DHCP?"
+msgstr "Konfigurasikan jaringan secara otomatis dengan DHCP?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:4
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose to use DHCP and the installer is unable to get a "
+"working configuration from a DHCP server on your network, you will be given "
+"the opportunity to configure your network manually after the attempt to "
+"configure it by DHCP."
+msgstr "Jaringan dapat dikonfigurasikan dengan DHCP atau dengan memasukkan "
+"informasi secara manual. Bila anda memilih menggunakan DHCP dan installer tidak "
+"mendapatkan konfigurasi dari DHCP server, anda akan diberi kesempatan untuk "
+"mengkonfigurasikan secara manual kemudian."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:14
+msgid "Domain name:"
+msgstr "Nama domain:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:14
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr "Nama domain adalah bagian dari alamat Internet yang berada di sebelah "
+"kanan nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Contoh: jojon.com. "
+"Bila ini untuk jaringan di rumah, anda bisa mereka-reka, tapi pastikan domain "
+"tersebut sama pada semua komputer anda."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:22
+msgid "Name server addresses:"
+msgstr "Alamat name server:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:22
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
+msgstr "Silakan masukkan alamat IP (bukan nama host) dari name server "
+"(maksimum 3 name server, dipisahkan dengan spasi, bukan koma). Server pertama "
+"merupakan server yang akan dikueri pertama kali. Bila anda tidak menggunakan "
+"name server, biarkan ruas ini kosong."
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:31
+msgid "Primary network interface:"
+msgstr "Antarmuka jaringan utama:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:31
+msgid ""
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
+msgstr "Sistem anda memiliki beberapa antarmuka jaringan. Pilih satu yang "
+"akan digunakan sebagai antarmuka jaringan utama saat memasang Debian."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:37
+msgid "Wireless ESSID for ${iface}:"
+msgstr "ESSID nirkabel untuk ${iface}:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:37
+msgid ""
+"${iface} is a wireless network interface. Please enter the name (the ESSID) "
+"of the wireless network you would like ${iface} to use. If you would like to "
+"use any available network, leave this field blank."
+msgstr "${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
+"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika anda ingin "
+"menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid "WEP key for ${iface}:"
+msgstr "Kunci WEP untuk ${iface}:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"If applicable, please enter the WEP security key for device ${iface}. There "
+"are two ways to do this:"
+msgstr "Bila ada, silakan masukkan kunci keamanan WEP untuk device ${iface}. "
+"Ada dua cara melakukan ini:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
+"number, just enter it as it is into this field."
+msgstr "Bila kunci WEP anda dalam format 'nnnn-nnnn-nn' or 'nnnnnnnn' dimana "
+"n merupakan angka, langsung isikan saja pada ruas ini."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"If your WEP key is in the format of a passphrase, prefix it with "
+"'s:' (without quotes)."
+msgstr "Bila kunci WEP anda berupa kata sandi, tambahkan prefiks "
+"'s:' (tanpa kutip)."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"Of course, if there is no WEP key for your wireless network, leave this "
+"field blank."
+msgstr "Tentu saja bila tidak ada kunci WEP untuk jaringan nirkabel anda, "
+"biarkan ruas ini kosong."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:59
+msgid "Invalid WEP key"
+msgstr "Kunci WEP tidak sah."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:59
+msgid ""
+"The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
+"next screen carefully on how to enter your WEP key correctly, and try again."
+msgstr "Kunci WEP '${wepkey}' tidak sah. Silakan baca petunjuk pada layar "
+"berikut tentang bagaimana memasukkan kunci WEP dengan benar dan coba lagi."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:66
+msgid "Invalid ESSID"
+msgstr "ESSID tidak sah."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:66
+msgid ""
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
+"but may contain all kinds of characters."
+msgstr "ESSID \"${essid}\" tidak sah. ESSID hanya boleh sepanjang maksimum "
+"32 karakter, tapi dapat berisi karakter apa saja."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Hostname:"
+msgstr "Nama host:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Please enter the hostname for this system."
+msgstr "Silakan masukkan nama host untuk sistem ini."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:73
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr "Nama host adalah kata tunggal yang mengidentifikasi sistem anda "
+"pada jaringan. Bila anda tidak tahu apa nama host anda, tanyakan pada "
+"administrator jaringan. Bila anda memasang untuk jaringan di rumah, "
+"anda dapat memberi nama sendiri."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:83
+msgid "Invalid hostname"
+msgstr "Nama host tidak sah"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:83
+msgid "The name \"${hostname}\" is invalid."
+msgstr "Nama \"${hostname}\" tidak sah."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:83
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr "Nama host yang sah hanya berisi karakter alfanumerik dan tanda kurang. "
+"Panjangnya antara 2 sampai 63 karakter, dan tidak boleh dimulai atau diakhiri "
+"dengan tanda kurang."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:92
+msgid "Error"
+msgstr "Error"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:92
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr "Error terjadi dan konfigurasi jaringan telah digugurkan. Anda "
+"dapat mencoba lagi dengan memilih dari menu utama instalasi."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:98
+msgid "No network interfaces detected"
+msgstr "Tidak terdeteksi adanya antarmuka jaringan"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:98
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr "Tidak ditemukan antarmuka jaringan. Sistem instalasi tidak dapat "
+"menemukan perangkat keras jaringan."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:98
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr "Anda perlu memuat modul spesifik untuk kartu jaringan anda, bila "
+"anda memilikinya. Untuk itu anda perlu kembali ke langkah deteksi "
+"perangkat keras jaringan."
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:108
+msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr "Jaringan Infrastruktur (Dikelola), Jaringan Ad-hoc (Peer to peer)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:109
+msgid "Wireless network kind:"
+msgstr "Jenis jaringan nirkabel:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network is Ad-hoc."
+msgstr "Jaringan nirkabel dapat merupakan jaringan dikelola atau ad-hoc. "
+"Bila anda menggunakan titik akses yang nyata, jaringan anda Dikelola, "
+"Bila komputer lain merupakan 'akses poin', maka jaringan anda Ad-hoc."
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:116
+msgid "<none>"
+msgstr "<tak-satu-pun>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:120
+msgid "Wireless ethernet (802.11x)"
+msgstr "Ethernet nirkabel (802.11x)"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:124
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet atau Fast Ethernet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:128
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet atau Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:132
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:136
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:140
+msgid "Serial-line IP"
+msgstr "Serial-line IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:144
+msgid "Parallel-port IP"
+msgstr "Parallel-pot IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:148
+msgid "Point-to-Point Protocol"
+msgstr "Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:152
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:156
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:160
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:164
+msgid "Real channel-to-channel"
+msgstr "Channel-to-channel nyata"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:168
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:172
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:176
+msgid "Unknown interface"
+msgstr "Antar muka tak dikenal"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:181
+msgid "Network Configuration"
+msgstr "Konfigurasi Jaringan"
+
+#. Type: text
+#. Description
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:186
+msgid "Configuring network ..."
+msgstr "Sedang mengkonfigurasikan jaringan ..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:191
+msgid "Configure the network"
+msgstr "Mengkonfigurasikan jaringan"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nama host DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr "Anda perlu menyediakan nama host DHCP. Bila anda menggunakan modem kabel, "
+"anda perlu memberikan nomor akun anda di sini."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Kebanyakan pengguna dapat membiarkan ruas ini kosong."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Apakah informasi ini benar?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Konfigurasi jaringan saat ini: "
+
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" antarmuka      = ${interface}\n"
+" nama host      = ${hostname}\n"
+" domain         = ${domain}\n"
+" nama host dhcp = ${dhcp_hostname}\n"
+" nameserver    = ${nameservers}"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "Configuring the network with DHCP"
+msgstr "Sedang mengkonfigurasikan jaringan dengan DHCP"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:27
+msgid "This may take some time."
+msgstr "Ini mungkin memakan waktu."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr "Tidak ditemukan klien DHCP"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "Tidak ditemukan klien DHCP. Paket ini memerlukan pump atau dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr "Proses konfigurasi DHCP akan digugurkan."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "Anda ingin mengulang konfigurasi jaringan dengan DHCP?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
+msgstr "Tidak ditemukan alamat IP saat melakukan konfigurasi jaringan secara "
+"otomatis dengan DHCP. server DHCP kadangkala lambat. Anda dapat mengulangi lagi."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "Melakukan konfigurasi jaringan dengan DHCP."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "Alamat IP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr "Alamat IP unik pada tiap komputer dan terdiri dari 4 angka yang "
+"dipisahkan dengan titik. Bila anda tidak mengetahui alamat mana yang "
+"mesti digunakan, tanyakan pada administrator jaringan anda."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Malformed IP address"
+msgstr "Alamat IP tidak benar."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The IP address you provided is malformed. It should be in the form x.x.x.x "
+"where each 'x' is no larger than 255. Please try again."
+msgstr "Alamat IP yang anda berikan tidak benar. Bentuknya harus sebagai "
+"berikut: x.x.x.x dimana tiap 'x' tidak lebih dari 255. Silakan ulangi lagi."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:16
+msgid "Point-to-point address:"
+msgstr "Alamat point-to-point:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:16
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr "Alamat point-to-point digunakan untuk menentukan titik akhir lain "
+"dari jaringan point-to-point. Tanyakan pada administrator jaringan anda "
+"bila tidak mengetahui nilainya. Alamat point-to-point mesti dimasukkan "
+"dalam bentuk 4 angka yang dipisah dengan titik."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:25
+msgid "Netmask:"
+msgstr "Netmask:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:25
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr "Netmask digunakan untuk menentukan mesin-mesin mana yang lokal pada "
+"jaringan. Tanyakan pada administrator jaringan bila anda tidak mengetahui "
+"nilainya. Netmask mesti dimasukkan dalam bentuk 4 angka yang dipisah dengan titik."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:33
+msgid "Gateway:"
+msgstr "Gerbang:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:33
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr "Gerbang merupakan alamat IP (4 angka yang dipisah dengan titik)"
+"yang menunjukan router gerbang, juga disebut sebagai router bawaan. Semua lalu "
+"lintas yang keluar dari LAN (misalnya ke Internet) akan dikirim melalui router "
+"ini. Sangat jarang suatu jaringan tidak memiliki router; dalam kasus ini, "
+"biarkan ruas ini kosong. Bila anda tidak ragu, tanyakan pada adminitrator jaringan."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Unreachable gateway"
+msgstr "Gerbang tidak dapat dicapai."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid "The gateway address you entered is unreachable."
+msgstr "Alamat gerbang yang anda berikan tidak dapat dicapai."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr "Anda mungkin melakukan kesalahan dalam memasukkan alamat IP, netmask "
+"dan/atau gerbang."
+
+#: ../netcfg-static.templates:53
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" antarmuka     = ${interface}\n"
+" nama host     = ${hostname}\n"
+" domain        = ${domain}\n"
+" alamat ip     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gerbang       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameserver    = ${nameservers}"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-static.templates:68
+msgid "Static network configuration"
+msgstr "Konfigurasi jaringan statis"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:73
+msgid "Configure a network using static addressing"
+msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
