@@ -14,7 +14,7 @@ msgstr ""
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
@@ -40,9 +40,9 @@ msgid ""
 msgstr ""
 "Tinklas gali būti konfiguruojamas su DHCP arba įvedant visą informaciją "
 "rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegėjas, po bandymo "
-"konfigūruoti su DHCP, negalės gauti veikiančios konfigūracijos iš DHCP serverio "
-"jūsų tinkle, jums bus pasiūlyta konfigūruoti jūsų tinklą rankiniu būdu.Jei "
-"abejojate,pasirinkite DHCP."
+"konfigūruoti su DHCP, negalės gauti veikiančios konfigūracijos iš DHCP "
+"serverio jūsų tinkle, jums bus pasiūlyta konfigūruoti jūsų tinklą rankiniu "
+"būdu.Jei abejojate,pasirinkite DHCP."
 
 #. Type: string
 #. Description
@@ -81,8 +81,8 @@ msgid ""
 msgstr ""
 "Prašau įvesti iki 3-jų serverių IP adresus (ne kompiuterių vardus), "
 "atskirdami tarpais. Nenaudokite kablelių. Pirmasis serveris sąrašę bus "
-"apklausiamas pirmuoju. Jei Jūs nenorite naudoti jokio serverio, tai "
-"palikite šį lauką tuščią."
+"apklausiamas pirmuoju. Jei Jūs nenorite naudoti jokio serverio, tai palikite "
+"šį lauką tuščią."
 
 #. Type: select
 #. Description
@@ -100,8 +100,8 @@ msgid ""
 "Debian system (via NFS or HTTP)."
 msgstr ""
 "Prašau pasirinkti norimą konfigūruoti sąsają. Žemiau pateiktos visos dabar "
-"aptiktos tinklo sąsajos. Pasirinkite Jūsų pirminės tinklo sąsajos tipą. "
-"Ši sąsaja  bus ·naudojama Debian'o sistemos diegimui (per NFS ar HTTP)."
+"aptiktos tinklo sąsajos. Pasirinkite Jūsų pirminės tinklo sąsajos tipą. Ši "
+"sąsaja  bus ·naudojama Debian'o sistemos diegimui (per NFS ar HTTP)."
 
 #. Type: error
 #. Description
@@ -162,8 +162,8 @@ msgid ""
 "with a minus sign."
 msgstr ""
 "Tinkamą kompiuterio vardą gali sudaryti tik raidžių ir skaitmenų simboliai, "
-"bei minuso ženklas. Jis turi būtį nuo 2-jų iki 63-jų simbolių ilgio, ir negali "
-"prasidėti ar baigtis minuso ženklu."
+"bei minuso ženklas. Jis turi būtį nuo 2-jų iki 63-jų simbolių ilgio, ir "
+"negali prasidėti ar baigtis minuso ženklu."
 
 #. Type: error
 #. Description
@@ -383,7 +383,8 @@ msgstr "Nerastas DHCP klientas"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas ·pump "
+msgstr ""
+"Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas ·pump "
 "arba dhcp-client."
 
 #. Type: error
@@ -558,4 +559,3 @@ msgstr "Statinis tinklo konfigūravimas"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
-

@@ -1,5 +1,4 @@
 # Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
-
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-0.35\n"
@@ -10,7 +9,7 @@ msgstr ""
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
@@ -36,11 +35,10 @@ msgid ""
 msgstr ""
 "A rede pode ser configurada via DHCP ou informando manualmente todos os "
 "dados necessários. Caso você opte por usar a configuração via DHCP e o "
-"instalador não seja capaz de obter uma configuração de um "
-"servidor DHCP na sua rede, terá a oportunidade de informar os dados "
-"necessários para configuração de rede manualmente após a tentativa de "
-"configuração via DHCP. Caso não tenha certeza sobre o que escolher, escolha "
-"DHCP."
+"instalador não seja capaz de obter uma configuração de um servidor DHCP na "
+"sua rede, terá a oportunidade de informar os dados necessários para "
+"configuração de rede manualmente após a tentativa de configuração via DHCP. "
+"Caso não tenha certeza sobre o que escolher, escolha DHCP."
 
 #. Type: string
 #. Description
@@ -57,10 +55,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"O nome do domínio é a parte de seu endereço Internet à direita do nome do seu "
-"computador. Geralmente algo que finaliza com .com, .pt, .net, .edu ou .org. "
-"Caso esteja a configurar uma rede doméstica, pode usar qualquer "
-"nome, mas certifique-se de usar o mesmo nome de domínio em todos os computadores."
+"O nome do domínio é a parte de seu endereço Internet à direita do nome do "
+"seu computador. Geralmente algo que finaliza com .com, .pt, .net, .edu ou ."
+"org. Caso esteja a configurar uma rede doméstica, pode usar qualquer nome, "
+"mas certifique-se de usar o mesmo nome de domínio em todos os computadores."
 
 #. Type: string
 #. Description
@@ -77,10 +75,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Por favor insira os endereços IP (e não os nomes dos computadores) de e até 3 "
-"servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
-"servidor na lista será o primeiro a ser consultado. Caso você não queira"
-"usar nenhum servidor de nomes, deixe este campo em branco."
+"Por favor insira os endereços IP (e não os nomes dos computadores) de e até "
+"3 servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
+"servidor na lista será o primeiro a ser consultado. Caso você não queirausar "
+"nenhum servidor de nomes, deixe este campo em branco."
 
 #. Type: select
 #. Description
@@ -135,10 +133,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"O nome do computador (hostname) é uma palavra única que identifica o seu sistema "
-"na rede. Caso não saiba qual o nome do computador a utilizar, consulte o "
-"administrador da rede. Caso esteja a configurar a sua própria rede "
-"doméstica, pode usar qualquer nome neste campo."
+"O nome do computador (hostname) é uma palavra única que identifica o seu "
+"sistema na rede. Caso não saiba qual o nome do computador a utilizar, "
+"consulte o administrador da rede. Caso esteja a configurar a sua própria "
+"rede doméstica, pode usar qualquer nome neste campo."
 
 #. Type: error
 #. Description
@@ -160,9 +158,9 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Um nome do computador válido pode conter somente caracteres alfanuméricos e o "
-"sinal menos (-). Tem de ter de 2 a 63 caracteres e não pode iniciar ou finalizar com "
-"um sinal de menos (-)."
+"Um nome do computador válido pode conter somente caracteres alfanuméricos e "
+"o sinal menos (-). Tem de ter de 2 a 63 caracteres e não pode iniciar ou "
+"finalizar com um sinal de menos (-)."
 
 #. Type: error
 #. Description
@@ -203,8 +201,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Você pode precisar de carregar um módulo específico para a sua placa de rede, "
-"caso realmente possua uma. Para fazê-lo, retorne ao passo de detecção "
+"Você pode precisar de carregar um módulo específico para a sua placa de "
+"rede, caso realmente possua uma. Para fazê-lo, retorne ao passo de detecção "
 "de hardware de rede."
 
 #. Type: text
@@ -324,16 +322,16 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Voce pode precisar de fornecer um nome de computador DHCP. Caso esteja a utilizar"
-"um modem por cabo, pode precisar de especificar um número de conta neste campo."
+"Voce pode precisar de fornecer um nome de computador DHCP. Caso esteja a "
+"utilizarum modem por cabo, pode precisar de especificar um número de conta "
+"neste campo."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
 msgstr ""
-"A maioria dos outros utilizadores pode somente deixar este campo em "
-"branco."
+"A maioria dos outros utilizadores pode somente deixar este campo em branco."
 
 #. Type: boolean
 #. Description
@@ -503,9 +501,8 @@ msgstr ""
 "o roteador gateway, também conhecido como o roteador padrão. Todo o tráfego "
 "que vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
 "atravéz desse roteador. Em raras circunstâncias, pode não possuir um "
-"roteador, nesse caso, este campo deve ser deixado em branco. Caso não "
-"saiba a resposta correta para esta pergunta, consulte o admistrador da sua "
-"rede."
+"roteador, nesse caso, este campo deve ser deixado em branco. Caso não saiba "
+"a resposta correta para esta pergunta, consulte o admistrador da sua rede."
 
 #. Type: error
 #. Description
@@ -525,8 +522,8 @@ msgstr "O gateway escolhido é inalcançavel."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Pode ter cometido um erro ao inserir o seu endereço IP, máscara de rede "
-"e/ou o gateway."
+"Pode ter cometido um erro ao inserir o seu endereço IP, máscara de rede e/ou "
+"o gateway."
 
 #. Type: boolean
 #. Description

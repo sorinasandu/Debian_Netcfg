@@ -41,11 +41,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Netværket kan enten sættes op med DHCP eller ved manuelt at angive alle oplysningerne. "
-"Hvis du vælger DHCP, og installationsprogrammet ikke kan få en brugbar opsætning "
-"fra din DHCP-server på dit netværk, får du mulighed for at sætte netværket op "
-"manuelt, efter at det er forsøgt at sætte det op med DHCP. Hvis du er usikker, "
-"så vælg DHCP."
+"Netværket kan enten sættes op med DHCP eller ved manuelt at angive alle "
+"oplysningerne. Hvis du vælger DHCP, og installationsprogrammet ikke kan få "
+"en brugbar opsætning fra din DHCP-server på dit netværk, får du mulighed for "
+"at sætte netværket op manuelt, efter at det er forsøgt at sætte det op med "
+"DHCP. Hvis du er usikker, så vælg DHCP."
 
 #. Type: string
 #. Description
@@ -164,8 +164,8 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Gyldige værtsnavne indeholder kun bogstaver, tal og minustegn. Det skal være mellem "
-"2 og 63 tegn langt, og må ikke begynde eller ende med et minustegn."
+"Gyldige værtsnavne indeholder kun bogstaver, tal og minustegn. Det skal være "
+"mellem 2 og 63 tegn langt, og må ikke begynde eller ende med et minustegn."
 
 #. Type: error
 #. Description
@@ -207,8 +207,8 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Det kan være nødvendigt at indlæse et bestemt modul til dit netkort, hvis du "
-"virkelig har sådan et. For at gøre dette, skal du gå tilbage til "
-"trinnet for søgning efter netværksudstyr."
+"virkelig har sådan et. For at gøre dette, skal du gå tilbage til trinnet for "
+"søgning efter netværksudstyr."
 
 #. Type: text
 #. Description
@@ -386,7 +386,8 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -518,7 +519,8 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -605,4 +607,3 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-
