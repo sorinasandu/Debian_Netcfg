@@ -4,8 +4,11 @@ netcfg (0.64) UNRELEASED; urgency=low
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
     - Silently load af_packet. (Closes: #244441, #244696)
+  * Pierre Machard
+    - Add only hostname after localhost when loopback is alone.
+    (Closes: #247734)
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sat, 17 Apr 2004 23:20:56 -0700
+ -- Pierre Machard <pmachard@debian.org>  Fri,  7 May 2004 00:38:24 +0200
 
 netcfg (0.63) unstable; urgency=low
 
