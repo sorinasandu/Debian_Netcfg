@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-04-14 02:01+0200\n"
+"PO-Revision-Date: 2004-05-21 18:01+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -465,9 +465,8 @@ msgstr "Això pot trigar un temps."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Configuració de xarxa estàtica"
+msgstr "La configuració automàtica de la xarxa ha tingut èxit!"
 
 #. Type: error
 #. Description
@@ -491,23 +490,20 @@ msgstr "S'avortarà el procés de configuració per DHCP."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Configuració de xarxa estàtica"
+msgstr "Reintenta la configuració automàtica de la xarxa"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Configuració dinàmica de la xarxa (DHCP)"
+msgstr "Reintenta la configuració automàtica amb un nom d'ordinador DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Configura la xarxa"
+msgstr "Configura la xarxa manualment"
 
 #. Type: select
 #. Choices
@@ -518,16 +514,14 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Configura la xarxa"
+msgstr "No configures la xarxa ara mateix"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuració de la xarxa"
+msgstr "Mètode de configuració de la xarxa:"
 
 #. Type: select
 #. Description
@@ -538,14 +532,13 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
+msgstr "La configuració automàtica de la xarxa ha fallat. Això pot ser per culpa d'un servidor de DHCP a la xarxa, així que potser voleu tornar a intentar-ho. Si la vostra xarxa no utilitza DHCP per a la configuració automàtica, podeu configurar-la manualment. A més, alguns servidors de DHCP necessiten un nom d'ordinador DHCP específic, que podeu introduïr abans de reintentar el mètode amb DHCP."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configura la xarxa"
+msgstr "Reconfigura la xarxa inalàmbrica"
 
 #. Type: text
 #. Description
@@ -729,10 +722,6 @@ msgstr "Configura una xarxa utilitzant adreçament estàtic"
 #~ " domini             = ${domain}\n"
 #~ " nom de dhcp        = ${dhcp_hostname}\n"
 #~ " servidors de noms  = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Mètode de configuració de la xarxa:"
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
