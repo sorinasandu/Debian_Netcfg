@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-14 02:01+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -554,18 +554,18 @@ msgstr "Configura la xarxa"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "Mètode de configuració de la xarxa:"
+msgid "Network configuration method:"
+msgstr "Configuració de la xarxa"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
@@ -737,6 +737,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "Mètode de configuració de la xarxa:"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
 
@@ -750,9 +754,6 @@ msgstr "Configura una xarxa utilitzant adreçament estàtic"
 #~ "No s'ha trobat cap adreça IP durant la configuració de la xarxa per DHCP. "
 #~ "A vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a "
 #~ "provar."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Configuració de la xarxa"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Adreçament dinàmic (DHCP), adreçament estàtic (manual)"

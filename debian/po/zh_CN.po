@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-05-13 11:02+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -533,18 +533,20 @@ msgstr "现在不进行网络设置"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-msgid "Next network configuration step:"
+#, fuzzy
+msgid "Network configuration method:"
 msgstr "下一个网络设置步骤"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 "网络自动设置失败。导致失败的典型原因是网络中 DHCP 服务器的速度过慢，您可能会"
 "想重试一次。如果您觉得有必要，也可以指明一个 DHCP 主机名发送到服务器。否则，"

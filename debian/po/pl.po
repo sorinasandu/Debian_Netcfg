@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-16 12:09+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -559,18 +559,18 @@ msgstr "Konfiguruj sieæ"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
+msgid "Network configuration method:"
 msgstr "Statyczna konfiguracja sieci"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text

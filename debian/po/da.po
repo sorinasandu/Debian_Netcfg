@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-05-13 11:29+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -504,7 +504,8 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -545,24 +546,26 @@ msgstr "Sæt ikke netværket op på nuværende tidspunkt"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-msgid "Next network configuration step:"
-msgstr "Næste trin i netværksopsætningen:"
+#, fuzzy
+msgid "Network configuration method:"
+msgstr "Netværksopsætning"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
-"Den automatiske opsætning af netværket mislykkedes. Dette skyldes typisk "
-"en langsom DHCP-server på netværket, så du kan vælge at prøve igen. Du "
-"kan også angive et DHCP-værtsnavn, der bliver sendt til serveren, hvis "
-"du mener at den kræver det. Ellers kan du sætte netværket op manuelt "
-"eller vælge slet ikke at sætte netværket op på nuværende tidspunkt."
+"Den automatiske opsætning af netværket mislykkedes. Dette skyldes typisk en "
+"langsom DHCP-server på netværket, så du kan vælge at prøve igen. Du kan også "
+"angive et DHCP-værtsnavn, der bliver sendt til serveren, hvis du mener at "
+"den kræver det. Ellers kan du sætte netværket op manuelt eller vælge slet "
+"ikke at sætte netværket op på nuværende tidspunkt."
 
 #. Type: text
 #. Description
@@ -694,7 +697,8 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -728,6 +732,9 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Sæt nætværket op med statisk adressering"
 
+#~ msgid "Next network configuration step:"
+#~ msgstr "Næste trin i netværksopsætningen:"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet eller Token Ring"
 
@@ -741,9 +748,6 @@ msgstr "Sæt nætværket op med statisk adressering"
 #~ "Det blev ikke fundet nogen IP-adresse under DHCP-netværksopsætningen. "
 #~ "DHCP-servere kan nogen gange være meget langsomme. Hvis du vil, kan du "
 #~ "prøve igen."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Netværksopsætning"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Dynamisk adressering (DHCP), statisk adressering (manuel)"
@@ -807,4 +811,3 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-

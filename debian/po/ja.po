@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-05-13 15:23+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -554,18 +554,20 @@ msgstr "今ネットワークを設定しない"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-msgid "Next network configuration step:"
+#, fuzzy
+msgid "Network configuration method:"
 msgstr "次のネットワークの設定手順"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 "ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが"
 "遅いためであることがほとんどです。そのため、おそらく再試行したいと思うでしょ"

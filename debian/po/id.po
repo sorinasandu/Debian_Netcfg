@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-18 22:31+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac."
@@ -548,18 +548,18 @@ msgstr "Mengkonfigurasi jaringan"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "Konfigurasi jaringan statis"
+msgid "Network configuration method:"
+msgstr "Konfigurasi Jaringan"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
@@ -729,6 +729,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "Konfigurasi jaringan statis"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet atau Token Ring"
 
@@ -742,6 +746,3 @@ msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 #~ "Tidak ada alamat IP yang ditemukan saat melakukan konfigurasi jaringan "
 #~ "secara otomatis dengan DHCP. Server DHCP kadangkala sangat lambat. Anda "
 #~ "dapat mengulangi lagi."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Konfigurasi Jaringan"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-03-30 21:16+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -564,18 +564,18 @@ msgstr "Cyflunio'r rhwydwaith"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "Dull cyfluniad rhwydwaith:"
+msgid "Network configuration method:"
+msgstr "Cyfluniad Rhwydwaith"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
@@ -747,6 +747,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "Dull cyfluniad rhwydwaith:"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "Cerdyn PC-Card (PCMCIA) Ethernet neu Token Ring"
 
@@ -759,9 +763,6 @@ msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
 #~ msgstr ""
 #~ "Ni chanfuwyd cyfeiriad IP yn ystod cyfluniad rhwydwaith DHCP. Weithiau, "
 #~ "mae gweinyddion DHCP yn araf iawn. Os hoffech, gallwch ailgeisio."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Cyfluniad Rhwydwaith"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Cyfeiriadaeth deinamig (DHCP), Cyfeiriadaeth statig (â llaw)"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-05-13 00:58+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -559,18 +559,20 @@ msgstr "Nu configura reţeaua acum"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-msgid "Next network configuration step:"
-msgstr "Următorul pas în configurarea reţelei:"
+#, fuzzy
+msgid "Network configuration method:"
+msgstr "Configuraţia reţelei"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 "Autoconfigurarea reţelei a eşuat. Aceasta se întămplă de obicei datorită "
 "unui server DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. "
@@ -746,6 +748,9 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configurează reţeaua folosind adresare statică"
 
+#~ msgid "Next network configuration step:"
+#~ msgstr "Următorul pas în configurarea reţelei:"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet sau Token Ring"
 
@@ -759,6 +764,3 @@ msgstr "Configurează reţeaua folosind adresare statică"
 #~ "Nu s-a găsit nici o adresă IP în timpul configurării automate cu DHCP. "
 #~ "Uneori serverele DHCP sunt foarte lente. Dacă doriţi, puteţi să încercaţi "
 #~ "din nou."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Configuraţia reţelei"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-09 17:30+0200\n"
 "Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -573,22 +573,25 @@ msgstr ""
 msgid "Do not configure the network at this time"
 msgstr "Podesi mrežu"
 
+#  Type: text
+#  Description
+#  Title displayed when configuring this package
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "Statička konfiguracija mreže"
+msgid "Network configuration method:"
+msgstr "Mrežna konfiguracija"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #  Type: text
@@ -761,6 +764,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "Statička konfiguracija mreže"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet ili Token Ring"
 
@@ -774,9 +781,3 @@ msgstr "Podesi mrežu koristeći statičko adresiranje"
 #~ "IP adresa nije ponuđena tokom automatske mrežne konfiguracije pomoću DHCP-"
 #~ "a. DHCP serveri su ponekad veoma spori. Ako želite, možete pokušati "
 #~ "ponovo."
-
-#  Type: text
-#  Description
-#  Title displayed when configuring this package
-#~ msgid "Network Configuration"
-#~ msgstr "Mrežna konfiguracija"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-11 09:57+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
@@ -540,18 +540,18 @@ msgstr "設定網路"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "網路設定方式："
+msgid "Network configuration method:"
+msgstr "網路設定"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
@@ -715,6 +715,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "使用靜態位址來設定網路"
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "網路設定方式："
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) 網路卡或 Token Ring"
 
@@ -727,9 +731,6 @@ msgstr "使用靜態位址來設定網路"
 #~ msgstr ""
 #~ "在藉由 DHCP 來自動設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常"
 #~ "慢，如果您希望的話可以重新嘗試。"
-
-#~ msgid "Network Configuration"
-#~ msgstr "網路設定"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "動態位址 (DHCP), 靜態位址 (手動設定)"

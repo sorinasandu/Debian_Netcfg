@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_netcfg_gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 00:32-0700\n"
+"POT-Creation-Date: 2004-05-13 10:22-0300\n"
 "PO-Revision-Date: 2004-04-15 10:56+0200\n"
 "Last-Translator: Héctor Fernández López <trorrr@yahoo.es>\n"
 "Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
@@ -557,18 +557,18 @@ msgstr "Configura-la rede"
 #. Description
 #: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Next network configuration step:"
-msgstr "Configuración estática da rede"
+msgid "Network configuration method:"
+msgstr "Configuración de rede"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid ""
-"Network autoconfiguration failed. This is typically due to a slow DHCP "
-"server on the network, so you probably want to try again. You may also "
-"specify a DHCP hostname to send to the server if you think it needs one. "
-"Otherwise, you may configure the network manually, or choose not to "
-"configure it at all right now."
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
 msgstr ""
 
 #. Type: text
@@ -739,6 +739,10 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configurar unha rede usando direccionamento estático"
 
+#, fuzzy
+#~ msgid "Next network configuration step:"
+#~ msgstr "Configuración estática da rede"
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet ou Token Ring"
 
@@ -752,6 +756,3 @@ msgstr "Configurar unha rede usando direccionamento estático"
 #~ "Non foi atopada unha dirección IP durante a configuración automática da "
 #~ "rede por DHCP.  Ás veces, os servidores DHCP son moi lentos, se queres "
 #~ "podes probar de novo."
-
-#~ msgid "Network Configuration"
-#~ msgstr "Configuración de rede"
