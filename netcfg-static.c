@@ -23,7 +23,7 @@ static char *interface = NULL;
 static char *hostname = NULL;
 static char *domain = NULL;
 static u_int32_t ipaddress = 0;
-static u_int32_t nameservers[4] = { 0 };
+static u_int32_t nameserver_array[4] = { 0 };
 static u_int32_t network = 0;
 static u_int32_t broadcast = 0;
 static u_int32_t netmask = 0;
@@ -76,7 +76,6 @@ netcfg_get_static ()
     }
 
   broadcast = (network | ~netmask);
-
 
 }
 
@@ -148,19 +147,30 @@ main (int argc, char *argv[])
 {
   int finished = 0;
   char *ptr;
+  char *nameservers=NULL;
   client = debconfclient_new ();
-
   client->command (client, "title", "Static Network Configuration", NULL);
 
 
   do
     {
-      netcfg_get_common (client, interface, hostname, domain, nameservers);
+      netcfg_get_common (client, &interface, &hostname, &domain, &nameservers);
+
+      client->command (client, "subst", "netcfg/confirm_static", "interface",
+	      interface, NULL);
+      
       client->command (client, "subst", "netcfg/confirm_static",
 		       "hostname", hostname, NULL);
+      
       client->command (client, "subst", "netcfg/confirm_static", "domain",
 		       (domain ? domain : "<none>"), NULL);
+      
+      netcfg_nameservers_to_array(nameservers, nameserver_array);
+      client->command (client, "subst", "netcfg/confirm_static",
+		       "nameservers", (nameservers ? nameservers : "<none>") , NULL);
+
       netcfg_get_static ();
+
       ptr = debconf_input ("medium", "netcfg/confirm_static");
 
       if (strstr (ptr, "true"))
@@ -169,7 +179,7 @@ main (int argc, char *argv[])
     }
   while (!finished);
 
-  netcfg_write_common (ipaddress, domain, hostname, nameservers);
+  netcfg_write_common (ipaddress, domain, hostname, nameserver_array);
   netcfg_write_static ();
   netcfg_activate_static ();
 

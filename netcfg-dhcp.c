@@ -22,7 +22,7 @@ static char *interface = NULL;
 static char *hostname = NULL;
 static char *domain = NULL;
 static u_int32_t ipaddress = 0;
-static u_int32_t nameservers[4] = { 0 };
+static u_int32_t nameserver_array[4] = { 0 };
 static struct debconfclient *client;
 
 
@@ -49,7 +49,11 @@ netcfg_get_dhcp ()
   client->command (client, "get", "netcfg/dhcp_hostname", NULL);
 
   if (client->value)
-    dhcp_hostname = strdup (client->value);
+      dhcp_hostname = strdup (client->value);
+  
+  client->command (client, "subst", "netcfg/confirm_dhcp",
+	  "dhcp_hostname",
+	  (dhcp_hostname ? dhcp_hostname : "<none>"), NULL);
 }
 
 
@@ -66,18 +70,7 @@ netcfg_write_dhcp ()
       fprintf (fp, "iface %s inet dhcp\n", interface);
       fclose (fp);
     }
-#ifdef DHCPCD
-  netcfg_mkdir (DHCPCD_DIR);
-  if ((fp = file_open (DHCPCD_FILE)))
-    {
-      fprintf (fp,
-	       "\n# dhcpcd configuration: created during the Debian installation\n");
-      fprintf (fp, "IFACE=%s\n", interface);
-      if (dhcp_hostname)
-	fprintf (fp, "OPTIONS='-h %s'\n", dhcp_hostname);
-      fclose (fp);
-    }
-#elif defined PUMP
+#if defined PUMP
 /* nothing to do */
 
 #elif defined DHCLIENT
@@ -105,16 +98,7 @@ netcfg_activate_dhcp ()
   execlog ("/sbin/ifconfig lo 127.0.0.1");
   ptr = buf;
 
-#ifdef DHCPCD
-
-  ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
-  if (dhcp_hostname)
-    ptr +=
-      snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
-
-  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " %s", interface);
-
-#elif defined PUMP
+#if defined PUMP
 
   ptr += snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
   if (dhcp_hostname)
@@ -139,23 +123,31 @@ int
 main (int argc, char *argv[])
 {
   char *ptr;
+  char *nameservers=NULL;
   int finished = 1;
   client = debconfclient_new ();
   client->command (client, "title", "DHCP Network Configuration", NULL);
 
   do
     {
-      netcfg_get_common (client, interface, hostname, domain, nameservers);
-      netcfg_get_dhcp ();
+      netcfg_get_common (client, &interface, &hostname, &domain, &nameservers);
+           
       client->command (client, "subst", "netcfg/confirm_dhcp", "interface",
 		       interface, NULL);
+      
       client->command (client, "subst", "netcfg/confirm_dhcp", "hostname",
 		       hostname, NULL);
+      
       client->command (client, "subst", "netcfg/confirm_dhcp", "domain",
 		       (domain ? domain : "<none>"), NULL);
+      
+      netcfg_nameservers_to_array(nameservers, nameserver_array);
+      
       client->command (client, "subst", "netcfg/confirm_dhcp",
-		       "dhcp_hostname",
-		       (dhcp_hostname ? dhcp_hostname : "<none>"), NULL);
+		       "nameservers", (nameservers ? nameservers : "<none>"), NULL);
+      netcfg_get_dhcp ();
+     
+     
       ptr = debconf_input ("medium", "netcfg/confirm_dhcp");
 
       if (strstr (ptr, "true"))
@@ -164,7 +156,7 @@ main (int argc, char *argv[])
   while (!finished);
 
   netcfg_write_dhcp ();
-  netcfg_write_common (ipaddress, domain, hostname, nameservers);
+  netcfg_write_common (ipaddress, domain, hostname, nameserver_array);
 
   debconf_input ("medium", "netcfg/do_dhcp");
   netcfg_activate_dhcp ();

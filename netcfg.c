@@ -272,7 +272,7 @@ netcfg_die (struct debconfclient *client)
 
 
 static void
-netcfg_get_interface (struct debconfclient *client, char *interface)
+netcfg_get_interface (struct debconfclient *client, char **interface)
 {
   char *inter;
   int len;
@@ -280,10 +280,10 @@ netcfg_get_interface (struct debconfclient *client, char *interface)
   char *ptr;
   int num_interfaces = 0;
 
-  if (interface)
+  if (*interface)
     {
-      free (interface);
-      interface = NULL;
+      free (*interface);
+      *interface = NULL;
     }
 
   if (!(ptr = malloc (128)))
@@ -329,15 +329,13 @@ netcfg_get_interface (struct debconfclient *client, char *interface)
     inter = ptr;
 
   /* grab just the interface name, not the description too */
-  interface = inter;
+  *interface = inter;
   ptr = strchr (inter, ':');
   if (ptr == NULL)
     goto error;
   *ptr = '\0';
 
-  interface = strdup (interface);
-  client->command (client, "subst", "netcfg/confirm_static", "interface",
-		   interface, NULL);
+  *interface = strdup (*interface);
 
   return;
 
@@ -350,60 +348,63 @@ error:
 
 
 void
-netcfg_get_common (struct debconfclient *client, char *interface,
-		   char *hostname, char *domain, u_int32_t nameservers[])
+netcfg_get_common (struct debconfclient *client, char **interface,
+		   char **hostname, char **domain, char **nameservers)
 {
-  char *ptr, *ns;
+  char *ptr;
 
 
   netcfg_get_interface (client, interface);
 
-  if (hostname)
+  if (*hostname)
     {
-      free (hostname);
+      free (*hostname);
       hostname = NULL;
     }
 
-  hostname = strdup (debconf_input (client, "medium", "netcfg/get_hostname"));
+  *hostname = strdup (debconf_input (client, "medium", "netcfg/get_hostname"));
 
-  if (domain)
+  if (*domain)
     {
-      free (domain);
-      domain = NULL;
+      free (*domain);
+      *domain = NULL;
     }
 
   if ((ptr = debconf_input (client, "medium", "netcfg/get_domain")))
-    domain = strdup (ptr);
+    *domain = strdup (ptr);
 
-  ptr = debconf_input (client, "medium", "netcfg/get_nameservers");
-
-  if (ptr)
-    {
-      char *save;
-      save = ptr = strdup (ptr);
-#ifdef DHCP
-      client->command (client, "subst", "netcfg/confirm_dhcp",
-		       "nameservers", ptr, NULL);
-#else
-      client->command (client, "subst", "netcfg/confirm_static",
-		       "nameservers", ptr, NULL);
-#endif
-      ns = strtok_r (ptr, " ", &ptr);
-      dot2num (&nameservers[0], ns);
-
-      ns = strtok_r (NULL, " ", &ptr);
-      dot2num (&nameservers[1], ns);
-
-      ns = strtok_r (NULL, " ", &ptr);
-      dot2num (&nameservers[2], ns);
-
-      free (save);
-    }
-  else
-    nameservers[0] = 0;
-
+  *nameservers = debconf_input (client, "medium", "netcfg/get_nameservers");
+  
 
 }
+
+void
+netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]){
+
+    char *save, *ptr, *ns;
+
+    if (nameservers)
+      {
+	  save = ptr = strdup (ptr);
+	  
+	  ns = strtok_r (ptr, " ", &ptr);
+	  dot2num (&array[0], ns);
+	  
+	  ns = strtok_r (NULL, " ", &ptr);
+	  dot2num (&array[1], ns);
+	  
+	  ns = strtok_r (NULL, " ", &ptr);
+	  dot2num (&array[2], ns);
+	 
+	  array[3]=0;
+	  free (save);
+      }
+      else
+	  nameservers[0] = 0;
+
+}
+
+
 
 void
 netcfg_write_common (u_int32_t ipaddress, char *domain, char *hostname,

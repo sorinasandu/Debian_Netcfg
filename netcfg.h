@@ -33,11 +33,13 @@ extern char *num2dot (u_int32_t num);
 
 extern void netcfg_die (struct debconfclient *client);
 
-extern void netcfg_get_common (struct debconfclient *client, char *interface,
-			       char *hostname, char *domain,
-			       u_int32_t nameservers[]);
+extern void netcfg_get_common (struct debconfclient *client, char **interface,
+			       char **hostname, char **domain,
+			       char **nameservers);
 
 extern void netcfg_write_common (u_int32_t ipaddress, char *domain,
 				 char *hostname, u_int32_t nameservers[]);
+
+void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]);
 
 #endif /* _NETCFG_H_ */
