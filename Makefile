@@ -24,7 +24,7 @@ netcfg: netcfg.o
 
 $(TARGETS): netcfg-common.o
 	$(CC) $(LDOPTS) -o $@ $^
-#	$(STRIP) $@
+	$(STRIP) $@
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $(INCS) -o $@ $<
