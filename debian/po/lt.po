@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-11 09:30+0200\n"
+"POT-Creation-Date: 2004-09-13 06:29+0200\n"
 "PO-Revision-Date: 2004-08-30 21:41+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -86,29 +86,31 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#: ../netcfg-common.templates:33
 msgid "Primary network interface:"
 msgstr "Pagrindinė tinklo sąsaja:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#: ../netcfg-common.templates:33
+#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
-"primary network interface while installing Debian."
+"primary network interface while installing Debian. If possible, the first "
+"connected network interface found has been selected."
 msgstr ""
 "Jūsų sistemoje yra kelios tinklo sąsajos. Pasirinkite vieną iš jų, kuri bus "
 "naudojama kaip pagrindinė Debian'o diegimo metu."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:38
+#: ../netcfg-common.templates:40
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Bevielis (wireless) ESSID sąsajai ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:38
+#: ../netcfg-common.templates:40
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -120,13 +122,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:47
 msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP raktas belaidžio tinklo įrenginiui ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:47
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -136,7 +138,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:47
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -146,7 +148,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:47
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -156,7 +158,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:47
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -165,13 +167,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:60
+#: ../netcfg-common.templates:62
 msgid "Invalid WEP key"
 msgstr "Netinkamas WEP raktas"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:60
+#: ../netcfg-common.templates:62
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -182,13 +184,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:67
+#: ../netcfg-common.templates:69
 msgid "Invalid ESSID"
 msgstr "Netinkamas ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:67
+#: ../netcfg-common.templates:69
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -198,19 +200,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:76
 msgid "Hostname:"
 msgstr "Kompiuterio vardas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:76
 msgid "Please enter the hostname for this system."
 msgstr "Prašau įvesti šio kompiuterio vardą."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:76
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -224,19 +226,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:86
 msgid "Invalid hostname"
 msgstr "Netinkamas kompiuterio vardas"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:86
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Vardas \"${hostname}\" netinkamas."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:86
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -248,13 +250,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:95
 msgid "Error"
 msgstr "Klaida"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:95
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -264,13 +266,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:101
 msgid "No network interfaces detected"
 msgstr "Tinklo sąsajų neaptikta"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:101
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -279,7 +281,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:101
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -290,19 +292,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:111
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Infrastruktūrinis (Managed) tinklas, Ad-hoc tinklas (Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:112
 msgid "Wireless network kind:"
 msgstr "Bevielio tinklo rūšis:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:112
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -314,123 +316,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:119
 msgid "Wireless network configuration"
 msgstr "Belaidžio tinklo konfigūravimas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:123
 msgid "Searching for wireless access points ..."
 msgstr "Ieškoma belaidžio tinklo pasiekimo taškų (access points) ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:133
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:137
 msgid "Wireless ethernet (802.11x)"
 msgstr "Wireless ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:141
 msgid "wireless"
 msgstr "bevielis"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:145
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet or Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:149
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:153
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:157
 msgid "Serial-line IP"
 msgstr "IP per nuoseklią liniją"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:161
 msgid "Parallel-port IP"
 msgstr "IP per lygiagrečią liniją (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:165
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point (PPP) protokolas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:169
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:173
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point protokolas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:177
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:181
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:185
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:189
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:193
 msgid "Unknown interface"
 msgstr "Nežinoma sąsaja"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:198
 msgid "Configuring network ..."
 msgstr "Konfigūruojamas tinklas ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:203
 msgid "Configure the network"
 msgstr "Tinklo konfigūravimas"
 
