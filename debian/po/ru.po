@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:15-0700\n"
+"POT-Creation-Date: 2004-05-10 09:29-0700\n"
 "PO-Revision-Date: 2004-04-21 01:16+0200\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-russian@lists.debian.org>\n"
@@ -356,92 +356,86 @@ msgstr "Ethernet или Fast Ethernet"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:137
-msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "IP по последовательной линии (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "IP по параллельной линии (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "Реальный channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Межпользовательская связь (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "Неизвестный интерфейс"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "Идёт настройка сети..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "Настроить сеть"
 
@@ -523,15 +517,8 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:38
-msgid "Dynamic network configuration (DHCP)"
-msgstr "Настройка динамического адреса (DHCP)"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:38
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Настройка сети с использованием динамической адресации (DHCP)"
 
@@ -676,17 +663,19 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-static.templates:68
-msgid "Static network configuration"
-msgstr "Настройка статического адреса"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:73
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
+
+#~ msgid "Dynamic network configuration (DHCP)"
+#~ msgstr "Настройка динамического адреса (DHCP)"
+
+#~ msgid "Static network configuration"
+#~ msgstr "Настройка статического адреса"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
 
 #~ msgid "DHCP hostname:"
 #~ msgstr "Имя DHCP:"

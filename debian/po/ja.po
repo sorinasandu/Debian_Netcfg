@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:15-0700\n"
+"POT-Creation-Date: 2004-05-10 09:29-0700\n"
 "PO-Revision-Date: 2004-04-15 11:19+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -349,92 +349,86 @@ msgstr "Ethernet または Fast Ethernet"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:137
-msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "PC カード (PCMCIA) Ethernet または Token Ring"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "シリアルライン IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "パラレルポート IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point プロトコル (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point プロトコル (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "リアル channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "ハイパーソケット"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "未知のインターフェイス"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "ネットワークを設定しています ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "ネットワークの設定"
 
@@ -516,15 +510,8 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:38
-msgid "Dynamic network configuration (DHCP)"
-msgstr "動的ネットワークの設定 (DHCP)"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:38
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "動的アドレス (DHCP) を利用してネットワークを設定"
 
@@ -669,17 +656,19 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-static.templates:68
-msgid "Static network configuration"
-msgstr "静的ネットワークの設定"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:73
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
+
+#~ msgid "Dynamic network configuration (DHCP)"
+#~ msgstr "動的ネットワークの設定 (DHCP)"
+
+#~ msgid "Static network configuration"
+#~ msgstr "静的ネットワークの設定"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC カード (PCMCIA) Ethernet または Token Ring"
 
 #~ msgid "DHCP hostname:"
 #~ msgstr "DHCP ホスト名:"

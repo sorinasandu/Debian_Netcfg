@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:15-0700\n"
+"POT-Creation-Date: 2004-05-10 09:29-0700\n"
 "PO-Revision-Date: 2004-04-23 08:09+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@powertech.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -342,92 +342,86 @@ msgstr "Ethernet eller Fast Ethernet"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:137
-msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "IP over seriell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "IP over parallell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-i-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "Kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "Ekte kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "Hypersokkel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Sambandsmiddel mellom brukere"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "Ukjent grensesnitt."
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "Setter opp nettverk ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "Sett opp nettverket"
 
@@ -507,15 +501,8 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:38
-msgid "Dynamic network configuration (DHCP)"
-msgstr "Dynamisk nettverksoppsett (DHCP)"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:38
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sett opp nettverket med dynamisk adressering (DHCP)"
 
@@ -657,17 +644,19 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-static.templates:68
-msgid "Static network configuration"
-msgstr "Statisk nettverksoppsett"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:73
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "Sett opp et nettverk ved hjelp av statisk adressering"
+
+#~ msgid "Dynamic network configuration (DHCP)"
+#~ msgstr "Dynamisk nettverksoppsett (DHCP)"
+
+#~ msgid "Static network configuration"
+#~ msgstr "Statisk nettverksoppsett"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
 
 #~ msgid "DHCP hostname:"
 #~ msgstr "DHCP-vertsnavn:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:15-0700\n"
+"POT-Creation-Date: 2004-05-10 09:29-0700\n"
 "PO-Revision-Date: 2004-04-14 02:01+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -343,93 +343,87 @@ msgstr "Ethernet o ethernet ràpida"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:137
-msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "IP per línia sèrie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "IP per port paral·lel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt de XDSI"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 # La veritat, no se si s'ha de traduir moltes d'aquestes...
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "Hipersòcol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Vehicle de comunicació entre usuaris"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "Interfície desconeguda"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "S'està configurant la xarxa..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "Configura la xarxa"
 
@@ -510,15 +504,8 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:38
-msgid "Dynamic network configuration (DHCP)"
-msgstr "Configuració dinàmica de la xarxa (DHCP)"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:38
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura la xarxa utilitzant adreçament dinàmic (DHCP)"
 
@@ -665,17 +652,19 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-static.templates:68
-msgid "Static network configuration"
-msgstr "Configuració de xarxa estàtica"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:73
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
+
+#~ msgid "Dynamic network configuration (DHCP)"
+#~ msgstr "Configuració dinàmica de la xarxa (DHCP)"
+
+#~ msgid "Static network configuration"
+#~ msgstr "Configuració de xarxa estàtica"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
 
 #~ msgid "DHCP hostname:"
 #~ msgstr "Nom de l'ordinador DHCP:"
