@@ -46,18 +46,6 @@ debconf_input (struct debconfclient *client, char *priority, char *template)
 }
 
 
-int
-netcfg_mkdir (char *path)
-{
-  if (check_dir (path) == -1)
-    if (!mkdir (path, 0700))
-      {
-	perror ("mkdir");
-	return -1;
-      }
-  return 0;
-}
-
 
 int
 is_interface_up (char *inter)
@@ -431,10 +419,6 @@ netcfg_write_common (u_int32_t ipaddress, char *domain, char *hostname,
 		     u_int32_t nameservers[])
 {
   FILE *fp;
-
-
-  netcfg_mkdir (ETC_DIR);
-  netcfg_mkdir (NETWORK_DIR);
 
 
   if ((fp = file_open (HOSTS_FILE)))

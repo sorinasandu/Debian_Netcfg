@@ -95,7 +95,6 @@ netcfg_write_dhcp ()
     }
   if (dhcp_client == DHCLIENT)
     {
-      netcfg_mkdir (DHCLIENT_DIR);
 
       if (dhcp_hostname)
 	if ((fp = file_open (DHCLIENT_FILE)))
@@ -131,7 +130,7 @@ netcfg_activate_dhcp ()
 	  snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
     }
   else				/* dhcp_client == DHCLIENT */
-    ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient-2.2.x %s", interface);
+    ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient %s", interface);
 
   if (execlog (buf))
     netcfg_die (client);
@@ -149,7 +148,7 @@ main (int argc, char *argv[])
   client->command (client, "title", "DHCP Network Configuration", NULL);
 
 
-  if (stat ("/sbin/dhclient-2.2.x", &buf) == 0)
+  if (stat ("/sbin/dhclient", &buf) == 0)
     dhcp_client = DHCLIENT;
   else if (stat ("/sbin/pump", &buf) == 0)
     dhcp_client = PUMP;
