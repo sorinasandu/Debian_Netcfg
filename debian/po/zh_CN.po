@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-25 00:57-0700\n"
-"PO-Revision-Date: 2004-07-11 15:28+1200\n"
+"PO-Revision-Date: 2004-08-28 03:11+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -228,14 +228,13 @@ msgstr "名称“${hostname}”是无效的。"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"正确的主机名应当只包含字母、数字和减号。它的长度必须在 2 到 63 个字符之间，且"
-"不能以减号开始或结束。"
+"正确的主机名应当只包含数字0-9、小写字母a-z和减号。它的长度必须在 2 到 63 个字"
+"符之间，且不能以减号开始或结束。"
 
 #. Type: error
 #. Description
@@ -278,9 +277,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "手动进行网络设置"
+msgstr "进行静态网络设置吗？"
 
 #. Type: boolean
 #. Description
@@ -292,6 +290,9 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} 并未连接到任何网络。这可能是由网线脱落或网卡故障造成的。您在此可以不"
+"配置网络，等到重启进入 Debian 后再使用 etherconf 工具进行设定，或者进行静态网"
+"络设置。当然，您也可以返回并选择其它的网络接口。"
 
 #. Type: select
 #. Choices
@@ -535,7 +536,6 @@ msgstr "网络配置方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -545,7 +545,7 @@ msgid ""
 msgstr ""
 "在这里，您可以选择重新尝试 DHCP 网络自动配置(如果您的 DHCP 服务器响应延时很"
 "长，重新设置一遍可能就会成功)或者手动配置网络。另外，某些 DHCP 服务器要求客户"
-"端发送 DHCP 主机名，因此您可以在重试 DHCP 时提供这样一个主机名。"
+"端发送 DHCP 主机名，因此您可以在重试 DHCP 网络自动配置时提供这样一个主机名。"
 
 #. Type: note
 #. Description
