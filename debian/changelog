@@ -1,4 +1,4 @@
-netcfg (0.40) UNRELEASED; urgency=low
+netcfg (0.40) unstable; urgency=low
 
   * Ming Hua
     - Initial Simplified Chinese translation (zh_CN.po)
@@ -12,8 +12,18 @@ netcfg (0.40) UNRELEASED; urgency=low
   * Matt Kraai
     - Do not overwrite /etc/resolv.conf if using DHCP.
     - Do not set the domain if it is the empty string.
+  * Joey Hess
+    - Only copy /etc/resolv.conf to /target in static config.
+    - Do not write badly formatted /etc/mailname. Instead, set the hostname
+      in /proc and let the MTA postinst do the rest.
+      Closes: #212143, #222631
+    - If the domain is left blank, do not add a search line to
+      /etc/resolv.conf
+    - Write hostname to /etc/hostname and copy to target in prebaseconfig,
+      to avoid the localhost effect from 50config-target-network in
+      prebaseconfig. Closes: #224644
 
- -- Bart Cornelis <cobaco@linux.be>  Tue, 30 Dec 2003 21:46:30 +0100
+ -- Joey Hess <joeyh@debian.org>  Tue, 30 Dec 2003 19:54:27 -0500
 
 netcfg (0.39) unstable; urgency=high
 
