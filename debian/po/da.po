@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-16 11:16+0200\n"
+"PO-Revision-Date: 2004-07-05 09:29+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -476,8 +476,7 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -524,7 +523,6 @@ msgstr "Netværksopsætningsmetode:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -532,18 +530,17 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Den automatiske opsætning af netværket mislykkedes. Dette kan skyldes en "
-"langsom DHCP-server på netværket, så du kan vælge at prøve igen. Hvis dit "
-"netværk ikke benytter DHCP til automatisk opsætning, kan du i stedet sætte "
-"det op manuelt. Visse DHCP-servere kræver et bestemt DHCP-værtsnavn, så du "
-"kan også vælge at angive sådan et værtsnavn før du prøver DHCP igen."
+"Her kan du vælge at gentage forsøget på automatisk netværksopsætning "
+"med DHCP (hvilket muligvis vil virke hvis din DHCP-server er lang tid "
+"om at svare) eller sætte netværket op manuelt. Visse DHCP-servere kræver "
+"et DHCP-værtsnavn fra klienten, så du kan også prøve at forsøge "
+"DHCP-opsætningen igen med et værtsnavn, du angiver."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Den automatiske netværksopsætning lykkedes"
+msgstr "Den automatiske netværksopsætning mislykkedes"
 
 #. Type: note
 #. Description
@@ -552,12 +549,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Dit netværk benytter sandsynligvis ikke DHCP-protokollen. Alternativt "
+"kan du DHCP-server være langsom eller det netværksudstyr ikke fungere "
+"ordentligt."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Fortsæt uden en standardrute?"
 
 #. Type: boolean
 #. Description
@@ -569,6 +569,12 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Den automatiske netværksopsætning lykkedes. Der blev dog ikke angivet "
+"nogen standardrute (d\"efault route\"), så dit system ved ikke hvordan "
+"det skal kommunikere med andre maskiner på internettet. Dette vil gøre "
+"det umuligt at fortsætte installationen medmindre du har den første "
+"af de officielle Debian cdrommer, en \"Netinst\"-cdrom eller har pakkerne "
+"liggende på det lokale netværk."
 
 #. Type: boolean
 #. Description
@@ -577,6 +583,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Hvis du er usikker, bør du ikke fortsætte uden en standardrute (\"default "
+"route\"). Kontakt din lokale netværksadministrator om problemet."
 
 #. Type: text
 #. Description
@@ -701,8 +709,7 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -839,3 +846,4 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
