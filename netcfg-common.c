@@ -896,10 +896,10 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
     if (stat("/sbin/dhclient", &stat_buf) == 0)
         dhcp_client = DHCLIENT;
-    else if (stat("/sbin/pump", &stat_buf) == 0)
-        dhcp_client = PUMP;
     else if (stat("/sbin/udhcpc", &stat_buf) == 0)
         dhcp_client = UDHCPC;
+    else if (stat("/sbin/pump", &stat_buf) == 0)
+        dhcp_client = PUMP;
     else {
         debconf_input(client, "critical", "netcfg/no_dhcp_client");
         debconf_go(client);

@@ -1,7 +1,3 @@
-* Nameserver and domain are in the common configuration?  Should they be? 
-
-* we should send a dhcp hostname
-
 * put in checks so the user can't enter data that is clearly invalid (perhaps
   this will be done through debconf.
 
@@ -13,5 +9,4 @@
 * Make netcfg-static smarter about default values, e.g. call ifconfig and
   parse.
 
-* Group as many questions together as possible (see #186029). Is the "Is this
-  correct" question really necessary? Backup support is probably better!
+* Ask for a hostname if the DHCP server does not provide one.
