@@ -47,6 +47,8 @@ install: build
 	dh_clean -k
 	cp netcfg-dhcp debian/netcfg-dhcp.postinst
 	cp netcfg-static debian/netcfg-static.postinst
+	mkdir -p debian/netcfg-dhcp/usr/share/udhcpc
+	install -m755 udhcpc.default.script debian/netcfg-dhcp/usr/share/udhcpc/default.script
 	mkdir -p debian/netcfg-dhcp/etc/dhcp debian/netcfg-dhcp/var/dhcp
 	mkdir -p debian/netcfg-static/etc/network
 	mkdir -p debian/netcfg-dhcp/usr/lib/prebaseconfig.d
