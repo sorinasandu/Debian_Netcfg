@@ -147,7 +147,7 @@ void get_name(char *name, char *p)
     return;
 }
 
-char** get_all_ifs (int all)
+int get_all_ifs (int all, char*** ptr)
 {
   FILE *ifs = NULL;
   char ibuf[512], rbuf[512];
@@ -159,7 +159,7 @@ char** get_all_ifs (int all)
     fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
   }
   else
-    return NULL;
+    return 0;
 
   while (fgets(rbuf, sizeof(rbuf), ifs) != NULL)
   {
@@ -181,7 +181,10 @@ char** get_all_ifs (int all)
     list[len] = NULL;
   }
   fclose (ifs);
-  return list;
+
+  *ptr = list;
+  
+  return len;
 }
 
 char *find_in_devnames(const char* iface)
@@ -314,9 +317,9 @@ void netcfg_die(struct debconfclient *client)
 int netcfg_get_interface(struct debconfclient *client, char **interface,
                          int *numif)
 {
-    char *inter, **ifs;
+    char *inter = NULL, **ifs;
     size_t len;
-    int ret;
+    int ret, i;
     int num_interfaces = 0;
     char *ptr = NULL;
     char *ifdsc = NULL;
@@ -332,31 +335,35 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     len = 128;
     *ptr = '\0';
 
-    ifs = get_all_ifs(1);
+    num_interfaces = get_all_ifs(1, &ifs);
 
-    while (ifs && (inter = *ifs) != NULL) {
+    for (i = 0; i < num_interfaces; i++)
+    {
 	size_t newchars;
+
+	inter = ifs[i];
 
 	interface_down(inter);
 	ifdsc = get_ifdsc(client, inter);
-        newchars = strlen(inter) + strlen(ifdsc) + 5;
+        newchars = strlen(inter) + strlen(ifdsc) + 5; /* ": , " + NUL */
         if (len < (strlen(ptr) + newchars)) {
             if (!(ptr = realloc(ptr, len + newchars + 128)))
                 goto error;
             len += newchars + 128;
         }
         di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
-        num_interfaces++;
         free(ifdsc);
-        ifs++;
     }
 
-    if (num_interfaces == 0) {
+    if (num_interfaces == 0)
+    {
         debconf_input(client, "high", "netcfg/no_interfaces");
         debconf_go(client);
         free(ptr);
         exit(1);
-    } else if (num_interfaces > 1) {
+    }
+    else if (num_interfaces > 1)
+    {
         *numif = num_interfaces;
         /* remove the trailing ", ", which confuses cdebconf */
         ptr[strlen(ptr) - 2] = '\0';
@@ -377,7 +384,9 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
             return ret;
         if (!inter)
             netcfg_die(client);
-    } else if (num_interfaces == 1) {
+    }
+    else if (num_interfaces == 1)
+    {
         inter = ptr;
         *numif = 1;
     }
@@ -391,6 +400,10 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 
     *interface = strdup(*interface);
 
+    /* Free allocated memory */
+    while (ifs && *ifs)
+      free(*ifs++);
+    
     return 0;
 
  error:

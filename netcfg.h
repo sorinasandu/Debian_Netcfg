@@ -55,7 +55,7 @@ extern int is_interface_up (char *inter);
 
 extern void get_name (char *name, char *p);
 
-extern char** get_all_ifs (int all);
+extern int get_all_ifs (int all, char ***ptr);
 
 extern char *get_ifdsc (struct debconfclient *client, const char *ifp);
 
@@ -96,8 +96,6 @@ extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 
 extern int iface_is_hotpluggable(const char *iface);
 extern void deconfigure_network(void);
-
-extern method_t mii_diag_status_lite (char *ifname);
 
 extern void interface_up (char*);
 extern void interface_down (char*);
