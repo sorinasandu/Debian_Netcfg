@@ -1269,8 +1269,6 @@ automatic:
 
       if (!empty_str(wconf.essid))
       {
-	/* Done! */
-	di_log(DI_LOG_LEVEL_DEBUG, "Associated with AP '%s'", wconf.essid);
 	/* Save for later */
 	debconf_set(client, "netcfg/wireless_essid", wconf.essid);
 	debconf_progress_set(client, MAX_SECS);
@@ -1295,8 +1293,6 @@ automatic:
 
   if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
     user_essid = tf;
-
-  di_debug("user_essid seems to be '%s' right now", user_essid);
 
   while (!user_essid || empty_str(user_essid) ||
       strlen(user_essid) > IW_ESSID_MAX_SIZE)
@@ -1329,7 +1325,6 @@ automatic:
     if (empty_str(client->value))
       goto automatic;
 
-    di_debug("Looks like our essid is '%s'", client->value);
     free(user_essid);
     user_essid = strdup(client->value);
   }
@@ -1384,7 +1379,6 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 
   if (empty_str(rv))
   {
-    di_log(DI_LOG_LEVEL_DEBUG, "unsetting WEP key for device %s", iface);
     unset_wep_key (iface);
 
     if (wepkey != NULL)
@@ -1395,9 +1389,6 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     
     return 0;
   }
-
-  di_log(DI_LOG_LEVEL_DEBUG, "proceeding to set WEP key for device %s (%s)",
-      iface, rv);
 
   while ((keylen = iw_in_key (rv, buf)) == -1)
   {
