@@ -10,7 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2004-11-07 23:28-0800\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-11-10 11:41-0500\n"
 "PO-Revision-Date: 2004-11-10 11:45+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -18,7 +19,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. Type: boolean
 #. Description
@@ -116,13 +116,20 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. Note for translators of these languages: ar, fa, ko
+#. Part of the description (a few paragraphs down) is slightly fuzzy in a
+#. few languages. This has been manually marked as non-fuzzy because the
+#. fuzziness is due only to a minor change (addition of
+#. "nn:nn:nn:nn:nn:nn:nn:nn" to the list of WEP key forms) that accidentually
+#. occured during the string freeze. Translators should unfuzzy this when
+#. they get a chance.
+#: ../netcfg-common.templates:53
 msgid "WEP key for wireless device ${iface}:"
 msgstr "無線裝置 ${iface} 的 WEP 密鑰："
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:53
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -131,7 +138,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:53
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -141,7 +148,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:53
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -149,7 +156,7 @@ msgstr "如果您的 WEP 密鑰使用的是密碼文字的話，請在前面加�
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:53
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -157,13 +164,13 @@ msgstr "當然囉，如果您的無線網路中並沒有使用 WEP 密鑰，在�
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:61
+#: ../netcfg-common.templates:68
 msgid "Invalid WEP key"
 msgstr "不正確的 WEP 密鑰"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:61
+#: ../netcfg-common.templates:68
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -173,13 +180,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:68
+#: ../netcfg-common.templates:75
 msgid "Invalid ESSID"
 msgstr "不正確的 ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:68
+#: ../netcfg-common.templates:75
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -189,19 +196,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:82
 msgid "Hostname:"
 msgstr "主機名稱："
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:82
 msgid "Please enter the hostname for this system."
 msgstr "請輸入系統的主機名稱。"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:82
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -214,19 +221,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:92
 msgid "Invalid hostname"
 msgstr "不正確的主機名稱"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:92
 msgid "The name \"${hostname}\" is invalid."
 msgstr "名稱「${hostname}」是不正確的。"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:92
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -237,13 +244,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:101
 msgid "Error"
 msgstr "錯誤"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:101
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -251,13 +258,13 @@ msgstr "發生錯誤，網路設定程序已經中止。您可以從安裝程序
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:107
 msgid "No network interfaces detected"
 msgstr "探測不到任何網路介面"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:107
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -265,7 +272,7 @@ msgstr "探測不到任何的網路介面。安裝系統無法找到網路裝置
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:107
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -275,19 +282,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:117
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "共用 (Managed) 網路, Ad-hoc 網路 (點對點)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:118
 msgid "Wireless network kind:"
 msgstr "無線網路類別："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:118
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -299,123 +306,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:125
 msgid "Wireless network configuration"
 msgstr "無線網路設定"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:129
 msgid "Searching for wireless access points ..."
 msgstr "正在尋找無線基地台 ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:139
 msgid "<none>"
 msgstr "<無>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:143
 msgid "Wireless ethernet (802.11x)"
 msgstr "無線網路卡 (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:147
 msgid "wireless"
 msgstr "無線網路"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:151
 msgid "Ethernet or Fast Ethernet"
 msgstr "網路卡或高速網路卡"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:155
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:159
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:163
 msgid "Serial-line IP"
 msgstr "Serial-line IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:167
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:171
 msgid "Point-to-Point Protocol"
 msgstr "點對點通訊協定 (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:175
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:179
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 點對點通訊協定"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:183
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:187
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:191
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:195
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:199
 msgid "Unknown interface"
 msgstr "不明介面"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:204
 msgid "Configuring network ..."
 msgstr "正在設定網路 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:202
+#: ../netcfg-common.templates:209
 msgid "Configure the network"
 msgstr "網路設定"
 

@@ -8,8 +8,13 @@ netcfg (1.07) UNRELEASED; urgency=low
       (Note: this seems to fix s:xxxxx passphrase entry.)
     - Rectify some poor wording and missing examples in netcfg/wireless_wep
       template.
+  * Joey Hess
+    - Pretend that ar, fa, and ko arn't fuzzy since this change is minor and
+      was made in the string freeze. All other languages were caught up.
+      Add comment about this to templates file so trsanslators can know to fix
+      it later.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sun,  7 Nov 2004 21:44:15 -0800
+ -- Joey Hess <joeyh@debian.org>  Wed, 10 Nov 2004 11:42:37 -0500
 
 netcfg (1.06) unstable; urgency=high
 
