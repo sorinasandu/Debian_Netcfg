@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-12 11:03+0100\n"
-"PO-Revision-Date: 2003-12-11 21:35+0900\n"
+"PO-Revision-Date: 2003-12-12 14:52+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,19 +27,17 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "動的アドレス (DHCP), 静的アドレス (手動)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "ネットワーク設定の方法"
+msgstr "ネットワーク設定の方法:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid ""
 "Networking can either be configure by DHCP or by manually entering all the "
 "information. If you choose DHCP and debian-installer is unable to get a "
@@ -101,14 +99,13 @@ msgstr "インターフェイス:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"設定するインターフェイスを選んでください。あなたのシステムで現在検出されてい"
+"設定したいインターフェイスを選んでください。あなたのシステムで現在検出されてい"
 "るすべてのインターフェイスが以下に示されています。プライマリのネットワークイ"
 "ンターフェイスのタイプを選択してください。このインターフェイスは、Debian シス"
 "テムをインストール (NFS または HTTP 経由) するのに使われます。"
@@ -412,7 +409,6 @@ msgstr "DHCP ネットワーク設定を再試行しますか?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. In this case you can retry."
@@ -424,9 +420,8 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "静的ネットワークの設定"
+msgstr "動的ネットワークの設定 (DHCP)"
 
 #. Type: text
 #. Description
@@ -562,7 +557,6 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
 msgstr "静的ネットワークの設定"
 
@@ -572,9 +566,3 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid "configure network with DHCP, manual network configuration"
-#~ msgstr "DHCP でネットワークを設定, 手動でネットワークを設定"
-
-#~ msgid "DHCP Network Configuration"
-#~ msgstr "DHCP ネットワーク設定"
