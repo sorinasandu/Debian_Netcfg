@@ -1,9 +1,3 @@
-# translation of de.po to 
-# translation of de.po to
-# translation of de.po to
-# translation of de.po to
-# translation of de.po to
-# translation of de.po to
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -17,7 +11,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-04-14 23:52+0200\n"
+"PO-Revision-Date: 2004-04-17 19:15+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +23,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Netzwerk automatisch mit DHCP konfigurieren?"
+msgstr "Netzwerk automatisch mit DHCP einrichten?"
 
 #. Type: boolean
 #. Description
@@ -83,10 +77,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Die Nameserver werden benutzt, um Internet-Hostnamen aufzulösen. Bitte geben "
+"Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte geben "
 "Sie die IP Adresse (nicht die Hostnamen) von bis zu drei Nameservern "
 "getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der erste Server "
-"in der Liste wird als erster abgefragt. Wenn Sie keine Nameserver benutzen "
+"in der Liste wird als erstes abgefragt. Wenn Sie keine Nameserver benutzen "
 "wollen, lassen Sie diese Feld bitte einfach leer."
 
 #. Type: select
@@ -102,8 +96,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Ihr System hat mehrere Netzwerk-Interfaces. Bitte wählen Sie das Interface, "
-"das für die Installation von Debian genutzt werden soll."
+"Ihr System hat mehrere Netzwerk-Interfaces. Bitte wählen Sie das Interface "
+"(Netzwerkkarte), das für die Installation von Debian genutzt werden soll."
 
 #. Type: string
 #. Description
@@ -120,27 +114,24 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} ist ein drahtloses Netzwerkinterface. Bitte geben Sie den Namen "
-"(die ESSID) des drahtlosen Netzwerks an, das ${iface} verwenden soll. Wenn "
-"Sie irgendein verfügbares Netzwerk verwenden möchten, lassen Sie dieses Feld "
-"leer."
+"(die ESSID) des drahtlosen Netzwerks an, das ${iface} verwenden soll. "
+"Möchten Sie sich nicht festlegen, so lassen Sie dieses Feld leer."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP-Schlüssel für ${iface}:"
+msgstr "WEP-Schlüssel für drahtloses Gerät ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Falls notwendig, geben Sie den WEP-Sicherheitsschlüssel für das Gerät "
-"${iface} an. Es gibt zwei Möglichkeiten, dies zu tun:"
+"Falls notwendig, geben Sie den WEP-Schlüssel für das Gerät "
+"${iface} an. Dazu gibt es zwei Möglichkeiten:"
 
 #. Type: string
 #. Description
@@ -150,7 +141,7 @@ msgid ""
 "number, just enter it as it is into this field."
 msgstr ""
 "Wenn Ihr WEP-Schlüssel im Format 'nnnn-nnnn-nn' oder 'nnnnnnnn', wobei n "
-"eine Ziffer ist, geben Sie ihn einfach wie er ist in dieses Feld ein."
+"eine Ziffer ist, geben Sie ihn - einfach wie er ist - in dieses Feld ein."
 
 #. Type: string
 #. Description
@@ -215,7 +206,7 @@ msgstr "Hostname:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Bitte geben Sie den Hostnamen dieses Systems ein."
+msgstr "Bitte geben Sie den Hostnamen dieses Rechners ein."
 
 #. Type: string
 #. Description
@@ -268,14 +259,14 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Es ist ein Fehler aufgetreten, und der Netzwerk-Konfigurationsprozess wurde "
+"Es ist ein Fehler aufgetreten und der Netzwerk-Konfigurationsprozess wurde "
 "abgebrochen. Sie können es vom Installations-Hauptmenü noch einmal versuchen."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
-msgstr "Kein Interface wurde erkannt"
+msgstr "Es wurde kein Netzwerk-Interface gefunden"
 
 #. Type: error
 #. Description
@@ -284,8 +275,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Kein Netzwerkinterface wurde gefunden. Das Installationssystem konnte also "
-"keine Netzwerkkarte finden."
+"Es wurde kein Netzwerkinterface wurde gefunden. Das Installationssystem "
+"konnte keine Netzwerkkarte finden."
 
 #. Type: error
 #. Description
@@ -302,7 +293,7 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastruktur- (gemanagetes) Netzwerk, Ad-hoc-Netzwerk (Peer-to-Peer)"
+msgstr "Infrastruktur- (Managed) Netzwerk, Ad-hoc-Netzwerk (Peer-to-Peer)"
 
 #. Type: select
 #. Description
@@ -318,9 +309,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Drahtlose Netzwerke sind entweder gemanaged oder ad-hoc. Wenn Sie einen "
-"echten Access Point benutzen, ist Ihr Netzwerk gemanaged. Wenn ein anderer "
-"Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich ad-hoc."
+"Drahtlose Netzwerke sind entweder \"managed\" oder \"ad-hoc\". Wenn Sie einen "
+"echten Access Point benutzen, ist Ihr Netzwerk \"managed\". Wenn ein anderer "
+"Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich \"ad-hoc\"."
 
 #. Type: text
 #. Description
@@ -332,7 +323,7 @@ msgstr "Konfiguration von drahtlosen Netzwerken"
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr "Suche nach drahtlosen Access Points..."
+msgstr "Suche nach drahtlosen Access Points ..."
 
 #. Type: text
 #. Description
@@ -458,7 +449,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "In einigen Situationen muss man einen DHCP Hostnamen angeben. Das kommt "
-"selten vor, aber vor allem bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
+"selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
 "besitzen, muss hier oft eine Benutzernummer angegeben werden."
 
 #. Type: string
@@ -490,16 +481,16 @@ msgid ""
 " nameservers    = ${nameservers}"
 msgstr ""
 " Interface      = ${interface}\n"
-" Hostname       = ${hostname}\n"
+" Rechnername    = ${hostname}\n"
 " Domain         = ${domain}\n"
-" DHCP Hostname  = ${dhcp_hostname}\n"
+" DHCP Rechnern. = ${dhcp_hostname}\n"
 " Nameserver     = ${nameservers}"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr "Das Netzwerk wird jetzt mit DHCP konfiguriert"
+msgstr "Konfiguriere das Netzwerk mit DHCP"
 
 #. Type: text
 #. Description
@@ -517,8 +508,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -530,7 +520,7 @@ msgstr "Der DHCP-Konfigurationsprozess wird abgebrochen."
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Wollen Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
+msgstr "Möchten Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
 
 #. Type: boolean
 #. Description
@@ -555,8 +545,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -590,7 +579,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Die von Ihnen angegebene IP-Adresse ist ungültig. Sie sollte die Form x.x.x."
-"x haben, wobei jedes 'x' nicht größer als 255 ist. Bitte versuchen Sie es "
+"x haben, wobei jedes 'x' kleiner als 255 sein muss. Bitte versuchen Sie es "
 "noch einmal."
 
 #. Type: string
@@ -650,7 +639,7 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Das ist eine IP-Adresse (vier durch Punkte getrennte Zahlen), die den "
-"Gatewayrouter angibt. Auch als Defaultrouter bekannt. Alle Daten zu Rechnern "
+"Gateway angibt. Auch als Defaultrouter bekannt. Alle Daten zu Rechnern "
 "außerhalb Ihres LAN (zum Beispiel zum Internet) werden über diesen Router "
 "gesendet. In seltenen Fällen haben Sie keinen Router, in diesem Fall geben "
 "Sie hier einfach nichts ein. Wenn Sie die richtige Antwort hier nicht "
@@ -660,7 +649,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Das Gateway ist nicht erreichbar"
+msgstr "Gateway nicht erreichbar"
 
 #. Type: error
 #. Description
@@ -671,10 +660,9 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
+"Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
 
 #. Type: boolean
@@ -693,8 +681,8 @@ msgstr ""
 " Interface      = ${interface}\n"
 " Hostname       = ${hostname}\n"
 " Domain         = ${domain}\n"
-" IP Nummer      = ${ipaddress}\n"
-" Netmask        = ${netmask}\n"
+" IP-Adresse     = ${ipaddress}\n"
+" Netzmaske      = ${netmask}\n"
 " Gateway        = ${gateway}\n"
 " Nameserver     = ${nameservers}"
 
@@ -712,61 +700,3 @@ msgstr "Statische Netzwerkkonfiguration"
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
-#~ msgid "Network Configuration"
-#~ msgstr "Netzwerkkonfiguration"
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamische Adressierung (DHCP), Statische Adressierung (manuell)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Netzwerk-Konfigurationsmethode:"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Während der Aktivierung des Netzwerks ist ein Fehler aufgetreten"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Bei der Aktivierung des Netzwerks ist ein Fehler aufgetreten."
-
-#~ msgid "Interface:"
-#~ msgstr "Interface:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Die folgenden Interfaces wurden erkannt. Wählen Sie Ihre primäre "
-#~ "Netzkarte, die Sie zur Installation des Debian-Systems (via NFS oder "
-#~ "HTTP) benutzen wollen."
-
-#~ msgid "Choose the domain name."
-#~ msgstr "Wählen Sie den Domainnamen."
-
-#~ msgid "Choose an interface."
-#~ msgstr "Wählen Sie ein Interface."
-
-#~ msgid "An error occured."
-#~ msgstr "Ein Fehler ist aufgetreten."
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "Es ist ein Fehler bei der Aktivierung Ihres Netzwerks aufgetreten."
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "Geben Sie den Rechnernamen an."
-
-#~ msgid "Feel free to retry."
-#~ msgstr "Vielleicht versuchen Sie es noch ein Mal."
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "Was ist Ihr DHCP Hostname?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "Kein DHCP-Client gefunden. Es kann nicht fortgefahren werden."
-
-#~ msgid "I will now configure the network."
-#~ msgstr "Das Netzwerk wird jetzt konfiguriert"
-
-#~ msgid ""
-#~ "This may take some time.  It shouldn't take more than a minute or two."
-#~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
