@@ -131,8 +131,13 @@ int main(int argc, char *argv[])
               case 0:
                 state = QUIT;
                 break;
-              case 30:
-                state = BACKUP;
+              case 10:
+                /*
+                 * It doesn't make sense to go back to GET_METHOD because
+                 * the user has already been asked whether he wants to
+                 * try an alternate method.
+                 */
+                state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
                 break;
               case 15:
                 state = GET_STATIC;

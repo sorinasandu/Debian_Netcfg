@@ -427,7 +427,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         {
           case GO_BACK:
             kill_dhcp_client();
-            exit(10); /* XXX */
+            return 10;
           case REPLY_RETRY_WITH_HOSTNAME:
             state = DHCP_HOSTNAME;
             break;
@@ -536,7 +536,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           struct in_addr null_ipaddress;
           null_ipaddress.s_addr = 0;
           netcfg_write_common(null_ipaddress, hostname, NULL);
-          exit(0);
+          return 0;
         }
         break;
     }
