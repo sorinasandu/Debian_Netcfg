@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 09:02+0200\n"
+"POT-Creation-Date: 2004-06-29 10:19+0200\n"
 "PO-Revision-Date: 2004-06-29 02:09+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -522,10 +522,13 @@ msgstr "Ağ yapılandırma yöntemi:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
-"From here, you can choose to retry DHCP network autoconfiguration or "
-"configure the network manually. Also, some DHCP servers need a specific DHCP "
-"hostname, so you can choose to enter such a hostname before retrying DHCP."
+"From here you can choose to retry DHCP network autoconfiguration (which may "
+"work if your DHCP server takes a long time to respond) or to configure the "
+"network manually. Some DHCP servers require a DHCP hostname to be entered, "
+"so you can also choose to retry DHCP network autoconfiguration with a "
+"hostname that you provide."
 msgstr ""
 "Buradan itibaren, DHCP ile otomatik ağ yapılandırmasını tekrar denemeyi veya "
 "ağı elle yapılandırmayı seçebilirsiniz.  Bazı DHCP sunucuları özel bir DHCP "
@@ -534,19 +537,18 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid "Network autoconfiguration failed"
 msgstr "Otomatik ağ yapılandırması başarısızlıkla sonuçlandı."
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:41
 #, fuzzy
 msgid ""
-"This may be due to a slow DHCP server, a loose network cable, malfunctioning "
-"routers or hubs on your network, or your network is simply not set up for "
-"DHCP."
+"This may be due to a slow DHCP server, malfunctioning network equipment, or "
+"your network simply not being set up for DHCP."
 msgstr ""
 "Bunun nedeni; ağ üzerindeki DHCP sunucusunun yavaşlığı, ağ kablolarındaki "
 "bir bağlantı sorunu, ağınızdaki bozuk yönlendirici veya hub'lar veya basitçe "
@@ -554,43 +556,39 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:47
 msgid "Continue without a default route?"
 msgstr "Öntanımlı bir yönlendirici olmadan devam edilsin mi?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:47
 msgid ""
-"The network automatic configuration has been successful. However, no default "
-"route currently exists to external networks such as the Internet."
+"Network autoconfiguration was successful. However, no default route was set: "
+"the system does not know how to communicate with hosts on the Internet. This "
+"will make it impossible to continue with the installation unless you have "
+"all the Debian packages you need on the local network or on a local medium "
+"such as CD-ROM."
 msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:46
-#, fuzzy
+#: ../netcfg-dhcp.templates:47
 msgid ""
-"You may not be able to continue your Debian installation, unless you are "
-"using a CD-ROM with all needed software. If you are unsure, you should "
-"continue and come back to the network configuration step if necessary."
+"If you are unsure then you can continue and come back to the network "
+"configuration step later if necessary."
 msgstr ""
-"Otomatik ağ yapılandırması başarıyla sonuçlandı.  Fakat Internet gibi dış "
-"ağlara çıkmanızı sağlayacak kullanılabilir durumda bir öntanımlı "
-"yönlendirici yok gözüküyor.  Gerekli olan herşeyin bir CD'de olması "
-"kaydıyla, Debian kurulumuna devam etmeniz mümkün olabilir.  Eğer emin "
-"değilseniz devam edin ve gerekirse ağ yapılandırmasına geri dönün."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:58
+#: ../netcfg-dhcp.templates:59
 msgid "Reconfigure the wireless network"
 msgstr "Kablosuz ağı yapılandır"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:64
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Ağı dinamik adresleme (DHCP) ile yapılandır"
 
@@ -723,6 +721,8 @@ msgstr "Bu bilgiler doğru mu?"
 msgid "Currently configured network parameters:"
 msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -745,6 +745,18 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Ağı statik adresleme ile yapılandır"
+
+#, fuzzy
+#~ msgid ""
+#~ "You may not be able to continue your Debian installation, unless you are "
+#~ "using a CD-ROM with all needed software. If you are unsure, you should "
+#~ "continue and come back to the network configuration step if necessary."
+#~ msgstr ""
+#~ "Otomatik ağ yapılandırması başarıyla sonuçlandı.  Fakat Internet gibi dış "
+#~ "ağlara çıkmanızı sağlayacak kullanılabilir durumda bir öntanımlı "
+#~ "yönlendirici yok gözüküyor.  Gerekli olan herşeyin bir CD'de olması "
+#~ "kaydıyla, Debian kurulumuna devam etmeniz mümkün olabilir.  Eğer emin "
+#~ "değilseniz devam edin ve gerekirse ağ yapılandırmasına geri dönün."
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Dinamik ağ yapılandırması (DHCP)"

@@ -15,6 +15,9 @@ netcfg (0.71) UNRELEASED; urgency=low
       (Closes: #253543)
     - Don't add 'auto' or hotplug mapping lines for 16-bit PCMCIA devices.
       (Closes: #248071, #239284)
+  * Christian Perrier
+    - netcfg-dhcp.templates
+      Some rewrite for being clearer, possibly. Run debconf-updatepo
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
@@ -54,9 +57,9 @@ netcfg (0.71) UNRELEASED; urgency=low
         . Improve comments
         . Reorder state machine states
         . Move some functions around
-  * Christian Perrier
-    - netcfg-dhcp.templates
-      Some rewrite for being clearer, possibly. Run debconf-updatepo
+    - netcfg-dhcp.templates:
+      + More updates
+      + Run debconf-updatepo again
 
  -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 29 Jun 2004 09:04:58 +0200
 
