@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-12 09:37-0700\n"
-"PO-Revision-Date: 2004-04-15 18:27+1200\n"
+"PO-Revision-Date: 2004-05-13 11:02+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -496,37 +496,32 @@ msgstr "DHCP 配置过程被中止。"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "静态网络设置"
+msgstr "重新尝试网络自动设置"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "动态网络配置(DHCP)"
+msgstr "使用某个 DHCP 主机重试网络自动设置"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
-#, fuzzy
 msgid "Configure network manually"
-msgstr "网络设置"
+msgstr "手动进行网络设置"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "网络设置"
+msgstr "现在不进行网络设置"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:40
-#, fuzzy
 msgid "Next network configuration step:"
-msgstr "静态网络设置"
+msgstr "下一个网络设置步骤"
 
 #. Type: select
 #. Description
@@ -538,6 +533,9 @@ msgid ""
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
 msgstr ""
+"网络自动设置失败。导致失败的典型原因是网络中 DHCP 服务器的速度过慢，您可能会"
+"想重试一次。如果您觉得有必要，也可以指明一个 DHCP 主机名发送到服务器。否则，"
+"您就需要进行手动设置，或暂时不进行网络设置。"
 
 #. Type: text
 #. Description
