@@ -37,7 +37,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-
+	rm -f debian/*.config
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
 
@@ -47,7 +47,7 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	dh_installdirs
+#	dh_installdirs
 	$(foreach PACKAGE,  $(PACKAGES), \
 	( $(MAKE) install PROGS=$(PACKAGE) DESTDIR=`pwd`/debian/$(PACKAGE)) ; )
 
@@ -61,7 +61,7 @@ binary-arch: build install
 #	dh_testversion
 	dh_testdir
 	dh_testroot
-	dh_installdebconf	
+	dh_installdebconf
 #	dh_installdocs
 #	dh_installchangelogs 
 #	dh_link

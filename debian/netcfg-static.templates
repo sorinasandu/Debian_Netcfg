@@ -1,0 +1,55 @@
+Template: netcfg/get_domain
+Type: string
+Description: Choose the domain name.
+ As with individual systems, every network has a name. This name is called the
+ domain name. Please enter your domain name or leave this field empty if you
+ don't have a domain.
+
+Template: netcfg/get_ipaddress
+Type: string
+Description: What is the IP address of this system?
+ The ipaddress identifies you system to other computer on the network.  If you don't
+ know your ipaddress you should ask your system administrator.  
+
+Template: netcfg/get_netmask
+Type: string
+Description: What is your netmask?
+ The netmask is used to determine what ipaddresses are valid on this network.  This allows
+ your computer to determine whether or not it needs to send packets destined for a particular
+ ipaddress to a gateway.
+
+Template: netcfg/get_gateway
+Type: string
+Description: What is your IP gateway address?
+ A gateway system is one that connects your network to other networks such as
+ your company wide-area net or the Internet. If there is no gateway in your
+ subnet just leave this field blank.
+
+Template: netcfg/gateway_unreachable
+Type: note
+Description: The gateway you entered is unreachable.
+ You may have made an error entering your ipaddress, netmask and/or gateway.
+
+Template: netcfg/get_nameservers
+Type: string
+Description: Choose the DNS Server Addresses
+ Please enter the IP addresses (not host names) of up to 3 name servers,
+ separated by spaces. Do not use commas. The servers will be queried in the
+ order in which you enter them. If you don't want to use any name servers just
+ leave this field blank.
+
+Template: netcfg/confirm_static_cfg
+Type: boolean
+Default: true
+Description: Is this configuration correct?
+  interface     = ${interface}	
+  hostname      = ${hostname} 
+  domain        = ${domain} 
+  ipaddress     = ${ipaddress} 
+  netmask       = ${netmask} 
+  network       = ${network} 
+  broadcast     = ${broadcast} 
+  gateway       = ${gateway} 
+  primary DNS   = ${primary_DNS} 
+  secondary DNS = ${secondary_DNS} 
+  tertiary DNS  = ${tertiary_DNS}

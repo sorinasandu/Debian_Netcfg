@@ -1,14 +1,28 @@
 Source: netcfg
 Section: debian-installer
-Priority: standard
+Priority: optional
 Maintainer: David Whedon <dwhedon@gordian.com>
 Build-Depends: debhelper (>= 2.1.18), dpkg-dev (>= 1.7.0), cdebconf-dev
 Standards-Version: 3.1.1
 
-Package: netcfg
+Package: netcfg-dhcp
 Architecture: any
-Depends: ${shlibs:Depends}, dhcpcd-udeb
-Provides: network-configuration
+Depends: cdebconf-udeb, dhcpcd-udeb
+Provides: configured-network
 XBC-Installer-Menu-Item: 2
-Description: Configure the network
- This package configures the network.
+Description: Configure the network via DHCP
+ Many networks allow automatic configuration via DHCP (Dynamic Host
+ Configuration Protocol).  If you are on a corporate network, a cable modem,
+ some DSL connections, or have any other sort of dynamic IP for Ethernet, you
+ will likely be able to configure via DHCP. If you have information such as IP
+ address, netmask, gateway, then DHCP is not appropriate.
+
+Package: netcfg-static
+Architecture: any
+Depends: cdebconf-udeb
+Provides: configured-network
+XBC-Installer-Menu-Item: 2
+Description: Configure a static network
+ If you have information such as IP address, netmask, gateway, then you will be
+ able to configure a static network.  If you don't know this information, you
+ should ask you system administrator.

@@ -1,6 +1,6 @@
 * put in checks so the user can't enter data that is clearly invalid (perhaps this will be done through debconf.
 * fall back to safe defaults if the user doesn't enter a particular value (ex. gateway)
-* do other sorts of network configurations (pcmcia)
+* do other sorts of network configurations (pcmcia, ppp)
 * inderstand the target_path() thing, and do it properly
 * what do we do differently if it is a CD filesystem?
 * decide what numbers you will actually present the user with for confirmation (you have overkill now)
@@ -8,3 +8,4 @@
 * currently we get an internal error if the user has lots of network interfaces, find a better way of handling that.
 * etherconf has some good descriptive text, perhaps I want to use it in place of the existing text.
 * when the real dhcpcd installs itself we want to make sure it doesn't destroy our nice working configuration, how to do that?
+* dhcp and static config udebs share a fair amount of code, perhaps a shared library?

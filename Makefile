@@ -1,3 +1,8 @@
+ifndef PROGS
+PROGS=netcfg-dhcp netcfg-static
+endif
+
+
 INCS=-I../cdebconf/src/
 LDOPTS=-L../cdebconf/src/ -ldebconf
 PREFIX=$(DESTDIR)/usr/
@@ -7,18 +12,22 @@ STRIPTOOL=strip
 STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 
 
-OBJS=util.o
-
-all: netcfg
-	$(STRIP) netcfg
-	size netcfg
-
-netcfg: netcfg.c $(OBJS)
-	$(CC) $(CFLAGS) netcfg.c -o netcfg $(INCS) $(LDOPTS) $(OBJS)
+all: $(PROGS)
 
 install:
 	mkdir -p $(PREFIX)/bin/
-	$(INSTALL) netcfg $(PREFIX)/bin/
+	$(foreach PROG, $(PROGS), \
+	cp $(PROG) debian/$(PROG).config)
+
+netcfg-dhcp: netcfg.c
+	$(CC) $(CFLAGS) -DDHCP netcfg.c -o $@ $(INCS) $(LDOPTS)
+	$(STRIP) $@
+	size $@ 
+
+netcfg-static: netcfg.c
+	$(CC) $(CFLAGS) -DSTATIC netcfg.c -o $@ $(INCS) $(LDOPTS)
+	$(STRIP) $@
+	size $@ 
 
 clean:
-	rm -f *.o netcfg
+	rm -f netcfg-*
