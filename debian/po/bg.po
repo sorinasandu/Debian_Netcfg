@@ -7,10 +7,9 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-26 03:36+0200\n"
-"PO-Revision-Date: 2004-07-13 13:09+0300\n"
-"Last-Translator:  <>\n"
-"Language-Team: Debian L10n Bulgarian <debian-l10n-bulgarian@lists.debian."
-"org>\n"
+"PO-Revision-Date: 2004-08-28 22:18+0300\n"
+"Last-Translator:  Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
+"Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -231,15 +230,14 @@ msgstr "Името \"${hostname}\" е невалидно."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Валидно име на хост е такова, което съдържа само букви от латинската азбука, "
-"цифри и знака минус. То трябва да бъде между 2 и 63 знака дълго и да не "
-"започва или завършва със знака минус."
+"Валидно име на хост съдържа само цифрите от 0 до 9, малките букви от a до z "
+"и знака минус. То трябва да бъде между 2 и 63 знака дълго и да не започва "
+"или завършва със знака минус."
 
 #. Type: error
 #. Description
@@ -287,9 +285,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "Ръчна настройка на мрежата"
+msgstr "Ръчна настройка на мрежата?"
 
 #. Type: boolean
 #. Description
@@ -301,6 +298,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} изглежда не е свързан към никаква мрежа. Това може да е причинено "
+"от липсващ мрежов кабел или грешно функциониращ мрежов адаптер. Можете или "
+"да прескочите настройката на мрежата до рестартирането в Debian и да "
+"използвате инструмента etherconf, или да настроите мрежата статично. Можете "
+"също да се върнете назад и да изберете друг интерфейс."
 
 #. Type: select
 #. Choices
@@ -545,7 +547,6 @@ msgstr "Начин за мрежова настройка:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
