@@ -1,14 +1,14 @@
 # Catalan messages for debian-installer.
-# Copyright © 2002, 2003 Software in the Public Interest, Inc.
+# Copyright © 2002, 2003, 2004 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jordi Mallach <jordi@debian.org>, 2002, 2003.
+# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-11-19 12:20+0100\n"
+"PO-Revision-Date: 2004-02-01 18:29+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -77,9 +77,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "No s'ha detectat cap interfície de xarxa"
+msgstr "Interfície de xarxa principal:"
 
 #. Type: select
 #. Description
@@ -88,35 +87,36 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"El vostre sistema té múltiples interfícies de xarxa. Seleccioneu la que s'ha "
+"d'utilitzar com interfície primaria mentre s'instal·la Debian."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Error while activating the network"
-msgstr ""
+msgstr "S'ha produït un error en activar la xarxa"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:38
 msgid "An error occurred while activating the network."
-msgstr ""
+msgstr "S'ha produït un error en activar la xarxa."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Hostname:"
-msgstr ""
+msgstr "Nom:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Si us plau, introduïu el nom que voleu assignar a aquest sistema."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:44
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -125,39 +125,38 @@ msgid ""
 msgstr ""
 "El nom del sistema és una única paraula que identifica el sistema a la "
 "xarxa. Si no sabeu quin hauria de ser el nom del vostre ordinador, consulteu "
-"amb l'administrador de la vostra xarxa. Si esteu configurant la vostra xarxa "
+"amb l'administrador de la xarxa. Si esteu configurant la vostra xarxa "
 "domèstica, podeu inventar-vos qualsevol cosa ací."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:54
 msgid "Invalid hostname"
-msgstr ""
+msgstr "El nom del sistema és invàlid"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:54
 msgid "The name \"${hostname}\" is invalid."
-msgstr ""
+msgstr "El nom «${hostname}» és invàlid."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:54
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
 "Un nom del sistema vàlid només pot contenir caràcters alfanumèrics i el "
-"signe negatiu, pot tindre entre 2 i 63 caràcters de longitud i no pot "
+"signe negatiu. Pot tindre entre 2 i 63 caràcters de longitud i no pot "
 "començar o acabar amb un signe negatiu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:63
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #. Type: error
 #. Description
@@ -514,11 +513,11 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
 msgid "Static network configuration"
-msgstr ""
+msgstr "Configuració de xarxa estàtica"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr "Configura una xarxa utilitzant adreçament estàtic"
