@@ -10,6 +10,7 @@ netcfg (0.57) UNRELEASED; urgency=low
   * Joshua Kwan
     - Make the question about adhoc/managed actually do something,
       add a template for its question. Note: needs translation.
+    - Make interfaces honor the decision made in the adhoc/managed question.
     - Make sure the WEP question, priority high, always gets asked.
     - If netcfg/get_hostname returns a FQDN, seed netcfg/get_domain with it
       and do not ask that question a second time. Only ask it if FQDN was

@@ -703,6 +703,8 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
             fprintf(fp, "\tpointopoint %s\n", inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
 	if (is_wireless_iface(interface))
 	{
+	  fprintf(fp, "\twireless_mode %s\n",
+	      (mode == MANAGED) ? "managed" : "ad-hoc");
 	  if (essid != NULL)
 	    fprintf(fp, "\twireless_essid %s\n", essid);
 	  else /* Some cards need an explicit set to 'any' */
