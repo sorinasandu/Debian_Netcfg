@@ -1,6 +1,7 @@
 #ifndef _NETCFG_H_
 #define _NETCFG_H_
 #include <sys/types.h>
+#include <arpa/inet.h>
 #include <stdio.h>
 #include <cdebconf/debconfclient.h>
 
@@ -25,13 +26,13 @@ extern char *interface;
 extern char *hostname;
 extern char *dhcp_hostname;
 extern char *domain;
-extern u_int32_t ipaddress;
-extern u_int32_t nameserver_array[4];
-extern u_int32_t network;
-extern u_int32_t broadcast;
-extern u_int32_t netmask;
-extern u_int32_t gateway;
-extern u_int32_t pointopoint;
+extern struct in_addr ipaddress;
+extern struct in_addr nameserver_array[4];
+extern struct in_addr network;
+extern struct in_addr broadcast;
+extern struct in_addr netmask;
+extern struct in_addr gateway;
+extern struct in_addr pointopoint;
 
 /* common functions */
 extern int netcfg_mkdir (char *path);
@@ -47,10 +48,6 @@ extern void getif_end ();
 extern char *get_ifdsc (struct debconfclient *client, const char *ifp);
 
 extern FILE *file_open (char *path, const char *opentype);
-
-extern void dot2num (u_int32_t * num, char *dot);
-
-extern char *num2dot (u_int32_t num);
 
 extern void netcfg_die (struct debconfclient *client);
 
@@ -73,10 +70,10 @@ extern int netcfg_activate_static(struct debconfclient *client);
 extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
 
 extern void netcfg_write_common (const char *prebaseconfig,
-				 u_int32_t ipaddress, char *hostname,
+				 struct in_addr ipaddress, char *hostname,
 				 char *domain);
 
-void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]);
+void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 
 extern int is_wireless_iface (const char* iface);
 
