@@ -259,6 +259,30 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
         return strdup("Unknown interface");
 }
 
+int iface_is_hotpluggable(const char *iface)
+{
+#define DEVHOTPLUG "/etc/network/devhotplug"
+    FILE* f = NULL;
+    char buf[256];
+    size_t len = strlen(iface);
+    int result = 0;
+    
+    if (!(f = fopen(DEVHOTPLUG, "r")))
+        return 0;
+    
+    while (fgets(buf, 256, f) != NULL)
+    {
+        if (!strncmp(buf, iface, len))
+        {
+            result = 1;
+            break;
+        }
+    }
+    
+    fclose(f);
+    
+    return result;
+}
 
 FILE *file_open(char *path, const char *opentype)
 {
@@ -466,6 +490,15 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
         fprintf(fp, HELPFUL_COMMENT);
         fprintf(fp, "auto lo\n");
         fprintf(fp, "iface lo inet loopback\n");
+        if (iface_is_hotpluggable(interface)) {
+            fprintf(fp, "\n");
+            fprintf(fp, "# This is a list of hotpluggable network interfaces.\n");
+            fprintf(fp, "# They will be activated automatically by the "
+                    "hotplug subsystem.\n");
+            fprintf(fp, "mapping hotplug\n");
+            fprintf(fp, "\tscript grep\n");
+            fprintf(fp, "\tmap %s\n", interface);
+        }
         fclose(fp);
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
@@ -703,7 +736,8 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
                 "\n# This entry was created during the Debian installation\n");
         fprintf(fp,
                 "# (network, broadcast and gateway are optional)\n");
-        fprintf(fp, "auto %s\n", interface);
+        if (!iface_is_hotpluggable(interface))
+            fprintf(fp, "auto %s\n", interface);
         fprintf(fp, "iface %s inet static\n", interface);
         fprintf(fp, "\taddress %s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
         fprintf(fp, "\tnetmask %s\n", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
@@ -1002,7 +1036,8 @@ static void netcfg_write_dhcp(char *iface, char *host)
     if ((fp = file_open(INTERFACES_FILE, "a"))) {
         fprintf(fp,
                 "\n# This entry was created during the Debian installation\n");
-        fprintf(fp, "auto %s\n", iface);
+        if (!iface_is_hotpluggable(iface))
+            fprintf(fp, "auto %s\n", iface);
         fprintf(fp, "iface %s inet dhcp\n", iface);
         if (host)
             fprintf(fp, "\thostname %s\n", host);
