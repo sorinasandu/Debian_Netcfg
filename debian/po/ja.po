@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 20:55-0700\n"
+"POT-Creation-Date: 2004-08-10 09:43-0700\n"
 "PO-Revision-Date: 2004-08-09 23:40+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -238,10 +238,11 @@ msgstr "名前 \"${hostname}\" は無効です。"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
+#, fuzzy
 msgid ""
-"A valid hostname may contain only alphanumeric characters and the minus "
-"sign. It must be between 2 and 63 characters long, and may not begin or end "
-"with a minus sign."
+"A valid hostname may contain only the numbers 0-9, the letters a-z and A-Z, "
+"and the minus sign. It must be between 2 and 63 characters long, and may not "
+"begin or end with a minus sign."
 msgstr ""
 "有効なホスト名は英数文字とマイナス記号だけから構成され、2 文字から最長 63 文"
 "字までで、マイナス記号で開始または終了することはできません。"
@@ -304,7 +305,12 @@ msgid ""
 "either forego configuring the network until you reboot into Debian and use "
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
-msgstr "${IFACE} は何のネットワークにも接続していないようです。これはネットワークケーブルが接続されていないか、ネットワークアダプタの不良によるものです。Debian を再起動して etherconf ユーティリティを使うか静的にネットワークを設定するまでネットワークの設定を先送りにすることもできます。戻って、異なるインターフェイスを選ぶこともできます。"
+msgstr ""
+"${IFACE} は何のネットワークにも接続していないようです。これはネットワークケー"
+"ブルが接続されていないか、ネットワークアダプタの不良によるものです。Debian を"
+"再起動して etherconf ユーティリティを使うか静的にネットワークを設定するまで"
+"ネットワークの設定を先送りにすることもできます。戻って、異なるインターフェイ"
+"スを選ぶこともできます。"
 
 #. Type: select
 #. Choices
@@ -560,7 +566,12 @@ msgid ""
 "the network manually. Some DHCP servers require a DHCP hostname to be sent "
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
-msgstr "ここでは、DHCP によるネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定を選ぶことができます。また、ある種の DHCP サーバはクライアントから送られる特定の DHCP ホスト名を必要とするので、ホスト名付きで DHCP によるネットワーク自動設定を再試行することも選択できます。"
+msgstr ""
+"ここでは、DHCP によるネットワークの自動設定の再試行 (もし DHCP サーバが反応に"
+"長い時間がかかるものであれば、これで動作するでしょう) またはネットワークの手"
+"動設定を選ぶことができます。また、ある種の DHCP サーバはクライアントから送ら"
+"れる特定の DHCP ホスト名を必要とするので、ホスト名付きで DHCP によるネット"
+"ワーク自動設定を再試行することも選択できます。"
 
 #. Type: note
 #. Description

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 20:55-0700\n"
+"POT-Creation-Date: 2004-08-10 09:43-0700\n"
 "PO-Revision-Date: 2004-08-09 15:36+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -237,10 +237,11 @@ msgstr "Navnet \"${hostname}\" er ugyldigt."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
+#, fuzzy
 msgid ""
-"A valid hostname may contain only alphanumeric characters and the minus "
-"sign. It must be between 2 and 63 characters long, and may not begin or end "
-"with a minus sign."
+"A valid hostname may contain only the numbers 0-9, the letters a-z and A-Z, "
+"and the minus sign. It must be between 2 and 63 characters long, and may not "
+"begin or end with a minus sign."
 msgstr ""
 "Gyldige værtsnavne indeholder kun bogstaver, tal og minustegn. Det skal være "
 "mellem 2 og 63 tegn langt, og må ikke begynde eller ende med et minustegn."
@@ -304,11 +305,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
-"${IFACE} lader ikke til at være forbundet med nogen form for netværk. Det kan "
-"skyldes et manglende netkabel eller at netkortet ikke fungerer ordentligt. Du "
-"kan enten udsætte opsætningen af netværket indtil du genstarter maskinen i "
-"Debian og benytte værktøjet etherconf, eller sætte netværket op statisk. Du kan "
-"også gå tilbage og vælge et andet netkort."
+"${IFACE} lader ikke til at være forbundet med nogen form for netværk. Det "
+"kan skyldes et manglende netkabel eller at netkortet ikke fungerer "
+"ordentligt. Du kan enten udsætte opsætningen af netværket indtil du "
+"genstarter maskinen i Debian og benytte værktøjet etherconf, eller sætte "
+"netværket op statisk. Du kan også gå tilbage og vælge et andet netkort."
 
 #. Type: select
 #. Choices
@@ -506,7 +507,8 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -562,9 +564,9 @@ msgid ""
 msgstr ""
 "Her kan du vælge at gentage forsøget på automatisk netværksopsætning med "
 "DHCP (hvilket muligvis vil virke, hvis din DHCP-server er lang tid om at "
-"svare) eller sætte netværket op manuelt. Visse DHCP-servere kræver at klienten "
-"sender et DHCP-værtsnavn, så du kan også vælge at forsøge den automatiske "
-"opsætning med DHCP igen med et værtsnavn, du angiver."
+"svare) eller sætte netværket op manuelt. Visse DHCP-servere kræver at "
+"klienten sender et DHCP-værtsnavn, så du kan også vælge at forsøge den "
+"automatiske opsætning med DHCP igen med et værtsnavn, du angiver."
 
 #. Type: note
 #. Description
@@ -739,7 +741,8 @@ msgstr "Den angivne gateway-adresse kan ikke nås."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -780,4 +783,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Sæt nætværket op med statisk adressering"
-
