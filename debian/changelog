@@ -8,8 +8,10 @@ netcfg (0.65) UNRELEASED; urgency=low
     - DHCP server is not required to supply a domain name. (Closes: #250021)
     - Switch to using mii-diag-udeb instead of mii-lite.c, which doesn't
       seem to work across the board. (also addresses #250074)
+  * Bastian Blank
+    - Don't depend against libiw27-udeb.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Fri, 21 May 2004 09:44:25 -0700
+ -- Bastian Blank <waldi@debian.org>  Sat, 22 May 2004 12:09:23 +0200
 
 netcfg (0.64) unstable; urgency=medium
 
