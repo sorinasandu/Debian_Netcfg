@@ -106,29 +106,8 @@ int main(void)
 		mii_result = mii_diag_status_lite(interface);
 		ifconfig_down(interface);
 
-		di_debug("mii_result = %s",
-                    mii_result == DHCP ? "DHCP" :
-                    ( mii_result == STATIC ? "static" : 
-		      ( mii_result == DUNNO ? "dunno!" : "REALLY dunno")));
-
-		di_debug("res = %s",
-		    res == NOT_ASKED ? "not asked" :
-		    ( res == GO_BACK ? "go back" : "unknown" ));
-
-		/* Don't override the user's choice. */
-		di_debug("netcfg_method = %s",
-		    netcfg_method == DHCP ? "DHCP" :
-		    ( netcfg_method == STATIC ? "static" :
-		      ( netcfg_method == DUNNO ? "dunno!" : "REALLY dunno")));
-		
 		if (mii_result != DUNNO && res == NOT_ASKED)
 		  netcfg_method = mii_result;
-
-
-		di_debug("netcfg_method = %s",
-		    netcfg_method == DHCP ? "DHCP" :
-		    ( netcfg_method == STATIC ? "static" : 
-		      ( netcfg_method == DUNNO ? "dunno!" : "REALLY dunno")));
 
 		if (netcfg_method == DHCP) 
 		    state = GET_DHCP;
