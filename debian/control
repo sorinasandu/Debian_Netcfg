@@ -12,7 +12,7 @@ Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybo
 Provides: configured-network
 XB-Installer-Menu-Item: 18
 Description: Configure the network
- To Install additional installer components or the Debian Base System over
+ To install additional installer components or the Debian Base System over
  the network, you need to configure the network in the installer. This 
  component will first try to configure your network with DHCP and ask 
  you for static network configuration if this fails. The configured 
@@ -40,4 +40,4 @@ XB-Installer-Menu-Item: 20
 Description: Configure a static network
  If you have information such as IP address, netmask, gateway, then you will be
  able to configure a static network.  If you don't know this information, you
- should ask you system administrator, or look at configuration via DHCP.
+ should ask your system administrator, or look at configuration via DHCP.
