@@ -415,8 +415,8 @@ int netcfg_get_static(struct debconfclient *client)
     
     enum { BACKUP, GET_HOSTNAME, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK,
            GET_GATEWAY, GATEWAY_UNREACHABLE, GET_NAMESERVERS, CONFIRM,
-           GET_DOMAIN, QUIT, BAIL_OR_NOT, HOSTNAME_SANS_NETWORK }
-        state = BAIL_OR_NOT;
+           GET_DOMAIN, QUIT }
+        state = GET_IPADDRESS;
 
     ipaddress.s_addr = network.s_addr = broadcast.s_addr = netmask.s_addr = gateway.s_addr = pointopoint.s_addr =
         0;
@@ -429,27 +429,6 @@ int netcfg_get_static(struct debconfclient *client)
         case BACKUP:
             return 10; /* Back to main */
             break;
-        case BAIL_OR_NOT:
-        {
-            int ret;
-            debconf_input(client, "high", "netcfg/continue_configure_static");
-            ret = debconf_go(client);
-
-            if (ret == 10) /* Go Back to get_interface */
-              return ret;
-
-            debconf_get(client, "netcfg/continue_configure_static");
-
-            if (!strcmp(client->value, "true")) /* don't configure the network */
-            {
-              netcfg_write_loopback();
-              state = HOSTNAME_SANS_NETWORK;
-            }
-            else
-              state = GET_IPADDRESS;
-
-            break;
-        }
 
         case GET_IPADDRESS:
             if (netcfg_get_ipaddress (client)) {
@@ -495,17 +474,6 @@ int netcfg_get_static(struct debconfclient *client)
         case GET_NAMESERVERS:
             state = (netcfg_get_nameservers (client, &nameservers)) ?
                 GET_GATEWAY : CONFIRM;
-            break;
-        case HOSTNAME_SANS_NETWORK:
-            if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
-              state = BAIL_OR_NOT;
-            else
-            {
-              struct in_addr null_ipaddress;
-              null_ipaddress.s_addr = 0;
-              netcfg_write_common(null_ipaddress, hostname, NULL);
-              exit(0);
-            }
             break;
 	case GET_HOSTNAME:
 	    seed_hostname_from_dns(client, &ipaddress);

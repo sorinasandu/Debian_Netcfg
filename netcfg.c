@@ -142,6 +142,39 @@ int main(int argc, char *argv[])
                 {
                   /* Supported; no connection */
                   case 2:
+                    {
+                      int ret;
+                      /* A label's good, a state machine is overkill and cumbersome. */
+continue_configure:
+                      debconf_input(client, "high", "netcfg/continue_configure_static");
+                      ret = debconf_go(client);
+
+                      if (ret == 10) /* Go Back to get_interface */
+                      {
+                        state = GET_INTERFACE;
+                        break;
+                      }
+
+                      debconf_get(client, "netcfg/continue_configure_static");
+
+                      if (!strcmp(client->value, "true")) /* don't configure the network */
+                      {
+                        netcfg_write_loopback();
+                        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
+                        {
+                          /* indecisive, i say! */
+                          goto continue_configure;
+                        }
+                        else
+                        {
+                          struct in_addr null_ipaddress;
+                          null_ipaddress.s_addr = 0;
+                          netcfg_write_common(null_ipaddress, hostname, NULL);
+                          return 0;
+                        }
+                        break;
+                      } 
+                    }
                     netcfg_method = STATIC;
                     break;
 
