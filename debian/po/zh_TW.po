@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2004-01-30 08:53+1300\n"
+"PO-Revision-Date: 2004-02-28 10:44+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"網路可以由 DHCP 來加以設定，或者手動輸入所有資訊。如果您指定使用 DHCP，但"
+"網路可以由 DHCP 來加以設定，或者手動輸入所有資訊。如果您選擇使用 DHCP，但"
 "安裝程式無法由網路中的 DHCP 伺服器來取得網路設定，那麼在試圖使用 DHCP 之後，"
 "您仍然可以經由手動輸入來設定網路。如果不確定，請選擇使用 DHCP。"
 
@@ -83,7 +83,7 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器 (Name Server) 的 IP 位址 (不是主機名稱) 。"
+"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器 (Name Server) 的 IP 位址 (不是主機名稱)。"
 "在進行查詢時將優先使用列表中的第一個伺服器。如果不想用任何名稱伺服器，"
 "直接在欄位中留白即可。"
 
@@ -157,8 +157,8 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"正確的主機名稱應當只包含 字母、數字 和 減號。它的長度必須在 2 到 63 個字元之間，"
-"且不能以減號開頭或結尾。"
+"正確的主機名稱應當只包含 字母、數字 和 減號。它的長度必須在 2 至 63 個字元之間，"
+"且應當不能以減號開頭或結尾。"
 
 #. Type: error
 #. Description
@@ -186,7 +186,7 @@ msgstr "探測不到任何網路介面"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "找不到任何網路介面。安裝系統無法找到網路設備。"
+msgstr "找不到任何網路介面。安裝系統無法找到網路裝置。"
 
 #. Type: error
 #. Description
@@ -195,7 +195,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"如果有的話，您可能必須載入您的網路卡的專用模組。請返回到網路硬體"
+"如果有的話，您可能必須載入您的網路卡的專用模組。請返回至網路硬體"
 "偵測步驟來進行這個動作。"
 
 #. Type: text
@@ -361,7 +361,7 @@ msgstr "使用 DHCP 來設定網路"
 #. Description
 #: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
-msgstr "這將會花上一些時間。"
+msgstr "這也許會花上一些時間。"
 
 #. Type: error
 #. Description
@@ -425,7 +425,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"您的電腦有個獨一無二的 IP 位址，它是由四個用句點分隔的數字所組成。"
+"您的電腦有個獨一無二的 IP 位址，它是由四個由句點分隔的數字所組成。"
 "如果您不知道在這裡應該填什麼，請洽詢您的網路管理員。"
 
 #. Type: string
@@ -445,7 +445,7 @@ msgid ""
 msgstr ""
 "點對點位址 (Point-to-Point Address) 是用來決定點對點網路的另一個端點。"
 "如果您不知道位址，請洽詢您的網路管理員。"
-"點對點位址應該是由四個用句點分隔的數字所組成。"
+"所輸入的點對點位址應該是由四個由句點分隔的數字所組成。"
 
 #. Type: string
 #. Description
@@ -463,7 +463,7 @@ msgid ""
 msgstr ""
 "網路遮罩 (NetMask) 是用來決定哪些機器是位於您的區域網路中。"
 "如果您不知道這個遮罩值，請洽詢您的網路管理員。"
-"網路遮罩應該是由四個用句點分隔的數字所組成。"
+"所輸入的網路遮罩應該是由四個由句點分隔的數字所組成。"
 
 #. Type: string
 #. Description
@@ -482,7 +482,7 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"閘道 (Gateway) 是用來指定閘道路由器，也常叫做預設路由器，的 IP 位址 (四個用句點分隔的數字) 。"
+"閘道 (Gateway) 是用來指定閘道路由器，也常叫做預設路由器，的 IP 位址 (四個由句點分隔的數字)。"
 "所有通往區域網路外部的連線 (例如，連接上網際網路) 都要藉由這個路由器來傳送。"
 "在某些罕見情況裡，您可能沒有路由器﹔在此情況下，直接在欄位中留白即可。"
 "如果您不知道這個問題的適切答案，請洽詢您的網路管理員。"
