@@ -1,6 +1,5 @@
-# translation of tools-netcfg-debian-po-fi.po to Finnish
 # translation of fi.po to Finnish
-# translation of tools/netcfg to Finnish
+# translation of netcfg to Finnish
 # Translators, if you are not familiar with the PO format, gettext
 # documentation is worth reading, especially sections dedicated to
 # this format, e.g. by running:
@@ -19,7 +18,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-03-11 07:43+0200\n"
+"PO-Revision-Date: 2004-04-19 04:02+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -30,14 +29,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Aseta verkko DHCP:lla"
+msgstr "Hae verkkoasetukset automaattisesti DHCP:lla?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -79,7 +76,6 @@ msgstr "Nimipalvelinten osoitteet:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -87,6 +83,7 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"Nimipalvelimia käytetään verkon konenimien selvittämiseen."
 "Kirjoita IP-osoitteet (ei konenimiä) korkeintaan kolmelle nimipalvelimelle "
 "välilyönnein eroteltuna. Älä käytä pilkkuja. Palvelimilta kysytään siinä "
 "järjestyksessä kuin syötät ne. Jos et halua käyttää mitään nimipalvelimia, "
@@ -129,20 +126,18 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Liitännän ${iface} WEP-avain:"
+msgstr "Langattoman laitteen ${iface} WEP-avain:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Jos käytössä, kirjoita laitteen ${iface} WEP-salausavain. Tämän voi tehdä "
-"kahdella tavalla:"
+"Jos käytössä, kirjoita langattoman laitteen ${iface} WEP-salausavain. Tämän "
+"voi tehdä kahdella tavalla:"
 
 #. Type: string
 #. Description
@@ -301,14 +296,15 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:109
+#, fuzzy
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Runkoverkko (hallinnoitu), verkon solmujen omin päin luoma (vertaisverkko)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Langattoman verkon laji:"
 
 #. Type: select
 #. Description
@@ -318,19 +314,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
+"Langattomat verkot ovat joko hallinnoituja tai verkon solmujen omin päin "
+"muodostamia (ad-hoc). Jos käytössä on tukiasema, verkko on hallinnoitu. "
+"Jos toinen tietokone on \"tukiasema\", verkko saattaa olla ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Pysyvät verkkoasetukset"
+msgstr "Langattoman verkon asetukset"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Etsitään langattomia tukiasemia ..."
 
 #. Type: text
 #. Description
@@ -514,8 +512,7 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
@@ -663,8 +660,7 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
@@ -732,3 +728,4 @@ msgstr "Tee verkkoasetukset itse"
 #~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
 #~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
 #~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
+
