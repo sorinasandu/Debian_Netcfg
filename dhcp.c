@@ -388,7 +388,21 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             exit(10); /* go back, going back to poll isn't intuitive */
 	}
         else
+        {
+          /* If we didn't send a DHCP hostname before, use the one specified */
+          if (!dhostname)
+          {
+            FILE* dc = NULL;
+            if ((dc = file_open(DHCLIENT_CONF, "w")))
+            {
+              fprintf(dc, "send host-name \"%s\";\n", hostname);
+              fclose(dc);
+            }
+            /* And the prebaseconfig will take care of copying it in. */
+          }
+      
           state = DOMAIN;
+        }
         break;
 
       case DOMAIN:

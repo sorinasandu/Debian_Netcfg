@@ -5,6 +5,8 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Evaluate argv[0] after calling basename on it so that we can strcmp it
       against "ptom". It somehow didn't happen in the internal dhclient-script
       context, but appeared during testing in the shell.
+    - Write new hostname into dhclient.conf. If a DHCP hostname was specified
+      beforehand, this won't happen, however. (Closes: #236533)
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
