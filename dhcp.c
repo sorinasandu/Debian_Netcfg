@@ -28,8 +28,8 @@ pid_t dhcp_pid = -1;
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
 {
     if (dhcp_running == 1) {
-	dhcp_running = 0;
 	wait(&dhcp_exit_status);
+	dhcp_running = 0;
     }
 }
 
