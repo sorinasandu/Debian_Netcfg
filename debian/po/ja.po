@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 09:46-0800\n"
-"PO-Revision-Date: 2004-02-23 21:20+0900\n"
+"PO-Revision-Date: 2004-02-24 08:34+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,6 @@ msgstr "${iface} の無線 ESSID:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -145,7 +144,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -156,7 +154,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -165,7 +162,6 @@ msgstr "WEP キーがパスフレーズ形式であれば、s: を先頭に付�
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -546,9 +542,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP アドレス:"
+msgstr "奇形 IP アドレス"
 
 #. Type: error
 #. Description
@@ -556,7 +551,7 @@ msgstr "IP アドレス:"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
+msgstr "入力された IP アドレスは奇妙です。x.x.x.x 形式 (x は 255 以下) であるべきです。再試行してください。"
 
 #. Type: string
 #. Description
