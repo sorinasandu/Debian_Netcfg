@@ -105,7 +105,7 @@ _Description: No network interfaces detected
 
 Template: netcfg/continue_configure_static
 Type: boolean
-Default: no
+Default: false
 _Description: Configure the network statically?
  ${IFACE} does not seem to be connected to any sort of network. This could be
  due to a missing network cable or network adapter malfunction. You can either
