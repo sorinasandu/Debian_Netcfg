@@ -18,6 +18,8 @@
 static char *interface = NULL;
 static char *hostname = NULL;
 static char *domain = NULL;
+static char *dhcp_hostname = NULL;
+static int do_dhcp=0;
 static u_int32_t ipaddress = 0;
 static u_int32_t network = 0;
 static u_int32_t broadcast = 0;
@@ -36,11 +38,13 @@ static char buf[MAXLINE];
 #define HOSTS_FILE      "etc/hosts"
 #define NETWORKS_FILE   "etc/networks"
 #define RESOLV_FILE     "etc/resolv.conf"
+#define DHCPCD_FILE     "etc/dhcpc/config"
 #else
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
+#define DHCPCD_FILE     "/etc/dhcpc/config"
 #endif
 
 
@@ -127,6 +131,55 @@ debconf_unseen (char *template)
   client->command (client, "fset", template, "seen", "false", NULL);
 }
 
+
+/*
+ * Get all available interfaces from the kernel and ask the user which one
+ * he wants to configure
+ */
+int
+get_interface ()
+{
+  char *ptr = buf;
+  char *inter;
+
+  debconf_unseen ("netcfg/choose_interface");
+
+  getif_start ();
+  while ((inter = getif (1)) != NULL)
+    {
+      ptr +=
+	snprintf (ptr, sizeof (buf) - strlen (buf), "%s: %s, ", inter,
+		  get_ifdsc (inter));
+      if (ptr > (buf + sizeof (buf)))
+	{
+	  fprintf (stderr, "Internal error.\n");
+	  exit (1);
+	}
+    }
+  getif_end ();
+
+  if (ptr == buf)
+    {
+      client->command (client, "input", "high", "netcfg/no_interfaces", NULL);
+      client->command (client, "go", NULL);
+      return -1;
+    }
+
+
+  debconf_subst ("netcfg/choose_interface", "ifchoices", buf);
+
+  ptr = debconf_input ("critical", "netcfg/choose_interface");
+
+  /* grab just the interface name, not the description too */
+  *(strchr (ptr, ':')) = '\0';
+
+  interface = strdup (ptr);
+  debconf_subst ("netcfg/confirm_static_cfg", "interface", interface);
+
+  return 0;
+}
+
+
 void
 get_static_cfg (void)
 {
@@ -135,7 +188,7 @@ get_static_cfg (void)
 
   do
     {
-	get_interface ();
+      get_interface ();
 
       debconf_unseen ("netcfg/get_hostname");
       debconf_unseen ("netcfg/get_ipaddress");
@@ -293,7 +346,7 @@ write_static_cfg (void)
   if ((fp = file_open (INTERFACES_FILE)))
     {
       fprintf (fp,
-	       "\n# The first network card - this entry was created during the Debian installation\n");
+	       "\n# This entry was created during the Debian installation\n");
       fprintf (fp, "# (network, broadcast and gateway are optional)\n");
       fprintf (fp, "iface %s inet static\n", interface);
       fprintf (fp, "\taddress %s\n", num2dot (ipaddress));
@@ -307,64 +360,52 @@ write_static_cfg (void)
 }
 
 
-int
-activate_static_net ()
-{
 
+void
+write_dhcp_cfg(void){
 
-  system ("/sbin/ifconfig lo 127.0.0.1");
-
-  snprintf (buf, sizeof (buf),
-	    "/sbin/ifconfig %s %s netmask %s broadcast %s", interface,
-	    num2dot (ipaddress), num2dot (netmask), num2dot (broadcast));
-  system ("buf");
-  return 0;
-
+  FILE *fp;
+  if ((fp = file_open (INTERFACES_FILE)))
+    {
+      fprintf (fp, "\n# This entry was created during the Debian installation\n");
+      fprintf (fp, "iface %s inet dhcp\n", interface);
+    }
+  if ((fp = file_open (DHCPCD_FILE)))
+  {
+      fprintf (fp, "\n# dhcpcd configuration: created during the Debian installation\n");
+      fprintf (fp, "IFACE=%s", interface);
+      if (dhcp_hostname)
+	  fprintf (fp, "OPTIONS='-h %s'", dhcp_hostname);
+  }
 }
 
-/*
- * Get all available interfaces from the kernel and ask the user which one
- * he wants to configure
- */
+
 int
-get_interface ()
+activate_net ()
 {
-  char *ptr = buf;
-  char *inter;
-      
-  debconf_unseen ("netcfg/choose_interface");
+    char *ptr;
+    int rv;
+  system ("/sbin/ifconfig lo 127.0.0.1");
 
-  getif_start ();
-  while ((inter = getif (1)) != NULL)
-    {
-      ptr +=
-	snprintf (ptr, sizeof (buf) - strlen (buf), "%s: %s, ", inter,
-		  get_ifdsc (inter));
-      if (ptr > (buf + sizeof (buf)))
-	{
-	  fprintf (stderr, "Internal error.\n");
-	  exit (1);
-	}
-    }
-  getif_end ();
+  if (do_dhcp) {
+      ptr=buf;
+      ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
+      if (dhcp_hostname)
+    	  snprintf(ptr, sizeof(buf)-(ptr-buf), " -h %s", dhcp_hostname);
 
-  if (ptr == buf)
-    {
-      client->command (client, "input", "high", "netcfg/no_interfaces", NULL);
+  }
+  else {
+      snprintf (buf, sizeof (buf),
+  	      "/sbin/ifconfig %s %s netmask %s broadcast %s", interface,
+  	      num2dot (ipaddress), num2dot (netmask), num2dot (broadcast));
+  }
+  
+  rv = system (buf);
+  fprintf(stderr, "rv = %d\n", rv);
+  if (rv != 0) {
+      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
       client->command (client, "go", NULL);
-      return -1;
-    }
-
-
-  debconf_subst ("netcfg/choose_interface", "ifchoices", buf);
-
-  ptr = debconf_input ("critical", "netcfg/choose_interface");
-
-  *(strchr (ptr, ':')) = '\0';
-
-  interface = strdup (ptr);
-  debconf_subst ("netcfg/confirm_static_cfg", "interface", interface);
-
+  }
   return 0;
 }
 
@@ -374,13 +415,26 @@ int
 main (int argc, char *argv[])
 {
 
+    char *ptr;
   client = debconfclient_new ();
 
   client->command (client, "title", "Network Configuration", NULL);
 
-  get_static_cfg ();
+  ptr = debconf_input ("critical", "netcfg/dhcp_option");
 
-  write_static_cfg ();
+  if (strstr (ptr, "true"))
+  {
+      do_dhcp=1;
+      dhcp_hostname = debconf_input ("high", "netcfg/dhcp_hostname");
+      write_dhcp_cfg();
+  }
+  else 
+  {
+      get_static_cfg ();
+      write_static_cfg ();
+  }
+
+  activate_net();
 
   return 0;
 }

@@ -1,5 +1,4 @@
 * put in checks so the user can't enter data that is clearly invalid (perhaps this will be done through debconf.
-* dhcp: either another module, or in here
 * fall back to safe defaults if the user doesn't enter a particular value (ex. gateway)
 * do other sorts of network configurations (pcmcia)
 * inderstand the target_path() thing, and do it properly
@@ -7,3 +6,5 @@
 * decide what numbers you will actually present the user with for confirmation (you have overkill now)
 * fix the note about what the user should do if we don't find any network interfaces.  Since I don't now know what the flow of the installer is going to be I can't suggest what they should do, I've got the test in there from the old installer now.
 * currently we get an internal error if the user has lots of network interfaces, find a better way of handling that.
+* etherconf has some good descriptive text, perhaps I want to use it in place of the existing text.
+* when the real dhcpcd installs itself we want to make sure it doesn't destroy our nice working configuration, how to do that?
