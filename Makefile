@@ -27,3 +27,5 @@ clean:
 	rm -f $(TARGETS) *.o
 
 .PHONY: all clean
+
+# vim:ts=8:noet
