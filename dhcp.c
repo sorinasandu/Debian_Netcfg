@@ -417,6 +417,20 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             have_domain = 1;
           }
 
+          /* Make sure we have NS going if the DHCP server didn't serve it up */
+          if (resolv_conf_entries() == 0)
+          {
+            char *nameservers = NULL;
+            
+            if (netcfg_get_nameservers (client, &nameservers) == GO_BACK)
+            {
+              state = DHCP_OPTIONS;
+              break;
+            }
+
+            netcfg_nameservers_to_array (nameservers, nameserver_array);
+          }
+          
           state = HOSTNAME;
         }
         break;

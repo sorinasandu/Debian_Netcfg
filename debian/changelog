@@ -1,12 +1,14 @@
 netcfg (1.08) UNRELEASED; urgency=low
 
   * Joshua Kwan
-    - Fix adhoc -> ad-hoc typo in dhcp.c. (closes: #282407)
+    - Fix adhoc -> ad-hoc typo in dhcp.c. closes: #282407, #283861
+    - Ask for nameserver information if the DHCP server did not provide
+      any. closes: #281924
   * Christian Perrier
     - Add a note to translators about the maximum length of
       individual Choices translations for Select templates
 
- -- Joshua Kwan <joshk@triplehelix.org>  Mon, 22 Nov 2004 15:40:19 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Fri, 24 Dec 2004 00:22:31 -0800
 
 netcfg (1.07) unstable; urgency=high
 
