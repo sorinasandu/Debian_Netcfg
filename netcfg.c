@@ -15,14 +15,16 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <debconfclient.h>
+#include "utils.h"
 
+#define ETC_DIR "/etc"
+#define NETWORK_DIR "/etc/network"
+#define DHCPCD_DIR "/etc/dhcpc"
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCPCD_FILE     "/etc/dhcpc/config"
-#define MAXLINE 1024
-#define DEBUG
 
 static char *interface = NULL;
 static char *hostname = NULL;
@@ -30,383 +32,30 @@ static char *domain = NULL;
 static u_int32_t ipaddress = 0;
 static u_int32_t nameservers[4] = { 0 };
 static struct debconfclient *client;
-static char buf[MAXLINE];
-
-int is_interface_up (char *inter);
-void getif_start (void);
-void getif_end (void);
-char *getif (int all);
-void get_name (char *name, char *p);
-char *get_ifdsc (const char *ifp);
-int get_interface ();
-FILE *file_open (char *path);
-int activate_net ();
-
-void debconf_unseen (char *template);
-void debconf_subst (char *template, char *key, char *string);
-char *debconf_input (char *priority, char *template);
-int do_system (char *);
-void write_common (void);
-void get_common (void);
-char *dot2num (u_int32_t * num, char *dot);
-char *num2dot (u_int32_t num);
-
-#ifdef DHCP
-
-static char *dhcp_hostname = NULL;
-
-void write_dhcp_cfg (void);
-int activate_dhcp_net (void);
-
-int
-main (int argc, char *argv[])
-{
-  client = debconfclient_new ();
-
-  client->command (client, "title", "Network Configuration", NULL);
-  get_common ();
-  get_interface ();
-  client->command (client, "input", "high", "netcfg/dhcp_hostname", NULL);
-  client->command (client, "go", NULL);
-  client->command (client, "get", "netcfg/dhcp_hostname", NULL);
-  dhcp_hostname = client->value;
-  write_common ();
-  write_dhcp_cfg ();
-  activate_dhcp_net ();
-
-  return 0;
-}
-
-void
-write_dhcp_cfg (void)
-{
-
-  FILE *fp;
-  if ((fp = file_open (INTERFACES_FILE)))
-    {
-      fprintf (fp,
-	       "\n# This entry was created during the Debian installation\n");
-      fprintf (fp, "iface %s inet dhcp\n", interface);
-    }
-  if ((fp = file_open (DHCPCD_FILE)))
-    {
-      fprintf (fp,
-	       "\n# dhcpcd configuration: created during the Debian installation\n");
-      fprintf (fp, "IFACE=%s\n", interface);
-      if (dhcp_hostname)
-	fprintf (fp, "OPTIONS='-h %s'\n", dhcp_hostname);
-    }
-}
-
-
-int
-activate_dhcp_net (void)
-{
-  char *ptr;
-  int rv;
-  do_system ("/sbin/ifconfig lo 127.0.0.1");
-
-  ptr = buf;
-  ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
-  if (dhcp_hostname)
-    ptr +=
-      snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
-
-  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " %s", interface);
-
-  rv = do_system (buf);
-  if (rv != 0)
-    {
-      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
-      client->command (client, "go", NULL);
-    }
-  return 0;
-}
-
-
-
-#endif /* DHCP */
-
-#ifdef STATIC
-
-static u_int32_t network = 0;
-static u_int32_t broadcast = 0;
-static u_int32_t netmask = 0;
-static u_int32_t gateway = 0;
-
-
-static struct debconfclient *client;
-
-
-static char buf[MAXLINE];
-
-void get_static_cfg (void);
-void write_static_cfg (void);
-int activate_static_net ();
-
-int
-main (int argc, char *argv[])
-{
-  client = debconfclient_new ();
-
-  client->command (client, "title", "Network Configuration", NULL);
-
-  get_static_cfg ();
-  write_static_cfg ();
-  activate_static_net ();
-
-  return 0;
-}
-
-void
-get_static_cfg (void)
-{
-  char finished = 0;
-  char *ptr;
-
-  do
-    {
-      get_interface ();
-
-      debconf_unseen ("netcfg/get_hostname");
-      debconf_unseen ("netcfg/get_ipaddress");
-      debconf_unseen ("netcfg/get_netmask");
-      debconf_unseen ("netcfg/get_gateway");
-      debconf_unseen ("netcfg/get_nameservers");
-      debconf_unseen ("netcfg/confirm_static_cfg");
-      if (hostname)
-	free (hostname);
-      if (domain)
-	free (domain);
-
-      hostname = domain = NULL;
-      ipaddress = network = broadcast = netmask = gateway =
-	nameservers[0] = 0;
-
-
-      debconf_subst ("netcfg/confirm_static_cfg", "hostname", hostname);
-      if ((ptr = debconf_input ("high", "netcfg/get_ipaddress")))
-	dot2num (&ipaddress, ptr);
-
-      debconf_subst ("netcfg/confirm_static_cfg", "ipaddress",
-		     num2dot (ipaddress));
-
-      get_common ();
-
-      if ((ptr = debconf_input ("high", "netcfg/get_netmask")))
-	dot2num (&netmask, ptr);
-      debconf_subst ("netcfg/confirm_static_cfg", "netmask",
-		     num2dot (netmask));
-
-      network = ipaddress & netmask;
-
-      debconf_subst ("netcfg/confirm_static_cfg", "network",
-		     num2dot (network));
-
-
-      if ((ptr = debconf_input ("high", "netcfg/get_gateway")))
-	dot2num (&gateway, ptr);
-      debconf_subst ("netcfg/confirm_static_cfg", "gateway",
-		     num2dot (gateway));
-
-
-      if ((gateway & netmask) != (ipaddress & netmask))
-	{
-	  client->command (client, "input", "high",
-			   "netcfg/gateway_unreachable", NULL);
-	  client->command (client, "go", NULL);
-	}
-
-      broadcast = (network | ~netmask);
-      debconf_subst ("netcfg/confirm_static_cfg", "broadcast",
-		     num2dot (broadcast));
-      ptr = debconf_input ("high", "netcfg/confirm_static_cfg");
-
-      if (strstr (ptr, "true"))
-	finished = 1;
-
-
-    }
-  while (!finished);
-
-}
-
-
-void
-write_static_cfg (void)
-{
-  FILE *fp;
-
-
-  if ((fp = file_open (NETWORKS_FILE)))
-    {
-      fprintf (fp, "localnet %s\n", num2dot (network));
-      fclose (fp);
-    }
-
-  write_common ();
-
-  if ((fp = file_open (INTERFACES_FILE)))
-    {
-      fprintf (fp,
-	       "\n# This entry was created during the Debian installation\n");
-      fprintf (fp, "# (network, broadcast and gateway are optional)\n");
-      fprintf (fp, "iface %s inet static\n", interface);
-      fprintf (fp, "\taddress %s\n", num2dot (ipaddress));
-      fprintf (fp, "\tnetmask %s\n", num2dot (netmask));
-      fprintf (fp, "\tnetwork %s\n", num2dot (network));
-      fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
-      fprintf (fp, "\tgateway %s\n", num2dot (gateway));
-      fclose (fp);
-    }
-
-}
-
-int
-activate_static_net ()
-{
-  int rv;
-  char *ptr;
-  do_system ("/sbin/ifconfig lo 127.0.0.1");
-
-  ptr = buf;
-  ptr +=
-    snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", interface,
-	      num2dot (ipaddress));
-  ptr +=
-    snprintf (ptr, sizeof (buf) - (ptr - buf), " netmask %s",
-	      num2dot (netmask));
-  ptr +=
-    snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s",
-	      num2dot (broadcast));
-
-  rv = do_system (buf);
-  if (rv != 0)
-    {
-      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
-      client->command (client, "go", NULL);
-    }
-  return 0;
-}
-
-
-#endif /* STATIC */
-
-void
-get_common (void)
-{
-  char *ptr, *ns;
-
-
-  hostname = strdup (debconf_input ("high", "netcfg/get_hostname"));
-
-  if ((ptr = debconf_input ("high", "netcfg/get_domain")))
-    domain = strdup (ptr);
-
-  debconf_subst ("netcfg/confirm_static_cfg", "domain", domain);
-
-
-
-  ptr = debconf_input ("high", "netcfg/get_nameservers");
-
-  if (ptr)
-    {
-      char *save;
-      save = ptr = strdup (ptr);
-      ns = strtok_r (ptr, " ", &ptr);
-      debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", ns);
-      dot2num (&nameservers[0], ns);
-
-      ns = strtok_r (NULL, " ", &ptr);
-      debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", ns);
-      dot2num (&nameservers[1], ns);
-
-      ns = strtok_r (NULL, " ", &ptr);
-      debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", ns);
-      dot2num (&nameservers[2], ns);
-
-      free (save);
-    }
-  else
-    {
-      debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", NULL);
-      debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", NULL);
-      debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", NULL);
-    }
-
-
-
-
-
-
-
-}
-
-void
-write_common (void)
-{
-  FILE *fp;
-  int i;
-
-  if ((fp = file_open (HOSTS_FILE)))
-    {
-      fprintf (fp, "127.0.0.1\tlocalhost\n");
-      if (domain)
-	{
-	  fprintf (fp, "%s\t%s.%s\t%s\n", num2dot (ipaddress),
-		   hostname, domain, hostname);
-	}
-      else
-	{
-	  fprintf (fp, "%s\t%s\n", num2dot (ipaddress), hostname);
-	}
-
-      fclose (fp);
-    }
-
-
-
-
-  if ((fp = file_open (RESOLV_FILE)))
-    {
-      i = 0;
-      if (domain)
-	fprintf (fp, "search %s\n", domain);
-      while (nameservers[i])
-	{
-	  fprintf (fp, "nameserver %s\n", num2dot (nameservers[i++]));
-	}
-      fclose (fp);
-    }
-
-}
+static char buf[128];
 
 
 char *
 debconf_input (char *priority, char *template)
 {
+  client->command (client, "fset", template, "seen", "false", NULL);
   client->command (client, "input", priority, template, NULL);
   client->command (client, "go", NULL);
   client->command (client, "get", template, NULL);
   return client->value;
 }
 
-void
-debconf_subst (char *template, char *key, char *string)
+static int
+netcfg_mkdir (char *path)
 {
-  if (string)
-    client->command (client, "subst", template, key, string, NULL);
-  else
-    client->command (client, "subst", template, key, "<none>", NULL);
+  if (check_dir (path) == -1)
+    if (!mkdir (path, 0700))
+      {
+	perror ("mkdir");
+	return -1;
+      }
+  return 0;
 }
-
-
-void
-debconf_unseen (char *template)
-{
-  client->command (client, "fset", template, "seen", "false", NULL);
-}
-
 
 int
 is_interface_up (char *inter)
@@ -430,55 +79,7 @@ int_up_done:
   return ret;
 }
 
-static FILE *ifs = NULL;
-static char ibuf[512];
-
-void
-getif_start (void)
-{
-  if (ifs != NULL)
-    {
-      fclose (ifs);
-      ifs = NULL;
-    }
-  if ((ifs = fopen ("/proc/net/dev", "r")) != NULL)
-    {
-      fgets (ibuf, sizeof (ibuf), ifs);	/* eat header */
-      fgets (ibuf, sizeof (ibuf), ifs);	/* ditto */
-    }
-  return;
-}
-
-void
-getif_end (void)
-{
-  if (ifs != NULL)
-    {
-      fclose (ifs);
-      ifs = NULL;
-    }
-  return;
-}
-
-char *
-getif (int all)
-{
-  char rbuf[512];
-  if (ifs == NULL)
-    return NULL;
-
-  if (fgets (rbuf, sizeof (rbuf), ifs) != NULL)
-    {
-      get_name (ibuf, rbuf);
-      if (!strcmp (ibuf, "lo"))	/* ignore the loopback */
-	return getif (all);	/* seriously doubt there is an infinite number of lo devices */
-      if (all || is_interface_up (ibuf) == 1)
-	return ibuf;
-    }
-  return NULL;
-}
-
-void
+static void
 get_name (char *name, char *p)
 {
   while (isspace (*p))
@@ -511,10 +112,58 @@ get_name (char *name, char *p)
 
 
 
-/*
- * Get a description for an interface (i.e. "Ethernet" for ethX).
- */
-char *
+static FILE *ifs = NULL;
+static char ibuf[512];
+
+static void
+getif_start ()
+{
+  if (ifs != NULL)
+    {
+      fclose (ifs);
+      ifs = NULL;
+    }
+  if ((ifs = fopen ("/proc/net/dev", "r")) != NULL)
+    {
+      fgets (ibuf, sizeof (ibuf), ifs);	/* eat header */
+      fgets (ibuf, sizeof (ibuf), ifs);	/* ditto */
+    }
+  return;
+}
+
+
+static char *
+getif (int all)
+{
+  char rbuf[512];
+  if (ifs == NULL)
+    return NULL;
+
+  if (fgets (rbuf, sizeof (rbuf), ifs) != NULL)
+    {
+      get_name (ibuf, rbuf);
+      if (!strcmp (ibuf, "lo"))	/* ignore the loopback */
+	return getif (all);	/* seriously doubt there is an infinite number of lo devices */
+      if (all || is_interface_up (ibuf) == 1)
+	return ibuf;
+    }
+  return NULL;
+}
+
+
+static void
+getif_end ()
+{
+  if (ifs != NULL)
+    {
+      fclose (ifs);
+      ifs = NULL;
+    }
+  return;
+}
+
+
+static char *
 get_ifdsc (const char *ifp)
 {
   int i;
@@ -525,14 +174,6 @@ get_ifdsc (const char *ifp)
   }
   interface_alist[] =
   {
-    /*
-     * A _("string") is an element of a char *[], and the linker will
-     * know where to find the elements.  This works with `pointerize';
-     * perhaps that's different with `gettext'... though if it expands
-     * to a function call, this initializer should still work fine.
-     * Also see the 1.66 version of choose_cdrom(), which uses the
-     * similar technique.  If it works there, it will work here.
-     */
     {
     "eth", "Ethernet or Fast Ethernet"}
     ,
@@ -559,67 +200,11 @@ get_ifdsc (const char *ifp)
     if (!strncmp (ifp, interface_alist[i].interface,
 		  strlen (interface_alist[i].interface)))
       return interface_alist[i].description;
-  return NULL;
+  return "unknown interface";
 }
 
 
-
-
-/*
- * Get all available interfaces from the kernel and ask the user which one
- * he wants to configure
- */
-int
-get_interface ()
-{
-  char *ptr = buf;
-  char *inter;
-
-
-  getif_start ();
-  while ((inter = getif (1)) != NULL)
-    {
-      ptr +=
-	snprintf (ptr, sizeof (buf) - strlen (buf), "%s: %s, ", inter,
-		  get_ifdsc (inter));
-      if (ptr > (buf + sizeof (buf)))
-	{
-	  fprintf (stderr, "Internal error.\n");
-	  exit (1);
-	}
-    }
-  getif_end ();
-
-  if (ptr == buf)
-    {
-      debconf_unseen ("netcfg/no_interfaces");
-      ptr = debconf_input ("critical", "netcfg/no_interfaces");
-      if (ptr)
-	{
-	  interface = strdup (ptr);
-	  return 0;
-	}
-      else
-	return -1;
-    }
-
-
-  debconf_unseen ("netcfg/choose_interface");
-  debconf_subst ("netcfg/choose_interface", "ifchoices", buf);
-
-  ptr = debconf_input ("critical", "netcfg/choose_interface");
-
-  /* grab just the interface name, not the description too */
-  *(strchr (ptr, ':')) = '\0';
-
-  interface = strdup (ptr);
-  debconf_subst ("netcfg/confirm_static_cfg", "interface", interface);
-
-  return 0;
-}
-
-
-FILE *
+static FILE *
 file_open (char *path)
 {
   FILE *fp;
@@ -627,34 +212,14 @@ file_open (char *path)
     return fp;
   else
     {
+      fprintf (stderr, "%s\n", path);
       perror ("fopen");
       return NULL;
     }
-
 }
 
 
-
-int
-do_system (char *s)
-{
-  int rv;
-#ifdef DEBUG
-  fprintf (stderr, "executing '%s'\n", s);
-#endif
-  rv = system (s);
-#ifdef DEBUG
-  fprintf (stderr, "rv = %d\n", rv);
-#endif
-  return rv;
-}
-
-
-/** 
- * dot2num and num2dot
- * Copyright: Karl Hammar, Aspö Data
-*/
-char *
+static void
 dot2num (u_int32_t * num, char *dot)
 {
   char *p = dot - 1;
@@ -663,7 +228,8 @@ dot2num (u_int32_t * num, char *dot)
   unsigned long val;
 
   if (!dot)
-    return NULL;
+    goto error;
+
   *num = 0;
   for (ix = 0; ix < 4; ix++)
     {
@@ -673,29 +239,29 @@ dot2num (u_int32_t * num, char *dot)
       if (e == p)
 	val = 0;
       else if (val > 255)
-	return NULL;
+	goto error;
       *num += val;
       /*printf("%#8x, %#2x\n", *num, val); */
       if (ix < 3 && *e != '.')
-	return NULL;
+	goto error;
       p = e;
     }
 
-  return p;
+  return;
+
+error:
+  *num = 0;
 }
 
 
 static char num2dot_buf[16];
 
-char *
+static char *
 num2dot (u_int32_t num)
 {
   int byte[4];
   int ix;
   char *dot = num2dot_buf;
-
-  if (num == 0)
-    return NULL;
 
   for (ix = 3; ix >= 0; ix--)
     {
@@ -706,3 +272,432 @@ num2dot (u_int32_t num)
 
   return dot;
 }
+
+
+
+static void
+netcfg_die ()
+{
+  client->command (client, "input", "high", "netcfg/error", NULL);
+  client->command (client, "go", NULL);
+  exit (1);
+}
+
+
+static void
+netcfg_get_interface ()
+{
+  char *inter;
+  int len;
+  int newchars;
+  char *ptr;
+  int num_interfaces = 0;
+
+  if (interface)
+    {
+      free (interface);
+      interface = NULL;
+    }
+
+  if (!(ptr = malloc (128)))
+    netcfg_die ();
+  len = 128;
+  *ptr = '\0';
+
+  getif_start ();
+  while ((inter = getif (1)) != NULL)
+    {
+      newchars = strlen (inter) + strlen (get_ifdsc (inter)) + 5;
+      if (len < (strlen (ptr) + newchars))
+	{
+	  if (!(ptr = realloc (ptr, len + newchars + 128)))
+	    goto error;
+	  len += newchars + 128;
+	}
+
+      snprintf (ptr + strlen (ptr), len - strlen (ptr), "%s: %s, ", inter,
+		get_ifdsc (inter));
+      num_interfaces++;
+    }
+  getif_end ();
+
+  if (num_interfaces == 0)
+    {
+      client->command (client, "input", "high", "netcfg/no_interfaces", NULL);
+      client->command (client, "go", NULL);
+      free (ptr);
+      exit (1);
+    }
+  else if (num_interfaces > 1)
+    {
+      client->command (client, "subst", "netcfg/choose_interface",
+		       "ifchoices", ptr, NULL);
+      free (ptr);
+      inter = debconf_input ("high", "netcfg/choose_interface");
+
+      if (!inter)
+	netcfg_die ();
+    }
+
+  /* grab just the interface name, not the description too */
+  interface = inter;
+  ptr = strchr (inter, ':');
+  if (ptr == NULL)
+    goto error;
+  *ptr = '\0';
+
+  interface = strdup (interface);
+  client->command (client, "subst", "netcfg/confirm_static", "interface",
+		   interface, NULL);
+
+  return;
+
+error:
+  if (ptr)
+    free (ptr);
+
+  netcfg_die ();
+}
+
+
+static void
+netcfg_get_common ()
+{
+  char *ptr, *ns;
+
+
+  netcfg_get_interface ();
+
+  if (hostname)
+    {
+      free (hostname);
+      hostname = NULL;
+    }
+
+  hostname = strdup (debconf_input ("medium", "netcfg/get_hostname"));
+
+  if (domain)
+    {
+      free (domain);
+      domain = NULL;
+    }
+
+  if ((ptr = debconf_input ("medium", "netcfg/get_domain")))
+    domain = strdup (ptr);
+
+  ptr = debconf_input ("medium", "netcfg/get_nameservers");
+
+  if (ptr)
+    {
+      char *save;
+      save = ptr = strdup (ptr);
+#ifdef DHCP
+      client->command (client, "subst", "netcfg/confirm_dhcp",
+	      "nameservers", ptr, NULL);
+#else
+      client->command (client, "subst", "netcfg/confirm_static",
+	      "nameservers", ptr, NULL);
+#endif
+      ns = strtok_r (ptr, " ", &ptr);
+      dot2num (&nameservers[0], ns);
+
+      ns = strtok_r (NULL, " ", &ptr);
+      dot2num (&nameservers[1], ns);
+
+      ns = strtok_r (NULL, " ", &ptr);
+      dot2num (&nameservers[2], ns);
+
+      free (save);
+    }
+  else
+      nameservers[0] = 0;
+
+
+}
+
+void
+netcfg_write_common ()
+{
+  FILE *fp;
+
+
+  netcfg_mkdir (ETC_DIR);
+  netcfg_mkdir (NETWORK_DIR);
+
+
+  if ((fp = file_open (HOSTS_FILE)))
+    {
+      fprintf (fp, "127.0.0.1\tlocalhost\n");
+      if (ipaddress)
+	{
+	  if (domain)
+	    fprintf (fp, "%s\t%s.%s\t%s\n", num2dot (ipaddress),
+		     hostname, domain, hostname);
+	  else
+	    fprintf (fp, "%s\t%s\n", num2dot (ipaddress), hostname);
+	}
+
+      fclose (fp);
+    }
+
+  if ((fp = file_open (RESOLV_FILE)))
+    {
+      int i = 0;
+      if (domain)
+	fprintf (fp, "search %s\n", domain);
+
+      while (nameservers[i])
+	fprintf (fp, "nameserver %s\n", num2dot (nameservers[i++]));
+
+      fclose (fp);
+    }
+}
+
+
+#ifdef DHCP
+
+static char *dhcp_hostname = NULL;
+
+
+static void
+netcfg_get_dhcp ()
+{
+    if (dhcp_hostname)
+	free (dhcp_hostname);
+
+  client->command (client, "input", "high", "netcfg/dhcp_hostname", NULL);
+  client->command (client, "go", NULL);
+  client->command (client, "get", "netcfg/dhcp_hostname", NULL);
+
+  if (client->value)
+      dhcp_hostname = strdup(client->value);
+}
+
+
+static void
+netcfg_write_dhcp ()
+{
+
+  FILE *fp;
+
+  if ((fp = file_open (INTERFACES_FILE)))
+    {
+      fprintf (fp,
+	       "\n# This entry was created during the Debian installation\n");
+      fprintf (fp, "iface %s inet dhcp\n", interface);
+    }
+
+  netcfg_mkdir (DHCPCD_DIR);
+  if ((fp = file_open (DHCPCD_FILE)))
+    {
+      fprintf (fp,
+	       "\n# dhcpcd configuration: created during the Debian installation\n");
+      fprintf (fp, "IFACE=%s\n", interface);
+      if (dhcp_hostname)
+	fprintf (fp, "OPTIONS='-h %s'\n", dhcp_hostname);
+    }
+}
+
+
+static void
+netcfg_activate_dhcp ()
+{
+  char *ptr;
+  execlog ("/sbin/ifconfig lo 127.0.0.1");
+
+  ptr = buf;
+  ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
+  if (dhcp_hostname)
+    ptr +=
+      snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
+
+  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " %s", interface);
+
+  if (execlog (buf))
+    netcfg_die ();
+}
+
+int
+main (int argc, char *argv[])
+{
+  char *ptr;
+  int finished = 1;
+  client = debconfclient_new ();
+  client->command (client, "title", "DHCP Network Configuration", NULL);
+
+  do
+    {
+      netcfg_get_common ();
+      netcfg_get_dhcp ();
+      client->command (client, "subst", "netcfg/confirm_dhcp", "interface",
+	      interface, NULL);
+      client->command (client, "subst", "netcfg/confirm_dhcp", "hostname",
+		       hostname, NULL);
+      client->command (client, "subst", "netcfg/confirm_dhcp", "domain",
+		       (domain ? domain : "<none>"), NULL);
+      client->command (client, "subst", "netcfg/confirm_dhcp", "dhcp_hostname",
+		       (dhcp_hostname ? dhcp_hostname : "<none>"), NULL);
+      ptr = debconf_input ("medium", "netcfg/confirm_dhcp");
+
+      if (strstr (ptr, "true"))
+	finished = 1;
+    }
+  while (!finished);
+
+  netcfg_write_dhcp ();
+  netcfg_write_common ();
+
+  debconf_input ("medium", "netcfg/do_dhcp");
+  netcfg_activate_dhcp ();
+
+  return 0;
+}
+
+
+
+#endif /* DHCP */
+
+#ifdef STATIC
+
+static u_int32_t network = 0;
+static u_int32_t broadcast = 0;
+static u_int32_t netmask = 0;
+static u_int32_t gateway = 0;
+static struct debconfclient *client;
+
+
+static void
+netcfg_get_static ()
+{
+  char *ptr;
+
+  ipaddress = network = broadcast = netmask = gateway = 0;
+
+  ptr = debconf_input ("critical", "netcfg/get_ipaddress");
+  dot2num (&ipaddress, ptr);
+
+  client->command (client, "subst", "netcfg/confirm_static",
+		   "ipaddress",
+		   (ipaddress ? num2dot (ipaddress) : "<none>"), NULL);
+
+  ptr = debconf_input ("critical", "netcfg/get_netmask");
+  dot2num (&netmask, ptr);
+  client->command (client, "subst", "netcfg/confirm_static",
+		   "netmask", (netmask ? num2dot (netmask) : "<none>"), NULL);
+
+  network = ipaddress & netmask;
+
+  ptr = debconf_input ("critical", "netcfg/get_gateway");
+  dot2num (&gateway, ptr);
+
+  client->command (client, "subst", "netcfg/confirm_static",
+		   "gateway", (gateway ? num2dot (gateway) : "<none>"), NULL);
+
+  if (gateway && ( (gateway & netmask) != network))
+    {
+      client->command (client, "input", "high",
+		       "netcfg/gateway_unreachable", NULL);
+      client->command (client, "go", NULL);
+    }
+
+  broadcast = (network | ~netmask);
+
+
+}
+
+
+static int
+netcfg_write_static ()
+{
+  FILE *fp;
+
+  if ((fp = file_open (NETWORKS_FILE)))
+    {
+      fprintf (fp, "localnet %s\n", num2dot (network));
+      fclose (fp);
+    }
+  else
+    goto error;
+
+  if ((fp = file_open (INTERFACES_FILE)))
+    {
+      fprintf (fp,
+	       "\n# This entry was created during the Debian installation\n");
+      fprintf (fp, "# (network, broadcast and gateway are optional)\n");
+      fprintf (fp, "iface %s inet static\n", interface);
+      fprintf (fp, "\taddress %s\n", num2dot (ipaddress));
+      fprintf (fp, "\tnetmask %s\n", num2dot (netmask));
+      fprintf (fp, "\tnetwork %s\n", num2dot (network));
+      fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
+      fprintf (fp, "\tgateway %s\n", num2dot (gateway));
+      fclose (fp);
+    }
+  else
+    goto error;
+
+  return 0;
+error:
+  return -1;
+}
+
+static int
+netcfg_activate_static ()
+{
+  int rv;
+  char *ptr;
+  execlog ("/sbin/ifconfig lo 127.0.0.1");
+
+  ptr = buf;
+  ptr +=
+    snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", interface,
+	      num2dot (ipaddress));
+  ptr +=
+    snprintf (ptr, sizeof (buf) - (ptr - buf), " netmask %s",
+	      num2dot (netmask));
+  ptr +=
+    snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s",
+	      num2dot (broadcast));
+
+  rv = execlog (buf);
+  if (rv != 0)
+    {
+      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
+      client->command (client, "go", NULL);
+    }
+  return 0;
+}
+
+int
+main (int argc, char *argv[])
+{
+  int finished = 0;
+  char *ptr;
+  client = debconfclient_new ();
+
+  client->command (client, "title", "Static Network Configuration", NULL);
+
+
+  do
+    {
+      netcfg_get_common ();
+      client->command (client, "subst", "netcfg/confirm_static",
+		       "hostname", hostname, NULL);
+      client->command (client, "subst", "netcfg/confirm_static", "domain",
+		       (domain ? domain : "<none>"), NULL);
+      netcfg_get_static ();
+      ptr = debconf_input ("medium", "netcfg/confirm_static");
+
+      if (strstr (ptr, "true"))
+	finished = 1;
+
+    }
+  while (!finished);
+
+  netcfg_write_common ();
+  netcfg_write_static ();
+  netcfg_activate_static ();
+
+  return 0;
+}
+
+#endif /* STATIC */

@@ -6,39 +6,17 @@ Description: What is your dhcp hostname?
  If you are a cable modem user, you might often need to specify an
  account number here.  Otherwise, you can just leave this blank.
 
-Template: netcfg/no_interfaces
-Type: string
-Description: please enter a network interface.
- No network interfaces were found.   That means that the installation system
- was unable to find a network device.  If you do have a network card, then it
- is possible that the module for it hasn't been selected yet.  Go back to the
- 'Configure Device Driver Modules' menu and load the required kernel modules
- first.  If your only network connection is PPP, don't worry -- you will be
- asked if you want PPP later in the process.
+Template: netcfg/confirm_dhcp
+Type: boolean
+Default: true
+Description: Is this information correct?
+  interface      = ${interface}
+  hostname       = ${hostname}
+  domain         = ${domain}
+  dhcp hostname  = ${dhcp_hostname}
+  nameservers    = ${nameservers} 
 
-Template: netcfg/get_hostname
-Type: string
-Default: debian
-Description: Enter the system's hostname.
- The hostname is a single word that identifies your system to the
- network.  If you don't know what your hostname should be, consult
- your network administrator.  If you are setting up your own home
- network, you can make something up here. 
-
-Template: netcfg/choose_interface
-Type: select
-Choices: ${ifchoices}
-Description: Choose an interface.
- The following interfaces were detected. Choose the type of your primary
- network interface that you will need for installing Debian (via NFS or HTTP).
-
-Template: netcfg/error_cfg
+Template: netcfg/do_dhcp
 Type: note
-Description: An error occured.
- Something went wrong when I tried to activate your network.  
-
-Template: netcfg/no_interfaces
-Type: string
-Description: please enter a network interface.
- No network interfaces were found. 
-
+Description: I will now configure the network.
+ This may take some time.  It shouldn't take more than a minute or two.

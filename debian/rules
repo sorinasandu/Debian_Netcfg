@@ -62,6 +62,10 @@ binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installdebconf
+	cat debian/netcfg-common.templates >> debian/netcfg-static/DEBIAN/templates	
+	cat debian/netcfg-common.templates >> debian/netcfg-dhcp/DEBIAN/templates	
+	cp debian/menutest-common debian/netcfg-dhcp/DEBIAN/menutest	
+	cp debian/menutest-common debian/netcfg-static/DEBIAN/menutest	
 #	dh_installdocs
 #	dh_installchangelogs 
 #	dh_link

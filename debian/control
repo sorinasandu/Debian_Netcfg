@@ -7,7 +7,7 @@ Standards-Version: 3.1.1
 
 Package: netcfg-dhcp
 Architecture: any
-Depends: cdebconf-udeb | cdebconf , dhcpcd-udeb | dhcpcd, netcfg-common
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcpcd-udeb
 Provides: configured-network
 XBC-Installer-Menu-Item: 2
 Description: Configure the network via DHCP
@@ -19,7 +19,7 @@ Description: Configure the network via DHCP
 
 Package: netcfg-static
 Architecture: any
-Depends: cdebconf-udeb | cdebconf, netcfg-common
+Depends: ${shlibs:Depends}, cdebconf-udeb
 Provides: configured-network
 XBC-Installer-Menu-Item: 2
 Description: Configure a static network
@@ -27,9 +27,3 @@ Description: Configure a static network
  able to configure a static network.  If you don't know this information, you
  should ask you system administrator.
 
-Package: netcfg-common
-Architecture: any
-Depends: 
-Provides: configured-network
-Description: Share resources between static and dhcp netcfg.
- This package contains templates that are shared between netcfg-dhcp and netcfg-static.

@@ -2,7 +2,6 @@ ifndef PROGS
 PROGS=netcfg-dhcp netcfg-static
 endif
 
-
 INCS=-I../cdebconf/src/
 LDOPTS=-L../cdebconf/src -ldebconf
 PREFIX=$(DESTDIR)/usr/
@@ -18,15 +17,15 @@ install:
 	$(foreach PROG, $(PROGS), \
 	-cp $(PROG) debian/$(PROG).postinst)
 
-netcfg-dhcp: netcfg.c
-	$(CC) $(CFLAGS) -DDHCP netcfg.c -o $@ $(INCS) $(LDOPTS)
+netcfg-dhcp: netcfg.c utils.o
+	$(CC) $(CFLAGS) -DDHCP netcfg.c utils.o -o $@ $(INCS) $(LDOPTS)
 	$(STRIP) $@
 	size $@ 
 
-netcfg-static: netcfg.c
-	$(CC) $(CFLAGS) -DSTATIC netcfg.c -o $@ $(INCS) $(LDOPTS)
+netcfg-static: netcfg.c utils.o
+	$(CC) $(CFLAGS) -DSTATIC netcfg.c utils.o -o $@ $(INCS) $(LDOPTS)
 	$(STRIP) $@
 	size $@ 
 
 clean:
-	rm -f netcfg-*
+	rm -f netcfg-* *.o

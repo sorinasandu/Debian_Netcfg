@@ -1,28 +1,21 @@
-Template: netcfg/get_domain
-Type: string
-Description: Choose the domain name.
- The domain name is the part of your Internet address to the right
- of your host name.  It is often something that ends in .com, .net,
- .edu, or .org.  If you are setting up a home network, you can make
- something up, but make sure you use the same domain name on all
- your computers. 
-
 Template: netcfg/get_ipaddress
 Type: string
-Description: What is the IP address of this system?
- The ipaddress identifies you system to other computer on the network.  If you don't
- know your ipaddress you should ask your system administrator.  
+Description: IP address?
+ The IP address is unique to your computer and consists of four
+ numbers separated by periods.  If you don't know what to use here,
+ consult your network administrator.
 
 Template: netcfg/get_netmask
 Type: string
-Description: What is your netmask?
- The netmask is used to determine what ipaddresses are valid on this network.  This allows
- your computer to determine whether or not it needs to send packets destined for a particular
- ipaddress to a gateway.
+Description: Netmask?
+ The netmask is used to determine which machines are local to your
+ network.  Consult your network administrator if you do not know the
+ value.  The netmask should be entered as four numbers separated by
+ periods.
 
 Template: netcfg/get_gateway
 Type: string
-Description: What is your IP gateway address?
+Description: Gateway?
  This is an IP address (four numbers separated by periods) that
  indicates the gateway router, also known as the default router.  All
  traffic that goes outside your LAN (for instance, to the Internet) is
@@ -36,15 +29,7 @@ Type: note
 Description: The gateway you entered is unreachable.
  You may have made an error entering your ipaddress, netmask and/or gateway.
 
-Template: netcfg/get_nameservers
-Type: string
-Description: Choose the DNS Server Addresses
- Please enter the IP addresses (not host names) of up to 3 name servers,
- separated by spaces. Do not use commas. The servers will be queried in the
- order in which you enter them. If you don't want to use any name servers just
- leave this field blank.
-
-Template: netcfg/confirm_static_cfg
+Template: netcfg/confirm_static
 Type: boolean
 Default: true
 Description: Is this configuration correct?
@@ -53,37 +38,5 @@ Description: Is this configuration correct?
   domain        = ${domain} 
   ipaddress     = ${ipaddress} 
   netmask       = ${netmask} 
-  network       = ${network} 
-  broadcast     = ${broadcast} 
   gateway       = ${gateway} 
-  primary DNS   = ${primary_DNS} 
-  secondary DNS = ${secondary_DNS} 
-  tertiary DNS  = ${tertiary_DNS}
-
-Template: netcfg/get_hostname
-Type: string
-Default: debian
-Description:
- The hostname is a single word that identifies your system to the
- network.  If you don't know what your hostname should be, consult
- your network administrator.  If you are setting up your own home
- network, you can make something up here.  Don't enter your full
- domain name here; you'll be asked for that next.
-
-Template: netcfg/no_interfaces
-Type: string
-Description: please enter a network interface.
- No network interfaces were found. 
-
-Template: netcfg/choose_interface
-Type: select
-Choices: ${ifchoices}
-Description: Choose an interface.
- The following interfaces were detected. Choose the type of your primary
- network interface that you will need for installing Debian (via NFS or HTTP).
-
-Template: netcfg/error_cfg
-Type: note
-Description: An error occured.
- Something went wrong when I tried to activate your network.  
-
+  nameservers   = ${nameservers} 
