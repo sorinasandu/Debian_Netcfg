@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-15 10:22+0700\n"
+"PO-Revision-Date: 2004-07-02 10:22+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac."
 "id>\n"
@@ -520,7 +520,6 @@ msgstr "Metoda konfigurasi jaringan"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -528,19 +527,18 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Autokonfigurasi jaringan gagal. Ini mungkin disebabkan server DHCP yang "
-"lambat pada jaringan, jadi dapat mengulang. Jika jaringan anda tidak "
-"menggunakan DHCP untuk autokonfigurasi, anda dapat mencoba "
-"mengkonfigurasikan jaringan secara manual. Selain itu, beberapa server DHCP "
-"memerlukan nama host yang spesifik, jadi anda dapat memilih memasukan nama "
-"host sebelum mengulangi DHCP."
+"Dari sini anda dapat memilih mengulangi konfigurasi otomatis jaringan dengan "
+"DHCP (yang mungkin lama bila DHCP server anda lambat merespon permintaan) "
+"atau mengkonfigurasikan jaringan secara manual. Beberapa server DHCP "
+"membutuhkan nama host DHCP dikirimkan oleh klien, jadi anda dapat juga "
+"mengulangi konfigurasi otomatis jaringan dengan DHCP menggunakan nama host "
+"yang anda berikan."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Autokonfigurasi jaringan selesai dengan sukses"
+msgstr "Konfigurasi otomatis jaringan gagal"
 
 #. Type: note
 #. Description
@@ -549,12 +547,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Jaringan anda mungkin tidak menggunakan protokol DHCP. Mungkin juga "
+"server DHCP lambat, atau perangkat keras jaringan tidak bekerja dengan baik."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Melanjutkan tanpat rute bawaan?"
 
 #. Type: boolean
 #. Description
@@ -566,6 +566,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Konfigurasi otomatis jaringan sukses. Namun, rute bawaan tidak diatur: "
+"sistem tidak tahu bagaimana berkomunikasi dengan host-host di Internet. "
+"Hal ini menyebabkan anda tidak dapat melanjutkan instalasi, kecuali anda "
+"memiliki CD-ROM Debian resmi pertama (#1), CD-ROM 'Netinst', atau "
+"paket-paket debian tersedia pada jaringan lokal."
 
 #. Type: boolean
 #. Description
@@ -574,6 +579,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Jika anda tidak yakin, anda sebaiknya tidak melanjutkan tanpat rute bawaan: "
+"hubungi administrator jaringan lokal anda mengenai masalah ini."
 
 #. Type: text
 #. Description
@@ -742,18 +749,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " antarmuka      = ${interface}\n"
-#~ " nama host      = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " nama host dhcp = ${dhcp_hostname}\n"
-#~ " server DNS    = ${nameservers}"
