@@ -1,8 +1,7 @@
 /* 
-   netcfg.c - Configures the network 
-   Author - David Whedon, Karl Hammar, Aspö Data
+   netcfg.c - Configure the network for the debian-installer
+   Author - David Whedon
  
-   Copyright terms: GPL
 
 */
 
@@ -16,23 +15,25 @@
 
 static char *hostname = NULL;
 static char *domain = NULL;
+static char *iface = "eth0";
 static u_int32_t ipaddress = 0;
-static u_int32_t network_address = 0;
-char network_address_str[16];
+static u_int32_t network = 0;
+static u_int32_t broadcast = 0;
 static u_int32_t netmask = 0;
-char netmask_str[16];
 static u_int32_t gateway = 0;
-char gateway_str[16];
-static u_int32_t nameservers[4]={0};
-char nameservers_str[16];
-static char address_buf[16];
+
+static u_int32_t nameservers[4] = { 0 };
 
 static struct debconfclient *client;
 
-#define INTERFACES_FILE "/etc/network/interfaces"
-#define HOSTS_FILE      "/etc/hosts"
-#define NETWORKS_FILE   "/etc/networks"
-#define RESOLV_FILE     "/etc/resolv.conf"
+
+#define MAXLINE 128 
+static char cmd_buf[MAXLINE];
+
+#define INTERFACES_FILE "etc/network/interfaces"
+#define HOSTS_FILE      "etc/hosts"
+#define NETWORKS_FILE   "etc/networks"
+#define RESOLV_FILE     "etc/resolv.conf"
 
 
 /** 
@@ -70,146 +71,140 @@ dot2num (u_int32_t * num, char *dot)
 }
 
 
-void
-num2dot (u_int32_t num, char *dot)
+static char num2dot_buf[16];
+
+char *
+num2dot (u_int32_t num)
 {
-  /* dot MUST point to an char arr[16] or longer area */
   int byte[4];
   int ix;
+  char *dot = num2dot_buf;
 
-  if (!dot)
-    return;
   for (ix = 3; ix >= 0; ix--)
     {
       byte[ix] = num & 0xff;
       num >>= 8;
     }
   sprintf (dot, "%d.%d.%d.%d", byte[0], byte[1], byte[2], byte[3]);
+
+  return dot;
+}
+
+char *
+debconf_input (char *priority, char *template)
+{
+  client->command (client, "input", priority, template, NULL);
+  client->command (client, "go", NULL);
+  client->command (client, "get", template, NULL);
+  return client->value;
+}
+
+void
+debconf_subst (char  *template, char *key, char *string){
+    client->command (client, "subst", "netcfg/confirm_static_cfg",
+	    key, string, NULL);
 }
 
 
-
+void
+debconf_unseen(char *template){
+	  client->command (client, "fset", template, "seen",
+			   "false", NULL);
+}
 
 void
 get_static_cfg (void)
 {
   int finished = 0;
-  char *ptr ,*ns1, *ns2, *ns3;
+  char *ptr, *ns1, *ns2, *ns3;
 
   do
     {
-
-      client->command (client, "input", "high", "netcfg/get_hostname",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_hostname", NULL);
-      
-      hostname = strdup(client->value);
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		       "hostname", hostname, NULL);
-
-
-      client->command (client, "input", "critical", "netcfg/get_domain",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_domain", NULL);
-      
-      if ( (ptr = client->value) )
-      {
-	  domain = strdup(ptr);
-    	  client->command (client, "subst", "netcfg/confirm_static_cfg", "domain",
-		  domain, NULL);
-      }
-
-      client->command (client, "input", "critical", "netcfg/get_ipaddress",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_ipaddress", NULL);
-      
-      if ( (ptr = client->value) ) {
-	  dot2num (&ipaddress, ptr);
-	  client->command (client, "subst", "netcfg/confirm_static_cfg",
-		  "ipaddress", ptr, NULL);
-      }
-
-      client->command (client, "input", "critical", "netcfg/get_netmask",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_netmask", NULL);
-      
-      if ( (ptr = client->value) )
-      {
-	  dot2num (&netmask, ptr);
-	  client->command (client, "subst", "netcfg/confirm_static_cfg",
-		       "netmask", ptr, NULL);
-      }
-      
-      network_address = ipaddress & netmask;
-      num2dot(network_address, address_buf);
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		       "network", address_buf, NULL);
-      client->command (client, "input", "critical", "netcfg/get_gateway",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_gateway", NULL);
-      
-      if ( (ptr = client->value) ) {
-	  dot2num (&ipaddress, ptr);
-	  client->command (client, "subst", "netcfg/confirm_static_cfg",
-		  "gateway", ptr, NULL);
-      }
-
-      client->command (client, "input", "critical", "netcfg/get_nameservers",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/get_nameservers", NULL);
-      
-     
-      if ( (ptr = client->value) ) {
-
-	  ptr  = strdup(ptr);
-	  ns1 = strtok(ptr, " ");
-	  ns2 = strtok(NULL, " ");
-	  ns3 = strtok(NULL, " ");
+      hostname = strdup (debconf_input ("high", "netcfg/get_hostname"));
 	  
-	  if (ns1!=NULL)
-	      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		      "primary_DNS", ns1, NULL);
-	  if (ns2!=NULL)
-	      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		      "secondary_DNS", ns2, NULL);
-	  if (ns3!=NULL)
-	      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		      "tertiary_DNS", ns3, NULL);
+      debconf_subst("netcfg/confirm_static_cfg", "hostname", hostname);
+
+      if ((ptr = debconf_input ("high", "netcfg/get_domain")))
+	{
+	  domain = strdup (ptr);
+	  debconf_subst("netcfg/confirm_static_cfg", "domain", domain);
+	}
+
+      if ((ptr = debconf_input ("high", "netcfg/get_ipaddress")))
+	{
+	  dot2num (&ipaddress, ptr);
+	  debconf_subst("netcfg/confirm_static_cfg", "ipaddress", ptr);
+	}
+
+      if ((ptr = debconf_input ("high", "netcfg/get_netmask")))
+	{
+	  dot2num (&netmask, ptr);
+	  debconf_subst("netcfg/confirm_static_cfg", "netmask", ptr);
+	}
+
+      network = ipaddress & netmask;
+
+      debconf_subst ("netcfg/confirm_static_cfg", "network", num2dot (network));
+
+
+      if (( ptr = debconf_input ("high", "netcfg/get_gateway")))
+	{
+	  dot2num (&gateway, ptr);
+	  debconf_subst("netcfg/confirm_static_cfg", "gateway", ptr);
+	}
+
+
+      if ((gateway & netmask) != (ipaddress & netmask))
+      {
+	  client->command (client, "input", "high", "netcfg/gateway_unreachable", NULL);
+	  client->command (client, "go", NULL);
+      }
+     
+      broadcast = (network | ~netmask);
+      debconf_subst("netcfg/confirm_static_cfg", "broadcast", num2dot(broadcast));
+
+      ptr = debconf_input ("high", "netcfg/get_nameservers");
+
+      if (ptr)
+	{
+
+	  ptr = strdup (ptr);
+	  ns1 = strtok (ptr, " ");
+	  ns2 = strtok (NULL, " ");
+	  ns3 = strtok (NULL, " ");
+
+	  if (ns1 != NULL)
+	      debconf_subst("netcfg/confirm_static_cfg", "primary_DNS", ns1);
+	  else
+	      debconf_subst("netcfg/confirm_static_cfg", "primary_DNS", "none");
+	  
+	  if (ns2 != NULL)
+	      debconf_subst("netcfg/confirm_static_cfg", "secondary_DNS", ns1);
+	  else
+	      debconf_subst("netcfg/confirm_static_cfg", "secondary_DNS", "none");
+	  if (ns3 != NULL)
+	      debconf_subst("netcfg/confirm_static_cfg", "tertiary_DNS", ns1);
+	  else
+	      debconf_subst("netcfg/confirm_static_cfg", "tertiary_DNS", "none");
 	  free (ptr);
-      } 
-      
-      client->command (client, "input", "high", "netcfg/confirm_static_cfg",
-		       NULL);
-      client->command (client, "go", NULL);
-      client->command (client, "get", "netcfg/confirm_static_cfg", NULL);
-      ptr = client->value;
+	}
+
+      ptr = debconf_input ("high", "netcfg/confirm_static_cfg");
 
       if (strstr (ptr, "true"))
 	finished = 1;
       else
 	{
-	  client->command (client, "fset", "netcfg/get_hostname", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/get_domain", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/get_ipaddress", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/get_netmask", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/get_gateway", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/get_nameservers", "seen",
-			   "false", NULL);
-	  client->command (client, "fset", "netcfg/confirm_static_cfg",
-			   "seen", "false", NULL);
-	  free(hostname);
-	  free(domain);
+	  debconf_unseen ("netcfg/get_hostname");
+	  debconf_unseen ("netcfg/get_ipaddress");
+	  debconf_unseen ("netcfg/get_netmask");
+	  debconf_unseen ("netcfg/get_gateway");
+	  debconf_unseen ("netcfg/get_nameservers");
+	  debconf_unseen ("netcfg/get_confirm_static_cfg");
+	  free (hostname);
+	  free (domain);
+	  hostname = domain = NULL;
+	  ipaddress = network = broadcast = netmask = gateway = nameservers[0] = 0 ;
 	}
 
     }
@@ -217,6 +212,18 @@ get_static_cfg (void)
 
 }
 
+FILE *
+file_open(char *path){
+    FILE *fp;
+    if (( fp = fopen(path, "w")))
+	return fp;
+    else 
+    {
+	perror("fopen");
+	return NULL;
+    }
+
+}
 
 
 
@@ -225,78 +232,69 @@ write_static_cfg (void)
 {
   FILE *fp;
 
-  /* /etc/hosts */
-  
-  if ((fp = fopen (HOSTS_FILE, "w")))
-  {
-      fprintf(fp, "127.0.0.1\tlocalhost\n");
-      num2dot (ipaddress, address_buf);
-      if (domain) {
-	  fprintf(fp, "%s\t%s.%s\t%s\n", address_buf,
-		  hostname, domain, hostname);
-      } else {
-	  num2dot (ipaddress, address_buf);
-      	  fprintf(fp, "%s\t%s\n", address_buf, hostname);
-      }
-
-      fclose(fp);
-  }
-  else
+  if ((fp = file_open (HOSTS_FILE)))
     {
-      perror ("fopen");
+      fprintf (fp, "127.0.0.1\tlocalhost\n");
+      if (domain)
+	{
+	  fprintf (fp, "%s\t%s.%s\t%s\n", num2dot (ipaddress),
+		   hostname, domain, hostname);
+	}
+      else
+	{
+	  fprintf (fp, "%s\t%s\n", num2dot (ipaddress), hostname);
+	}
+
+      fclose (fp);
     }
 
-  /* /etc/networks */
-  if ((fp = fopen(NETWORKS_FILE, "w"))) {
-      num2dot (network_address, address_buf);
-      fprintf(fp, "localnet %s\n", address_buf);
-      fclose(fp);
-  } else {
-      perror("fopen");
-  }
+  if ((fp = file_open (NETWORKS_FILE)))
+    {
+      fprintf (fp, "localnet %s\n", num2dot (network));
+      fclose (fp);
+    }
 
-  /* /etc/resolv.conf */
-  if ((fp = fopen(RESOLV_FILE, "w"))) {
-      int i=0;
-      if (domain) fprintf(fp, "search %s\n", domain);
-      while(nameservers[i]){
-	  num2dot (nameservers[i++], address_buf);
-	  fprintf(fp, "nameserver %s\n", address_buf);
-      }
-      fclose(fp);
-  } else {
-      perror("fopen");
-  }
+  if ((fp = file_open (RESOLV_FILE)))
+    {
+      int i = 0;
+      if (domain)
+	fprintf (fp, "search %s\n", domain);
+      while (nameservers[i])
+	{
+	  fprintf (fp, "nameserver %s\n", num2dot (nameservers[i++]));
+	}
+      fclose (fp);
+    }
 
-  /* /etc/network/interfaces */
-  if ((fp = fopen (INTERFACES_FILE, "w")))
+  if ((fp = file_open (INTERFACES_FILE)))
     {
       fprintf (fp,
 	       "\n# The first network card - this entry was created during the Debian installation\n");
       fprintf (fp, "# (network, broadcast and gateway are optional)\n");
       fprintf (fp, "iface eth0 inet static\n");
-
-      num2dot (ipaddress, address_buf);
-      fprintf (fp, "\taddress %s\n", address_buf);
-
-      num2dot (netmask, address_buf);
-      fprintf (fp, "\tnetmask %s\n", address_buf);
-
-      num2dot (ipaddress, address_buf);
-      fprintf (fp, "\tnetwork %s\n", address_buf);
-
-      num2dot (ipaddress, address_buf);
-      fprintf (fp, "\tbroadcast %s\n", address_buf);
-
-      num2dot (ipaddress, address_buf);
-      fprintf (fp, "\tgateway %s\n", address_buf);
-
+      fprintf (fp, "\taddress %s\n", num2dot (ipaddress));
+      fprintf (fp, "\tnetmask %s\n", num2dot (netmask));
+      fprintf (fp, "\tnetwork %s\n", num2dot (network));
+      fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
+      fprintf (fp, "\tgateway %s\n", num2dot (gateway));
       fclose (fp);
     }
-  else
-    {
-      perror ("fopen");
-    }
+
+}
+
+
+int
+activate_static_net ()
+{
+
+
+  system ("/sbin/ifconfig lo 127.0.0.1");
+
+  snprintf (cmd_buf, sizeof (cmd_buf),
+	    "/sbin/ifconfig %s %s netmask %s broadcast %s", iface,
+	    num2dot (ipaddress), num2dot (netmask), num2dot (broadcast));
+  system ("cmd_buf");
+  return 0;
 
 }
 
@@ -305,14 +303,11 @@ write_static_cfg (void)
 int
 main (int argc, char *argv[])
 {
-    int i;
-
-    dot2num(&i,"192.168.0.1");
-    fprintf(stderr, "%x\n", i); 
 
   client = debconfclient_new ();
 
   client->command (client, "title", "Network Configuration", NULL);
+
 
   get_static_cfg ();
 

@@ -30,7 +30,6 @@ build-stamp:
 
 	# Add here commands to compile the package.
 	$(MAKE)
-	#/usr/bin/docbook-to-man debian/ddetect.sgml > ddetect.1
 
 	touch build-stamp
 
@@ -64,7 +63,6 @@ binary-arch: build install
 	dh_testroot
 	dh_installdebconf	
 #	dh_installdocs
-#	dh_undocumented ddetect.1
 #	dh_installchangelogs 
 #	dh_link
 	dh_strip

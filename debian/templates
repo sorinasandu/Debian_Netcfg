@@ -19,7 +19,6 @@ Description: Choose the hostname.
  hostname for your new system, you may press <ENTER> to use the default hostname
  of "debian".
 
-
 Template: netcfg/get_domain
 Type: string
 Description: Choose the domain name.
@@ -47,6 +46,12 @@ Description: What is your IP gateway address?
  your company wide-area net or the Internet. If there is no gateway in your
  subnet just leave this field blank.
 
+
+Template: netcfg/gateway_unreachable
+Type: note
+Description: The gateway you entered is unreachable.
+ You may have made an error entering your ipaddress, netmask and/or gateway.
+
 Template: netcfg/get_domain
 Type: string
 Description: Choose the Domain name.
@@ -67,15 +72,16 @@ Template: netcfg/confirm_static_cfg
 Type: boolean
 Default: true
 Description: Is this configuration correct?
-  hostname  = ${hostname} 
-  domain    = ${domain} 
-  ipaddress = ${ipaddress} 
-  netmask   = ${netmask} 
-  network   = ${network} 
-  gateway   = ${gateway} 
-  primary DNS = ${primary_DNS} 
+  hostname      = ${hostname} 
+  domain        = ${domain} 
+  ipaddress     = ${ipaddress} 
+  netmask       = ${netmask} 
+  network       = ${network} 
+  broadcast     = ${broadcast} 
+  gateway       = ${gateway} 
+  primary DNS   = ${primary_DNS} 
   secondary DNS = ${secondary_DNS} 
-  tertiary DNS = ${tertiary_DNS}
+  tertiary DNS  = ${tertiary_DNS}
 
 Template: netcfg/get_pcmcia_tranceiver
 Type: string
