@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-07-15 13:38+0100\n"
+"POT-Creation-Date: 2003-09-18 23:03+0200\n"
 "PO-Revision-Date: 2003-08-23 12:16+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -154,11 +154,11 @@ msgstr "dhcp ホスト名は何ですか?"
 
 #. Description
 #: ../netcfg-dhcp.templates:3
+#, fuzzy
 msgid ""
-"In some situations, you may need to supply a DHCP host name.  These "
-"situations are rare.  Most commonly, it applies to cable modem users. If you "
-"are a cable modem user, you might need to specify an account number here.  "
-"Otherwise, you can just leave this blank."
+"You may need to supply a DHCP host name. If you are using  a cable modem, "
+"you might need to specify an account number here.  Most other users can just "
+"leave this blank."
 msgstr ""
 "ある状況においては、DHCP ホスト名を与える必要があります。この状況はめったにあ"
 "りません。あるとすれば、ケーブルモデムのユーザです。ケーブルモデルのユーザな"
@@ -166,12 +166,12 @@ msgstr ""
 "ここは空のままにしておきます。"
 
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "この情報で正しいですか?"
 
 #. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:11
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -186,22 +186,22 @@ msgstr ""
 " ネームサーバ     = ${nameservers}"
 
 #. Description
-#: ../netcfg-dhcp.templates:21
+#: ../netcfg-dhcp.templates:20
 msgid "I will now configure the network."
 msgstr "ネットワークを設定します。"
 
 #. Description
-#: ../netcfg-dhcp.templates:21
+#: ../netcfg-dhcp.templates:20
 msgid "This may take some time.  It shouldn't take more than a minute or two."
 msgstr "しばらく時間がかかりますが、1、2分以上はかからないでしょう。"
 
 #. Description
-#: ../netcfg-dhcp.templates:26
+#: ../netcfg-dhcp.templates:25
 msgid "No dhcp client found. I cannot continue."
 msgstr "dhcp クライアントが見つかりません。継続できません。"
 
 #. Description
-#: ../netcfg-dhcp.templates:26
+#: ../netcfg-dhcp.templates:25
 msgid "This package requires pump or dhcp-client."
 msgstr "このパッケージは pump または dhcp-client を必要とします。"
 
