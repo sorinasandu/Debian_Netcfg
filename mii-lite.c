@@ -75,15 +75,13 @@ mii_diag_status_lite (char *ifname)
 
 inline int mdio_read(int skfd, int phy_id, int location)
 {
-	u16 *data = (u16 *)(&ifr.ifr_data);
+  u16 *data = (u16 *)(&ifr.ifr_data);
 
-	data[0] = phy_id;
-	data[1] = location;
+  data[0] = phy_id;
+  data[1] = location;
 
-	if (ioctl(skfd, new_ioctl_nums ? 0x8948 : SIOCDEVPRIVATE+1, &ifr) < 0) {
-		fprintf(stderr, "SIOCGMIIREG on %s failed: %s\n", ifr.ifr_name,
-				strerror(errno));
-		return -1;
-	}
-	return data[3];
+  if (ioctl(skfd, new_ioctl_nums ? 0x8948 : SIOCDEVPRIVATE+1, &ifr) < 0)
+    return -1;
+  else
+    return data[3];
 }

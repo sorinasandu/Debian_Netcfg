@@ -13,7 +13,7 @@
 
 #define _GNU_SOURCE
 
-enum { NOT_ASKED = 30, GO_BACK };
+typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 
 extern int netcfg_progress_displayed;
@@ -75,5 +75,7 @@ extern int is_wireless_iface (const char* iface);
 
 extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface);
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
+
+extern method_t mii_diag_status_lite (char *ifname);
 
 #endif /* _NETCFG_H_ */

@@ -34,23 +34,30 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
-#define DHCP_QUESTION_PRIO "medium"
-
 static method_t netcfg_method = DHCP;
 
 int netcfg_get_method(struct debconfclient *client) 
 {
-    char *result;
-    int ret;
+    int ret, asked = 1;
 
-    ret = my_debconf_input(client, DHCP_QUESTION_PRIO, "netcfg/use_dhcp", &result);
+    ret = debconf_input(client, "medium", "netcfg/use_dhcp");
+    
+    if (ret == 30)
+      asked = 0;
+    else
+      ret = debconf_go(client);
 
-    if (strcmp(result, "true") == 0) 
+    if (strcmp(client->value, "true") == 0) 
 	netcfg_method = DHCP;
     else 
 	netcfg_method = STATIC;
 
-    return ret;
+    if (asked == 0)
+      return NOT_ASKED;
+    else if (ret == 30)
+      return GO_BACK;
+    else
+      return ret;
 }
 
 
@@ -84,17 +91,17 @@ int main(void)
 	    }
 	    break;
 	case GET_METHOD:
-	    if (netcfg_get_method(client))
+	{
+	    response_t response;
+	    if ((response = netcfg_get_method(client)) == GO_BACK)
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
 	    else
 	    {
 	        /* See if link is established? */
 	        method_t tmp = mii_diag_status_lite(interface);
 		
-		debconf_get(client, "debconf/priority");
-		
 		/* Don't override the user's choice. */
-		if (tmp != DUNNO && !strcmp(client->value, DHCP_QUESTION_PRIO))
+		if (tmp != DUNNO && response != NOT_ASKED)
 		  netcfg_method = tmp;
 
 		if (netcfg_method == DHCP) 
@@ -103,6 +110,7 @@ int main(void)
 		    state = GET_STATIC;
 	    }
 	    break;
+	}
 	case GET_DHCP:
 	    if (netcfg_get_dhcp(client))
 		state = GET_METHOD;
