@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 00:32-0700\n"
-"PO-Revision-Date: 2004-04-15 11:45+0200\n"
+"PO-Revision-Date: 2004-05-13 11:29+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -491,9 +491,8 @@ msgstr "Det kan tage nogen tid."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statisk netværksopsætning"
+msgstr "Den automatiske netværksopsætning lykkedes!"
 
 #. Type: error
 #. Description
@@ -505,8 +504,7 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -517,43 +515,38 @@ msgstr "Opsætningen af DHCP afbrydes."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statisk netværksopsætning"
+msgstr "Forsøg automatisk netværksopsætningen igen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dynamisk netværksopsætning (DHCP)"
+msgstr "Forsøg automatisk netværksopsætningen igen med et DHCP-værtsnavn"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Sæt netværket op"
+msgstr "Sæt netværket op manuelt"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Jeg vil nu sætte netværket op."
+msgstr "Sæt ikke netværket op på nuværende tidspunkt"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Next network configuration step:"
-msgstr "Netværksopsætnings-metode:"
+msgstr "Næste trin i netværksopsætningen:"
 
 #. Type: select
 #. Description
@@ -565,13 +558,17 @@ msgid ""
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
 msgstr ""
+"Den automatiske opsætning af netværket mislykkedes. Dette skyldes typisk "
+"en langsom DHCP-server på netværket, så du kan vælge at prøve igen. Du "
+"kan også angive et DHCP-værtsnavn, der bliver sendt til serveren, hvis "
+"du mener at den kræver det. Ellers kan du sætte netværket op manuelt "
+"eller vælge slet ikke at sætte netværket op på nuværende tidspunkt."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Sæt netværket op"
+msgstr "Ret opsætning af trådløst netværk"
 
 #. Type: text
 #. Description
@@ -697,8 +694,7 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -811,3 +807,4 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
