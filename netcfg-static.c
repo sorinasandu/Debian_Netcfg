@@ -45,7 +45,7 @@ static u_int32_t gateway = 0;
 static u_int32_t pointopoint = 0;
 static struct debconfclient *client;
 
-char *debconf_input(char *priority, char *template)
+static char *my_debconf_input(char *priority, char *template)
 {
         client->command(client, "fset", template, "seen", "false", NULL);
         client->command(client, "input", priority, template, NULL);
@@ -62,7 +62,7 @@ static void netcfg_get_static()
         ipaddress = network = broadcast = netmask = gateway = pointopoint =
             0;
 
-        ptr = debconf_input("critical", "netcfg/get_ipaddress");
+        ptr = my_debconf_input("critical", "netcfg/get_ipaddress");
         dot2num(&ipaddress, ptr);
 
         client->command(client, "subst", "netcfg/confirm_static",
@@ -74,21 +74,21 @@ static void netcfg_get_static()
             || strncmp(interface, "ctc", 3) == 0
             || strncmp(interface, "escon", 5) == 0
             || strncmp(interface, "iucv", 4) == 0) {
-                ptr = debconf_input("critical", "netcfg/get_pointopoint");
+                ptr = my_debconf_input("critical", "netcfg/get_pointopoint");
                 dot2num(&pointopoint, ptr);
 
                 dot2num(&netmask, "255.255.255.255");
                 network = ipaddress;
                 gateway = pointopoint;
         } else {
-                ptr = debconf_input("critical", "netcfg/get_netmask");
+                ptr = my_debconf_input("critical", "netcfg/get_netmask");
                 dot2num(&netmask, ptr);
                 gateway = ipaddress & netmask;
                 
                 client->command(client, "set", "netcfg/get_gateway",
                                 num2dot(gateway+1), NULL);
 
-                ptr = debconf_input("critical", "netcfg/get_gateway");
+                ptr = my_debconf_input("critical", "netcfg/get_gateway");
                 dot2num(&gateway, ptr);
 
                 network = ipaddress & netmask;
@@ -237,7 +237,7 @@ int main(int argc, char *argv[])
 
                 netcfg_get_static();
 
-                ptr = debconf_input("medium", "netcfg/confirm_static");
+                ptr = my_debconf_input("medium", "netcfg/confirm_static");
 
                 if (strstr(ptr, "true"))
                         finished = 1;

@@ -1,3 +1,11 @@
+netcfg (0.22) UNRELEASED; urgency=low
+
+  * Richard Hirst
+    - rename debconf_input() to my_debconf_input() to avoid clashes with
+      #defines in cdebconf/debconfclient.h
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri, 13 Dec 2002 19:53:45 +0000
+
 netcfg (0.21) unstable; urgency=low
 
   * Martin Sjögren

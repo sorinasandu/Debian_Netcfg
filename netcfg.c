@@ -35,7 +35,7 @@
 #include "netcfg.h"
 
 
-static char *debconf_input(struct debconfclient *client, char *priority,
+static char *my_debconf_input(struct debconfclient *client, char *priority,
                            char *template)
 {
         client->command(client, "fset", template, "seen", "false", NULL);
@@ -299,7 +299,7 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
                                 "ifchoices", ptr, NULL);
                 free(ptr);
                 inter =
-                    debconf_input(client, "high",
+                    my_debconf_input(client, "high",
                                   "netcfg/choose_interface");
 
                 if (!inter)
@@ -341,7 +341,7 @@ netcfg_get_common(struct debconfclient *client, char **interface,
 		free(*hostname);
 
                 *hostname =
-                    strdup(debconf_input
+                    strdup(my_debconf_input
                            (client, "medium", "netcfg/get_hostname"));
 
                 len = strlen(*hostname);
@@ -370,14 +370,14 @@ netcfg_get_common(struct debconfclient *client, char **interface,
 
 	*domain = NULL;
         
-	if ((ptr = debconf_input(client, "medium", "netcfg/get_domain")))
+	if ((ptr = my_debconf_input(client, "medium", "netcfg/get_domain")))
                 *domain = strdup(ptr);
 
 	free(*nameservers);
         
 	*nameservers = NULL;
         if ((ptr =
-             debconf_input(client, "medium", "netcfg/get_nameservers")))
+             my_debconf_input(client, "medium", "netcfg/get_nameservers")))
                 *nameservers = strdup(ptr);
 
 }

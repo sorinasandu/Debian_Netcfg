@@ -49,7 +49,7 @@ int dhcp_client = PUMP;
 
 static char *dhcp_hostname = NULL;
 
-char *debconf_input(char *priority, char *template)
+static char *my_debconf_input(char *priority, char *template)
 {
         client->command(client, "fset", template, "seen", "false", NULL);
         client->command(client, "input", priority, template, NULL);
@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
                 netcfg_get_dhcp();
 
 
-                ptr = debconf_input("medium", "netcfg/confirm_dhcp");
+                ptr = my_debconf_input("medium", "netcfg/confirm_dhcp");
 
                 if (strstr(ptr, "true"))
                         finished = 1;
@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
         netcfg_write_dhcp();
         netcfg_write_common(ipaddress, domain, hostname, nameserver_array);
 
-        debconf_input("medium", "netcfg/do_dhcp");
+        my_debconf_input("medium", "netcfg/do_dhcp");
         netcfg_activate_dhcp();
 
         return 0;
