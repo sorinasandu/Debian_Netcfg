@@ -38,12 +38,12 @@ static enum {DHCP, STATIC} netcfg_method = DHCP;
 
 int netcfg_get_method(struct debconfclient *client) 
 {
-    char *method;
+    char *result;
     int ret;
 
-    ret = my_debconf_input(client, "medium", "netcfg/get_method", &method);
+    ret = my_debconf_input(client, "medium", "netcfg/use_dhcp", &result);
 
-    if (strcmp(method, "Dynamic addressing (DHCP)") == 0) 
+    if (strcmp(result, "true") == 0) 
 	netcfg_method = DHCP;
     else 
 	netcfg_method = STATIC;

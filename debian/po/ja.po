@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-20 00:11+0100\n"
+"POT-Creation-Date: 2004-03-22 15:51-0500\n"
 "PO-Revision-Date: 2004-03-20 13:50+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -23,27 +23,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Type: select
-#. Choices
+#. Type: boolean
+#. Description
 #: ../netcfg-common.templates:4
-msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr "動的アドレス (DHCP), 静的アドレス (手動)"
+#, fuzzy
+msgid "Auto-configure network with DHCP?"
+msgstr "DHCP でネットワークを設定しています"
 
-#. Type: select
+#. Type: boolean
 #. Description
-#: ../netcfg-common.templates:5
-msgid "Network configuration method:"
-msgstr "ネットワーク設定の方法:"
-
-#. Type: select
-#. Description
-#: ../netcfg-common.templates:5
+#: ../netcfg-common.templates:4
+#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
-"information. If you choose DHCP and the installer is unable to get a working "
-"configuration from a DHCP server on your network, you will be given the "
-"opportunity to configure your network manually after the atempt to configure "
-"it by DHCP. If unsure choose DHCP."
+"information. If you choose to use DHCP and the installer is unable to get a "
+"working configuration from a DHCP server on your network, you will be given "
+"the opportunity to configure your network manually after the atempt to "
+"configure it by DHCP."
 msgstr ""
 "ネットワークは DHCP またはすべての情報を手動で入力のいずれでも設定できます。"
 "DHCP を選んだものの、インストーラがあなたのネットワークの DHCP サーバから設定"
@@ -52,13 +48,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:15
+#: ../netcfg-common.templates:14
 msgid "Domain name:"
 msgstr "ドメイン名:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:15
+#: ../netcfg-common.templates:14
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
@@ -72,13 +68,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:23
+#: ../netcfg-common.templates:22
 msgid "Name server addresses:"
 msgstr "ネームサーバアドレス:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:23
+#: ../netcfg-common.templates:22
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
@@ -92,13 +88,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#: ../netcfg-common.templates:31
 msgid "Primary network interface:"
 msgstr "プライマリネットワークインターフェイス:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#: ../netcfg-common.templates:31
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
@@ -109,13 +105,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:38
+#: ../netcfg-common.templates:37
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} の無線 ESSID:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:38
+#: ../netcfg-common.templates:37
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -127,13 +123,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:44
 msgid "WEP key for ${iface}:"
 msgstr "${iface} のWEP キー:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:44
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
@@ -143,7 +139,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:44
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -153,7 +149,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:44
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -161,7 +157,7 @@ msgstr "WEP キーがパスフレーズ形式であれば、s: を先頭に付�
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:45
+#: ../netcfg-common.templates:44
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -171,13 +167,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:60
+#: ../netcfg-common.templates:59
 msgid "Invalid WEP key"
 msgstr "無効な WEP キーです"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:60
+#: ../netcfg-common.templates:59
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -187,13 +183,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:67
+#: ../netcfg-common.templates:66
 msgid "Invalid ESSID"
 msgstr "無効な ESSID です"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:67
+#: ../netcfg-common.templates:66
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -203,19 +199,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:73
 msgid "Hostname:"
 msgstr "ホスト名:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:73
 msgid "Please enter the hostname for this system."
 msgstr "このシステムのホスト名を入力してください。"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:74
+#: ../netcfg-common.templates:73
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -229,19 +225,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:83
 msgid "Invalid hostname"
 msgstr "無効なホスト名"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:83
 msgid "The name \"${hostname}\" is invalid."
 msgstr "名前 \"${hostname}\" は無効です。"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:83
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -252,13 +248,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:92
 msgid "Error"
 msgstr "エラー"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:92
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -268,13 +264,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:98
 msgid "No network interfaces detected"
 msgstr "インターフェイスが検出されませんでした"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:98
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -284,7 +280,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:99
+#: ../netcfg-common.templates:98
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -295,7 +291,7 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 "インフラストラクチャ (マネージド) ネットワーク, アドホックネットワーク (ピア"
@@ -303,13 +299,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
 msgstr "無線ネットワークの種類:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:109
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -322,118 +318,118 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:116
 msgid "<none>"
 msgstr "<なし>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:120
 msgid "Wireless ethernet (802.11x)"
 msgstr "無線 Ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:125
+#: ../netcfg-common.templates:124
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet または Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:128
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC カード (PCMCIA) Ethernet または Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:132
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:137
+#: ../netcfg-common.templates:136
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:140
 msgid "Serial-line IP"
 msgstr "シリアルライン IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:144
 msgid "Parallel-port IP"
 msgstr "パラレルポート IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:148
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point プロトコル (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:152
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:156
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point プロトコル (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:160
 msgid "Channel-to-channel"
 msgstr "channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:164
 msgid "Real channel-to-channel"
 msgstr "リアル channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:168
 msgid "Hypersocket"
 msgstr "ハイパーソケット"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:172
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:176
 msgid "Unknown interface"
 msgstr "未知のインターフェイス"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:181
 msgid "Network Configuration"
 msgstr "ネットワークの設定"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "ネットワークを設定しています ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "ネットワークの設定"
 
@@ -701,3 +697,9 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
+
+#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
+#~ msgstr "動的アドレス (DHCP), 静的アドレス (手動)"
+
+#~ msgid "Network configuration method:"
+#~ msgstr "ネットワーク設定の方法:"

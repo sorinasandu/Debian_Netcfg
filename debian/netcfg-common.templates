@@ -1,14 +1,13 @@
-Template: netcfg/get_method
-Type: select
-Default: Dynamic addressing (DHCP)
-_Choices: Dynamic addressing (DHCP), Static addressing (manual)
-_Description: Network configuration method:
+Template: netcfg/use_dhcp
+Type: boolean
+Default: true
+_Description: Auto-configure network with DHCP?
  Networking can either be configured by DHCP or by manually
- entering all the information. If you choose DHCP and
+ entering all the information. If you choose to use DHCP and
  the installer is unable to get a working configuration
  from a DHCP server on your network, you will be given the
  opportunity to configure your network manually after the atempt
- to configure it by DHCP. If unsure choose DHCP.
+ to configure it by DHCP.
 
 Template: netcfg/get_domain
 Type: string
