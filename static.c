@@ -295,7 +295,6 @@ int netcfg_activate_static(struct debconfclient *client)
     int rv = 0, masksize;
     char buf[256];
     char ptr1[INET_ADDRSTRLEN];
-    char ptr2[INET_ADDRSTRLEN];
 
 #ifdef __GNU__
     /* I had to do something like this ? */
@@ -328,19 +327,14 @@ int netcfg_activate_static(struct debconfclient *client)
     
     rv |= !inet_ptom (NULL, &masksize, &netmask);
 
-    /* Add the new IP address, and broadcast, and netmask */
-    if (pointopoint.s_addr)
-    {
-    snprintf(buf, sizeof(buf), "ip addr add %s/%d peer %s dev %s",
-	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
-	     inet_ntop (AF_INET, &pointopoint, ptr2, sizeof (ptr2)),    
-	interface);
-    }
-    else {
+    /* Add the new IP address, P-t-P peer (if necessary) and netmask */
     snprintf(buf, sizeof(buf), "ip addr add %s/%d dev %s",
-	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
-	interface);
-    }
+        inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
+        interface);
+
+    if (pointopoint.s_addr)
+      di_snprintfcat(buf, sizeof(buf), " peer %s",
+          inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
 
     di_info("executing: %s", buf);
     rv |= di_exec_shell_log(buf);
