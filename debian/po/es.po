@@ -7,14 +7,15 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+# Contributors to the translation of debian-installer:
 # Teófilo Ruiz Suárez <teo@debian.org>, 2003.
 # Javier Fernández-Sanguino <jfs@debian.org>, 2003.
 # David Martínez Moreno <ender@debian.org>, 2003.
-# Javier Fernández-Sanguino <jfs@debian.org>, 2004.
 # Carlos Alberto Martín Edo <carlos@dat.etsit.upm.es>, 2003
-# Steve Langasek <vorlon@debian.org>, 2004
 # Carlos Valdivia Yagüe <valyag@dat.etsit.upm.es>, 2003
-# Rudy Godoy <rudy@kernel-panik.org>, 07/2003
+# Rudy Godoy <rudy@kernel-panik.org>, 2003
+# Javier Fernández-Sanguino <jfs@debian.org>, 2004.
+# Steve Langasek <vorlon@debian.org>, 2004
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -37,7 +38,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-01 09:36+0200\n"
-"PO-Revision-Date: 2004-09-05 16:20+0200\n"
+"PO-Revision-Date: 2004-09-09 21:23+0200\n"
 "Last-Translator:  Javier Fernandez-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -265,15 +266,14 @@ msgstr "El nombre de sistema «${hostname}» no es válido."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nombre de host válido debe contener sólo caracteres alfanúmericos y el "
-"signo menos, debe tener entre 2 y 63 caracteres, y no puede empezar o "
-"terminar con el signo menos."
+"Un nombre de host válido sólo puede contener números del 0 al 9, letras en "
+"minúsculas de la a la z y el signo menos («-»). Debe tener entre 2 y 63 "
+"caracteres, y no puede empezar o terminar con el signo menos."
 
 #. Type: error
 #. Description
@@ -563,7 +563,6 @@ msgstr "Método de configuración de red:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -571,12 +570,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Desde aquí puede intentar reintentar su auto-configuración de la red a "
-"través de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en "
-"responder) o configurar su red manualmente. Puede también escoger introducir "
-"un nombre de sistema DHCP antes de reintentar la auto-configuración de red "
-"por DHCP ya que algunos servidores exigen que el cliente de DHCP les envíe "
-"un nombre de sistema DHCP específico."
+"Desde aquí puede intentar reintentar su autoconfiguración de la red a través "
+"de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en "
+"responder) o configurar su red manualmente. Puede también reintnentar la "
+"autoconfiguración de red introduciendo un nombre de sistema, algunos "
+"servidores exigen que el cliente de DHCP les envíe un nombre de sistema DHCP."
 
 #. Type: note
 #. Description
