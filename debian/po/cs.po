@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-11-18 07:16+0100\n"
+"PO-Revision-Date: 2003-12-17 18:21+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +27,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Dynamické adresování (DHCP), Statické adresování (ruèní)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Nastavení sítì pøes DHCP"
+msgstr "Zpùsob nastavení sítì:"
 
 #. Type: select
 #. Description
@@ -46,6 +45,9 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
+"Sí» mù¾ete nastavit automaticky pøes DHCP, nebo ruènì zadat po¾adované "
+"informace. Pokud zvolíte DHCP a tato metoda sel¾e, v¾dy mù¾ete nastavit "
+"sí» ruènì. Pokud si nejste jisti, zkuste DHCP."
 
 #. Type: string
 #. Description
@@ -69,7 +71,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
 msgstr "Adresy jmenných serverù:"
 
@@ -95,7 +96,6 @@ msgstr "Rozhraní:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
@@ -133,7 +133,6 @@ msgstr "Zadejte jméno tohoto poèítaèe."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -159,7 +158,6 @@ msgstr "Jméno poèítaèe \"${hostname}\" je neplatné."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. If must be between 2 and 63 characters long, and may not begin or end "
@@ -177,7 +175,6 @@ msgstr "Chyba"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:65
-#, fuzzy
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -204,13 +201,12 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Pokud opravdu máte sí»ovou kartu, je mo¾né, ¾e jste pro ni je¹tì nenahráli "
-"modul. Vra»te se zpìt na krok rozpoznání sí»ového hardwaru."
+"Pokud máte sí»ovou kartu, mo¾ná pro ni budete muset nahrát jaderný modul. "
+"Uèinit tak mù¾ete zpìt v kroku rozpoznání sí»ového hardwaru."
 
 #. Type: text
 #. Description
@@ -251,9 +247,8 @@ msgstr "Serial-line IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
-msgstr "Parallel-line IP"
+msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
@@ -307,17 +302,15 @@ msgstr "Neznámé rozhraní"
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "Nastavení sítì pøes DHCP"
+msgstr "Nastavení sítì"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "Nastavuje se sí» pøes DHCP"
+msgstr "Nastavit sí»"
 
 #. Type: string
 #. Description
@@ -378,7 +371,6 @@ msgstr "Nastavuje se sí» pøes DHCP"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
 msgstr "Mù¾e to chvíli trvat."
 
@@ -403,9 +395,8 @@ msgstr "Proces nastavení DHCP se pøeru¹í."
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Nastavení sítì pøes DHCP"
+msgstr "Chcete znovu zkusit nastavit sí» pøes DHCP?"
 
 #. Type: boolean
 #. Description
@@ -414,14 +405,15 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
+"Bìhem konfigurace sítì pøes DHCP jsme neobdr¾eli ¾ádnou IP adresu. DHCP "
+"servery jsou obèas tro¹ku pomalej¹í. Jestli¾e chcete, zkuste to znovu."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Statické nastavení sítì"
+msgstr "Dynamické nastavení sítì (DHCP)"
 
 #. Type: text
 #. Description
@@ -553,7 +545,6 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
 msgstr "Statické nastavení sítì"
 
@@ -563,6 +554,3 @@ msgstr "Statické nastavení sítì"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Nastavit sí» se statickými adresami"
-
-#~ msgid "DHCP Network Configuration"
-#~ msgstr "Nastavení sítì pøes DHCP"
