@@ -27,6 +27,8 @@ _Description: No DHCP client found
 
 Template: netcfg/dhcp_options
 Type: select
+# Note to translators : Please keep your translations of the choices
+# below the 70 columns limit (which means 70 characters for most languages)
 __Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, ${wifireconf}, Do not configure the network at this time
 Default: Configure network manually
 _Description: Network configuration method:
