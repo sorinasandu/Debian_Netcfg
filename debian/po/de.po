@@ -2,6 +2,7 @@
 # translation of de.po to
 # translation of de.po to
 # translation of de.po to
+# translation of de.po to
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -15,7 +16,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-01 14:33+0200\n"
+"PO-Revision-Date: 2004-04-12 13:54+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +75,6 @@ msgstr "Adresse des DNS-Servers:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
@@ -82,10 +82,11 @@ msgid ""
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
 msgstr ""
-"Bitte geben Sie die IP Adresse (nicht den Namen) von bis zu drei Nameservern "
-"getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Die Server werden "
-"in der angegebenen Reihenfolge abgefragt. Wenn Sie keine Nameserver benutzen "
-"wollen, lassen Sie diese Feld bitte einfach leer."
+"Die Nameserver, die Sie hier angeben, werden benutzt, um Internet-Hostnamen "
+"aufzulösen. Bitte geben Sie die IP Adresse (nicht den Namen) von bis zu drei "
+"Nameservern getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Die "
+"Server werden in der angegebenen Reihenfolge abgefragt. Wenn Sie keine "
+"Nameserver benutzen wollen, lassen Sie diese Feld bitte einfach leer."
 
 #. Type: select
 #. Description
@@ -321,15 +322,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Statische Netzwerkkonfiguration"
+msgstr "Konfiguration von drahtlosen Netzwerken"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Suche nach drahtlosen Access Points..."
 
 #. Type: text
 #. Description
@@ -514,8 +514,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -552,8 +551,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -668,8 +666,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -767,3 +764,4 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
+
