@@ -433,10 +433,12 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 
     /* grab just the interface name, not the description too */
     *interface = inter;
+    /* Note that the question may be preseeded to just the interface name,
+     * with no colon after it. Allow for this case. */
     ptr = strchr(inter, ':');
-    if (ptr == NULL)
-        goto error;
-    *ptr = '\0';
+    if (ptr != NULL) {
+    	*ptr = '\0';
+    }
     *interface = strdup(*interface);
 
     /* Free allocated memory */

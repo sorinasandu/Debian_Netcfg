@@ -16,6 +16,8 @@ netcfg (1.02) UNRELEASED; urgency=low
   * Joey Hess
     - Remove mii-diag-udeb dependencies, which were bogus even before mii-diag
       support was removed.
+    - Allow netcfg/choose_interface to be preseeded to just an interface name,
+      don't choke on the lack of a colon after it.
 
  -- Joshua Kwan <joshk@triplehelix.org>  Tue, 31 Aug 2004 21:52:12 -0700
 
