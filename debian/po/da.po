@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-05-13 11:29+0200\n"
+"PO-Revision-Date: 2004-05-14 11:44+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -504,8 +504,7 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -546,14 +545,12 @@ msgstr "Sæt ikke netværket op på nuværende tidspunkt"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Netværksopsætning"
+msgstr "Netværksopsætningsmetode:"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
@@ -561,11 +558,11 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
-"Den automatiske opsætning af netværket mislykkedes. Dette skyldes typisk en "
-"langsom DHCP-server på netværket, så du kan vælge at prøve igen. Du kan også "
-"angive et DHCP-værtsnavn, der bliver sendt til serveren, hvis du mener at "
-"den kræver det. Ellers kan du sætte netværket op manuelt eller vælge slet "
-"ikke at sætte netværket op på nuværende tidspunkt."
+"Den automatiske opsætning af netværket mislykkedes. Dette kan skyldes en "
+"langsom DHCP-server på netværket, så du kan vælge at prøve igen. Hvis dit "
+"netværk ikke benytter DHCP til automatisk opsætning, kan du i stedet sætte "
+"det op manuelt. Visse DHCP-servere kræver et bestemt DHCP-værtsnavn, så "
+"du kan også vælge at angive sådan et værtsnavn før du prøver DHCP igen."
 
 #. Type: text
 #. Description
@@ -697,8 +694,7 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -811,3 +807,4 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
