@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-09 18:59+0200\n"
+"PO-Revision-Date: 2004-08-10 19:08+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -234,14 +234,14 @@ msgstr "Jméno poèítaèe \"${hostname}\" je neplatné."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Název poèítaèe smí obsahovat pouze alfanumerické znaky a znaménko mínus, "
-"musí být v rozmezí 2 a 63 znakù a nesmí zaèínat nebo konèit znaménkem mínus."
+"Název poèítaèe smí obsahovat pouze èíslice 0-9, písmena a-z, A-Z a znaménko "
+"mínus, musí být v rozmezí 2 a 63 znakù a nesmí zaèínat nebo konèit znaménkem "
+"mínus."
 
 #. Type: error
 #. Description
@@ -288,9 +288,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Nastavit sí»"
+msgstr "Pokraèovat bez nastavení sítì?"
 
 #. Type: boolean
 #. Description
@@ -302,6 +301,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"Vypadá to, ¾e ${IFACE} není pøipojeno k ¾ádné síti. To mù¾e být zpùsobeno "
+"chybìjícím sí»ovým kabelem, nebo nefunkèní sí»ovou kartou. Buï musíte sí» "
+"o¾elet a nastavit ji programem etherconf a¾ v nainstalovaném systému, nebo "
+"ji budete muset nastavit staticky. Také se mù¾ete vrátit zpìt a vybrat "
+"jiné rozhraní."
 
 #. Type: select
 #. Choices
@@ -546,7 +550,6 @@ msgstr "Zpùsob nastavení sítì:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -557,7 +560,7 @@ msgstr ""
 "Nyní mù¾ete znovu zkusit nastavit sí» pøes DHCP (co¾ mù¾e fungovat, pokud má "
 "vá¹ DHCP server pomalej¹í odpovìdi), nebo mù¾ete sí» nastavit ruènì. Nìkteré "
 "DHCP servery pøidìlují adresy pouze po zadání konkrétního DHCP jména "
-"poèítaèe, tak¾e mù¾ete vyzkou¹et i tuto variantu."
+"klienta, tak¾e mù¾ete vyzkou¹et i tuto variantu."
 
 #. Type: note
 #. Description
