@@ -15,12 +15,12 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-04-16 01:19+0200\n"
+"PO-Revision-Date: 2004-05-15 11:59+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -89,7 +89,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Elsődleges hálózati interfész:"
+msgstr "Elsődleges hálózati csatoló:"
 
 #. Type: select
 #. Description
@@ -98,8 +98,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"A gép több hálózati interfésszel is rendelkezik. Válassza ki a Debian "
-"telepítésére használni kívánt elsődleges interfészt."
+"A gép több hálózati csatolóval is rendelkezik. Válassza ki a Debian "
+"telepítésére használni kívánt elsődleges csatolót."
 
 #. Type: string
 #. Description
@@ -267,7 +267,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
-msgstr "A felderítés nem talált hálózati interfészt"
+msgstr "A felderítés nem talált hálózati csatolót"
 
 #. Type: error
 #. Description
@@ -276,7 +276,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"A felderítés nem talált hálózati interfészt. A telepítőrendszer hálózati "
+"A felderítés nem talált hálózati csatolót. A telepítőrendszer hálózati "
 "eszköz híján van."
 
 #. Type: error
@@ -417,7 +417,7 @@ msgstr "Felhasználók közti kommunikációs eszköz (IUCV)"
 #. Description
 #: ../netcfg-common.templates:181
 msgid "Unknown interface"
-msgstr "Ismeretlen hálózati interfész"
+msgstr "Ismeretlen hálózati csatoló"
 
 #. Type: text
 #. Description
@@ -477,7 +477,7 @@ msgid ""
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 msgstr ""
-" interfész       = ${interface}\n"
+" csatoló         = ${interface}\n"
 " gépnév          = ${hostname}\n"
 " domain          = ${domain}\n"
 " dhcp-gépnév     = ${dhcp_hostname}\n"
@@ -498,9 +498,8 @@ msgstr "Ez percekbe is beletelhet."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statikus hálózatkonfigurálás"
+msgstr "Hálózat automatikus konfigurálása sikeresen megtörtént!"
 
 #. Type: error
 #. Description
@@ -525,43 +524,38 @@ msgstr "A DHCP-konfiguráció folyamata megszakad."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statikus hálózatkonfigurálás"
+msgstr "Hálózat automatikus konfigurálásának újrapróbálása"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
+msgstr "Hálózat automatikus konfigurálásának újrapróbálása DHCP-gépnévvel"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Hálózat konfigurálása"
+msgstr "Hálózat kézi konfigurálása"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Hálózat konfigurálása"
+msgstr "Hálózatkonfigurálás elhalasztása"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Hálózat konfigurálása"
+msgstr "Hálózat konfigurálásának módja:"
 
 #. Type: select
 #. Description
@@ -573,13 +567,19 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"A hálózat automatikus konfigurálása kudarcot vallott. Ennek oka lehet a "
+"hálózat DHCP-kiszolgálójának lassúsága, ez esetben próbálkozzon újra. "
+"Ha a hálózatot nem lehet DHCP-vel automatikusan konfigurálni, akkor "
+"kézi módszerekhez is folyamodhat. Valamint, egyes DHCP-kiszolgálók "
+"csak egy bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen "
+"kiszolgálót próbál megszólítani, akkor a DHCP újrapróbálása előtt "
+"megadhatja a megfelelő gépnevet is."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Hálózat konfigurálása"
+msgstr "Drótnélküli hálózat újrakonfigurálása"
 
 #. Type: text
 #. Description
@@ -714,7 +714,6 @@ msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibá
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -723,9 +722,7 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interfész       = ${interface}\n"
-" gépnév          = ${hostname}\n"
-" domain          = ${domain}\n"
+" csatoló         = ${interface}\n"
 " IP-cím          = ${ipaddress}\n"
 " hálózati maszk  = ${netmask}\n"
 " átjáró          = ${gateway}\n"
