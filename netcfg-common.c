@@ -495,7 +495,7 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 
 static int is_valid_ip (char* ipaddr, short is_netmask)
 {
-  int error = 1;
+  int error = 1, nums = 0;
   
   if (!empty_str(ipaddr))
   {
@@ -508,7 +508,10 @@ static int is_valid_ip (char* ipaddr, short is_netmask)
 
       spaz = atoi(tok);
       if (((!is_netmask && spaz > 0) || (is_netmask && spaz >= 0)) && spaz <= 255)
+      {
 	error = 0;
+	nums++;
+      }
       else
       {
 	error = 1;
@@ -518,7 +521,10 @@ static int is_valid_ip (char* ipaddr, short is_netmask)
       tok = strtok(NULL, ".");
     }
   }
-  
+
+  if (nums != 4)
+    error = 1;
+
   return error;
 }
 
