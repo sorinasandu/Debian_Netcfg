@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.58\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-14 18:34-0700\n"
-"PO-Revision-Date: 2004-04-15 21:50+0200\n"
+"PO-Revision-Date: 2004-04-15 23:02+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,18 +65,13 @@ msgstr "Indirizzi dei server DNS:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr ""
-"Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre DNS "
-"separati da spazi, senza usare virgole. I server verranno interrogati "
-"nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è "
-"sufficiente lasciare vuoto questo campo."
+msgstr "I DNS sono utilizzati per ritrovare un host nella rete a partire dal suo nome. Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre DNS separati da spazi, senza usare virgole. I server verranno interrogati nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è sufficiente lasciare vuoto questo campo."
 
 #. Type: select
 #. Description
@@ -115,20 +110,16 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Chiave WEP per ${iface}:"
+msgstr "Chiave WEP per il dispositivo wireless ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr ""
-"Se applicabile, inserire la chiave di sicurezza WEP per il device ${iface}. "
-"Ci sono due modi per farlo:"
+msgstr "Se applicabile, inserire la chiave di sicurezza WEP per il dispositivo wireless ${iface}. Ci sono due modi per farlo:"
 
 #. Type: string
 #. Description
@@ -301,28 +292,23 @@ msgstr "Tipologia di rete wireless:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
-msgstr ""
-"Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero "
-"«access point» di qualsiasi tipo allora la rete è «Managed». Se invece "
-"l'«access point» è fatto da un altro computer allora la rete è «Ad-hoc»."
+msgstr "Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero «access point» di qualsiasi tipo allora la rete è «Managed». Se invece l'«access point» è fatto da un altro computer allora la rete è «Ad-hoc»."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Configurazione della rete con indirizzi statici"
+msgstr "Configurazione della rete wireless"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Ricerca degli «access point» wireless in corso."
 
 #. Type: text
 #. Description
