@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.41\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-02-24 17:49+0100\n"
-"Last-Translator: Philippe Batailler <pbatailler@teaser.fr>\n"
+"PO-Revision-Date: 2004-03-03 06:37+0100\n"
+"Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-15\n"
@@ -121,7 +120,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr "clé WEP pour ${iface} :"
+msgstr "clé WEP pour ${iface} :"
 
 #. Type: string
 #. Description
@@ -191,7 +190,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Le nom « ${essid} » n'est pas valable. Les ESSID ne doivent pas dépasser 32 "
+"Le nom « ${essid} » n'est pas valable. Les ESSID ne doivent pas dépasser 32 "
 "caractères, mais ils peuvent contenir toutes sortes de caractères."
 
 #. Type: string
@@ -408,7 +407,7 @@ msgstr "Configurer le réseau"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Nom de machine DHCP :"
+msgstr "Nom de machine DHCP :"
 
 #. Type: string
 #. Description
@@ -493,7 +492,6 @@ msgstr "Voulez-vous refaire la configuration du réseau avec DHCP ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
@@ -669,60 +667,3 @@ msgstr "Configuration manuelle du réseau"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Erreur lors de l'activation du réseau"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Une erreur s'est produite lors de l'activation du réseau."
-
-#~ msgid "Interface:"
-#~ msgstr "Interface :"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Veuillez indiquer l'interface à configurer. Les interfaces suivantes ont "
-#~ "été détectées sur votre système. Choisissez le type de l'interface réseau "
-#~ "primaire dont vous aurez besoin pour installer le système Debian (via NFS "
-#~ "ou HTTP)."
-
-#~ msgid "DHCP Network Configuration"
-#~ msgstr "Configuration du réseau avec DHCP"
-
-#~ msgid "Choose the domain name."
-#~ msgstr "Indiquez le nom de domaine :"
-
-#~ msgid "Choose the DNS Server Addresses"
-#~ msgstr "Indiquez les adresses des serveurs DNS :"
-
-#~ msgid "Choose an interface."
-#~ msgstr "Indiquez une interface :"
-
-#~ msgid "An error occured."
-#~ msgstr "Une erreur s'est produite"
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "Quelque chose s'est mal passé lors de l'activation de votre réseau."
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "Donnez le nom de machine du système :"
-
-#~ msgid "Feel free to retry."
-#~ msgstr "Vous pouvez réessayer."
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "Quel est votre nom de machine DHCP ?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "Aucun client DHCP : impossible de continuer !"
-
-#~ msgid "I will now configure the network."
-#~ msgstr "Le réseau va maintenant être configuré"
-
-#~ msgid ""
-#~ "This may take some time.  It shouldn't take more than a minute or two."
-#~ msgstr "Cela peut prendre du temps, mais pas plus d'une minute ou deux."
