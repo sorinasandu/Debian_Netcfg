@@ -393,7 +393,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
 
 		if (num_interfaces > 1 && !strcmp(defif, inter))
-			debconf_subst(client, "netcfg/get_interfaces", "ifdefault", ptr);
+			debconf_set(client, "netcfg/get_interfaces", ptr);
 
         free(ifdsc);
     }
