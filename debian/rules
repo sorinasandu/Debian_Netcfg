@@ -2,7 +2,7 @@
 # Sample debian/rules that uses debhelper.
 # GNU copyright 1997 to 1999 by Joey Hess.
 
-PACKAGES	= $(shell dh_listpackages)
+PACKAGES	= $(shell dh_listpackages -s)
 DHCP_PACKAGES	= netcfg netcfg-dhcp
 
 build: build-stamp
@@ -64,13 +64,13 @@ binary-arch: build install
 	   >> debian/netcfg/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-static.templates )\
 	   >> debian/netcfg/DEBIAN/templates	
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_builddeb
+	dh_strip -s
+	dh_compress -s
+	dh_fixperms -s
+	dh_installdeb -s
+	dh_shlibdeps -s
+	dh_gencontrol -s
+	dh_builddeb -s
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install
