@@ -662,12 +662,7 @@ void parse_args (int argc, char ** argv)
 {
   if (argc == 2)
   {
-    if (!strcmp(argv[0], "sleep"))
-    {
-      sleep(atoi(argv[1]));
-      exit(EXIT_SUCCESS);
-    }
-    else if (!strcmp(argv[0], "ptom"))
+    if (!strcmp(argv[0], "ptom"))
     {
       int ret;
       if (inet_ptom(argv[1], &ret, NULL) > 0)

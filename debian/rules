@@ -34,7 +34,6 @@ install: build
 	  mkdir -p debian/$(PACKAGE)/bin; \
 	  install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
 	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; \
-	  ln -sf netcfg debian/$(PACKAGE)/bin/sleep; \
 	  ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
