@@ -17,11 +17,12 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Display a brief note when DHCP lease gets acquired. (Closes: #247751)
     - Now we can ask for a DHCP hostname to add. (Closes: #236533, #239591)
     - If we didn't use one, see if the server is offering us one and seed
-      netcfg/get_hostname with it. (Closes: #237395, #240701)
+      netcfg/get_hostname with it. (Closes: #239121, #240701)
     - Failing that, bring the interface up and try to reverse-resolve
       the IP address into a hostname. 
     - For idempotency reasons, down all interfaces after finding each
-      one so that we can start from a clean slate.
+      one so that we can start from a clean slate. (Probably deals with
+      Bug#227722)
     - Silently load af_packet. (Closes: #244441)
     - Add some code hunks from mii-diag to determine code path on link
       connection. (Closes: #247178)
