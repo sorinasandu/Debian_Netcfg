@@ -29,11 +29,9 @@ _Description: Name server addresses:
 Template: netcfg/choose_interface
 Type: select
 Choices: ${ifchoices}
-_Description: Interface:
- Please choose the interface you want to configure. All currently
- detected interfaces on your system are shown below. Please choose the
- type of your primary network interface. This interface will be used
- for installing the Debian system (via NFS or HTTP).
+_Description: Primary network interface:
+ Your system has multiple network interfaces. Choose the one to use as
+ the primary network interface while installing Debian.
 
 Template: netcfg/error_cfg
 Type: error
