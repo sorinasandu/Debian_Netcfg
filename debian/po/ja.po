@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 17:50+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -537,7 +537,12 @@ msgid ""
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr "ここでは、DHCP ネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定を選ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
+msgstr ""
+"ここでは、DHCP ネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時"
+"間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定"
+"を選ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要"
+"とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できま"
+"す。"
 
 #. Type: note
 #. Description
@@ -549,12 +554,9 @@ msgstr "ネットワークの自動設定に失敗しました"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"これは遅い DHCP サーバのためか、ネットワークケーブルが外れているか、あなたの"
-"ネットワークのルータまたはハブが壊れているか、ネットワークが単に DHCP のセッ"
-"トアップを用意していないかといったことによるものでしょう。"
 
 #. Type: boolean
 #. Description
@@ -565,12 +567,13 @@ msgstr "デフォルトルートなしに続けますか?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
 "ネットワークの自動設定には成功しましたが、インターネットのような外部のネット"
 "ワークへの利用可能なデフォルトルートがないようです。"
@@ -579,12 +582,9 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"必要なものすべてが CD にあるという場合以外は、Debian のインストールを続けるこ"
-"とができないかもしれません。よくわからなければ、ネットワーク設定に戻ってくだ"
-"さい。"
 
 #. Type: text
 #. Description
@@ -752,3 +752,19 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "これは遅い DHCP サーバのためか、ネットワークケーブルが外れているか、あなた"
+#~ "のネットワークのルータまたはハブが壊れているか、ネットワークが単に DHCP の"
+#~ "セットアップを用意していないかといったことによるものでしょう。"
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "必要なものすべてが CD にあるという場合以外は、Debian のインストールを続け"
+#~ "ることができないかもしれません。よくわからなければ、ネットワーク設定に戻っ"
+#~ "てください。"

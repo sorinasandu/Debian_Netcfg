@@ -13,13 +13,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 04:44-0600\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-30 01:54+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #  Type: boolean
 #  Description
@@ -813,7 +813,9 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"מכאן תוכל לנסות מחדש הגדרת אוטומטית של הרשת שלך בעזרת DHCP (שתעבוד אם לוקח לשרת DHCP שלך הרבה זמן לענות) או להגדיר את הרשת ידנית. חלק משרתי DHCP צריכים שם מחשב ספציפי, תוכל לבחור להכניס שם מחשב לפני שתנסה שוב להשתמש ב-DHCP."
+"מכאן תוכל לנסות מחדש הגדרת אוטומטית של הרשת שלך בעזרת DHCP (שתעבוד אם לוקח "
+"לשרת DHCP שלך הרבה זמן לענות) או להגדיר את הרשת ידנית. חלק משרתי DHCP צריכים "
+"שם מחשב ספציפי, תוכל לבחור להכניס שם מחשב לפני שתנסה שוב להשתמש ב-DHCP."
 
 #  Type: text
 #  Description
@@ -831,9 +833,9 @@ msgstr "הגדרת רשת באופן אוטומטי נכשלה"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
-msgstr "זה יכול להיות בגלל שרת DHCP איטי, תקלה בציוד רשת או שהשרת שלך לא מוגדרת ע\"י DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
+msgstr ""
 
 #. Type: boolean
 #. Description
@@ -844,21 +846,25 @@ msgstr "להמשיך בלי ניתוב ברירת מחדל?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
-msgstr "הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: כלומר המערכת לא יודעת איך לתקשר עם מחשבים באינטרנט. אי אפשר להמשיך בהתקנה אלא אם יש לך את כל חבילות של Debian שנדרשות על הרשת המקומית שלך או על מדיה זמינה כמו CDROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
+msgstr ""
+"הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: כלומר המערכת "
+"לא יודעת איך לתקשר עם מחשבים באינטרנט. אי אפשר להמשיך בהתקנה אלא אם יש לך את "
+"כל חבילות של Debian שנדרשות על הרשת המקומית שלך או על מדיה זמינה כמו CDROM."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
-msgstr "אם אינך בטוח תוכל להמשיך ולחזור לשב הגדרת הרשת מאוחר יותר."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
+msgstr ""
 
 #  Type: text
 #  Description
@@ -1059,6 +1065,8 @@ msgstr "האם המידע נכון?"
 msgid "Currently configured network parameters:"
 msgstr "פרמרטים שנקבעו  כרגע:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -1088,3 +1096,14 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
 
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "זה יכול להיות בגלל שרת DHCP איטי, תקלה בציוד רשת או שהשרת שלך לא מוגדרת ע"
+#~ "\"י DHCP."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr "אם אינך בטוח תוכל להמשיך ולחזור לשב הגדרת הרשת מאוחר יותר."

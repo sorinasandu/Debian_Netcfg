@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.71\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 22:30+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -198,7 +198,8 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
+msgstr ""
+"Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -472,7 +473,8 @@ msgstr "Não foi encontrado nenhum cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
+msgstr ""
+"Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
 "client. (Cliente DHCP)"
 
 #. Type: error
@@ -543,11 +545,9 @@ msgstr "A autoconfiguração da rede falhou"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Isto pode ser devido a um servidor de DHCP lento, equipamento de rede com "
-"mau funcionamento, ou a sua rede simplesmente não está configurada para DHCP."
 
 #. Type: boolean
 #. Description
@@ -558,28 +558,27 @@ msgstr "Continuar sem um route predefinido?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
-"A autoconfiguração da rede teve sucesso. No entanto, não está definido nenhum "
-"route predefinido: o sistema não sabe como comunicar com hosts na Internet. "
-"Isto vai fazer com que seja impossível continuar com a instalação a menos "
-"que tenha todos os pacotes Debian que necessita na rede local ou em media "
-"local como um CD-ROM."
+"A autoconfiguração da rede teve sucesso. No entanto, não está definido "
+"nenhum route predefinido: o sistema não sabe como comunicar com hosts na "
+"Internet. Isto vai fazer com que seja impossível continuar com a instalação "
+"a menos que tenha todos os pacotes Debian que necessita na rede local ou em "
+"media local como um CD-ROM."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"Se está inseguro pode continuar e voltar atrás à etapa de configuração de "
-"rede posteriormente se necessário."
 
 #. Type: text
 #. Description
@@ -748,6 +747,21 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "Isto pode ser devido a um servidor de DHCP lento, equipamento de rede com "
+#~ "mau funcionamento, ou a sua rede simplesmente não está configurada para "
+#~ "DHCP."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "Se está inseguro pode continuar e voltar atrás à etapa de configuração de "
+#~ "rede posteriormente se necessário."
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Configuração dinâmica de rede (DHCP)"

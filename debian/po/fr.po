@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.71\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 22:15+0200\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -542,11 +542,9 @@ msgstr "La configuration automatique a échoué"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"C'est peut-être dû à un serveur DHCP lent, un équipement réseau qui "
-"fonctionne mal, ou bien DHCP n'est simplement pas installé sur votre réseau."
 
 #. Type: boolean
 #. Description
@@ -557,28 +555,27 @@ msgstr "Faut-il continuer sans route par défaut ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
-"La configuration automatique du réseau a réussi. Cependant aucune route "
-"par défaut n'a été déclarée : le système ne sait pas comment communiquer "
-"avec des machines sur internet. Cela rendra l'installation impossible, sauf "
-"si les paquets Debian dont vous avez besoin sont sur un réseau local ou sur "
-"des périphériques locaux, un cédérom par exemple."
+"La configuration automatique du réseau a réussi. Cependant aucune route par "
+"défaut n'a été déclarée : le système ne sait pas comment communiquer avec "
+"des machines sur internet. Cela rendra l'installation impossible, sauf si "
+"les paquets Debian dont vous avez besoin sont sur un réseau local ou sur des "
+"périphériques locaux, un cédérom par exemple."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"En cas de doute, vous pouvez continuer, et revenir plus tard à l'étape de "
-"configuration du réseau, si nécessaire."
 
 #. Type: text
 #. Description
@@ -747,6 +744,21 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "C'est peut-être dû à un serveur DHCP lent, un équipement réseau qui "
+#~ "fonctionne mal, ou bien DHCP n'est simplement pas installé sur votre "
+#~ "réseau."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "En cas de doute, vous pouvez continuer, et revenir plus tard à l'étape de "
+#~ "configuration du réseau, si nécessaire."
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Configuration automatique du réseau (DHCP)"

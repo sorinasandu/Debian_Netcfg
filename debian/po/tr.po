@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-30 01:49+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -530,10 +530,11 @@ msgid ""
 "with a hostname that you provide."
 msgstr ""
 "Buradan itibaren, DHCP ile otomatik ağ yapılandırmasını tekrar denemeyi (ki "
-"DHCP sunucunuz çok geç yanıt veriyorsa iş görebilir) veya ağı elle yapılandırmayı "
-"seçebilirsiniz.  Bazı DHCP sunucuları istemci tarafından gönderilen bir DHCP "
-"makine adı gerektirebildiğinden, DHCP ile otomatik ağ yapılandırmasını böyle bir "
-"makine adı girerek tekrar etmeyi de seçebilirsiniz."
+"DHCP sunucunuz çok geç yanıt veriyorsa iş görebilir) veya ağı elle "
+"yapılandırmayı seçebilirsiniz.  Bazı DHCP sunucuları istemci tarafından "
+"gönderilen bir DHCP makine adı gerektirebildiğinden, DHCP ile otomatik ağ "
+"yapılandırmasını böyle bir makine adı girerek tekrar etmeyi de "
+"seçebilirsiniz."
 
 #. Type: note
 #. Description
@@ -545,11 +546,9 @@ msgstr "Otomatik ağ yapılandırması başarısızlıkla sonuçlandı."
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Bunun nedeni; DHCP sunucusunun yavaşlığı, ağ donanımındaki bir bozukluk veya "
-"basitçe ağınızın DHCP ile çalışacak şekilde tasarlanmamış olması olabilir."
 
 #. Type: boolean
 #. Description
@@ -560,28 +559,27 @@ msgstr "Öntanımlı bir yönlendirici olmadan devam edilsin mi?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
-"Otomatik ağ yapılandırması başarıyla sonuçlandı.  Bununla beraber herhangi bir "
-"öntanımlı yönlendirici ayarlanmamış; yani sistem İnternet üzerindeki makinelerle "
-"nasıl haberleşeceğini bilmiyor.  Bu durum, gerekli bütün Debian paketleri yerel "
-"ağda veya CD-ROM gibi bir yerel ortamda bulunmadıkça kuruluma devam etmenizi "
-"imkansız hale getirecektir."
+"Otomatik ağ yapılandırması başarıyla sonuçlandı.  Bununla beraber herhangi "
+"bir öntanımlı yönlendirici ayarlanmamış; yani sistem İnternet üzerindeki "
+"makinelerle nasıl haberleşeceğini bilmiyor.  Bu durum, gerekli bütün Debian "
+"paketleri yerel ağda veya CD-ROM gibi bir yerel ortamda bulunmadıkça "
+"kuruluma devam etmenizi imkansız hale getirecektir."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"Eğer emin değilseniz devam edebilir ve daha sonra gerekirse ağ yapılandırması "
-"adımına geri dönebilirsiniz."
 
 #. Type: text
 #. Description
@@ -749,6 +747,21 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Ağı statik adresleme ile yapılandır"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "Bunun nedeni; DHCP sunucusunun yavaşlığı, ağ donanımındaki bir bozukluk "
+#~ "veya basitçe ağınızın DHCP ile çalışacak şekilde tasarlanmamış olması "
+#~ "olabilir."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "Eğer emin değilseniz devam edebilir ve daha sonra gerekirse ağ "
+#~ "yapılandırması adımına geri dönebilirsiniz."
 
 #, fuzzy
 #~ msgid ""

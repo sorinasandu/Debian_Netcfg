@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 12:57+0300\n"
 "Last-Translator: George Papamichelakis <george@step.gr>\n"
 "Language-Team:  <debian-l10n-greek@lists.debian.org>\n"
@@ -26,7 +26,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
 #. Type: boolean
 #. Description
@@ -169,7 +170,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ""
+"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -303,7 +305,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr ""
+"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -547,12 +550,10 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Εδώ μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP "
-"ή "
-"να ρυθμίσετε το δίκτυο χειροκίνητα. Επίσης, κάποιοι εξυπηρετητές "
-"DHCP απαιτούν "
-"κάποιο συγκεκριμένο όνομα υπολογιστή, οπότε μπορείτε να "
-"επιλέξετε κάποιο τέτοιο όνομα πριν ξαναπροσπαθήσετε με το DHCP. "
+"Εδώ μπορείτε να ξαναπροσπαθήσετε την αυτόματη ρύθμιση δικτύου DHCP ή να "
+"ρυθμίσετε το δίκτυο χειροκίνητα. Επίσης, κάποιοι εξυπηρετητές DHCP απαιτούν "
+"κάποιο συγκεκριμένο όνομα υπολογιστή, οπότε μπορείτε να επιλέξετε κάποιο "
+"τέτοιο όνομα πριν ξαναπροσπαθήσετε με το DHCP. "
 
 #. Type: note
 #. Description
@@ -564,12 +565,9 @@ msgstr "Η αυτόματη ρύθμιση του δικτύου απέτυχε"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Αυτό μπορεί να οφείλεται σε κάποιο αργό εξυπηρετητή DHCP, "
-"προβληματικό υλικό ή "
-"δεν υπάρχει εξυπηρετητής DHCP."
 
 #. Type: boolean
 #. Description
@@ -580,30 +578,27 @@ msgstr "Συνέχεια χωρίς προκαθορισμένη δρομολό�
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
-"Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής. Πάραυτα δεν έχει "
-"καθοριστεί προκαθορισμένη δρομολόγηση: "
-"το σύστημα δεν γνωρίζει πως να επικοινωνήσει με άλλους υπολογιστές "
-"στο Διαδίκτυο. Αυτό ίσως κάνει αδύνατη τη συνέχιση της διαδικασίας "
-"εγκατάστασης εκτός και αν διαθέτετε όλα τα πακέτα του Debian που "
+"Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής. Πάραυτα δεν έχει καθοριστεί "
+"προκαθορισμένη δρομολόγηση: το σύστημα δεν γνωρίζει πως να επικοινωνήσει με "
+"άλλους υπολογιστές στο Διαδίκτυο. Αυτό ίσως κάνει αδύνατη τη συνέχιση της "
+"διαδικασίας εγκατάστασης εκτός και αν διαθέτετε όλα τα πακέτα του Debian που "
 "χρειάζεστε σε ένα τοπικό μέσο όπως πχ CD-ROM."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"Αν δεν είστε σίγουροι θα πρέπει να συνεχίσετε και να επιστρέψετε "
-"στο στάδιο "
-"ρύθμισης του δικτύου αν χρειαστεί."
 
 #. Type: text
 #. Description
@@ -730,7 +725,8 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
@@ -772,3 +768,16 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
 
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "Αυτό μπορεί να οφείλεται σε κάποιο αργό εξυπηρετητή DHCP, προβληματικό "
+#~ "υλικό ή δεν υπάρχει εξυπηρετητής DHCP."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "Αν δεν είστε σίγουροι θα πρέπει να συνεχίσετε και να επιστρέψετε στο "
+#~ "στάδιο ρύθμισης του δικτύου αν χρειαστεί."

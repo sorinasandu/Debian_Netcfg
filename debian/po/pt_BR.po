@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 22:37-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -541,9 +541,9 @@ msgstr ""
 "Aqui você pode optar por tentar a autoconfiguração de rede via DHCP "
 "novamente (a qual pode funcionar caso seu servidor DHCP leve muito tempo "
 "para responder) ou configurar a rede manualmente. Alguns servidores DHCP "
-"requerem que um hostname DHCP seja enviado pelo cliente e portanto você "
-"pode também optar por tentar a autoconfiguração de rede via DHCP novamente "
-"com um hostname que você fornecer."
+"requerem que um hostname DHCP seja enviado pelo cliente e portanto você pode "
+"também optar por tentar a autoconfiguração de rede via DHCP novamente com um "
+"hostname que você fornecer."
 
 #. Type: note
 #. Description
@@ -555,12 +555,9 @@ msgstr "Configuração automática de rede falhou"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Isso pode ser devido a um servidor DHCP lento, malfuncionamento de "
-"equipamentos de rede ou sua rede pode simplesmente não estar configurada "
-"para DHCP."
 
 #. Type: boolean
 #. Description
@@ -571,28 +568,27 @@ msgstr "Continuar sem uma rota padrão ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
 "A autoconfiguração de rede teve sucesso. Porém, nenhuma rota padrão foi "
 "definida : o sistema no momento não sabe como se comunicar com hosts na "
-"Internet. Isto faz com que seja impossível continuar a instalação a "
-"menos que todos os pacotes Debian que você precise estejam em sua rede "
-"local ou um uma mídia local como um CD-ROM."
+"Internet. Isto faz com que seja impossível continuar a instalação a menos "
+"que todos os pacotes Debian que você precise estejam em sua rede local ou um "
+"uma mídia local como um CD-ROM."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"Em caso de dúvidas você pode continuar e retornar a etapa de "
-"configuração de rede posteriormente caso necessário."
 
 #. Type: text
 #. Description
@@ -762,6 +758,21 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "Isso pode ser devido a um servidor DHCP lento, malfuncionamento de "
+#~ "equipamentos de rede ou sua rede pode simplesmente não estar configurada "
+#~ "para DHCP."
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "Em caso de dúvidas você pode continuar e retornar a etapa de configuração "
+#~ "de rede posteriormente caso necessário."
 
 #, fuzzy
 #~ msgid ""

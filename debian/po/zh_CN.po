@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-29 10:35+0200\n"
+"POT-Creation-Date: 2004-07-01 00:25-0700\n"
 "PO-Revision-Date: 2004-06-29 21:45+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -531,11 +531,9 @@ msgstr "网络自动设置失败"
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid ""
-"This may be due to a slow DHCP server, malfunctioning network equipment, or "
-"your network simply not being set up for DHCP."
+"Your network is probably not using the DHCP protocol. Alternatively, the "
+"DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"导致失败的原因可能是 DHCP 服务器速度太慢、网络设备故障、或者是您的网络根本就"
-"没有配置 DHCP。"
 
 #. Type: boolean
 #. Description
@@ -546,12 +544,13 @@ msgstr "无默认路由，继续安装吗？"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
+#, fuzzy
 msgid ""
-"Network autoconfiguration was successful. However, no default route was set: "
-"the system does not know how to communicate with hosts on the Internet. This "
-"will make it impossible to continue with the installation unless you have "
-"all the Debian packages you need on the local network or on a local medium "
-"such as CD-ROM."
+"The network autoconfiguration was successful. However, no default route was "
+"set: the system does not know how to communicate with hosts on the Internet. "
+"This will make it impossible to continue with the installation unless you "
+"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"available on the local network."
 msgstr ""
 "网络自动配置成功，但未设置默认路由，系统将无法连接 Internet 上的主机。除非您"
 "在本地的网络或存储设备(例如光盘)上存有您需要的所有软件包，否则您将无法继续进"
@@ -561,10 +560,9 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid ""
-"If you are unsure then you can continue and come back to the network "
-"configuration step later if necessary."
+"If you are unsure, you should not continue without a default route: contact "
+"your local network administrator about this problem."
 msgstr ""
-"如果不清楚该如何选择，您也可以继续安装进程，在需要的时候再返回网络配置步骤。"
 
 #. Type: text
 #. Description
@@ -724,6 +722,20 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
+
+#~ msgid ""
+#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
+#~ "or your network simply not being set up for DHCP."
+#~ msgstr ""
+#~ "导致失败的原因可能是 DHCP 服务器速度太慢、网络设备故障、或者是您的网络根本"
+#~ "就没有配置 DHCP。"
+
+#~ msgid ""
+#~ "If you are unsure then you can continue and come back to the network "
+#~ "configuration step later if necessary."
+#~ msgstr ""
+#~ "如果不清楚该如何选择，您也可以继续安装进程，在需要的时候再返回网络配置步"
+#~ "骤。"
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "动态网络配置(DHCP)"
