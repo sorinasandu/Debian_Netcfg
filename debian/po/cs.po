@@ -16,9 +16,9 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-11-14 09:25+0100\n"
-"PO-Revision-Date: 2003-11-07 07:52+0100\n"
+"PO-Revision-Date: 2003-11-16 10:44+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
-"Language-Team: Czech <czdebian-l@debian.cz>\n"
+"Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Domain name:"
-msgstr ""
+msgstr "Název domény:"
 
 #. Type: string
 #. Description
@@ -46,65 +46,63 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Name servers addresses:"
-msgstr ""
+msgstr "Adresy jmenných serverù:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Zadejte IP adresy (ne názvy) a¾ tøí jmenných serverù oddìlené mezerami. "
-"Nepou¾ívejte èárky. Servery budou dotazovány v poøadí, v jakém je zadáte. "
-"Pokud nechcete pou¾ívat jmenné servery, nechte políèko prázdné. "
+"Zadejte IP adresy (ne názvy) maximálnì tøí jmenných serverù oddìlené "
+"mezerami. Nepou¾ívejte èárky. Servery budou dotazovány v poøadí, v jakém je "
+"zadáte. Pokud nechcete pou¾ívat jmenné servery, nechte pole prázdné. "
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Interface:"
-msgstr ""
+msgstr "Rozhraní:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently  detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Byly nalezeny následující rozhraní. Vyberte typ hlavního sí»ového rozhraní, "
-"které pou¾ijete pro instalaci Debianu (pøes NFS nebo HTTP)."
+"Vyberte rozhraní, které chcete nastavit. V¹echna nalezená rozhraní jsou "
+"vypsána ní¾e. Vyberte typ hlavního sí»ového rozhraní, které pou¾ijete pro "
+"instalaci Debianu (pøes NFS nebo HTTP)."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
 msgid "Error while activating the network"
-msgstr ""
+msgstr "Chyba bìhem aktivace sítì"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
-#, fuzzy
 msgid "An error occurred while activating the network."
-msgstr "Vyskytla se chyba. Nelze pokraèovat."
+msgstr "Bìhem aktivace sítì se vyskytla chyba."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Hostname:"
-msgstr ""
+msgstr "Jméno poèítaèe:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Zadejte jméno tohoto poèítaèe."
 
 #. Type: string
 #. Description
@@ -123,14 +121,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Neplatné jméno"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:44
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Jméno poèítaèe \\\"${hostname}\\\" je neplatné."
+msgstr "Jméno poèítaèe \"${hostname}\" je neplatné."
 
 #. Type: error
 #. Description
@@ -147,7 +144,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:53
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #. Type: error
 #. Description
@@ -156,25 +153,24 @@ msgid ""
 "An error occured and the network configuration process had been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
+"Pøi nastavování sítì se objevila chyba a proces byl pøeru¹en. Mù¾ete to "
+"zkusit znovu z hlavního menu instalátoru."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid "No network interfaces detected"
 msgstr "Nebyla nalezena ¾ádná sí»ová rozhraní."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device."
 msgstr ""
 "Nebyla nalezena ¾ádná sí»ová rozhraní. To znamená, ¾e instalaèní systém "
-"nena¹el sí»ové zaøízení. Pokud máte sí»ovou kartu, je mo¾né, ¾e jste pro ni "
-"je¹tì nenahráli modul. Jdìte zpìt na krok 'Detekce sí»ového hardwaru'"
+"nena¹el sí»ové zaøízení."
 
 #. Type: error
 #. Description
@@ -183,6 +179,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
 msgstr ""
+"Pokud opravdu máte sí»ovou kartu, je mo¾né, ¾e jste pro ni je¹tì nenahráli "
+"modul. Vra»te se zpìt na krok rozpoznání sí»ového hardwaru."
 
 #. Type: text
 #. Description
@@ -278,25 +276,23 @@ msgstr "Neznámé rozhraní"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "DHCP jméno:"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
 "Mo¾ná budete muset zadat DHCP jméno poèítaèe. Pokud pou¾íváte kabelový "
-"modem, obèas se sem zadává èíslo úètu. Vìt¹ina u¾ivatelù mù¾e nechat toto "
-"pole volné."
+"modem, nìkdy se sem zadává èíslo úètu."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr "Vìt¹ina u¾ivatelù nemusí vyplòovat nic."
 
 #. Type: boolean
 #. Description
@@ -308,7 +304,7 @@ msgstr "Jsou tyto informace správné?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Momentálnì nastavené parametry sítì:"
 
 #. Type: boolean
 #. Description
@@ -342,20 +338,19 @@ msgstr "Mù¾e to chvíli trvat."
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "Nebyl nalezen DHCP klient"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Tento balík vy¾aduje pump nebo dhcp-client."
+msgstr "Nebyl nalezen DHCP klient. Tento balík vy¾aduje pump nebo dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "Proces nastavení DHCP se pøeru¹í."
 
 #. Type: text
 #. Description
@@ -368,16 +363,14 @@ msgstr "Nastavení sítì pøes DHCP"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Nastavení sítì pøes DHCP"
+msgstr "Nastavit sí» s dynamickými adresami (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
-msgstr "IP adresa?"
+msgstr "IP adresa:"
 
 #. Type: string
 #. Description
@@ -394,14 +387,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "Pointopoint adresa?"
+msgstr "Point-to-point adresa:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -415,9 +406,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "Sí»ová maska?"
+msgstr "Sí»ová maska:"
 
 #. Type: string
 #. Description
@@ -434,14 +424,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "Brána?"
+msgstr "Brána:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -459,14 +447,13 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Nedosa¾itelná brána"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "Zadaná brána je nedosa¾itelná."
+msgstr "Zadaná adresa brány je nedosa¾itelná."
 
 #. Type: error
 #. Description
@@ -509,39 +496,5 @@ msgstr "Statické nastavení sítì"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Nastavení sítì pøes DHCP"
-
-#~ msgid "Choose the domain name."
-#~ msgstr "Zvolte doménové jméno."
-
-#~ msgid "Choose the DNS Server Addresses"
-#~ msgstr "Vyberte adresu DNS serveru"
-
-#~ msgid "Choose an interface."
-#~ msgstr "Vyberte rozhraní."
-
-#~ msgid "An error occured."
-#~ msgstr "Nastala chyba."
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "Kdy¾ jsem zkusil aktivovat sí», nìco se pokazilo."
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "Zadejte jméno poèítaèe."
-
-#~ msgid "Feel free to retry."
-#~ msgstr "Klidnì to zkuste znovu."
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "Jaké je va¹e dhcp jméno poèítaèe?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "Nebyl nalezen ¾ádný dhcp klient. Nelze pokraèovat."
-
-#~ msgid "Is this configuration correct?"
-#~ msgstr "Je toto nastavení správné?"
-
-#~ msgid "Configure a static network"
-#~ msgstr "Nastavit sí» staticky"
+msgstr "Nastavit sí» se statickými adresami"
