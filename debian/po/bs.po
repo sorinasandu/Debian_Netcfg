@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-04-09 17:30+0200\n"
 "Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -550,6 +550,12 @@ msgstr "Dinamička konfiguracija mreže (DHCP)"
 msgid "Configure network manually"
 msgstr "Podesi mrežu"
 
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
 #  Type: text
 #  Description
 #  Item in the main menu to select this package
@@ -578,17 +584,27 @@ msgid ""
 "configure it at all right now."
 msgstr ""
 
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Podesi mrežu"
+
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinamička konfiguracija mreže (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Podesi mrežu koristeći dinamično adresiranje (DHCP)"
 

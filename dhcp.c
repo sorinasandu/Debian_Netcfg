@@ -209,6 +209,14 @@ int ask_dhcp_retry (struct debconfclient *client)
 {
   int ret;
   
+  if (is_wireless_iface(interface))
+  {
+    debconf_metaget(client, "netcfg/internal-wifireconf", "description");
+    debconf_subst(client, "netcfg/dhcp_retry", "wifireconf", client->value);
+  }
+  else /* blank from last time */
+    debconf_subst(client, "netcfg/dhcp_retry", "wifireconf", "");
+
   /* critical, we don't want to enter a loop */
   debconf_input(client, "critical", "netcfg/dhcp_retry");
   ret = debconf_go(client);
@@ -221,9 +229,13 @@ int ask_dhcp_retry (struct debconfclient *client)
     /* strcmp sucks */
   if (client->value[0] == 'R')
   {
+    size_t len = strlen(client->value);
     /* with DHCP hostnam_e_ */
-    if (client->value[strlen(client->value) - 1] == 'e')
+    if (client->value[len - 1] == 'e')
       return 1;
+    /* wireless networ_k_ */
+    else if (client->value[len - 1] == 'k')
+      return 4;
     else
       return 0;
   }
@@ -237,8 +249,7 @@ int ask_dhcp_retry (struct debconfclient *client)
 int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
-  enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
-  int i;
+  enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, DOMAIN, STATIC, END } state = START;
 
   kill_dhcp_client();
   loop_setup();
@@ -271,7 +282,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case ASK_RETRY:
         /* ooh, now it's a select */
-        switch ((i = ask_dhcp_retry (client)))
+        switch (ask_dhcp_retry (client))
         {
           case GO_BACK: kill_dhcp_client(); exit(10); /* XXX */
           case 0: state = POLL; break;
@@ -280,8 +291,36 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
                   return 0;
-	  default:
-		  di_info("unhandled: retry returned %d", i);
+	  case 4: /* reconfig wifi */
+          {
+	    /* oh god - a NESTED satan machine */
+ 	    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
+
+	    for (;;)
+	    {
+	      switch (wifistate)
+	      {
+		case ESSID:
+		  state = ( netcfg_wireless_set_essid(client, interface) == GO_BACK ) ?
+		    ABORT : WEP;
+		  break;
+
+		case WEP:
+		  state = ( netcfg_wireless_set_wep (client, interface) == GO_BACK ) ?
+		    ESSID : DONE;
+		  break;
+
+		case ABORT:
+		  exit(10);
+		  break;
+
+		case DONE: break; /* avoid warning */
+	      }
+
+	      if (state == DONE)
+		break;
+	    }
+	  }
         }
         break;
 
@@ -310,8 +349,15 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           exit(10); /* go back, going back to poll isn't intuitive */
 	}
         else
-          state = END;
+          state = DOMAIN;
         break;
+
+      case DOMAIN:
+	if (!have_domain && netcfg_get_domain (client, &domain))
+	  state = HOSTNAME;
+	else
+	  state = END;
+	break;
 
       case STATIC:
 	kill_dhcp_client();

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-03-30 21:16+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -543,6 +543,12 @@ msgstr "Cyflunio'r rhwydwaith"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Cyflunio'r rhwydwaith"
@@ -567,15 +573,22 @@ msgstr ""
 
 #. Type: text
 #. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Cyflunio'r rhwydwaith"
+
+#. Type: text
+#. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Cyflunio'r rhwydwaith gan ddefnuddio cyfeiriadaeth deinamig (DHCP)"
 

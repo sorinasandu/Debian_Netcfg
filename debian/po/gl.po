@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_netcfg_gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-04-15 10:56+0200\n"
 "Last-Translator: Héctor Fernández López <trorrr@yahoo.es>\n"
 "Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
@@ -536,6 +536,12 @@ msgstr "Configura-la rede"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Configura-la rede"
@@ -560,15 +566,22 @@ msgstr ""
 
 #. Type: text
 #. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Configura-la rede"
+
+#. Type: text
+#. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configuración dinámica da rede (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura-la rede usando direccionamento dinámico (DHCP)"
 

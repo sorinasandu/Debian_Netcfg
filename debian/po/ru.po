@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-04-21 01:16+0200\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-russian@lists.debian.org>\n"
@@ -546,6 +546,12 @@ msgstr "Настроить сеть"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Настроить сеть"
@@ -570,15 +576,22 @@ msgstr ""
 
 #. Type: text
 #. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Настроить сеть"
+
+#. Type: text
+#. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Настройка динамического адреса (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Настройка сети с использованием динамической адресации (DHCP)"
 

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-05-13 00:58+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -540,6 +540,12 @@ msgstr "Configurează reţeaua manual"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
 msgid "Do not configure the network at this time"
 msgstr "Nu configura reţeaua acum"
 
@@ -558,19 +564,31 @@ msgid ""
 "specify a DHCP hostname to send to the server if you think it needs one. "
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
-msgstr "Autoconfigurarea reţelei a eşuat. Aceasta se întămplă de obicei datorită unui server DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. Puteţi, de asemenea, să specificaţi un nume DHCP pentru a fi trimis către server dacă credeţi că este necesar. Pe de altă parte, puteţi configura reţeaua manual sau să nu o configuraţi  acum."
+msgstr ""
+"Autoconfigurarea reţelei a eşuat. Aceasta se întămplă de obicei datorită "
+"unui server DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. "
+"Puteţi, de asemenea, să specificaţi un nume DHCP pentru a fi trimis către "
+"server dacă credeţi că este necesar. Pe de altă parte, puteţi configura "
+"reţeaua manual sau să nu o configuraţi  acum."
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Configurează reţeaua"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configurare dinamică a reţelei (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurează reţeaua dinamic folosind adresare dinamică (DHCP)"
 
@@ -687,7 +705,8 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -736,4 +755,3 @@ msgstr "Configurează reţeaua folosind adresare statică"
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuraţia reţelei"
-

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_tools_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 09:37-0700\n"
+"POT-Creation-Date: 2004-05-12 23:25-0700\n"
 "PO-Revision-Date: 2004-05-12 20:40+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -43,8 +43,8 @@ msgid ""
 msgstr ""
 "Sie» mô¾e by» nastavená automaticky pomocou DHCP, alebo manuálne po vlo¾ení "
 "po¾adovaných informácií. Ak si zvolíte DHCP a in¹talaèný program nedostane "
-"správne sie»ové nastavenia z DHCP servera na va¹ej sieti, po pokuse "
-"o konfiguráciu pomocou DHCP dostanete príle¾itos» na manuálne nastavenie."
+"správne sie»ové nastavenia z DHCP servera na va¹ej sieti, po pokuse o "
+"konfiguráciu pomocou DHCP dostanete príle¾itos» na manuálne nastavenie."
 
 #. Type: string
 #. Description
@@ -533,6 +533,12 @@ msgstr "Nastavi» sie» manuálne"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:38
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:38
 msgid "Do not configure the network at this time"
 msgstr "Nenastavova» (teraz) sie»"
 
@@ -553,21 +559,28 @@ msgid ""
 "configure it at all right now."
 msgstr ""
 "Automatické nastavenie siete zlyhalo. Väè¹inou je to kvôli pomalému DHCP "
-"serveru, tak¾e mô¾ete sa o to znova pokúsi». Taktie¾ mô¾ete urèi» DHCP "
-"názov poèítaèa na odoslanie serveru, ak predpokladáte, ¾e je to nutné. "
-"Ináè mô¾ete nastavi» sie» manuálne, prípadne sie» vôbec nenastavova»."
+"serveru, tak¾e mô¾ete sa o to znova pokúsi». Taktie¾ mô¾ete urèi» DHCP názov "
+"poèítaèa na odoslanie serveru, ak predpokladáte, ¾e je to nutné. Ináè mô¾ete "
+"nastavi» sie» manuálne, prípadne sie» vôbec nenastavova»."
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:49
+#, fuzzy
+msgid "Reconfigure the wireless network"
+msgstr "Nastavenie siete"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:50
+#: ../netcfg-dhcp.templates:54
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dynamické nastavenie siete (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:59
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Nastavenie siete s dynamickými adresami (DHCP)"
 

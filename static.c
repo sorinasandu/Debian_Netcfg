@@ -122,38 +122,6 @@ int netcfg_get_netmask(struct debconfclient *client)
 
     return 0;
 }
-/* @brief Get the domainname.
- * @return 0 for success, with *domain = domain, 30 for 'goback',
- */
-int netcfg_get_domain(struct debconfclient *client,  char **domain)
-{
-    int ret;
-       
-    if (have_domain == 1)
-    {
-      debconf_get(client, "netcfg/get_domain");
-      assert (!empty_str(client->value));
-      if (*domain)
-	free(*domain);
-      *domain = strdup(client->value);
-      return 0;
-    }
-
-    debconf_input (client, "high", "netcfg/get_domain");
-    ret = debconf_go(client);
-
-    if (ret)
-      return ret;
-   
-    debconf_get (client, "netcfg/get_domain");
-    
-    if (*domain)
-        free(*domain);
-    *domain = NULL;
-    if (!empty_str(client->value))
-        *domain = strdup(client->value);
-    return 0;
-}
 
 int netcfg_get_gateway(struct debconfclient *client)
 {

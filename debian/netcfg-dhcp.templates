@@ -35,7 +35,7 @@ _Description: No DHCP client found
 
 Template: netcfg/dhcp_retry
 Type: select
-__Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, Do not configure the network at this time
+__Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, ${wifireconf}, Do not configure the network at this time
 Default: Retry network autoconfiguration
 _Description: Next network configuration step:
  Network autoconfiguration failed. This is typically due to a slow DHCP
@@ -43,6 +43,10 @@ _Description: Next network configuration step:
  specify a DHCP hostname to send to the server if you think it needs one.
  Otherwise, you may configure the network manually, or choose not to configure
  it at all right now.
+
+Template: netcfg/internal-wifireconf
+Type: text
+_Description: Reconfigure the wireless network
 
 Template: netcfg/dhcp-title
 Type: text

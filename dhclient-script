@@ -104,7 +104,7 @@ case "$reason" in
         if [ -z "$old_ip_address" -o "$old_ip_address" != "$new_ip_address" -o \
             "$reason" = "BOUND" -o "$reason" = "REBOOT" ]; then
 
-            ifconfig $interface inet $new_ip_address $new_subnet_arg \
+            ifconfig $interface $new_ip_address $new_subnet_arg \
                 $new_broadcast_arg $mtu_arg
 
             if [ $relmajor -lt 2 ] || \
