@@ -74,7 +74,7 @@ int ethtool_lite (char * iface)
 		di_info("%s is connected.\n", iface);
 		return CONNECTED;
 	}
-
+	else
 	{
 		u_int16_t *data = (u_int16_t *)&ifr.ifr_data;
 		int ctl;
