@@ -36,6 +36,7 @@ int main(void)
 {
     int num_interfaces = 0;
     static struct debconfclient *client;
+    static int requested_wireless_tools = 0;
 
     enum { BACKUP, GET_INTERFACE, GET_STATIC, WCONFIG, QUIT} state = GET_INTERFACE;
 
@@ -69,12 +70,21 @@ int main(void)
 		state = QUIT;
 	    break;
 	case WCONFIG:
-	    if (netcfg_wireless_set_essid (client, interface)
-		|| netcfg_wireless_set_wep (client, interface))
+            if (requested_wireless_tools == 0)
+            {
+              requested_wireless_tools = 1;
+              di_exec_shell("apt-install wireless-tools");
+            }
+	    if (netcfg_wireless_set_essid (client, interface))
 	    {
 	      state = BACKUP;
 	      break;
 	    }
+            if (netcfg_wireless_set_wep (client, interface))
+            {
+              state = BACKUP;
+              break;
+            }
 	    state = GET_STATIC;
 	    break;
 	case QUIT:

@@ -2,6 +2,8 @@ netcfg (0.64) UNRELEASED; urgency=low
 
   * Joshua Kwan
     - Split out all functions into static.c, dhcp.c, wireless.c.
+    - Port wireless fixes back to netcfg-static and netcfg-dhcp, which
+      have been rather neglected lately.
     - Redesign DHCP strategy with a new template that uses a select,
       allowing the user to clearly alternate to static network config
       (Closes: #244901, #227722)
