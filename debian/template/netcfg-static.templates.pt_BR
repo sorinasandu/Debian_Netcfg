@@ -1,0 +1,85 @@
+Template: netcfg/get_ipaddress
+Type: string
+Description: IP address?
+ The IP address is unique to your computer and consists of four numbers
+ separated by periods.  If you don't know what to use here, consult your
+ network administrator.
+Description-pt_BR: Endereço IP ?
+ O endereço IP é único para seu computador e consiste de quatro números
+ separados por pontos. Caso você não saiba o que usar aqui consulte o
+ administrador de sua rede.
+
+Template: netcfg/get_pointopoint
+Type: string
+Description: Pointopoint address?
+ The pointopoint address is used to determine the other endpoint of the
+ point to point network.  Consult your network administrator if you do not
+ know the value.  The pointopoint address should be entered as four numbers
+ separated by periods.
+Description-pt_BR: Endereço ponto-a-ponto ?
+ O endereço ponto-a-ponto é usado para determinar a outra ponta da rede
+ pontoa-a-ponta. Consulte o administrador de sua rede caso você não saiba
+ o que usar. O endereço ponto-a-ponto não deve ser informado como quatro
+ números separados por pontos.
+
+Template: netcfg/get_netmask
+Type: string
+Description: Netmask?
+ The netmask is used to determine which machines are local to your network.
+  Consult your network administrator if you do not know the value.  The
+ netmask should be entered as four numbers separated by periods.
+Description-pt_BR: Máscara de rede ?
+ A máscara de rede é usada para determinar quais máquinas são locais para
+ sua rede. Consulte o administrador de sua rede caso você não saiba o que
+ usar. A máscara de rede deve ser informada como quatro números separados
+ por pontos.
+
+Template: netcfg/get_gateway
+Type: string
+Description: Gateway?
+ This is an IP address (four numbers separated by periods) that indicates
+ the gateway router, also known as the default router.  All traffic that
+ goes outside your LAN (for instance, to the Internet) is sent through this
+ router.  In rare circumstances, you may have no router; in that case, you
+ can leave this blank.  If you don't know the proper answer to this
+ question, consult your network administrator.
+Description-pt_BR: Gateway ?
+ Este é um endereço IP (quatro números separados por pontos) que indica o
+ roteador gateway, também conhecido como o roteador padrão. Todo tráfego
+ que vai para fora de sua LAN (e consequentemente, para Internet) é
+ enviado através deste roteador. Em raras circunstâncias, você pode não
+ possuir um roteador; neste caso, este campo pode ser deixado em branco.
+ Caso você não saiba a resposta correta para esta pergunta, consulte o
+ adimistrador de sua rede.
+
+Template: netcfg/gateway_unreachable
+Type: note
+Description: The gateway you entered is unreachable.
+ You may have made an error entering your ipaddress, netmask and/or
+ gateway.
+Description-pt_BR: O gateway que você informou é inalcançavel.
+ Você pode ter cometido um erro ao informar seu endereço IP, máscara de
+ rede e/ou seu gateway.
+
+Template: netcfg/confirm_static
+Type: boolean
+Default: true
+Description: Is this configuration correct?
+  interface     = ${interface}
+  hostname      = ${hostname}
+  domain        = ${domain}
+  ipaddress     = ${ipaddress}
+  netmask       = ${netmask}
+  gateway       = ${gateway}
+  pointopoint   = ${pointopoint}
+  nameservers   = ${nameservers}
+Description-pt_BR: Esta configuração etá correta ?
+  interface           = ${interface}
+  nome de máquina     = ${hostname}
+  domínio             = ${domain}
+  endreço IP          = ${ipaddress}
+  máscara de rede     = ${netmask}
+  gateway             = ${gateway}
+  ponto-a-ponto       = ${pointopoint}
+  servidores de nomes = ${nameservers}
+
