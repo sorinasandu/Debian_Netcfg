@@ -1,3 +1,4 @@
+# translation of debian-installer_tools_netcfg_nb.po to Norwegian bokmål
 # translation of nb.po to Norsk bokmål
 # translation of debian-installer.po to Norwegian bokmål
 # Copyright (C) 2003 Free Software Foundation, Inc.
@@ -8,12 +9,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: nb\n"
+"Project-Id-Version: debian-installer_tools_netcfg_nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-11-16 20:36+0100\n"
+"PO-Revision-Date: 2003-12-19 16:18+0100\n"
 "Last-Translator: Steinar H. Gunderson <sgunderson@bigfoot.com>\n"
-"Language-Team: Norsk bokmål <i18n-nb@lister.ping.uio.no>\n"
+"Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,14 +24,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Dynamisk adressering (DHCP), statisk adressering (manuell)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "DHCP-nettverksoppsett"
+msgstr "Metode for konfigurering av nettverk:"
 
 #. Type: select
 #. Description
@@ -42,6 +42,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
+"Nettverket kan enten settes opp med DHCP eller ved å skrive inn all informasjonen "
+"manuelt. Hvis du bruker DHCP og installasjonsprogrammet ikke klarer å hente en "
+"fungerende konfigurasjon fra en DHCP-tjener på nettverket ditt, vil du få anledning "
+"til å konfigurere nettevrket manuelt etter forsøket på å konfigurere det med DHCP. "
+"Hvis du er usikker, velg DHCP."
 
 #. Type: string
 #. Description
@@ -66,7 +71,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
 msgstr "Adresser til navnetjenere:"
 
@@ -93,7 +97,6 @@ msgstr "Grensesnitt:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
@@ -131,7 +134,6 @@ msgstr "Skriv inn vertsnavnet for dette systemet."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -158,13 +160,12 @@ msgstr "Vertsnavnet  «${hostname}» er ugyldig."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. If must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Et gyldig vertsnavn må bare inneholde tall, bostaver og minus-tegn, være "
+"Et gyldig vertsnavn må bare inneholde tall, bokstaver og minus-tegn, være "
 "mellom 2 og 63 tegn langt, og kan ikke begynne eller slutte med et minus-"
 "tegn."
 
@@ -177,7 +178,6 @@ msgstr "Feil"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:65
-#, fuzzy
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -194,18 +194,16 @@ msgstr "Kunne ikke oppdage noen nettverks-grensesnitt."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Fant ingen nettverksgrensesnitt.  Det betyr at installasjonssystemet ikke "
+"Fant ingen nettverksgrensesnitt. Det betyr at installasjonssystemet ikke "
 "klarte å finne en nettverksenhet."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -253,7 +251,6 @@ msgstr "IP over seriell-linje"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
 msgstr "IP over parallell-linje"
 
@@ -309,17 +306,15 @@ msgstr "Ukjent grensesnitt."
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "DHCP-nettverksoppsett"
+msgstr "Nettverksoppsett"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "Konfigurerer nettverket med DHCP"
+msgstr "Konfigurerer nettverket"
 
 #. Type: string
 #. Description
@@ -381,7 +376,6 @@ msgstr "Konfigurerer nettverket med DHCP"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
 msgstr "Dette kan ta noen få minutter."
 
@@ -406,9 +400,8 @@ msgstr "Avbryter DHCP-konfigurasjonsprosessen."
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP-nettverksoppsett"
+msgstr "Ønsker du å prøve DHCP-nettverksoppsett igjen?"
 
 #. Type: boolean
 #. Description
@@ -417,14 +410,15 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
+"Ingen IP-adresse ble gitt ut under DHCP-nettverksoppsettet. Noen ganger er "
+"DHCP-tjenere veldig trege. Hvis du ønsker, kan du prøve igjen."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Statisk nettverkskonfigurasjon"
+msgstr "Dynamisk nettverkskonfigurasjon (DHCP)"
 
 #. Type: text
 #. Description
@@ -526,8 +520,7 @@ msgstr "Det går ikke an å komme fram til standardruteren du oppga."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan ha oppgitt feil IP-adresse, nettmaske og/eller adresse til "
 "standardruter."
@@ -558,7 +551,6 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
 msgstr "Statisk nettverkskonfigurasjon"
 
@@ -571,3 +563,4 @@ msgstr "Sett opp nettverket med statisk adressering"
 
 #~ msgid "DHCP Network Configuration"
 #~ msgstr "DHCP-nettverksoppsett"
+
