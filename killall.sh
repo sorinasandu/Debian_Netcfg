@@ -7,6 +7,9 @@ for pid in $pids; do
   if kill -0 $pid 2>/dev/null; then
     kill -TERM $pid
     sleep 1
-    kill -KILL $pid
+    # Still alive? Die!
+    if kill -0 $pid 2>/dev/null; then
+      kill -KILL $pid
+    fi
   fi
 done
