@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-25 06:56+0100\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-02-25 18:20+0100\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
@@ -119,8 +119,8 @@ msgid ""
 msgstr ""
 "${iface} ist ein drahtloses Netzwerkinterface. Bitte geben Sie den Namen "
 "(die ESSID) des drahtlosen Netzwerks an, das ${iface} verwenden soll. Wenn "
-"Sie irgendein verfügbares Netzwerk verwenden möchten, lassen Sie dieses "
-"Feld leer."
+"Sie irgendein verfügbares Netzwerk verwenden möchten, lassen Sie dieses Feld "
+"leer."
 
 #. Type: string
 #. Description
@@ -155,8 +155,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein 's:' "
-"(ohne Anführungszeichen) voran."
+"Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein "
+"'s:' (ohne Anführungszeichen) voran."
 
 #. Type: string
 #. Description
@@ -182,8 +182,8 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "Der WEP-Schlüssel '${wepkey}' ist ungültig. Bitte beachten Sie die "
-"Anweisungen auf dem nächsten Bildschirm über die korrekte Eingabe des "
-"WEP-Schlüssels und versuchen Sie es noch einmal."
+"Anweisungen auf dem nächsten Bildschirm über die korrekte Eingabe des WEP-"
+"Schlüssels und versuchen Sie es noch einmal."
 
 #. Type: error
 #. Description
@@ -484,7 +484,8 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -501,9 +502,10 @@ msgstr "Wollen Sie die DHCP-Netzwerkkonfiguration noch einmal versuchen?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Während der DHCP-Netzwerkkonfiguration wurde keine IP-Adresse angeboten. "
 "DHCP-Server sind manchmal sehr langsam. Wenn Sie möchten, können Sie es "
@@ -522,7 +524,8 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -555,9 +558,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Die von Ihnen angegebene IP-Adresse ist ungültig. Sie sollte die Form "
-"x.x.x.x haben, wobei jedes 'x' nicht größer als 255 ist. Bitte versuchen "
-"Sie es noch einmal."
+"Die von Ihnen angegebene IP-Adresse ist ungültig. Sie sollte die Form x.x.x."
+"x haben, wobei jedes 'x' nicht größer als 255 ist. Bitte versuchen Sie es "
+"noch einmal."
 
 #. Type: string
 #. Description
@@ -637,7 +640,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -726,4 +730,3 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
-

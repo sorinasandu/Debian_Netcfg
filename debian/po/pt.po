@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.49\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-29 01:38-0700\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-02-29 12:39+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -111,8 +111,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} é um interface de rede sem fios. Por favor introduza o nome (ESSID) "
-"da rede wireless que deseja usar no interface ${iface}. Se desejar usar qualquer "
-"rede disponível, deixa este campo em branco."
+"da rede wireless que deseja usar no interface ${iface}. Se desejar usar "
+"qualquer rede disponível, deixa este campo em branco."
 
 #. Type: string
 #. Description
@@ -127,8 +127,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Caso seja aplicável, por favor introduza a chave de segurança WEP para "
-" o dispositivo ${iface}. Existem duas maneiras de o fazer:"
+"Caso seja aplicável, por favor introduza a chave de segurança WEP para  o "
+"dispositivo ${iface}. Existem duas maneiras de o fazer:"
 
 #. Type: string
 #. Description
@@ -147,8 +147,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se a sua chave WEP está no formato de uma frase-chave, "
-"deverá precede-la com 's:' (sem plicas)."
+"Se a sua chave WEP está no formato de uma frase-chave, deverá precede-la com "
+"'s:' (sem plicas)."
 
 #. Type: string
 #. Description
@@ -157,8 +157,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Claro, se não existir uma chave WEP para a sua rede sem fios, deixe "
-"este campo em branco."
+"Claro, se não existir uma chave WEP para a sua rede sem fios, deixe este "
+"campo em branco."
 
 #. Type: error
 #. Description
@@ -173,9 +173,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"A chave WEP '${wepkey}' é invalida. Por favor verifique as instruções "
-"no próximo ecrã cuidadosamente em como intrudouzir uma chave WEP correctamente, "
-" e tente de novo."
+"A chave WEP '${wepkey}' é invalida. Por favor verifique as instruções no "
+"próximo ecrã cuidadosamente em como intrudouzir uma chave WEP "
+"correctamente,  e tente de novo."
 
 #. Type: error
 #. Description
@@ -189,7 +189,8 @@ msgstr "ESSID inválido"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr "o ESSID \"${essid}\" é inválido. Os ESSID só podem conter até 32 caracteres, "
+msgstr ""
+"o ESSID \"${essid}\" é inválido. Os ESSID só podem conter até 32 caracteres, "
 "podendo conter qualquer tipo de caracteres."
 
 #. Type: string
@@ -438,6 +439,8 @@ msgstr "Esta informação está correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Parâmetros de rede actualmente configurados:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -493,9 +496,10 @@ msgstr "Deseja tentar novamente a configuração via DHCP?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Nenhum endereço IP foi oferecido durante a tentativa de configuração da rede "
 "via DHCP. Por vezes, alguns servidores DHCP são realmente lentos. Caso "
@@ -632,6 +636,8 @@ msgstr ""
 "Pode ter cometido um erro ao inserir o seu endereço IP, máscara de rede e/ou "
 "o gateway."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

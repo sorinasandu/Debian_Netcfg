@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-25 06:56+0100\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-02-25 20:43+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -125,8 +125,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} er eit trådlaust nettverksgrensesnitt. Skriv inn namnet (ESSID'en) "
-"til det trådlause nettverket du vil at ${iface} skal bruka. La feltet vera tomt viss "
-"det er det same kva for nettverk du vil bruka."
+"til det trådlause nettverket du vil at ${iface} skal bruka. La feltet vera "
+"tomt viss det er det same kva for nettverk du vil bruka."
 
 #. Type: string
 #. Description
@@ -141,8 +141,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Skriv inn tryggleiksnøkkelen for WEP viss dette er naudsynt for grensesnittet "
-"${iface}. Det er to måtar å gjera dette på:"
+"Skriv inn tryggleiksnøkkelen for WEP viss dette er naudsynt for "
+"grensesnittet ${iface}. Det er to måtar å gjera dette på:"
 
 #. Type: string
 #. Description
@@ -160,7 +160,9 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Viss WEP-nøkkelen har eit format som eit passord, skriv inn «s:» framom passordet."
+msgstr ""
+"Viss WEP-nøkkelen har eit format som eit passord, skriv inn «s:» framom "
+"passordet."
 
 #. Type: string
 #. Description
@@ -503,9 +505,10 @@ msgstr "Vil du prøva nettverksoppsett ved hjelp av DHCP igjen?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Ingen IP-adresse blei gjeve ut under DHCP-nettverksoppsetjinga. DHCP-tenarar "
 "er av og til svært trege. Viss du vil kan du freista igjen."
@@ -555,8 +558,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"IP-adressa du skreiv inn er ikkje formatert rett. Ho skal vera på forma x.x.x.x "
-"der kvar «x» ikkje er større enn 255. Prøv igjen."
+"IP-adressa du skreiv inn er ikkje formatert rett. Ho skal vera på forma x.x."
+"x.x der kvar «x» ikkje er større enn 255. Prøv igjen."
 
 #. Type: string
 #. Description
@@ -631,12 +634,14 @@ msgstr "Kjem ikkje fram til standardrutar"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
+msgstr ""
+"Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller adresse til "
 "standardrutar."
@@ -676,4 +681,3 @@ msgstr "Statisk nettverksoppsett"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
-

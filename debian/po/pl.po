@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-25 06:56+0100\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-02-26 20:18+0100\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -121,9 +121,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} jest bezprzewodowym interfejsem sieciowym. Proszê wprowadziæ "
-"nazwê (ESSID) bezprzewodowej sieci, której chcesz u¿yæ z ${iface}. "
-"Je¶li chcesz u¿yæ jakiejkolwiek dostêpnej sieci, zostaw to pole puste."
+"${iface} jest bezprzewodowym interfejsem sieciowym. Proszê wprowadziæ nazwê "
+"(ESSID) bezprzewodowej sieci, której chcesz u¿yæ z ${iface}. Je¶li chcesz "
+"u¿yæ jakiejkolwiek dostêpnej sieci, zostaw to pole puste."
 
 #. Type: string
 #. Description
@@ -148,8 +148,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Je¶li Twój klucz WEP jest formatu 'nnnn-nnnn-nn' lub 'nnnnnnnn', gdzie "
-"n jest liczb±, wprowad¼ ten numer po prostu do tego pola."
+"Je¶li Twój klucz WEP jest formatu 'nnnn-nnnn-nn' lub 'nnnnnnnn', gdzie n "
+"jest liczb±, wprowad¼ ten numer po prostu do tego pola."
 
 #. Type: string
 #. Description
@@ -158,8 +158,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Je¶li Twój klucz WEP jest w formacie has³a, poprzed¼ go przez 's:' "
-"(pomijaj±c znaki cytowania)."
+"Je¶li Twój klucz WEP jest w formacie has³a, poprzed¼ go przez "
+"'s:' (pomijaj±c znaki cytowania)."
 
 #. Type: string
 #. Description
@@ -185,8 +185,8 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "Klucz WEP '${wepkey}' jest nieprawid³owy. Proszê uwa¿nie przeczytaæ "
-"instrukcje opisuj±ce jak prawid³owo wprowadziæ klucz WEP, znajduj±ce "
-"siê na nastêpnym ekranie, a nastêpnie spróbowaæ ponownie." 
+"instrukcje opisuj±ce jak prawid³owo wprowadziæ klucz WEP, znajduj±ce siê na "
+"nastêpnym ekranie, a nastêpnie spróbowaæ ponownie."
 
 #. Type: error
 #. Description
@@ -201,8 +201,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" jest nieprawid³owy. ESSID mo¿e zawieraæ maksimum "
-"32 znaki, ale ka¿dego rodzaju."
+"ESSID \"${essid}\" jest nieprawid³owy. ESSID mo¿e zawieraæ maksimum 32 "
+"znaki, ale ka¿dego rodzaju."
 
 #. Type: string
 #. Description
@@ -503,9 +503,10 @@ msgstr "Czy chcesz powtórzyæ konfiguracje sieci poprzez DHCP?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "¯aden adres IP nie zosta³ zaoferowany podczas konfiruacji sieci poprzez "
 "DHCP. Serwery DHCP s± czasami bardzo wolne. Je¶li chcesz mo¿esz spróbowaæ "
@@ -556,9 +557,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Wprowadzony adres IP jest nieprawid³owy. Powinien byæ podany w formie "
-"x.x.x.x, gdzie ka¿dy 'x' jest nie wiêkszy ni¿ 255. Proszê spróbowaæ "
-"ponownie."
+"Wprowadzony adres IP jest nieprawid³owy. Powinien byæ podany w formie x.x.x."
+"x, gdzie ka¿dy 'x' jest nie wiêkszy ni¿ 255. Proszê spróbowaæ ponownie."
 
 #. Type: string
 #. Description
@@ -676,4 +676,3 @@ msgstr "Statyczna konfiguracja sieci"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
-

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-03-01 06:13+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -122,8 +122,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} on langattoman verkon liitäntä. Kirjoita sen langattoman verkon nimi "
-"(ESSID) jota haluat liitännän ${iface} käyttävän. Jos haluat käyttää "
+"${iface} on langattoman verkon liitäntä. Kirjoita sen langattoman verkon "
+"nimi (ESSID) jota haluat liitännän ${iface} käyttävän. Jos haluat käyttää "
 "mitä tahansa käytettävissä olevaa verkkoa, jätä tämä tyhjäksi."
 
 #. Type: string
@@ -139,8 +139,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Jos käytössä, kirjoita laitteen ${iface} WEP-salausavain. Tämän voi "
-"tehdä kahdella tavalla:"
+"Jos käytössä, kirjoita laitteen ${iface} WEP-salausavain. Tämän voi tehdä "
+"kahdella tavalla:"
 
 #. Type: string
 #. Description
@@ -149,8 +149,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Jos WEP-avain on muodossa \"nnnn-nnnn-nn\" tai \"nnnnnnnn\", missä n on numero, "
-"kirjoita se sellaisenaan tähän kenttään."
+"Jos WEP-avain on muodossa \"nnnn-nnnn-nn\" tai \"nnnnnnnn\", missä n on "
+"numero, kirjoita se sellaisenaan tähän kenttään."
 
 #. Type: string
 #. Description
@@ -158,7 +158,9 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Jos WEP-avain on tunnuslause, kirjoita sen eteen \"s:\" (ilman lainausmerkkejä)."
+msgstr ""
+"Jos WEP-avain on tunnuslause, kirjoita sen eteen \"s:\" (ilman "
+"lainausmerkkejä)."
 
 #. Type: string
 #. Description
@@ -183,8 +185,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-avain ${wepkey} ei kelpaa. Noudata tarkasti seuraavan ruudun ohjeita "
-"WEP-avaimen oikeasta kirjoittamisesta ja yritä uudestaan."
+"WEP-avain ${wepkey} ei kelpaa. Noudata tarkasti seuraavan ruudun ohjeita WEP-"
+"avaimen oikeasta kirjoittamisesta ja yritä uudestaan."
 
 #. Type: error
 #. Description
@@ -199,8 +201,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ei kelpaa. ESSID:t voivat olla enintään 32 merkkiä, "
-"mutta voivat sisältä kaikenlaisia merkkejä. "
+"ESSID \"${essid}\" ei kelpaa. ESSID:t voivat olla enintään 32 merkkiä, mutta "
+"voivat sisältä kaikenlaisia merkkejä. "
 
 #. Type: string
 #. Description
@@ -223,9 +225,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Konenimi toimii koneesi tunnisteena verkossa. Jos et tiedä mikä "
-"isäntänimesi pitäisi olla, kysy verkon ylläpitäjältä. Jos olet "
-"pystyttämässä omaa kotiverkkoasi, voit valita nimen vapaasti."
+"Konenimi toimii koneesi tunnisteena verkossa. Jos et tiedä mikä isäntänimesi "
+"pitäisi olla, kysy verkon ylläpitäjältä. Jos olet pystyttämässä omaa "
+"kotiverkkoasi, voit valita nimen vapaasti."
 
 #. Type: error
 #. Description
@@ -483,7 +485,8 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr ""
+"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
@@ -500,12 +503,13 @@ msgstr "Yritetäänkö uudestaan verkkoasetusten automaattista hakua?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskus tosi "
-"hitaita, jos haluat voidaan yrittää uudestaan."
+"IP-osoitetta ei saatu haettua DHCP:n avulla. DHCP-palvelimet ovat joskus "
+"tosi hitaita, jos haluat voidaan yrittää uudestaan."
 
 #. Type: text
 #. Description
@@ -552,8 +556,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Antamasi IP-osoite on väärän muotoinen. Sen pitäisi olla muodossa "
-"x.x.x.x missä jokainen x on enintään 255. Yritä uudelleen."
+"Antamasi IP-osoite on väärän muotoinen. Sen pitäisi olla muodossa x.x.x.x "
+"missä jokainen x on enintään 255. Yritä uudelleen."
 
 #. Type: string
 #. Description
@@ -571,8 +575,8 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Kaksipisteosoitetta (Point-to-point) käytetään määrittämää pisteestä "
-"pisteeseen -verkosi toinen pää. Kysy verkkosi ylläpitäjältä jos et "
-"tiedä tätä arvoa. Kaksipisteosoite syötetään neljänä lukuna pistein eroteltuna."
+"pisteeseen -verkosi toinen pää. Kysy verkkosi ylläpitäjältä jos et tiedä "
+"tätä arvoa. Kaksipisteosoite syötetään neljänä lukuna pistein eroteltuna."
 
 #. Type: string
 #. Description
@@ -631,7 +635,8 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
@@ -690,4 +695,3 @@ msgstr "Tee verkkoasetukset itse"
 #~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
 #~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
 #~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
-

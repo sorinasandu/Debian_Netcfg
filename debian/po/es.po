@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-25 06:56+0100\n"
+"POT-Creation-Date: 2004-03-02 14:19-0500\n"
 "PO-Revision-Date: 2004-02-27 21:15+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -143,7 +143,11 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr "${iface} es una interfaz a una red inalámbrica («wireless»). Introduzca el nombre (el ESSID) de la red inalámbrica a la que quiere que se conecte ${iface}. Deje el nombre en blanco si desea utilizar cualquier red que esté disponible."
+msgstr ""
+"${iface} es una interfaz a una red inalámbrica («wireless»). Introduzca el "
+"nombre (el ESSID) de la red inalámbrica a la que quiere que se conecte "
+"${iface}. Deje el nombre en blanco si desea utilizar cualquier red que esté "
+"disponible."
 
 #. Type: string
 #. Description
@@ -157,7 +161,9 @@ msgstr "Clave WEP para ${iface}:"
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr "Introduzca la clave de seguridad WEP para el dispositivo ${iface} si fuera necesario para su red. Hay dos formas de hacerlo:"
+msgstr ""
+"Introduzca la clave de seguridad WEP para el dispositivo ${iface} si fuera "
+"necesario para su red. Hay dos formas de hacerlo:"
 
 #. Type: string
 #. Description
@@ -165,7 +171,9 @@ msgstr "Introduzca la clave de seguridad WEP para el dispositivo ${iface} si fue
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr "Si su clave WEP está en el formato «nnnn-nnnn-nn» o «nnnnnnnn», donde n es un número, simplemente introduzca el valor tal cual en este campo."
+msgstr ""
+"Si su clave WEP está en el formato «nnnn-nnnn-nn» o «nnnnnnnn», donde n es "
+"un número, simplemente introduzca el valor tal cual en este campo."
 
 #. Type: string
 #. Description
@@ -173,7 +181,9 @@ msgstr "Si su clave WEP está en el formato «nnnn-nnnn-nn» o «nnnnnnnn», don
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Si su clave WEP es una palabra de paso, introdúzcala poniendo «s:» como prefijo (sin las comillas dobles)"
+msgstr ""
+"Si su clave WEP es una palabra de paso, introdúzcala poniendo «s:» como "
+"prefijo (sin las comillas dobles)"
 
 #. Type: string
 #. Description
@@ -181,7 +191,9 @@ msgstr "Si su clave WEP es una palabra de paso, introdúzcala poniendo «s:» co
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Deje este campo en blanco si su red inalámbrica no está protegida con una clave WEP."
+msgstr ""
+"Deje este campo en blanco si su red inalámbrica no está protegida con una "
+"clave WEP."
 
 #. Type: error
 #. Description
@@ -195,7 +207,10 @@ msgstr "La clave WEP no es válida"
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr "La clave WEP «${wepkey}» no es válida. Por favor, lea las instrucciones de la próxima pantalla cuidadosamente para saber cómo introducir correctamente su clave WEP e inténtelo de nuevo."
+msgstr ""
+"La clave WEP «${wepkey}» no es válida. Por favor, lea las instrucciones de "
+"la próxima pantalla cuidadosamente para saber cómo introducir correctamente "
+"su clave WEP e inténtelo de nuevo."
 
 #. Type: error
 #. Description
@@ -209,7 +224,9 @@ msgstr "El identificador ESSID no es válido."
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr "El ESSID «${essid}» no es válido. Un ESSID sólo puede tener 32 caracteres, aunque pueden ser de cualquier tipo."
+msgstr ""
+"El ESSID «${essid}» no es válido. Un ESSID sólo puede tener 32 caracteres, "
+"aunque pueden ser de cualquier tipo."
 
 #. Type: string
 #. Description
@@ -516,9 +533,10 @@ msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. If you wish, you can retry."
+"No IP address was found during automatic network configuration with DHCP. "
+"DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "No se ha ofrecido ninguna dirección IP durante la configuración de la red "
 "por \n"
@@ -569,7 +587,10 @@ msgstr "Dirección IP malformada"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr "La dirección IP que ha introducido no tiene un formato correcto. Debería tener el formato x.x.x.x donde «x» es un valor numérico inferior a 255. Por favor, inténtelo de nuevo."
+msgstr ""
+"La dirección IP que ha introducido no tiene un formato correcto. Debería "
+"tener el formato x.x.x.x donde «x» es un valor numérico inferior a 255. Por "
+"favor, inténtelo de nuevo."
 
 #. Type: string
 #. Description
