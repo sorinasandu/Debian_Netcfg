@@ -9,6 +9,8 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Re-enable broadcast stuff in dhclient-script, fixing a Sparc (at least)
       regression.
     - Remove kill_dhcp_client prototype from netcfg.h because it's now static.
+    - Change newline + a space to just a newline to end some disable_dhcp
+      woes.
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
@@ -49,7 +51,7 @@ netcfg (0.71) UNRELEASED; urgency=low
         . Reorder state machine states
         . Move some functions around
 
- -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
+ -- Joshua Kwan <joshk@triplehelix.org>  Mon, 28 Jun 2004 20:10:13 -0700
 
 netcfg (0.70) unstable; urgency=medium
 
