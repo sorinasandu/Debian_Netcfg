@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-07 16:46+0200\n"
+"POT-Creation-Date: 2004-06-15 14:33-0700\n"
 "PO-Revision-Date: 2004-06-13 16:50+0200\n"
 "Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -163,7 +163,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
+msgstr ""
+"Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
 
 #. Type: error
 #. Description
@@ -553,11 +554,12 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
-"Automatsko podešavanje mreže nije uspjelo. Ovo može biti zbog sporog DHCP servera "
-"na mreži, tako da možete ponovo pokušati. Ako vaša mreža ne koristi DHCP za "
-"automatsku konfiguraciju, možete je podesiti ručno. Takođe, neki DHCP serveri "
-"zahtijevaju navođenje njihovog hostname, tako da možete odabrati da unesete "
-"takav hostname prije ponovnog pokušaja DHCP konfiguracije."
+"Automatsko podešavanje mreže nije uspjelo. Ovo može biti zbog sporog DHCP "
+"servera na mreži, tako da možete ponovo pokušati. Ako vaša mreža ne koristi "
+"DHCP za automatsku konfiguraciju, možete je podesiti ručno. Takođe, neki "
+"DHCP serveri zahtijevaju navođenje njihovog hostname, tako da možete "
+"odabrati da unesete takav hostname prije ponovnog pokušaja DHCP "
+"konfiguracije."
 
 #  Type: text
 #  Description
@@ -690,7 +692,8 @@ msgstr "Gateway adresa koju ste unijeli nije dostupna."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili "
 "gatewaya."
@@ -707,6 +710,8 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -732,4 +737,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
-

@@ -101,21 +101,18 @@ int main(int argc, char *argv[])
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
 	    else
 	    {
-              char* buf;
+              char buf[64] = { 0 };
               int ret;
-              size_t len = sizeof("mii-diag -s ") + strlen (interface) + 1;
 
-              buf = malloc(len);
-              snprintf(buf, len, "mii-diag -s %s", interface);
+              snprintf(buf, 64, "mii-diag -s %s", interface);
 
               interface_up(interface);
-	      di_info("executing: %s", buf);
+              usleep(1500);
+	      di_info("Executing: %s", buf);
 	      ret = di_exec_shell_log(buf);
               interface_down(interface);
 
 	      ret = di_exec_mangle_status(ret);
-
-              free(buf);
 
               di_info("link status for %s is: %s (%d)", interface,
                   (ret == 1) ? "unknown" :

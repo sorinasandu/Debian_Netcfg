@@ -1,4 +1,4 @@
-netcfg (0.69) UNRELEASED; urgency=low
+netcfg (0.69) unstable; urgency=medium
 
   * Sylvain Ferriol
     - fix error message during plip config. (Closes: #253361)
@@ -12,10 +12,19 @@ netcfg (0.69) UNRELEASED; urgency=low
       set to every time we start, instead of hardcoding true. Defaults
       to true, so default behavior has not changed. (Closes: #248147)
     - Fix /etc/hosts writing after much deliberation. (Closes: #247734)
+    - Use a static buffer for mii-diag call.
+    - Sleep for 1.5 seconds before mii-diag, because slow network cards
+      just take that long to answer. And for those that take more that's
+      just too bad.
   * Bastian Blank
     - Readd postinst files for netcfg-dhcp and netcfg-static.
+  * Updated translations:
+    - Bosnian (bs.po) by Safir Šećerović
+    - German (de.po) by Alwin Meschede
+    - Hebrew (he.po) by Lior Kaplan
+    - Polish (pl.po) by Bartosz Fenski
 
- -- Bastian Blank <waldi@debian.org>  Sat, 12 Jun 2004 20:47:11 +0200
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 15 Jun 2004 14:34:25 -0700
 
 netcfg (0.68) unstable; urgency=medium
 
