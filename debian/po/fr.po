@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.35\n"
+"Project-Id-Version: netcfg 0.41\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-17 09:46+0100\n"
+"POT-Creation-Date: 2004-01-09 05:36-0700\n"
+"PO-Revision-Date: 2004-01-10 09:02+0100\n"
 "Last-Translator: Philippe Batailler <pbatailler@teaser.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,9 +86,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "Aucune interface réseau n'a été détectée"
+msgstr "Interface réseau principale :"
 
 #. Type: select
 #. Description
@@ -97,6 +96,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"Votre système possède plusieurs interfaces réseau. Choisissez celle que vous "
+"voulez utiliser comme interface principale pour l'installation de Debian."
 
 #. Type: error
 #. Description
@@ -341,6 +342,8 @@ msgstr "Les informations suivantes sont-elles correctes ?"
 msgid "Currently configured network parameters:"
 msgstr "Paramètres réseau actuels :"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -518,6 +521,8 @@ msgstr ""
 "Il se peut que vous ayez mal indiqué l'adresse IP, le masque-réseau ou la "
 "passerelle."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
