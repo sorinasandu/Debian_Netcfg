@@ -73,6 +73,9 @@ char* essid = NULL;
 /* IW socket for global use - init in main */
 int wfd = 0;
 
+/* If 1, ask all questions at priority high. */
+int full_configuration = 0;
+
 int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
@@ -1238,7 +1241,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   ret = my_debconf_input (client, "high", "netcfg/wireless_wep", &rv);
 
   if (ret == 30)
-    return ret;
+    return GO_BACK;
 
   if (empty_str(rv))
   {
