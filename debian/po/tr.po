@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-30 01:49+0300\n"
+"PO-Revision-Date: 2004-07-02 02:46+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -549,6 +549,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Ağınız büyük bir olasılıkla DHCP protokolü kullanmıyor.  DHCP sunucusunun "
+"yavaşlığı veya bir kısım ağ donanımının doğru şekilde çalışmıyor olması da"
+"ihtimal dahilinde."
 
 #. Type: boolean
 #. Description
@@ -559,7 +562,6 @@ msgstr "Öntanımlı bir yönlendirici olmadan devam edilsin mi?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -569,9 +571,10 @@ msgid ""
 msgstr ""
 "Otomatik ağ yapılandırması başarıyla sonuçlandı.  Bununla beraber herhangi "
 "bir öntanımlı yönlendirici ayarlanmamış; yani sistem İnternet üzerindeki "
-"makinelerle nasıl haberleşeceğini bilmiyor.  Bu durum, gerekli bütün Debian "
-"paketleri yerel ağda veya CD-ROM gibi bir yerel ortamda bulunmadıkça "
-"kuruluma devam etmenizi imkansız hale getirecektir."
+"makinelerle nasıl haberleşeceğini bilmiyor.  Bu durum, resmi Debian CD'lerinin "
+"birincisine veya ağ üzerinden kurulum yapan bir 'Netinst' CD'sine sahip değilseniz "
+"veya gerekli bütün paketleri yerel ağda bulundurmuyorsanız kuruluma devam etmenizi "
+"imkansız hale getirecektir."
 
 #. Type: boolean
 #. Description
@@ -580,6 +583,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Eğer emin değilseniz, bir öntanımlı yönlendiricinin yokluğunda kuruluma devam "
+"etmemelisiniz.  Bu sorunla ilgili olarak yerel ağ yöneticinizle irtibata geçin."
 
 #. Type: text
 #. Description
