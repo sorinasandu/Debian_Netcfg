@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-04-15 06:37+0100\n"
+"PO-Revision-Date: 2004-05-13 18:55+0200\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Pour configurer le réseau, on peut utiliser DHCP ou fournir soi-même toutes "
 "les informations. Si vous choisissez DHCP et si l'installateur ne réussit "
 "pas à configurer correctement le réseau à partir d'un serveur DHCP, vous "
-"pourrez configurer manuellement votre réseau après la tentative DHCP."
+"pourrez configurer vous-même le réseau après la tentative DHCP."
 
 #. Type: string
 #. Description
@@ -125,7 +125,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "Si nécessaire, veuillez indiquer la clé de sécurité WEP pour le périphérique "
-"sans fil ${iface}. Vous pouvez l'indiquer de deux manières différentes :"
+"sans fil ${iface}. Il y a deux façons de le faire :"
 
 #. Type: string
 #. Description
@@ -278,7 +278,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Vous devez sans doute charger un module spécifique à votre carte réseau - si "
-"vous en avez un. Pour cela, revenez à l'étape de détection du matériel "
+"vous en avez une. Pour cela, revenez à l'étape de détection du matériel "
 "réseau."
 
 #. Type: select
@@ -304,7 +304,7 @@ msgstr ""
 "Les réseaux sans fil fonctionnent en mode « infrastructure » (« managed ») "
 "ou en mode « ad-hoc ». Si vous utilisez un point d'accès matériel, votre "
 "réseau est de type « infrastructure ». Si un autre ordinateur fait office de "
-"point d'accès, le réseau peut être de type « ad-hoc »."
+"point d'accès, le réseau est de type « ad-hoc »."
 
 #. Type: text
 #. Description
@@ -487,9 +487,8 @@ msgstr "Cette opération peut prendre quelques minutes."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Configuration manuelle du réseau"
+msgstr "La configuration automatique a réussi"
 
 #. Type: error
 #. Description
@@ -512,43 +511,38 @@ msgstr "Le processus de configuration DHCP va être interrompu."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Configuration manuelle du réseau"
+msgstr "Réessayer la configuration automatique du réseau"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Configuration automatique du réseau (DHCP)"
+msgstr "Réessayer la configuration automatique du réseau avec un hôte DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Configurer le réseau"
+msgstr "Configurer vous-même le réseau"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Configurer le réseau"
+msgstr "Ne pas configurer le réseau maintenant"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuration manuelle du réseau"
+msgstr "Méthode pour la configuration du réseau :"
 
 #. Type: select
 #. Description
@@ -560,13 +554,17 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"La configuration automatique du réseau a échoué. Cela est généralement dû à "
+"la lenteur du serveur DHCP et il est judicieux de réessayer. Si votre réseau "
+"n'utilise pas DHCP pour la configuration, vous pouvez le configurer vous-"
+"même. Certains serveurs DHCP demandent un hôte DHCP précis, vous pouvez "
+"l'indiquer avant de réessayer la configuration automatique."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configurer le réseau"
+msgstr "Reconfigurer le réseau sans fil"
 
 #. Type: text
 #. Description
