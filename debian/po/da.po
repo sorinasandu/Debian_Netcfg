@@ -1,3 +1,4 @@
+# translation of da.po to 
 # translation of debian-installer_tools_netcfg_da.po to Danish
 # translation of da.po to Danish
 # This file is distributed under the same license as the PACKAGE package.
@@ -5,15 +6,16 @@
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Claus Hindsgaul <claus_h@image.dk>, 2003, 2004.
+# Frederik Dannemare <frederik@dannemare.net>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-07-10 23:44+0200\n"
-"Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"PO-Revision-Date: 2004-07-25 17:25+0200\n"
+"Last-Translator: Frederik Dannemare <frederik@dannemare.net>\n"
+"Language-Team:  <debian-l10n-danish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,7 +60,7 @@ msgid ""
 msgstr ""
 "Domænenavnet er den del af din internetadresse, der er til højre for dit "
 "maskinnavn. Det ender oftest på .com, .net, .edu, .org eller .dk. Hvis du er "
-"på et hjemmenetværk kan du selv finde på et, men sørg for at alle dine "
+"på et hjemmenetværk, kan du selv finde på et, men sørg for at alle dine "
 "computere bruger samme domænenavn."
 
 #. Type: string
@@ -102,7 +104,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Trådlås ESSID til ${iface}:"
+msgstr "Trådløs ESSID til ${iface}:"
 
 #. Type: string
 #. Description
@@ -140,7 +142,7 @@ msgid ""
 "number, just enter it as it is into this field."
 msgstr ""
 "Din WEB-nøgle har et af formaterne 'nnnn-nnnn-nn' eller 'nnnnnnnn', hvor n "
-"er tal. Skriv det blot som det er i dette felt."
+"er et tal. Skriv det blot, som det er, i dette felt."
 
 #. Type: string
 #. Description
@@ -149,7 +151,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Din WEP-nøgle er angivet som et adgangskodeord. Skriv \"s:\" foran (uden "
+"Hvis din WEP-nøgles format er udformet som en adgangskode, skriv da \"s:\" foran WEP-nøglen (uden "
 "gåseøjnene)."
 
 #. Type: string
@@ -176,7 +178,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "WEP-nøglen \"${webkey}\" er ugyldig. Læs omhyggeligt instruktionerne på "
-"næste side om hvordan du angiver din WEP-nøgle korrekt, og prøv igen."
+"næste side, om hvordan du angiver din WEP-nøgle korrekt, og prøv igen."
 
 #. Type: error
 #. Description
@@ -256,7 +258,7 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Der opstod en fejl og netværks-opsætningen er blevet afbrudt. Du kan forsøge "
+"Der opstod en fejl, og netværksopsætningen er blevet afbrudt. Du kan forsøge "
 "igen fra installationens hovedmenu."
 
 #. Type: error
@@ -452,7 +454,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr " De fleste andre brugere kan blot lade feltet være tomt."
+msgstr "De fleste andre brugere kan blot lade feltet være tomt."
 
 #. Type: text
 #. Description
@@ -464,7 +466,7 @@ msgstr "Sætter netværket op via DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Det kan tage nogen tid."
+msgstr "Dette kan tage nogen tid."
 
 #. Type: text
 #. Description
@@ -482,8 +484,7 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -495,13 +496,13 @@ msgstr "Opsætningen af DHCP afbrydes."
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Forsøg automatisk netværksopsætningen igen"
+msgstr "Forsøg automatisk netværksopsætning igen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Forsøg automatisk netværksopsætningen igen med et DHCP-værtsnavn"
+msgstr "Forsøg automatisk netværksopsætning igen med et DHCP-værtsnavn"
 
 #. Type: select
 #. Choices
@@ -538,10 +539,10 @@ msgid ""
 "with a hostname that you provide."
 msgstr ""
 "Her kan du vælge at gentage forsøget på automatisk netværksopsætning med "
-"DHCP (hvilket muligvis vil virke hvis din DHCP-server er lang tid om at "
+"DHCP (hvilket muligvis vil virke, hvis din DHCP-server er lang tid om at "
 "svare) eller sætte netværket op manuelt. Visse DHCP-servere kræver et DHCP-"
 "værtsnavn fra klienten, så du kan også prøve at forsøge DHCP-opsætningen "
-"igen med et værtsnavn, du angiver."
+"igen med et værtsnavn, som du angiver."
 
 #. Type: note
 #. Description
@@ -556,8 +557,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Dit netværk benytter sandsynligvis ikke DHCP-protokollen. Alternativt kan du "
-"DHCP-server være langsom eller det netværksudstyr ikke fungere ordentligt."
+"Dit netværk benytter sandsynligvis ikke DHCP-protokollen. Alternativt kan det skyldes, at din "
+"DHCP-server er langsom, eller noget netværksudstyr fungerer muligvis ikke ordentligt."
 
 #. Type: boolean
 #. Description
@@ -576,10 +577,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Den automatiske netværksopsætning lykkedes. Der blev dog ikke angivet nogen "
-"standardrute (d\"efault route\"), så dit system ved ikke hvordan det skal "
+"standardrute (\"default route\"), så dit system ved ikke, hvordan det skal "
 "kommunikere med andre maskiner på internettet. Dette vil gøre det umuligt at "
-"fortsætte installationen medmindre du har den første af de officielle Debian "
-"cdrommer, en \"Netinst\"-cdrom eller har pakkerne liggende på det lokale "
+"fortsætte installationen, medmindre du har den første af de officielle Debian "
+"cdrommer, en \"Netinst\"-cdrom eller har de nødvendige pakker liggende på det lokale "
 "netværk."
 
 #. Type: boolean
@@ -655,7 +656,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Punkt-til-punkt-adressen bruges til at definere den anden ende af et punkt-"
-"til-punkt-netværk. Spørg din netværksadministrator hvis du ikke kender "
+"til-punkt-netværk. Spørg din netværksadministrator, hvis du ikke kender "
 "værdien. Netmasken skal angives som fire tal adskilt af punktummer."
 
 #. Type: string
@@ -672,8 +673,8 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmasken bruges til at afgøre hvilke maskiner der er lokale på dit netværk. "
-"Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
+"Netmasken bruges til at afgøre hvilke maskiner, der er lokale på dit netværk. "
+"Spørg din netværksadministrator, hvis du ikke kender værdien. Netmasken skal "
 "angives som fire tal adskilt af punktummer."
 
 #. Type: string
@@ -710,13 +711,12 @@ msgstr "Kunne ikke nå gateway"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Den angivne gateway-adresse kan ikke nåes."
+msgstr "Den angivne gateway-adresse kan ikke nås."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -756,98 +756,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Sæt nætværket op med statisk adressering"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamisk netværksopsætning (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " netkort        = ${interface}\n"
-#~ " maskinnavn     = ${hostname}\n"
-#~ " domæne         = ${domain}\n"
-#~ " dhcp-værtsnav  = ${dhcp_hostname}\n"
-#~ " navneservere   = ${nameservers}"
-
-#~ msgid "Next network configuration step:"
-#~ msgstr "Næste trin i netværksopsætningen:"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet eller Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Vil du forsøge DHCP-netværksopsætningen igen?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Det blev ikke fundet nogen IP-adresse under DHCP-netværksopsætningen. "
-#~ "DHCP-servere kan nogen gange være meget langsomme. Hvis du vil, kan du "
-#~ "prøve igen."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamisk adressering (DHCP), statisk adressering (manuel)"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Fejl under aktivering af netværket"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Der skete en fejl under aktivering af netværket."
-
-#~ msgid "Interface:"
-#~ msgstr "Netkort:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Vælg det netkort, du vil sætte op. De allerede fundne netkort på dit "
-#~ "system er vist herunder. Vælg dit primære netkorts type. Dette netkort "
-#~ "vil blive brugt til at installere Debiansystemet (via NFS eller HTTP)."
-
-#~ msgid "DHCP Network Configuration"
-#~ msgstr "DHCP-netværksopsætning"
-
-#~ msgid "Choose the domain name."
-#~ msgstr "Vælg domænenavn."
-
-#~ msgid "Choose the DNS Server Addresses"
-#~ msgstr "Vælg adressen på DNS-serveren"
-
-#~ msgid "Choose an interface."
-#~ msgstr "Vælg netkort"
-
-#~ msgid "An error occurred."
-#~ msgstr "Fejl!"
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "Noget gik galt, da jeg forsøgte at aktivere dit netværk."
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "Angiv dit systems maskinnavn."
-
-#~ msgid "Feel free to retry."
-#~ msgstr "Du kan evt. forsøge igen."
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "Hvad er dit dhcp-værtsnavn?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "Fandt ingen dhcp-klient. Kan ikke fortsætte."
-
-#~ msgid ""
-#~ "This may take some time.  It shouldn't take more than a minute or two."
-#~ msgstr ""
-#~ "Det kan tage nogen tid. Det bør dog ikke tage mere end et par minutter."
-
-#~ msgid "${ifchoices}"
-#~ msgstr "${ifchoices}"
-
-#~ msgid "debian"
-#~ msgstr "debian"
