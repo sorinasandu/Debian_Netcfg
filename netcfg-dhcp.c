@@ -44,6 +44,7 @@ enum
 {
   PUMP,
   DHCLIENT,
+  UDHCPC
 }
 dhcp_client_choices;
 
@@ -91,26 +92,10 @@ netcfg_write_dhcp ()
       fprintf (fp,
 	       "\n# This entry was created during the Debian installation\n");
       fprintf (fp, "iface %s inet dhcp\n", interface);
+      if (dhcp_hostname)
+	fprintf (fp, "\thostname\t%s\n", dhcp_hostname);
       fclose (fp);
     }
-  if (dhcp_client == DHCLIENT)
-    {
-
-      if (dhcp_hostname)
-	if ((fp = file_open (DHCLIENT_FILE)))
-	  {
-	    fprintf (fp,
-		     "\n# dhclient configuration: created during the Debian installation\n\
-	    	      interface \"%s\" {\nsend host-name \"%s\";\n}\n",
-		     interface, dhcp_hostname);
-	    fclose (fp);
-	  }
-    }
-  /* else if (dhcp_client == PUMP) {
-     nothing to do?
-     }
-   */
-
 }
 
 
@@ -122,15 +107,26 @@ netcfg_activate_dhcp ()
   execlog ("/sbin/ifconfig lo 127.0.0.1");
   ptr = buf;
 
-  if (dhcp_client == PUMP)
+  switch (dhcp_client)
     {
-      ptr += snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
-      if (dhcp_hostname)
-	ptr +=
-	  snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
+      case PUMP:
+	ptr += snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
+	if (dhcp_hostname)
+	  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s",
+			   dhcp_hostname);
+	break;
+
+      case DHCLIENT:
+	ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient %s", interface);
+	break;
+
+      case UDHCPC:
+	ptr += snprintf (buf, sizeof (buf), "/sbin/udhcpc -i %s -n", interface);
+	if (dhcp_hostname)
+	  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " -H %s",
+			   dhcp_hostname);
+	break;
     }
-  else				/* dhcp_client == DHCLIENT */
-    ptr += snprintf (buf, sizeof (buf), "/sbin/dhclient %s", interface);
 
   if (execlog (buf))
     netcfg_die (client);
@@ -152,6 +148,8 @@ main (int argc, char *argv[])
     dhcp_client = DHCLIENT;
   else if (stat ("/sbin/pump", &buf) == 0)
     dhcp_client = PUMP;
+  else if (stat ("/sbin/udhcpc", &buf) == 0)
+    dhcp_client = UDHCPC;
   else
     {
       client->command (client, "input", "critical", "netcfg/no_dhcp_client",

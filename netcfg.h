@@ -12,7 +12,6 @@
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCPCD_FILE     "/etc/dhcpc/config"
-#define DHCLIENT_FILE	"/etc/dhclient.conf"
 #define DHCLIENT_DIR	"/var/dhcp"
 
 
