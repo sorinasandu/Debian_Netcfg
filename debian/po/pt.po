@@ -1,10 +1,10 @@
 # Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.63\n"
+"Project-Id-Version: netcfg 0.64\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-04-15 23:24+0000\n"
+"PO-Revision-Date: 2004-05-13 18:30+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -198,8 +198,7 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr ""
-"Por favor, introduza o nome do computador (hostname) para este sistema."
+msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -443,8 +442,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
-"A maioria dos outros utilizadores pode somente deixar este campo em branco."
+msgstr "A maioria dos outros utilizadores pode deixar este campo vazio."
 
 #. Type: boolean
 #. Description
@@ -489,9 +487,8 @@ msgstr "Este processo pode demorar algum tempo."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Configuração de rede estática"
+msgstr "A configuração automática da rede terminou!"
 
 #. Type: error
 #. Description
@@ -516,43 +513,38 @@ msgstr "O processo de configuração DHCP vai ser terminado."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Configuração de rede estática"
+msgstr "Tentar de novo a autoconfiguração da rede"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Configuração dinâmica de rede (DHCP)"
+msgstr "Tentar de novo a autoconfiguração da rede com um hostname DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Configurar a rede"
+msgstr "Configurar a rede manualmente"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Configurar a rede"
+msgstr "Não configurar a rede agora"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Configuração de Rede"
+msgstr "Método de configuração de rede:"
 
 #. Type: select
 #. Description
@@ -564,13 +556,17 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Falhou a autoconfiguração da rede. Isto pode ser devido a um servidor DHCP "
+"lento na rede, pode tentar de novo. Se a sua rede não utiliza DHCP para "
+"autoconfiguração, pode em vez disso configura-la manualmente. Além disso, "
+"alguns servidores DHCP necessitam de um hostname específico, por isso você "
+"pode introduzir o tal hostname antes de tentar de novo o DHCP."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Configurar a rede"
+msgstr "Reconfigurar a rede wireless"
 
 #. Type: text
 #. Description
