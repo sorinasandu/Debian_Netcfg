@@ -1,10 +1,13 @@
 netcfg (0.69) UNRELEASED; urgency=low
 
   * Christian Perrier
-    - Corrected reference to the pppconfig package. Closes:#253086
+    - Remove trailing exclamation mark from netcfg/dhcp_success_note
     - Run debconf-updatepo and unfuzzy templates for removed exclamation mark
+  * Joshua Kwan
+    - Corrected reference to the pppconfig package. Closes:#253086
+    - killall.sh: add grep -v grep
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Mon,  7 Jun 2004 11:48:41 +0200
+ -- Joshua Kwan <joshk@triplehelix.org>  Thu, 10 Jun 2004 21:51:33 -0700
 
 netcfg (0.68) unstable; urgency=medium
 
