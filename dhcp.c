@@ -67,6 +67,10 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
 
 /*
  * Signal handler for DHCP client child
+ *
+ * When the child exits (either because it failed to obtain a
+ * lease or because it succeeded and daemonized itself), this
+ * gets the child's exit status and sets dhcp_pid to -1
  */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
 {
@@ -84,8 +88,7 @@ static void dhcp_client_sigchld(int sig __attribute__ ((unused)))
  * This function will start whichever DHCP client is available
  * using the provided DHCP hostname, if supplied
  *
- * The client's PID is stored in dhcp_pid.  Once the client dies
- * dhcp_pid should be set to -1.
+ * The client's PID is stored in dhcp_pid.
  */
 int start_dhcp_client (struct debconfclient *client, char* dhostname)
 {
@@ -175,9 +178,11 @@ static int kill_dhcp_client(void)
  * and return 0 if a lease is known to have been acquired,
  * 1 otherwise.
  *
- * The client should be run such that it dies once a lease is acquired.
+ * The client should be run such that it exits once a lease is acquired
+ * (although its child continues to run as a daemon)
  *
- * This function will NOT kill the DHCP client after an unsuccessful poll. 
+ * This function will NOT kill the child if time runs out.  This allows
+ * the user to choose to wait longer for the lease to be acquired.
  */
 int poll_dhcp_client (struct debconfclient *client)
 {
@@ -198,11 +203,7 @@ int poll_dhcp_client (struct debconfclient *client)
     seconds_slept++; /* Not exact but close enough */
     debconf_progress_step(client, 1);
   }
-
-  /*
-   * Either the client exited or time ran out, in which case
-   * we leave the DHCP client running
-   */
+  /* Either the client exited or time ran out */
 
   /* got a lease? display a success message */
   if (!(dhcp_pid > 0) && (dhcp_exit_status == 0))
@@ -299,7 +300,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         else
         {
           /* got a lease */
-          /* That means that the DHCP client is no longer running */
+          /*
+           * That means that the DHCP client has exited, although its
+           * child is still running as a daemon
+           */
 
           /*
            * Set defaults for domain name and hostname
@@ -331,7 +335,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           /*
            * Default to the hostname returned via DHCP, if any,
            * otherwise to the requested DHCP hostname
-           * otherwise to the hostname found in DNS for the IP address of the interface
+           * otherwise to the hostname found in DNS for the IP address
+           * of the interface
            */
           if (
                gethostname(buf, sizeof(buf)) == 0
@@ -383,7 +388,6 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             kill_dhcp_client();
             exit(10); /* XXX */
           case REPLY_RETRY_WITH_HOSTNAME:
-            kill_dhcp_client();
             state = DHCP_HOST_NAME;
             break;
           case REPLY_CONFIGURE_MANUALLY:
@@ -399,7 +403,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             if (dhcp_pid > 0)
               state = POLL;
             else
+            {
+              kill_dhcp_client();
               state = START;
+            }
             break;
           case REPLY_RECONFIGURE_WIFI:
             {
@@ -423,19 +430,23 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                   case DONE:
                     if (dhcp_pid > 0)
                       state = POLL;
-		    else
+                    else
+                    {
+                      kill_dhcp_client();
                       state = START;
+                    }
                     break;
                 }
                 if (wifistate == DONE || wifistate == ABORT)
                   break;
               }
             }
-	    break;
+            break;
         }
         break;
 
       case DHCP_HOST_NAME:
+        /* DHCP client may still be running */
         if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0))
           state = ASK_RETRY;
         else
@@ -445,6 +456,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             free(dhostname);
             dhostname = NULL;
           }
+          kill_dhcp_client();
           state = START;
         }
         break;
@@ -464,17 +476,17 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         {
 #if 0
           /*
-	   * If we haven't already created the DHCLIENT_CONF file
-	   * (by calling start_dhcp_client() with dhostname set)
-	   * then set up that file now with hostname as the
-	   * DHCP hostname to request.  See #236533.
-	   */
-	  /*
-	   * I don't like this because it changes the DHCLIENT_CONF
-	   * file from what it was when dhclient successfully obtained
-	   * a lease.  Furthermore, the file gets written even if the
-	   * client is pump.  --jdthood
-	   */
+           * If we haven't already created the DHCLIENT_CONF file
+           * (by calling start_dhcp_client() with dhostname set)
+           * then set up that file now with hostname as the
+           * DHCP hostname to request.  See #236533.
+           */
+          /*
+           * I don't like this because it changes the DHCLIENT_CONF
+           * file from what it was when dhclient successfully obtained
+           * a lease.  Furthermore, the file gets written even if the
+           * client is pump.  --jdthood
+           */
           if (!dhostname)
           {
             FILE* dc = NULL;
