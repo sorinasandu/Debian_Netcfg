@@ -360,7 +360,8 @@ netcfg_get_common (struct debconfclient *client, char **interface,
       free (*hostname);
       *hostname = NULL;
     }
-  *hostname = strdup (debconf_input (client, "medium", "netcfg/get_hostname"));
+  *hostname =
+    strdup (debconf_input (client, "medium", "netcfg/get_hostname"));
 
   if (*domain)
     {
@@ -372,37 +373,38 @@ netcfg_get_common (struct debconfclient *client, char **interface,
 
 
   if (*nameservers)
-  {
-      free(*nameservers);
-  }
+    {
+      free (*nameservers);
+    }
   *nameservers = NULL;
   if (ptr = debconf_input (client, "medium", "netcfg/get_nameservers"))
-      *nameservers = strdup(ptr); 
-  
+    *nameservers = strdup (ptr);
+
 }
 
 void
-netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]){
+netcfg_nameservers_to_array (char *nameservers, u_int32_t array[])
+{
 
-    char *save, *ptr, *ns;
-    
-    if (nameservers)
-      {
-	  save = ptr = strdup (ptr);
-	  ns = strtok_r (ptr, " ", &ptr);
-	  dot2num (&array[0], ns);
-	  
-	  ns = strtok_r (NULL, " ", &ptr);
-	  dot2num (&array[1], ns);
-	  
-	  ns = strtok_r (NULL, " ", &ptr);
-	  dot2num (&array[2], ns);
-	 
-	  array[3]=0;
-	  free (save);
-      }
-      else
-	  array[0] = 0;
+  char *save, *ptr, *ns;
+
+  if (nameservers)
+    {
+      save = ptr = strdup (ptr);
+      ns = strtok_r (ptr, " ", &ptr);
+      dot2num (&array[0], ns);
+
+      ns = strtok_r (NULL, " ", &ptr);
+      dot2num (&array[1], ns);
+
+      ns = strtok_r (NULL, " ", &ptr);
+      dot2num (&array[2], ns);
+
+      array[3] = 0;
+      free (save);
+    }
+  else
+    array[0] = 0;
 
 }
 

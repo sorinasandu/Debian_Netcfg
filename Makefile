@@ -1,15 +1,6 @@
-# this is the size of the non-shared udebs
-#-rw-r--r--    1 davidw   root         7114 Jan 16 20:49 netcfg-dhcp_0.04_i386.udeb
-#-rw-r--r--    1 davidw   root         7556 Jan 16 20:49 netcfg-static_0.04_i386.udeb
-
-
-
 ifndef TARGETS
 TARGETS=netcfg-dhcp netcfg-static
 endif
-DHCP_CLIENT=-DDHCLIENT
-#-DPUMP
-#-DDHCPCD
 
 MAJOR=0
 MINOR=1
@@ -32,7 +23,7 @@ STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 all: $(TARGETS)
 #$(LIBS)
 netcfg-dhcp netcfg-static: netcfg-dhcp.c utils.o netcfg.o
-	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) $(DHCP_CLIENT) utils.o netcfg.o
+	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) utils.o netcfg.o
 	$(STRIP) $@
 	size $@ 
 

@@ -147,27 +147,29 @@ main (int argc, char *argv[])
 {
   int finished = 0;
   char *ptr;
-  char *nameservers=NULL;
+  char *nameservers = NULL;
   client = debconfclient_new ();
   client->command (client, "title", "Static Network Configuration", NULL);
 
 
   do
     {
-      netcfg_get_common (client, &interface, &hostname, &domain, &nameservers);
+      netcfg_get_common (client, &interface, &hostname, &domain,
+			 &nameservers);
 
       client->command (client, "subst", "netcfg/confirm_static", "interface",
-	      interface, NULL);
-      
+		       interface, NULL);
+
       client->command (client, "subst", "netcfg/confirm_static",
 		       "hostname", hostname, NULL);
-      
+
       client->command (client, "subst", "netcfg/confirm_static", "domain",
 		       (domain ? domain : "<none>"), NULL);
-      
+
       client->command (client, "subst", "netcfg/confirm_static",
-		       "nameservers", (nameservers ? nameservers : "<none>") , NULL);
-      netcfg_nameservers_to_array(nameservers, nameserver_array);
+		       "nameservers", (nameservers ? nameservers : "<none>"),
+		       NULL);
+      netcfg_nameservers_to_array (nameservers, nameserver_array);
 
       netcfg_get_static ();
 

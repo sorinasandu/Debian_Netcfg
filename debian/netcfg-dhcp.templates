@@ -21,3 +21,8 @@ Type: note
 Description: I will now configure the network.
  This may take some time.  It shouldn't take more than a minute or two.
 
+Template: netcfg/no_dhcp_client
+Type: note
+Description: No dhcp client found. I cannot continue.
+ This package requires pump or dhcp-client.
+
