@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_tools_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-03-25 05:44+0100\n"
+"PO-Revision-Date: 2004-04-12 11:33+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,6 @@ msgstr "Adresy DNS serverov:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
@@ -83,10 +82,11 @@ msgid ""
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
 msgstr ""
-"Zadajte IP adresy (nie názvy) maximálne troch DNS serverov, oddelených "
-"medzerami. Nepou¾ívajte èiarky. Prvý server v zozname bude prvým, ktorý bude "
-"pou¾itý pre DNS po¾iadavky. Ak nechcete pou¾íva» ¾iaden DNS server, nechajte "
-"toto pole prázdne."
+"Vami zadané DNS servery sa pou¾ijú na zis»ovanie mien a názvov poèítaèov "
+"v Internete. Zadajte IP adresy (nie názvy) maximálne troch DNS serverov, "
+"oddelených medzerami. Nepou¾ívajte èiarky. Prvý server v zozname bude "
+"prvým, ktorý bude pou¾itý pre DNS po¾iadavky. Ak nechcete pou¾íva» ¾iaden "
+"DNS server, nechajte toto pole prázdne."
 
 #. Type: select
 #. Description
@@ -317,15 +317,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Statické nastavenie siete"
+msgstr "Nastavenie bezdrôtovej siete"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Hµadajú sa bezdrôtové prístupové body ..."
 
 #. Type: text
 #. Description
