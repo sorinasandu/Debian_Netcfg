@@ -1,27 +1,17 @@
-#    Chinese (Simplified) translation for netcfg
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Chinese messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-31 21:51-0700\n"
+"POT-Creation-Date: 2004-09-01 09:36+0200\n"
 "PO-Revision-Date: 2004-08-28 03:11+1200\n"
-"Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
-"Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
+"Last-Translator:  Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
+"Language-Team:  Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
@@ -707,8 +697,6 @@ msgstr "这些信息正确吗？"
 msgid "Currently configured network parameters:"
 msgstr "当前配置的网络参数："
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -731,64 +719,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
-
-#~ msgid "Configure the network statically?"
-#~ msgstr "进行静态网络设置吗？"
-
-#~ msgid ""
-#~ "${IFACE} does not seem to be connected to any sort of network. This could "
-#~ "be due to a missing network cable or network adapter malfunction. You can "
-#~ "either forego configuring the network until you reboot into Debian and "
-#~ "use the etherconf utility, or configure the network statically. You can "
-#~ "also go back and choose a different interface."
-#~ msgstr ""
-#~ "${IFACE} 并未连接到任何网络。这可能是由网线脱落或网卡故障造成的。您在此可"
-#~ "以不配置网络，等到重启进入 Debian 后再使用 etherconf 工具进行设定，或者进"
-#~ "行静态网络设置。当然，您也可以返回并选择其它的网络接口。"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "网络设置"
-
-#~ msgid ""
-#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
-#~ "or your network simply not being set up for DHCP."
-#~ msgstr ""
-#~ "导致失败的原因可能是 DHCP 服务器速度太慢、网络设备故障、或者是您的网络根本"
-#~ "就没有配置 DHCP。"
-
-#~ msgid ""
-#~ "If you are unsure then you can continue and come back to the network "
-#~ "configuration step later if necessary."
-#~ msgstr ""
-#~ "如果不清楚该如何选择，您也可以继续安装进程，在需要的时候再返回网络配置步"
-#~ "骤。"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "动态网络配置(DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " 接口           = ${interface}\n"
-#~ " 主机名         = ${hostname}\n"
-#~ " 域             = ${domain}\n"
-#~ " dhcp 主机名    = ${dhcp_hostname}\n"
-#~ " 域名服务器     = ${nameservers}"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC 卡(PCMCIA)以太网或令牌环网"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "要重试 DHCP 网络配置吗？"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "在 DHCP 网络配置过程中没有找到 IP 地址。DHCP 服务器有时非常慢，如果您希"
-#~ "望，可以重试。"
