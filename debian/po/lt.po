@@ -1,20 +1,21 @@
-# Lithuanian messages for netcfg.
-# Copyright (C) 2003 Free Software Foundation, Inc.
+# translation of netcfg.po to Lithuanian
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as debian-installer.
-# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2003
-# 
-# 
+# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2003, 2004.
+#
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.42\n"
+"Project-Id-Version: netcfg 0.45\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-21 15:04-0500\n"
-"PO-Revision-Date: 2004-01-14 23:01+0200\n"
+"PO-Revision-Date: 2004-02-22 14:25+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. Type: select
 #. Choices
@@ -38,11 +39,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Tinklas gali būti konfiguruojamas su DHCP arba įvedant visą informaciją "
-"rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegėjas, po bandymo "
+"Tinklas gali būti konfigūruojamas su DHCP arba įvedant visą informaciją "
+"rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis, po bandymo "
 "konfigūruoti su DHCP, negalės gauti veikiančios konfigūracijos iš DHCP "
-"serverio jūsų tinkle, jums bus pasiūlyta konfigūruoti jūsų tinklą rankiniu "
-"būdu.Jei abejojate,pasirinkite DHCP."
+"serverio Jūsų tinkle, Jums bus pasiūlyta konfigūruoti Jūsų tinklą rankiniu "
+"būdu.Jei abejojate, pasirinkite DHCP."
 
 #. Type: string
 #. Description
@@ -80,7 +81,7 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Prašau įvesti iki 3-jų serverių IP adresus (ne kompiuterių vardus), "
-"atskirdami tarpais. Nenaudokite kablelių. Pirmasis serveris sąrašę bus "
+"atskirdami tarpais. Nenaudokite kablelių. Pirmasis serveris sąraše bus "
 "apklausiamas pirmuoju. Jei Jūs nenorite naudoti jokio serverio, tai palikite "
 "šį lauką tuščią."
 
@@ -164,7 +165,7 @@ msgid ""
 "may retry it from the installation main menu."
 msgstr ""
 "Įvyko klaida ir tinklo konfigūravimo procesas nutrauktas. Jūs galite "
-"pakartoti ·konfigūravimą iš įdiegėjo pagrindinio meniu."
+"pakartoti konfigūravimą iš įdiegėjo pagrindinio meniu."
 
 #. Type: error
 #. Description
@@ -178,8 +179,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -189,7 +189,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Jums gali tekti įkelti specialų modulį Jūsų tinklo plokštei, jei Jūs tikrai "
-"ją turite. ·Tuo tikslu, grįžkite atgal į tinklo aparatūros detektavimo "
+"ją turite. Tuo tikslu, grįžkite atgal į tinklo aparatūros detektavimo "
 "žingsnį."
 
 #. Type: text
@@ -292,9 +292,8 @@ msgstr "Tinklo konfigūravimas"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:138
-#, fuzzy
 msgid "Configuring network .."
-msgstr "Tinklo konfigūravimas"
+msgstr "Konfigūruojamas tinklas .."
 
 #. Type: text
 #. Description
@@ -376,7 +375,7 @@ msgstr "Nerastas DHCP klientas"
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas ·pump "
+"Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas pump "
 "arba dhcp-client."
 
 #. Type: error
@@ -413,7 +412,7 @@ msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Tinklo konfigūravimas naudojant dinaminį adrasavimą (DHCP)"
+msgstr "Tinklo konfigūravimas naudojant dinaminį adresavimą (DHCP)"
 
 #. Type: string
 #. Description
@@ -437,7 +436,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Point-to-point address:"
-msgstr "Ryšio (poin-to-point) adresas:"
+msgstr "Ryšio (point-to-point) adresas:"
 
 #. Type: string
 #. Description
@@ -451,7 +450,7 @@ msgstr ""
 "Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką ·"
 "(point-to-point) tinklui.  Pasitarkite su savo tinklo administratoriumi, jei "
 "nežinote šio·adreso.  Ryšio adresas turi būti įvestas, kaip keturi "
-"·skaičiai, atskirti taškais."
+"skaičiai, atskirti taškais."
 
 #. Type: string
 #. Description
@@ -505,13 +504,12 @@ msgstr "Tinklų sąsaja (gateway) nepasiekiama"
 #. Description
 #: ../netcfg-static.templates:38
 msgid "The gateway address you entered is unreachable."
-msgstr "Jūsų nurodyta tinklų·sąsajos (gateway) adresas nepasiekiamas."
+msgstr "Jūsų nurodytas tinklų·sąsajos (gateway) adresas nepasiekiamas."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -557,3 +555,4 @@ msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Įvyko klaida aktyvuojant tinklą."
+
