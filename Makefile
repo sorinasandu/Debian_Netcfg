@@ -27,7 +27,7 @@ netcfg-dhcp netcfg-static: netcfg-dhcp.c utils.o netcfg.o
 	$(STRIP) $@
 	size $@ 
 
-netcfg.o:
+netcfg.o: netcfg.c
 	$(CC) -c $(CFLAGS) netcfg.c  -o $@ $(INCS)
 
 

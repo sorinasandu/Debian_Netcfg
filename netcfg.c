@@ -393,7 +393,7 @@ netcfg_get_common (struct debconfclient *client, char **interface,
       free (*nameservers);
     }
   *nameservers = NULL;
-  if (ptr = debconf_input (client, "medium", "netcfg/get_nameservers"))
+  if ( (ptr = debconf_input (client, "medium", "netcfg/get_nameservers")))
     *nameservers = strdup (ptr);
 
 }
