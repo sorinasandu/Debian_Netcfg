@@ -58,7 +58,7 @@ msgstr "Naamserveradressen:"
 #. Description
 #: ../netcfg-common.templates:22
 msgid "The name servers are used to look up host names on the network. Please enter the IP addresses (not host names) of up to 3 name servers, separated by spaces. Do not use commas. The first name server in the list will be the first to be queried. If you don't want to use any name server, just leave this field blank."
-msgstr "Naamservers worden gebruikt om de bij computernamen horende netwerkadressen op te zoeken. U kunt hier maximaal 3 naamservers opgegeven (gescheiden door spaties, komma's werken niet). De naamservers worden bevraagd in de volgorde waarin ze opgegeven zijn. Als u geen naamserver wenst te gebruiken kunt u dit veld gewoon leeg laten."
+msgstr "Naamservers worden gebruikt om de bij computernamen horende netwerkadressen op te zoeken. U kunt hier maximaal 3 naamservers opgeven, gescheiden door spaties. Komma's werken niet. De naamservers worden bevraagd in de volgorde waarin ze opgegeven zijn. Als u geen naamserver wenst te gebruiken kunt u dit veld gewoon leeg laten."
 
 #. Type: select
 #. Description
@@ -160,7 +160,7 @@ msgstr "Ongeldige ESSID"
 #. Description
 #: ../netcfg-common.templates:67
 msgid "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, but may contain all kinds of characters."
-msgstr "De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts 32 karakters groot zijn (er is geen beperking op de toegelaten karakters)."
+msgstr "De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts 32 karakters groot zijn (maar er is geen beperking op de toegelaten karakters)."
 
 #. Type: string
 #. Description
@@ -232,7 +232,7 @@ msgstr "Mogelijk vereist uw netwerkkaart, als u er een heeft, een specifieke nie
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastructuur netwerk (managed), Ad-hoc netwerk (peer2peer)"
+msgstr "Infrastructuur netwerk (Managed), Ad-hoc netwerk (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -244,13 +244,13 @@ msgstr "Soort draadloos netwerk:"
 #. Description
 #: ../netcfg-common.templates:110
 msgid "Wireless networks are either managed or ad-hoc. If you use a real access point of some sort, your network is Managed. If another computer is your 'access point', then your network may be Ad-hoc."
-msgstr "Draadloze netwerken lopen in een van twee modussen: 'ad-hoc' of 'managed'. Wanneer u een echt 'access point' gebruikt loopt uw netwerk normaal in de 'managed'-modus. Als een andere computer uw 'acces point' is loopt uw netwerk waarschijnlijk in 'ad-hoc'-modus."
+msgstr "Draadloze netwerken lopen in een van twee modussen: 'ad-hoc' of 'managed'. Wanneer u een echt draadloos toegangspunt (access point) gebruikt loopt uw netwerk normaal in de 'managed'-modus. Als een andere computer uw 'access point' is loopt uw netwerk waarschijnlijk in 'ad-hoc'-modus."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 msgid "Wireless network configuration"
-msgstr "'Draadloze netwerk'-configuratie"
+msgstr "'Draadloos netwerk'-configuratie"
 
 #. Type: text
 #. Description
@@ -276,13 +276,13 @@ msgstr "Draadloos ethernet (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet of Fast-ethernet"
+msgstr "Ethernet of Fast Ethernet"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:143
 msgid "Token Ring"
-msgstr "Tokenring"
+msgstr "Token Ring"
 
 #. Type: text
 #. Description
@@ -479,7 +479,7 @@ msgstr "Mogelijk is dit het gevolg van een trage DHCP-server op het netwerk, sle
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "Doorgaan met de standaard route?"
+msgstr "Doorgaan met geen standaard route?"
 
 #. Type: boolean
 #. Description
@@ -568,7 +568,7 @@ msgstr "Gateway:"
 #. Description
 #: ../netcfg-static.templates:33
 msgid "The gateway is an IP address (four numbers separated by periods) that indicates the gateway router, also known as the default router.  All traffic that goes outside your LAN (for instance, to the Internet) is sent through this router.  In rare circumstances, you may have no router; in that case, you can leave this blank.  If you don't know the proper answer to this question, consult your network administrator."
-msgstr "De gateway is het IP-adres (vier nummers gescheiden door punten) van de gateway router (ook wel de default router genoemd). Alle verkeer dat uw LAN verlaat (bv. naar internet) gaat via deze router. In zeldzame omstandigheden is het mogelijk dat u geen router heeft; in dat geval kunt u dit veld gewoon leeg laten. Als u de waarde niet weet kunt u best contact opnemen met uw netwerkbeheerder."
+msgstr "De gateway is het IP-adres (vier nummers gescheiden door punten) van de gateway router (ook wel de default router genoemd). Alle verkeer dat uw LAN verlaat (b.v. naar het Internet) gaat via deze router. In zeldzame omstandigheden is het mogelijk dat u geen router heeft; in dat geval kunt u dit veld gewoon leeg laten. Als u de waarde niet weet kunt u best contact opnemen met uw netwerkbeheerder."
 
 #. Type: error
 #. Description
