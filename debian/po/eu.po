@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-13 16:20-0400\n"
+"POT-Creation-Date: 2004-04-14 18:34-0700\n"
 "PO-Revision-Date: 2004-04-14 01:18+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -125,15 +125,17 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-msgid "WEP key for ${iface}:"
+#, fuzzy
+msgid "WEP key for wireless device ${iface}:"
 msgstr "${iface}-ren WEP gakoa:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#, fuzzy
 msgid ""
-"If applicable, please enter the WEP security key for device ${iface}. There "
-"are two ways to do this:"
+"If applicable, please enter the WEP security key for the wireless device "
+"${iface}. There are two ways to do this:"
 msgstr ""
 "Erabilgarri bada. mesedez satu zure ${iface} gailuaren WEP segurtasun kodea. "
 "Hau egiteko bi modu daude:"
@@ -154,7 +156,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr ""
+"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -162,7 +165,8 @@ msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik ga
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
+msgstr ""
+"Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -310,8 +314,8 @@ msgid ""
 msgstr ""
 "Kablegabeko sareak kudeaturikoak edo ad-hoc izan daitezke: Zu benetako "
 "sarrera puntu (Acces Point) bat edo antzeko zerbait erabiltzen ari bazara "
-"zure sarea kudeatutakoa da. Zure sarrera puntua beste ordenagailu bat "
-"baldin bada zure sarea Ad-hoc da."
+"zure sarea kudeatutakoa da. Zure sarrera puntua beste ordenagailu bat baldin "
+"bada zure sarea Ad-hoc da."
 
 #. Type: text
 #. Description
@@ -507,7 +511,8 @@ msgstr "Ez da DHCP bezeroa aurkitu"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr ""
+"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
@@ -656,7 +661,8 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo atebia "
 "sartzerakoan."
@@ -699,4 +705,3 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 
 #~ msgid "Network Configuration"
 #~ msgstr "Sare Konfigurazioa"
-

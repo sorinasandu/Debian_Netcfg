@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-13 16:20-0400\n"
+"POT-Creation-Date: 2004-04-14 18:34-0700\n"
 "PO-Revision-Date: 2004-04-14 00:31+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
@@ -73,8 +73,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Namnservrarna används för att slå upp värdnamn på nätverket. Ange "
-"IP-adresserna (inte värdnamnen), åtskilda med blanksteg, på upp till tre "
+"Namnservrarna används för att slå upp värdnamn på nätverket. Ange IP-"
+"adresserna (inte värdnamnen), åtskilda med blanksteg, på upp till tre "
 "namnservrar. Använd inte kommatecken. Den första namnservern i listan kommer "
 "att frågas först. Om du inte vill använda någon namnserver ska du lämna det "
 "här fältet tomt."
@@ -116,15 +116,17 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-msgid "WEP key for ${iface}:"
+#, fuzzy
+msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP-nyckel till ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#, fuzzy
 msgid ""
-"If applicable, please enter the WEP security key for device ${iface}. There "
-"are two ways to do this:"
+"If applicable, please enter the WEP security key for the wireless device "
+"${iface}. There are two ways to do this:"
 msgstr ""
 "Ange WEP-säkerhetsnyckeln för enhet ${iface}, om en sådan finns. Det finns "
 "två sätt att göra detta på:"

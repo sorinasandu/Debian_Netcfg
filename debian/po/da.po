@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-13 16:20-0400\n"
+"POT-Creation-Date: 2004-04-14 18:34-0700\n"
 "PO-Revision-Date: 2004-04-14 10:11+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -119,15 +119,17 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-msgid "WEP key for ${iface}:"
+#, fuzzy
+msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP-nøgle for ${iface}:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#, fuzzy
 msgid ""
-"If applicable, please enter the WEP security key for device ${iface}. There "
-"are two ways to do this:"
+"If applicable, please enter the WEP security key for the wireless device "
+"${iface}. There are two ways to do this:"
 msgstr ""
 "Angiv WEB-sikkerhedsnøgle for enheden ${iface}, hvis der er sådan en. Der er "
 "to måder at gøre dette på:"
@@ -504,7 +506,8 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -652,7 +655,8 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -764,4 +768,3 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-
