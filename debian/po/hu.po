@@ -14,43 +14,67 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-17 21:02+0100\n"
+"POT-Creation-Date: 2003-12-11 11:47+0100\n"
 "PO-Revision-Date: 2003-12-09 12:49+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:4
+msgid "configure network with DHCP, manual network configuration"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+#, fuzzy
+msgid "Network configuration method"
+msgstr "DHCP hálózati konfiguráció"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid ""
+"Networking can either be configure by DHCP or by manually  entering all the "
+"information. If you choose DHCP and  debian-installer is unable to get a "
+"working configuration from a DHCP Server on you network you will be offered "
+"to configure your network manually after the atempt to configure it by DHCP. "
+"If unsure choose DHCP."
+msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:3
+#: ../netcfg-common.templates:15
 msgid "Domain name:"
 msgstr "Hálózati domain:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:3
+#: ../netcfg-common.templates:15
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"A hálózati domain az gép Internet-címének gépnévtől jobbra eső része. "
-"A végződése sok esetben .com, .net, .edu, .org vagy .hu. Ha otthoni "
-"hálózatot telepít, akkor akár egy tetszőleges domaint is kitalálhat, de "
-"azért minden gépén ugyanarra állítsa be."
+"A hálózati domain az gép Internet-címének gépnévtől jobbra eső része. A "
+"végződése sok esetben .com, .net, .edu, .org vagy .hu. Ha otthoni hálózatot "
+"telepít, akkor akár egy tetszőleges domaint is kitalálhat, de azért minden "
+"gépén ugyanarra állítsa be."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:11
+#: ../netcfg-common.templates:23
 msgid "Name servers addresses:"
 msgstr "Névszolgáltatók címei:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:11
+#: ../netcfg-common.templates:23
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
@@ -58,19 +82,18 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Szóközökkel elválasztva adja meg a (legfeljebb 3) névszolgáltató IP-címét "
-"(nem gépnevét). Ne használjon vesszőket. Az elsőnek megadott "
-"kiszolgálóhoz fordul majd először. Ha nem használ névszolgáltatót, "
-"hagyja üresen a mezőt."
+"(nem gépnevét). Ne használjon vesszőket. Az elsőnek megadott kiszolgálóhoz "
+"fordul majd először. Ha nem használ névszolgáltatót, hagyja üresen a mezőt."
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:20
+#: ../netcfg-common.templates:32
 msgid "Interface:"
 msgstr "Hálózati interfész:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:20
+#: ../netcfg-common.templates:32
 msgid ""
 "Please choose the interface you want to configure. All currently  detected "
 "interfaces on your system are shown below. Please choose the type of your "
@@ -84,77 +107,78 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:28
+#: ../netcfg-common.templates:40
 msgid "Error while activating the network"
 msgstr "Hiba a hálózat felélesztése közben"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:28
+#: ../netcfg-common.templates:40
 msgid "An error occurred while activating the network."
 msgstr "A hálózat életre keltése közben hiba történt."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:34
+#: ../netcfg-common.templates:46
 msgid "Hostname:"
 msgstr "Gépnév:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:34
+#: ../netcfg-common.templates:46
 msgid "Please enter the hostname for this system."
 msgstr "Adja meg a rendszer gépnevét."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:34
+#: ../netcfg-common.templates:46
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
 "administrator.  If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"A gépnév egy szóból áll, és a hálózaton belül azonosítja a rendszert. "
-"Ha nem tudja, mi legyen a gépnév, beszéljen az illetékes hálózati "
+"A gépnév egy szóból áll, és a hálózaton belül azonosítja a rendszert. Ha nem "
+"tudja, mi legyen a gépnév, beszéljen az illetékes hálózati "
 "adminisztrátorral. Ha saját otthoni hálózatot épít ki, akkor tetszőleges "
 "nevet megadhat."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:56
 msgid "Invalid hostname"
 msgstr "Érvénytelen gépnév"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:56
 msgid "The name \"${hostname}\" is invalid."
 msgstr "A gépnév (\"${hostname}\") érvénytelen."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:56
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
 "Egy érvényes gépnévek csak alfanumerikus karakterekből és a mínuszjelből "
-"áll, legalább 2, legfeljebb 63 karakter hosszú, és mínuszjel se az elején, se a "
-"végén nincs."
+"áll, legalább 2, legfeljebb 63 karakter hosszú, és mínuszjel se az elején, "
+"se a végén nincs."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:53
+#: ../netcfg-common.templates:65
 msgid "Error"
 msgstr "Hiba"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:53
+#: ../netcfg-common.templates:65
+#, fuzzy
 msgid ""
-"An error occured and the network configuration process had been aborted. You "
+"An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
 "Hiba történt és a hálózat konfigurálásának folyamata megszakadt. A telepítés "
@@ -162,120 +186,136 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:71
 msgid "No network interfaces detected"
 msgstr "A felderítés nem talált hálózati interfészt"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:71
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"A felderítés nem talált hálózati interfészt. A telepítőrendszer hálózati eszköz "
-"híján van."
+"A felderítés nem talált hálózati interfészt. A telepítőrendszer hálózati "
+"eszköz híján van."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:59
+#: ../netcfg-common.templates:71
 msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
 msgstr ""
 "Ha tényleg van hálózati kártyája, akkor a számára esetleg egy külön "
-"meghajtómodult kell betöltenie. Ehhez menjen vissza a "
-"hálózatihardver-felderítő lépéshez."
+"meghajtómodult kell betöltenie. Ehhez menjen vissza a hálózatihardver-"
+"felderítő lépéshez."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:68
+#: ../netcfg-common.templates:80
 msgid "<none>"
 msgstr "<semmi>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:72
+#: ../netcfg-common.templates:84
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet vagy Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:76
+#: ../netcfg-common.templates:88
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet vagy Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:80
+#: ../netcfg-common.templates:92
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:96
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:88
+#: ../netcfg-common.templates:100
 msgid "Serial-line IP"
 msgstr "Soros vonali·IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:104
 msgid "Parallel-line IP"
 msgstr "Párhuzamos vonali IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:96
+#: ../netcfg-common.templates:108
 msgid "Point-to-Point Protocol"
 msgstr "Pont-Pont Protokoll (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:112
 msgid "IPv6-in-IPv4"
 msgstr "IPv4 feletti IPv6"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:104
+#: ../netcfg-common.templates:116
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Pont-Pont Protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:120
 msgid "Channel-to-channel"
 msgstr "Csatorna-Csatorna (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:124
 msgid "Real channel-to-channel"
 msgstr "Valós csatorna-csatorna"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:128
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:132
 msgid "Inter-user communication vehicle"
 msgstr "Felhasználók közti kommunikációs eszköz (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:136
 msgid "Unknown interface"
 msgstr "Ismeretlen hálózati interfész"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:141
+#, fuzzy
+msgid "Network Configuration"
+msgstr "DHCP hálózati konfiguráció"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:146
+#, fuzzy
+msgid "Configure the network"
+msgstr "Hálózat konfigurálása DHCP-vel"
 
 #. Type: string
 #. Description
@@ -320,7 +360,8 @@ msgid ""
 " domain         = ${domain}\n"
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
-msgstr " interfész       = ${interface}\n"
+msgstr ""
+" interfész       = ${interface}\n"
 " gépnév          = ${hostname}\n"
 " domain          = ${domain}\n"
 " dhcp-gépnév     = ${dhcp_hostname}\n"
@@ -335,7 +376,8 @@ msgstr "Hálózat konfigurálása DHCP-vel"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-msgid "This may take a few minutes."
+#, fuzzy
+msgid "This may take some time."
 msgstr "Ez percekbe is beletelhet."
 
 #. Type: error
@@ -349,8 +391,8 @@ msgstr "DHCP-kliens keresése eredménytelen"
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP-kliens keresése eredménytelen. Ez a csomag a pump vagy a "
-"dhcp-client csomaggal jól működik."
+"DHCP-kliens keresése eredménytelen. Ez a csomag a pump vagy a dhcp-client "
+"csomaggal jól működik."
 
 #. Type: error
 #. Description
@@ -358,17 +400,32 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "A DHCP-konfiguráció folyamata megszakad."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+#, fuzzy
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "DHCP hálózati konfiguráció"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was offered during DHCP network configuration. Sometimes DHCP "
+"servers are really slow. In this case you can retry."
+msgstr ""
+
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:46
 msgid "DHCP Network Configuration"
 msgstr "DHCP hálózati konfiguráció"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:44
+#: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "A hálózat konfigurálása dinamikus címzéssel (DHCP)"
 
@@ -386,9 +443,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"Az IP-cím számítógépenként egyedi, és négy darab, pontokkal "
-"elválasztott számból áll. Ha nem tudja, mit írjon ide, beszéljen az "
-"illetékes hálózati adminisztrátorral."
+"Az IP-cím számítógépenként egyedi, és négy darab, pontokkal elválasztott "
+"számból áll. Ha nem tudja, mit írjon ide, beszéljen az illetékes hálózati "
+"adminisztrátorral."
 
 #. Type: string
 #. Description
@@ -405,8 +462,8 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"A pont-pont cím a pont-pont hálózat másik végpontját állapítja meg. Ha "
-"nem tudja a megfelelő értéket, beszéljen az illetékes hálózati "
+"A pont-pont cím a pont-pont hálózat másik végpontját állapítja meg. Ha nem "
+"tudja a megfelelő értéket, beszéljen az illetékes hálózati "
 "adminisztrátorral. A pont-pont cím négy darab, pontokkal elválasztott "
 "számból áll."
 
@@ -447,11 +504,11 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Az átjáró egy IP-cím (vagyis négy darab, pontokkal elválasztott számból "
-"áll), ami az átjáró-útválasztót (alapértelmezett útválasztót) jelöli ki. A helyi "
-"hálóból kifelé (például az Internetre) irányuló forgalmat ez az útválasztó "
-"kezeli. Egyes ritka esetekben (amikor nincs közbeeső útvonalválasztó) "
-"ezt a mezőt üresen hagyhatja. Ha a kérdésre nem tudja a helyes választ, "
-"beszéljen az illetékes hálózati adminisztrátorral."
+"áll), ami az átjáró-útválasztót (alapértelmezett útválasztót) jelöli ki. A "
+"helyi hálóból kifelé (például az Internetre) irányuló forgalmat ez az "
+"útválasztó kezeli. Egyes ritka esetekben (amikor nincs közbeeső "
+"útvonalválasztó) ezt a mezőt üresen hagyhatja. Ha a kérdésre nem tudja a "
+"helyes választ, beszéljen az illetékes hálózati adminisztrátorral."
 
 #. Type: error
 #. Description
@@ -470,8 +527,7 @@ msgstr "A megadott átjárócím nem elérhető."
 #: ../netcfg-static.templates:38
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr ""
-"Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
+msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
 #. Type: boolean
 #. Description
@@ -508,4 +564,3 @@ msgstr "Statikus hálózati konfigurálás"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Hálózat konfigurálása statikus címzéssel"
-

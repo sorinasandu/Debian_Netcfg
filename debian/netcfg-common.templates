@@ -1,3 +1,15 @@
+Template: netcfg/get_method
+Type: select
+Default: configure network with DHCP
+_Choices: configure network with DHCP, manual network configuration
+_Description: Network configuration method
+ Networking can either be configure by DHCP or by manually 
+ entering all the information. If you choose DHCP and 
+ debian-installer is unable to get a working configuration
+ from a DHCP Server on you network you will be offered to configure
+ your network manually after the atempt to configure it by DHCP. If
+ unsure choose DHCP.
+
 Template: netcfg/get_domain
 Type: string
 _Description: Domain name:
@@ -122,3 +134,13 @@ _Description: Inter-user communication vehicle
 Template: netcfg/internal-unknown-iface
 Type: text
 _Description: Unknown interface
+
+Template: netcfg/title
+Type: text
+#  Title displayed when configuring this package
+_Description: Network Configuration
+
+Template: debian-installer/netcfg/title
+Type: text
+#  Item in the main menu to select this package
+_Description: Configure the network

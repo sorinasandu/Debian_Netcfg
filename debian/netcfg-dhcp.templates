@@ -24,7 +24,7 @@ _Description: Configuring the network with DHCP
 
 Template: netcfg/dhcp_progress_note
 Type: text
-_Description: This may take a few minutes.
+_Description: This may take some time.
 
 Template: netcfg/no_dhcp_client
 Type: error
@@ -32,6 +32,13 @@ _Description: No DHCP client found
  No DHCP client was found. This package requires pump or dhcp-client.
  .
  The DHCP configuration process will be aborted.
+
+Template: netcfg/dhcp_retry
+Type: boolean
+Default: false
+_Description: Do you want to retry DHCP network configuration?
+ No IP address was offered during DHCP network configuration. Sometimes
+ DHCP servers are really slow. In this case you can retry.
 
 Template: netcfg/dhcp-title
 Type: text
