@@ -1,0 +1,20 @@
+Template: debian-installer/netcfg/dynamic/inet6/do
+Type: note
+_Description: I will now configure the network.
+ This only activates the interface and let the kernel configure it themself.
+
+Template: debian-installer/netcfg/dynamic/confirm_dhcp
+Type: boolean
+Default: true
+_Description: Is this information correct?
+  interface      = ${interface}
+
+Template: debian-installer/netcfg/dynamic/do_dhcp
+Type: note
+_Description: I will now configure the network.
+ This may take some time.  It shouldn't take more than a minute or two.
+
+Template: debian-installer/netcfg/dynamic/no_dhcp_client
+Type: note
+_Description: No dhcp client found. I cannot continue.
+ This package requires pump or dhcp-client.
