@@ -32,8 +32,6 @@ extern struct in_addr gateway;
 extern struct in_addr pointopoint;
 
 /* common functions */
-extern int netcfg_mkdir (char *path);
-
 extern int is_interface_up (char *inter);
 
 extern void get_name (char *name, char *p);
@@ -73,7 +71,6 @@ extern void netcfg_write_common (const char *prebaseconfig,
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 
 extern int is_wireless_iface (const char* iface);
-
 
 extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface);
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
