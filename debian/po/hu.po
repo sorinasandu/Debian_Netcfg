@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-12 13:24+0100\n"
+"POT-Creation-Date: 2004-01-09 11:36-0700\n"
+"PO-Revision-Date: 2004-01-09 20:16+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
@@ -92,9 +92,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "A felderítés nem talált hálózati interfészt"
+msgstr "Elsődleges hálózati interfész:"
 
 #. Type: select
 #. Description
@@ -103,6 +102,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"A gép több hálózati interfésszel is rendelkezik. Válassza ki a Debian "
+"telepítésére használni kívánt elsődleges interfészt."
 
 #. Type: error
 #. Description
@@ -347,6 +348,8 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -524,6 +527,8 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
