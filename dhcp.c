@@ -45,11 +45,11 @@ static void netcfg_write_dhcp (char *iface)
         fprintf(fp, "iface %s inet dhcp\n", iface);
 	if (is_wireless_iface(iface))
 	{
-	  fprintf(fp, "\twireless_mode %s\n",
+	  fprintf(fp, "\twireless-mode %s\n",
 	      (mode == MANAGED) ? "managed" : "adhoc");
-	  fprintf(fp, "\twireless_essid %s\n", essid ? essid : "any");
+	  fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
 	  if (wepkey != NULL)
-	    fprintf(fp, "\twireless_key %s\n", wepkey);
+	    fprintf(fp, "\twireless-key %s\n", wepkey);
 	}
         fclose(fp);
     }
