@@ -324,7 +324,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 		case DONE: break; /* avoid warning */
 	      }
 
-	      if (state == DONE)
+	      if (wifistate == DONE)
 		break;
 	    }
 	  }
