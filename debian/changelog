@@ -18,6 +18,8 @@ netcfg (0.62) UNRELEASED; urgency=low
     - Nuke unused netcfg/title template.
     - Clarify nameserver question by adding an introductory sentence.
       (Closes: #243251) 
+    - Touch resolv.conf when using DHCP, to fix problems with pppoeconf
+      (at least for now. Closes: #241075)
   * Per Olofsson
     - Check for hotpluggable (PCMCIA) network interfaces in
       /etc/network/devhotplug and don't generate auto entries for them.

@@ -1027,7 +1027,7 @@ static int netcfg_get_dhcp_hostname(struct debconfclient *client, char **dhcp_ho
 }
 
 
-static void netcfg_write_dhcp(char *iface, char *host)
+static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
 {
     FILE *fp;
 
@@ -1049,6 +1049,13 @@ static void netcfg_write_dhcp(char *iface, char *host)
 	}
         fclose(fp);
     }
+
+    if ((fp = file_open(RESOLV_FILE, "w"))) {
+      fclose(fp);
+    }
+    
+    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
+	"/target" RESOLV_FILE);
 }
 
 
@@ -1145,7 +1152,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 	    
             /* write configuration */
             netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-            netcfg_write_dhcp(interface, dhcp_hostname);
+            netcfg_write_dhcp("40netcfg", interface, dhcp_hostname);
 
             return 0;
         }
