@@ -186,6 +186,7 @@ int main(int argc, char *argv[])
 	debconf_progress_info(client, "netcfg/dhcp_progress_note");
         my_debconf_input("medium", "netcfg/do_dhcp");
         netcfg_activate_dhcp();
+	debconf_progress_step(client, 1);
 	debconf_progress_stop(client);
 	netcfg_progress_displayed = 0;
 
