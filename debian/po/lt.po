@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 00:11+0100\n"
-"PO-Revision-Date: 2004-03-11 15:14+0200\n"
+"PO-Revision-Date: 2004-03-20 19:57+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -161,8 +161,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -275,8 +274,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -293,13 +291,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Infrastruktūrinis (Managed) tinklas, Ad-hoc tinklas (Peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Bevielio tinklo rūšis:"
 
 #. Type: select
 #. Description
@@ -309,6 +307,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
 msgstr ""
+"Bevieliai tinklai būna \"managed\" bei \"ad-hoc\". Jei naudojate atskirą "
+"pasiekimo tašką (Access Point), tuomet rinkitės \"managed\". Jei jungiatės "
+"tiesiogiai prie kito kompiuterio, rinkitės \"ad-hoc\"."
 
 #. Type: text
 #. Description
@@ -650,8 +651,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -691,3 +691,4 @@ msgstr "Statinis tinklo konfigūravimas"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
+
