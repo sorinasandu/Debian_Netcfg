@@ -5,10 +5,14 @@ netcfg (0.72) UNRELEASED; urgency=low
       used.
     - Patch by Adam Thornton to add recognition for IUCV devices in static
       configuration. (Closes: #258109)
+    - Don't suggest hostname given by the DHCP server if it's invalid.
+      (Closes: #258207)
+    - Ask netcfg/choose_interface at prio critical. (Closes: #257963)
+    - Build with NDEBUG.
   * Colin Watson
     - Fix typo (s/occured/occurred/g). Unfuzzy translations.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Wed,  7 Jul 2004 13:52:28 -0700
+ -- Joshua Kwan <joshk@triplehelix.org>  Thu,  8 Jul 2004 10:12:33 -0700
 
 netcfg (0.71) unstable; urgency=low
 

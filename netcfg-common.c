@@ -405,7 +405,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
         free(ptr);
 
-        debconf_input(client, "high", "netcfg/choose_interface");
+        debconf_input(client, "critical", "netcfg/choose_interface");
         ret = debconf_go(client);
 
         if (ret)
@@ -443,18 +443,41 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 }
 
 /*
+ * Verify that the hostname conforms to RFC 1123.
+ * @return 0 on success, 1 on failure.
+ */
+short verify_hostname (char *hname)
+{
+  static const char *valid_chars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
+  size_t len;
+  assert(hname != NULL);
+
+  len = strlen(hname);
+
+  /* Check the hostname for RFC 1123 compliance.  */
+  if ((len < 2) ||
+      (len > 63) ||
+      (strspn(hname, valid_chars) != len) ||
+      (hname[len - 1] == '-') ||
+      (hname[0] == '-')) {
+    return 1;
+  }
+  else
+    return 0;
+}
+
+/*
  * Set the hostname. 
  * @return 0 on success, 30 on BACKUP being selected.
  */
 int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short hdset)
 {
-    static const char *valid_chars =
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
-    size_t len;
     int ret;
     char *s;
 
-    do {
+    for(;;)
+    {
         if (hdset)
           have_domain = 0;
         debconf_input(client, "high", template);
@@ -462,29 +485,26 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 
         if (ret == 30) /* backup */
           return ret;
-        
-        debconf_get(client, template);
-       
-        free(*hostname);
-        *hostname = strdup(client->value);
-        len = strlen(*hostname);
 
-        /* Check the hostname for RFC 1123 compliance.  */
-        if ((len < 2) ||
-            (len > 63) ||
-            (strspn(*hostname, valid_chars) != len) ||
-            ((*hostname)[len - 1] == '-') ||
-            ((*hostname)[0] == '-')) {
-            debconf_subst(client, "netcfg/invalid_hostname",
-                          "hostname", *hostname);
-            debconf_input(client, "high", "netcfg/invalid_hostname");
-            debconf_go(client);
-            free(*hostname);
-            *hostname = NULL;
-            debconf_set(client, template, "debian");
-        }
+        debconf_get(client, template);
         
-    } while (!*hostname);
+        if (verify_hostname(client->value) != 0)
+        {
+          debconf_subst(client, "netcfg/invalid_hostname",
+              "hostname", client->value);
+          debconf_input(client, "high", "netcfg/invalid_hostname");
+          debconf_go(client);
+          debconf_set(client, template, "debian");
+        }
+        else
+        {
+          /* I've considered the fact that client->value could be mangled by
+           * showing the error message. But if it goes through the error was not
+           * shown. </careful-thinking> */
+          *hostname = strdup(client->value);
+          break;
+        }
+    }
 
     /* don't strip DHCP hostnames */
     if (hdset && (s = strchr(*hostname, '.')))

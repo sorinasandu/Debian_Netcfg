@@ -365,7 +365,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             fclose(d);
             unlink(DOMAIN_FILE);
 
-            if (!empty_str(domain))
+            if (!empty_str(domain) && verify_hostname(domain) == 0)
             {
               debconf_set(client, "netcfg/get_domain", domain);
               have_domain = 1;
@@ -382,6 +382,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                gethostname(buf, sizeof(buf)) == 0
                && !empty_str(buf)
                && strcmp(buf, "(none)")
+               && verify_hostname(buf) == 0
           ) {
             di_info("DHCP hostname: \"%s\"", buf);
             debconf_set(client, "netcfg/get_hostname", buf);

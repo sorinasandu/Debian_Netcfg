@@ -2,7 +2,7 @@ CC		= gcc
 TARGETS		?= netcfg-dhcp netcfg-static netcfg
 
 LDOPTS		= -ldebconfclient -ldebian-installer -liw
-CFLAGS		= -W -Wall -DNETCFG_VERSION=\"$(VERSION)\"
+CFLAGS		= -W -Wall -DNDEBUG -DNETCFG_VERSION=\"$(VERSION)\"
 COMMON_OBJS	= netcfg-common.o wireless.o
 VERSION		= $(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2)
 
