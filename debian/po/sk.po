@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_tools_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-22 15:51-0500\n"
-"PO-Revision-Date: 2004-03-09 09:07+0100\n"
+"PO-Revision-Date: 2004-03-23 07:24+0100\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -28,14 +28,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Nastavujem sie» pomocou DHCP"
+msgstr "Nastavi» sie» automaticky pomocou DHCP?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -46,7 +44,7 @@ msgstr ""
 "Sie» mô¾e by» nastavená automaticky pomocou DHCP, alebo manuálne po vlo¾ení "
 "po¾adovaných informácií. Ak si zvolíte DHCP a in¹talaèný program nedostane "
 "správne sie»ové nastavenia z DHCP servera na va¹ej sieti, dostanete "
-"príle¾itos» na manuálne nastavenie. Ak si nie ste istí, skúste DHCP."
+"neskôr príle¾itos» na manuálne nastavenie."
 
 #. Type: string
 #. Description
@@ -294,13 +292,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Riadená (¹truktúrovaná) sie», Náhodná (peer to peer) sie»"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Typ bezdrôtovej siete:"
 
 #. Type: select
 #. Description
@@ -310,6 +308,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
 msgstr ""
+"Bezdrôtové siete sú riadené alebo náhodné. Ak pou¾ívate skutoèný prístupový "
+"bod, je táto sie» riadená. Ak je va¹im 'prístupovým bodom' priamo iný "
+"poèítaè, jedná sa o náhodnú sie»."
 
 #. Type: text
 #. Description
