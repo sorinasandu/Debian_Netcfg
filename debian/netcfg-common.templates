@@ -23,7 +23,7 @@ _Description: Choose an interface.
  NFS or HTTP).
 
 Template: netcfg/error_cfg
-Type: note
+Type: error
 _Description: An error occured.
  Something went wrong when I tried to activate your network.
 
@@ -37,20 +37,20 @@ _Description: Enter the system's hostname.
  something up here.
 
 Template: netcfg/invalid_hostname
-Type: note
+Type: error
 _Description: The hostname "${hostname}" is invalid.
  A valid hostname may contain only alphanumeric characters and the minus
  sign, be between 2 and 63 characters long, and cannot begin or end with a
  minus sign.
 
 Template: netcfg/error
-Type: note
+Type: error
 _Description: An error occured and I cannot continue.
  Feel free to retry.
 
 Template: netcfg/no_interfaces
-Type: note
-_Description: No interfaces were detected.
+Type: error
+_Description: No network interfaces were detected.
  No network interfaces were found.   That means that the installation
  system was unable to find a network device.  If you do have a network
  card, then it is possible that the module for it hasn't been selected
