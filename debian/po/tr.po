@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-04-16 00:56+0300\n"
+"PO-Revision-Date: 2004-05-14 19:55+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -488,9 +488,8 @@ msgstr "Bu işlem biraz zaman alabilir."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statik ağ yapılandırması"
+msgstr "Otomatik ağ yapılandırması başarıyla tamamlandı!"
 
 #. Type: error
 #. Description
@@ -515,43 +514,38 @@ msgstr "DHCP yapılandırması iptal edilecek."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statik ağ yapılandırması"
+msgstr "Otomatik ağ yapılandırmasını tekrar dene"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dinamik ağ yapılandırması (DHCP)"
+msgstr "Otomatik ağ yapılandırmasını bir DHCP makine ismi girerek tekrar dene"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Ağı yapılandır"
+msgstr "Ağı elle yapılandır"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Ağı yapılandır"
+msgstr "Ağı şu an yapılandırma"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Ağ Yapılandırması"
+msgstr "Ağ yapılandırma yöntemi:"
 
 #. Type: select
 #. Description
@@ -563,13 +557,17 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Otomatik ağ yapılandırması başarısız. Bunun nedeni ağ üzerindeki DHCP sunucusunun "
+"yavaşlığı olabileceğinden tekrar denemeyi isteyebilirsiniz. Eğer ağınız otomatik "
+"yapılandırma için DHCP kullanmıyorsa, elle yapılandırmayı tercih edebilirsiniz. "
+"Bazı DHCP sunucuları özel bir DHCP makine adı gerektirebilir. Bu tür durumlarda "
+"DHCP denemesinden önce böyle bir makine adını girmeyi seçebilirsiniz."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Ağı yapılandır"
+msgstr "Kablosuz ağı yapılandır"
 
 #. Type: text
 #. Description
@@ -730,21 +728,3 @@ msgstr ""
 #: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "Ağı statik adresleme ile yapılandır"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Statik ağ yapılandırması"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet veya Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "DHCP ağ yapılandırmasını tekrar denemek ister misiniz?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "DHCP ile otomatik ağ yapılandırması sırasında herhangi bir IP adresi "
-#~ "bulunamadı.  DHCP sunucuları bazen çok yavaş çalışır.  Dilerseniz tekrar "
-#~ "deneyebilirsiniz."
