@@ -2,6 +2,7 @@
    netcfg-dhcp.c - Configure a network via dhcp for the debian-installer
 
    Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
+   Copyright (C) 2003  Matt Kraai
    
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -158,7 +159,8 @@ int main(int argc, char *argv[])
                                 "interface", interface, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "hostname", hostname, NULL);
+                                "hostname", (hostname ? hostname : _("<none>")),
+				NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "domain", (domain ? domain : _("<none>")),
