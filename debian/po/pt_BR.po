@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-09 10:34-0300\n"
+"PO-Revision-Date: 2004-08-12 21:35-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -238,15 +238,14 @@ msgstr "O nome \"${hostname}\" é inválido."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Um nome de máquina válido pode conter somente caracteres alfanuméricos e o "
-"sinal de menos, ter de 2 a 63 caracteres e não pode iniciar ou finalizar com "
-"um sinal de menos."
+"Um nome de máquina válido pode conter somente números de 0 a 9, as letras "
+"em minúsculo de a até z e o sinal de menos. O mesmo deve ter entre 2 a 63 "
+"caracteres e não pode iniciar ou finalizar com um sinal de menos."
 
 #. Type: error
 #. Description
@@ -294,9 +293,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Configurar a rede"
+msgstr "Continuar sem configurar a rede ?"
 
 #. Type: boolean
 #. Description
@@ -308,6 +306,12 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} não parece estar conectada a nenhum tipo de rede. Isto pode ser "
+"devido a um cabo de rede não conectado ou a um mal funcionamento da placa "
+"de rede. Você pode abri mão da configuração de rede até que você reinicie "
+"no Debian e utilize o utilitário etherconf ou pode configurar a rede "
+"estaticamente. Você também pode voltar e escolher uma interface de rede "
+"diferente."
 
 #. Type: select
 #. Choices
@@ -556,7 +560,6 @@ msgstr "Método de configuração de rede :"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
