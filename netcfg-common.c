@@ -750,14 +750,9 @@ void parse_args (int argc, char ** argv)
       int ret;
       if (inet_ptom(argv[1], &ret, NULL) > 0)
       {
-	printf("%d\n", ret);
-	exit(EXIT_SUCCESS);
+        printf("%d\n", ret);
+        exit(EXIT_SUCCESS);
       }
-    }
-    else if (!strcmp(argv[1], "-V"))
-    {
-      puts("netcfg version " NETCFG_VERSION);
-      exit(EXIT_SUCCESS);
     }
     
     exit(EXIT_FAILURE);

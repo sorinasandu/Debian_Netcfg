@@ -2,11 +2,10 @@ CC		= gcc
 TARGETS		?= netcfg-dhcp netcfg-static netcfg
 
 LDOPTS		= -ldebconfclient -ldebian-installer -liw
-CFLAGS		= -W -Wall -DNDEBUG -DNETCFG_VERSION=\"$(VERSION)\"
+CFLAGS		= -W -Wall -DNDEBUG 
 COMMON_OBJS	= netcfg-common.o wireless.o
-VERSION		= $(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2)
 
-ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -O0 -g3
 else
 CFLAGS += -Os -fomit-frame-pointer
