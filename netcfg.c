@@ -94,7 +94,7 @@ void
 get_static_cfg (void)
 {
   int finished = 0;
-  char *ptr ,*ns;
+  char *ptr ,*ns1, *ns2, *ns3;
 
   do
     {
@@ -113,30 +113,37 @@ get_static_cfg (void)
 		       NULL);
       client->command (client, "go", NULL);
       client->command (client, "get", "netcfg/get_domain", NULL);
-      domain = strdup(client->value);
-      client->command (client, "subst", "netcfg/confirm_static_cfg", "domain",
-		       domain, NULL);
-
+      
+      if ( (ptr = client->value) )
+      {
+	  domain = strdup(ptr);
+    	  client->command (client, "subst", "netcfg/confirm_static_cfg", "domain",
+		  domain, NULL);
+      }
 
       client->command (client, "input", "critical", "netcfg/get_ipaddress",
 		       NULL);
       client->command (client, "go", NULL);
       client->command (client, "get", "netcfg/get_ipaddress", NULL);
-      ptr = client->value;
-      dot2num (&ipaddress, ptr);
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		       "ipaddress", ptr, NULL);
-
+      
+      if ( (ptr = client->value) ) {
+	  dot2num (&ipaddress, ptr);
+	  client->command (client, "subst", "netcfg/confirm_static_cfg",
+		  "ipaddress", ptr, NULL);
+      }
 
       client->command (client, "input", "critical", "netcfg/get_netmask",
 		       NULL);
       client->command (client, "go", NULL);
       client->command (client, "get", "netcfg/get_netmask", NULL);
-      ptr = client->value;
-      dot2num (&netmask, ptr);
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
+      
+      if ( (ptr = client->value) )
+      {
+	  dot2num (&netmask, ptr);
+	  client->command (client, "subst", "netcfg/confirm_static_cfg",
 		       "netmask", ptr, NULL);
-
+      }
+      
       network_address = ipaddress & netmask;
       num2dot(network_address, address_buf);
       client->command (client, "subst", "netcfg/confirm_static_cfg",
@@ -145,31 +152,37 @@ get_static_cfg (void)
 		       NULL);
       client->command (client, "go", NULL);
       client->command (client, "get", "netcfg/get_gateway", NULL);
-      ptr = client->value;
-      dot2num (&ipaddress, ptr);
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-		       "gateway", ptr, NULL);
-
+      
+      if ( (ptr = client->value) ) {
+	  dot2num (&ipaddress, ptr);
+	  client->command (client, "subst", "netcfg/confirm_static_cfg",
+		  "gateway", ptr, NULL);
+      }
 
       client->command (client, "input", "critical", "netcfg/get_nameservers",
 		       NULL);
       client->command (client, "go", NULL);
       client->command (client, "get", "netcfg/get_nameservers", NULL);
-      ptr = strdup(client->value);
-
-      ns = strtok(ptr, " ");
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-	      "primary_DNS", ns, NULL);
-
-      ns = strtok(NULL, " ");
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-	      "secondary_DNS", ns, NULL);
-      ns = strtok(NULL, " ");
-      client->command (client, "subst", "netcfg/confirm_static_cfg",
-	      "tertiary_DNS", ns, NULL);
-
-      free(ptr);
+      
      
+      if ( (ptr = client->value) ) {
+
+	  ptr  = strdup(ptr);
+	  ns1 = strtok(ptr, " ");
+	  ns2 = strtok(NULL, " ");
+	  ns3 = strtok(NULL, " ");
+	  
+	  if (ns1!=NULL)
+	      client->command (client, "subst", "netcfg/confirm_static_cfg",
+		      "primary_DNS", ns1, NULL);
+	  if (ns2!=NULL)
+	      client->command (client, "subst", "netcfg/confirm_static_cfg",
+		      "secondary_DNS", ns2, NULL);
+	  if (ns3!=NULL)
+	      client->command (client, "subst", "netcfg/confirm_static_cfg",
+		      "tertiary_DNS", ns3, NULL);
+	  free (ptr);
+      } 
       
       client->command (client, "input", "high", "netcfg/confirm_static_cfg",
 		       NULL);
