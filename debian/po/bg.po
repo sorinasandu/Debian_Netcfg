@@ -16,12 +16,12 @@ msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-30 12:33+0300\n"
+"PO-Revision-Date: 2004-07-08 14:29+0300\n"
 "Last-Translator: Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
 "Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -555,6 +555,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Вашата мрежа вероятно не използва протокола DHCP. Възможно е DHCP сървърът да е бавен или някой мрежов хардуер да не работи правилно."
 
 #. Type: boolean
 #. Description
@@ -565,7 +566,6 @@ msgstr "Продължаване без подразбиращ се маршру
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -575,9 +575,8 @@ msgid ""
 msgstr ""
 "Автоматичната мрежова настройка е успешна. Обаче не е зададен подразбиращ се "
 "маршрут (default route): системата не знае как да общува с хостове в "
-"Интернет. Това ще направи невъзможно продължаването на инсталацията, освен "
-"ако имате всички нужни Debian пакети в локалната мрежа или на локален "
-"носител, като например компактдиск."
+"Интернет. Това ще направи невъзможно продължаването на инсталацията освен "
+"ако имате първия официален Debian компактдиск, компактдиск 'Netinst' или пакети, налични в локалната мрежа."
 
 #. Type: boolean
 #. Description
@@ -586,6 +585,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Ако не сте сигурен, не трябва да продължавате без подразбиращ се маршрут (default rout): свържете се с Вашия мрежов администратор относно този проблем."
 
 #. Type: text
 #. Description
