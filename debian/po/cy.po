@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 11:39+0100\n"
-"PO-Revision-Date: 2004-03-08 18:33+0000\n"
+"PO-Revision-Date: 2004-03-30 21:16+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "MIME-Version: 1.0\n"
@@ -26,14 +26,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Yn cyflunio'r rhwydwaith efo DHCP"
+msgstr "Cyflunio'r rhwydwaith efo DHCP yn awtomatig"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -44,8 +42,7 @@ msgstr ""
 "Gellir cyflunio rhwydweithio un ai drwy DHCP neu gan rhoi'r holl wybodaeth â "
 "llaw. Os ydych chi'n dewis DHCP ond dyw'r sefydlydd yn methu cyrchu "
 "cyfluniad sy'n gweithio o weinydd DHCP ar eich rhwydwaith, cewch gyfle i "
-"gyflunio eith rhwydwaith â llaw ar ôl ceisio ei gyflunio drwy DHCP. Os nad "
-"ydych chi'n siwr, dewiswch DHCP."
+"gyflunio eith rhwydwaith â llaw ar ôl ceisio ei gyflunio drwy DHCP."
 
 #. Type: string
 #. Description
@@ -298,13 +295,14 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Rhwydwaith is-strwythur (Rheoledig), Rhwydwaith ad-hoc "
+"(Cydradd-at-Gydradd)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Math rhwydwaith diwifren:"
 
 #. Type: select
 #. Description
@@ -314,6 +312,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
 msgstr ""
+"Mae rhwydweithiau diwidfren un ai yn rheoledig neu'n ad-hoc. Os ydych chi'n "
+"defnyddio pwynt mynediad go iawn o rhyw fath, mae'ch rhwydwaith yn "
+"Rheoledig. Os mai rhyw gyfrifiadur arall yw eich 'pwynt mynediad', mae'ch "
+"rhwydwaith yn Ad-hoc."
 
 #. Type: text
 #. Description
