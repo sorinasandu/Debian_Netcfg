@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-12 11:03+0100\n"
+"POT-Creation-Date: 2003-12-13 11:31-0500\n"
 "PO-Revision-Date: 2003-11-07 15:16+0200\n"
 "Last-Translator: Tommi Vainikainen <thv+debian@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -40,11 +40,11 @@ msgstr "DHCP-verkkoasetukset"
 #. Description
 #: ../netcfg-common.templates:5
 msgid ""
-"Networking can either be configure by DHCP or by manually entering all the "
-"information. If you choose DHCP and debian-installer is unable to get a "
-"working configuration from a DHCP Server on you network you will be offered "
-"to configure your network manually after the atempt to configure it by DHCP. "
-"If unsure choose DHCP."
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
 msgstr ""
 
 #. Type: string
@@ -70,8 +70,9 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-msgid "Name servers addresses:"
-msgstr ""
+#, fuzzy
+msgid "Name server addresses:"
+msgstr "Valitse DNS-palvelinten osoitteet"
 
 #. Type: string
 #. Description
@@ -136,10 +137,11 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
-"administrator.  If you are setting up your own home network, you can make "
+"administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
 "Isäntänimi on yksittäinen erisnimi, jolla verkko tunnistaa järjestelmäsi.  "
@@ -162,10 +164,11 @@ msgstr "Isäntänimi \"${hostname}\" ei kelpaa."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
+#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
-"sign, be between 2 and 63 characters long, and cannot begin or end with a "
-"minus sign."
+"sign. If must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
 msgstr ""
 "Kelvollinen isäntänimi voi sisältää vain alfanumeerisia ja miinusmerkkejä, "
 "on pituudeltaan kahden ja 63 merkin välillä ja ei voi alkaa tai loppua "
@@ -209,8 +212,8 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:71
 msgid ""
-"You may need to load a specific module for your network card, if you really "
-"own one. For this, go back to the network hardware detection step."
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
 msgstr ""
 
 #. Type: text
@@ -252,7 +255,8 @@ msgstr "Sarjalinja-IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-msgid "Parallel-line IP"
+#, fuzzy
+msgid "Parallel-port IP"
 msgstr "Rinnakkaislinja-IP"
 
 #. Type: text
@@ -415,7 +419,7 @@ msgstr "DHCP-verkkoasetukset"
 #: ../netcfg-dhcp.templates:39
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. In this case you can retry."
+"are sometimes really slow. If you wish, you can retry."
 msgstr ""
 
 #. Type: text
@@ -584,9 +588,6 @@ msgstr "Aseta verkko DHCP:lla"
 
 #~ msgid "Choose the domain name."
 #~ msgstr "Valitse toimialueesi nimi."
-
-#~ msgid "Choose the DNS Server Addresses"
-#~ msgstr "Valitse DNS-palvelinten osoitteet"
 
 #~ msgid "Choose an interface."
 #~ msgstr "Valitse sovitin."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-12 11:03+0100\n"
+"POT-Creation-Date: 2003-12-13 11:31-0500\n"
 "PO-Revision-Date: 2003-11-18 07:16+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
@@ -40,11 +40,11 @@ msgstr "Nastavení sítì pøes DHCP"
 #. Description
 #: ../netcfg-common.templates:5
 msgid ""
-"Networking can either be configure by DHCP or by manually entering all the "
-"information. If you choose DHCP and debian-installer is unable to get a "
-"working configuration from a DHCP Server on you network you will be offered "
-"to configure your network manually after the atempt to configure it by DHCP. "
-"If unsure choose DHCP."
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
 msgstr ""
 
 #. Type: string
@@ -69,7 +69,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-msgid "Name servers addresses:"
+#, fuzzy
+msgid "Name server addresses:"
 msgstr "Adresy jmenných serverù:"
 
 #. Type: string
@@ -132,10 +133,11 @@ msgstr "Zadejte jméno tohoto poèítaèe."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
-"administrator.  If you are setting up your own home network, you can make "
+"administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
 "Jméno poèítaèe je jednoslovný název, který identifikuje vá¹ systém v síti. "
@@ -157,10 +159,11 @@ msgstr "Jméno poèítaèe \"${hostname}\" je neplatné."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
+#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
-"sign, be between 2 and 63 characters long, and cannot begin or end with a "
-"minus sign."
+"sign. If must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
 msgstr ""
 "Název poèítaèe smí obsahovat pouze alfanumerické znaky a znaménko mínus, "
 "musí být v rozmezí 2 a 63 znakù a nesmí zaèínat nebo konèit znaménkem mínus."
@@ -201,9 +204,10 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
+#, fuzzy
 msgid ""
-"You may need to load a specific module for your network card, if you really "
-"own one. For this, go back to the network hardware detection step."
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
 msgstr ""
 "Pokud opravdu máte sí»ovou kartu, je mo¾né, ¾e jste pro ni je¹tì nenahráli "
 "modul. Vra»te se zpìt na krok rozpoznání sí»ového hardwaru."
@@ -247,7 +251,8 @@ msgstr "Serial-line IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-msgid "Parallel-line IP"
+#, fuzzy
+msgid "Parallel-port IP"
 msgstr "Parallel-line IP"
 
 #. Type: text
@@ -407,7 +412,7 @@ msgstr "Nastavení sítì pøes DHCP"
 #: ../netcfg-dhcp.templates:39
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. In this case you can retry."
+"are sometimes really slow. If you wish, you can retry."
 msgstr ""
 
 #. Type: text

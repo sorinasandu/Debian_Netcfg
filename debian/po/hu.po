@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-12 11:03+0100\n"
+"POT-Creation-Date: 2003-12-13 11:31-0500\n"
 "PO-Revision-Date: 2003-12-09 12:49+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian\n"
@@ -39,11 +39,11 @@ msgstr "DHCP hálózati konfiguráció"
 #. Description
 #: ../netcfg-common.templates:5
 msgid ""
-"Networking can either be configure by DHCP or by manually entering all the "
-"information. If you choose DHCP and debian-installer is unable to get a "
-"working configuration from a DHCP Server on you network you will be offered "
-"to configure your network manually after the atempt to configure it by DHCP. "
-"If unsure choose DHCP."
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
 msgstr ""
 
 #. Type: string
@@ -69,7 +69,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-msgid "Name servers addresses:"
+#, fuzzy
+msgid "Name server addresses:"
 msgstr "Névszolgáltatók címei:"
 
 #. Type: string
@@ -133,10 +134,11 @@ msgstr "Adja meg a rendszer gépnevét."
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
-"administrator.  If you are setting up your own home network, you can make "
+"administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
 "A gépnév egy szóból áll, és a hálózaton belül azonosítja a rendszert. Ha nem "
@@ -159,10 +161,11 @@ msgstr "A gépnév (\"${hostname}\") érvénytelen."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
+#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
-"sign, be between 2 and 63 characters long, and cannot begin or end with a "
-"minus sign."
+"sign. If must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
 msgstr ""
 "Egy érvényes gépnévek csak alfanumerikus karakterekből és a mínuszjelből "
 "áll, legalább 2, legfeljebb 63 karakter hosszú, és mínuszjel se az elején, "
@@ -204,9 +207,10 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
+#, fuzzy
 msgid ""
-"You may need to load a specific module for your network card, if you really "
-"own one. For this, go back to the network hardware detection step."
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
 msgstr ""
 "Ha tényleg van hálózati kártyája, akkor a számára esetleg egy külön "
 "meghajtómodult kell betöltenie. Ehhez menjen vissza a hálózatihardver-"
@@ -251,7 +255,8 @@ msgstr "Soros vonali·IP (SLIP)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-msgid "Parallel-line IP"
+#, fuzzy
+msgid "Parallel-port IP"
 msgstr "Párhuzamos vonali IP (PLIP)"
 
 #. Type: text
@@ -413,7 +418,7 @@ msgstr "DHCP hálózati konfiguráció"
 #: ../netcfg-dhcp.templates:39
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
-"are sometimes really slow. In this case you can retry."
+"are sometimes really slow. If you wish, you can retry."
 msgstr ""
 
 #. Type: text
