@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 18:27+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -426,8 +426,6 @@ msgstr "这些信息正确吗？"
 msgid "Currently configured network parameters:"
 msgstr "当前配置的网络参数："
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -472,26 +470,56 @@ msgstr "没有找到 DHCP 客户程序。需要安装 pump 或者 dhcp-client。
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 配置过程被中止。"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "要重试 DHCP 网络配置吗？"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "静态网络设置"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "动态网络配置(DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "网络设置"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "网络设置"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "静态网络设置"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"在 DHCP 网络配置过程中没有找到 IP 地址。DHCP 服务器有时非常慢，如果您希望，可"
-"以重试。"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用动态地址(DHCP)配置网络"
 
@@ -604,8 +632,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "也许您输入的 IP 地址、网络掩码和/或网关有误。"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -633,11 +659,16 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "动态网络配置(DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "要重试 DHCP 网络配置吗？"
 
-#~ msgid "Static network configuration"
-#~ msgstr "静态网络设置"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "在 DHCP 网络配置过程中没有找到 IP 地址。DHCP 服务器有时非常慢，如果您希"
+#~ "望，可以重试。"
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC 卡(PCMCIA)以太网或令牌环网"

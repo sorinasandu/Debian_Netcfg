@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 09:38+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Librezale <eu@librezale.org>\n"
@@ -443,8 +443,6 @@ msgstr "Informazioa hau ondo dago?"
 msgid "Currently configured network parameters:"
 msgstr "Une honetan konfiguratutako sare parametroak:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -490,27 +488,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP konfigurazio prozesua ezeztatu egingo da."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP sare konfigurazioaz berriz saiatzea nahi duzu?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Sare konfigurazio tinkoa"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Sare Konfigurazio Dinamikoa (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Sarea konfiguratu"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Sarea konfiguratu"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Sare konfigurazio tinkoa"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
-"DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
-"ebrriz saia zaitezke."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sarea helbide dinamikoak (DHCP) erabiliaz konfiguratu"
 
@@ -630,8 +657,6 @@ msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo atebia "
 "sartzerakoan."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -659,11 +684,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Sare Konfigurazio Dinamikoa (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "DHCP sare konfigurazioaz berriz saiatzea nahi duzu?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Sare konfigurazio tinkoa"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
+#~ "DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
+#~ "ebrriz saia zaitezke."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet edo Token Ring"

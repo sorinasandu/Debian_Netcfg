@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-26 23:30+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -464,8 +464,6 @@ msgstr "¿Es esta información correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Parámetros de red configurados hasta el momento:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -512,27 +510,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "La configuración con DHCP se abortará."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Configuración estática de la red"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Configuración de red dinámica (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Configurar la red"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Ahora se configurará su red."
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Método para configuración de red:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"No se ha conseguido ninguna dirección IP durante la configuración de la red "
-"por DHCP. Los servidores DHCP son, a veces, realmente lentos. Si lo desea, "
-"puede reintentarlo."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurar la red usando direccionamiento dinámico (DHCP)"
 
@@ -654,8 +681,6 @@ msgstr ""
 "Puede haberse equivocado al introducir la dirección IP, máscara de red y/o "
 "pasarela."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -683,11 +708,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configurar la red usando direccionamiento estático"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configuración de red dinámica (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "¿Quiere reintentar una configuración de red mediante DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Configuración estática de la red"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "No se ha conseguido ninguna dirección IP durante la configuración de la "
+#~ "red por DHCP. Los servidores DHCP son, a veces, realmente lentos. Si lo "
+#~ "desea, puede reintentarlo."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"
@@ -712,9 +743,6 @@ msgstr "Configurar la red usando direccionamiento estático"
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr ""
 #~ "Direccionamiento dinámico (DHCP), direccionamiento estático (manual)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Método para configuración de red:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "Error mientras se activaba la red"
@@ -759,9 +787,6 @@ msgstr "Configurar la red usando direccionamiento estático"
 
 #~ msgid "No dhcp client found. I cannot continue."
 #~ msgstr "No se encontró un cliente de DHCP. No se puede proseguir."
-
-#~ msgid "I will now configure the network."
-#~ msgstr "Ahora se configurará su red."
 
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tools_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-01-10 20:50+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -423,8 +423,6 @@ msgstr "هل هذه المعلومات صحيحة؟"
 msgid "Currently configured network parameters:"
 msgstr "متغيّرات الشبكة المعدّة حالياً:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -469,27 +467,56 @@ msgstr "لم يوجد أي مستفيد DHCP. تتطلب هذه الحزمة pum
 msgid "The DHCP configuration process will be aborted."
 msgstr "عملية الإعداد بواسطة DHCP سيتم إجهاضها."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "هل تريد إعادة محاولة إعداد الشبكة بواسطة DHCP؟"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
 #, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "إعداد الشبكة الثابت"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "إعداد الشبكة الديناميكي (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "أعدّ الشبكة"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "أعدّ الشبكة"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "طريقة إعداد الشبكة:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP "
-"بعض الأحيان بطيئة. إن رغبت، يمكنك إعادة المحاولة."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "أعدّ الشبكة باستخدام العنونة الديناميكية (DHCP)"
 
@@ -604,8 +631,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "قد تكون قمت بخطأ بإدخال عنوان IP، قناع الشبكة و/أو البوابة."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -633,11 +658,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "إعداد الشبكة الديناميكي (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "هل تريد إعادة محاولة إعداد الشبكة بواسطة DHCP؟"
 
-#~ msgid "Static network configuration"
-#~ msgstr "إعداد الشبكة الثابت"
+#, fuzzy
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP "
+#~ "بعض الأحيان بطيئة. إن رغبت، يمكنك إعادة المحاولة."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
@@ -660,9 +691,6 @@ msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "العنونة الديناميكية (DHCP)، العنونة الثابتة (يدوي)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "طريقة إعداد الشبكة:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "حدث خطأ خلال تنشيط الشبكة"

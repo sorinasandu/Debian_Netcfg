@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 17:56+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -478,8 +478,6 @@ msgstr "Zijn deze gegevens correct?"
 msgid "Currently configured network parameters:"
 msgstr "Momenteel ingestelde netwerkparameters:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -526,29 +524,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Het DHCP-configuratieproces wordt afgebroken."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Wilt u de DHCP-netwerkconfiguratie opnieuw proberen?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Statische netwerkconfiguratie"
 
-#  Type: boolean
-#  Description
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Dynamische netwerkconfiguratie (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Het netwerk configureren"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Het netwerk configureren"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Statische netwerkconfiguratie"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"De automatische netwerkconfiguratie (d.m.v. DHCP) heeft geen IP-adres "
-"verkregen. DHCP-servers zijn soms erg traag. U kunt later eventueel opnieuw "
-"proberen."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Netwerk instellen met dynamische adressen (DHCP)"
 
@@ -676,8 +701,6 @@ msgstr ""
 "U heeft mogelijk een fout gemaakt bij het invoeren van uw IP-adres, "
 "netwerkmasker en/of gateway."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -705,11 +728,19 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Netwerk instellen met statische adressen"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamische netwerkconfiguratie (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Wilt u de DHCP-netwerkconfiguratie opnieuw proberen?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Statische netwerkconfiguratie"
+#  Type: boolean
+#  Description
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "De automatische netwerkconfiguratie (d.m.v. DHCP) heeft geen IP-adres "
+#~ "verkregen. DHCP-servers zijn soms erg traag. U kunt later eventueel "
+#~ "opnieuw proberen."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet of Tokenring"

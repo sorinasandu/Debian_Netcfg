@@ -29,7 +29,7 @@ Template: netcfg/dhcp_retry
 Type: select
 __Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, Do not configure the network at this time
 Default: Retry network autoconfiguration
-_Description: Do you want to retry network autoconfiguration?
+_Description: Next network configuration step:
  Network autoconfiguration failed. This is typically due to a slow DHCP
  server on the network, so you probably want to try again. You may also
  specify a DHCP hostname to send to the server if you think it needs one.

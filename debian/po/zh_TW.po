@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-14 18:34-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-11 09:57+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
@@ -78,10 +78,11 @@ msgid ""
 "spaces. Do not use commas. The first name server in the list will be the "
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
-msgstr "名稱伺服器 (Name Server) 是用來在網路上搜尋主機名稱 (Host Name)。"
-"請以空格分隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。"
-"在進行查詢時將優先使用列表中的第一個名稱伺服器。如果您不想用任何名"
-"稱伺服器，直接在欄位中留白即可。"
+msgstr ""
+"名稱伺服器 (Name Server) 是用來在網路上搜尋主機名稱 (Host Name)。請以空格分"
+"隔，不要使用逗號，輸入最多三個名稱伺服器的 IP 位址 (不是主機名稱)。在進行查詢"
+"時將優先使用列表中的第一個名稱伺服器。如果您不想用任何名稱伺服器，直接在欄位"
+"中留白即可。"
 
 #. Type: select
 #. Description
@@ -128,7 +129,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"如果適用的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。有兩種方法可以採用："
+"如果適用的話，請輸入無線裝置 ${iface} 裝置的 WEP 安全密鑰。有兩種方法可以採"
+"用："
 
 #. Type: string
 #. Description
@@ -330,132 +332,102 @@ msgstr "網路卡或高速網路卡"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:137
-msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "PC-Card (PCMCIA) 網路卡或 Token Ring"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:141
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:141
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:145
 msgid "Serial-line IP"
 msgstr "Serial-line IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:149
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:153
 msgid "Point-to-Point Protocol"
 msgstr "點對點通訊協定 (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:157
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:161
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 點對點通訊協定"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:165
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:169
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:173
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:177
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:181
 msgid "Unknown interface"
 msgstr "不明介面"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:186
 msgid "Configuring network ..."
 msgstr "正在設定網路 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:191
 msgid "Configure the network"
 msgstr "設定網路"
 
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "DHCP hostname:"
-msgstr "DHCP 主機名稱："
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid ""
-"You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here."
-msgstr ""
-"您可能需要提供一個 DHCP 主機名稱。如果您所使用的是 cable modem，可能還得在此"
-"指定一個帳號。"
-
-#. Type: string
-#. Description
-#: ../netcfg-dhcp.templates:3
-msgid "Most other users can just leave this blank."
-msgstr "其他大多數的使用者可以在此直接留白。"
-
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Is this information correct?"
 msgstr "這些資訊是否正確？"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+#: ../netcfg-dhcp.templates:4 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
 msgstr "目前所設定的網路參數："
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:12
+#: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -471,61 +443,84 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:15
 msgid "Configuring the network with DHCP"
 msgstr "使用 DHCP 來設定網路"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:27
+#: ../netcfg-dhcp.templates:19
 msgid "This may take some time."
 msgstr "這也許會花上一些時間。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
 msgstr "找不到 DHCP 客戶端"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "找不到 DHCP 客戶端。這個套件需要安裝 pump 或者 dhcp-client。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 的網路設定程序將被中止。"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:39
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "您想要重新嘗試由 DHCP 來設定網路嗎？"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "靜態網路設定"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:39
-msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
-msgstr ""
-"在藉由 DHCP 來自動設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常慢，"
-"如果您希望的話可以重新嘗試。"
-
-#. Type: text
-#. Description
-#. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
-msgid "Dynamic network configuration (DHCP)"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "動態網路設定 (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "設定網路"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "設定網路"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "網路設定方式："
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+msgid ""
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
+msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用動態位址 (DHCP) 來設定網路"
 
@@ -640,8 +635,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -664,26 +657,43 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. Title displayed when configuring this package
-#: ../netcfg-static.templates:68
-msgid "Static network configuration"
-msgstr "靜態網路設定"
-
-#. Type: text
-#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:73
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "使用靜態位址來設定網路"
+
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "您想要重新嘗試由 DHCP 來設定網路嗎？"
+
+#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+#~ msgstr "PC-Card (PCMCIA) 網路卡或 Token Ring"
+
+#~ msgid "DHCP hostname:"
+#~ msgstr "DHCP 主機名稱："
+
+#~ msgid ""
+#~ "You may need to supply a DHCP host name. If you are using a cable modem, "
+#~ "you might need to specify an account number here."
+#~ msgstr ""
+#~ "您可能需要提供一個 DHCP 主機名稱。如果您所使用的是 cable modem，可能還得在"
+#~ "此指定一個帳號。"
+
+#~ msgid "Most other users can just leave this blank."
+#~ msgstr "其他大多數的使用者可以在此直接留白。"
+
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "在藉由 DHCP 來自動設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常"
+#~ "慢，如果您希望的話可以重新嘗試。"
 
 #~ msgid "Network Configuration"
 #~ msgstr "網路設定"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "動態位址 (DHCP), 靜態位址 (手動設定)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "網路設定方式："
 
 #~ msgid "Error while activating the network"
 #~ msgstr "在啟動網路時發生錯誤"

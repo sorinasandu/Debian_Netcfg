@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-16 01:19+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
@@ -445,8 +445,6 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -493,27 +491,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "A DHCP-konfiguráció folyamata megszakad."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Újra megpróbálja a hálózat DHCP-vel konfigurálását?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Statikus hálózatkonfigurálás"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Hálózat konfigurálása"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Hálózat konfigurálása"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Hálózat konfigurálásának módja:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"A hálózat DHCP-vel konfigurálása nem eredményezett használható IP-címet. "
-"Esetenként erre a DHCP-kiszolgálók lassúsága a magyarázat. Ha gondolja, "
-"próbálkozzon újra."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "A hálózat konfigurálása dinamikus címzéssel (DHCP)"
 
@@ -633,8 +660,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -662,11 +687,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Hálózat konfigurálása statikus címzéssel"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Újra megpróbálja a hálózat DHCP-vel konfigurálását?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Statikus hálózatkonfigurálás"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "A hálózat DHCP-vel konfigurálása nem eredményezett használható IP-címet. "
+#~ "Esetenként erre a DHCP-kiszolgálók lassúsága a magyarázat. Ha gondolja, "
+#~ "próbálkozzon újra."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet vagy Token Ring"
@@ -689,9 +720,6 @@ msgstr "Hálózat konfigurálása statikus címzéssel"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Dinamikus címzés (DHCP), Statikus címzés (kézzel)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Hálózat konfigurálásának módja:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "Hiba a hálózat felélesztése közben"

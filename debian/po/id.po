@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-18 22:31+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian L10n Indonesia <debiian-l10n-id@gurame.fisika.ui.ac."
@@ -433,8 +433,6 @@ msgstr "Apakah keterangan ini benar?"
 msgid "Currently configured network parameters:"
 msgstr "Parameter konfigurasi jaringan saat ini: "
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -481,27 +479,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Proses konfigurasi DHCP akan dibatalkan."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Anda ingin mengulangi konfigurasi jaringan dengan DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Konfigurasi jaringan statis"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Mengkonfigurasi jaringan"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Mengkonfigurasi jaringan"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Konfigurasi jaringan statis"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Tidak ada alamat IP yang ditemukan saat melakukan konfigurasi jaringan "
-"secara otomatis dengan DHCP. Server DHCP kadangkala sangat lambat. Anda "
-"dapat mengulangi lagi."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Melakukan konfigurasi jaringan dengan DHCP."
 
@@ -622,8 +649,6 @@ msgstr ""
 "Anda mungkin melakukan kesalahan dalam memasukkan alamat IP, netmask dan/"
 "atau gerbang."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -651,11 +676,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Konfigurasi Jaringan Dinamis (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Anda ingin mengulangi konfigurasi jaringan dengan DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Konfigurasi jaringan statis"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Tidak ada alamat IP yang ditemukan saat melakukan konfigurasi jaringan "
+#~ "secara otomatis dengan DHCP. Server DHCP kadangkala sangat lambat. Anda "
+#~ "dapat mengulangi lagi."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet atau Token Ring"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-21 01:16+0200\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-russian@lists.debian.org>\n"
@@ -451,8 +451,6 @@ msgstr "Эта информация верна?"
 msgid "Currently configured network parameters:"
 msgstr "Текущие сетевые настройки:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -499,26 +497,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Процесс настройки по DHCP был прерван."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Хотите попробовать повторную настройку по DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Настройка статического адреса"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Настройка динамического адреса (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Настроить сеть"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Настроить сеть"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Настройка статического адреса"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Не было получено IP-адреса во время настройки по DHCP. DHCP сервера иногда "
-"бывают очень медленными. Если хотите, можете попробовать ещё раз."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Настройка сети с использованием динамической адресации (DHCP)"
 
@@ -639,8 +667,6 @@ msgid ""
 msgstr ""
 "Вы могли ошибиться при вводе вашего IP-адреса, маски подсети и/или шлюза."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -668,6 +694,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
 
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Хотите попробовать повторную настройку по DHCP?"
+
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Не было получено IP-адреса во время настройки по DHCP. DHCP сервера "
+#~ "иногда бывают очень медленными. Если хотите, можете попробовать ещё раз."
+
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
 
@@ -684,9 +721,3 @@ msgstr "Настройка сети со статической адресаци
 
 #~ msgid "Most other users can just leave this blank."
 #~ msgstr "В большинстве других случаев можете оставить поле пустым."
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Настройка динамического адреса (DHCP)"
-
-#~ msgid "Static network configuration"
-#~ msgstr "Настройка статического адреса"

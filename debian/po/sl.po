@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-22 21:41+0100\n"
 "Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -470,8 +470,6 @@ msgstr "Ali so te informacije pravilne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutne nastavitve omrežja:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -517,28 +515,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Proces DHCP nastavitve bo prekinjen."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Ali želite ponovno poskusiti z DHCP mrežno nastavitvijo?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Statične mrežne nastavitve"
 
-#  Type: boolean
-#  Description
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Dinamična nastavitev omrežja (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Nastavi omrežje"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Nastavi omrežje"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Statične mrežne nastavitve"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Noben IP naslov ni bil ponujen med DHCP mrežno nastavitvijo. DHCP strežniki "
-"so včasih resnično počasni. Če želite lahko poskusite ponovno."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Nastavi omrežje z uporabo dinamičnega naslavljanja (DHCP)"
 
@@ -661,8 +687,6 @@ msgid ""
 msgstr ""
 "Verjetno ste se zmotili pri vnosu naslova IP, omrežne maske in/ali prehoda."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -690,11 +714,18 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Nastavi omrežje z uporabo statičnega naslavljanja"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dinamična nastavitev omrežja (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Ali želite ponovno poskusiti z DHCP mrežno nastavitvijo?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Statične mrežne nastavitve"
+#  Type: boolean
+#  Description
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Noben IP naslov ni bil ponujen med DHCP mrežno nastavitvijo. DHCP "
+#~ "strežniki so včasih resnično počasni. Če želite lahko poskusite ponovno."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet ali Token Ring"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 11:19+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -444,8 +444,6 @@ msgstr "この情報で正しいですか?"
 msgid "Currently configured network parameters:"
 msgstr "現在設定されているネットワークパラメータ:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -492,26 +490,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 設定プロセスが中断されました。"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP ネットワーク設定を再試行しますか?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "静的ネットワークの設定"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "動的ネットワークの設定 (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "ネットワークの設定"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "ネットワークの設定"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "静的ネットワークの設定"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"IP アドレスが DHCP による自動ネットワーク設定中に発見されませんでした。DHCP "
-"サーバはときにとても遅いことがあります。望むなら、再試行できます。"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "動的アドレス (DHCP) を利用してネットワークを設定"
 
@@ -632,8 +660,6 @@ msgstr ""
 "入力された IP アドレス、ネットマスク、ゲートウェイのどこかにエラーがありま"
 "す。"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -661,11 +687,16 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "動的ネットワークの設定 (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "DHCP ネットワーク設定を再試行しますか?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "静的ネットワークの設定"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "IP アドレスが DHCP による自動ネットワーク設定中に発見されませんでした。"
+#~ "DHCP サーバはときにとても遅いことがあります。望むなら、再試行できます。"
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC カード (PCMCIA) Ethernet または Token Ring"

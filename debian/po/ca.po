@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-14 02:01+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -439,8 +439,6 @@ msgstr "És aquesta informació correcta?"
 msgid "Currently configured network parameters:"
 msgstr "Paràmetres de la xarxa actualment configurada:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -486,26 +484,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "S'avortarà el procés de configuració per DHCP."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Voleu tornar a provar la configuració de la xarxa per DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Configuració de xarxa estàtica"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Configuració dinàmica de la xarxa (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Configura la xarxa"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Configura la xarxa"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Mètode de configuració de la xarxa:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"No s'ha trobat cap adreça IP durant la configuració de la xarxa per DHCP. A "
-"vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a provar."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura la xarxa utilitzant adreçament dinàmic (DHCP)"
 
@@ -628,8 +656,6 @@ msgstr ""
 "Pot ser heu comés un error en introduir la vostra adreça IP, màscara de "
 "xarxa i/o pasarel·la."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -657,11 +683,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configura una xarxa utilitzant adreçament estàtic"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configuració dinàmica de la xarxa (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Voleu tornar a provar la configuració de la xarxa per DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Configuració de xarxa estàtica"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "No s'ha trobat cap adreça IP durant la configuració de la xarxa per DHCP. "
+#~ "A vegades, els servidors DHCP són molt lents. Si voleu, podeu tornar a "
+#~ "provar."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "Ethernet PC-Card (PCMCIA) o Token Ring"
@@ -685,9 +717,6 @@ msgstr "Configura una xarxa utilitzant adreçament estàtic"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Adreçament dinàmic (DHCP), adreçament estàtic (manual)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Mètode de configuració de la xarxa:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "S'ha produït un error en activar la xarxa"

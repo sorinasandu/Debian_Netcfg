@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 11:45+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -438,8 +438,6 @@ msgstr "Er disse oplysninger korrekte?"
 msgid "Currently configured network parameters:"
 msgstr "Aktuel netværksopsætning:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -485,26 +483,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Opsætningen af DHCP afbrydes."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Vil du forsøge DHCP-netværksopsætningen igen?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Statisk netværksopsætning"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Dynamisk netværksopsætning (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Sæt netværket op"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Jeg vil nu sætte netværket op."
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Netværksopsætnings-metode:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Det blev ikke fundet nogen IP-adresse under DHCP-netværksopsætningen. DHCP-"
-"servere kan nogen gange være meget langsomme. Hvis du vil, kan du prøve igen."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Sæt nætværket op med dynamisk adressering (DHCP)"
 
@@ -624,8 +652,6 @@ msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -653,11 +679,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Sæt nætværket op med statisk adressering"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamisk netværksopsætning (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Vil du forsøge DHCP-netværksopsætningen igen?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Statisk netværksopsætning"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Det blev ikke fundet nogen IP-adresse under DHCP-netværksopsætningen. "
+#~ "DHCP-servere kan nogen gange være meget langsomme. Hvis du vil, kan du "
+#~ "prøve igen."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet eller Token Ring"
@@ -680,9 +712,6 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Dynamisk adressering (DHCP), statisk adressering (manuel)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Netværksopsætnings-metode:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "Fejl under aktivering af netværket"
@@ -732,9 +761,6 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "No dhcp client found. I cannot continue."
 #~ msgstr "Fandt ingen dhcp-klient. Kan ikke fortsætte."
-
-#~ msgid "I will now configure the network."
-#~ msgstr "Jeg vil nu sætte netværket op."
 
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-16 17:45+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -446,8 +446,6 @@ msgstr "Чи вірна ця інформація?"
 msgid "Currently configured network parameters:"
 msgstr "Поточні мережеві налаштовування:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -493,26 +491,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "Процес налаштовування DHCP було перервано."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Чи бажаєте ви повторити конфігурацію DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Налаштовування статичної адреси"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Налаштовування динамічної адреси (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Налаштувати мережу"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Налаштувати мережу"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Спосіб налаштовування мережі:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"IP-адреса не була визначена в результаті налаштовування за допомогою DHCP. "
-"DHCP сервери іноді бувають дуже повільними. Можете повторити, якщо хочете."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Налаштувати мережу з використанням динамічної адреси (DHCP)"
 
@@ -634,8 +662,6 @@ msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
 "шлюзу."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -663,11 +689,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Налаштувати мережу із статичним адресуванням"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Налаштовування динамічної адреси (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Чи бажаєте ви повторити конфігурацію DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Налаштовування статичної адреси"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "IP-адреса не була визначена в результаті налаштовування за допомогою "
+#~ "DHCP. DHCP сервери іноді бувають дуже повільними. Можете повторити, якщо "
+#~ "хочете."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet або Token Ring"
@@ -691,9 +723,6 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Динамічна адреса (DHCP), Статична адреса (вручну)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Спосіб налаштовування мережі:"
 
 #~ msgid "Error while activating the network"
 #~ msgstr "Помилка під час активації мережі"

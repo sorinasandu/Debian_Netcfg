@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-05-11 15:47+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
@@ -446,8 +446,6 @@ msgstr "Czy podane informacje s± prawid³owe?"
 msgid "Currently configured network parameters:"
 msgstr "Aktualnie skonfigurowane parametry sieci:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -492,27 +490,55 @@ msgstr "Nie odnaleziono klienta DHCP. Ten pakiet wymaga pump lub dhcp-client."
 msgid "The DHCP configuration process will be aborted."
 msgstr "Proces konfiguracji DHCP zostanie przerwany."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Czy chcesz powtórzyæ konfiguracje sieci poprzez DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Konfiguracja sieci bezprzewodowej"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
-"¯aden adres IP nie zosta³ znaleziony podczas konfiguracji sieci poprzez "
-"DHCP. Serwery DHCP s± czasami bardzo wolne. Je¶li chcesz mo¿esz spróbowaæ "
-"ponownie."
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Konfiguruj sieæ"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Konfiguruj sieæ"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Konfiguracja sieci bezprzewodowej"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+msgid ""
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
+msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Konfiguruj sieæ za pomoc± dynamicznego adresowania (DHCP)"
 
@@ -631,8 +657,6 @@ msgid ""
 msgstr ""
 "Upewnij siê, ¿e wpisa³e¶ poprawny adres IP, maskê sieci i/lub bramê sieciow±."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -660,3 +684,14 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
 
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Czy chcesz powtórzyæ konfiguracje sieci poprzez DHCP?"
+
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "¯aden adres IP nie zosta³ znaleziony podczas konfiguracji sieci poprzez "
+#~ "DHCP. Serwery DHCP s± czasami bardzo wolne. Je¶li chcesz mo¿esz spróbowaæ "
+#~ "ponownie."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.58\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-15 23:02+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -436,8 +436,6 @@ msgstr "Le informazioni inserite sono corrette?"
 msgid "Currently configured network parameters:"
 msgstr "Parametri di rete attualmente configurati:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -484,27 +482,56 @@ msgstr ""
 msgid "The DHCP configuration process will be aborted."
 msgstr "La configurazione con DHCP verrà terminata."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Riprovare la configurazione della rete con DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Configurazione della rete con indirizzi statici"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Configurazione dinamica della rete (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Configura la rete"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Configura la rete"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Configurazione della rete con indirizzi statici"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Durante la configurazione automatica della rete con il DHCP non è stato "
-"assegnato alcun indirizzo IP. Talvolta i server DHCP sono veramente lenti. "
-"Volendo, si può riprovare."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configura la rete con indirizzamento dinamico (DHCP)"
 
@@ -625,8 +652,6 @@ msgstr ""
 "Si può aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
 "o il gateway."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -654,11 +679,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Configura la rete usando indirizzi statici"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configurazione dinamica della rete (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Riprovare la configurazione della rete con DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Configurazione della rete con indirizzi statici"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Durante la configurazione automatica della rete con il DHCP non è stato "
+#~ "assegnato alcun indirizzo IP. Talvolta i server DHCP sono veramente "
+#~ "lenti. Volendo, si può riprovare."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"

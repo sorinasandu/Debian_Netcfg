@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-04-09 17:30+0200\n"
 "Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -456,8 +456,6 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -502,26 +500,62 @@ msgstr "DHCP klijent nije pronađen. Ovaj paket zahtijeva pump ili dhcp-client."
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP konfiguracijski proces će biti obustavljen."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "Da li želite ponovo pokušati DHCP mrežnu konfiguraciju?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Statička konfiguracija mreže"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Dinamička konfiguracija mreže (DHCP)"
+
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Podesi mrežu"
+
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Podesi mrežu"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Statička konfiguracija mreže"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"IP adresa nije ponuđena tokom automatske mrežne konfiguracije pomoću DHCP-a. "
-"DHCP serveri su ponekad veoma spori. Ako želite, možete pokušati ponovo."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Podesi mrežu koristeći dinamično adresiranje (DHCP)"
 
@@ -639,8 +673,6 @@ msgstr ""
 "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili "
 "gatewaya."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -671,11 +703,17 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dinamička konfiguracija mreže (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "Da li želite ponovo pokušati DHCP mrežnu konfiguraciju?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Statička konfiguracija mreže"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "IP adresa nije ponuđena tokom automatske mrežne konfiguracije pomoću DHCP-"
+#~ "a. DHCP serveri su ponekad veoma spori. Ako želite, možete pokušati "
+#~ "ponovo."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "PC-Card (PCMCIA) Ethernet ili Token Ring"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-10 09:29-0700\n"
+"POT-Creation-Date: 2004-05-12 12:32+0200\n"
 "PO-Revision-Date: 2004-03-30 21:16+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
@@ -451,8 +451,6 @@ msgstr "Ydy'r wybodaeth hyn yn gywir?"
 msgid "Currently configured network parameters:"
 msgstr "Paramedrau rhwydwatih cyfluniedig cyfredol:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:4
 msgid ""
 " interface      = ${interface}\n"
@@ -497,26 +495,56 @@ msgstr "Ni chanfuwyd cleient DHCP. Mae'r pecyn yma angen pump neu dhcp-client."
 msgid "The DHCP configuration process will be aborted."
 msgstr "Caiff y proses cyfluniad DHCP ei erthylu."
 
-#. Type: boolean
-#. Description
-#: ../netcfg-dhcp.templates:31
-msgid "Do you want to retry DHCP network configuration?"
-msgstr "A hoffech ailgeisio cyfluniad rhwydwaith DHCP?"
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration"
+msgstr "Cyfluniad rhwydwaith statig"
 
-#. Type: boolean
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Configure network manually"
+msgstr "Cyflunio'r rhwydwaith"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+#, fuzzy
+msgid "Do not configure the network at this time"
+msgstr "Cyflunio'r rhwydwaith"
+
+#. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:32
+#, fuzzy
+msgid "Next network configuration step:"
+msgstr "Dull cyfluniad rhwydwaith:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"Network autoconfiguration failed. This is typically due to a slow DHCP "
+"server on the network, so you probably want to try again. You may also "
+"specify a DHCP hostname to send to the server if you think it needs one. "
+"Otherwise, you may configure the network manually, or choose not to "
+"configure it at all right now."
 msgstr ""
-"Ni chanfuwyd cyfeiriad IP yn ystod cyfluniad rhwydwaith DHCP. Weithiau, mae "
-"gweinyddion DHCP yn araf iawn. Os hoffech, gallwch ailgeisio."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Cyflunio'r rhwydwaith gan ddefnuddio cyfeiriadaeth deinamig (DHCP)"
 
@@ -639,8 +667,6 @@ msgstr ""
 "Efallai gwanethoch gamgymeriad yn rhoi eith cyfeiriad IP, masg rhwydwaith, "
 "neu fynedfa."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -668,11 +694,16 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
+#, fuzzy
+#~ msgid "Do you want to retry network autoconfiguration?"
+#~ msgstr "A hoffech ailgeisio cyfluniad rhwydwaith DHCP?"
 
-#~ msgid "Static network configuration"
-#~ msgstr "Cyfluniad rhwydwaith statig"
+#~ msgid ""
+#~ "No IP address was found during automatic network configuration with DHCP. "
+#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
+#~ msgstr ""
+#~ "Ni chanfuwyd cyfeiriad IP yn ystod cyfluniad rhwydwaith DHCP. Weithiau, "
+#~ "mae gweinyddion DHCP yn araf iawn. Os hoffech, gallwch ailgeisio."
 
 #~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 #~ msgstr "Cerdyn PC-Card (PCMCIA) Ethernet neu Token Ring"
@@ -695,6 +726,3 @@ msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
 
 #~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 #~ msgstr "Cyfeiriadaeth deinamig (DHCP), Cyfeiriadaeth statig (â llaw)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Dull cyfluniad rhwydwaith:"
