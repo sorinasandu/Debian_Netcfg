@@ -1,18 +1,24 @@
+# translation of debian-installer_packages_po.po to Arabic
 # Arabic messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: debian-installer_packages_po\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-26 03:36+0200\n"
-"PO-Revision-Date: 2004-08-24 20:27+0200\n"
-"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
-"Language-Team: Debian L10n Arabic <debian-l10n-arabic@lists.debian.org>\n"
+"PO-Revision-Date: 2004-08-30 23:50+0300\n"
+"Last-Translator: Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>\n"
+"Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3\n"
+"Plural-Forms: Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && "
+"n<=10 ? 2 : 3\n"
+"\n"
 
 #. Type: boolean
 #. Description
@@ -225,15 +231,14 @@ msgstr "الاسم \"${hostname}\" غير صالح."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"يمكن أن يحتوي اسم المضيف أحرفاً و أرقاماً و علامة السّالب فقط كي يكون صالحاً. "
-"كما يجب أن يكون طوله بين حرفين و 63 حرفاً، و ألّا يبدأ و لا ينتهي بعلامة "
-"السّالب."
+"اسم المضيف الصّحيح يمكنه أن يحتوي فقط الأرقام من 0 إلى 9 و الأحرف الصّغرى من a "
+"إلى z و علامة السّالب. يجب أيضاً أن يكون طوله بين حرفين و 63 حرفاً و لا يمكنه "
+"أن يبدأ أو ينتهي بعلامة السّالب."
 
 #. Type: error
 #. Description
@@ -278,9 +283,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "إعداد الشّبكة يدويّاً"
+msgstr "هل تريد تهيئة الشّبكة ساكنيّاً؟"
 
 #. Type: boolean
 #. Description
@@ -292,6 +296,10 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"لا يبدو أن ${IFACE} موصولةٌ لأي شبكةٍ من أي نوع. قد يكون هذا بسبب كابل شبكةٍ "
+"مفقود أو خللٍ في محوّل الشّبكة. يمكنك إمّا أن تترك إعداد الشّبكة حتّى تعاود "
+"الإقلاع إلى دبيان و تستخدم أداة etherconf أو يمكنك إعداد الشّبكة ساكنيّاً. "
+"يمكنك كذلك أن تعود و تختار واجهةً مختلفة."
 
 #. Type: select
 #. Choices
@@ -536,7 +544,6 @@ msgstr "طريقة إعداد الشّبكة:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -544,10 +551,10 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"من هنا يمكنك إعادة محاولة إعداد شبكة DHCP آليّاً (ممّا قد ينجح إن كان خادم DHCP "
-"يستغرق وقتاً طويلاً للاستجابة) أو يمكنك إعداد الشّبكة يدويّاً. بعض خادمات DHCP "
-"تتطلّب أن يرسل اسم مضيف DHCP إلى العميل لذا فيمكنك أيضاً إعادة محاولة إعداد "
-"شبكة DHCP تلقائيّاً مع إضافة اسم مضيفٍ."
+"من هنا يمكنك اختيار معاودة تجربة إعداد DHCP الآلي للشّبكة (ما قد ينجح إن كان "
+"خادم DHCP الخاص بك يستغرق وقتاً طويلاً للاستجابة) أو اختيار إعداد الشّبكة "
+"يدويّاً. بعض خوادم DHCP تتطلّب أن يرسل اسم مضيف DHCP من العميل، لذا فيمكنك "
+"اختيار إعادة تجربة إعداد DHCP الآلي للشّبكة مع اسم مضيفٍ تقوم أنت بتزويده."
 
 #. Type: note
 #. Description
