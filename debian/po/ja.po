@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-12-12 14:52+0900\n"
+"PO-Revision-Date: 2003-12-14 11:08+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,6 @@ msgstr "ネットワーク設定の方法:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose DHCP and the installer is unable to get a working "
@@ -49,7 +48,7 @@ msgstr ""
 "ネットワークは DHCP またはすべての情報を手動で入力のいずれでも設定できます。"
 "DHCP を選んだものの、インストーラがあなたのネットワークの DHCP サーバから設定"
 "を取得できないときには、DHCP の設定を試みたあとにあなたのネットワークを手動で"
-"設定するよう促されます。よくわからなければ、DHCP を選んでください。"
+"設定する機会があります。よくわからなければ、DHCP を選んでください。"
 
 #. Type: string
 #. Description
@@ -74,7 +73,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-#, fuzzy
 msgid "Name server addresses:"
 msgstr "ネームサーバアドレス:"
 
@@ -139,7 +137,6 @@ msgstr "このシステムのホスト名を入力してください。"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -166,7 +163,6 @@ msgstr "名前 \"${hostname}\" は無効です。"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:56
-#, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. If must be between 2 and 63 characters long, and may not begin or end "
@@ -210,7 +206,6 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:71
-#, fuzzy
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -258,9 +253,8 @@ msgstr "シリアルライン IP"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:104
-#, fuzzy
 msgid "Parallel-port IP"
-msgstr "パラレルライン IP"
+msgstr "パラレルポート IP"
 
 #. Type: text
 #. Description
@@ -415,13 +409,12 @@ msgstr "DHCP ネットワーク設定を再試行しますか?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "IP アドレスが DHCP ネットワーク設定中に提供されませんでした。もしかしたら "
-"DHCP が実際に遅いのかもしれません。この場合、再試行できます。"
+"DHCP が実際に遅いのかもしれません。望むなら、再試行できます。"
 
 #. Type: text
 #. Description
