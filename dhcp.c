@@ -14,7 +14,9 @@
 #include <sys/param.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
+#include <sys/ioctl.h>
 #include <arpa/inet.h>
+#include <net/if.h>
 #include <time.h>
 #include <netdb.h>
 
@@ -24,10 +26,8 @@ int dhcp_running = 0, dhcp_exit_status = 1;
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
 {
     if (dhcp_running == 1) {
-        di_info("in sighandler, PID = %d", dhcp_pid);
 	dhcp_running = 0;
 	wait(&dhcp_exit_status);
-	di_info("exited");
     }
 }
 
@@ -95,8 +95,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
   if ((dhcp_pid = fork()) == 0) /* child */
   {
-    di_info("in child, PID = %d", getpid());
-    
     /* get dhcp lease */
     switch (dhcp_client)
     {
@@ -159,7 +157,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
   }
   else
   {
-    di_info("in parent, PID = %d, child PID = %d", getpid(), dhcp_pid);
     dhcp_running = 1;
     signal(SIGCHLD, &dhcp_client_sigchld);
     return 0;
@@ -343,7 +340,29 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           if (gethostname(buf, sizeof(buf)) == 0 && strcmp(buf, "(none)") != 0)
             debconf_set(client, "netcfg/get_hostname", buf);
           else
-            seed_hostname_from_dns(client);
+	  {
+	    int skfd = socket(AF_INET, SOCK_DGRAM, 0);
+
+	    if (skfd)
+	    {
+	      struct ifreq ifr;
+	      struct in_addr d_ipaddr = { 0 };
+	      
+	      ifr.ifr_addr.sa_family = AF_INET;
+	      strncpy(ifr.ifr_name, interface, IFNAMSIZ);
+	      if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0)
+	      {
+		d_ipaddr = ((struct sockaddr_in *)&ifr.ifr_addr)->sin_addr;
+                seed_hostname_from_dns(client, &d_ipaddr);
+	      }
+	      else
+		di_error("ioctl failed (%s)", strerror(errno));
+
+	      close(skfd);
+	    }
+	    else
+	      di_error("skfd could not be allocated!");
+	  }
 
           state = HOSTNAME;
         }

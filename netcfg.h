@@ -76,6 +76,7 @@ extern int netcfg_get_domain(struct debconfclient *client,  char **domain);
 extern int netcfg_get_dhcp(struct debconfclient *client);
 
 extern int netcfg_get_static(struct debconfclient *client);
+extern int do_hostname_jig (struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);
 
@@ -104,6 +105,6 @@ extern void ifconfig_up (char*);
 extern void ifconfig_down (char*);
 
 extern void loop_setup(void);
-extern void seed_hostname_from_dns(struct debconfclient *client);
+extern void seed_hostname_from_dns(struct debconfclient *client, struct in_addr * ipaddress);
 
 #endif /* _NETCFG_H_ */

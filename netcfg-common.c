@@ -530,10 +530,8 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 }
 
 
-void deconfigure_network(void) {
-
-    char buf[256];
-
+void deconfigure_network(void)
+{
     /* deconfiguring network interfaces */
     ifconfig_down("lo");
     ifconfig_down(interface);
@@ -551,7 +549,7 @@ void loop_setup(void)
   di_exec_shell_log("ifconfig lo 127.0.0.1 up");
 }
 
-void seed_hostname_from_dns (struct debconfclient * client)
+void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)
 {
   struct addrinfo hints = {
     .ai_family = PF_UNSPEC,
@@ -561,19 +559,21 @@ void seed_hostname_from_dns (struct debconfclient * client)
   };
   struct addrinfo *res;
   struct sockaddr tmp;
-  char ip[16]; /* 255.255.255.255 + 1 */
+  char ip[INET_ADDRSTRLEN] = { 0 };
   int err;
 
   /* convert ipaddress into a char* */
-  inet_ntop(AF_INET, (void*)&ipaddress, ip, 16);
+  inet_ntop(AF_INET, (void*)ipaddr, ip, sizeof(ip));
 
   /* attempt resolution */
   err = getaddrinfo(ip, NULL, &hints, &res);
 
   /* got it? */
-  if (!err && res->ai_canonname && !empty_str(res->ai_canonname) &&
+  if (err == 0 && res->ai_canonname && !empty_str(res->ai_canonname) &&
       inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+
+  freeaddrinfo(res);
 }
 
 void ifconfig_up (char* iface)
