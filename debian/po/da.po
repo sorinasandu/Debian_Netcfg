@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-01 09:36+0200\n"
-"PO-Revision-Date: 2004-09-04 16:11+0200\n"
+"PO-Revision-Date: 2004-09-05 13:40+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Navneservere bruges til at slå værtstnavne på internettet op med. Angiv IP-"
+"Navneservere bruges til at slå værtsnavne på internettet op med. Angiv IP-"
 "adressesrne på op til tre navneservere adskilt med mellemrum. Brug ikke "
 "kommaer. Den første server i listen vil blive forespurgt først. Hvis du ikke "
 "ønsker at bruge navneservere, kan du  blot lade dette felt stå tomt."
@@ -131,7 +131,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Angiv WEB-sikkerhedsnøgle for den trådløse enhed ${iface}, hvis der skal "
+"Angiv WEP-sikkerhedsnøgle for den trådløse enhed ${iface}, hvis der skal "
 "bruges en sådan nøgle. Der er to måder at gøre dette på:"
 
 #. Type: string
@@ -141,7 +141,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Din WEB-nøgle har et af formaterne 'nnnn-nnnn-nn' eller 'nnnnnnnn', hvor n "
+"Din WEP-nøgle har et af formaterne 'nnnn-nnnn-nn' eller 'nnnnnnnn', hvor n "
 "er et tal. Skriv det blot, som det er, i dette felt."
 
 #. Type: string
@@ -177,7 +177,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-nøglen \"${webkey}\" er ugyldig. Læs omhyggeligt instruktionerne på "
+"WEP-nøglen \"${wepkey}\" er ugyldig. Læs omhyggeligt instruktionerne på "
 "næste side, om hvordan du angiver din WEP-nøgle korrekt, og prøv igen."
 
 #. Type: error
@@ -607,7 +607,7 @@ msgstr "Ret opsætning af trådløst netværk"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Sæt nætværket op med dynamisk adressering (DHCP)"
+msgstr "Sæt netværket op med dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
@@ -758,4 +758,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Sæt nætværket op med statisk adressering"
+msgstr "Sæt netværket op med statisk adressering"
