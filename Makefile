@@ -1,3 +1,5 @@
+INCS=-I../cdebconf/src/
+LDOPTS=-L../cdebconf/src/ -ldebconf
 PREFIX=$(DESTDIR)/usr/
 CFLAGS=-Wall  -Os -fomit-frame-pointer
 INSTALL=install
@@ -8,7 +10,8 @@ all: netcfg
 	$(STRIP) netcfg
 	size netcfg
 
-netcfg: netcfg.c debconf.o
+netcfg: netcfg.c 
+	$(CC) $(CFLAGS) netcfg.c -o netcfg $(INCS) $(LDOPTS)
 
 install:
 	mkdir -p $(PREFIX)/bin/

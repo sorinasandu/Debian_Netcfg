@@ -4,5 +4,6 @@
 * dhcp: either another module, or in here
 * fall back to safe defaults if the user doesn't enter a particular value (ex. gateway)
 * create config dirs if they don't exist
-* use the the debconf library rather than our own debconf.[ch]
 * do other sorts of network configurations (pcmcia)
+* inderstand the target_path() thing, and do it properly
+* what do we do differently if it is a CD filesystem?

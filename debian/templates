@@ -67,13 +67,15 @@ Template: netcfg/confirm_static_cfg
 Type: boolean
 Default: true
 Description: Is this configuration correct?
- hostname  = ${hostname}
- domain    = ${domain}
- ipaddress = ${ipaddress}
- netmask   = ${netmask}
- network   = ${network}
- broadcast = ${broadcast}
- gateway   = ${gateway}
+ gateway   = ${gateway} 
+ primary DNS = ${primary_DNS} 
+ secondary DNS = ${secondary_DNS} 
+ tertiary DNS = ${tertiary_DNS}
+ hostname  = ${hostname} 
+ domain    = ${domain} 
+ ipaddress = ${ipaddress} 
+ netmask   = ${netmask} 
+ network   = ${network} 
 
 Template: netcfg/get_pcmcia_tranceiver
 Type: string
