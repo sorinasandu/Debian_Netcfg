@@ -28,6 +28,7 @@
 #include <sys/types.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
+#include <iwlib.h>
 #include "netcfg.h"
 
 static method_t netcfg_method = DHCP;
@@ -62,7 +63,7 @@ int main(int argc, char *argv[])
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
 	char **ifaces;
-	char *defiface = NULL;
+	char *defiface = NULL, *defwireless = NULL;
     response_t res;
 
     /* initialize libd-i */
@@ -107,6 +108,41 @@ int main(int argc, char *argv[])
 					interface_down(*ifaces);
 					break;
 				}
+				else
+				{
+					struct wireless_config wc;
+
+					if (iw_get_basic_config(wfd, *ifaces, &wc) == 0)
+					{
+						wc.essid[0] = '\0';
+						wc.essid_on = 0;
+
+						iw_set_basic_config(wfd, *ifaces, &wc);
+						
+						sleep(1);
+
+						iw_get_basic_config(wfd, *ifaces, &wc);
+
+						if (!empty_str(wc.essid))
+						{
+							di_info("%s is associated with %s. Selecting as default", *ifaces, wc.essid);
+							defiface = strdup(*ifaces);
+							interface_down(*ifaces);
+							break;
+						}
+						else
+						{
+							di_info("%s is not associated. Relegating to defwireless", *ifaces);
+							if (defwireless != NULL)
+								free (defwireless);
+							defwireless = strdup(*ifaces);
+						}
+					}
+					else
+						di_info("%s is not a wireless interface. Continuing.", *ifaces);
+
+					interface_down(*ifaces);
+				}
 
 				interface_down(*ifaces);
 
@@ -114,6 +150,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	    
+		if (!defiface && defwireless)
+			defiface = defwireless;
+
 		if(netcfg_get_interface(client, &interface, &num_interfaces, defiface))
 	      state = BACKUP;
 	    else if (! interface || ! num_interfaces)

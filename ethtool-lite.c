@@ -90,10 +90,6 @@ int ethtool_lite (char * iface)
 		int ctl;
 		data[0] = 0;
 
-#ifndef TEST
-		di_info("%s is disconnected / ethtool not implemented.", iface);
-#endif
-
 		if (ioctl (fd, 0x8947, &ifr) >= 0)
 			ctl = 0x8948;
 		else if (ioctl (fd, SIOCDEVPRIVATE, &ifr) >= 0)

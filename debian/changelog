@@ -5,13 +5,15 @@ netcfg (1.03) UNRELEASED; urgency=low
       it works better than the old one. This time, it only chooses a
       default interface based on the first connected one it finds. It also
       prefers ethtool to MII.
+    - Also add a rudimentary wireless link detection heuristic to go with
+      the new ethtool support.
     - Apply Andrew Pollock's WEP key patch. Thanks!
   * Thomas Hood
     - Use "wireless-key1" option in /e/n/i rather than "wireless-key"
       since the former allows the key string to contain whitespace
       whereas the latter does not.  (Closes: #271978)
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sun,  3 Oct 2004 14:37:39 -0700
+ -- Joshua Kwan <joshk@triplehelix.org>  Sun,  3 Oct 2004 17:13:42 -0700
 
 netcfg (1.02) unstable; urgency=low
 
