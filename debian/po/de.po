@@ -1,17 +1,18 @@
+# translation of de.po to 
 # translation of debian-installer to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Thorsten Sauter <tsauter@gmx.net>, 2003.
-# Alwin Meschede <ameschede@gmx.de>, 2003.
+# Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer_tools_netcfg_de\n"
+"Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-14 18:48+0100\n"
+"PO-Revision-Date: 2004-01-12 23:32+0100\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -90,9 +91,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "Kein Interface wurde erkannt"
+msgstr "Primäres Netzwerk-Interface:"
 
 #. Type: select
 #. Description
@@ -101,6 +101,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"Ihr System hat mehrere Netzwerk-Interfaces. Bitte wählen Sie das Interface, das "
+"für die Installation von Debian genutzt werden soll."
 
 #. Type: error
 #. Description
@@ -382,8 +384,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -421,8 +422,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -520,8 +520,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -602,3 +601,4 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
+
