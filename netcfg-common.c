@@ -75,7 +75,6 @@ char* essid = NULL;
 
 /* IW socket for global use - init in main */
 int wfd = 0;
-int input_result = 0;
 
 static int have_domain = 0;
 
@@ -83,7 +82,7 @@ int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
     int ret = 0;
-    input_result = debconf_input(client, priority, template);
+    debconf_input(client, priority, template);
     ret = debconf_go(client);
     debconf_get(client, template);
     *p = client->value;
@@ -342,7 +341,6 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     getif_start();
     while ((inter = getif(1)) != NULL) {
 	size_t newchars;
-	char *downbuf;
 
 	ifconfig_down(inter);
 	ifdsc = get_ifdsc(client, inter);
@@ -416,7 +414,7 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
     do {
 	have_domain = 0;
         ret = my_debconf_input(client, "high", "netcfg/get_hostname", &p);
-        if (ret == 30) // backup
+        if (ret == 30) /* backup */
             return ret;
         free(*hostname);
         *hostname = strdup(p);
@@ -528,7 +526,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress.s_addr) {
-            fprintf(fp, "127.0.0.1\tlocalhost\n");
+            fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
             if (domain && !empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), hostname,
@@ -537,7 +535,6 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
                 fprintf(fp, "%s\t%s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)),
                         hostname);
         } else {
-	  /* Add only hostname after localhost when loopback is alone. */
             fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
         }
 
@@ -916,8 +913,7 @@ int netcfg_get_static(struct debconfclient *client)
     char *none;
 
     enum { BACKUP, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK, GET_GATEWAY, 
-           GATEWAY_UNREACHABLE, GET_NAMESERVERS, GET_HOSTNAME, CONFIRM, 
-           GET_DOMAIN, QUIT} state = GET_IPADDRESS;
+           GATEWAY_UNREACHABLE, GET_NAMESERVERS, CONFIRM, GET_DOMAIN, QUIT } state = GET_IPADDRESS;
 
     kill_dhcp_client();
 	   
@@ -930,7 +926,7 @@ int netcfg_get_static(struct debconfclient *client)
     while (state != QUIT) {
         switch (state) {
         case BACKUP:
-            return 10; // Back to main
+            return 10; /* Back to main */
             break;
         case GET_IPADDRESS:
             if (netcfg_get_ipaddress (client)) {
@@ -966,7 +962,7 @@ int netcfg_get_static(struct debconfclient *client)
                     state = GET_NAMESERVERS;
             break;
         case GATEWAY_UNREACHABLE:
-            debconf_capb(client); // Turn off backup
+            debconf_capb(client); /* Turn off backup */
             debconf_input(client, "high", "netcfg/gateway_unreachable");
             debconf_go(client);
             state = GET_GATEWAY;
@@ -974,15 +970,11 @@ int netcfg_get_static(struct debconfclient *client)
             break;
         case GET_NAMESERVERS:
             state = (netcfg_get_nameservers (client, &nameservers)) ?
-                GET_GATEWAY : GET_HOSTNAME;
-            break;
-        case GET_HOSTNAME:
-            state = (netcfg_get_hostname(client, &hostname)) ?
-                GET_NAMESERVERS : GET_DOMAIN;
+                GET_GATEWAY : GET_DOMAIN;
             break;
         case GET_DOMAIN:
             state = (netcfg_get_domain (client, &domain)) ?
-                GET_HOSTNAME : CONFIRM;
+                GET_NAMESERVERS : CONFIRM;
             break;
         case CONFIRM:
             debconf_subst(client, "netcfg/confirm_static", "interface", interface);
@@ -1001,7 +993,7 @@ int netcfg_get_static(struct debconfclient *client)
                           (nameservers ? nameservers : none));
             netcfg_nameservers_to_array(nameservers, nameserver_array);
 
-            debconf_capb(client); // Turn off backup for yes/no confirmation
+            debconf_capb(client); /* Turn off backup for yes/no confirmation */
             my_debconf_input(client, "medium", "netcfg/confirm_static", &ptr);
             state = strstr(ptr, "true") ? QUIT : GET_IPADDRESS;
             debconf_capb(client, "backup");
@@ -1066,6 +1058,7 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
 	"/target" RESOLV_FILE);
 }
 
+#define DHCP_SECONDS 15
 
 int netcfg_activate_dhcp(struct debconfclient *client)
 {
@@ -1075,9 +1068,12 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     pid_t pid = 0;
     int retry = 1;
     char *ptr;
+    FILE *dc = NULL;
 
-    enum { PUMP, DHCLIENT, UDHCPC } dhcp_client;
+    enum { PUMP, DHCLIENT, DHCLIENT3, UDHCPC } dhcp_client;
 
+    if (stat("/var/lib/dhcp3", &stat_buf) == 0)
+        dhcp_client = DHCLIENT3;
     if (stat("/sbin/dhclient", &stat_buf) == 0)
         dhcp_client = DHCLIENT;
     else if (stat("/sbin/udhcpc", &stat_buf) == 0)
@@ -1108,8 +1104,29 @@ int netcfg_activate_dhcp(struct debconfclient *client)
         break;
 
     case DHCLIENT:
+	/* First, set up dhclient.conf */
+	if ((dc = file_open(DHCLIENT_CONF, "w")))
+	{
+	  fprintf(dc, "send host-name %s\n",
+	      dhcp_hostname ? dhcp_hostname : hostname);
+	  fclose(dc);
+	}
         snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
         break;
+
+    case DHCLIENT3:
+	/* Different place.. */
+	if (access("/etc/dhcp3", F_OK))
+	  mkdir("/etc/dhcp3", 0775);
+	
+	if ((dc = file_open(DHCLIENT3_CONF, "w")))
+	{
+	  fprintf(dc, "send host-name %s\n",
+	      dhcp_hostname ? dhcp_hostname : hostname);
+	  fclose(dc);
+	}
+	snprintf(buf, sizeof(buf), "dhclient %s", interface);
+	break;
 
     case UDHCPC:
         snprintf(buf, sizeof(buf), "udhcpc -i %s -n",
@@ -1122,7 +1139,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
     while (retry == 1) {
         /* show progress bar */
-        debconf_progress_start(client, 0, 10, "netcfg/dhcp_progress");
+        debconf_progress_start(client, 0, DHCP_SECONDS, "netcfg/dhcp_progress");
         debconf_progress_info(client, "netcfg/dhcp_progress_note");
         netcfg_progress_displayed = 1;
 
@@ -1141,7 +1158,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
         }
 
         /* wait 10s for a DHCP lease */
-        while (dhcp_running && ((now - start_time) < 10)) {
+        while (dhcp_running && ((now - start_time) < DHCP_SECONDS)) {
             sleep(1);
             debconf_progress_step(client, 1);
             now = time(NULL);
@@ -1153,11 +1170,8 @@ int netcfg_activate_dhcp(struct debconfclient *client)
 
         /* got a lease? */
         if (!dhcp_running && (dhcp_exit_status == 0)) {
-	    /* even systems on dhcp get hostnames */
-	    /* TODO use the dhcp hostname if available. */
-            if (netcfg_get_hostname(client, &hostname))
-                return 30; // backup
-	    
+	    assert(hostname != NULL);
+
             /* write configuration */
             netcfg_write_common("40netcfg", ipaddress, hostname, domain);
             netcfg_write_dhcp("40netcfg", interface, dhcp_hostname);
@@ -1170,7 +1184,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
             if (dhcp_running) {
                 kill(pid, SIGTERM);
             }
-	    return 30; // backup
+	    return 30; /* backup */
 	}
         retry = strstr(ptr, "true") ? 1 : 0;
     }
@@ -1188,7 +1202,7 @@ int netcfg_get_dhcp(struct debconfclient *client) {
     while (1) {
         switch (state) {
         case BACKUP:
-            return 10; // Back to main
+            return 10; /* Back to main */
         case GET_DHCP_HOSTNAME:
             state = netcfg_get_dhcp_hostname(client, &dhcp_hostname) ?
                 BACKUP : QUIT;

@@ -62,7 +62,7 @@ response_t netcfg_get_method(struct debconfclient *client)
 int main(void)
 {
     int num_interfaces = 0;
-    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_HOSTNAME, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_HOSTNAME;
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
     response_t res;
@@ -73,14 +73,20 @@ int main(void)
     /* initialize debconf */
     client = debconfclient_new();
     debconf_capb(client, "backup");
-
+    
     while (1) {
 	switch(state) {
+	case GET_HOSTNAME:
+            if (netcfg_get_hostname(client, &hostname))
+	      state = BACKUP;
+	    else
+	      state = GET_INTERFACE;
+	    break;
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
 	    if(netcfg_get_interface(client, &interface, &num_interfaces))
-	      state = BACKUP;
+	      state = GET_HOSTNAME;
 	    else
 	    {
 	      if (is_wireless_iface (interface))

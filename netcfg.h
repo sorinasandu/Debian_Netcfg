@@ -10,6 +10,8 @@
 #define HOSTNAME_FILE   "/etc/hostname"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
+#define DHCLIENT_CONF	"/etc/dhclient.conf"
+#define DHCLIENT3_CONF	"/etc/dhcp3/dhclient.conf"
 
 #define _GNU_SOURCE
 

@@ -3,7 +3,7 @@ netcfg (0.64) UNRELEASED; urgency=low
   * Joshua Kwan
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
-    - Silently load af_packet. (Closes: #244441, #244696)
+    - Silently load af_packet. (Closes: #244441)
     - Add some code hunks from mii-diag to determine code path on link
       connection. (Closes: #247178)
     - Add some ifconfig_up and ifconfig_down functions.
@@ -12,13 +12,12 @@ netcfg (0.64) UNRELEASED; urgency=low
       up on subsequent questions.
     - Bump the DHCP wait to 15 seconds. The magic number seems to be just
       over 10 for me. (Closes: #244819)
+    - Ask for a hostname at the very beginning. This will be the DHCP
+      hostname for netcfg and netcfg-dhcp (sooner or later.)
     - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's
       rant on debian-boot.
-  * Pierre Machard
-    - Add only hostname after localhost when loopback is alone.
-      (Closes: #247734)
 
- -- Pierre Machard <pmachard@debian.org>  Fri,  7 May 2004 00:38:24 +0200
+ -- Joshua Kwan <joshk@triplehelix.org>  Sat,  8 May 2004 18:17:05 -0700
 
 netcfg (0.63) unstable; urgency=low
 
