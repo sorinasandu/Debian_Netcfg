@@ -8,15 +8,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Nikolai Prokoschenko <nikolai@prokoschenko.de>, 2004.
 # Eugene Konev <ejka@imfi.kspu.ru>, 2004.
+# Yuri Kozlov <yuray@id.ru>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-04-21 01:16+0200\n"
-"Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
-"Language-Team: Russian <debian-russian@lists.debian.org>\n"
+"PO-Revision-Date: 2004-05-15 15:17+0400\n"
+"Last-Translator: Yuri Kozlov <yuray@id.ru>\n"
+"Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -91,7 +92,7 @@ msgstr ""
 "Серверы имён используются для поиска соответствия имени и IP адреса. Введите "
 "IP-адреса серверов имён (не больше 3), разделённые пробелами. Не используйте "
 "запятые. Серверы будут опрашиваться в порядке их указания. Если вы вообще не "
-"хотите использовать серверы имён, то оставьте поле пустым. "
+"хотите использовать серверы имён, то оставьте поле пустым."
 
 #. Type: select
 #. Description
@@ -505,9 +506,8 @@ msgstr "Это может занять несколько минут."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Настройка статического адреса"
+msgstr "Автоматическая настройка сети прошла успешно!"
 
 #. Type: error
 #. Description
@@ -532,43 +532,40 @@ msgstr "Процесс настройки по DHCP был прерван."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Настройка статического адреса"
+msgstr "Повторить автоматическую настройку сети"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Настройка динамического адреса (DHCP)"
+msgstr ""
+"Повторить автоматическую настройку сети с указанным именем хоста для DHCP "
+"сервера"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Настроить сеть"
+msgstr "Настроить сеть вручную"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Настроить сеть"
+msgstr "Не настраивать сеть сейчас"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Настройка статического адреса"
+msgstr "Метод настройки сети:"
 
 #. Type: select
 #. Description
@@ -580,27 +577,33 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Не удалось автоматически настроить сеть. Так как, возможно это произошло из-"
+"за медленного сервера DHCP, повторите попытку. Если в вашей сети не "
+"используется сервер DHCP для автоматической настройки, то введите настройки "
+"сети вручную. Также, некоторым DHCP серверам требуется передавать в запросе "
+"DHCP имя хоста, поэтому вы можете попробовать ввести это имя перед повторной "
+"попыткой DHCP запроса."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Настроить сеть"
+msgstr "Настройка беспроводной сети"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Настройка динамического адреса (DHCP)"
+msgstr "Автоматическая настройки сети (по DHCP протоколу)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Настройка сети с использованием динамической адресации (DHCP)"
+msgstr ""
+"Настройка сети с использованием протокола динамической адресации (DHCP)"
 
 #. Type: string
 #. Description
@@ -722,7 +725,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -732,8 +734,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " интерфейс      = ${interface}\n"
-" имя компьютера = ${hostname}\n"
-" имя домена     = ${domain}\n"
 " ip-адрес       = ${ipaddress}\n"
 " маска подсети  = ${netmask}\n"
 " шлюз           = ${gateway}\n"
@@ -746,16 +746,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Хотите попробовать повторную настройку по DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Не было получено IP-адреса во время настройки по DHCP. DHCP сервера "
-#~ "иногда бывают очень медленными. Если хотите, можете попробовать ещё раз."
