@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-29 22:37-0300\n"
+"PO-Revision-Date: 2004-07-03 12:33-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -558,6 +558,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Sua rede provavelmente não está utilizando o protocolo DHCP. "
+"Alternativamente, o servidor DHCP pode ser lento ou algum hardware de "
+"rede pode não estar funcionando corretamente."
 
 #. Type: boolean
 #. Description
@@ -568,7 +571,6 @@ msgstr "Continuar sem uma rota padrão ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -577,10 +579,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "A autoconfiguração de rede teve sucesso. Porém, nenhuma rota padrão foi "
-"definida : o sistema no momento não sabe como se comunicar com hosts na "
-"Internet. Isto faz com que seja impossível continuar a instalação a menos "
-"que todos os pacotes Debian que você precise estejam em sua rede local ou um "
-"uma mídia local como um CD-ROM."
+"definida : o sistema não sabe como se comunicar com hosts na Internet. "
+"Isto faz com que seja impossível continuar a instalação a menos que "
+"você possua o primeiro CD-ROM oficial do Debian, um CD-ROM do tipo "
+"'Netinst' ou pacotes disponíveis em sua rede local."
 
 #. Type: boolean
 #. Description
@@ -589,6 +591,9 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Em caso de dúvidas, você não deverá continuar sem uma rota padrão : "
+"entre em contato com o administrador de sua rede local para questioná-lo "
+"sobre esse problema."
 
 #. Type: text
 #. Description
