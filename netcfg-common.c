@@ -530,53 +530,13 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 }
 
 
-int deconfigure_network(void) {
+void deconfigure_network(void) {
 
     char buf[256];
 
     /* deconfiguring network interfaces */
-    di_exec_shell_log("ifconfig lo down");
-    snprintf(buf, sizeof(buf), "ifconfig %s down", interface);
-    di_exec_shell_log(buf);
-
-    return 0;
-}
-
-/* Utility functions. */
-int ifconfig_up (char* iface)
-{
-  char * cmd;
-  size_t len = sizeof("ifconfig  up") + strlen(iface) + 1;
-  int ret;
-
-  if (!(cmd = malloc(len)))
-    return 1;
-
-  snprintf(cmd, len, "ifconfig %s up", iface);
-
-  ret = di_exec_shell(cmd);
-
-  free(cmd);
-
-  return ret;
-}
-
-int ifconfig_down (char* iface)
-{
-  char * cmd;
-  size_t len = sizeof("ifconfig  down") + strlen(iface) + 1;
-  int ret;
-
-  if (!(cmd = malloc(len)))
-    return 1;
-
-  snprintf(cmd, len, "ifconfig %s down", iface);
-
-  ret = di_exec_shell(cmd);
-
-  free(cmd);
-
-  return ret;
+    ifconfig_down("lo");
+    ifconfig_down(interface);
 }
 
 void loop_setup(void)
@@ -614,4 +574,36 @@ void seed_hostname_from_dns (struct debconfclient * client)
   if (!err && res->ai_canonname && !empty_str(res->ai_canonname) &&
       inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+}
+
+void ifconfig_up (char* iface)
+{
+  struct ifreq ifr;
+  int skfd = socket(AF_INET, SOCK_DGRAM, 0);
+
+  strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+
+  if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0)
+  {
+    strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+    ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
+    ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    close(skfd);
+  }
+}
+
+void ifconfig_down (char* iface)
+{
+  struct ifreq ifr;
+  int skfd = socket(AF_INET, SOCK_DGRAM, 0);
+
+  strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+
+  if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0)
+  {
+    strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+    ifr.ifr_flags &= ~IFF_UP;
+    ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    close(skfd);
+  }
 }

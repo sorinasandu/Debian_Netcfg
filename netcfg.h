@@ -96,12 +96,12 @@ extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface)
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 
 extern int iface_is_hotpluggable(const char *iface);
-extern int deconfigure_network(void);
+extern void deconfigure_network(void);
 
 extern method_t mii_diag_status_lite (char *ifname);
 
-extern int ifconfig_up (char*);
-extern int ifconfig_down (char*);
+extern void ifconfig_up (char*);
+extern void ifconfig_down (char*);
 
 extern void loop_setup(void);
 extern void seed_hostname_from_dns(struct debconfclient *client);
