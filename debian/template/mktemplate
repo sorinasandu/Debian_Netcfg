@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+LINGUAS="en de ru"
+TYPES="common dhcp static"
+
+for TYPE in $TYPES ; do
+  TEMPLATES=""
+  for LINGUA in $LINGUAS ; do
+    TEMPLATES="$TEMPLATES netcfg-$TYPE.templates.$LINGUA"
+  done
+  echo "Creating netcfg-$TYPE.templates"
+  debconf-mergetemplate $TEMPLATES > netcfg-$TYPE.templates
+done

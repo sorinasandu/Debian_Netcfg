@@ -1,0 +1,71 @@
+Template: netcfg/get_ipaddress
+Type: string
+Description: IP address?
+ The IP address is unique to your computer and consists of four
+ numbers separated by periods.  If you don't know what to use here,
+ consult your network administrator.
+Description-de: IP Nummer?
+ Die IP Nummer bestimmt eindeutig Ihren Computer und  besteht aus vier
+ durch Punkte getrennet Zahlen. Wenn Sie Ihre Nummer nicht kennen,
+ fragen Sie Ihren Netzwerkadministrator.
+
+Template: netcfg/get_netmask
+Type: string
+Description: Netmask?
+ The netmask is used to determine which machines are local to your
+ network.  Consult your network administrator if you do not know the
+ value.  The netmask should be entered as four numbers separated by
+ periods.
+Description-de: Netmask?
+ Durch die Netmask kann bestimmt werden, welche Rechner im lokalen
+ Netzwerk direkt angesprochen werden können. Wenn Sie diesn Wert nicht
+ kennen, fragen Sie Ihren Netzwerkadministrator. Die Netmask besteht
+ aus vier durch Punkte getrennet Zahlen.
+
+Template: netcfg/get_gateway
+Type: string
+Description: Gateway?
+ This is an IP address (four numbers separated by periods) that
+ indicates the gateway router, also known as the default router.  All
+ traffic that goes outside your LAN (for instance, to the Internet) is
+ sent through this router.  In rare circumstances, you may have no
+ router; in that case, you can leave this blank.  If you don't know
+ the proper answer to this question, consult your network
+ administrator.
+Description-de: Gateway?
+ Das ist eine IP Nummer (vier durch Punkte getrennet Zahlen), die den
+ Gatewayrouter angibt. Auch als Defaultrouter bekannt. Alle Daten zu
+ Rechnern außerhalb Ihres LAN (zum Beispiel zum Internet) werden über
+ diesen Router gesendet. In seltenden Fällen haben Sie keinen Router,
+ in diesen Fall geben Sie hier einfach nichts ein. Wenn Sie die
+ richtige Antwort hier nicht kennen, fragen Sie Ihren
+ Netzwerkadministrator.
+
+Template: netcfg/gateway_unreachable
+Type: note
+Description: The gateway you entered is unreachable.
+ You may have made an error entering your ipaddress, netmask and/or gateway.
+Description-de: Der angegebene Gateway ist nicht erreichbar.
+ Sie haben bei der Eingabe von Ihrer IP Nummer, der Netmask und/oder
+ des Gateways einen Fehler gemacht.
+
+Template: netcfg/confirm_static
+Type: boolean
+Default: true
+Description: Is this configuration correct?
+  interface     = ${interface}	
+  hostname      = ${hostname} 
+  domain        = ${domain} 
+  ipaddress     = ${ipaddress} 
+  netmask       = ${netmask} 
+  gateway       = ${gateway} 
+  nameservers   = ${nameservers}
+Description-de: Sind diese Informationen richtig?
+  Interface      = ${interface}
+  Hostname       = ${hostname}
+  Domain         = ${domain}
+  IP Nummer      = ${ipaddress}
+  Netmask        = ${netmask}
+  Gateway        = ${gateway}
+  Nameserver     = ${nameservers}
+

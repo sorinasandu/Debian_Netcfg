@@ -1,0 +1,81 @@
+Template: netcfg/get_domain
+Type: string
+Description: Choose the domain name.
+ The domain name is the part of your Internet address to the right
+ of your host name.  It is often something that ends in .com, .net,
+ .edu, or .org.  If you are setting up a home network, you can make
+ something up, but make sure you use the same domain name on all
+ your computers. 
+Description-de: Wählen Sie den Domainnamen.
+ Der Domainname ist der rechte Teil Ihrer Internetadresse nach Ihren
+ Rechnernamen. Er endet oft mit .de, .com, .net oder .org. Wenn Sie
+ ein lokales Heimnetz aufbauen, ist es egal was Sie angeben. Diese
+ Information sollte dann aber auf allen Rechnern gleich sein.
+
+Template: netcfg/get_nameservers
+Type: string
+Description: Choose the DNS Server Addresses
+ Please enter the IP addresses (not host names) of up to 3 name servers,
+ separated by spaces. Do not use commas. The servers will be queried in the
+ order in which you enter them. If you don't want to use any name servers just
+ leave this field blank.
+Description-de: Wählen Sie die Adresse des DNS Server
+ Bitte geben Sie die IP Adresse (nicht den Namen) bis zu drei
+ Nameserver getrennt durch Leerzeichen an. Benutzen Sie keine Kommas.
+ Die Server werden in der angegebenen Reihenfolge abgefragt. Wenn Sie
+ keine Nameserver benutzen wollen, lassen Sie diese Feld bitte einfach
+ leer.
+
+Template: netcfg/choose_interface
+Type: select
+Choices: ${ifchoices}
+Description: Choose an interface.
+ The following interfaces were detected. Choose the type of your primary
+ network interface that you will need for installing the Debian system (via NFS
+ or HTTP).
+Description-de: Wählen Sie ein Interface.
+ Die folgenden Interfaces wurden erkannt. Wählen Sie Ihre primäre
+ Netzwerkkarte, die Sie zur Installation des Debiansystems (via NFS
+ oder HTTP) benutzen wollen.
+
+Template: netcfg/error_cfg
+Type: note
+Description: An error occured.
+ Something went wrong when I tried to activate your network.  
+Description-de: Ein Fehler ist aufgetreten.
+ Es ist ein Fehler bei der Aktivierung Ihres Netzwerks aufgetreten.
+
+Template: netcfg/get_hostname
+Type: string
+Default: debian
+Description: Enter the system's hostname.
+ The hostname is a single word that identifies your system to the
+ network.  If you don't know what your hostname should be, consult
+ your network administrator.  If you are setting up your own home
+ network, you can make something up here. 
+Description-de: Geben Sie den Rechnernamen an.
+ Der Hostname ist ein einzelnes Wort, der Ihr Rechner im Netzwerk
+ identifiziert. Wenn Sie Ihren Rechnernamen nicht kennen, fragen Sie
+ den Netzwerkadministrator. Wenn Sie ein lokales Heimnetz aufbauen,
+ ist es egal was Sie angeben.
+
+Template: netcfg/error
+Type: note
+Description: An error occured and I cannot continue.
+ Feel free to retry.
+Description-de: Ein Fehler ist aufgetreten und es wurde abgebrochen
+ Vielleicht versuchen Sie es noch ein Mal.
+
+Template: netcfg/no_interfaces
+Type: note 
+Description: No interfaces were detected.
+ No network interfaces were found.   That means that the installation system
+ was unable to find a network device.  If you do have a network card, then it
+ is possible that the module for it hasn't been selected yet.  Go back to 
+ 'Configure Network Hardware'.
+Description-de: Kein Interface wurde erkannt.
+ Kein Netzwerkinterface wurde gefunden. Das Installationssystem konnte
+ also keine Netzwerkkarte finden. Wenn Sie eine Netzwerkkarte haben,
+ ist bestimmt das entsprechende Modul noch nicht ausgewählt worden.
+ Gehen Sie zurück zum 'Configure Network Hardware'.
+
