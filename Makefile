@@ -1,19 +1,19 @@
-CC		?= gcc
+CC		= gcc
 TARGETS		?= netcfg-dhcp netcfg-static netcfg
 
 LDOPTS		= -ldebconfclient -ldebian-installer -liw
 PREFIX		= $(DESTDIR)/usr/
-CFLAGS		= -W -Wall -Os
+CFLAGS		= -W -Wall
 COMMON_OBJS	= netcfg-common.o mii-lite.o wireless.o
 
 ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
-CFLAGS += -g
+CFLAGS += -O0 -g
 else
-CFLAGS += -fomit-frame-pointer
+CFLAGS += -Os -fomit-frame-pointer
 endif
 
 STRIPTOOL	= strip
-STRIP		= $(STRIPTOOL) --remove-section=.note --remove-section=.comment
+STRIP		= $(STRIPTOOL) -R .note -R .comment
 
 all: $(TARGETS)
 
