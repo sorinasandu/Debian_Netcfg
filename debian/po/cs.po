@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-22 15:51-0500\n"
-"PO-Revision-Date: 2004-03-20 15:18+0100\n"
+"PO-Revision-Date: 2004-03-23 10:30+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -26,14 +26,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Nastavuje se sí» pøes DHCP"
+msgstr "Automaticky nastavit sí» pøes DHCP?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -41,9 +39,9 @@ msgid ""
 "the opportunity to configure your network manually after the atempt to "
 "configure it by DHCP."
 msgstr ""
-"Sí» mù¾ete nastavit automaticky pøes DHCP, nebo ruènì zadat po¾adované "
-"informace. Pokud zvolíte DHCP a tato metoda sel¾e, v¾dy mù¾ete nastavit sí» "
-"ruènì. Pokud si nejste jisti, zkuste DHCP."
+"Sí»ování mù¾ete nastavit automaticky pøes DHCP, nebo ruènì zadat po¾adované "
+"informace. Pokud zvolíte DHCP a tato metoda sel¾e (systém neobdr¾í od DHCP "
+"serveru rozumné nastavení), v¾dy mù¾ete pøejít k ruènímu nastavení sítì."
 
 #. Type: string
 #. Description
@@ -682,9 +680,3 @@ msgstr "Statické nastavení sítì"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Nastavit sí» se statickými adresami"
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamické adresování (DHCP), Statické adresování (ruèní)"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Zpùsob nastavení sítì:"
