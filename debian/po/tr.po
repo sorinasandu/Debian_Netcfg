@@ -1,31 +1,19 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
-#
-# Translators:
-# ------------
-# Osman Yüksel <yuxel@sonsuzdongu.com>
+# Turkish translation of netcfg.
+# This file is distributed under the same license as the netcfg package.
+# Osman Yüksel <yuxel@sonsuzdongu.com>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: tr\n"
+"Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-20 00:11+0100\n"
-"PO-Revision-Date: 2004-03-14 16:27+0200\n"
+"PO-Revision-Date: 2004-03-20 23:48+0200\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
-"Language-Team: Debian l10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
+"Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
 #. Type: select
 #. Choices
@@ -98,7 +86,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Birincil ağ arayüzü:."
+msgstr "Birincil ağ arayüzü:"
 
 #. Type: select
 #. Description
@@ -162,7 +150,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Eğer özel bir formatta(passphrase) ise başına 's:' koyun ( tırnak "
-"işaretlerini kullanmayın)"
+"işaretlerini kullanmayın)."
 
 #. Type: string
 #. Description
@@ -202,7 +190,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 " \"${essid}\" geçersiz bir ESSID. ESSID'ler tüm karakterleri içerebilir ve  "
-"en fazla 32 karakterden oluşur"
+"en fazla 32 karakterden oluşur."
 
 #. Type: string
 #. Description
@@ -214,7 +202,7 @@ msgstr "Makine adı:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Lütfen sistem için bir ad girin"
+msgstr "Lütfen sistem için bir ad girin."
 
 #. Type: string
 #. Description
@@ -227,7 +215,7 @@ msgid ""
 msgstr ""
 "Makine adı sisteminizi ağa tanıtan tek bir kelimedir. Eğer makine adınızın "
 "ne olacağınız bilmiyorsanız sistem yöneticinize başvurun. Eğer kendi ev "
-"ağınızı kuruyorsanız istediğiniz herhangi bişey olarak ayarlayabilirsiniz. "
+"ağınızı kuruyorsanız istediğiniz herhangi bişey olarak ayarlayabilirsiniz."
 
 #. Type: error
 #. Description
@@ -239,7 +227,7 @@ msgstr "Geçersiz makine adı"
 #. Description
 #: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Geçersiz makine adı: \"${hostname}\" "
+msgstr "Geçersiz makine adı: \"${hostname}\"."
 
 #. Type: error
 #. Description
@@ -272,7 +260,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:99
 msgid "No network interfaces detected"
-msgstr "Hiçbir ağ arayüzü bulunamadı."
+msgstr "Hiçbir ağ arayüzü bulunamadı"
 
 #. Type: error
 #. Description
@@ -280,7 +268,7 @@ msgstr "Hiçbir ağ arayüzü bulunamadı."
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Hiçbir ağ arayüzü bulunamadı. Kurulum sistemi bir ağ aygıtı bulamadı. "
+msgstr "Hiçbir ağ arayüzü bulunamadı. Kurulum sistemi bir ağ aygıtı bulamadı."
 
 #. Type: error
 #. Description
@@ -504,13 +492,13 @@ msgstr "DHCP istemcisi bulunamadı"
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP istemcisi bulunamadı. Bu paket pump veya dhcp-client istemcilerine "
-"gereksinim duyar"
+"gereksinim duyar."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr "DHCP ayarlama işlemi iptal edilecek"
+msgstr "DHCP ayarlama işlemi iptal edilecek."
 
 #. Type: boolean
 #. Description
@@ -645,13 +633,12 @@ msgstr "Ağ geçidi erişilemez"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Girdiğiniz ağ geçidi erişilemez"
+msgstr "Girdiğiniz ağ geçidi erişilemez."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "IP adresi, ağ maskesi ve/veya ağ geçidini girerken bir hata yapmış "
 "olabilirsiniz."
@@ -691,3 +678,4 @@ msgstr "Statik Ağ Ayarları"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Statik adresleme ile ağı ayarla"
+
