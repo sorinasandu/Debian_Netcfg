@@ -13,13 +13,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-30 01:54+0300\n"
+"POT-Creation-Date: 2004-07-01 02:44-0600\n"
+"PO-Revision-Date: 2004-07-02 19:46+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #  Type: boolean
 #  Description
@@ -835,7 +835,7 @@ msgstr "הגדרת רשת באופן אוטומטי נכשלה"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "הרשת שלך כנראה לא משתמשרת בפרוטוקל DHCP. לחילופין, שרת ה-DHCP שלך יכול להיות איטי, או שחומרת רשת כלשהי אינה עובדת בצורה תקינה."
 
 #. Type: boolean
 #. Description
@@ -846,7 +846,6 @@ msgstr "להמשיך בלי ניתוב ברירת מחדל?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -856,7 +855,7 @@ msgid ""
 msgstr ""
 "הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: כלומר המערכת "
 "לא יודעת איך לתקשר עם מחשבים באינטרנט. אי אפשר להמשיך בהתקנה אלא אם יש לך את "
-"כל חבילות של Debian שנדרשות על הרשת המקומית שלך או על מדיה זמינה כמו CDROM."
+"הדיסק הרשמי הראשון של Debian, דיסק התקנה מינימלית חבילות על הרשת המקומית שלך."
 
 #. Type: boolean
 #. Description
@@ -864,7 +863,7 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "אם אינך בטוח, לא כדאי שתמשיך בלי נתיב ברירת מחדל: צורך קשר עם מנהל הרשת שלך לגבי בעיה זאת."
 
 #  Type: text
 #  Description
@@ -1065,8 +1064,6 @@ msgstr "האם המידע נכון?"
 msgid "Currently configured network parameters:"
 msgstr "פרמרטים שנקבעו  כרגע:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
