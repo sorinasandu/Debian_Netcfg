@@ -353,40 +353,42 @@ netcfg_get_common (struct debconfclient *client, char **interface,
 {
   char *ptr;
 
-
   netcfg_get_interface (client, interface);
 
   if (*hostname)
     {
       free (*hostname);
-      hostname = NULL;
+      *hostname = NULL;
     }
-
   *hostname = strdup (debconf_input (client, "medium", "netcfg/get_hostname"));
 
   if (*domain)
     {
       free (*domain);
-      *domain = NULL;
     }
-
+  *domain = NULL;
   if ((ptr = debconf_input (client, "medium", "netcfg/get_domain")))
     *domain = strdup (ptr);
 
-  *nameservers = debconf_input (client, "medium", "netcfg/get_nameservers");
-  
 
+  if (*nameservers)
+  {
+      free(*nameservers);
+  }
+  *nameservers = NULL;
+  if (ptr = debconf_input (client, "medium", "netcfg/get_nameservers"))
+      *nameservers = strdup(ptr); 
+  
 }
 
 void
 netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]){
 
     char *save, *ptr, *ns;
-
+    
     if (nameservers)
       {
 	  save = ptr = strdup (ptr);
-	  
 	  ns = strtok_r (ptr, " ", &ptr);
 	  dot2num (&array[0], ns);
 	  
@@ -400,7 +402,7 @@ netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]){
 	  free (save);
       }
       else
-	  nameservers[0] = 0;
+	  array[0] = 0;
 
 }
 

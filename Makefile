@@ -7,8 +7,8 @@
 ifndef TARGETS
 TARGETS=netcfg-dhcp netcfg-static
 endif
-DHCP_CLIENT=-DPUMP
-#-DDHCLIENT
+DHCP_CLIENT=-DDHCLIENT
+#-DPUMP
 #-DDHCPCD
 
 MAJOR=0

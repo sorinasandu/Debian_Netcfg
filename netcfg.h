@@ -11,6 +11,7 @@
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCPCD_FILE     "/etc/dhcpc/config"
 #define DHCLIENT_FILE	"/etc/dhclient.conf"
+#define DHCLIENT_DIR	"/var/dhcp"
 
 
 extern int netcfg_mkdir (char *path);

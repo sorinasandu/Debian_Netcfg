@@ -74,11 +74,13 @@ netcfg_write_dhcp ()
 /* nothing to do */
 
 #elif defined DHCLIENT
+  netcfg_mkdir (DHCLIENT_DIR);
+  
   if (dhcp_hostname)
     if ((fp = file_open (DHCLIENT_FILE)))
       {
 	fprintf (fp,
-		 "\n# dhclient configuration: created during the Debian installation\n \
+		 "\n# dhclient configuration: created during the Debian installation\n\
 interface \"%s\" {\nsend host-name \"%s\";\n}\n",
 		 interface, dhcp_hostname);
 	fclose (fp);
@@ -124,7 +126,7 @@ main (int argc, char *argv[])
 {
   char *ptr;
   char *nameservers=NULL;
-  int finished = 1;
+  int finished = 0;
   client = debconfclient_new ();
   client->command (client, "title", "DHCP Network Configuration", NULL);
 

@@ -165,9 +165,9 @@ main (int argc, char *argv[])
       client->command (client, "subst", "netcfg/confirm_static", "domain",
 		       (domain ? domain : "<none>"), NULL);
       
-      netcfg_nameservers_to_array(nameservers, nameserver_array);
       client->command (client, "subst", "netcfg/confirm_static",
 		       "nameservers", (nameservers ? nameservers : "<none>") , NULL);
+      netcfg_nameservers_to_array(nameservers, nameserver_array);
 
       netcfg_get_static ();
 
