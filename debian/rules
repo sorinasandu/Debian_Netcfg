@@ -73,8 +73,6 @@ binary-arch: build install
 	   >> debian/netcfg-static/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-common.templates )\
 	   >> debian/netcfg-dhcp/DEBIAN/templates	
-	cp debian/menutest-common debian/netcfg-dhcp/DEBIAN/menutest	
-	cp debian/menutest-common debian/netcfg-static/DEBIAN/menutest	
 	dh_strip
 	dh_compress
 	dh_fixperms

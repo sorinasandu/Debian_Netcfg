@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ -n "`cat /proc/net/dev | sed -e "s/lo://" | grep "[a-z0-9]*:[ ]*[0-9]*"`"  ]  ; then
-    if [ -z "`grep -v '^Iface' /proc/net/route | grep '^eth[0-9]'`" ]; then
-        exit 0
-    fi
-fi
-exit 1
