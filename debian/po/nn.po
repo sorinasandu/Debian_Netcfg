@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "POT-Creation-Date: 2004-10-06 04:11-0600\n"
 "PO-Revision-Date: 2004-09-30 19:28+0200\n"
-"Last-Translator: Hvard Korsvoll <korsvoll@skulelinux.no>\n"
+"Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,11 +40,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Nettverk kan anten setjast opp ved hjelp av DHCP eller ved  skriva inn all "
-"informasjon manuelt. Viss du vel DHCP og installasjonen ikkje klarer  henta "
-"eit fungerande oppsett fr ein DHCP-tenar p nettverket ditt, vil du bli gjeve "
-"hve til  setja opp nettverket manuelt etter forsket p  setja det opp med "
-"DHCP."
+"Nettverk kan anten setjast opp ved hjelp av DHCP eller ved å skriva inn all "
+"informasjon manuelt. Viss du vel DHCP og installasjonen ikkje klarer å henta "
+"eit fungerande oppsett frå ein DHCP-tenar på nettverket ditt, vil du bli "
+"gjeve høve til å setja opp nettverket manuelt etter forsøket på å setja det "
+"opp med DHCP."
 
 #. Type: string
 #. Description
@@ -61,10 +61,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domenenamnet er den delen av Internett-adressa som ligg til hgre for "
-"vertsnamnet. Domenenamnet sluttar ofte p .no, .com, .net eller .org. Dersom "
-"du set opp eit heimenettverk, kan du finna p eit domenenamn, men pass p at "
-"du brukar det same p alle datamaskinene."
+"Domenenamnet er den delen av Internett-adressa som ligg til høgre for "
+"vertsnamnet. Domenenamnet sluttar ofte på «.no», «.com», «.net» eller «."
+"org». Dersom du set opp eit heimenettverk, kan du finna på eit domenenamn, "
+"men pass på at du brukar det same på alle datamaskinene."
 
 #. Type: string
 #. Description
@@ -82,16 +82,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Namnetenarar vert brukt til  sl opp vertsnamn p nettverket. Oppgje IP-"
+"Namnetenarar vert brukt til å slå opp vertsnamn på nettverket. Oppgje IP-"
 "adressene (ikkje vertsnamna) til opptil tre namnetenarar, delt med "
-"mellomrom. Ikkje bruk komma. Tenarane blir brukte i den rekkjeflgja du skriv "
-"dei. Dersom du ikkje vil bruka namnetenarar, kan du la feltet st tomt."
+"mellomrom. Ikkje bruk komma. Tenarane blir brukte i den rekkjefølgja du "
+"skriv dei. Dersom du ikkje vil bruka namnetenarar, kan du la feltet stå tomt."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Primrt nettverksgrensesnitt:"
+msgstr "Primært nettverksgrensesnitt:"
 
 #. Type: select
 #. Description
@@ -102,14 +102,14 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "Systemet ditt har fleire nettverksgrensesnitt. Vel det som skal brukast som "
-"primrt nettverksgrensesnitt nr du installerer Debian. Viss mogeleg, er det "
-"frste nettverksgrensesnittet som blei funne frehandsvalt."
+"primært nettverksgrensesnitt når du installerer Debian. Viss mogeleg, er det "
+"første nettverksgrensesnittet som blei funne førehandsvalt."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Trdlaus ESSID for ${iface}:"
+msgstr "Trådlaus ESSID for ${iface}:"
 
 #. Type: string
 #. Description
@@ -119,15 +119,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} er eit trdlaust nettverksgrensesnitt. Skriv inn namnet (ESSID'en) "
-"til det trdlause nettverket du vil at ${iface} skal bruka. La feltet vera "
+"${iface} er eit trådlaust nettverksgrensesnitt. Skriv inn namnet (ESSID'en) "
+"til det trådlause nettverket du vil at ${iface} skal bruka. La feltet vera "
 "tomt viss det er det same kva for nettverk du vil bruka."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP-nkkel for trdlaus eining ${iface}:"
+msgstr "WEP-nøkkel for trådlaus eining ${iface}:"
 
 #. Type: string
 #. Description
@@ -136,8 +136,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Skriv inn tryggleiksnkkelen for WEP viss dette er naudsynt for det trdlause "
-"grensesnittet ${iface}. Det er to mtar  gjera dette p:"
+"Skriv inn tryggleiksnøkkelen for WEP viss dette er naudsynt for det "
+"trådlause grensesnittet ${iface}. Det er to måtar å gjera dette på:"
 
 #. Type: string
 #. Description
@@ -146,8 +146,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Viss WEP-nkkelen er p formatet nnnn-nnnn-nn eller nnnnnnnn, der n er eit "
-"siffer, er det berre  skriva det inn som det er i dette feltet."
+"Viss WEP-nøkkelen er på formatet «nnnn-nnnn-nn» eller «nnnnnnnn», der n er "
+"eit siffer, er det berre å skriva det inn som det er i dette feltet."
 
 #. Type: string
 #. Description
@@ -156,7 +156,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Viss WEP-nkkelen har eit format som eit passord, skriv inn s: framom "
+"Viss WEP-nøkkelen har eit format som eit passord, skriv inn «s:» framom "
 "passordet."
 
 #. Type: string
@@ -166,14 +166,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Viss det ikkje er nokon WEP-nkkel for det trdlause nettverket, kan du "
-"sjlvsagt la dette feltet st tomt."
+"Viss det ikkje er nokon WEP-nøkkel for det trådlause nettverket, kan du "
+"sjølvsagt la dette feltet stå tomt."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Ugyldig WEP-nkkel"
+msgstr "Ugyldig WEP-nøkkel"
 
 #. Type: error
 #. Description
@@ -182,8 +182,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-nkkelen ${wepkey} er ugyldig. Flg instruksjonen p neste side om korleis "
-"du skal skriva inn WEP-nkkelen rett nye, og prv igjen."
+"WEP-nøkkelen «${wepkey}» er ugyldig. Følg instruksjonen på neste side om "
+"korleis du skal skriva inn WEP-nøkkelen rett nøye, og prøv igjen."
 
 #. Type: error
 #. Description
@@ -198,7 +198,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID'en ${essid} er ugyldig. ESSID'ar kan vera opp til 32 teikn, og mange "
+"ESSID'en «${essid}» er ugyldig. ESSID'ar kan vera opp til 32 teikn, og mange "
 "inneheld alle typar teikn."
 
 #. Type: string
@@ -222,10 +222,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Vertsnamnet er eit namn (utan mellomrom) som identifiserer systemet p "
-"nettverket. Dersom du ikkje veit kva vertsnamnet br vera, kan du kontakta "
+"Vertsnamnet er eit namn (utan mellomrom) som identifiserer systemet på "
+"nettverket. Dersom du ikkje veit kva vertsnamnet bør vera, kan du kontakta "
 "nettverksadministratoren. Dersom du set opp ditt eige heimenettverk, kan du "
-"finna p eit vertsnamn sjlv."
+"finna på eit vertsnamn sjølv."
 
 #. Type: error
 #. Description
@@ -237,7 +237,7 @@ msgstr "Ugyldig vertsnamn."
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Vertsnamnet ${hostname} er ugyldig."
+msgstr "Vertsnamnet «${hostname}» er ugyldig."
 
 #. Type: error
 #. Description
@@ -247,8 +247,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Eit gyldig vertsnamn kan berre innehalda siffera 0-9, dei sm bokstavane a-z "
-"og minusteiknet. Det m vera mellom 2 og 63 teikn langt, og kan ikkje starta "
+"Eit gyldig vertsnamn kan berre innehalda siffera 0-9, dei små bokstavane a-z "
+"og minusteiknet. Det må vera mellom 2 og 63 teikn langt, og kan ikkje starta "
 "eller slutta med eit minusteikn."
 
 #. Type: error
@@ -264,8 +264,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Ein feil oppstod og prosessen med  setja opp nettverket er avbrote. Du kan "
-"prva p ny fr hovudmenyen i installasjonen."
+"Ein feil oppstod og prosessen med å setja opp nettverket er avbrote. Du kan "
+"prøva på ny frå hovudmenyen i installasjonen."
 
 #. Type: error
 #. Description
@@ -290,8 +290,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Viss du har nettverkskort m du kanskje lasta ein srskilt modul for det. For  "
-"gjera det m du g tilbake til steget der installasjonsystemet finn "
+"Viss du har nettverkskort må du kanskje lasta ein særskilt modul for det. "
+"For å gjera det må du gå tilbake til steget der installasjonsystemet finn "
 "nettverksutstyr."
 
 #. Type: select
@@ -305,7 +305,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
-msgstr "Type trdlaust nettverk:"
+msgstr "Type trådlaust nettverk:"
 
 #. Type: select
 #. Description
@@ -315,21 +315,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Trdlause nettverk er anten handterte eller ad-hoc. Viss du brukar eit "
-"verkeleg tilgangspunkt av ein type, s er nettverket ditt handtert. Viss ei "
-"anna datamaskin er tilgangspunktet ditt, s er nettverket ad-hoc."
+"Trådlause nettverk er anten handterte eller ad-hoc. Viss du brukar eit "
+"verkeleg tilgangspunkt av ein type, så er nettverket ditt handtert. Viss ei "
+"anna datamaskin er «tilgangspunktet» ditt, så er nettverket ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
-msgstr "Oppsett av trdlaust nettverk"
+msgstr "Oppsett av trådlaust nettverk"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
-msgstr "Skjer etter trdlause tilgangspunkt ..."
+msgstr "Søkjer etter trådlause tilgangspunkt ..."
 
 #. Type: text
 #. Description
@@ -341,13 +341,13 @@ msgstr "<ingen>"
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
-msgstr "Trdlaust ethernet (802.11x)"
+msgstr "Trådlaust ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:140
 msgid "wireless"
-msgstr "trdlaus"
+msgstr "trådlaus"
 
 #. Type: text
 #. Description
@@ -454,14 +454,14 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Det kan vera du m oppgje eit DHCP-vertsnamn. Viss du brukar eit kabelmodem m "
-"du kanskje oppgje eit kontonummer."
+"Det kan vera du må oppgje eit DHCP-vertsnamn. Viss du brukar eit kabelmodem "
+"må du kanskje oppgje eit kontonummer."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Dei fleste andre brukarar kan la dette feltet st tomt."
+msgstr "Dei fleste andre brukarar kan la dette feltet stå tomt."
 
 #. Type: text
 #. Description
@@ -503,14 +503,14 @@ msgstr "Avbryt oppsettet av DHCP."
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "Prv  setja opp nettverket automatisk ein gong til"
+msgstr "Prøv å setja opp nettverket automatisk ein gong til"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
-"Prv  setja opp nettverket automatisk ein gong til med eit DHCP-vertsnamn"
+"Prøv å setja opp nettverket automatisk ein gong til med eit DHCP-vertsnamn"
 
 #. Type: select
 #. Choices
@@ -546,11 +546,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Her kan du prve  setja opp nettverket automatisk ein gong til (noko som kan "
-"fungere dersom DHCP-tenaren er treg, eller du har glymt  setje i "
+"Her kan du prøve å setja opp nettverket automatisk ein gong til (noko som "
+"kan fungere dersom DHCP-tenaren er treg, eller du har gløymt å setje i "
 "nettverkskabelen) eller setja opp nettverket manuelt. Nokre DHCP-tenarar "
-"treng eit DHCP-vertsnamn som m sendast av klienten, s du kan ogs prve  setja "
-"opp nettverket automatisk igjen med DHCP ved  oppgje eit vertsnamn."
+"treng eit DHCP-vertsnamn som må sendast av klienten, så du kan også prøve å "
+"setja opp nettverket automatisk igjen med DHCP ved å oppgje eit vertsnamn."
 
 #. Type: note
 #. Description
@@ -565,7 +565,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Nettverket ditt brukar truleg ikkje DHCP-protokollen. Alternativt s er DHCP-"
+"Nettverket ditt brukar truleg ikkje DHCP-protokollen. Alternativt så er DHCP-"
 "tenaren treg eller det er noko maskinvare for nettverket som ikkje verkar "
 "som det skal."
 
@@ -586,10 +586,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Nettverket blei sett opp automatisk. Men det er ikkje sett nokon standard "
-"rute ut, s systemet ditt veit ikkje korleis det skal kommunisere med andre "
-"maskiner p internett. Dette vil gjere det umogeleg  halda fram med "
-"installasjonen dersom du ikkje har ein offisiell Debian frste-CD, ein "
-"Netinst CD eller pakkar tilgjengeleg p det lokale nettet."
+"rute ut, så systemet ditt veit ikkje korleis det skal kommunisere med andre "
+"maskiner på internett. Dette vil gjere det umogeleg å halda fram med "
+"installasjonen dersom du ikkje har ein offisiell Debian første-CD, ein "
+"«Netinst» CD eller pakkar tilgjengeleg på det lokale nettet."
 
 #. Type: boolean
 #. Description
@@ -598,14 +598,14 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Viss du ikkje er sikker, br du ikkje halda fram utan ei standard rute ut. Ta "
-"kontakt med din lokale nettverksadministrator om dette problemet."
+"Viss du ikkje er sikker, bør du ikkje halda fram utan ei standard rute ut. "
+"Ta kontakt med din lokale nettverksadministrator om dette problemet."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Set opp det trdlause nettverket p ny"
+msgstr "Set opp det trådlause nettverket på ny"
 
 #. Type: text
 #. Description
@@ -629,8 +629,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP-adressa er unik for denne datamaskina og er bygd opp av fire tal skilde "
-"med punktum. Spr nettverksadministratoren din viss du ikkje veit kva du skal "
-"bruka."
+"med punktum. Spør nettverksadministratoren din viss du ikkje veit kva du "
+"skal bruka."
 
 #. Type: error
 #. Description
@@ -645,8 +645,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"IP-adressa du skreiv inn er ikkje formatert rett. Ho skal vera p forma x.x.x."
-"x der kvar x ikkje er strre enn 255. Prv igjen."
+"IP-adressa du skreiv inn er ikkje formatert rett. Ho skal vera på forma x.x."
+"x.x der kvar «x» ikkje er større enn 255. Prøv igjen."
 
 #. Type: string
 #. Description
@@ -663,7 +663,7 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Punkt-til-punkt-adressa blir brukt til  finna det andre endepunktet i punkt-"
+"Punkt-til-punkt-adressa blir brukt til å finna det andre endepunktet i punkt-"
 "til-punkt-nettverket. Ta kontakt med nettverksadministratoren dersom du "
 "ikkje veit kva for verdi du skal bruka. Punkt-til-punkt-adressa skal "
 "skrivast som fire tal med punktum mellom."
@@ -682,7 +682,7 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Nettmaska blir brukt til  avgjera kva for maskiner som er p det lokale "
+"Nettmaska blir brukt til å avgjera kva for maskiner som er på det lokale "
 "nettverket. Ta kontakt med nettverksadministratoren dersom du ikkje veit kva "
 "for verdi du skal bruka. Nettmaska skal skrivast som fire tal med punktum "
 "mellom."
@@ -704,11 +704,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Dette er ei IP-adresse (fire tal skilde med punktum) som hyrer til "
-"standardrutaren (gateway). All trafikk som gr ut av lokalnettet (til dmes "
-"til Internett) blir sendt gjennom denne rutaren. I sjeldne tilfelle kan det "
-"henda du ikkje har nokon rutar. I s fall skal feltet st tomt. Ta kontakt med "
-"nettverksadministratoren din viss du ikkje veit kva du skal skriva inn."
+"Dette er ei IP-adresse (fire tal skilde med punktum) som høyrer til "
+"standardrutaren («gateway»). All trafikk som går ut av lokalnettet (til "
+"dømes til Internett) blir sendt gjennom denne rutaren. I sjeldne tilfelle "
+"kan det henda du ikkje har nokon rutar. I så fall skal feltet stå tomt. Ta "
+"kontakt med nettverksadministratoren din viss du ikkje veit kva du skal "
+"skriva inn."
 
 #. Type: error
 #. Description
@@ -720,7 +721,8 @@ msgstr "Kjem ikkje fram til standardrutar"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Det gr ikkje an  koma fram til adressa du oppgav for standardrutaren."
+msgstr ""
+"Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
 
 #. Type: error
 #. Description
