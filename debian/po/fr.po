@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
 "POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-12-05 11:36+0100\n"
+"PO-Revision-Date: 2004-05-12 17:27+0200\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Pour configurer le réseau, on peut utiliser DHCP ou fournir soi-même toutes "
 "les informations. Si vous choisissez DHCP et si l'installateur ne réussit "
 "pas à configurer correctement le réseau à partir d'un serveur DHCP, vous "
-"pourrez configurer manuellement votre réseau après la tentative DHCP."
+"pourrez configurer vous-même le réseau après la tentative DHCP."
 
 #. Type: string
 #. Description
@@ -124,7 +124,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "Si nécessaire, veuillez indiquer la clé de sécurité WEP pour le périphérique "
-"sans fil ${iface}. Vous pouvez l'indiquer de deux manières différentes :"
+"sans fil ${iface}. Il y a deux façons de le faire :"
 
 #. Type: string
 #. Description
@@ -277,7 +277,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Vous devez sans doute charger un module spécifique à votre carte réseau - si "
-"vous en avez un. Pour cela, revenez à l'étape de détection du matériel "
+"vous en avez une. Pour cela, revenez à l'étape de détection du matériel "
 "réseau."
 
 #. Type: select
@@ -303,7 +303,7 @@ msgstr ""
 "Les réseaux sans fil fonctionnent en mode « infrastructure » (« managed ») "
 "ou en mode « ad-hoc ». Si vous utilisez un point d'accès matériel, votre "
 "réseau est de type « infrastructure ». Si un autre ordinateur fait office de "
-"point d'accès, le réseau peut être de type « ad-hoc »."
+"point d'accès, le réseau est de type « ad-hoc »."
 
 #. Type: text
 #. Description
@@ -518,11 +518,10 @@ msgid ""
 "configure it at all right now."
 msgstr ""
 "La configuration automatique du réseau a échoué. Cela est généralement dû à "
-"un serveur DHCP lent sur le réseau : il peut donc être judicieux de tenter à "
-"nouveau cette configuration automatique. Il peut également être nécessaire "
-"d'indiquer un nom d'hôte à envoyer au serveur si vous pensez qu'il en a "
+"la lenteur du serveur DHCP : il est donc judicieux de réessayer. Vous pouvez "
+"aussi indiquer un nom d'hôte à envoyer au serveur si vous pensez qu'il en a "
 "besoin. Enfin, vous pouvez choisir de configurer le réseau vous-même ou de "
-"ne pas le configurer du tout maintenant."
+"ne pas le configurer maintenant."
 
 #. Type: text
 #. Description
