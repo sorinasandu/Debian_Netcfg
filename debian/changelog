@@ -11,8 +11,6 @@ netcfg (0.69) UNRELEASED; urgency=low
     - Allow netcfg/disable_dhcp option that governs what use_dhcp is
       set to every time we start, instead of hardcoding true. Defaults
       to true, so default behavior has not changed. (Closes: #248147)
-    - Don't set the broadcast address in either dhclient-script or
-      static configuration. (Closes: #253361)
     - Fix /etc/hosts writing after much deliberation. (Closes: #247734)
   * Bastian Blank
     - Readd postinst files for netcfg-dhcp and netcfg-static.
