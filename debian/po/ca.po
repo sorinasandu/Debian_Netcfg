@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 01:26-0500\n"
-"PO-Revision-Date: 2004-02-05 18:52+0100\n"
+"PO-Revision-Date: 2004-02-23 17:56+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "ESSID wireless per a ${iface}:"
 
 #. Type: string
 #. Description
@@ -112,13 +112,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this form blank."
-msgstr ""
+msgstr "${iface} és una interfície de xarxa wireless. Introduïu el nom (l'ESSID) de la xarxa wireless que voleu que utilitze ${iface}. Si voleu utilitzar qualsevol altra xarxa disponible, deixeu aquest camp en blanc."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "Clau WEP per a ${iface}:"
 
 #. Type: string
 #. Description
@@ -126,7 +126,7 @@ msgstr ""
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr ""
+msgstr "Si s'aplica, introduïu la clau de seguretat WEP per al dispositiu ${iface}. Hi ha dos maneres de fer açò:"
 
 #. Type: string
 #. Description
@@ -134,7 +134,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into the box."
-msgstr ""
+msgstr "Si la vostra clau WEP té el format «nnnn-nnnn-nn» o «nnnnnnnn», on n és un nombre, introduïu-la tal qual en el camp."
 
 #. Type: string
 #. Description
@@ -142,7 +142,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes.)"
-msgstr ""
+msgstr "Si la vostra clau WEP és una contrasenya, introduïu-la amb el prefix «s:» (sense les cometes)."
 
 #. Type: string
 #. Description
@@ -150,13 +150,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this form "
 "blank."
-msgstr ""
+msgstr "Per descomptat, si no hi ha una clau WEP per a la vostra xarxa wireless, deixeu aquest camp en blanc."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "La clau WEP és invàlida"
 
 #. Type: error
 #. Description
@@ -164,13 +164,13 @@ msgstr ""
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
+msgstr "La clau WEP «${wepkey}» és invàlida. Si us plau, consulteu les intruccions de la següent pantalla per a veure com s'introdueix la vostra clau WEP correctament, i torneu-ho a provar."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "L'ESSID és invàlid"
 
 #. Type: error
 #. Description
@@ -178,7 +178,7 @@ msgstr ""
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
+msgstr "L'ESSID «${essid} és invàlid. Els ESSID només poden contenir fins a 32 caràcters, però poden contenir qualsevol tipus de caràcters."
 
 #. Type: string
 #. Description
@@ -283,7 +283,7 @@ msgstr "<cap>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Ethernet Wireless (802.11x)"
 
 #. Type: text
 #. Description
@@ -380,9 +380,8 @@ msgstr "Configuració de la xarxa"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:177
-#, fuzzy
 msgid "Configuring network .."
-msgstr "Configura la xarxa"
+msgstr "S'està configurant la xarxa..."
 
 #. Type: text
 #. Description
