@@ -1,3 +1,4 @@
+#
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
@@ -14,585 +15,703 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-11 22:57+0100\n"
-"PO-Revision-Date: 2004-05-18 23:08+0200\n"
+"POT-Creation-Date: 2004-05-16 15:47-0700\n"
+"PO-Revision-Date: 2004-05-20 14:07+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:4
+msgid "Auto-configure network with DHCP?"
+msgstr "Konfigurowaæ sieæ automatycznie przez DHCP"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:4
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose to use DHCP and the installer is unable to get a "
+"working configuration from a DHCP server on your network, you will be given "
+"the opportunity to configure your network manually after the attempt to "
+"configure it by DHCP."
+msgstr ""
+"Ustawienia sieci mog± byæ konfigurowane albo poprzez DHCP albo rêcznie, "
+"wprowadzaj±c odpowiednie informacje. Je¶li wybierzesz DHCP i instalator nie "
+"bêdzie w stanie pobraæ dzia³aj±cej konfiguracji z serwera DHCP w Twojej "
+"sieci, bêdziesz mia³/mia³a mo¿liwo¶æ skonfigurowania ustawieñ sieciowych "
+"rêcznie."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:14
+msgid "Domain name:"
+msgstr "Nazwa domeny:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:14
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Nazwa domeny jest czê¶ci± Twojego Internetowego adresu podawan± po prawej "
+"stronie Twojej nazwy hosta. Zazwyczaj koñczy siê na .com, .net, .edu lub ."
+"org. Je¶li robisz domow± sieæ, mo¿esz dowolnie dobraæ nazwê, ale pamiêtaj, "
+"by u¿ywaæ tej samej nazwy domeny na wszystkich komputerach."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:22
+msgid "Name server addresses:"
+msgstr "Adresy serwerów nazw:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:22
+msgid ""
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
+msgstr ""
+"Serwery nazw s± u¿ywane do rozwi±zywania nazw komputerów w sieci. Proszê "
+"podaæ adresy IP (a nie nazwy hostów) maksymalnie trzech serwerów nazw "
+"oddzielonych spacjami. Nie u¿ywaj przecinków. Pierwszy serwer z listy bêdzie "
+"pierwszym odpytywanym. Je¶li nie chcesz korzystaæ z serwerów nazw, pozostaw "
+"to pole puste."
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid "Primary network interface:"
+msgstr "Podstawowy interfejs sieciowy:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid ""
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
+msgstr ""
+"Twój system posiada wiele interfejsów sieciowych. Wybierz jeden, który ma "
+"byæ u¿ywany jako podstawowy podczas instalacji Debiana."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:38
+msgid "Wireless ESSID for ${iface}:"
+msgstr "Bezprzewodowy ESSID dla ${iface}:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:38
+msgid ""
+"${iface} is a wireless network interface. Please enter the name (the ESSID) "
+"of the wireless network you would like ${iface} to use. If you would like to "
+"use any available network, leave this field blank."
+msgstr ""
+"${iface} jest bezprzewodowym interfejsem sieciowym. Proszê wprowadziæ nazwê "
+"(ESSID) bezprzewodowej sieci, której chcesz u¿yæ z ${iface}. Je¶li chcesz "
+"u¿yæ jakiejkolwiek dostêpnej sieci, zostaw to pole puste."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid "WEP key for wireless device ${iface}:"
+msgstr "Klucz WEP dla urz±dzenia bezprzewodowego ${iface}:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If applicable, please enter the WEP security key for the wireless device "
+"${iface}. There are two ways to do this:"
+msgstr ""
+"Je¶li istnieje mo¿liwo¶æ, wprowad¼ klucz bezpieczeñstwa WEP dla urz±dzenia "
+"bezprzewodowego ${iface}. S± dwa sposoby dokonania tego:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
+"number, just enter it as it is into this field."
+msgstr ""
+"Je¶li Twój klucz WEP jest formatu 'nnnn-nnnn-nn' lub 'nnnnnnnn', gdzie n "
+"jest liczb±, wprowad¼ ten numer po prostu do tego pola."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"If your WEP key is in the format of a passphrase, prefix it with "
+"'s:' (without quotes)."
+msgstr ""
+"Je¶li Twój klucz WEP jest w formacie has³a, poprzed¼ go przez "
+"'s:' (pomijaj±c znaki cytowania)."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:45
+msgid ""
+"Of course, if there is no WEP key for your wireless network, leave this "
+"field blank."
+msgstr ""
+"Oczywi¶cie, je¶li nie posiadasz klucza WEP dla swojej sieci bezprzewodowej, "
+"zostaw to pole puste."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:60
+msgid "Invalid WEP key"
+msgstr "Nieprawid³owy klucz WEP"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:60
+msgid ""
+"The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
+"next screen carefully on how to enter your WEP key correctly, and try again."
+msgstr ""
+"Klucz WEP '${wepkey}' jest nieprawid³owy. Proszê uwa¿nie przeczytaæ "
+"instrukcje opisuj±ce jak prawid³owo wprowadziæ klucz WEP, znajduj±ce siê na "
+"nastêpnym ekranie, a nastêpnie spróbowaæ ponownie."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:67
+msgid "Invalid ESSID"
+msgstr "Nieprawid³owy ESSID"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:67
+msgid ""
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
+"but may contain all kinds of characters."
+msgstr ""
+"ESSID \"${essid}\" jest nieprawid³owy. ESSID mo¿e zawieraæ maksimum 32 "
+"znaki, ale ka¿dego rodzaju."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:74
+msgid "Hostname:"
+msgstr "Nazwa hosta:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:74
+msgid "Please enter the hostname for this system."
+msgstr "Wprowad¼ nazwê hosta dla tego systemu."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:74
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Nazwa hosta jest pojedynczym s³owem, które identyfikuje Twój system w sieci. "
+"Je¶li nie wiesz, jaka powinna byæ nazwa hosta, skontaktuj siê z "
+"administratorem Twojej sieci. Je¶li samodzielnie robisz sieæ domow±, mo¿esz "
+"spokojnie wpisaæ tu wymy¶lon± nazwê."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:84
+msgid "Invalid hostname"
+msgstr "Niew³a¶ciwa nazwa hosta"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:84
+msgid "The name \"${hostname}\" is invalid."
+msgstr "Nazwa hosta \"${hostname}\" jest nieprawid³owa."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:84
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr ""
+"Prawid³owa nazwa hosta mo¿e zawieraæ tylko znaki alfanumeryczne oraz znak "
+"minus. Musi mieæ od 2 do 63 znaków i nie mo¿e siê zaczynaæ ani koñczyæ "
+"znakiem minus."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:93
+msgid "Error"
+msgstr "B³±d"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:93
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr ""
+"Wyst±pi³ b³±d i proces konfiguracji sieci zosta³ przerwany. Mo¿na go ponowiæ "
+"korzystaj±c z menu g³ównego instalatora."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:99
+msgid "No network interfaces detected"
+msgstr "Nie wykryto ¿adnych interfejsów sieciowych"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:99
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr ""
+"Nie wykryto ¿adnych interfejsów. Oznacza to, ¿e system instalacyjny nie móg³ "
+"znale¼æ ¿adnego urz±dzenia sieciowego."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:99
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr ""
+"Je¶li rzeczywi¶cie posiadasz kartê sieciow±, mo¿liwe, ¿e trzeba wczytaæ "
+"specyficzny modu³. Aby tego dokonaæ, wróæ do etapu wykrywania sprzêtu "
+"sieciowego."
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:109
+msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr "Sieæ zarz±dzalna, Ad-hoc (punkt do punktu)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid "Wireless network kind:"
+msgstr "Rodzaj sieci bezprzewodowej:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network may be Ad-hoc."
+msgstr ""
+"Sieci bezprzewodowe s± albo zarz±dzalne albo typu ad-hoc. Je¶li u¿ywasz "
+"jakiego¶ prawdziwego punktu dostêpowego, Twoja sieæ jest zarz±dzalna. Je¶li "
+"inny komputer jest punktem dostêpowym, wtedy jest to prawdopodobnie sieæ "
+"typu Ad-hoc."
+
 #. Type: text
 #. Description
-#. Main menu item
-#: ../templates:4
-msgid "Configure the Logical Volume Manager"
-msgstr "Konfiguruj mened¿era wolumenów logicznych"
+#: ../netcfg-common.templates:117
+msgid "Wireless network configuration"
+msgstr "Konfiguracja sieci bezprzewodowej"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:121
+msgid "Searching for wireless access points ..."
+msgstr "Poszukiwanie bezprzewodowych punktów dostêpowych ..."
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:125
+msgid "<none>"
+msgstr "<brak>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:129
+msgid "Wireless ethernet (802.11x)"
+msgstr "Bezprzewodowy ethernet (802.11x)"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:133
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet lub Fast Ethernet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:137
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:141
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:145
+msgid "Serial-line IP"
+msgstr "IP po linii szeregowej"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:149
+msgid "Parallel-port IP"
+msgstr "IP po lini równoleg³ej"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:153
+msgid "Point-to-Point Protocol"
+msgstr "Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:157
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:161
+msgid "ISDN Point-to-Point Protocol"
+msgstr "ISDN Point-to-Point Protocol"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:165
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:169
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:173
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:177
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:181
+msgid "Unknown interface"
+msgstr "Nieznany interfejs"
+
+#. Type: text
+#. Description
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:186
+msgid "Configuring network ..."
+msgstr "Konfigurowanie sieci ..."
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:191
+msgid "Configure the network"
+msgstr "Konfiguruj sieæ"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Nazwa hosta DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Mo¿liwe, ¿e musisz wprowadziæ nazwê hosta DHCP. Je¶li u¿ywasz modemu "
+"kablowego, mo¿liwe, ¿e musisz wprowadziæ tutaj numer konta."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Wiêkszo¶æ innych u¿ytkowników mo¿e zostawiæ to pole puste."
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid "Configuring the network with DHCP"
+msgstr "Konfiguruj sieæ przez DHCP"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:15
+msgid "This may take some time."
+msgstr "To mo¿e chwilê potrwaæ."
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:19
+msgid "Network autoconfiguration has succeeded!"
+msgstr "Autokonfiguracja sieci powiod³a siê!"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "No DHCP client found"
+msgstr "Nie odnaleziono klienta DHCP"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "Nie odnaleziono klienta DHCP. Ten pakiet wymaga pump lub dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "The DHCP configuration process will be aborted."
+msgstr "Proces konfiguracji DHCP zostanie przerwany."
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "Retry network autoconfiguration"
+msgstr "Powtórz konfiguracjê sieci"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "Retry network autoconfiguration with a DHCP hostname"
+msgstr "Powtórz autokonfiguracjê sieci z nazw± hosta DHCP"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "Configure network manually"
+msgstr "Konfiguruj sieæ rêcznie"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "${wifireconf}"
+msgstr "${wifireconf}"
+
+#. Type: select
+#. Choices
+#: ../netcfg-dhcp.templates:30
+msgid "Do not configure the network at this time"
+msgstr "Nie konfiguruj sieci teraz"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+msgid "Network configuration method:"
+msgstr "Sposób konfiguracji sieci:"
+
+#. Type: select
+#. Description
+#: ../netcfg-dhcp.templates:32
+msgid ""
+"Network autoconfiguration failed. This may be due to a slow DHCP server on "
+"the network, so you may want to retry. If your network does not use DHCP for "
+"autoconfiguration, you can instead configure it manually. Also, some DHCP "
+"servers need a specific DHCP hostname, so you can choose to enter such a "
+"hostname before retrying DHCP."
+msgstr ""
+"Autokonfiguracja sieci nie powiod³a siê. Mo¿liwe, ¿e przez zbyt wolny "
+"serwer DHCP wiêc mo¿esz spróbowaæ powtórzyæ. Je¶li Twoja sieæ nie "
+"korzysta z DHCP mo¿esz skonfigurowaæ sieæ rêcznie. Dodatkowo niektóre "
+"serwery DHCP potrzebuj± by wprowadziæ nazwê hosta, wiêc mo¿esz "
+"spróbowaæ j± wprowadziæ przez powtórzeniem autokonfiguracji."
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:41
+msgid "Reconfigure the wireless network"
+msgstr "Przekonfiguruj sieæ bezprzewodow±"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Dynamiczna konfiguracja sieci (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "Konfiguruj sieæ za pomoc± dynamicznego adresowania (DHCP)"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "Adres IP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"Adres IP jest unikalnym identyfikatorem Twojego komputera i sk³ada siê z "
+"czterech czê¶ci rozdzielonych kropkami. Je¶li nie wiesz, co masz wpisaæ, "
+"skontaktuj siê z administratorem Twojej sieci."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Malformed IP address"
+msgstr "Nieprawid³owy adres IP"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The IP address you provided is malformed. It should be in the form x.x.x.x "
+"where each 'x' is no larger than 255. Please try again."
+msgstr ""
+"Wprowadzony adres IP jest nieprawid³owy. Powinien byæ podany w formie x.x.x."
+"x, gdzie ka¿dy 'x' jest nie wiêkszy ni¿ 255. Proszê spróbowaæ ponownie."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:16
+msgid "Point-to-point address:"
+msgstr "Adres drugiego koñca (sieæ punkt-punkt):"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:16
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr ""
+"Adres drugiego koñca okre¶la drugi koniec sieci typu punkt-punkt. Je¶li nie "
+"wiesz co wpisaæ, skontaktuj siê z administratorem sieci. Ten adres powinien "
+"byæ wpisany jako cztery liczby rozdzielone kropkami."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:25
+msgid "Netmask:"
+msgstr "Maska sieci:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:25
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Maska sieci okre¶la, które komputery s± lokalne w Twojej sieci. Je¶li nie "
+"wiesz co wpisaæ, skontaktuj siê z administratorem sieci. Maska sieci powinna "
+"byæ wpisana jako cztery liczby rozdzielone kropkami."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:33
+msgid "Gateway:"
+msgstr "Brama sieciowa:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:33
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr ""
+"Brama sieciowa to adres IP (cztery liczby rozdzielone kropkami), który "
+"wskazuje na router dostêpowy, zwany tak¿e domy¶lnym routerem. Ca³y ruch "
+"skierowany poza Twój LAN (np. do Internetu) przechodzi w³a¶nie przez ten "
+"router. W rzadkich przypadkach mo¿e nie byæ routera - wtedy mo¿esz spokojnie "
+"zostawiæ to pole puste. Je¶li nie wiesz co wpisaæ, skontaktuj siê z "
+"administratorem sieci."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Unreachable gateway"
+msgstr "Brama sieciowa nieosi±galna"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid "The gateway address you entered is unreachable."
+msgstr "Podana brama sieciowa jest nieosi±galna."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Upewnij siê, ¿e wpisa³e¶ poprawny adres IP, maskê sieci i/lub bramê sieciow±."
 
 #. Type: boolean
 #. Description
-#: ../lvmcfg-utils.templates:4
-msgid "Activate existing volume groups?"
-msgstr "Aktywowaæ istniej±ce grupy wolumenów?"
+#: ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "Czy podane informacje s± prawid³owe?"
 
 #. Type: boolean
 #. Description
-#: ../lvmcfg-utils.templates:4
-msgid ""
-"${COUNT} existing volume groups have been found. Please indicate whether you "
-"want to activate them."
-msgstr ""
-"Znaleziono ${COUNT} istniej±cych grup wolumenów. Proszê okre¶liæ czy chcesz "
-"je aktywowaæ."
-
-#. Type: select
-#. Choices
-#. LVM main menu choices
-#. Translators : please use infinitive form or the equivalent
-#. in your language
-#: ../lvmcfg-utils.templates:13
-msgid "Modify volume groups (VG)"
-msgstr "Modyfikój grupy wolumentów (VG)"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:13
-msgid "Modify logical volumes (LV)"
-msgstr "Modyfikuj wolumeny logiczne (LV)"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:14
-msgid "LVM configuration action:"
-msgstr "Dzia³ania konfiguracyjne LVM:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:14
-msgid "This is the Logical Volume Manager configuration menu."
-msgstr "To jest menu konfiguracyjne mened¿era wolumenów logicznych."
-
-#. Type: select
-#. Choices
-#. Volume groups configuration menu choices
-#. Translators : please use infinitive form or the equivalent
-#. in your language
-#: ../lvmcfg-utils.templates:22
-msgid "Create volume groups"
-msgstr "Utwórz grupy wolumenów"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:22
-msgid "Delete volume groups"
-msgstr "Usuñ grupy wolumenów"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:22
-msgid "Extend volume groups"
-msgstr "Powiêksz grupy wolumenów"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:22
-msgid "Reduce volume groups"
-msgstr "Pomniejsz grupy wolumenów"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:23
-msgid "Volume groups configuration action:"
-msgstr "Zadania konfiguracji grup wolumenów:"
-
-#. Type: select
-#. Choices
-#. Logical volumes configuration menu choices
-#. Translators : please use infinitive form or the equivalent
-#. in your language
-#: ../lvmcfg-utils.templates:30
-msgid "Create logical volumes"
-msgstr "Utwórz logiczne wolumeny"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:30
-msgid "Delete logical volumes"
-msgstr "Usuñ logiczne wolumeny"
-
-#. Type: select
-#. Choices
-#: ../lvmcfg-utils.templates:30
-msgid "Leave"
-msgstr "Opu¶æ"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:31
-msgid "Logical volumes configuration action:"
-msgstr "Zadania konfiguracji wolumenów logicznych:"
-
-#. Type: multiselect
-#. Description
-#: ../lvmcfg-utils.templates:36
-msgid "Devices for the new volume group:"
-msgstr "Urz±dzenia dla nowej grupy wolumenów:"
-
-#. Type: multiselect
-#. Description
-#: ../lvmcfg-utils.templates:36
-msgid "Please select the devices for the new volume group."
-msgstr "Proszê wybraæ urz±dzenia dla nowej grupy wolumenów."
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:43
-msgid "Volume group name:"
-msgstr "Nazwa grupy wolumenów:"
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:43
-msgid "Please enter the name you would like to use for the new volume group."
-msgstr "Wprowad¼ nazwê, której chcesz u¿yæ dla nowej grupy wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:48
-msgid ""
-"No physical volumes were selected. The creation of a new volume group was "
-"aborted."
-msgstr ""
-"Nie wybrano ¿adnych fizycznych wolumenów. Tworzenie nowej grupy wolumenów "
-"zosta³o przerwane."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:54
-msgid "No volume group name entered"
-msgstr "Nie wprowadzono nazwy grupy wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:54
-msgid "No name for the volume group has been entered.  Please enter a name."
-msgstr "Nie wprowadzono ¿adnej nazwy grupy wolumenów. Proszê wprowadziæ nazwê."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:60
-msgid "Volume group name already in use"
-msgstr "Nazwa grupy wolumenów jest ju¿ u¿ywana"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:60
-msgid ""
-"The selected volume group name is already in use. Please choose another name."
-msgstr ""
-"Wybrana nazwa grupy wolumenów jest ju¿ u¿ywana. Proszê wybraæ inn± nazwê."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:66
-msgid "Volume group name overlaps with device name"
-msgstr "Nazwa grupy wolumenów w konflikcie z nazw± urz±dzenia"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:66
-msgid ""
-"The selected volume group name overlaps with an existing device name. Please "
-"choose another name."
-msgstr ""
-"Wprowadzona nazwa grupy wylumenów jest taka sama jak istniej±ca nazwa "
-"urz±dzenia. Proszê wprowadziæ inn± nazwê."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:73
-msgid "Volume group to delete:"
-msgstr "Grupa wolumenów do usuniêcia:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:73
-msgid "Please select the volume group you wish to delete."
-msgstr "Proszê Wybraæ grupê wolumenów, któr± chcesz usun±æ."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:78
-msgid "The volume group may have already been deleted."
-msgstr "Grupa wolumenów mog³a zostaæ ju¿ usuniêta."
+#: ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "Aktualnie skonfigurowane parametry sieci:"
 
 #. Type: boolean
 #. Description
-#: ../lvmcfg-utils.templates:86
-msgid "Really delete the volume group?"
-msgstr "Naprawdê usun±æ grupê wolumenów?"
-
-#. Type: boolean
-#. Description
-#: ../lvmcfg-utils.templates:86
-msgid "Please confirm the ${VG} volume group removal."
-msgstr "Proszê potwierdziæ usuniêcie grupy wolumenów ${VG}."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:91
-msgid "Error while deleting volume group"
-msgstr "B³±d podczas usuwania grupy wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:91
+#: ../netcfg-static.templates:53
 msgid ""
-"The selected volume group could not be deleted. One or more logical volumes "
-"may currently be in use."
+" interface     = ${interface}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
 msgstr ""
-"Wybrana grupa wolumenów nie mo¿e zostaæ usuniêta. Mo¿liwe, ¿e jeden lub "
-"wiêcej wolumenów logicznych jest aktualnie u¿ywanych."
+" interfejs         = ${interface}\n"
+" adres IP          = ${ipaddress}\n"
+" maska sieci       = ${netmask}\n"
+" brama sieciowa    = ${gateway}\n"
+" adres punkt-punkt = ${pointopoint}\n"
+" serwery nazw      = ${nameservers}"
 
-#. Type: error
+#. Type: text
 #. Description
-#: ../lvmcfg-utils.templates:97
-msgid "No volume group can be deleted."
-msgstr "¯adna grupa wolumenów nie mo¿e zostaæ usuniêta."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:105
-msgid "Volume group to extend:"
-msgstr "Grupa wolumenów do powiêkszenia:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:105
-msgid "Please select the volume group you wish to extend."
-msgstr "Proszê wybraæ grupê wolumenów, któr± chcesz powiêkszyæ."
-
-#. Type: multiselect
-#. Description
-#: ../lvmcfg-utils.templates:111
-msgid "Devices to add to the volume group:"
-msgstr "Urz±dzenia o które grupa wolumenów ma zostaæ powiêkszona:"
-
-#. Type: multiselect
-#. Description
-#: ../lvmcfg-utils.templates:111
-msgid "Please select the devices you wish to add to the volume group."
-msgstr ""
-"Proszê wybraæ urz±dzenia o które grupa wolumenów ma zostaæ powiêkszona."
-
-#. Type: multiselect
-#. Description
-#: ../lvmcfg-utils.templates:111
-msgid "You can select one or more devices."
-msgstr "Mo¿esz wybraæ jedno lub wiêcej urz±dzeñ."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:118
-msgid "No physical volumes selected"
-msgstr "Nie wybrano fizycznych wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:118
-msgid ""
-"No physical volumes were selected. Extension of the volume group was aborted."
-msgstr ""
-"Nie wybrano fizycznych wolumenów. Powiêkszanie grupy wolumenów zosta³o "
-"przerwane."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:124
-msgid "Error while extending volume group"
-msgstr "B³±d podczas powiêkszania grupy wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:124
-msgid ""
-"The physical volume ${PARTITION} could not be added to the selected volume "
-"group."
-msgstr ""
-"Fizyczny wolumen ${PARTITION} nie móg³ zostaæ dodany do wybranej grupy "
-"wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:130
-msgid "No volume group has been found."
-msgstr "Nie znaleziono ¿adnej grupy wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:130
-msgid "No volume group can be reduced."
-msgstr "¯adna grupa wolumenów nie mo¿e zostaæ pomniejszona."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:138
-msgid "Volume group to reduce:"
-msgstr "Grupa wolumenów do pomniejszenia:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:138
-msgid "Please select the volume group you wish to reduce."
-msgstr "Proszê wybraæ grupê wolumenów, któr± chcesz pomniejszyæ."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:144
-msgid "Device to remove from volume group:"
-msgstr "Urz±dzenie o które grupa wolumenów ma zostaæ pomniejszona:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:144
-msgid "Please select the device you wish to remove from the volume group."
-msgstr ""
-"Proszê wybraæ urz±dzenie o które grupa wolumenów ma zostaæ pomniejszona."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:149
-msgid ""
-"The selected volume group (${VG}) could not be reduced. There is only one  "
-"physical volume attached. Please delete the volume group instead."
-msgstr ""
-"Wybrana grupa wolumenów (${VG}) nie mo¿e zostaæ pomniejszona. Jest do niej "
-"za³±czony tylko jeden fizyczny wolumen. Proszê zamiast tego usun±æ grupê "
-"wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:155
-msgid "Error while reducing volume group"
-msgstr "B³±d podczas pomniejszania grupy wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:155
-msgid ""
-"The physical volume ${PARTITION} could not be removed from the selected  "
-"volume group."
-msgstr ""
-"Fizyczny wolumen ${PARTITION} nie móg³ zostaæ usuniêty z wybranej grupy "
-"wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:163
-msgid ""
-"No volume groups were found for creating a new logical volume.  Please "
-"create more physical volumes and volume groups."
-msgstr ""
-"Nie znaleziono grup wolumenów do utworzenia nowego wolumenu logicznego. "
-"Proszê utworzyæ wiêcej fizycznych wolumenów i grup wolumenów."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:169
-msgid ""
-"No free volume groups were found for creating a new logical volume. Please "
-"create more physical volumes and volume groups, or reduce an existing volume "
-"group."
-msgstr ""
-"Nie znaleziono wolnych grup wolumenów do utworzenia nowego wolumenu "
-"logicznego. Proszê utworzyæ wiêcej fizycznych wolumenów i grup wolumenów "
-"lub zmniejszyæ któr±¶ z istniej±cych grup wolumenów."
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:176
-msgid "Logical volume name:"
-msgstr "Nazwa wolumenu logicznego:"
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:176
-msgid "Please enter the name you would like to use for the new logical volume."
-msgstr ""
-"Proszê wprowadziæ nazwê, której chcesz u¿yæ dla nowego wolumenu logicznego."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:182
-msgid ""
-"Please select the volume group where the new logical volume should be "
-"created."
-msgstr ""
-"Wybierz grupê wolumenów w której powinien zostaæ utworzony nowy wolumen "
-"logiczny."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:188
-msgid "No logical volume name entered"
-msgstr "Nie wprowadzono nazwy wolumenu logicznego"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:188
-msgid "No name for the logical volume has been entered.  Please enter a name."
-msgstr ""
-"Nie wprowadzono ¿adnej nazwy wolumenu logicznego. Proszê wprowadziæ nazwê."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:194
-msgid ""
-"The name ${LV} is already in use by another logical volume on the same "
-"volume group (${VG})."
-msgstr ""
-"Nazwa ${LV} jest obecnie u¿ywana przez inny logiczny wolumen w tej samej "
-"grupie wolumenów (${VG})."
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:200
-msgid "Logical volume size:"
-msgstr "Rozmiar wolumenu logicznego:"
-
-#. Type: string
-#. Description
-#: ../lvmcfg-utils.templates:200
-msgid ""
-"Please enter the size of the new logical volume. The size may be entered in "
-"the following formats: 10K (Kilobytes), 10M (Megabytes), 10G (Gigabytes), "
-"10T (Terabytes). The default unit is Megabytes."
-msgstr ""
-"Proszê wprowadziæ rozmiar nowego wolumenu logicznego. Rozmiar mo¿e zostaæ "
-"wprowadzony w nastêpuj±cych formatach: 10K (kilobajty), 10M (megabajty), 10G "
-"(gigabajty), 10T (terabajty). Domy¶ln± jednostk± s± megabajty."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:207
-msgid "Error while creating a new logical volume"
-msgstr "B³±d podczas tworzenia nowego wolumenu logicznego"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:207
-msgid ""
-"Unable to create a new logical volume (${LV}) on ${VG} with the new size "
-"${SIZE}."
-msgstr ""
-"Nie uda³o siê utworzyæ nowego wolumenu logicznego (${LV}) w ${VG}  o "
-"rozmiarze ${SIZE}."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:215
-msgid "No volume group found"
-msgstr "Nie znaleziono grupy wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:215
-msgid "No volume group has been found for deleting a logical volume."
-msgstr "Nie znaleziono grupy wolumenów do usuniêcia logicznego wolumenu."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:221
-msgid "Volume group:"
-msgstr "Grupa wolumenów:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:221
-msgid ""
-"Please select the volume group which contains the logical volume to be "
-"deleted."
-msgstr ""
-"Proszê wybiraæ grupê wolumenów w której znajduje siê wolumen logiczny do "
-"usuniêcia."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:227
-msgid "No logical volume found"
-msgstr "Nie znaleziono logicznych wolumenów"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:227
-msgid ""
-"No logical volume has been found.  Please create a logical volume first."
-msgstr ""
-"Nie znaleziono grupy wolumenów logicznych. Najpierw utwórz jaki¶ wolumen "
-"logiczny."
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:233
-msgid "Logical volume:"
-msgstr "Logiczny wolumen:"
-
-#. Type: select
-#. Description
-#: ../lvmcfg-utils.templates:233
-msgid "Please select the logical volume to be deleted on ${VG}."
-msgstr "Proszê wybraæ wolumen logiczny do usuniêcia z ${VG}."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:238
-msgid "Error while deleting the logical volume"
-msgstr "B³±d podczas usuwania wolumenu logicznego"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:238
-msgid "The logical volume (${LV}) on ${VG} could not be deleted."
-msgstr "Logiczny wolumen (${LV}) nie mo¿e zostaæ usuniêty z ${VG}."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:238
-msgid "Please check the error log on the third console for more information."
-msgstr ""
-"By uzyskaæ wiêcej informacji, sprawd¼ komunikat b³êdu w trzeciej konsoli."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:245
-msgid "No usable physical volumes found"
-msgstr "Nie znaleziono fizycznych wolumenów zdatnych do wykorzystania"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:245
-msgid ""
-"No physical volumes (i.e. partitions) were found in your system. All "
-"physical volumes may already be in use. You may also need to load some "
-"required kernel modules or re-partition the hard drives."
-msgstr ""
-"Nie znaleziono fizycznych wolumenów (np. partycji) w Twoim systemie. "
-"Mo¿liwe, ¿e wszystkie fizyczne wolumeny s± aktualnie u¿ywane. Mo¿esz równie¿ "
-"spróbowaæ za³adowaæ wymagane modu³y do j±dra lub przepartycjonowaæ dysk "
-"twardy."
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:252
-msgid "Logical Volume Manager not available"
-msgstr "Mened¿er wolumenów logicznych niedostêpny"
-
-#. Type: error
-#. Description
-#: ../lvmcfg-utils.templates:252
-msgid ""
-"The current kernel doesn't support the Logical Volume Manager. You may need "
-"to load the lvm-mod module."
-msgstr ""
-"Aktualne j±dro nie posiada obs³ugi mened¿era wolumenów logicznych. Mo¿liwe, "
-"¿e musisz za³adowaæ modu³ lvm-mod."
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:66
+msgid "Configure a network using static addressing"
+msgstr "Konfiguruj sieæ opart± na adresach statycznych"
