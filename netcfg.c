@@ -342,8 +342,8 @@ netcfg_get_common(struct debconfclient *client, char **interface,
                 if ((len < 2) ||
                     (len > 63) ||
                     (strspn(*hostname, valid_chars) != len) ||
-		    (*hostname[len - 1] == '-') ||
-		    (*hostname[0] == '-')) {
+		    ((*hostname)[len - 1] == '-') ||
+		    ((*hostname)[0] == '-')) {
 			client->command(client, "subst", "netcfg/invalid_hostname",
 					"hostname", *hostname, NULL);
                         client->command(client, "input", "high",
@@ -351,9 +351,11 @@ netcfg_get_common(struct debconfclient *client, char **interface,
                         client->command(client, "go", NULL);
 			free(*hostname);
 			*hostname = NULL;
+                        client->command(client, "set",
+                                        "netcfg/get_hostname", "debian");
 		}
         
-	} while (!hostname);
+	} while (!*hostname);
 
 
 	free(*domain);
