@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 18:28+0200\n"
-"PO-Revision-Date: 2004-03-27 12:51EEST\n"
+"PO-Revision-Date: 2004-04-13 20:21EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,6 @@ msgstr "Διευθύνσεις διακομιστών ονομάτων:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -84,7 +83,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Παρακαλώ δώστε τις διευθύνσεις IP (όχι τα ονόματα host) έως 3 διακομιστών "
+"Οι διακομιστές ονομάτων χρησιμοποιούνται για την εύρεση ονομάτων κόμβων στο "
+"δίκτυο. Παρακαλώ δώστε τις διευθύνσεις IP (όχι τα ονόματα host) έως 3 διακομιστών "
 "ονομάτων χωρισμένων με κενά. Μη χρησιμοποιήσετε κόμματα. Οι διακομιστές θα "
 "ερωτώνται με τη σειρά που τους δίνετε εδω. Αν δεν επιθυμείτε να "
 "χρησιμοποιήσετε διακομιστές ονομάτων, αφήστε το πεδίο κενό."
@@ -166,8 +166,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -301,8 +300,7 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
-"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -326,15 +324,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Στατική ρύθμιση δικτύου"
+msgstr "Ασύρματη ρύθμιση δικτύου"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Ανίχνευση για ασύρματα σημεία πρόσβασης ..."
 
 #. Type: text
 #. Description
@@ -672,8 +669,7 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
@@ -714,5 +710,3 @@ msgstr "Στατική ρύθμιση δικτύου"
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
 
-#~ msgid "Network Configuration"
-#~ msgstr "Ρύθμιση Δικτύου"
