@@ -9,8 +9,6 @@
 PACKAGES=$(shell dh_listpackages)
 VERSION=$(shell dpkg-parsechangelog | grep ^Version: | cut -d ' ' -f 2)
 ARCH=$(shell dpkg --print-architecture)
-FILENAME=$(PACKAGE)_$(VERSION)_$(ARCH).udeb
-PRIORITY=$(shell grep ^Priority: debian/control | cut -d ' ' -f 2)
 
 
 # This is the debhelper compatability version to use.
@@ -73,15 +71,14 @@ binary-arch: build install
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
-	dh_gencontrol -- -fdebian/files~ 
-	@$(foreach PACKAGE, $(PACKAGES), \
-	(dpkg-distaddfile $(PACKAGE)_$(VERSION)_$(ARCH).udeb \
-		debian-installer $(PRIORITY) ) ; )
-	dh_md5sums
-	@$(foreach PACKAGE, $(PACKAGES), \
+	$(foreach PACKAGE, $(PACKAGES), \
+	( dpkg-gencontrol -Pdebian/$(PACKAGE) -p$(PACKAGE) \
+	-n$(PACKAGE)_$(VERSION)_$(ARCH).udeb ) ; )
+	$(foreach PACKAGE, $(PACKAGES), \
 	(cd debian ; \
-		dpkg-deb -b $(PACKAGE) ../../$(PACKAGE)_$(VERSION)_$(ARCH).udeb \
-		); )
+	dpkg-deb -b $(PACKAGE) ../../$(PACKAGE)_$(VERSION)_$(ARCH).udeb \
+	); )
+
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure
