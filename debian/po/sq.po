@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-13 12:30+0200\n"
-"PO-Revision-Date: 2004-07-18 00:05+0200\n"
+"PO-Revision-Date: 2004-09-30 23:36+0200\n"
 "Last-Translator:  Elian Myftiu <elian@lycos.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -92,14 +92,14 @@ msgstr "Përballja kryesore e rrjetit:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Sistemi juaj ka përballje të shumta rrjeti. Zgjidh njërën për ta përdorur si "
-"kryesoren ndërsa instalon Debian."
+"Sistemi juaj ka ndërfaqe të shumta rrjeti. Zgjidh njërën për ta përdorur si "
+"kryesoren ndërsa instalon Debian. Nëse është e mundur, ndërfaqja e parë e "
+"lidhur do zgjidhet."
 
 #. Type: string
 #. Description
@@ -115,7 +115,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} është një përballje rrjeti wireless. Të lutem fut emrin (ESSID) e "
+"${iface} është një ndërfaqe rrjeti wireless. Të lutem fut emrin (ESSID) e "
 "rrjetit wireless që do të përdorë ${iface}. Nëse dëshiron të përdorësh një "
 "rrjet tjetër në dispozicion, lëre bosh këtë fushë."
 
@@ -237,15 +237,14 @@ msgstr "Emri \"${hostname}\" është i pavlefshëm."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Një emër kompjuteri i vlefshëm mund të përmbajë vetëm gërma alfanumerike dhe "
-"shenjën minus. Duhet të jetë i gjatë nga 2 deri në 63 gërma, dhe nuk mund të "
-"fillojë apo mbarojë me shenjën minus."
+"Një emër kompjuteri i vlefshëm mund të përmbajë vetëm numrat 0-9, shkronjat "
+"e vogla dhe shenjën minus. Duhet të jetë i gjatë nga 2 deri në 63 gërma, dhe "
+"nuk mund të fillojë apo mbarojë me shenjën minus."
 
 #. Type: error
 #. Description
@@ -267,7 +266,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Nuk u gjet asnjë përballje rrjeti"
+msgstr "Nuk u gjet asnjë ndërfaqe rrjeti"
 
 #. Type: error
 #. Description
@@ -276,7 +275,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Nuk u gjet asnjë përballje rrjeti. Sistemi i instalimit nuk arriti të gjejë "
+"Nuk u gjet asnjë ndërfaqe rrjeti. Sistemi i instalimit nuk arriti të gjejë "
 "asnjë dispozitiv rrjeti."
 
 #. Type: error
@@ -534,7 +533,6 @@ msgstr "Mënyra e konfigurimit të rrjetit:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -546,8 +544,8 @@ msgstr ""
 "(i cili mund të mos punojë nëse serveri DHCP do shumë kohë të përgjigjet) "
 "ose të konfigurosh vetë rrjetin. Disa servera DHCP kanë nevojë për një emër "
 "strehe(hostname) DHCP që ti dërgohet nga klienti, kështu që mund të "
-"zgjedhësh të shkruash këtë të fundit përpara se ta riprovosh konfigurimin "
-"automatik."
+"zgjedhësh të riprovosh konfigurimin automatik të rrjetit DHCP me një emër "
+"strehe që ke."
 
 #. Type: note
 #. Description
@@ -746,7 +744,7 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" përballja     = ${interface}\n"
+" ndërfaqja     = ${interface}\n"
 " adresa IP     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
