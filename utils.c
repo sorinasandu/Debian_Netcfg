@@ -4,9 +4,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <syslog.h>
 
 
-#define EXECLOG_FILE "/var/log/debian-installer.log"
+#define EXECLOG_FILE "/var/log/installer.log"
 #define MAXLINE 512
 #define DEBUG
 
@@ -18,23 +19,18 @@ execlog (const char *incmd)
   char line[MAXLINE];
   strcpy (cmd, incmd);
 
-  if ((logfile = fopen (EXECLOG_FILE, "a")) == NULL)
-    {
-      perror ("execlog: fopen");
-      return system (cmd);
-    }
+  openlog ("installer", LOG_PID | LOG_PERROR, LOG_USER);
+  syslog (LOG_DEBUG, "running cmd '%s'", cmd);
 
   /* FIXME: this can cause the shell command if there's redirection
      already in the passed string */
   strcat (cmd, " 2>&1");
-  fprintf (logfile, "---- executing '%s' ----\n", cmd);
   output = popen (cmd, "r");
   while (fgets (line, MAXLINE, output) != NULL)
     {
-      fprintf (logfile, "%s", line);
+      syslog (LOG_DEBUG, line);
     }
-  fprintf (logfile, "---- finished '%s' ----\n", cmd);
-  fclose (logfile);
+  closelog ();
   /* FIXME we aren't getting the return value from the actual command
      executed, not sure how to do that cleanly */
   return (pclose (output));

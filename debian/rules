@@ -37,7 +37,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-	rm -f debian/*.config
+	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
 
