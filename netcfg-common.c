@@ -57,14 +57,13 @@ char *interface = NULL;
 char *hostname = NULL;
 char *dhcp_hostname = NULL;
 char *domain = NULL;
-struct in_addr ipaddress = { 0 };
-struct in_addr old_ipaddress = { 0 };
-struct in_addr nameserver_array[4] = { { 0 }, };
-struct in_addr network = { 0 };
-struct in_addr broadcast = { 0 };
-struct in_addr netmask = { 0 };
-struct in_addr gateway = { 0 };
-struct in_addr pointopoint = { 0 };
+u_int32_t ipaddress = 0;
+u_int32_t nameserver_array[4] = { 0 };
+u_int32_t network = 0;
+u_int32_t broadcast = 0;
+u_int32_t netmask = 0;
+u_int32_t gateway = 0;
+u_int32_t pointopoint = 0;
 
 /* wireless config */
 char* wepkey = NULL;
@@ -86,8 +85,9 @@ int my_debconf_input(struct debconfclient *client, char *priority,
 }
 
 /* Signal handler for DHCP client child */
-static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
+static void dhcp_client_sigchld(int sig) 
 {
+    (void)sig;
     if (dhcp_running == 1) {
 	dhcp_running = 0;
 	wait(&dhcp_exit_status);
@@ -267,6 +267,59 @@ FILE *file_open(char *path, const char *opentype)
     }
 }
 
+
+void dot2num(u_int32_t * num, char *dot)
+{
+    char *p = dot - 1;
+    char *e;
+    int ix;
+    unsigned long val;
+
+    if (!dot)
+        goto exit;
+
+    *num = 0;
+    for (ix = 0; ix < 4; ix++) {
+        *num <<= 8;
+        p++;
+        val = strtoul(p, &e, 10);
+        if (e == p)
+            val = 0;
+        else if (val > 255)
+            goto exit;
+        *num += val;
+        /*printf("%#8x, %#2x\n", *num, val); */
+        if (ix < 3 && *e != '.')
+            goto exit;
+        p = e;
+    }
+
+    return;
+
+ exit:
+    *num = 0;
+}
+
+
+static char num2dot_buf[16];
+
+char *num2dot(u_int32_t num)
+{
+    int byte[4];
+    int ix;
+    char *dot = num2dot_buf;
+
+    for (ix = 3; ix >= 0; ix--) {
+        byte[ix] = num & 0xff;
+        num >>= 8;
+    }
+    sprintf(dot, "%d.%d.%d.%d", byte[0], byte[1], byte[2], byte[3]);
+
+    return dot;
+}
+
+
+
 void netcfg_die(struct debconfclient *client)
 {
     if (netcfg_progress_displayed)
@@ -425,10 +478,9 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 }
 
 
-void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
+void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 			 char *hostname, char *domain)
 {
-    char ptr1[INET_ADDRSTRLEN];
     FILE *fp;
 
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
@@ -455,14 +507,14 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
     }
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
-        if (ipaddress.s_addr) {
+        if (ipaddress) {
             fprintf(fp, "127.0.0.1\tlocalhost\n");
             if (domain && !empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
-                        inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), hostname,
+                        num2dot(ipaddress), hostname,
                         domain, hostname);
             else
-                fprintf(fp, "%s\t%s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)),
+                fprintf(fp, "%s\t%s\n", num2dot(ipaddress),
                         hostname);
         } else {
             fprintf(fp, "127.0.0.1\t%s\tlocalhost\n", hostname);
@@ -475,12 +527,45 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
     }
 }
 
+int is_valid_ip (char* ipaddr)
+{
+  int ok = 1, nums = 0;
+  
+  if (!empty_str(ipaddr))
+  {
+    char* ptr = strdup(ipaddr), *tok;
+    tok = strtok(ptr, ".");
+
+    while (tok)
+    {
+      int spaz;
+
+      spaz = atoi(tok);
+      if (spaz >= 0 && spaz <= 255)
+      {
+	ok = 1;
+	nums++;
+      }
+      else
+      {
+	ok = 0;
+	break;
+      }
+
+      tok = strtok(NULL, ".");
+    }
+  }
+
+  if (nums != 4)
+    ok = 0;
+  
+  return ok;
+}
+
 int netcfg_get_ipaddress(struct debconfclient *client)
 {
     int ret, ok = 0;
     char *ptr;
-
-    old_ipaddress = ipaddress;
 
     while (!ok)
     {
@@ -488,7 +573,7 @@ int netcfg_get_ipaddress(struct debconfclient *client)
       if (ret)
 	return ret;
 
-      ok = inet_pton (AF_INET, ptr, &ipaddress);
+      ok = is_valid_ip (ptr);
       
       if (!ok)
       {
@@ -497,6 +582,7 @@ int netcfg_get_ipaddress(struct debconfclient *client)
       }
     }
 
+    dot2num(&ipaddress, ptr);
     return 0;
 }
 
@@ -511,7 +597,7 @@ int netcfg_get_pointopoint(struct debconfclient *client)
       if (ret)  
 	return ret;
 
-      ok = inet_pton (AF_INET, ptr, &pointopoint);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
@@ -520,7 +606,8 @@ int netcfg_get_pointopoint(struct debconfclient *client)
       }
     }
 
-    inet_pton (AF_INET, "255.255.255.255", &netmask);
+    dot2num(&pointopoint, ptr);
+    dot2num(&netmask, "255.255.255.255");
     network = ipaddress;
     gateway = pointopoint;
 
@@ -530,8 +617,7 @@ int netcfg_get_pointopoint(struct debconfclient *client)
 int netcfg_get_netmask(struct debconfclient *client)
 {
     int ret, ok = 0;
-    char *ptr, ptr1[INET_ADDRSTRLEN];
-    struct in_addr old_netmask = netmask;
+    char *ptr;
         
     while (!ok)
     {
@@ -540,7 +626,7 @@ int netcfg_get_netmask(struct debconfclient *client)
       if (ret)
 	return ret;
 
-      ok = inet_pton (AF_INET, ptr, &netmask);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
@@ -549,19 +635,13 @@ int netcfg_get_netmask(struct debconfclient *client)
       }
     }
 
-    if (ipaddress.s_addr != old_ipaddress.s_addr ||
-	netmask.s_addr != old_netmask.s_addr)
-    {
-      network.s_addr = ipaddress.s_addr & netmask.s_addr;
-      broadcast.s_addr = (network.s_addr | ~netmask.s_addr);
+    dot2num(&netmask, ptr);
+    network = ipaddress & netmask;
+    broadcast = (network | ~netmask);
 
-      /* Preseed gateway */
-      gateway.s_addr = ipaddress.s_addr & netmask.s_addr;
-      gateway.s_addr++;
-    }
-
-    inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
-    debconf_set(client, "netcfg/get_gateway", ptr1);
+    /* Preseed gateway */
+    gateway = ipaddress & netmask;
+    debconf_set(client, "netcfg/get_gateway", num2dot(gateway+1));
 
     return 0;
 }
@@ -577,7 +657,7 @@ int netcfg_get_gateway(struct debconfclient *client)
       if (ret)  
 	return ret;
 
-      ok = inet_pton (AF_INET, ptr, &gateway);
+      ok = is_valid_ip(ptr);
       
       if (!ok)
       {
@@ -586,25 +666,18 @@ int netcfg_get_gateway(struct debconfclient *client)
       }
     }
 
+    dot2num(&gateway, ptr);
+
     return 0;
 }
 
 
 int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 {
-    char *ptr, ptr1[INET_ADDRSTRLEN];
+    char *ptr;
     int ret;
        
-    if (*nameservers)
-        ptr = *nameservers;
-    else if (gateway.s_addr)
-    {
-        inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
-	ptr = ptr1;
-    }
-    else
-	ptr = "";
-    debconf_set(client, "netcfg/get_nameservers", ptr);
+    debconf_set(client, "netcfg/get_nameservers", (gateway ? num2dot(gateway) :  ""));
     
     ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
     if (*nameservers)
@@ -615,37 +688,36 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
     return ret;
 }
 
-void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[])
+void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
 {
+
     char *save, *ptr, *ns;
-    int i;
 
     if (nameservers) {
         save = ptr = strdup(nameservers);
 
-        for (i = 0; i < 3; i++)
-        {
-          ns = strtok_r(ptr, " \n\t", &ptr);
-          if (ns)
-            inet_pton (AF_INET, ns, &array[i]);
-          else
-            array[i].s_addr = 0;
-        }
+        ns = strtok_r(ptr, " \n\t", &ptr);
+        dot2num(&array[0], ns);
 
-        array[3].s_addr = 0;
+        ns = strtok_r(NULL, " \n\t", &ptr);
+        dot2num(&array[1], ns);
+
+        ns = strtok_r(NULL, " \n\t", &ptr);
+        dot2num(&array[2], ns);
+
+        array[3] = 0;
         free(save);
     } else
-        array[0].s_addr = 0;
+        array[0] = 0;
 }
 
 static int netcfg_write_static(char *prebaseconfig, char *domain,
-			       struct in_addr nameservers[])
+			       u_int32_t nameservers[])
 {
-    char ptr1[INET_ADDRSTRLEN];
     FILE *fp;
 
     if ((fp = file_open(NETWORKS_FILE, "w"))) {
-        fprintf(fp, "localnet %s\n", inet_ntop (AF_INET, &network, ptr1, sizeof (ptr1)));
+        fprintf(fp, "localnet %s\n", num2dot(network));
         fclose(fp);
         
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
@@ -661,14 +733,15 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
                 "# (network, broadcast and gateway are optional)\n");
         fprintf(fp, "auto %s\n", interface);
         fprintf(fp, "iface %s inet static\n", interface);
-        fprintf(fp, "\taddress %s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
-        fprintf(fp, "\tnetmask %s\n", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
-        fprintf(fp, "\tnetwork %s\n", inet_ntop (AF_INET, &network, ptr1, sizeof (ptr1)));
-        fprintf(fp, "\tbroadcast %s\n", inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)));
-        if (gateway.s_addr)
-            fprintf(fp, "\tgateway %s\n", inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
-        if (pointopoint.s_addr)
-            fprintf(fp, "\tpointopoint %s\n", inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
+        fprintf(fp, "\taddress %s\n", num2dot(ipaddress));
+        fprintf(fp, "\tnetmask %s\n", num2dot(netmask));
+        fprintf(fp, "\tnetwork %s\n", num2dot(network));
+        fprintf(fp, "\tbroadcast %s\n", num2dot(broadcast));
+        if (gateway)
+            fprintf(fp, "\tgateway %s\n", num2dot(gateway));
+        if (pointopoint)
+            fprintf(fp, "\tpointopoint %s\n",
+                    num2dot(pointopoint));
 	if (is_wireless_iface(interface))
 	{
 	  if (essid != NULL)
@@ -685,9 +758,9 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
         if (domain && !empty_str(domain))
             fprintf(fp, "search %s\n", domain);
 
-        while (nameservers[i].s_addr)
+        while (nameservers[i])
             fprintf(fp, "nameserver %s\n",
-                    inet_ntop (AF_INET, &nameservers[i++], ptr1, sizeof (ptr1)));
+                    num2dot(nameservers[i++]));
 
         fclose(fp);
     } else
@@ -757,7 +830,7 @@ int deconfigure_network(void) {
 int netcfg_activate_static(struct debconfclient *client)
 {
     int rv = 0;
-    char buf[256], ptr1[INET_ADDRSTRLEN];
+    char buf[256];
 
 #ifdef __GNU__
     /* I had to do something like this ? */
@@ -765,14 +838,14 @@ int netcfg_activate_static(struct debconfclient *client)
     di_exec_shell_log("settrans /servers/socket/2 --goaway");
     snprintf(buf, sizeof(buf),
              "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
-             interface, inet_ntop (AF_INET, &ipaddress));
+             interface, num2dot(ipaddress));
     di_snprintfcat(buf, sizeof(buf), " --netmask=%s",
-                   inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
+                   num2dot(netmask));
     buf[sizeof(buf) - 1] = '\0';
 
     if (gateway)
         snprintf(buf, sizeof(buf), " --gateway=%s",
-                 inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
+                 num2dot(gateway));
 
     rv |= di_exec_shell_log(buf);
 
@@ -783,22 +856,22 @@ int netcfg_activate_static(struct debconfclient *client)
     di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
 
     snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s",
-             interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
-    di_snprintfcat(buf, sizeof(buf), " netmask %s", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
+             interface, num2dot(ipaddress));
+    di_snprintfcat(buf, sizeof(buf), " netmask %s", num2dot(netmask));
     di_snprintfcat(buf, sizeof(buf), " broadcast %s",
-                   inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)));
+                   num2dot(broadcast));
     buf[sizeof(buf) - 1] = '\0';
 
-    if (pointopoint.s_addr)
+    if (pointopoint)
         di_snprintfcat(buf, sizeof(buf), " pointopoint %s",
-                       inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
+                       num2dot(pointopoint));
 
     rv |= di_exec_shell_log(buf);
 
-    if (gateway.s_addr) {
+    if (gateway) {
         snprintf(buf, sizeof(buf),
                  "/sbin/route add default gateway %s",
-                 inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
+                 num2dot(gateway));
         rv |= di_exec_shell_log(buf);
 	printf("rv = %i, buf = %s\n", rv, buf);
     }
@@ -823,7 +896,7 @@ int netcfg_activate_static(struct debconfclient *client)
 int netcfg_get_static(struct debconfclient *client) 
 {
     char *nameservers = NULL;
-    char *ptr, ptr1[INET_ADDRSTRLEN];
+    char *ptr;
     char *none;
 
     enum { BACKUP, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK, GET_GATEWAY, 
@@ -832,7 +905,7 @@ int netcfg_get_static(struct debconfclient *client)
 
     kill_dhcp_client();
 	   
-    ipaddress.s_addr = network.s_addr = broadcast.s_addr = netmask.s_addr = gateway.s_addr = pointopoint.s_addr =
+    ipaddress = network = broadcast = netmask = gateway = pointopoint =
         0;
 
     debconf_metaget(client,  "netcfg/internal-none", "description");
@@ -871,7 +944,7 @@ int netcfg_get_static(struct debconfclient *client)
             if (netcfg_get_gateway(client))
                 state = GET_NETMASK;
             else 
-                if (gateway.s_addr && ((gateway.s_addr & netmask.s_addr) != network.s_addr))
+                if (gateway && ((gateway & netmask) != network))
                     state = GATEWAY_UNREACHABLE;
                 else
                     state = GET_NAMESERVERS;
@@ -898,13 +971,13 @@ int netcfg_get_static(struct debconfclient *client)
         case CONFIRM:
             debconf_subst(client, "netcfg/confirm_static", "interface", interface);
             debconf_subst(client, "netcfg/confirm_static", "ipaddress",
-                          (ipaddress.s_addr ? inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)) : none));
+                          (ipaddress ? num2dot(ipaddress) : none));
             debconf_subst(client, "netcfg/confirm_static", "pointopoint",
-                          (pointopoint.s_addr ? inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)) : none));
+                          (pointopoint ? num2dot(pointopoint) : none));
             debconf_subst(client, "netcfg/confirm_static", "netmask",
-                          (netmask.s_addr ? inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)) : none));
+                          (netmask ? num2dot(netmask) : none));
             debconf_subst(client, "netcfg/confirm_static", "gateway",
-                          (gateway.s_addr ? inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)) : none));
+                          (gateway ? num2dot(gateway) : none));
             debconf_subst(client, "netcfg/confirm_static", "hostname", hostname);
             debconf_subst(client, "netcfg/confirm_static", "domain",
                           (domain ? domain : none));
