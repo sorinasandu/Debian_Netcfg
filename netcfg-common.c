@@ -436,10 +436,23 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
                                        "/target" INTERFACES_FILE);
     }
 
+    /* Currently busybox, hostname is not available. */
+    if ((fp = file_open("/proc/sys/kernel/hostname", "w"))) {
+        fprintf(fp, "%s\n", hostname);
+        fclose(fp);
+    }
+
+    if ((fp = file_open(HOSTNAME_FILE, "w"))) {
+       fprintf(fp, "%s\n", hostname);
+       fclose(fp);
+        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+                                       HOSTNAME_FILE, "/target" HOSTNAME_FILE);
+    }
+
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress) {
             fprintf(fp, "127.0.0.1\tlocalhost\n");
-            if (domain)
+            if (domain && strlen(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         num2dot(ipaddress), hostname,
                         domain, hostname);
@@ -454,12 +467,7 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
                                        HOSTS_FILE, "/target" HOSTS_FILE);
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       HOSTS_FILE, "/target" MAIL_FILE);
     }
-
-    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
-				   "/target" RESOLV_FILE);
 }
 
 int netcfg_get_ipaddress(struct debconfclient *client)
@@ -602,7 +610,7 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 
     if ((fp = file_open(RESOLV_FILE, "w"))) {
         int i = 0;
-        if (domain)
+        if (domain && strlen(domain))
             fprintf(fp, "search %s\n", domain);
 
         while (nameservers[i])
@@ -612,6 +620,9 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
         fclose(fp);
     } else
 	goto error;
+
+    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
+				   "/target" RESOLV_FILE);
 
     return 0;
  error:
