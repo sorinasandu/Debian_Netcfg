@@ -532,7 +532,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress.s_addr) {
-            fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
+            fprintf(fp, "127.0.0.1\tlocalhost\n");
             if (domain && !empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), hostname,
@@ -541,6 +541,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
                 fprintf(fp, "%s\t%s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)),
                         hostname);
         } else {
+	  /* Add only hostname after localhost when loopback is alone. */
             fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
         }
 
