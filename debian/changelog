@@ -3,6 +3,7 @@ netcfg (0.48) UNRELEASED; urgency=low
   * Joshua Kwan:
     - libiw27-udeb exists, yay! We can go back to relinking with libiw
       dynamically.
+    - Remove redundant configure{,-stamp} target in rules.
   * Translations :
     - Bartosz Fenski
       - Updated Polish translation (pl.po)
@@ -25,15 +26,15 @@ netcfg (0.48) UNRELEASED; urgency=low
     - Kenshi Muto
       - Updated Japanese translation (ja.po)
     - Bart Cornelis
-      - Updated Dutch translation (nl.po) 
+      - Updated Dutch translation (nl.po)
     - Thorsten Sauter
       - Fix german translation (de.po)
     - Changwoo Ryu
       - Updated Korean translation (ko.po)
-    * Claus Hindsgaul
+    - Claus Hindsgaul
       - Updated Danish translation (da.po)
 
- -- Joshua Kwan <joshk@triplehelix.org>  Wed, 25 Feb 2004 17:41:43 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Thu, 26 Feb 2004 18:04:42 -0800
 
 netcfg (0.47) unstable; urgency=low
 

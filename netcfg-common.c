@@ -1225,6 +1225,27 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   return 0;
 }
 
+void unset_wep_key (char* iface)
+{
+  wireless_config wconf;
+  int ret;
+
+  if (!wfd)
+    wfd = iw_sockets_open();
+
+  iw_get_basic_config(wfd, iface, &wconf);
+
+  wconf.has_key = 1;
+  wconf.key[0] = '\0';
+  wconf.key_flags = IW_ENCODE_DISABLED | IW_ENCODE_NOKEY;
+  wconf.key_size = 0;
+
+  ret = iw_set_basic_config (wfd, iface, &wconf);
+
+  fprintf (stderr, "iw_set_basic_config for uncode returned %d",
+      ret);
+}
+
 int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 {
   wireless_config wconf;
@@ -1241,7 +1262,21 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     return ret;
 
   if (empty_str(rv))
+  {
+    di_log(DI_LOG_LEVEL_DEBUG, "unsetting WEP key for device %s", iface);
+    unset_wep_key (iface);
+
+    if (wepkey != NULL)
+    {
+      free(wepkey);
+      wepkey = NULL;
+    }
+    
     return 0;
+  }
+
+  di_log(DI_LOG_LEVEL_DEBUG, "proceeding to set WEP key for device %s (%s)",
+      iface, rv);
 
   while ((keylen = iw_in_key (rv, buf)) == -1)
   {
@@ -1254,7 +1289,8 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 
   wconf.has_key = 1;
   wconf.key_size = keylen;
-  wconf.key_flags = 16385; /* who khows.. it works */
+  wconf.key_flags = IW_ENCODE_ENABLED | IW_ENCODE_OPEN;
+  
   strncpy (wconf.key, buf, keylen);
 
   wepkey = strdup(rv);
