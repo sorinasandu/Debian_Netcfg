@@ -783,7 +783,7 @@ int kill_dhcp_client(void) {
 
     /* kill running dhcp client */
 
-    if ((ps = popen("ps xa | grep 'udhcpc\\|dhclient\\|pump' | grep -v grep | cut -d ' ' -f 2", "r")) == NULL)
+    if ((ps = popen("ps xa | grep 'udhcpc\\|dhclient\\|pump' | grep -v grep | sed 's/^ *//' | cut -d ' ' -f 1", "r")) == NULL)
         return 1;
 
     ret = getline(&pid_char, &linesize, ps);
