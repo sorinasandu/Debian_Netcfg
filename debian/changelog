@@ -1,12 +1,10 @@
 netcfg (1.08) UNRELEASED; urgency=low
 
   * Joshua Kwan
-    - Fix adhoc -> ad-hoc typo in dhcp.c. closes: #282407, #283861
     - Ask for nameserver information if the DHCP server did not provide
       any. closes: #281924
-  * Christian Perrier
-    - Add a note to translators about the maximum length of
-      individual Choices translations for Select templates
+    - Pass broadcast parameter to ip because it doesn't actually set it.
+      Generally harmless, but we crash DSL modems now. closes: #295482
   * Joey Hess
     - If heuristics fail to determine a default interface, use the first
       interface as the default.
@@ -17,7 +15,32 @@ netcfg (1.08) UNRELEASED; urgency=low
     - That should make interface preseeding work in all situations.
       Closes: #293682
 
- -- Joshua Kwan <joshk@triplehelix.org>  Fri, 24 Dec 2004 00:22:31 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 15 Feb 2005 21:52:08 -0800
+
+netcfg (1.07.1) unstable; urgency=low
+
+  * Joshua Kwan
+    - Fix adhoc -> ad-hoc typo in dhcp.c. (closes: #282407)
+  * Christian Perrier
+    - Add a note to translators about the maximum length of
+      individual Choices translations for Select templates
+  * Includes fixes for substitutions in translated templates.
+  * Updated translations: 
+    - Bosnian (bs.po) by Safir Šećerović
+    - Catalan (ca.po) by Jordi Mallach
+    - Czech (cs.po) by Miroslav Kure
+    - Danish (da.po) by Claus Hindsgaul
+    - German (de.po) by Dennis Stampfer
+    - French (fr.po) by French Team
+    - Korean (ko.po) by Changwoo Ryu
+    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Bøkmal, Norwegian (nb.po) by Hans Fredrik Nordhaug
+    - Dutch (nl.po) by Bart Cornelis
+    - Norwegian Nynorsk (nn.po) by Håvard Korsvoll
+    - Polish (pl.po) by Bartosz Fenski
+    - Romanian (ro.po) by Eddy Petrisor
+
+ -- Joey Hess <joeyh@debian.org>  Wed,  2 Feb 2005 18:31:11 -0500
 
 netcfg (1.07) unstable; urgency=high
 

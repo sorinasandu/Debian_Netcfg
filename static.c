@@ -308,8 +308,13 @@ int netcfg_activate_static(struct debconfclient *client)
     rv |= !inet_ptom (NULL, &masksize, &netmask);
 
     /* Add the new IP address, P-t-P peer (if necessary) and netmask */
-    snprintf(buf, sizeof(buf), "ip addr add %s/%d dev %s",
-        inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
+    snprintf(buf, sizeof(buf), "ip addr add %s/%d ",
+        inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)),
+        masksize);
+
+    /* avoid using a second buffer */
+    di_snprintfcat(buf, sizeof(buf), "broadcast %s dev %s",
+        inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)),
         interface);
 
     if (pointopoint.s_addr)
