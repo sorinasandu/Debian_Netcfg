@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-08 18:49-0600\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-13 13:52+0200\n"
 "Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -163,7 +163,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
+msgstr ""
+"Naravno, ako nema WEP ključa za vašu bežičnu vezu, ostavite ovo polje prazno."
 
 #. Type: error
 #. Description
@@ -560,10 +561,10 @@ msgid ""
 "with a hostname that you provide."
 msgstr ""
 "Odavde možete izabrati da ponovo pokušate DHCP automatsku konfiguraciju "
-"mreže (što može raditi ako vašem DHCP serveru treba dugo vremena da odgovori) "
-"ili možete ju podesiti ručno. Neki DHCP serveri zahtijevaju navođenje njihovog "
-"hostnamea, tako da možete odabrati da unesete takav hostname prije ponovnog "
-"pokušaja DHCP konfiguracije."
+"mreže (što može raditi ako vašem DHCP serveru treba dugo vremena da "
+"odgovori) ili možete ju podesiti ručno. Neki DHCP serveri zahtijevaju "
+"navođenje njihovog hostnamea, tako da možete odabrati da unesete takav "
+"hostname prije ponovnog pokušaja DHCP konfiguracije."
 
 #. Type: note
 #. Description
@@ -578,8 +579,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Vaša mreža vjerovatno ne koristi DHCP protokol. Alternativno, "
-"DHCP server je možda spor ili određeni mrežni hardware ne radi ispravno."
+"Vaša mreža vjerovatno ne koristi DHCP protokol. Alternativno, DHCP server je "
+"možda spor ili određeni mrežni hardware ne radi ispravno."
 
 #. Type: boolean
 #. Description
@@ -598,8 +599,8 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Autokonfiguracija mreže je uspješna. Međutim, default route nije postavljen: "
-"sistem neće znati kako da komunicira sa drugim računarima na Internetu. "
-"Ovo će učiniti nemogućim nastavak instalacije ukoliko nemate prvi službeni "
+"sistem neće znati kako da komunicira sa drugim računarima na Internetu. Ovo "
+"će učiniti nemogućim nastavak instalacije ukoliko nemate prvi službeni "
 "Debian CD-ROM, 'Netinst' CD-ROM ili pakete dostupne na lokalnoj mreži."
 
 #. Type: boolean
@@ -609,8 +610,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ako niste sigurni, ne biste trebali nastavljati bez default route: kontaktirajte "
-"vašeg lokalnog mrežnog administratora u vezi sa ovim problemom."
+"Ako niste sigurni, ne biste trebali nastavljati bez default route: "
+"kontaktirajte vašeg lokalnog mrežnog administratora u vezi sa ovim problemom."
 
 #  Type: text
 #  Description
@@ -736,7 +737,8 @@ msgstr "Gateway adresa koju ste unijeli nije dostupna."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili "
 "gatewaya."
@@ -753,6 +755,8 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -778,4 +782,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
-
