@@ -1,0 +1,17 @@
+Template: netcfg/no_interfaces
+Type: string
+Description: please enter a network interface.
+ No network interfaces were found. 
+
+Template: netcfg/choose_interface
+Type: select
+Choices: ${ifchoices}
+Description: Choose an interface.
+ The following interfaces were detected. Choose the type of your primary
+ network interface that you will need for installing Debian (via NFS or HTTP).
+
+Template: netcfg/error_cfg
+Type: note
+Description: An error occured.
+ Something went wrong when I tried to activate your network.  
+

@@ -54,15 +54,20 @@ Description: Is this configuration correct?
   secondary DNS = ${secondary_DNS} 
   tertiary DNS  = ${tertiary_DNS}
 
+Template: netcfg/get_hostname
+Type: string
+Default: debian
+Description:
+ The hostname is a single word that identifies your system to the
+ network.  If you don't know what your hostname should be, consult
+ your network administrator.  If you are setting up your own home
+ network, you can make something up here.  Don't enter your full
+ domain name here; you'll be asked for that next.
+
 Template: netcfg/no_interfaces
-Type: note
-Description: no network devices found
- No network interfaces were found.   That means that the installation system
- was unable to find a network device.  If you do have a network card, then it
- is possible that the module for it hasn't been selected yet.  Go back to the
- 'Configure Device Driver Modules' menu and load the required kernel modules
- first.  If your only network connection is PPP, don't worry -- you will be
- asked if you want PPP later in the process.
+Type: string
+Description: please enter a network interface.
+ No network interfaces were found. 
 
 Template: netcfg/choose_interface
 Type: select

@@ -9,3 +9,6 @@
 * etherconf has some good descriptive text, perhaps I want to use it in place of the existing text.
 * when the real dhcpcd installs itself we want to make sure it doesn't destroy our nice working configuration, how to do that?
 * dhcp and static config udebs share a fair amount of code, perhaps a shared library? They also share templates, need to make a netcfg-shared udeb?
+* /etc/dhcpc needs to be created, udpkg isn't creating it for me right now
+* get the /proc filesystem working
+* strdup all the dotted quads rather than playing with num2dot etc. all the time

@@ -4,7 +4,7 @@ endif
 
 
 INCS=-I../cdebconf/src/
-LDOPTS=-L../cdebconf/src/ -ldebconf
+LDOPTS=-L../cdebconf/src -ldebconf
 PREFIX=$(DESTDIR)/usr/
 CFLAGS=-Wall  -Os -fomit-frame-pointer
 INSTALL=install
@@ -16,7 +16,7 @@ all: $(PROGS)
 
 install:
 	$(foreach PROG, $(PROGS), \
-	cp $(PROG) debian/$(PROG).config)
+	-cp $(PROG) debian/$(PROG).config)
 
 netcfg-dhcp: netcfg.c
 	$(CC) $(CFLAGS) -DDHCP netcfg.c -o $@ $(INCS) $(LDOPTS)
