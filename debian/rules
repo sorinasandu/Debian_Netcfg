@@ -10,6 +10,7 @@ PACKAGES=$(shell dh_listpackages)
 VERSION=$(shell dpkg-parsechangelog | grep ^Version: | cut -d ' ' -f 2)
 ARCH=$(shell dpkg --print-architecture)
 
+DHCP_PACKAGES=netcfg netcfg-dhcp
 
 # This is the debhelper compatability version to use.
 export DH_COMPAT=2
@@ -37,7 +38,8 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
-	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst
+	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst \
+	   debian/netcfg.postinst
 
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
@@ -48,19 +50,20 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	cp netcfg-dhcp debian/netcfg-dhcp.postinst
-	cp netcfg-static debian/netcfg-static.postinst
-	mkdir -p debian/netcfg-dhcp/usr/share/udhcpc
-	install -m755 udhcpc.default.script debian/netcfg-dhcp/usr/share/udhcpc/default.script
-	mkdir -p debian/netcfg-dhcp/etc/dhcp debian/netcfg-dhcp/var/dhcp
-	mkdir -p debian/netcfg-static/etc/network
-	mkdir -p debian/netcfg-dhcp/etc/network
-	mkdir -p debian/netcfg-dhcp/usr/lib/prebaseconfig.d
-	install -m 755 prebaseconfig \
-	        debian/netcfg-dhcp/usr/lib/prebaseconfig.d/40netcfg-dhcp
-	mkdir -p debian/netcfg-static/usr/lib/prebaseconfig.d
-	install -m 755 prebaseconfig \
-	        debian/netcfg-static/usr/lib/prebaseconfig.d/40netcfg-static
+	# Install files that are the same in all packages
+	$(foreach PACKAGE, $(PACKAGES), \
+		cp $(PACKAGE) debian/$(PACKAGE).postinst ; \
+		mkdir -p debian/$(PACKAGE)/etc/network ; \
+		mkdir -p debian/$(PACKAGE)/usr/lib/prebaseconfig.d ; \
+		install -m 755 prebaseconfig \
+		        debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40$(PACKAGE) ; )
+	# Install files that are in all DHCP packages
+	$(foreach PACKAGE, $(DHCP_PACKAGES), \
+		mkdir -p debian/$(PACKAGE)/usr/share/udhcpc ; \
+		install -m755 udhcpc.default.script debian/$(PACKAGE)/usr/share/udhcpc/default.script ; \
+		mkdir -p debian/$(PACKAGE)/etc/dhcp ; \
+		mkdir -p debian/$(PACKAGE)/var/dhcp ; )
+
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -77,6 +80,12 @@ binary-arch: build install
 	   >> debian/netcfg-static/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-common.templates )\
 	   >> debian/netcfg-dhcp/DEBIAN/templates	
+	(echo ; po2debconf debian/netcfg-common.templates )\
+	   >> debian/netcfg/DEBIAN/templates	
+	(echo ; po2debconf debian/netcfg-dhcp.templates )\
+	   >> debian/netcfg/DEBIAN/templates	
+	(echo ; po2debconf debian/netcfg-static.templates )\
+	   >> debian/netcfg/DEBIAN/templates	
 	dh_strip
 	dh_compress
 	dh_fixperms

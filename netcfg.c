@@ -1,6 +1,6 @@
 /* 
-   netcfg.c - Shared functions used to configure the network for 
-	   the debian-installer.
+   netcfg.c - Configure a network via DHCP or manual configuration 
+   for debian-installer
 
    Copyright (C) 2000-2002  David Kimdon <dwhedon@debian.org>
    
@@ -34,456 +34,90 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
-/* Set if there is currently a progress bar displayed. */
-int netcfg_progress_displayed = 0;
+static enum {DHCP, STATIC} netcfg_method = DHCP;
 
 
-int my_debconf_input(struct debconfclient *client, char *priority,
-                           char *template, char **p)
+int netcfg_get_method(struct debconfclient *client) 
 {
-	int ret = 0;
-        debconf_fset(client, template, "seen", "false");
-        debconf_input(client, priority, template);
-        ret = debconf_go(client);
-        debconf_get(client, template);
-	*p = client->value;
-        return ret;
+
+    char *method;
+    int ret;
+
+    ret = my_debconf_input(client, "medium", "netcfg/get_method", &method);
+
+    if (strcmp(method, "configure network with DHCP") == 0) 
+	netcfg_method = DHCP;
+    else 
+	netcfg_method = STATIC;
+
+    return ret;        
 }
 
 
-
-int is_interface_up(char *inter)
+int main(int argc, char *argv[])
 {
-        struct ifreq ifr;
-        int sfd = -1, ret = -1;
-
-        if ((sfd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-                goto int_up_done;
-
-        strncpy(ifr.ifr_name, inter, sizeof(ifr.ifr_name));
-
-        if (ioctl(sfd, SIOCGIFFLAGS, &ifr) < 0)
-                goto int_up_done;
-
-        ret = (ifr.ifr_flags & IFF_UP) ? 1 : 0;
-
-      int_up_done:
-        if (sfd != -1)
-                close(sfd);
-        return ret;
-}
-
-
-void get_name(char *name, char *p)
-{
-        while (isspace(*p))
-                p++;
-        while (*p) {
-                if (isspace(*p))
-                        break;
-                if (*p == ':') {        /* could be an alias */
-                        char *dot = p, *dotname = name;
-                        *name++ = *p++;
-                        while (isdigit(*p))
-                                *name++ = *p++;
-                        if (*p != ':') {        /* it wasn't, backup */
-                                p = dot;
-                                name = dotname;
-                        }
-                        if (*p == '\0')
-                                return;
-                        p++;
-                        break;
-                }
-                *name++ = *p++;
-        }
-        *name++ = '\0';
-        return;
-}
+    int num_interfaces =0;
+    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT} state = GET_INTERFACE;
+    static struct debconfclient *client;
+    static char *none;
 
 
 
-static FILE *ifs = NULL;
-static char ibuf[512];
+    /* initialize libd-i */
+    di_system_init("netcfg");
 
-void getif_start()
-{
-        if (ifs != NULL) {
-                fclose(ifs);
-                ifs = NULL;
-        }
-        if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
-                fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
-                fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
-        }
-        return;
-}
+    /* initialize debconf */
+    client = debconfclient_new();
+    debconf_capb(client, "backup");
 
+    debconf_metaget(client,  "netcfg/internal-none", "description");
+    none = client->value ? strdup(client->value) : strdup("<none>");
 
-char *getif(int all)
-{
-        char rbuf[512];
-        if (ifs == NULL)
-                return NULL;
+    while (state != QUIT) {
 
-        if (fgets(rbuf, sizeof(rbuf), ifs) != NULL) {
-                get_name(ibuf, rbuf);
-                if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
-                        return getif(all);      /* seriously doubt there is an infinite number of lo devices */
-                if (all || is_interface_up(ibuf) == 1)
-                        return ibuf;
-        }
-        return NULL;
-}
-
-
-void getif_end()
-{
-        if (ifs != NULL) {
-                fclose(ifs);
-                ifs = NULL;
-        }
-        return;
-}
-
-
-char *get_ifdsc(struct debconfclient *client, const char *ifp)
-{
-        char template[256];
-
-        if (strlen(ifp) < 100) {
-	    /* strip away the number from the interface (eth0 -> eth) */           
-   	    char *new_ifp = strdup(ifp), *ptr = new_ifp;
-	    while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
-		ptr++;
-    	    *ptr = '\0';
-
-	    sprintf(template, "netcfg/internal-%s", new_ifp);           
-	    free(new_ifp);           
-
-            debconf_metaget(client, template, "description");
-            if (client->value != NULL)
-                return strdup(client->value);
-        }
-        debconf_metaget(client, "netcfg/internal-unknown-iface", "description");
-        if (client->value != NULL)
-            return strdup(client->value);
-        else
-            return strdup("Unknown interface");
-}
-
-
-FILE *file_open(char *path, const char *opentype)
-{
-        FILE *fp;
-        if ((fp = fopen(path, opentype)))
-                return fp;
-        else {
-                fprintf(stderr, "%s\n", path);
-                perror("fopen");
-                return NULL;
-        }
-}
-
-
-void dot2num(u_int32_t * num, char *dot)
-{
-        char *p = dot - 1;
-        char *e;
-        int ix;
-        unsigned long val;
-
-        if (!dot)
-                goto exit;
-
-        *num = 0;
-        for (ix = 0; ix < 4; ix++) {
-                *num <<= 8;
-                p++;
-                val = strtoul(p, &e, 10);
-                if (e == p)
-                        val = 0;
-                else if (val > 255)
-                        goto exit;
-                *num += val;
-                /*printf("%#8x, %#2x\n", *num, val); */
-                if (ix < 3 && *e != '.')
-                        goto exit;
-                p = e;
-        }
-
-        return;
-
-      exit:
-        *num = 0;
-}
-
-
-static char num2dot_buf[16];
-
-char *num2dot(u_int32_t num)
-{
-        int byte[4];
-        int ix;
-        char *dot = num2dot_buf;
-
-        for (ix = 3; ix >= 0; ix--) {
-                byte[ix] = num & 0xff;
-                num >>= 8;
-        }
-        sprintf(dot, "%d.%d.%d.%d", byte[0], byte[1], byte[2], byte[3]);
-
-        return dot;
-}
-
-
-
-void netcfg_die(struct debconfclient *client)
-{
-	if (netcfg_progress_displayed)
-		debconf_progress_stop(client);
-	debconf_capb(client);
-        debconf_input(client, "high", "netcfg/error");
-        debconf_go(client);
-        exit(1);
-}
-
-/**
- * @brief Ask which interface to configure
- * @param client - client 
- * @param interface      - set to the answer
- * @param numif - number of interfaces found.
- */
-
-int
-netcfg_get_interface(struct debconfclient *client, char **interface,
-		     int *numif)
-{
-        char *inter;
-        int len, ret;
-	int num_interfaces = 0;
-        int newchars;
-        char *ptr;
-        char *ifdsc;
-
-        if (*interface) {
-                free(*interface);
-                *interface = NULL;
-        }
-
-        if (!(ptr = malloc(128)))
-                netcfg_die(client);
-        len = 128;
-        *ptr = '\0';
-
-        getif_start();
-        while ((inter = getif(1)) != NULL) {
-                ifdsc = get_ifdsc(client, inter);
-                newchars = strlen(inter) + strlen(ifdsc) + 5;
-                if (len < (strlen(ptr) + newchars)) {
-                        if (!(ptr = realloc(ptr, len + newchars + 128)))
-                                goto error;
-                        len += newchars + 128;
-                }
-                di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
-		num_interfaces++;
-		free(ifdsc);
-        }
-        getif_end();
-
-        if (num_interfaces == 0) {
-                debconf_input(client, "high", "netcfg/no_interfaces");
-                debconf_go(client);
-                free(ptr);
-                exit(1);
-        } else if (num_interfaces > 1) {
-		*numif = num_interfaces;
-		/* remove the trailing ", ", which confuses cdebconf */
-		ptr[strlen(ptr) - 2] = '\0';
-
-                debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
-                free(ptr);
-                ret = my_debconf_input(client, "high",
-                                        "netcfg/choose_interface", &inter);
-
-		if (ret)
-			return ret;
-                if (!inter)
-                        netcfg_die(client);
-        } else if (num_interfaces == 1) {
-                inter = ptr;
-		*numif = 1;
+	switch(state) {
+	case BACKUP:
+	    exit(10);
+	    break;
+	case GET_INTERFACE:
+	    state =  netcfg_get_interface(client, &interface, &num_interfaces) ?
+		BACKUP : GET_METHOD;
+	    break;
+	case GET_METHOD:
+	    if (netcfg_get_method(client))
+		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
+	    else
+		if (netcfg_method == DHCP) 
+		    state = GET_DHCP;
+		else
+		    state = GET_STATIC;
+	    break;
+	case GET_DHCP:
+	    if (netcfg_get_dhcp(client))
+		state = GET_METHOD;
+	    else {
+		if (netcfg_activate_dhcp(client))
+		    state = GET_STATIC;
+		else
+		    state = QUIT;
+	    }
+	    break;
+	case GET_STATIC:
+	    if (netcfg_get_static(client))
+		state = GET_METHOD;
+	    else {
+		if (netcfg_activate_static(client))
+		    exit(1);
+		else
+		    state = QUIT;
+	    }
+	    break;
+	case QUIT:
+	    break;
 	}
-
-        /* grab just the interface name, not the description too */
-        *interface = inter;
-        ptr = strchr(inter, ':');
-        if (ptr == NULL)
-                goto error;
-        *ptr = '\0';
-
-        *interface = strdup(*interface);
-
-        return 0;
-
-      error:
-        if (ptr)
-                free(ptr);
-
-        netcfg_die(client);
-	return 10; /* unreachable */
-}
-
-/*
- * Set the hostname. 
- * @return 0 on success, 30 on BACKUP being selected.
- */
-int
-netcfg_get_hostname(struct debconfclient *client, char **hostname)
-{
-        static const char *valid_chars =
-            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
-        size_t len;
-	int ret;
-	char *p;
-
-        do {
-
-		ret = my_debconf_input(client, "medium", "netcfg/get_hostname", &p);
-		if (ret == 30) // backup
-			return ret;
-		free(*hostname);
-                *hostname = strdup(p);
-                len = strlen(*hostname);
-
-                /* Check the hostname for RFC 1123 compliance.  */
-                if ((len < 2) ||
-                    (len > 63) ||
-                    (strspn(*hostname, valid_chars) != len) ||
-		    ((*hostname)[len - 1] == '-') ||
-		    ((*hostname)[0] == '-')) {
-			debconf_subst(client, "netcfg/invalid_hostname",
-					"hostname", *hostname);
-                        debconf_input(client, "high", "netcfg/invalid_hostname");
-                        debconf_go(client);
-			free(*hostname);
-			*hostname = NULL;
-                        debconf_set(client, "netcfg/get_hostname", "debian");
-		}
-        
-	} while (!*hostname);
-	return 0;
-}
-
-/* @brief Get the domainname.
- * @return 0 for success, with *domain = domain, 30 for 'goback',
- */
-int netcfg_get_domain(struct debconfclient *client,  char **domain)
-{
-	int ret;
-	char *ptr;
-        
-	ret = my_debconf_input(client, "medium", "netcfg/get_domain", &ptr);
-        if (ret)
-                return ret;
-	if (*domain)
-                free(*domain);
-        *domain = NULL;
-	if (ptr)
-		*domain = strdup(ptr);
-	return 0;
-}
-
-int
-netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
-{
-	char *ptr;
-        int ret;
-
-	ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
-	if (*nameservers)
-		free(*nameservers);
-	*nameservers = NULL;
-        if (ptr)
-                *nameservers = strdup(ptr);
-	return ret;
-}
-		
-
-void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
-{
-
-        char *save, *ptr, *ns;
-
-        if (nameservers) {
-                save = ptr = strdup(nameservers);
-
-                ns = strtok_r(ptr, " \n\t", &ptr);
-                dot2num(&array[0], ns);
-
-                ns = strtok_r(NULL, " \n\t", &ptr);
-                dot2num(&array[1], ns);
-
-                ns = strtok_r(NULL, " \n\t", &ptr);
-                dot2num(&array[2], ns);
-
-                array[3] = 0;
-                free(save);
-        } else
-                array[0] = 0;
-
-}
+                
+    }
 
 
-
-void
-netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
-		    char *domain, char *hostname, u_int32_t nameservers[])
-{
-        FILE *fp;
-
-	if ((fp = file_open(INTERFACES_FILE, "w"))) {
-		fprintf(fp, "auto lo\n");
-		fprintf(fp, "iface lo inet loopback\n");
-		fclose(fp);
-
-		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-					INTERFACES_FILE,
-					"/target" INTERFACES_FILE);
-	}
-
-        if ((fp = file_open(HOSTS_FILE, "w"))) {
-                if (ipaddress) {
-			fprintf(fp, "127.0.0.1\tlocalhost\n");
-                        if (domain)
-                                fprintf(fp, "%s\t%s.%s\t%s\n",
-                                        num2dot(ipaddress), hostname,
-					domain, hostname);
-                        else
-                                fprintf(fp, "%s\t%s\n", num2dot(ipaddress),
-						hostname);
-                } else {
-			fprintf(fp, "127.0.0.1\t%s\tlocalhost\n", hostname);
-		}
-
-                fclose(fp);
-
-		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-					HOSTS_FILE, "/target" HOSTS_FILE);
-        }
-
-        if ((fp = file_open(RESOLV_FILE, "w"))) {
-                int i = 0;
-                if (domain)
-                        fprintf(fp, "search %s\n", domain);
-
-                while (nameservers[i])
-                        fprintf(fp, "nameserver %s\n",
-                                num2dot(nameservers[i++]));
-
-                fclose(fp);
-
-		di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-					RESOLV_FILE, "/target" RESOLV_FILE);
-        }
+    return 0;
 }

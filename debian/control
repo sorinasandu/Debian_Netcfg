@@ -6,9 +6,21 @@ Uploaders: David Kimdon <dwhedon@debian.org>, Tollef Fog Heen <tfheen@debian.org
 Build-Depends: debhelper (>= 4.1.13), dpkg-dev (>= 1.9.0), libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev, po-debconf (>= 0.5.0)
 Standards-Version: 3.6.1.0
 
+Package: netcfg
+Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection
+Provides: configured-network
+XB-Installer-Menu-Item: 18
+Description: Configure the network
+ To Install additional installer components or the Debian Base System over
+ the network, you need to configure the network in the installer. This 
+ component will first try to configure your network with DHCP and ask 
+ you for static network configuration if this fails. The configured 
+ network settings will be copied to you newly installed system.
+
 Package: netcfg-dhcp
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
-Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection
 Provides: configured-network
 XB-Installer-Menu-Item: 18
 Description: Configure the network via DHCP

@@ -14,8 +14,24 @@
 #define DHCPCD_FILE     "/etc/dhcpc/config"
 #define DHCLIENT_DIR	"/var/dhcp"
 
+#define _GNU_SOURCE
+
 extern int netcfg_progress_displayed;
 
+/* network config */
+extern char *interface;
+extern char *hostname;
+extern char *dhcp_hostname;
+extern char *domain;
+extern u_int32_t ipaddress;
+extern u_int32_t nameserver_array[4];
+extern u_int32_t network;
+extern u_int32_t broadcast;
+extern u_int32_t netmask;
+extern u_int32_t gateway;
+extern u_int32_t pointopoint;
+
+/* common functions */
 extern int netcfg_mkdir (char *path);
 
 extern int is_interface_up (char *inter);
@@ -43,6 +59,14 @@ extern int netcfg_get_hostname(struct debconfclient *client, char **hostname);
 extern int netcfg_get_nameservers (struct debconfclient *client, char **nameservers);
 
 extern int netcfg_get_domain(struct debconfclient *client,  char **domain);
+
+extern int netcfg_get_dhcp(struct debconfclient *client);
+
+extern int netcfg_get_static(struct debconfclient *client);
+
+extern int netcfg_activate_dhcp(struct debconfclient *client);
+
+extern int netcfg_activate_static(struct debconfclient *client);
 
 extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
 

@@ -8,8 +8,16 @@ netcfg (0.34) UNRELEASED; urgency=low
     - Initial Hungarian translation
   * Denis Barbier
     - Unfuzzy French translation
+  * Gaudenz Steinlin
+    - add new combined dhcp and static netcfg
+      (udeb netcfg)
+    - implement joey's dhcp idea
+      (wait 10s and then ask if we should try 
+       longer)
+    - move common code to netcfg-common.c
+    - improve state machines
 
- -- Kenshi Muto <kmuto@debian.org>  Wed, 10 Dec 2003 08:57:20 +0900
+ -- Gaudenz Steinlin <gaudenz@soziologie.ch>  Thu, 11 Dec 2003 12:08:48 +0100
 
 netcfg (0.33) unstable; urgency=low
 
