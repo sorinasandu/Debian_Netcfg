@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-15 11:30+0200\n"
+"PO-Revision-Date: 2004-07-01 18:45+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -521,7 +521,6 @@ msgstr "Zpùsob nastavení sítì:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -529,18 +528,16 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Automatické nastavení sítì selhalo. To se obvykle stává kvùli pomalému DHCP "
-"serveru, tudí¾ to mù¾ete zkusit znovu. Pokud va¹e sí» nepou¾ívá automatické "
-"nastavení sítì pøes DHCP, mù¾ete sí» nastavit ruènì. Nìkteré DHCP servery "
-"vy¾adují zadání konkrétního DHCP jména poèítaèe, tak¾e pøed dal¹ím pokusem "
-"jej mù¾ete zkusit nastavit."
+"Nyní mù¾ete znovu zkusit nastavit sí» pøes DHCP (co¾ mù¾e fungovat, pokud má "
+"vá¹ DHCP server pomalej¹í odpovìdi), nebo mù¾ete sí» nastavit ruènì. "
+"Nìkteré DHCP servery pøidìlují adresy pouze po zadání konkrétního DHCP jména "
+"poèítaèe, tak¾e mù¾ete vyzkou¹et i tuto variantu."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Automatické nastavení sítì bylo úspì¹né"
+msgstr "Automatické nastavení sítì selhalo"
 
 #. Type: note
 #. Description
@@ -549,12 +546,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"To mù¾e být díky pomalému DHCP serveru, nefunkèním sí»ovým prvkùm, nebo "
+"jednodu¹e va¹e sí» DHCP nepodporuje."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Pokraèovat bez implicitního smìrování?"
 
 #. Type: boolean
 #. Description
@@ -566,6 +565,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Automatické nastavení sítì bylo úspì¹né, av¹ak nebylo nastaveno implicitní "
+"smìrování: systém tak neví, jak komunikovat s poèítaèi na Internetu. Pokud "
+"nemáte v¹echny potøebné debianí balíky na místní síti nebo na CD-ROM, je "
+"pravdìpodobné, ¾e se instalaci nepodaøí dokonèit."
 
 #. Type: boolean
 #. Description
@@ -574,6 +577,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Pokud si nejste jisti, mù¾ete pokraèovat dále a v pøípadì potí¾í se jednosu¹e "
+"vrátit zpìt na krok nastavení sítì."
 
 #. Type: text
 #. Description
@@ -737,19 +742,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavit sí» se statickými adresami"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamické nastavení sítì (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " rozhraní       = ${interface}\n"
-#~ " jméno poèítaèe = ${hostname}\n"
-#~ " doména         = ${domain}\n"
-#~ " dhcp jméno     = ${dhcp_hostname}\n"
-#~ " jmenné servery = ${nameservers}"
