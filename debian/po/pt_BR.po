@@ -8,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg-0.29\n"
+"Project-Id-Version: netcfg-0.33\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-11-14 09:25+0100\n"
-"PO-Revision-Date: 2003-11-06 21:58-0300\n"
+"PO-Revision-Date: 2003-11-14 22:53-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Domain name:"
-msgstr ""
+msgstr "Nome de domínio :"
 
 #. Type: string
 #. Description
@@ -43,12 +43,11 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Name servers addresses:"
-msgstr ""
+msgstr "Endereços dos servidores de nomes :"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
@@ -56,54 +55,54 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Por favor informe os endereços IP (e não os nomes de máquinas) de até 3 "
-"servidores de nomes, separados por espaços. Não use vírgulas. Os servidores "
-"serão consultados na ordem que forem listados. Caso você não queira usar "
-"nenhum servidor de nomes, deixe este campo em branco."
+"servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
+"servidor na lista será o primeiro a ser consultado. Caso você não queira "
+"usar nenhum servidor de nomes, deixe este campo em branco."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Interface:"
-msgstr ""
+msgstr "Interface :"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently  detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"As seguintes interfaces foram detectadas. Escolha o tipo de sua interface de "
-"rede primária que será usada para instalar o sistema Debian (via NFS ou "
-"HTTP)."
+"Por favor, selecione a interface de rede que você deseja configurar. "
+"Todas as interfaces que foram detectadas em seu sistema estão sendo "
+"exibidas a seguir. Por favor, escolha o tipo de sua interface de rede "
+"primária. Esta interface será usada para instalar o sistema Debian "
+"(via NFS ou HTTP)."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
 msgid "Error while activating the network"
-msgstr ""
+msgstr "Erro ativando a rede"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
-#, fuzzy
 msgid "An error occurred while activating the network."
-msgstr "Um erro ocorreu e não foi possível continuar."
+msgstr "Um erro ocorreu na ativação da rede."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Hostname:"
-msgstr ""
+msgstr "Nome de máquina :"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Por favor, informe o nome de máquina (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -123,14 +122,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Nome de máquina inválido"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:44
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
-msgstr "O nome de máquina \"${hostname}\" é inválido."
+msgstr "O nome \"${hostname}\" é inválido."
 
 #. Type: error
 #. Description
@@ -148,7 +146,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:53
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #. Type: error
 #. Description
@@ -157,26 +155,24 @@ msgid ""
 "An error occured and the network configuration process had been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
+"Um erro ocorreu e o processo de configuração de rede foi abortado. Você "
+"pode tentar iniciá-lo novamente a partir do menu principal."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid "No network interfaces detected"
-msgstr "Nenhuma interface de rede foi detectada."
+msgstr "Nenhuma interface de rede foi detectada"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device."
 msgstr ""
 "Nenhuma interface de rede foi encontrada. Isto significa que o sistema de "
-"instalação não foi capaz de encontrar um dispositivo de rede. Caso você "
-"possua uma placa de rede, é possível que o módulo para a mesma ainda não "
-"tenha sido selecionado. Retorne a etapa 'Detectar o hardware de rede'."
+"instalação não foi capaz de encontrar um dispositivo de rede." 
 
 #. Type: error
 #. Description
@@ -185,6 +181,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
 msgstr ""
+"Você pode precisar carregar um módulo específico para sua placa de rede "
+"caso você realmente possua uma. Para fazê-lo, retorne ao passo de "
+"detecção de hardware de rede."
 
 #. Type: text
 #. Description
@@ -280,26 +279,26 @@ msgstr "Interface desconhecida"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "Nome de máquina DHCP :"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Em algumas situações você pode precisar informar um nome de máquina DHCP. "
-"Caso você esteja usando um modem a cabo você pode precisar especificar um "
-"número de conta aqui. A maioria dos usuários podem deixar essa opção em "
-"branco."
+"Você pode precisar fornecer um nome de máquina DHCP. Caso você esteja "
+"usando um modem a cabo, você pode precisar especificar um número de "
+"conta aqui."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
 msgstr ""
+"A maioria dos outros tipos de usuários pode somente deixar esse campo "
+"em branco."
 
 #. Type: boolean
 #. Description
@@ -311,7 +310,7 @@ msgstr "Esta informação está correta ?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Parâmetros de rede configurados atualmente :"
 
 #. Type: boolean
 #. Description
@@ -345,20 +344,21 @@ msgstr "Este processo pode levar alguns minutos."
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "Nenhum cliente DHCP encontrado"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Este pacote requer o pump ou o dhcp-client."
+msgstr ""
+"Nenhum cliente DHCP foi encontrado. Este pacote requer o pump ou o "
+"dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "O processo de configuração DHCP será abortado."
 
 #. Type: text
 #. Description
@@ -371,16 +371,14 @@ msgstr "Configuração de Rede via DHCP"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Configurar a rede via DHCP"
+msgstr "Configurar a rede usando endereçamento dinâmico (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
-msgstr "Endereço IP ?"
+msgstr "Endereço IP :"
 
 #. Type: string
 #. Description
@@ -397,31 +395,28 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "Endereço ponto-a-ponto ?"
+msgstr "Endereço ponto-a-ponto :"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"O endereço ponto-a-ponto é usado para determinar a outra ponta da rede ponto-"
-"a-ponta. Consulte o administrador de sua rede caso você não saiba o que "
-"usar. O endereço ponto-a-ponto deve ser informado como quatro números "
-"separados por pontos."
+"O endereço ponto-a-ponto é usado para determinar a outra ponta da rede "
+"ponto-a-ponta. Consulte o administrador de sua rede caso você não saiba "
+"que valor usar. O endereço ponto-a-ponto deve ser informado como quatro "
+"números separados por pontos."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "Máscara de rede ?"
+msgstr "Máscara de rede :"
 
 #. Type: string
 #. Description
@@ -438,14 +433,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "Gateway ?"
+msgstr "Gateway :"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -454,26 +447,25 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Este é um endereço IP (quatro números separados por pontos) que indica o "
-"roteador gateway, também conhecido como o roteador padrão. Todo tráfego que "
-"vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
-"através deste roteador. Em raras circunstâncias, você pode não possuir um "
-"roteador; neste caso, este campo pode ser deixado em branco. Caso você não "
-"saiba a resposta correta para esta pergunta, consulte o admistrador de sua "
-"rede."
+"O gateway é um endereço IP (quatro números separados por pontos) que "
+"indica o roteador gateway, também conhecido como o roteador padrão. "
+"Todo tráfego que vai para fora de sua LAN (e consequentemente, para "
+"Internet) é enviado através desse roteador. Em raras circunstâncias, "
+"você pode não possuir um roteador. Nesse caso, este campo pode ser "
+"deixado em branco. Caso você não saiba a resposta correta para esta "
+"pergunta, consulte o admistrador de sua rede."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Gateway inatingível"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "O gateway que você informou é inalcançavel."
+msgstr "O gateway informado está inalcançavel."
 
 #. Type: error
 #. Description
@@ -517,9 +509,8 @@ msgstr "Configuração de Rede Estática"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Configurar a rede via DHCP"
+msgstr "Configurar a rede usando endereçamento estático"
 
 #~ msgid "Choose the domain name."
 #~ msgstr "Escolha o nome do domínio."
