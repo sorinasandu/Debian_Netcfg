@@ -73,7 +73,7 @@ static void netcfg_write_dhcp (char *iface)
 int start_dhcp_client (struct debconfclient *client, char* dhostname)
 {
   FILE *dc = NULL;
-  dhclient_t dhcp_client;
+  enum { DHCLIENT, DHCLIENT3, PUMP } dhcp_client;
 
   if (access("/var/lib/dhcp3", F_OK) == 0)
     dhcp_client = DHCLIENT3;

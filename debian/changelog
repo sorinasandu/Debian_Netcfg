@@ -1,5 +1,6 @@
-netcfg (0.68) UNRELEASED; urgency=low
+netcfg (0.68) unstable; urgency=medium
 
+  * Severity medium for the static configuration fix.
   * Joshua Kwan
     - When we get a hostname from DHCP, seed the domain name with whatever
       was received.
@@ -10,6 +11,11 @@ netcfg (0.68) UNRELEASED; urgency=low
       that copies all available files into /target.
     - For this, make sure we always start with a clean slate by removing
       those files at startup.
+    - Move a bunch of static strings to the header file.
+  * Updated translations:
+    - Welsh (cy.po) by Dafydd Harries
+    - German (de.po) by Alwin Meschede
+    - Hebrew (he.po) by Lior Kaplan
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 28 May 2004 10:05:29 -0700
 

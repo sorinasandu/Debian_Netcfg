@@ -188,7 +188,6 @@ int get_all_ifs (int all, char*** ptr)
 
 char *find_in_devnames(const char* iface)
 {
-#define DEVNAMES "/etc/network/devnames"
   FILE* dn = NULL;
   char buf[512], *result = NULL;
   size_t len = strlen(iface);
@@ -264,7 +263,6 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
 
 int iface_is_hotpluggable(const char *iface)
 {
-#define DEVHOTPLUG "/etc/network/devhotplug"
     FILE* f = NULL;
     char buf[256];
     size_t len = strlen(iface);
@@ -512,21 +510,6 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
         *domain = strdup(client->value);
     return 0;
 }
-
-#define HELPFUL_COMMENT \
-"# This file describes the network interfaces available on your system\n" \
-"# and how to activate them. For more information, see interfaces(5).\n" \
-"\n" \
-"# This entry denotes the loopback (127.0.0.1) interface.\n"
-
-#define IPV6_HOSTS \
-"# The following lines are desirable for IPv6 capable hosts\n" \
-"::1     ip6-localhost ip6-loopback\n" \
-"fe00::0 ip6-localnet\n" \
-"ff00::0 ip6-mcastprefix\n" \
-"ff02::1 ip6-allnodes\n" \
-"ff02::2 ip6-allrouters\n" \
-"ff02::3 ip6-allhosts\n"
 
 void netcfg_write_loopback (void)
 {

@@ -10,6 +10,9 @@
 #define DHCLIENT3_CONF	"/etc/dhcp3/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
 
+#define DEVNAMES	"/etc/network/devnames"
+#define DEVHOTPLUG	"/etc/network/devhotplug"
+
 #define _GNU_SOURCE
 
 #include <sys/types.h>
@@ -23,10 +26,24 @@
 
 #define empty_str(s) (s && *s == '\0')
 
+#define HELPFUL_COMMENT \
+"# This file describes the network interfaces available on your system\n" \
+"# and how to activate them. For more information, see interfaces(5).\n" \
+"\n" \
+"# This entry denotes the loopback (127.0.0.1) interface.\n"
+
+#define IPV6_HOSTS \
+"# The following lines are desirable for IPv6 capable hosts\n" \
+"::1     ip6-localhost ip6-loopback\n" \
+"fe00::0 ip6-localnet\n" \
+"ff00::0 ip6-mcastprefix\n" \
+"ff02::1 ip6-allnodes\n" \
+"ff02::2 ip6-allrouters\n" \
+"ff02::3 ip6-allhosts\n"
+
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
-typedef enum { DHCLIENT, DHCLIENT3, PUMP } dhclient_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd, skfd;
