@@ -4,9 +4,12 @@ netcfg (1.07) UNRELEASED; urgency=low
     - Add missing strdup of WEP key, so that it gets into interfaces.
       closes: #275920
     - Also fix some problems setting WEP keys by passing a missing length
-      parameter in the data structure. closes: #280185
+      parameter in the data structure. closes: #280185, #270304
+      (Note: this seems to fix s:xxxxx passphrase entry.)
+    - Rectify some poor wording and missing examples in netcfg/wireless_wep
+      template.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sun,  7 Nov 2004 17:16:53 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Sun,  7 Nov 2004 21:44:15 -0800
 
 netcfg (1.06) unstable; urgency=high
 
