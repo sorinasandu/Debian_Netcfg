@@ -1,5 +1,7 @@
 # translation of de.po to 
 # translation of de.po to
+# translation of de.po to
+# translation of de.po to
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -13,7 +15,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-01 14:20+0200\n"
-"PO-Revision-Date: 2004-03-21 23:34+0100\n"
+"PO-Revision-Date: 2004-04-01 14:33+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,14 +26,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Das Netzwerk wird jetzt mit DHCP konfiguriert"
+msgstr "Netzwerk automatisch mit DHCP konfigurieren?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -42,8 +42,8 @@ msgstr ""
 "Das Netzwerk kann entweder mit DHCP oder durch manuelle Eingabe aller "
 "Informationen konfiguriert werden. Wenn Sie DHCP wählen und der Installer "
 "keine funktionierende Konfiguration von einem DHCP-Server Ihres Netzwerks "
-"erhalten kann, werden Sie die Möglichkeit erhalten, Ihr Netzwerk manuell zu "
-"konfigurieren. Wenn Sie nicht sicher sind, wählen Sie DHCP."
+"erhalten kann, werden Sie nach dem Konfigurationsversuch per DHCP die "
+"Möglichkeit erhalten, Ihr Netzwerk manuell zu konfigurieren."
 
 #. Type: string
 #. Description
@@ -222,7 +222,7 @@ msgid ""
 msgstr ""
 "Der Hostname ist ein einzelnes Wort, der Ihr Rechner im Netzwerk "
 "identifiziert. Wenn Sie Ihren Rechnernamen nicht kennen, fragen Sie den "
-"Netzwerkadministrator. Wenn Sie ein lokales Heimnetz aufbauen, ist es egal "
+"Netzwerkadministrator. Wenn Sie ein lokales Heimnetz aufbauen, ist es egal, "
 "was Sie angeben."
 
 #. Type: error
@@ -506,8 +506,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -544,8 +543,7 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -660,8 +658,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -756,3 +753,4 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
+
