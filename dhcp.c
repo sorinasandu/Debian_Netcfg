@@ -139,6 +139,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
       break;
   }
 
+  /* Some clients need this ... */
+  ifconfig_up (interface);
+  
   if ((dhcp_pid = fork()) == 0) /* child */
   {
     int ret;
@@ -161,7 +164,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
   }
 }
 
-/* Poll the started DHCP cilent for ten seconds, and return 0 if a lease was
+/* Poll the started DHCP client for ten seconds, and return 0 if a lease was
  * acquired, 1 otherwise. The client should die once a lease is acquired.
  *
  * It will NOT reap the DHCP client after an unsuccessful poll. 
@@ -192,9 +195,7 @@ int poll_dhcp_client (struct debconfclient *client)
   /* got a lease? */
   if (!dhcp_running && (dhcp_exit_status == 0))
   {
-    assert(hostname != NULL);
     assert(dhcp_pid == -1);
-
     return 0;
   }
   
@@ -234,7 +235,13 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
   enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
-  
+
+  /* Nuke */
+  di_exec_shell("killall dhclient");
+  di_exec_shell("killall pump");
+  di_exec_shell("killall udhcpc");
+
+  kill_dhcp_client();
   loop_setup();
 
   for (;;)

@@ -111,29 +111,32 @@ int main(void)
 	    break;
 
 	case GET_DHCP:
-	        switch (netcfg_activate_dhcp(client)) {
-                case 0:
-		    state = QUIT;
-		    break;
-                case 30:
-		    state = BACKUP;
-		    break;
-                case 15:
-		    state = GET_STATIC;
-		    break;
-	        }
+            switch (netcfg_activate_dhcp(client))
+            {
+              case 0:
+                state = QUIT;
+                break;
+              case 30:
+                state = BACKUP;
+                break;
+              case 15:
+                state = GET_STATIC;
+                break;
+            }
 	    break;
+
 	case GET_STATIC:
 	    if (netcfg_get_static(client))
 		state = GET_METHOD;
 	    else {
 		if (netcfg_activate_static(client))
-		    exit(1);
+                  return 1;
 		else
-		    state = QUIT;
+                  state = QUIT;
 	    }
 	    break;
-	case WCONFIG:
+
+        case WCONFIG:
 	    if (requested_wireless_tools == 0)
 	    {
 	      di_exec_shell_log("apt-install wireless-tools");
@@ -155,6 +158,7 @@ int main(void)
 	    
 	    state = GET_METHOD;
 	    break;
+
 	case QUIT:
 	    return 0;
 	}
