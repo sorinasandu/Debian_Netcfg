@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.16\n"
-"POT-Creation-Date: 2002-10-20 23:12+0200\n"
+"POT-Creation-Date: 2002-11-12 10:41+0100\n"
 "PO-Revision-Date: 2002-11-03 18:30+0200\n"
 "Last-Translator: Philippe Batailler <pbatailler@teaser.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -231,12 +231,12 @@ msgstr ""
 "séparés par des points."
 
 #. Description
-#: ../netcfg-static.templates:18
+#: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Quelle valeur de masque-réseau ?"
 
 #. Description
-#: ../netcfg-static.templates:18
+#: ../netcfg-static.templates:19
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -247,12 +247,12 @@ msgstr ""
 "masque-réseau est une série de quatre nombres séparés par des points."
 
 #. Description
-#: ../netcfg-static.templates:26
+#: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Quelle valeur de passerelle ?"
 
 #. Description
-#: ../netcfg-static.templates:26
+#: ../netcfg-static.templates:27
 msgid ""
 "This is an IP address (four numbers separated by periods) that indicates the "
 "gateway router, also known as the default router.  All traffic that goes "
@@ -262,19 +262,20 @@ msgid ""
 "consult your network administrator."
 msgstr ""
 "C'est une adresse IP (quatre nombres séparés par des points) qui indique la "
-"machine qui joue le rôle de routeur (routeur par défaut). Tout le trafic qui "
-"sort de votre réseau (p. ex. vers internet) passe par ce routeur. Dans "
-"quelques rares circonstances, vous n'avez pas besoin de routeur. Si c'est le "
-"cas, vous pouvez laisser ce champ vide. Consultez votre administrateur si "
-"vous ne connaissez pas la réponse correcte à cette question."
+"machine qui joue le rôle de routeur ; cette machine est aussi connue comme "
+"le routeur par défaut. Tout le trafic qui sort de votre réseau (p. ex. vers "
+"internet) passe par ce routeur. Dans quelques rares circonstances, vous "
+"n'avez pas besoin de routeur. Si c'est le cas, vous pouvez laisser ce champ "
+"vide. Consultez votre administrateur si vous ne connaissez pas la réponse "
+"correcte à cette question."
 
 #. Description
-#: ../netcfg-static.templates:36
+#: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "La passerelle choisie ne peut être atteinte."
 
 #. Description
-#: ../netcfg-static.templates:36
+#: ../netcfg-static.templates:37
 msgid ""
 "You may have made an error entering your ipaddress, netmask and/or gateway."
 msgstr ""
@@ -282,12 +283,12 @@ msgstr ""
 "passerelle."
 
 #. Description
-#: ../netcfg-static.templates:43
+#: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Cette configuration est-elle correcte ?"
 
 #. Description
-#: ../netcfg-static.templates:43
+#: ../netcfg-static.templates:44
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
