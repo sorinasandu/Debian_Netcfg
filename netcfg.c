@@ -31,7 +31,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
-#include "utils.h"
+#include <debian-installer.h>
 #include "netcfg.h"
 
 
@@ -306,7 +306,7 @@ netcfg_get_interface (struct debconfclient *client, char **interface)
 	  len += newchars + 128;
 	}
 
-      snprintfcat (ptr, len, "%s: %s, ", inter, get_ifdsc (inter));
+      di_snprintfcat (ptr, len, "%s: %s, ", inter, get_ifdsc (inter));
       num_interfaces++;
     }
   getif_end ();

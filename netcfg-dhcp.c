@@ -31,7 +31,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
-#include "utils.h"
+#include <debian-installer.h>
 #include "netcfg.h"
 
 static char *interface = NULL;
@@ -66,7 +66,10 @@ static void
 netcfg_get_dhcp ()
 {
   if (dhcp_hostname)
+  {
     free (dhcp_hostname);
+    dhcp_hostname = NULL;
+  }
 
   client->command (client, "input", "high", "netcfg/dhcp_hostname", NULL);
   client->command (client, "go", NULL);
@@ -103,14 +106,14 @@ static void
 netcfg_activate_dhcp ()
 {
   char buf[128];
-  execlog ("/sbin/ifconfig lo 127.0.0.1");
+  di_execlog ("/sbin/ifconfig lo 127.0.0.1");
 
   switch (dhcp_client)
     {
       case PUMP:
 	snprintf (buf, sizeof (buf), "/sbin/pump -i %s", interface);
 	if (dhcp_hostname)
-	  snprintfcat (buf, sizeof (buf), " -h %s", dhcp_hostname);
+	  di_snprintfcat (buf, sizeof (buf), " -h %s", dhcp_hostname);
 	break;
 
       case DHCLIENT:
@@ -120,11 +123,11 @@ netcfg_activate_dhcp ()
       case UDHCPC:
 	snprintf (buf, sizeof (buf), "/sbin/udhcpc -i %s -n", interface);
 	if (dhcp_hostname)
-	  snprintfcat (buf, sizeof (buf), " -H %s", dhcp_hostname);
+	  di_snprintfcat (buf, sizeof (buf), " -H %s", dhcp_hostname);
 	break;
     }
 
-  if (execlog (buf))
+  if (di_execlog (buf))
     netcfg_die (client);
 }
 

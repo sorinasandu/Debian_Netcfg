@@ -2,7 +2,7 @@ ifndef TARGETS
 TARGETS=netcfg-dhcp netcfg-static
 endif
 
-LDOPTS=-ldebconf 
+LDOPTS=-ldebconf -ldebian-installer
 PREFIX=$(DESTDIR)/usr/
 CFLAGS=-Wall  -Os
 
@@ -18,8 +18,8 @@ STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 
 all: $(TARGETS)
 
-netcfg-dhcp netcfg-static: netcfg-dhcp.c utils.o netcfg.o
-	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) utils.o netcfg.o
+netcfg-dhcp netcfg-static: netcfg-dhcp.c netcfg.o
+	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) netcfg.o
 	$(STRIP) $@
 	size $@ 
 

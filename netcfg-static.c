@@ -30,7 +30,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
-#include "utils.h"
+#include <debian-installer.h>
 #include "netcfg.h"
 
 
@@ -156,38 +156,38 @@ netcfg_activate_static ()
   char buf[128];
 #ifdef __GNU__
 /* I had to do something like this ? */
-/*  execlog ("settrans /servers/socket/2 -fg");  */
-  execlog ("settrans /servers/socket/2 --goaway");
+/*  di_execlog ("settrans /servers/socket/2 -fg");  */
+  di_execlog ("settrans /servers/socket/2 --goaway");
   snprintf (buf, sizeof (buf),
 	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
 	    interface, num2dot (ipaddress));
-  snprintfcat (buf, sizeof (buf) " --netmask=%s", num2dot (netmask));
+  di_snprintfcat (buf, sizeof (buf) " --netmask=%s", num2dot (netmask));
   buf[sizeof (buf) - 1] = '\0';
 
   if (gateway)
     snprintf (buf, sizeof (buf), " --gateway=%s", num2dot (gateway));
 
-  rv |= execlog (buf);
+  rv |= di_execlog (buf);
 
 #else
-  execlog ("/sbin/ifconfig lo 127.0.0.1");
+  di_execlog ("/sbin/ifconfig lo 127.0.0.1");
 
   snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", 
 	    interface, num2dot (ipaddress));
-  snprintfcat (buf, sizeof (buf), " netmask %s", num2dot (netmask));
-  snprintfcat (buf, sizeof (buf), " broadcast %s", num2dot (broadcast));
+  di_snprintfcat (buf, sizeof (buf), " netmask %s", num2dot (netmask));
+  di_snprintfcat (buf, sizeof (buf), " broadcast %s", num2dot (broadcast));
   buf[sizeof (buf) - 1] = '\0';
 
   if (pointopoint)
-    snprintfcat (buf, sizeof (buf), " pointopoint %s", num2dot (pointopoint));
+    di_snprintfcat (buf, sizeof (buf), " pointopoint %s", num2dot (pointopoint));
 
-  rv |= execlog (buf);
+  rv |= di_execlog (buf);
 
   if (gateway)
     {
       snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
 		num2dot (gateway));
-      rv |= execlog (buf);
+      rv |= di_execlog (buf);
     }
 #endif
 
