@@ -62,7 +62,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domeinu izena zure hostalari izenaren ezkerraldean dagoen intenet helbide "
+"Domeinu izena zure ostalari izenaren ezkerraldean dagoen intenet helbide "
 "zatia da. Hau .com, .net, edo .org antzerako batetan bukatu behar da. Etxe "
 "barneko sare bat konfiguratzen ari bazara, nahi duzuna erabil dezakezu, "
 "baina kontu izan zure ordengailu guztientan domeinu izen berdina ipintzeko."
@@ -83,8 +83,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Izen zerbitzariak hostalari izenak ebazteko erabiltzen dira. Mesdez sar IP "
-"helbideak (ez hostalari izena) gehienez hiru hutsune batez bereizirik. Ez "
+"Izen zerbitzariak ostalari izenak ebazteko erabiltzen dira. Mesdez sar IP "
+"helbideak (ez ostalari izena) gehienez hiru hutsune batez bereizirik. Ez "
 "erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko dena da. Ez "
 "baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz dezakezu."
 
@@ -277,8 +277,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Ez da sare interfazerik aurkitu. Sistema instalatzailea ez sare gailurik "
-"aurkitzeko gai."
+"Ez da sare interfazerik aurkitu. Sistema instalatzailea da ez sare "
+"gailurik aurkitzeko gai."
 
 #. Type: error
 #. Description
@@ -476,9 +476,9 @@ msgid ""
 " nameservers    = ${nameservers}"
 msgstr ""
 " interfazea           = ${interface}\n"
-" hostalari izena      = ${hostname}\n"
+" ostalari izena       = ${hostname}\n"
 " domeinua             = ${domain}\n"
-" dhcp hostalaria      = ${dhcp_hostname}\n"
+" dhcp ostalaria       = ${dhcp_hostname}\n"
 " izen zerbitzariak    = ${nameservers}"
 
 #. Type: text
@@ -496,9 +496,8 @@ msgstr "Honek denbora bat artu lezake."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Sare autokonfiguraizioa berriz saiatu"
+msgstr "Sare autokonfiguraizioa egoki amaitu da"
 
 #. Type: error
 #. Description
@@ -541,7 +540,7 @@ msgstr "Sarea eskuz konfiguratu"
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
@@ -573,9 +572,8 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Sarea konfiguratu"
+msgstr "Kablegabeko Sarea birkonfiguratu"
 
 #. Type: text
 #. Description
@@ -720,8 +718,8 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interfazea              = ${interface}\n"
-" hostalari izena     = ${hostname}\n"
+" interfazea          = ${interface}\n"
+" ostalari izena      = ${hostname}\n"
 " domeinua            = ${domain}\n"
 " iphelbidea          = ${ipaddress}\n"
 " sare maskara        = ${netmask}\n"
