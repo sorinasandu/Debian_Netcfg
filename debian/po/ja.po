@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-07 20:55-0700\n"
-"PO-Revision-Date: 2004-07-09 09:20+0900\n"
+"PO-Revision-Date: 2004-08-09 23:19+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -292,9 +292,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "ネットワークの設定"
+msgstr "ネットワークの設定なしに続けますか?"
 
 #. Type: boolean
 #. Description
@@ -306,6 +305,8 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} は何のネットワークにも接続していないようです。これはネットワークケーブルが接続されていないか、ネットワークアダプタの不良によるものです。\n"
+"Debian を再起動して etherconf ユーティリティを使うか静的にネットワークを設定するまでネットワークの設定を先送りにすることもできます。戻って、異なるインターフェイスを選ぶこともできます。"
 
 #. Type: select
 #. Choices
@@ -555,19 +556,13 @@ msgstr "ネットワークの設定方法:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
 "the network manually. Some DHCP servers require a DHCP hostname to be sent "
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
-msgstr ""
-"ここでは、DHCP ネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時"
-"間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定"
-"を選ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要"
-"とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できま"
-"す。"
+msgstr "ここでは、DHCP によるネットワークの自動設定の再試行 (もし DHCP サーバが反応に長い時間がかかるものであれば、これで動作するでしょう) またはネットワークの手動設定を選ぶことができます。また、ある種の DHCP サーバはクライアントから送られる特定の DHCP ホスト名を必要とするので、ホスト名付きで DHCP によるネットワーク自動設定を再試行することも選択できます。"
 
 #. Type: note
 #. Description
