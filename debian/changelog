@@ -7,8 +7,11 @@ netcfg (0.19) unstable; urgency=low
   * André Luís Lopes
     - Set pt_BR.po control fields.
     - Update pt_BR translation.
+  * Fix menutest script
+  * Make -dhcp have higher priority than -static, since we presume more people
+    will be using that.
 
- -- Tollef Fog Heen <tfheen@debian.org>  Fri,  8 Nov 2002 14:37:46 +0100
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 13 Nov 2002 02:12:35 +0100
 
 netcfg (0.18) unstable; urgency=low
 
