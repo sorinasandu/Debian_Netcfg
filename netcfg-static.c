@@ -155,7 +155,7 @@ netcfg_activate_static ()
   {
       ptr = buf;
       ptr +=
-	  snprintf (buf, sizeof (buf), "/usr/bin/route add default gateway %s",
+	  snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
 	      num2dot (gateway));
       rv |= execlog (buf);
   }
