@@ -11,14 +11,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2004-11-24 00:33-0700\n"
-"PO-Revision-Date: 2004-11-09 23:59+0100\n"
-"Last-Translator:  Safir Šećerović <sapphire@linux.org.ba>\n"
-"Language-Team:  Bosnian <lokal@lugbih.org>\n"
+"PO-Revision-Date: 2004-11-26 19:23+0100\n"
+"Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
+"Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -92,14 +91,14 @@ msgstr "Primarni mrežni interfejs:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Vaš sistem ima višestruke mrežne interfejse. Odaberite jedan koji ćete "
-"koristiti kao primarni mrežni interfejs tokom instaliranja Debiana."
+"koristiti kao primarni mrežni interfejs tokom instaliranja Debiana. Ako je "
+"bilo moguće, prvi pronađeni povezani mrežni interfejs je odabran."
 
 #. Type: string
 #. Description
@@ -238,14 +237,14 @@ msgstr "Hostname \"${hostname}\" je neispravan."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Ispravan hostname se može sastojati od alfanumeričkih znakova i minusa, može "
-"biti između 2 i 63 znaka dug i ne može počinjati niti završavati sa minusom."
+"Ispravan hostname se sastoji od brojeva 0-9, malih slova a-z i znaka minus. "
+"Mora biti između 2 i 63 znaka dug i ne može počinjati niti završavati sa "
+"minusom."
 
 #. Type: error
 #. Description
@@ -536,7 +535,6 @@ msgstr "Metod podešavanja mreže:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:34
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -545,10 +543,10 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Odavde možete izabrati da ponovo pokušate DHCP automatsku konfiguraciju "
-"mreže (što može raditi ako vašem DHCP serveru treba dugo vremena da "
-"odgovori) ili možete ju podesiti ručno. Neki DHCP serveri zahtijevaju "
-"navođenje njihovog hostnamea, tako da možete odabrati da unesete takav "
-"hostname prije ponovnog pokušaja DHCP konfiguracije."
+"mreže (što može uspjeti ako vašem DHCP serveru treba dugo vremena da "
+"odgovori) ili možete ju podesiti ručno. Neki DHCP serveri zahtijevaju slanje "
+"njihovog DHCP hostnamea, tako da možete odabrati da ponovo pokušate DHCP "
+"automatsku konfiguraciju mreže sa hostname-om koji navedete."
 
 #. Type: note
 #. Description
