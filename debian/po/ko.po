@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-25 06:56+0100\n"
-"PO-Revision-Date: 2004-02-22 13:48+0900\n"
+"PO-Revision-Date: 2004-02-26 22:05+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "${iface} 인터페이스의 무선 ESSID:"
 
 #. Type: string
 #. Description
@@ -106,13 +106,13 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
+msgstr "${iface} 인터페이스는 무선 네트워크 인터페이스입니다. ${iface} 인터페이스가 사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 다른 네트워크를 사용할 수 있고 그걸 사용하려면, 다음 칸을 비워 두십시오."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "${iface} 인터페이스의 WEP 키:"
 
 #. Type: string
 #. Description
@@ -120,7 +120,7 @@ msgstr ""
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr ""
+msgstr "해당된다면, ${iface} 장치의 WEP 보안 키를 입력하십시오. 두 가지 방법이 있습니다:"
 
 #. Type: string
 #. Description
@@ -128,7 +128,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
+msgstr "WEP 키가 'nnnn-nnnn-nn'이나 'nnnnnnnn'의 형식이라면 (n은 숫자), 그 키를 그대로 여기에 입력하십시오."
 
 #. Type: string
 #. Description
@@ -136,7 +136,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
+msgstr "WEP 키가 열쇠글의 형태라면, 앞에 's:'를 붙이십시오 (따옴표 없이)."
 
 #. Type: string
 #. Description
@@ -144,13 +144,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
+msgstr "물론, 무선 네트워크에 WEP 키가 없으면, 이 필드를 비워 두십시오."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "WEP 키가 잘못되었습니다"
 
 #. Type: error
 #. Description
@@ -158,13 +158,13 @@ msgstr ""
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
+msgstr "'${wepkey} WEP 키가 잘못되었습니다. WEP 키를 입력하는 방법에 대한 다음 화면의 안내를 잘 읽어보고, 다시 시도하십시오."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "ESSID가 잘못되었습니다"
 
 #. Type: error
 #. Description
@@ -172,7 +172,7 @@ msgstr ""
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
+msgstr "\"${essid}\" ESSID가 잘못되었습니다. ESSID는 32글자까지 가능하지만, 모든 종류의 문자를 다 쓸 수 있습니다."
 
 #. Type: string
 #. Description
@@ -274,7 +274,7 @@ msgstr "<없음>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "무선 네트워크 (802.11x)"
 
 #. Type: text
 #. Description
@@ -371,9 +371,8 @@ msgstr "네트워크 설정"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
 msgid "Configuring network ..."
-msgstr "네트워크를 설정하는 중입니다 .."
+msgstr "네트워크를 설정하는 중입니다 ..."
 
 #. Type: text
 #. Description
@@ -514,9 +513,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP 주소:"
+msgstr "IP 주소가 잘못되었습니다"
 
 #. Type: error
 #. Description
@@ -524,7 +522,7 @@ msgstr "IP 주소:"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
+msgstr "입력한 IP 주소의 형식이 틀렸습니다.  x.x.x.x의 형태여야 하며, 여기서 x는 255보다 크지 않아야 합니다. 다시 시도하십시오."
 
 #. Type: string
 #. Description
