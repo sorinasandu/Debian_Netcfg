@@ -1,19 +1,23 @@
+# translation of debian-installer.po to Norwegian nynorsk
+# translation of nn.po to Norwegian nynorsk
 # Norwegian Nynorsk messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Håvard Korsvoll <korsvoll@skulelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-26 03:36+0200\n"
-"PO-Revision-Date: 2004-07-14 09:00+0200\n"
-"Last-Translator:  <>\n"
-"Language-Team: Debian L10n Norwegian Nynorsk <debian-l10n-norwegian "
-"nynorsk@lists.debian.org>\n"
+"PO-Revision-Date: 2004-08-28 15:25+0200\n"
+"Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
+"Language-Team: Norwegian nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"nynorsk@lists.debian.org>\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. Type: boolean
 #. Description
@@ -231,14 +235,13 @@ msgstr "Vertsnamnet «${hostname}» er ugyldig."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Eit gyldig vertsnamn kan berre innehalda alfanumeriske teikn og "
-"minusteiknet. Det må vera mellom 2 og 63 teikn langt, og kan ikkje starta "
+"Eit gyldig vertsnamn kan berre innehalda siffera 0-9, dei små bokstavane a-z "
+"og minusteiknet. Det må vera mellom 2 og 63 teikn langt, og kan ikkje starta "
 "eller slutta med eit minusteikn."
 
 #. Type: error
@@ -287,9 +290,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "Setja opp nettverket manuelt"
+msgstr "Setja opp eit statisk nettverk?"
 
 #. Type: boolean
 #. Description
@@ -301,6 +303,12 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} ser ikkje ut til å vera tilkopla til noko nettverk. Dette kan vera "
+"på grunn av ein manglande nettverkskabel eller eit nettverksadapter som "
+"ikkje fungerer. Du kan anten utsetja oppsettet av nettverket til du har "
+"starta opp i det nyinstallerte debiansystemet og bruka etherconf-verktøyet, "
+"eller du kan setja opp eit statisk nettverk. Du kan også gå tilbake og setja "
+"opp eit anna grensesnitt."
 
 #. Type: select
 #. Choices
@@ -547,7 +555,6 @@ msgstr "Metode for oppsett av nettverk:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
