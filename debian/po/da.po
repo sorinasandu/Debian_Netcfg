@@ -101,11 +101,14 @@ msgid ""
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
+"Et gyldigt maskinnavn indeholder kun bogstaver, tal og minus-tegn, "
+"er mellem 2 og 63 tegn langt og må ikke starte eller slutte med et "
+"minus-tegn."
 
 #. Description
 #: ../po/netcfg-common._templates:41
 msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Maskinnavnet \"${hostname}\" er ugyldigt."
 
 #. Description
 #: ../po/netcfg-common._templates:48
@@ -211,22 +214,21 @@ msgstr "IP-adresse?"
 
 #. Description
 #: ../po/netcfg-static._templates:10
-#, fuzzy
 msgid ""
 "The pointopoint address is used to determine the other endpoint of the point "
 "to point network.  Consult your network administrator if you do not know the "
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
-"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
-"Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
-"angives som fire tal adskilt af punktummer."
+"Punkttilpunkt-adressen bruges til at angive den anden ende af en "
+"punkt-til-punkt-forbindelse. Spørg din netværksadministrator hvis du ikke "
+"kender værdien. Punkttilpunkt-adressen skal angives som fire tal adskilt af "
+"punktummer."
 
 #. Description
 #: ../po/netcfg-static._templates:10
-#, fuzzy
 msgid "Pointopoint address?"
-msgstr "IP-adresse?"
+msgstr "Punkttilpunkt-adresse?"
 
 #. Description
 #: ../po/netcfg-static._templates:18
@@ -235,7 +237,7 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmasken bruge til at afgøre hvilke maskiner der er lokale på dit netværk. "
+"Netmasken bruges til at afgøre hvilke maskiner der er lokale på dit netværk. "
 "Spørg din netværksadministrator hvis du ikke kender værdien. Netmasken skal "
 "angives som fire tal adskilt af punktummer."
 
@@ -297,6 +299,7 @@ msgstr ""
 " IP-adresse    = ${ipaddress}\n"
 " netmaske      = ${netmask}\n"
 " gateway       = ${gateway}\n"
+" punkttilpunkt = ${pointopoint}\n"
 " navneservere  = ${nameservers}"
 
 #. Description
