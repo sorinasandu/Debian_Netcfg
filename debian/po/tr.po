@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-11 05:58+0300\n"
+"PO-Revision-Date: 2004-08-10 22:55+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -232,15 +232,14 @@ msgstr "\"${hostname}\" geçersiz bir makine adı."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Geçerli bir makine adı; sadece alfasayısal karakterler ve eksi ('-') işareti "
-"içermeli, 2 ilâ 63 karakter uzunluğunda olmalı, sonunda ve başında eksi "
-"işareti bulunmamalıdır."
+"Geçerli bir makine adı; sadece 0-9 arasında rakamlar, a-z arasında Türkçe "
+"olmayan küçük harfler ve eksi ('-') işareti içermeli; 2 ilâ 63 karakter "
+"uzunluğunda olmalı, sonunda ve başında eksi işareti bulunmamalıdır."
 
 #. Type: error
 #. Description
@@ -286,9 +285,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Ağı yapılandır"
+msgstr "Ağı yapılandırmadan devam edilsin mi?"
 
 #. Type: boolean
 #. Description
@@ -300,6 +298,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} herhangi bir tür ağa bağlı gözükmüyor.  Bunun nedeni; eksik bir ağ "
+"kablosu veya ağ donanımındaki bir bozukluk olabilir.  Debian sisteminizle "
+"açılış yaptıktan sonra etherconf aracını kullanıncaya kadar ağ yapılandırmasını "
+"erteleyebilir veya ağı statik olarak yapılandırabilirsiniz.  Geri dönerek farklı "
+"bir arayüz seçmeniz de mümkündür."
 
 #. Type: select
 #. Choices
@@ -547,7 +550,6 @@ msgstr "Ağ yapılandırma yöntemi:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
