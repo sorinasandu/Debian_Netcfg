@@ -434,7 +434,8 @@ int netcfg_get_static(struct debconfclient *client)
                 if (strncmp(interface, "plip", 4) == 0
                     || strncmp(interface, "slip", 4) == 0
                     || strncmp(interface, "ctc", 3) == 0
-                    || strncmp(interface, "escon", 5) == 0)
+                    || strncmp(interface, "escon", 5) == 0
+                    || strncmp(interface, "iucv", 4) == 0)
                     state = GET_POINTOPOINT;
                 else
                     state = GET_NETMASK;
