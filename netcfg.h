@@ -12,6 +12,7 @@
 
 #define DEVNAMES	"/etc/network/devnames"
 #define DEVHOTPLUG	"/etc/network/devhotplug"
+#define STAB		"/var/run/stab"
 
 #define _GNU_SOURCE
 

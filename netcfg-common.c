@@ -192,10 +192,10 @@ short find_in_stab(const char* iface)
   char buf[128];
   size_t len = strlen(iface);
 
-  if (access("/var/run/stab", F_OK) == -1)
+  if (access(STAB, F_OK) == -1)
     return 0;
 
-  if (!(dn = popen("grep -v '^Socket' /var/run/stab | cut -f5", "r")))
+  if (!(dn = popen("grep -v '^Socket' " STAB " | cut -f5", "r")))
     return 0;
 
   while (fgets (buf, 128, dn) != NULL)
