@@ -104,7 +104,7 @@ msgstr ""
 "geidentificeerd wordt. U kunt de computernaam zelf kiezen wanneer uw "
 "computer deel uit maakt van een thuisnetwerk of niet verbonden is met een "
 "netwerk. Neem contact op met uw netwerkbeheerder wanneer u niet weet wat u "
-"hier in moet vullen."
+"hier moet invullen."
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -153,7 +153,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
-msgstr "Gelieve de computernaam van uw DHCP-server in te voeren."
+msgstr "Gelieve uw dhcp-computernaam in te voeren."
 
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -162,9 +162,9 @@ msgid ""
 "might need to specify an account number here.  Most other users can just "
 "leave this blank."
 msgstr ""
-"Mogelijk dient u hier de computernaam van uw DHCP-server in te voeren. Bij "
-"gebruik van een kabelmodem dient u hier wellicht een gebruiksnummer in te "
-"voeren. Anderen kunnen dit veld leeg laten."
+"Mogelijk dient u hier uw dhcp-computernaam in te voeren. Bij gebruik van een "
+"kabelmodem dient u hier wellicht een gebruiksnummer in te voeren. Anderen "
+"kunnen dit veld leeg laten."
 
 #. Description
 #: ../netcfg-dhcp.templates:11
@@ -180,11 +180,11 @@ msgid ""
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 msgstr ""
-" interface                = ${interface}\n"
-" computernaam             = ${hostname}\n"
-" domein                   = ${domain}\n"
-" computernaam DHCP-Server = ${dhcp_hostname}\n"
-" nameservers              = ${nameservers}"
+" interface         = ${interface}\n"
+" computernaam      = ${hostname}\n"
+" domein            = ${domain}\n"
+" dhcp-computernaam = ${dhcp_hostname}\n"
+" nameservers       = ${nameservers}"
 
 #. Description
 #: ../netcfg-dhcp.templates:20
