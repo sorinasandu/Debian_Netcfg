@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-0.45\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-22 21:19-0800\n"
+"POT-Creation-Date: 2004-02-23 01:26-0500\n"
 "PO-Revision-Date: 2004-02-21 22:13-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -107,18 +107,24 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
+#, fuzzy
+msgid "Wireless ESSID for ${iface}:"
+msgstr "Esta configuração está correta ?"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:38
 msgid ""
-"Please enter the ESSID of the wireless network you would like ${iface} to "
-"use. If you would like the installer to select whichever is available, just "
-"hit Enter and continue."
+"${iface} is a wireless network interface. Please enter the name (the ESSID) "
+"of the wireless network you would like ${iface} to use. If you would like to "
+"use any available network, leave this form blank."
 msgstr ""
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
-msgid "Wireless configuration for ${iface}"
-msgstr "Esta configuração está correta ?"
+msgid "WEP key for ${iface}:"
+msgstr ""
 
 #. Type: string
 #. Description
