@@ -509,7 +509,7 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress) {
             fprintf(fp, "127.0.0.1\tlocalhost\n");
-            if (!empty_str(domain))
+            if (domain && !empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         num2dot(ipaddress), hostname,
                         domain, hostname);
@@ -755,7 +755,7 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 
     if ((fp = file_open(RESOLV_FILE, "w"))) {
         int i = 0;
-        if (!empty_str(domain))
+        if (domain && !empty_str(domain))
             fprintf(fp, "search %s\n", domain);
 
         while (nameservers[i])
