@@ -1,9 +1,11 @@
 Template: netcfg/get_domain
 Type: string
 Description: Choose the domain name.
- As with individual systems, every network has a name. This name is called the
- domain name. Please enter your domain name or leave this field empty if you
- don't have a domain.
+ The domain name is the part of your Internet address to the right
+ of your host name.  It is often something that ends in .com, .net,
+ .edu, or .org.  If you are setting up a home network, you can make
+ something up, but make sure you use the same domain name on all
+ your computers. 
 
 Template: netcfg/get_ipaddress
 Type: string
@@ -21,9 +23,13 @@ Description: What is your netmask?
 Template: netcfg/get_gateway
 Type: string
 Description: What is your IP gateway address?
- A gateway system is one that connects your network to other networks such as
- your company wide-area net or the Internet. If there is no gateway in your
- subnet just leave this field blank.
+ This is an IP address (four numbers separated by periods) that
+ indicates the gateway router, also known as the default router.  All
+ traffic that goes outside your LAN (for instance, to the Internet) is
+ sent through this router.  In rare circumstances, you may have no
+ router; in that case, you can leave this blank.  If you don't know
+ the proper answer to this question, consult your network
+ administrator.
 
 Template: netcfg/gateway_unreachable
 Type: note

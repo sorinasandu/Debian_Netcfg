@@ -16,7 +16,7 @@ all: $(PROGS)
 
 install:
 	$(foreach PROG, $(PROGS), \
-	-cp $(PROG) debian/$(PROG).config)
+	-cp $(PROG) debian/$(PROG).postinst)
 
 netcfg-dhcp: netcfg.c
 	$(CC) $(CFLAGS) -DDHCP netcfg.c -o $@ $(INCS) $(LDOPTS)

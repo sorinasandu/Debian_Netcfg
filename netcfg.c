@@ -45,9 +45,9 @@ int activate_net ();
 void debconf_unseen (char *template);
 void debconf_subst (char *template, char *key, char *string);
 char *debconf_input (char *priority, char *template);
-int do_system(char *);
-void  write_common(void);
-void  get_common(void);
+int do_system (char *);
+void write_common (void);
+void get_common (void);
 char *dot2num (u_int32_t * num, char *dot);
 char *num2dot (u_int32_t num);
 
@@ -64,13 +64,13 @@ main (int argc, char *argv[])
   client = debconfclient_new ();
 
   client->command (client, "title", "Network Configuration", NULL);
-  get_common();
+  get_common ();
   get_interface ();
   client->command (client, "input", "high", "netcfg/dhcp_hostname", NULL);
   client->command (client, "go", NULL);
   client->command (client, "get", "netcfg/dhcp_hostname", NULL);
   dhcp_hostname = client->value;
-  write_common();
+  write_common ();
   write_dhcp_cfg ();
   activate_dhcp_net ();
 
@@ -109,7 +109,8 @@ activate_dhcp_net (void)
   ptr = buf;
   ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
   if (dhcp_hostname)
-    ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
+    ptr +=
+      snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
 
   ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " %s", interface);
 
@@ -182,7 +183,7 @@ get_static_cfg (void)
       ipaddress = network = broadcast = netmask = gateway =
 	nameservers[0] = 0;
 
- 
+
       debconf_subst ("netcfg/confirm_static_cfg", "hostname", hostname);
       if ((ptr = debconf_input ("high", "netcfg/get_ipaddress")))
 	dot2num (&ipaddress, ptr);
@@ -190,8 +191,8 @@ get_static_cfg (void)
       debconf_subst ("netcfg/confirm_static_cfg", "ipaddress",
 		     num2dot (ipaddress));
 
-      get_common();
-      
+      get_common ();
+
       if ((ptr = debconf_input ("high", "netcfg/get_netmask")))
 	dot2num (&netmask, ptr);
       debconf_subst ("netcfg/confirm_static_cfg", "netmask",
@@ -236,15 +237,15 @@ write_static_cfg (void)
 {
   FILE *fp;
 
- 
+
   if ((fp = file_open (NETWORKS_FILE)))
     {
       fprintf (fp, "localnet %s\n", num2dot (network));
       fclose (fp);
     }
 
-  write_common();
- 
+  write_common ();
+
   if ((fp = file_open (INTERFACES_FILE)))
     {
       fprintf (fp,
@@ -269,9 +270,15 @@ activate_static_net ()
   do_system ("/sbin/ifconfig lo 127.0.0.1");
 
   ptr = buf;
-  ptr += snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", interface, num2dot (ipaddress));
-  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " netmask %s", num2dot (netmask));
-  ptr += snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s", num2dot (broadcast));
+  ptr +=
+    snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", interface,
+	      num2dot (ipaddress));
+  ptr +=
+    snprintf (ptr, sizeof (buf) - (ptr - buf), " netmask %s",
+	      num2dot (netmask));
+  ptr +=
+    snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s",
+	      num2dot (broadcast));
 
   rv = do_system (buf);
   if (rv != 0)
@@ -286,45 +293,46 @@ activate_static_net ()
 #endif /* STATIC */
 
 void
-get_common(void){
-    char *ptr, *ns;
+get_common (void)
+{
+  char *ptr, *ns;
 
 
-    hostname = strdup (debconf_input ("high", "netcfg/get_hostname"));
+  hostname = strdup (debconf_input ("high", "netcfg/get_hostname"));
 
-    if ((ptr = debconf_input ("high", "netcfg/get_domain")))
-	domain = strdup (ptr);
-    
-    debconf_subst ("netcfg/confirm_static_cfg", "domain", domain);
+  if ((ptr = debconf_input ("high", "netcfg/get_domain")))
+    domain = strdup (ptr);
+
+  debconf_subst ("netcfg/confirm_static_cfg", "domain", domain);
 
 
 
-    ptr = debconf_input ("high", "netcfg/get_nameservers");
-    
-      if (ptr)
-	{
-	  char *save;
-	  save = ptr = strdup (ptr);
-	  ns = strtok_r (ptr, " ", &ptr);
-	  debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", ns);
-	  dot2num (&nameservers[0], ns);
+  ptr = debconf_input ("high", "netcfg/get_nameservers");
 
-	  ns = strtok_r (NULL, " ", &ptr);
-	  debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", ns);
-	  dot2num (&nameservers[1], ns);
+  if (ptr)
+    {
+      char *save;
+      save = ptr = strdup (ptr);
+      ns = strtok_r (ptr, " ", &ptr);
+      debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", ns);
+      dot2num (&nameservers[0], ns);
 
-	  ns = strtok_r (NULL, " ", &ptr);
-	  debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", ns);
-	  dot2num (&nameservers[2], ns);
+      ns = strtok_r (NULL, " ", &ptr);
+      debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", ns);
+      dot2num (&nameservers[1], ns);
 
-	  free (save);
-	}
-      else
-	{
-	  debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", NULL);
-	  debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", NULL);
-	  debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", NULL);
-	}
+      ns = strtok_r (NULL, " ", &ptr);
+      debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", ns);
+      dot2num (&nameservers[2], ns);
+
+      free (save);
+    }
+  else
+    {
+      debconf_subst ("netcfg/confirm_static_cfg", "primary_DNS", NULL);
+      debconf_subst ("netcfg/confirm_static_cfg", "secondary_DNS", NULL);
+      debconf_subst ("netcfg/confirm_static_cfg", "tertiary_DNS", NULL);
+    }
 
 
 
@@ -335,11 +343,12 @@ get_common(void){
 }
 
 void
-write_common(void){
-    FILE *fp;
-    int i;
+write_common (void)
+{
+  FILE *fp;
+  int i;
 
-    if ((fp = file_open (HOSTS_FILE)))
+  if ((fp = file_open (HOSTS_FILE)))
     {
       fprintf (fp, "127.0.0.1\tlocalhost\n");
       if (domain)
@@ -358,16 +367,16 @@ write_common(void){
 
 
 
-if ((fp = file_open (RESOLV_FILE)))
+  if ((fp = file_open (RESOLV_FILE)))
     {
-      	i = 0;
-	if (domain)
-	    fprintf (fp, "search %s\n", domain);
-	while (nameservers[i])
+      i = 0;
+      if (domain)
+	fprintf (fp, "search %s\n", domain);
+      while (nameservers[i])
 	{
-	    fprintf (fp, "nameserver %s\n", num2dot (nameservers[i++]));
+	  fprintf (fp, "nameserver %s\n", num2dot (nameservers[i++]));
 	}
-	fclose (fp);
+      fclose (fp);
     }
 
 }
@@ -583,14 +592,15 @@ get_interface ()
 
   if (ptr == buf)
     {
-	debconf_unseen ("netcfg/no_interfaces");
-	ptr = debconf_input ("critical", "netcfg/no_interfaces");
-	if (ptr) {
-	    interface = strdup (ptr);
-	    return 0;
+      debconf_unseen ("netcfg/no_interfaces");
+      ptr = debconf_input ("critical", "netcfg/no_interfaces");
+      if (ptr)
+	{
+	  interface = strdup (ptr);
+	  return 0;
 	}
-	else
-	    return -1;
+      else
+	return -1;
     }
 
 
@@ -626,16 +636,17 @@ file_open (char *path)
 
 
 int
-do_system (char *s){
-    int rv;
+do_system (char *s)
+{
+  int rv;
 #ifdef DEBUG
-    fprintf(stderr, "executing '%s'\n", s);
+  fprintf (stderr, "executing '%s'\n", s);
 #endif
-   rv = system(s); 
+  rv = system (s);
 #ifdef DEBUG
-    fprintf(stderr, "rv = %d\n", rv);
+  fprintf (stderr, "rv = %d\n", rv);
 #endif
-    return rv;
+  return rv;
 }
 
 
@@ -695,4 +706,3 @@ num2dot (u_int32_t num)
 
   return dot;
 }
-
