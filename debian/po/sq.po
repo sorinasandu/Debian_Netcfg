@@ -15,12 +15,12 @@ msgstr ""
 "Project-Id-Version: netcfg 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-18 17:48+0200\n"
+"PO-Revision-Date: 2004-07-01 12:36+0200\n"
 "Last-Translator: Elian Myftiu <elian@lycos.com>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -528,7 +528,6 @@ msgstr "Mënyra e konfigurimit të rrjetit:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -536,19 +535,17 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Autokonfigurimi i rrjetit dështoi. Shkak mund të jetë një server i ngadaltë "
-"DHCP brenda rrjetit, kështu që mund ta riprovosh. Nëse rrjeti yt nuk përdor "
-"DHCP për autokonfigurim, mund ta konfigurosh vetë. Duhet thënë gjithashtu, "
-"që disa server DHCP kanë nevojë për një emër strehe(hostname) DHCP të "
-"veçantë, kështu që mund të zgjedhësh të shkruash këtë të fundit përpara se "
-"ta riprovosh."
+"Prej këtu mund të zgjedhësh të riprovosh autokonfigurimin e rrjetit me DHCP "
+"(i cili mund të mos punojë nëse serveri DHCP do shumë kohë të përgjigjet) ose "
+"të konfigurosh vetë rrjetin. Disa servera DHCP kanë nevojë për një emër strehe"
+"(hostname) DHCP që ti dërgohet nga klienti, kështu që mund të zgjedhësh të "
+"shkruash këtë të fundit përpara se ta riprovosh konfigurimin automatik."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Autokonfigurimi i rrjetit doli me sukses"
+msgstr "Autokonfigurimi i rrjetit dështoi"
 
 #. Type: note
 #. Description
@@ -557,12 +554,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Ndoshta rrjeti yt nuk është duke përdorur protokollin DHCP. Përndryshe, "
+"serveri DHCP mund të jetë i ngadaltë ose ndonjë kartë rrjeti nuk është "
+"duke punuar siç duhet."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Të vazhdoj pa një route të përzgjedhur?"
 
 #. Type: boolean
 #. Description
@@ -574,6 +574,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Autokonfigurimi i rrjetit përfundoi me sukses. Megjithatë, nuk u caktua asnjë "
+"route i përzgjedhur: sistemi nuk di si të komunikojë me strehues në Internet. "
+"Kjo të pengon të vazhdosh me instalimin në mos nuk ke CD-ROM e parë zyrtar "
+"të Debian-it, një CD-ROM 'Netinst', ose paketa në dispozicion në rrjetin lokal."
 
 #. Type: boolean
 #. Description
@@ -582,6 +586,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Nëse nuk je i sigurtë, nuk duhet të vazhdosh pa një route të përzgjedhur: "
+"kontakto administratorin e rrjetit lokal për këtë problem."
 
 #. Type: text
 #. Description
