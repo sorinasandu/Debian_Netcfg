@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.37\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 09:35+0100\n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
 "PO-Revision-Date: 2004-01-06 22:24+0100\n"
 "Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
@@ -86,50 +86,45 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-msgid "Interface:"
-msgstr "Nätverkskort:"
+#, fuzzy
+msgid "Primary network interface:"
+msgstr "Inga nätverkskort identifierades."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid ""
-"Please choose the interface you want to configure. All currently detected "
-"interfaces on your system are shown below. Please choose the type of your "
-"primary network interface. This interface will be used for installing the "
-"Debian system (via NFS or HTTP)."
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
 msgstr ""
-"Väl det nätverkskort som du vill konfigurera. Alla nätverkskort som har "
-"identifierats i ditt system visas nedan. Välj typen på ditt primära "
-"nätverkskort. Detta nätverkskort kommer att användas för att installera "
-"Debiansystemet (via NFS eller HTTP)."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "Error while activating the network"
 msgstr "Fel uppstod när nätverket aktiverades"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "An error occurred while activating the network."
 msgstr "Ett fel inträffade när nätverket aktiverades."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Hostname:"
 msgstr "Värdnamn:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Please enter the hostname for this system."
 msgstr "Ange det här systemets värdnamn."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -143,19 +138,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "Invalid hostname"
 msgstr "Ogiltigt värdnamn"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "The name \"${hostname}\" is invalid."
 msgstr "\"${hostname}\" är ett ogiltigt namn."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -167,13 +162,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid "Error"
 msgstr "Fel"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -183,23 +178,23 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid "No network interfaces detected"
 msgstr "Inga nätverkskort identifierades."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Inga nätverkskort identifierades. Installationssystemet kunde inte " 
+"Inga nätverkskort identifierades. Installationssystemet kunde inte "
 "identifiera en nätverksenhet."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -210,105 +205,105 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:80
+#: ../netcfg-common.templates:78
 msgid "<none>"
 msgstr "<inget>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:82
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet eller Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:88
+#: ../netcfg-common.templates:86
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet eller Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:90
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:96
+#: ../netcfg-common.templates:94
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:98
 msgid "Serial-line IP"
 msgstr "IP över seriell kabel (Serial-line IP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:104
+#: ../netcfg-common.templates:102
 msgid "Parallel-port IP"
 msgstr "IP över paratellport (Parallel-port IP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:106
 msgid "Point-to-Point Protocol"
 msgstr "Punkt till punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:110
 msgid "IPv6-in-IPv4"
 msgstr "IPv6 inuti IPv4 (IPv6-in-IPv4)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:114
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Punkt till punkt-prokotoll för ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:118
 msgid "Channel-to-channel"
 msgstr "Kanal till kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:122
 msgid "Real channel-to-channel"
 msgstr "Riktig kanal till kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:126
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:130
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:134
 msgid "Unknown interface"
 msgstr "Okänt nätverkskort"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:139
 msgid "Network Configuration"
 msgstr "Nätverkskonfiguration"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:144
 msgid "Configure the network"
 msgstr "Konfigurera nätverket"
 
@@ -497,7 +492,7 @@ msgstr ""
 "Gateway är en IP-adress (fyra nummer åtskilda av punkter) som anger "
 "gatewayroutern, även kallad standardroutern. All trafik som skall ut från "
 "ditt LAN (exempelvis till internet) sänds via denna router. I sällsynta fall "
-"har du ingen router och då lämnar du det här tomt. Om du inte vet svaret på " 
+"har du ingen router och då lämnar du det här tomt. Om du inte vet svaret på "
 "den här frågan bör du konsultera din nätverksadministratör."
 
 #. Type: error
@@ -553,3 +548,17 @@ msgstr "Statisk nätverkskonfiguration"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Konfigurera ett nätverk genom statisk adressering"
+
+#~ msgid "Interface:"
+#~ msgstr "Nätverkskort:"
+
+#~ msgid ""
+#~ "Please choose the interface you want to configure. All currently detected "
+#~ "interfaces on your system are shown below. Please choose the type of your "
+#~ "primary network interface. This interface will be used for installing the "
+#~ "Debian system (via NFS or HTTP)."
+#~ msgstr ""
+#~ "Väl det nätverkskort som du vill konfigurera. Alla nätverkskort som har "
+#~ "identifierats i ditt system visas nedan. Välj typen på ditt primära "
+#~ "nätverkskort. Detta nätverkskort kommer att användas för att installera "
+#~ "Debiansystemet (via NFS eller HTTP)."

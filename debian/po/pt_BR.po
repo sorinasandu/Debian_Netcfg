@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-0.35\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 09:35+0100\n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
 "PO-Revision-Date: 2003-12-13 15:30-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -91,50 +91,45 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-msgid "Interface:"
-msgstr "Interface :"
+#, fuzzy
+msgid "Primary network interface:"
+msgstr "Nenhuma interface de rede foi detectada"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid ""
-"Please choose the interface you want to configure. All currently detected "
-"interfaces on your system are shown below. Please choose the type of your "
-"primary network interface. This interface will be used for installing the "
-"Debian system (via NFS or HTTP)."
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
 msgstr ""
-"Por favor, selecione a interface de rede que você deseja configurar. Todas "
-"as interfaces que foram detectadas em seu sistema estão sendo exibidas a "
-"seguir. Por favor, escolha o tipo de sua interface de rede primária. Esta "
-"interface será usada para instalar o sistema Debian (via NFS ou HTTP)."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "Error while activating the network"
 msgstr "Erro ativando a rede"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "An error occurred while activating the network."
 msgstr "Um erro ocorreu na ativação da rede."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Hostname:"
 msgstr "Nome de máquina :"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Please enter the hostname for this system."
 msgstr "Por favor, informe o nome de máquina (hostname) para este sistema."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -148,19 +143,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "Invalid hostname"
 msgstr "Nome de máquina inválido"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "The name \"${hostname}\" is invalid."
 msgstr "O nome \"${hostname}\" é inválido."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -172,13 +167,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid "Error"
 msgstr "Erro"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -188,13 +183,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid "No network interfaces detected"
 msgstr "Nenhuma interface de rede foi detectada"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -204,7 +199,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -215,105 +210,105 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:80
+#: ../netcfg-common.templates:78
 msgid "<none>"
 msgstr "<nenhuma>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:82
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ou Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:88
+#: ../netcfg-common.templates:86
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet ou Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:90
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:96
+#: ../netcfg-common.templates:94
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:98
 msgid "Serial-line IP"
 msgstr "IP Linha-Serial"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:104
+#: ../netcfg-common.templates:102
 msgid "Parallel-port IP"
 msgstr "IP Porta-Paralela"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:106
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:110
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-em-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:114
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo ISDN Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:118
 msgid "Channel-to-channel"
 msgstr "Canal-a-Canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:122
 msgid "Real channel-to-channel"
 msgstr "Canal-a-Canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:126
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:130
 msgid "Inter-user communication vehicle"
 msgstr "Veículo de comunicação inter-usuário"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:134
 msgid "Unknown interface"
 msgstr "Interface desconhecida"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:139
 msgid "Network Configuration"
 msgstr "Configuração de Rede"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:144
 msgid "Configure the network"
 msgstr "Configurar a rede"
 
@@ -565,6 +560,21 @@ msgstr "Configuração de rede estática"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Configurar a rede usando endereçamento estático"
+
+#~ msgid "Interface:"
+#~ msgstr "Interface :"
+
+#~ msgid ""
+#~ "Please choose the interface you want to configure. All currently detected "
+#~ "interfaces on your system are shown below. Please choose the type of your "
+#~ "primary network interface. This interface will be used for installing the "
+#~ "Debian system (via NFS or HTTP)."
+#~ msgstr ""
+#~ "Por favor, selecione a interface de rede que você deseja configurar. "
+#~ "Todas as interfaces que foram detectadas em seu sistema estão sendo "
+#~ "exibidas a seguir. Por favor, escolha o tipo de sua interface de rede "
+#~ "primária. Esta interface será usada para instalar o sistema Debian (via "
+#~ "NFS ou HTTP)."
 
 #~ msgid "configure network with DHCP, manual network configuration"
 #~ msgstr "Configurar a rede via DHCP, Configurar a rede manualmente"

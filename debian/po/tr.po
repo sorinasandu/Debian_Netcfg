@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.034\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-06 09:35+0100\n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
 "PO-Revision-Date: 2003-08-03 09:30+0200\n"
 "Last-Translator: Osman Yüksel <yuxel@operamail.com>\n"
 "Language-Team: Debian-l10n-Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -94,50 +94,46 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-msgid "Interface:"
-msgstr ""
+#, fuzzy
+msgid "Primary network interface:"
+msgstr "Hiçbir ağ arayüzü bulunamadı."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
-"Please choose the interface you want to configure. All currently detected "
-"interfaces on your system are shown below. Please choose the type of your "
-"primary network interface. This interface will be used for installing the "
-"Debian system (via NFS or HTTP)."
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
 msgstr ""
-"Sistemde bulunan ağ arayüzleri aşağıda listelenmektedir. Debian sistemini "
-"kurmak için (NFS veya HTTP ile ) birincil ağ arayüzünüzü seçin."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "Error while activating the network"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 #, fuzzy
 msgid "An error occurred while activating the network."
 msgstr "Bir hata oluştu ve devam edilemiyor"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Hostname:"
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Please enter the hostname for this system."
 msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 #, fuzzy
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
@@ -151,20 +147,20 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "Invalid hostname"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 #, fuzzy
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Geçersiz makine adı: \"${hostname}\" "
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 #, fuzzy
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
@@ -176,13 +172,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid "Error"
 msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -190,14 +186,14 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 #, fuzzy
 msgid "No network interfaces detected"
 msgstr "Hiçbir ağ arayüzü bulunamadı."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 #, fuzzy
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
@@ -210,7 +206,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -218,99 +214,99 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:80
+#: ../netcfg-common.templates:78
 msgid "<none>"
 msgstr "<hiçbiri>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:82
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet veya Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:88
+#: ../netcfg-common.templates:86
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet veya Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:90
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:96
+#: ../netcfg-common.templates:94
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:98
 msgid "Serial-line IP"
 msgstr "Seri-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:104
+#: ../netcfg-common.templates:102
 #, fuzzy
 msgid "Parallel-port IP"
 msgstr "Paralel-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:106
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:110
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:114
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:118
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:122
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:126
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:130
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user bağlantı aracı"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:134
 msgid "Unknown interface"
 msgstr "Bilinmeyen arayüz"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:139
 #, fuzzy
 msgid "Network Configuration"
 msgstr "DHCP Ağ Ayarları"
@@ -318,7 +314,7 @@ msgstr "DHCP Ağ Ayarları"
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:144
 #, fuzzy
 msgid "Configure the network"
 msgstr "Statik bir ağ ayarla"
@@ -576,6 +572,16 @@ msgstr "Statik Ağ Ayarları"
 #, fuzzy
 msgid "Configure a network using static addressing"
 msgstr "DHCP üzerinden ağı ayarla"
+
+#, fuzzy
+#~ msgid ""
+#~ "Please choose the interface you want to configure. All currently detected "
+#~ "interfaces on your system are shown below. Please choose the type of your "
+#~ "primary network interface. This interface will be used for installing the "
+#~ "Debian system (via NFS or HTTP)."
+#~ msgstr ""
+#~ "Sistemde bulunan ağ arayüzleri aşağıda listelenmektedir. Debian sistemini "
+#~ "kurmak için (NFS veya HTTP ile ) birincil ağ arayüzünüzü seçin."
 
 #~ msgid "DHCP Network Configuration"
 #~ msgstr "DHCP Ağ Ayarları"
