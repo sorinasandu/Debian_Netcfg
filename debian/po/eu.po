@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 18:28+0200\n"
-"PO-Revision-Date: 2004-04-07 01:15+0200\n"
+"PO-Revision-Date: 2004-04-12 19:57+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,6 @@ msgstr "Izen zerbitzari helbidea:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -84,9 +83,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Mesdez sar IP helbideak (ez hostalari izena) gehienez hiru hutsune batez "
-"bereizirik. Ez erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko "
-"dena da. Ez baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz "
+"Izen zerbitzariak hostalari izenak ebazteko erabiltzen dira. Mesdez sar IP helbideak "
+"(ez hostalari izena) gehienez hiru hutsune batez "
+"bereizirik. "
+"Ez erabili gakorik. Zerrendako lehen zerbitzari lehen erabiliko dena da. "
+"Ez baduzu izen zerbitzaririk erabili nahi atal hau hutsik utz "
 "dezakezu."
 
 #. Type: select
@@ -155,8 +156,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -164,8 +164,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
+msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsi utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -319,15 +318,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Sare konfigurazio tinkoa"
+msgstr "Kablegabeko sare konfigurazioa"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Kablegabeko saretze puntuen bila..."
 
 #. Type: text
 #. Description
@@ -511,8 +509,7 @@ msgstr "Ez da DHCP bezeroa aurkitu"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
@@ -661,8 +658,7 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo atebia "
 "sartzerakoan."
@@ -705,3 +701,4 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 
 #~ msgid "Network Configuration"
 #~ msgstr "Sare Konfigurazioa"
+
