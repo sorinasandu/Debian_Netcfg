@@ -43,6 +43,7 @@ static u_int32_t network = 0;
 static u_int32_t broadcast = 0;
 static u_int32_t netmask = 0;
 static u_int32_t gateway = 0;
+static u_int32_t pointopoint = 0;
 static struct debconfclient *client;
 
 char *
@@ -61,7 +62,7 @@ netcfg_get_static ()
 {
   char *ptr;
 
-  ipaddress = network = broadcast = netmask = gateway = 0;
+  ipaddress = network = broadcast = netmask = gateway = pointopoint = 0;
 
   ptr = debconf_input ("critical", "netcfg/get_ipaddress");
   dot2num (&ipaddress, ptr);
@@ -70,28 +71,44 @@ netcfg_get_static ()
 		   "ipaddress",
 		   (ipaddress ? num2dot (ipaddress) : "<none>"), NULL);
 
-  ptr = debconf_input ("critical", "netcfg/get_netmask");
-  dot2num (&netmask, ptr);
-  client->command (client, "subst", "netcfg/confirm_static",
-		   "netmask", (netmask ? num2dot (netmask) : "<none>"), NULL);
-
-  network = ipaddress & netmask;
-
-  ptr = debconf_input ("critical", "netcfg/get_gateway");
-  dot2num (&gateway, ptr);
-
-  client->command (client, "subst", "netcfg/confirm_static",
-		   "gateway", (gateway ? num2dot (gateway) : "<none>"), NULL);
-
-  if (gateway && ((gateway & netmask) != network))
+  if (strncmp (interface, "plip", 4) == 0
+      || strncmp (interface, "slip", 4) == 0)
     {
-      client->command (client, "input", "high",
-		       "netcfg/gateway_unreachable", NULL);
-      client->command (client, "go", NULL);
+      ptr = debconf_input ("critical", "netcfg/get_pointopoint");
+      dot2num (&pointopoint, ptr);
+
+      dot2num (&netmask, "255.255.255.255");
+      network = ipaddress;
+      gateway = pointopoint;
+    }
+  else
+    {
+      ptr = debconf_input ("critical", "netcfg/get_netmask");
+      dot2num (&netmask, ptr);
+
+      ptr = debconf_input ("critical", "netcfg/get_gateway");
+      dot2num (&gateway, ptr);
+
+      network = ipaddress & netmask;
+
+      if (gateway && ((gateway & netmask) != network))
+	{
+	  client->command (client, "input", "high",
+			   "netcfg/gateway_unreachable", NULL);
+	  client->command (client, "go", NULL);
+	}
     }
 
-  broadcast = (network | ~netmask);
+  client->command (client, "subst", "netcfg/confirm_static", "netmask",
+		   (netmask ? num2dot (netmask) : "<none>"), NULL);
 
+  client->command (client, "subst", "netcfg/confirm_static", "gateway",
+		   (gateway ? num2dot (gateway) : "<none>"), NULL);
+
+  client->command (client, "subst", "netcfg/confirm_static", "pointopoint",
+		   (pointopoint ? num2dot (pointopoint) : "<none>"), NULL);
+
+  broadcast = (network | ~netmask);
 }
 
 
@@ -120,6 +137,8 @@ netcfg_write_static ()
       fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
       if (gateway)
 	fprintf (fp, "\tgateway %s\n", num2dot (gateway));
+      if (pointopoint)
+	fprintf (fp, "\tpointopoint %s\n", num2dot (pointopoint));
       fclose (fp);
     }
   else
@@ -154,6 +173,9 @@ netcfg_activate_static ()
   snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s netmask %s broadcast %s",
 	    interface, num2dot (ipaddress), num2dot (netmask),
 	    num2dot (broadcast));
+
+  if (pointopoint)
+    snprintfcat (buf, sizeof (buf), " pointopoint %s", num2dot (pointopoint));
 
   rv |= execlog (buf);
 

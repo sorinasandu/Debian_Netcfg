@@ -30,6 +30,14 @@ Description-ru: IP адрес?
  разделенных точками. Если вы не знаете, что нужно указать, то
  проконсультируйтесь с вашим сетевым администратором.
 
+Template: netcfg/get_pointopoint
+Type: string
+Description: Pointopoint address?
+ The pointopoint address is used to determine the other endpoint of the
+ point to point network.  Consult your network administrator if you do
+ not know the value.  The pointopoint address should be entered as four
+ numbers separated by periods.
+
 Template: netcfg/gateway_unreachable
 Type: note
 Description: The gateway you entered is unreachable.

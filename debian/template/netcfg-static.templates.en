@@ -5,6 +5,14 @@ Description: IP address?
  numbers separated by periods.  If you don't know what to use here,
  consult your network administrator.
 
+Template: netcfg/get_pointopoint
+Type: string
+Description: Pointopoint address?
+ The pointopoint address is used to determine the other endpoint of the
+ point to point network.  Consult your network administrator if you do
+ not know the value.  The pointopoint address should be entered as four
+ numbers separated by periods.
+
 Template: netcfg/get_netmask
 Type: string
 Description: Netmask?
@@ -39,5 +47,6 @@ Description: Is this configuration correct?
   ipaddress     = ${ipaddress} 
   netmask       = ${netmask} 
   gateway       = ${gateway} 
+  pointopoint   = ${pointopoint}
   nameservers   = ${nameservers}
 
