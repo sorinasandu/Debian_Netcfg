@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.25\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-06 20:59+0100\n"
+"POT-Creation-Date: 2003-11-14 09:25+0100\n"
 "PO-Revision-Date: 2003-10-25 02:11+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -19,8 +19,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:3
-msgid "Choose the domain name."
-msgstr "Pasirinkite srities vardą (domain name)."
+msgid "Domain name:"
+msgstr ""
 
 #. Type: string
 #. Description
@@ -39,17 +39,18 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
-msgid "Choose the DNS Server Addresses"
-msgstr "Pasirinkite DNS serverių adresus"
+msgid "Name servers addresses:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
+#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The servers will be queried in the "
-"order in which you enter them. If you don't want to use any name servers "
-"just leave this field blank."
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
 msgstr ""
 "Prašau įvesti iki 3-jų serverių IP adresus (ne kompiuterių vardus), "
 "atskirdami tarpais. Nenaudokite kablelių. Serveriai bus apklausiami jų "
@@ -59,16 +60,18 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
-msgid "Choose an interface."
-msgstr "Pasirinkite tinklo sąsają."
+msgid "Interface:"
+msgstr ""
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
+#, fuzzy
 msgid ""
-"The following interfaces were detected. Choose the type of your primary "
-"network interface that you will need for installing the Debian system (via "
-"NFS or HTTP)."
+"Please choose the interface you want to configure. All currently  detected "
+"interfaces on your system are shown below. Please choose the type of your "
+"primary network interface. This interface will be used for installing the "
+"Debian system (via NFS or HTTP)."
 msgstr ""
 "Nustatytos sekančios esamos tinklo sąsajos. Pasirinkite jūsų pirminės tinklo "
 "sąsajos tipą, kuri bus reikalinga Debian'o sistemos diegimui (per NFS ar "
@@ -76,25 +79,32 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:27
-msgid "An error occured."
-msgstr "Įvyko klaida."
+#: ../netcfg-common.templates:28
+msgid "Error while activating the network"
+msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:27
-msgid "Something went wrong when I tried to activate your network."
-msgstr "Kažkas vyksta neteisingai, kuomet bandau aktyvuoti jūsų tinklą."
+#: ../netcfg-common.templates:28
+#, fuzzy
+msgid "An error occurred while activating the network."
+msgstr "Įvyko klaida ir aš nebegaliu tęsti."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:33
-msgid "Enter the system's hostname."
-msgstr "Įveskite sistemos kompiuterio vardą."
+#: ../netcfg-common.templates:34
+msgid "Hostname:"
+msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:33
+#: ../netcfg-common.templates:34
+msgid "Please enter the hostname for this system."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:34
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -108,13 +118,20 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:41
-msgid "The hostname \"${hostname}\" is invalid."
+#: ../netcfg-common.templates:44
+msgid "Invalid hostname"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:44
+#, fuzzy
+msgid "The name \"${hostname}\" is invalid."
 msgstr "Kompiuterio vardas \"${hostname}\" netinkamas."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:41
+#: ../netcfg-common.templates:44
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
@@ -126,125 +143,133 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:48
-msgid "An error occured and I cannot continue."
-msgstr "Įvyko klaida ir aš nebegaliu tęsti."
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:48
-msgid "Feel free to retry."
-msgstr "Jūs galite drąsiai bandyti pakartoti."
+#: ../netcfg-common.templates:53
+msgid "Error"
+msgstr ""
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:53
+msgid ""
+"An error occured and the network configuration process had been aborted. You "
+"may retry it from the installation main menu."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:59
 #, fuzzy
-msgid "No network interfaces were detected."
+msgid "No network interfaces detected"
 msgstr "Tinklo sąsajų neaptikta."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:53
+#: ../netcfg-common.templates:59
 #, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
-"was unable to find a network device.  If you do have a network card, then it "
-"is possible that the module for it hasn't been selected yet.  Go back to "
-"'Detect network hardware'."
+"was unable to find a network device."
 msgstr ""
 "Tinko sąsajų nerasta. Tai reiškia, kad diegimo sistemai nepavyko rasti "
 "tinklo įrenginio. Jei jūs turite tinklo plokštę, tai gal būt jai nebuvo "
 "pasirinktas modulis. Grįžkite atgal į \"Tinklo įrangos paieška\" ir įkelkite "
 "branduolio tvarkykles skirtas šiai tinklo plokštei."
 
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:59
+msgid ""
+"You may need to load a specific module for your network card, if you really "
+"own one. For this, go back to the network hardware detection step."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:61
+#: ../netcfg-common.templates:68
 msgid "<none>"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:72
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:76
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:73
+#: ../netcfg-common.templates:80
 msgid "Token Ring"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:77
+#: ../netcfg-common.templates:84
 msgid "Arcnet"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:81
+#: ../netcfg-common.templates:88
 msgid "Serial-line IP"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:92
 msgid "Parallel-line IP"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:89
+#: ../netcfg-common.templates:96
 msgid "Point-to-Point Protocol"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:93
+#: ../netcfg-common.templates:100
 msgid "IPv6-in-IPv4"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:97
+#: ../netcfg-common.templates:104
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:101
+#: ../netcfg-common.templates:108
 msgid "Channel-to-channel"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:105
+#: ../netcfg-common.templates:112
 msgid "Real channel-to-channel"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:116
 msgid "Hypersocket"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:120
 msgid "Inter-user communication vehicle"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:124
 #, fuzzy
 msgid "Unknown interface"
 msgstr "Pasirinkite tinklo sąsają."
@@ -252,30 +277,42 @@ msgstr "Pasirinkite tinklo sąsają."
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-msgid "What is your dhcp hostname?"
-msgstr "Koks jūsų dhcp kompiuterio vardas?"
+msgid "DHCP hostname:"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
+#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
-"might need to specify an account number here.  Most other users can just "
-"leave this blank."
+"might need to specify an account number here."
 msgstr ""
 "Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei jūs naudojate "
 "kabelinį modemą, tai gali tekti čia nurodyti paskyros (account) numerį. "
 "Dauguma kitų naudotojų gali palikti tuščią."
 
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr ""
+
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:11
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Is this information correct?"
 msgstr "Ar ši informacija teisinga?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:11
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Currently configured network parameters:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -291,47 +328,55 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:20
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:24
+#: ../netcfg-dhcp.templates:27
 msgid "This may take a few minutes."
 msgstr ""
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:28
-msgid "No dhcp client found. I cannot continue."
-msgstr "Nerastas dhcp klientas. Negaliu tęsti."
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr ""
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:28
-msgid "This package requires pump or dhcp-client."
+#: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "Šiam paketui reikia, kad būtų įdiegtas paketas pump arba dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr ""
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:39
 msgid "DHCP Network Configuration"
 msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:39
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
-msgid "Configure the network via DHCP"
+msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Dabar aš konfigūruosiu tinklą."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-msgid "IP address?"
+#, fuzzy
+msgid "IP address:"
 msgstr "IP adresas?"
 
 #. Type: string
@@ -349,17 +394,19 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-msgid "Pointopoint address?"
+#, fuzzy
+msgid "Point-to-point address:"
 msgstr "Ryšio (pointopoint) adresas?"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
+#, fuzzy
 msgid ""
-"The pointopoint address is used to determine the other endpoint of the point "
-"to point network.  Consult your network administrator if you do not know the "
-"value.  The pointopoint address should be entered as four numbers separated "
-"by periods."
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
 msgstr ""
 "Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką "
 "(point to point) tinklui.   Pasitarkite·su·savo·tinklo·administratoriumi,"
@@ -369,7 +416,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-msgid "Netmask?"
+#, fuzzy
+msgid "Netmask:"
 msgstr "Tinklo trafaretas (netmask)?"
 
 #. Type: string
@@ -387,19 +435,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-msgid "Gateway?"
+#, fuzzy
+msgid "Gateway:"
 msgstr "Tinklų sąsaja (gateway)?"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
+#, fuzzy
 msgid ""
-"This is an IP address (four numbers separated by periods) that indicates the "
-"gateway router, also known as the default router.  All traffic that goes "
-"outside your LAN (for instance, to the Internet) is sent through this "
-"router.  In rare circumstances, you may have no router; in that case, you "
-"can leave this blank.  If you don't know the proper answer to this question, "
-"consult your network administrator."
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
 msgstr ""
 "Šis IP adresas (keturi skaičiai atskirti taškais) nurodo tinklų sąsajos "
 "kelvedį, taip pat vadinamą numatytuoju kelvedžių (default router). Visa "
@@ -408,15 +458,22 @@ msgstr ""
 "atveju palikite tuščią. Jei nežinote tinkamo atsakymo, pasitarkite su savo "
 "tinklo administratoriumi."
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../netcfg-static.templates:37
-msgid "The gateway you entered is unreachable."
+#: ../netcfg-static.templates:38
+msgid "Unreachable gateway"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+#, fuzzy
+msgid "The gateway address you entered is unreachable."
 msgstr "Jūsų nurodyta tinklų·sąsaja (gateway) nepasiekiama."
 
-#. Type: note
+#. Type: error
 #. Description
-#: ../netcfg-static.templates:37
+#: ../netcfg-static.templates:38
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
@@ -425,13 +482,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:44
-msgid "Is this configuration correct?"
-msgstr "Ar ši konfigūracija teisinga?"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-static.templates:44
+#: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -454,17 +505,51 @@ msgstr ""
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-static.templates:57
+#: ../netcfg-static.templates:62
 msgid "Static Network Configuration"
 msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:62
+#: ../netcfg-static.templates:67
 #, fuzzy
-msgid "Configure a static network"
+msgid "Configure a network using static addressing"
 msgstr "Dabar aš konfigūruosiu tinklą."
+
+#~ msgid "Choose the domain name."
+#~ msgstr "Pasirinkite srities vardą (domain name)."
+
+#~ msgid "Choose the DNS Server Addresses"
+#~ msgstr "Pasirinkite DNS serverių adresus"
+
+#~ msgid "Choose an interface."
+#~ msgstr "Pasirinkite tinklo sąsają."
+
+#~ msgid "An error occured."
+#~ msgstr "Įvyko klaida."
+
+#~ msgid "Something went wrong when I tried to activate your network."
+#~ msgstr "Kažkas vyksta neteisingai, kuomet bandau aktyvuoti jūsų tinklą."
+
+#~ msgid "Enter the system's hostname."
+#~ msgstr "Įveskite sistemos kompiuterio vardą."
+
+#~ msgid "Feel free to retry."
+#~ msgstr "Jūs galite drąsiai bandyti pakartoti."
+
+#~ msgid "What is your dhcp hostname?"
+#~ msgstr "Koks jūsų dhcp kompiuterio vardas?"
+
+#~ msgid "No dhcp client found. I cannot continue."
+#~ msgstr "Nerastas dhcp klientas. Negaliu tęsti."
+
+#~ msgid "Is this configuration correct?"
+#~ msgstr "Ar ši konfigūracija teisinga?"
+
+#, fuzzy
+#~ msgid "Configure a static network"
+#~ msgstr "Dabar aš konfigūruosiu tinklą."
 
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
