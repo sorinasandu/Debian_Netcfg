@@ -44,6 +44,7 @@ debconf_input (char *priority, char *template)
   return client->value;
 }
 
+
 static int
 netcfg_mkdir (char *path)
 {
@@ -55,6 +56,7 @@ netcfg_mkdir (char *path)
       }
   return 0;
 }
+
 
 int
 is_interface_up (char *inter)
@@ -77,6 +79,7 @@ int_up_done:
     close (sfd);
   return ret;
 }
+
 
 static void
 get_name (char *name, char *p)
@@ -392,10 +395,10 @@ netcfg_get_common ()
       save = ptr = strdup (ptr);
 #ifdef DHCP
       client->command (client, "subst", "netcfg/confirm_dhcp",
-	      "nameservers", ptr, NULL);
+		       "nameservers", ptr, NULL);
 #else
       client->command (client, "subst", "netcfg/confirm_static",
-	      "nameservers", ptr, NULL);
+		       "nameservers", ptr, NULL);
 #endif
       ns = strtok_r (ptr, " ", &ptr);
       dot2num (&nameservers[0], ns);
@@ -409,7 +412,7 @@ netcfg_get_common ()
       free (save);
     }
   else
-      nameservers[0] = 0;
+    nameservers[0] = 0;
 
 
 }
@@ -461,15 +464,15 @@ static char *dhcp_hostname = NULL;
 static void
 netcfg_get_dhcp ()
 {
-    if (dhcp_hostname)
-	free (dhcp_hostname);
+  if (dhcp_hostname)
+    free (dhcp_hostname);
 
   client->command (client, "input", "high", "netcfg/dhcp_hostname", NULL);
   client->command (client, "go", NULL);
   client->command (client, "get", "netcfg/dhcp_hostname", NULL);
 
   if (client->value)
-      dhcp_hostname = strdup(client->value);
+    dhcp_hostname = strdup (client->value);
 }
 
 
@@ -501,7 +504,7 @@ netcfg_write_dhcp ()
 static void
 netcfg_activate_dhcp ()
 {
-    char buf[128];
+  char buf[128];
   char *ptr;
   execlog ("/sbin/ifconfig lo 127.0.0.1");
 
@@ -530,12 +533,13 @@ main (int argc, char *argv[])
       netcfg_get_common ();
       netcfg_get_dhcp ();
       client->command (client, "subst", "netcfg/confirm_dhcp", "interface",
-	      interface, NULL);
+		       interface, NULL);
       client->command (client, "subst", "netcfg/confirm_dhcp", "hostname",
 		       hostname, NULL);
       client->command (client, "subst", "netcfg/confirm_dhcp", "domain",
 		       (domain ? domain : "<none>"), NULL);
-      client->command (client, "subst", "netcfg/confirm_dhcp", "dhcp_hostname",
+      client->command (client, "subst", "netcfg/confirm_dhcp",
+		       "dhcp_hostname",
 		       (dhcp_hostname ? dhcp_hostname : "<none>"), NULL);
       ptr = debconf_input ("medium", "netcfg/confirm_dhcp");
 
@@ -593,7 +597,7 @@ netcfg_get_static ()
   client->command (client, "subst", "netcfg/confirm_static",
 		   "gateway", (gateway ? num2dot (gateway) : "<none>"), NULL);
 
-  if (gateway && ( (gateway & netmask) != network))
+  if (gateway && ((gateway & netmask) != network))
     {
       client->command (client, "input", "high",
 		       "netcfg/gateway_unreachable", NULL);

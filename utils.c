@@ -7,9 +7,7 @@
 #include <syslog.h>
 
 
-#define EXECLOG_FILE "/var/log/installer.log"
 #define MAXLINE 512
-#define DEBUG
 
 int
 execlog (const char *incmd)

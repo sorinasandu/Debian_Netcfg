@@ -1,7 +1,7 @@
-#ifndef __DEBIAN_INSTALLER_H__
-#define __DEBIAN_INSTALLER_H__
+#ifndef __UTILS_H__
+#define __UTILS_H__
 
-int execlog(char *);
-int check_dir(char *);
+int execlog (char *);
+int check_dir (char *);
 
-#endif /* __DEBIAN_INSTALLER_H__ */
+#endif /* __UTILS_H__ */

@@ -1,7 +1,6 @@
 #!/bin/sh
 
-if [ -z "`/sbin/ifconfig`"  ] &&
-[ -n "`cat /proc/net/dev | sed -e "s/lo://" | grep "[a-z0-9]*:[ ]*[0-9]*"`"  ]  ; then
+if [ -n "`cat /proc/net/dev | sed -e "s/lo://" | grep "[a-z0-9]*:[ ]*[0-9]*"`"  ]  ; then
         exit 0
 else
 	exit 1

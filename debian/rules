@@ -47,7 +47,6 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-#	dh_installdirs
 	$(foreach PACKAGE,  $(PACKAGES), \
 	( $(MAKE) install PROGS=$(PACKAGE) DESTDIR=`pwd`/debian/$(PACKAGE)) ; )
 
@@ -58,7 +57,6 @@ binary-indep: build install
 
 # Build architecture-dependent files here.
 binary-arch: build install
-#	dh_testversion
 	dh_testdir
 	dh_testroot
 	dh_installdebconf
@@ -66,20 +64,12 @@ binary-arch: build install
 	cat debian/netcfg-common.templates >> debian/netcfg-dhcp/DEBIAN/templates	
 	cp debian/menutest-common debian/netcfg-dhcp/DEBIAN/menutest	
 	cp debian/menutest-common debian/netcfg-static/DEBIAN/menutest	
-#	dh_installdocs
-#	dh_installchangelogs 
-#	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
-	# You may want to make some executables suid here.
-#	dh_suidregister
-#	dh_makeshlibs
 	dh_installdeb
-#	dh_perl
 	dh_shlibdeps
-	dh_gencontrol -- -fdebian/files~ # to make a .udeb
-#	dh_gencontrol
+	dh_gencontrol -- -fdebian/files~ 
 	$(foreach PACKAGE, $(PACKAGES), \
 	(dpkg-distaddfile $(PACKAGE)_$(VERSION)_$(ARCH).udeb \
 		debian-installer $(PRIORITY) ) ; )
@@ -92,8 +82,7 @@ binary-arch: build install
 	$(foreach PACKAGE, $(PACKAGES), \
 	(cd debian ; \
 		dpkg-deb -b $(PACKAGE) ../../$(PACKAGE)_$(VERSION)_$(ARCH).udeb \
-		); ) # make a .udeb
-#	dh_builddeb
+		); )
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure
