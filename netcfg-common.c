@@ -903,6 +903,8 @@ int netcfg_get_static(struct debconfclient *client)
            GATEWAY_UNREACHABLE, GET_NAMESERVERS, GET_HOSTNAME, CONFIRM, 
            GET_DOMAIN, QUIT} state = GET_IPADDRESS;
 
+    kill_dhcp_client();
+	   
     ipaddress = network = broadcast = netmask = gateway = pointopoint =
         0;
 
