@@ -422,7 +422,7 @@ int netcfg_get_static(struct debconfclient *client)
 		GET_HOSTNAME : QUIT;
 	    }
 	    else 
-	      state = CONFIRM;
+	      state = QUIT;
             break;
         case CONFIRM:
             debconf_subst(client, "netcfg/confirm_static", "interface", interface);
