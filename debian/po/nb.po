@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2003-09-30 22:37+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-10-02 23:30+0200\n"
 "PO-Revision-Date: 2003-05-03 08:45+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans.fredrik@nordhaug.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
 #. Description
 #: ../netcfg-common.templates:3
@@ -273,13 +273,15 @@ msgstr "Fant ingen dhcp-klient. Jeg kan ikke fortsette."
 msgid "This package requires pump or dhcp-client."
 msgstr "Denne pakken trenger punp eller dhcp-klient."
 
+#. Title displayed when configuring this package
 #. Description
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:31
 msgid "DHCP Network Configuration"
 msgstr ""
 
+#. Item in the main menu to select this package
 #. Description
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:36
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Jeg skal nå sette opp nettverket."
@@ -391,13 +393,15 @@ msgstr ""
 " punktilpunkt  = ${pointopoint}\n"
 " navnetjenere   = ${nameservers}"
 
+#. Title displayed when configuring this package
 #. Description
-#: ../netcfg-static.templates:56
+#: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr ""
 
+#. Item in the main menu to select this package
 #. Description
-#: ../netcfg-static.templates:60
+#: ../netcfg-static.templates:62
 #, fuzzy
 msgid "Configure a static network"
 msgstr "Jeg skal nå sette opp nettverket."
