@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-12-19 21:48EEST\n"
+"PO-Revision-Date: 2003-12-20 22:38EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,10 +47,11 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Η ρύθμιση του δικτύου μπορεί να γίνει είτε μέσω DHCP ή με χειροκίνητη εισαγωγή "
-"όλων των παραμέτρων. Αν επιλέξετε DHCP και το πρόγραμμα εγκατάστασης αδυνατεί "
-"να βρει λειτουργικές ρυθμίσεις από κάποιο διακομιστή DHCP στο δίκτυό σας, θα σας "
-"ζητηθεί να ρυθμίσετε το δίκτυο χειροκίνητα. Αν δεν είστε σίγουροι επιλέξτε DΗCP."
+"Η ρύθμιση του δικτύου μπορεί να γίνει είτε μέσω DHCP ή με χειροκίνητη "
+"εισαγωγή όλων των παραμέτρων. Αν επιλέξετε DHCP και το πρόγραμμα "
+"εγκατάστασης αδυνατεί να βρει λειτουργικές ρυθμίσεις από κάποιο διακομιστή "
+"DHCP στο δίκτυό σας, θα σας ζητηθεί να ρυθμίσετε το δίκτυο χειροκίνητα. Αν "
+"δεν είστε σίγουροι επιλέξτε DΗCP."
 
 #. Type: string
 #. Description
@@ -76,7 +77,7 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:23
-msgid "Name servers addresses:"
+msgid "Name server addresses:"
 msgstr "Διευθύνσεις διακομιστών ονομάτων:"
 
 #. Type: string
@@ -89,9 +90,9 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Παρακαλώ δώστε τις διευθύνσεις IP (όχι τα ονόματα host) έως 3 διακομιστών "
-"ονομάτων χωρισμένων με κενά. Μη χρησιμοποιήσετε κόμματα. Οι "
-"διακομιστές θα ερωτώνται με τη σειρά που τους δίνετε εδω. Αν δεν επιθυμείτε "
-"να χρησιμοποιήσετε διακομιστές ονομάτων, αφήστε το πεδίο κενό."
+"ονομάτων χωρισμένων με κενά. Μη χρησιμοποιήσετε κόμματα. Οι διακομιστές θα "
+"ερωτώνται με τη σειρά που τους δίνετε εδω. Αν δεν επιθυμείτε να "
+"χρησιμοποιήσετε διακομιστές ονομάτων, αφήστε το πεδίο κενό."
 
 #. Type: select
 #. Description
@@ -108,10 +109,10 @@ msgid ""
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Παρακαλώ, επιλέξτε την διασύνδεση που θέλετε να ρυθμίσετε. Παρακάτω αναγράφονται "
-"όλες οι διασυνδέσεις δικτύου που ανιχνεύθηκαν στο σύστημά σας. Θα πρέπει να επιλέξετε "
-"την κύρια διασύνδεση. Αυτή θα χρησιμοποιηθεί για την εγκατάσταση του Debian "
-"(μέσω NFS ή HTTP)."
+"Παρακαλώ, επιλέξτε την διασύνδεση που θέλετε να ρυθμίσετε. Παρακάτω "
+"αναγράφονται όλες οι διασυνδέσεις δικτύου που ανιχνεύθηκαν στο σύστημά σας. "
+"Θα πρέπει να επιλέξετε την κύρια διασύνδεση. Αυτή θα χρησιμοποιηθεί για την "
+"εγκατάσταση του Debian (μέσω NFS ή HTTP)."
 
 #. Type: error
 #. Description
@@ -206,8 +207,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Δε βρέθηκαν διασυνδέσεις δικτύου. Το σύστημα εγκατάστασης δεν ανίχνευσε κάποια "
-"συσκευή δικτύου."
+"Δε βρέθηκαν διασυνδέσεις δικτύου. Το σύστημα εγκατάστασης δεν ανίχνευσε "
+"κάποια συσκευή δικτύου."
 
 #. Type: error
 #. Description
@@ -216,9 +217,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Πιθανόν να χρειάζεται να φορτώσετε τον οδηγό για την συσκευή δικτύου σας, "
-"αν χρησιμοποιείτε κάποια. Για το σκοπό αυτό, μεταβείτε στο στάδιο της ανίχνευσης "
-"συσκευών δικτύου."
+"Πιθανόν να χρειάζεται να φορτώσετε τον οδηγό για την συσκευή δικτύου σας, αν "
+"χρησιμοποιείτε κάποια. Για το σκοπό αυτό, μεταβείτε στο στάδιο της "
+"ανίχνευσης συσκευών δικτύου."
 
 #. Type: text
 #. Description
@@ -242,13 +243,13 @@ msgstr "PC-Card (PCMCIA) Ethernet ή Token Ring"
 #. Description
 #: ../netcfg-common.templates:92
 msgid "Token Ring"
-msgstr ""
+msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:96
 msgid "Arcnet"
-msgstr ""
+msgstr "Arcnet"
 
 #. Type: text
 #. Description
@@ -272,7 +273,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:112
 msgid "IPv6-in-IPv4"
-msgstr ""
+msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
@@ -284,13 +285,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "Διασύνδεση διαύλων"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:124
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "Πραγματική διασύνδεση διαύλων"
 
 #. Type: text
 #. Description
@@ -302,7 +303,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:132
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Πλαίσιο επικοινωνίας χρηστών"
 
 #. Type: text
 #. Description
@@ -420,9 +421,9 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Δε προσφέρθηκε κάποια διεύθυνση IP κατά την ρύθμιση δικτύου μέσω DHCP. Μερικές "
-"φορές οι διακομιστές DHCP είναι αρκετά αργοί. Στην περίπτωση αυτή μπορείτε να "
-"ξαναπροσπαθήσετε."
+"Δε προσφέρθηκε κάποια διεύθυνση IP κατά την ρύθμιση δικτύου μέσω DHCP. "
+"Μερικές φορές οι διακομιστές DHCP είναι αρκετά αργοί. Στην περίπτωση αυτή "
+"μπορείτε να ξαναπροσπαθήσετε."
 
 #. Type: text
 #. Description
