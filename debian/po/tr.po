@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-09 18:32-0700\n"
-"PO-Revision-Date: 2004-04-04 19:03+0300\n"
+"PO-Revision-Date: 2004-04-11 01:12+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Ağ DHCP kullanarak otomatik ayarlansın mı ?"
+msgstr "Ağ DHCP ile otomatik yapılandırılsın mı?"
 
 #. Type: boolean
 #. Description
@@ -32,10 +32,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Ağ, DHCP kullanarak veya tüm bilgileri manuel girerek ayarlanabilir. Eğer "
-"DHCP kullanmayı seçerseniz ve bir şekilde çalışır bir DHCP sunucu "
-"bulamazsanız, DHCP denemesinden sonra ağınızı manuel olarak ayarlama "
-"fırsatınız var. "
+"Ağ, DHCP ile veya tüm bilgileri elle girerek yapılandırılabilir. Şayet DHCP "
+"kullanmayı seçer ve DHCP sunucusundan çalışır durumda bir yapılandırma "
+"alamazsanız, DHCP denemesinden sonra ağınızı elle yapılandırmak için size "
+"bir fırsat daha verilecektir."
 
 #. Type: string
 #. Description
@@ -52,16 +52,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Alan adı internet adresinizin bir bölümüdür. Genelde .com .net .edu veya ."
-"org ile biter. Eğer bir ev ağı ayarlıyorsanız, kendiniz herhangi birşey "
-"yapabilirsiniz fakat tüm makinelerde aynı alan adını kullanıdığınızdan emin "
-"olun."
+"Alan adı size ait Internet adresinin bir bölümüdür ve makine adının sağ "
+"tarafında yer alır.  Bu ad genellikle .com, .net veya .org şeklinde biter. "
+"Eğer bir ev ağı ayarlıyorsanız herhangi bir ad seçebilirsiniz, fakat tüm "
+"makinelerde aynı alan adını kullandığınızdan emin olun."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Alan adı sunucu adresleri:"
+msgstr "Alan adı sunucusu adresleri:"
 
 #. Type: string
 #. Description
@@ -72,10 +72,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Lütfen en fazla 3 sunucunun IP adresini(alan(host) adını değil) aralarda "
-"boşluklar bırakarak girin.Virgül kullanmayın. Listedeki ilk sunucu, ilk "
-"sorgulanacaktır. Eğer bir alan adı sunucusu kullanmak istemiyorsanız boş "
-"bırakın."
+"Lütfen en fazla 3 alan adı sunucusuna ait IP adresini (makine adını değil) "
+"aralarda boşluk bırakarak girin.  Virgül kullanmayın.  Listedeki ilk adres, "
+"ilk olarak sorgulanacak sunucudur.  Eğer bir alan adı sunucusu kullanmak "
+"istemiyorsanız bu alanı boş bırakın."
 
 #. Type: select
 #. Description
@@ -90,14 +90,14 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Sisteminizde çoklu ağ arayüzü bulunuyor.Debian kurulumu için bir tanesini "
-"birincil ağ arayüzü olarak seçin."
+"Sisteminizde birden fazla sayıda ağ arayüzü var.  Debian kurulumu sırasında "
+"birincil ağ arayüzü olarak bunlardan birisini seçin."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:37
 msgid "Wireless ESSID for ${iface}:"
-msgstr "${iface} için kablosusz ESSID:"
+msgstr "${iface} için kablosuz ESSID:"
 
 #. Type: string
 #. Description
@@ -107,9 +107,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} bir kablosuz ağ arayüzüdür. Lütfen ${iface} arayüzünü kullanmak "
+"${iface} bir kablosuz ağ arayüzüdür. Lütfen ${iface} üzerinden kullanmak "
 "istediğiniz kablosuz ağın adını (ESSID) girin. Eğer mevcut ağlardan birisini "
-"kullanmak istiyorsanız boş bırakın."
+"kullanmak istiyorsanız bu alanı boş bırakın."
 
 #. Type: string
 #. Description
@@ -124,8 +124,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"Eğer uygunsa, ${iface} için WEP güvenlik anahtarını girin. Bunu yapmak için "
-"iki yol var :"
+"Eğer ${iface} için tanımlı bir WEP güvenlik anahtarı varsa, lütfen bu "
+"anahtarı girin. Bunu yapmanın iki yolu var:"
 
 #. Type: string
 #. Description
@@ -134,8 +134,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Eğer WEP anahtarınız 'nnnn-nnnn-nn' or 'nnnnnnnn' (n herhangi bir rakam) "
-"biçimdeyse buraya girin."
+"Şayet WEP anahtarınız, n herhangi bir rakam olmak üzere, 'nnnn-nnnn-nn' veya "
+"'nnnnnnnn' biçimindeyse, anahtarı olduğu gibi bu alana girin."
 
 #. Type: string
 #. Description
@@ -144,7 +144,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Eğer özel bir formatta(passphrase) ise başına 's:' koyun ( tırnak "
+"WEP anahtarınız bir geçiş parolası biçimindeyse başına 's:' ekleyin (tırnak "
 "işaretlerini kullanmayın)."
 
 #. Type: string
@@ -153,7 +153,9 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Eğer ağınız için bir WEP anahtarı yoksa boş bırakın."
+msgstr ""
+"Kablosuz ağ için herhangi bir WEP anahtarı tanımlı değilse, doğal olarak bu "
+"alanı boş bırakacaksınız."
 
 #. Type: error
 #. Description
@@ -168,8 +170,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"${wepkey}'  WEP anahtarı gerersiz. Lütfen gelecek ekrana, WEP bilgileriniz "
-"nasıl girdiğiniz dikkatlice bildirin ve tekrar deneyin."
+"'${wepkey}' WEP anahtarı geçersiz.  Lütfen bir sonraki ekranda WEP "
+"anahtarının doğru şekilde nasıl girileceğini tarif eden talimatları "
+"dikkatlice okuyun ve tekrar deneyin."
 
 #. Type: error
 #. Description
@@ -184,8 +187,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-" \"${essid}\" geçersiz bir ESSID. ESSID'ler tüm karakterleri içerebilir ve  "
-"en fazla 32 karakterden oluşur."
+"\"${essid}\" geçersiz bir ESSID. ESSID'ler her türden karakteri içermekle "
+"birlikte, en fazla 32 karakterden oluşur."
 
 #. Type: string
 #. Description
@@ -197,7 +200,7 @@ msgstr "Makine adı:"
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Please enter the hostname for this system."
-msgstr "Lütfen sistem için bir ad girin."
+msgstr "Lütfen bu sisteme ait makine adını girin."
 
 #. Type: string
 #. Description
@@ -208,9 +211,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Makine adı sisteminizi ağa tanıtan tek bir kelimedir. Eğer makine adınızın "
-"ne olacağınız bilmiyorsanız sistem yöneticinize başvurun. Eğer kendi ev "
-"ağınızı kuruyorsanız istediğiniz herhangi bişey olarak ayarlayabilirsiniz."
+"Makine adı, sisteminizi ağa tanıtan tek bir sözcükten oluşmaktadır. Makine "
+"adınızın ne olduğunu bilmiyorsanız, sistem yöneticinize başvurun. Şayet "
+"kendi ev ağınızı kuruyorsanız, herhangi bir ad kullanabilirsiniz."
 
 #. Type: error
 #. Description
@@ -222,7 +225,7 @@ msgstr "Geçersiz makine adı"
 #. Description
 #: ../netcfg-common.templates:83
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Geçersiz makine adı: \"${hostname}\"."
+msgstr "\"${hostname}\" geçersiz bir makine adı."
 
 #. Type: error
 #. Description
@@ -232,8 +235,9 @@ msgid ""
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Geçerli makine adı sadece alfanumerik karakterler ve tire(-) içeren 2 ile 63 "
-"karakter uzunluğunda olup tire ile başlayamaz."
+"Geçerli bir makine adı; sadece alfasayısal karakterler ve eksi ('-') işareti "
+"içermeli, 2 ilâ 63 karakter uzunluğunda olmalı, sonunda ve başında eksi "
+"işareti bulunmamalıdır."
 
 #. Type: error
 #. Description
@@ -248,14 +252,14 @@ msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Bir hata oluştu ve ağ ayarlama işlemi iptal edildi. Kurulum ana menüsünden "
-"tekrar deneyebilirsiniz."
+"Bir hata oluştu ve ağ yapılandırması iptal edildi. Kurulum ana menüsüne "
+"dönerek tekrar deneyebilirsiniz."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:98
 msgid "No network interfaces detected"
-msgstr "Hiçbir ağ arayüzü bulunamadı"
+msgstr "Herhangi bir ağ arayüzü algılanamadı"
 
 #. Type: error
 #. Description
@@ -263,7 +267,8 @@ msgstr "Hiçbir ağ arayüzü bulunamadı"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "Hiçbir ağ arayüzü bulunamadı. Kurulum sistemi bir ağ aygıtı bulamadı."
+msgstr ""
+"Herhangi bir ağ arayüzü bulunamadı. Kurulum sistemi bir ağ aygıtı bulamadı."
 
 #. Type: error
 #. Description
@@ -272,20 +277,20 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Eğer bir ağ kartınız var ise gerekli modül henüz seçilmemiş olabilir. Geri "
-"dönüp 'Ağ donanımı tespit et ve çekirdek modüllerini yükle' yi seçin."
+"Eğer bir ağ kartınız varsa, belirli bir çekirdek modülünü yüklemeniz "
+"gerekebilir. Bunu yapmak için ağ donanımının algılandığı adıma geri dönün."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Ag altyapi sistemi (Yonetildi), Ad-hoc agi (esden ese)"
+msgstr "Planlı ağ (Managed), Plansız ağ (Ad-hoc, Peer to peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr "Kablosuz ağ çeşidi:"
+msgstr "Kablosuz ağ türü:"
 
 #. Type: select
 #. Description
@@ -295,22 +300,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
 msgstr ""
-"Kablosuz ağlar yönetilmiş veya ad-hoc ağı olabilir. Eğer sıralı bir gerçek "
-"erişim noktası kullanıyorsanız, ağınız Yönetilmiştir. Eğer 'erişim noktanız' "
-"başka bir bilgisayar ise, ağınız Ad-hoc'tur."
+"Kablosuz ağlar Planlı (Managed) veya Plansız (Ad-hoc) olarak sınıflanır. "
+"Eğer gerçek türde bir erişim noktası kullanıyorsanız, bu bir Planlı ağdır. "
+"Şayet erişim noktanız bir başka bilgisayar ise, ağınız Plansız ağdır."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Statik Ağ Ayarları"
+msgstr "Kablosuz ağ yapılandırması"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Kablosuz erişim noktaları araştırılıyor ..."
 
 #. Type: text
 #. Description
@@ -322,7 +326,7 @@ msgstr "<hiçbiri>"
 #. Description
 #: ../netcfg-common.templates:128
 msgid "Wireless ethernet (802.11x)"
-msgstr "Kablosuz ağ aygıtı(ethernet) (802.11x)"
+msgstr "Kablosuz ethernet (802.11x)"
 
 #. Type: text
 #. Description
@@ -352,7 +356,7 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:148
 msgid "Serial-line IP"
-msgstr "Seri-line IP"
+msgstr "Seri-hat IP"
 
 #. Type: text
 #. Description
@@ -364,31 +368,31 @@ msgstr "Paralel-port IP"
 #. Description
 #: ../netcfg-common.templates:156
 msgid "Point-to-Point Protocol"
-msgstr "Point-to-Point Protocol"
+msgstr "Noktadan-noktaya protokolü (Point-to-Point)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:160
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-in-IPv4"
+msgstr "IPv4 içinde IPv6 (IPv6-in-IPv4)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:164
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN Point-to-Point Protocol"
+msgstr "ISDN Noktadan-noktaya protokolü (ISDN Point-to-Point Protocol)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:168
 msgid "Channel-to-channel"
-msgstr "Channel-to-channel"
+msgstr "Kanaldan-kanala (Channel-to-channel)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Real channel-to-channel"
-msgstr "Real channel-to-channel"
+msgstr "Gerçek kanaldan-kanala (Real channel-to-channel)"
 
 #. Type: text
 #. Description
@@ -400,7 +404,7 @@ msgstr "Hypersocket"
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Inter-user communication vehicle"
-msgstr "Inter-user bağlantı aracı"
+msgstr "Kullanıcılar arası bağlantı aracı (Inter-user communication vehicle)"
 
 #. Type: text
 #. Description
@@ -413,21 +417,21 @@ msgstr "Bilinmeyen arayüz"
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:189
 msgid "Network Configuration"
-msgstr "Ağ Ayarları"
+msgstr "Ağ Yapılandırması"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:194
 msgid "Configuring network ..."
-msgstr "Ağ ayarlanıyor ..."
+msgstr "Ağ yapılandırılıyor ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:199
 msgid "Configure the network"
-msgstr "Ağı ayarla"
+msgstr "Ağı yapılandır"
 
 #. Type: string
 #. Description
@@ -442,14 +446,15 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Bir DHCP makine adı sağlayabilirsiniz. Eğer bir kablo modem kullanıyorsanız, "
-"bir kullanıcı numarası belirleyebilirsiniz."
+"Bir DHCP makine adı vermeniz gerekebilir. Eğer bir kablo modem "
+"kullanıyorsanız, bu aşamada bir kullanıcı hesap adı girmeniz zorunlu "
+"olabilir."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Diğer kullanıcılar burayı boş bırakabilir."
+msgstr "Çoğu durumda bu alan boş bırakabilir."
 
 #. Type: boolean
 #. Description
@@ -461,7 +466,7 @@ msgstr "Bu bilgiler doğru mu?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Halihazırda ayarlanmış ağ parametreleri:"
+msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
 #. Type: boolean
 #. Description
@@ -483,39 +488,39 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
-msgstr "Ağınız DHCP ile ayarlanıyor"
+msgstr "Ağınız DHCP ile yapılandırılıyor"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
-msgstr "Bu işlem bir kaç dakika sürebilir."
+msgstr "Bu işlem biraz zaman alabilir."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr "DHCP istemcisi bulunamadı"
+msgstr "Herhangi bir DHCP istemcisi bulunamadı"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP istemcisi bulunamadı. Bu paket pump veya dhcp-client istemcilerine "
-"gereksinim duyar."
+"Herhangi bir DHCP istemcisi bulunamadı. Bu paket pump veya dhcp-client "
+"istemcilerine gereksinim duyar."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr "DHCP ayarlama işlemi iptal edilecek."
+msgstr "DHCP yapılandırması iptal edilecek."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP Ağ Ayarlarını tekrar denemek ister misiniz?"
+msgstr "DHCP ağ yapılandırmasını tekrar denemek ister misiniz?"
 
 #. Type: boolean
 #. Description
@@ -524,22 +529,23 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"DHCP ağ ayarlarında, bir IP adresi verilmedi. DHCP sunucular bazen çok "
-"yavaştır. İstiyorsanız tekrara deneyebilirsiniz."
+"DHCP ile otomatik ağ yapılandırması sırasında herhangi bir IP adresi "
+"bulunamadı.  DHCP sunucuları bazen çok yavaş çalışır.  Dilerseniz tekrar "
+"deneyebilirsiniz."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Dinamik ağ ayarlaması (DHCP)"
+msgstr "Dinamik ağ yapılandırması (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Dinamik adresleme(DHCP) ile ağı ayarla"
+msgstr "Ağı dinamik adresleme (DHCP) ile yapılandır"
 
 #. Type: string
 #. Description
@@ -555,8 +561,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP adresi makinenize özeldir ve noktalarla ayrılmış rakamlardan oluşur. Eğer "
-"burada ne kullanacağınızı bilmiyorsanız sistem yöneticinize başvurun."
+"IP adresi makinenize özeldir ve noktalarla ayrılmış rakamlardan oluşur. "
+"Şayet bu alana girmeniz gereken değeri bilmiyorsanız sistem yöneticinize "
+"başvurun."
 
 #. Type: error
 #. Description
@@ -571,14 +578,15 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Girdiğiniz IP adresi biçimi x.x.x.x biçimde olmalı (x herhangi bir sayı) ve "
-"255'den küçük olmalıdır. Lütfen tekrar deneyin."
+"Girdiğiniz IP adresi yanlış biçimlenmiş.  IP adresi, her bir 'x'in 255'den "
+"büyük olmayan bir rakam olması şartıyla x.x.x.x biçiminde olmalıdır.  Lütfen "
+"tekrar deneyin."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Poin-to-point adresi:"
+msgstr "Noktadan-noktaya (Point-to-point) adres:"
 
 #. Type: string
 #. Description
@@ -589,9 +597,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Pointopoint adresi diğer uç uca olan ağların son noktalarını belirlemede "
-"kullanılır. Girilecek değeri bilmiyorsanız sistem yöneticinize başvurun. Bu "
-"adres noktalarla ayrılmuş dört rakamdan oluşur."
+"Noktadan-noktaya adres, noktadan noktaya ağın diğer ucunu belirlemekte "
+"kullanılır.  Girilecek değeri bilmiyorsanız sistem yöneticinize başvurun. "
+"Noktadan-noktaya adres boşluklarla ayrılmış dört rakamdan oluşmalıdır."
 
 #. Type: string
 #. Description
@@ -607,9 +615,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Ağ maskesi hangi makinelerin yerelde sizin ağınızda olduğunu belirlemede "
-"kullanılır. Girilecek değeri bilmiyorsanız sistem yöneticinize başvurun. Bu "
-"adres noktalarla ayrılmış dört rakamdan oluşur."
+"Ağ maskesi hangi makinelerin yerel ağ içinde olduğunu belirlemekte "
+"kullanılır.  Girilecek değeri bilmiyorsanız sistem yöneticinize başvurun. Ağ "
+"maskesi boşluklarla ayrılmış dört rakamdan oluşmalıdır."
 
 #. Type: string
 #. Description
@@ -628,23 +636,24 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Bu noktalarla ayrılmış dört rakamdan oluşan, öntanımlı yönlendirici(router) "
-"olarak da bilinen bir ağ geçidi yönlendiricisidir. LAN'inizden dışarı giden "
-"tüm trafik bu router üzerinden aktarılır. Nadiren, yönlendiriciniz "
-"olmayabilir; bu durumda, burayı boş bırakabilirsiniz. Eğer doğru cevabı "
-"bilmiyorsanız sistem yöneticinize başvurun."
+"Ağ geçidi (boşluklarla ayrılmış dört rakamdan oluşan) bir IP adresidir. Bu "
+"adres öntanımlı yönlendirici olarak da bilinen geçit yönlendiricisini "
+"belirtir.  Yerel ağdan dışarı çıkan bütün trafik (Internet gibi) bu "
+"yönlendiriciye gönderilir.  Herhangi bir yönlendiriciye sahip olmadığınız "
+"nadir durumlar için bu alanı boş bırakabilirsiniz. Eğer bu yapılandırma "
+"sorusunun uygun cevabını bilmiyorsanız sistem yöneticinize başvurun."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Ağ geçidi erişilemez"
+msgstr "Ağ geçidi erişilemez durumda"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Girdiğiniz ağ geçidi erişilemez."
+msgstr "Girdiğiniz ağ geçidi adresine erişilemiyor."
 
 #. Type: error
 #. Description
@@ -671,7 +680,7 @@ msgstr ""
 " arayüz          = ${interface}\n"
 " makine adı      = ${hostname}\n"
 " alan adı        = ${domain}\n"
-" ip addresi      = ${ipaddress}\n"
+" ip adresi      = ${ipaddress}\n"
 " ağ maskesi      = ${netmask}\n"
 " ağ geçidi       = ${gateway}\n"
 " pointopoint     = ${pointopoint}\n"
@@ -682,11 +691,11 @@ msgstr ""
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:68
 msgid "Static network configuration"
-msgstr "Statik Ağ Ayarları"
+msgstr "Statik ağ yapılandırması"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
-msgstr "Statik adresleme ile ağı ayarla"
+msgstr "Ağı statik adresleme ile yapılandır"
