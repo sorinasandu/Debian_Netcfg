@@ -1,3 +1,11 @@
+netcfg (1.02) UNRELEASED; urgency=low
+
+  * Colin Watson
+    - Ask netcfg/get_nameservers at priority critical; if you're doing
+      static network configuration, you probably need to be asked this.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 27 Aug 2004 16:41:41 +0100
+
 netcfg (1.01) unstable; urgency=medium
 
   * Joey Hess

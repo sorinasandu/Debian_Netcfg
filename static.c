@@ -192,7 +192,7 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 	ptr = "";
     debconf_set(client, "netcfg/get_nameservers", ptr);
     
-    debconf_input(client, "high", "netcfg/get_nameservers");
+    debconf_input(client, "critical", "netcfg/get_nameservers");
     ret = debconf_go(client);
 
     if (ret)
