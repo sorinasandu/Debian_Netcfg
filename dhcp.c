@@ -5,6 +5,7 @@
  */
 
 #include "netcfg.h"
+#include <errno.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <debian-installer.h>
@@ -235,7 +236,8 @@ int ask_dhcp_retry (struct debconfclient *client)
 /* Here comes another Satan machine. */
 int netcfg_activate_dhcp (struct debconfclient *client)
 {
-  enum { START, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
+  char* dhostname = NULL;
+  enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
   
   loop_setup();
 
@@ -244,30 +246,44 @@ int netcfg_activate_dhcp (struct debconfclient *client)
     switch (state)
     {
       case START:
-        if (start_dhcp_client(client, NULL))
+        if (start_dhcp_client(client, dhostname))
           netcfg_die(client); /* change later */
         else
           state = POLL;
         break;
 
       case DHCP_HOSTNAME:
+        if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0) == GO_BACK)
+          state = ASK_RETRY;
+        else
+        {
+          if (empty_str(dhostname))
+          {
+            free(dhostname);
+            dhostname = NULL;
+          }
+          kill_dhcp_client();
+          state = START;
+        }
+        break;
+
+      case ASK_RETRY:
+        /* ooh, now it's a select */
+        switch (ask_dhcp_retry (client))
+        {
+          case GO_BACK: exit(10); /* XXX */
+          case 0: state = POLL; break;
+          case 1: state = DHCP_HOSTNAME; break;
+          case 2: state = STATIC; break;
+          case 3: /* no net config at this time :( */
+                  kill_dhcp_client();
+                  state = END;
+        }
         break;
 
       case POLL:
         if (poll_dhcp_client(client)) /* could not get a lease */
-        {
-          /* ooh, now it's a select */
-          switch (ask_dhcp_retry (client))
-          {
-            case GO_BACK: exit(10); /* XXX */
-            case 0: state = POLL; break;
-            case 1: state = DHCP_HOSTNAME; break;
-            case 2: state = STATIC; break;
-            case 3: /* no net config at this time :( */
-              kill_dhcp_client();
-              exit(0);
-          }
-        }
+          state = ASK_RETRY;
         else
         {
           char buf[MAXHOSTNAMELEN + 1];
@@ -284,13 +300,14 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case HOSTNAME:
-        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname))
-          exit(10); /* go back */
+        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
+          exit(10); /* go back, going back to poll isn't intuitive */
         else
           state = END;
         break;
 
       case STATIC:
+        return 15;
         break;
         
       case END:
@@ -298,3 +315,26 @@ int netcfg_activate_dhcp (struct debconfclient *client)
     }
   }
 } 
+
+int kill_dhcp_client(void)
+{
+  if (dhcp_pid != -1)
+  {
+    int s[] = { SIGTERM, SIGKILL, 0 }, *sigs = s;
+
+    while (*sigs)
+    {
+      kill(dhcp_pid, 0);
+
+      /* looks like it died */
+      if (errno == ESRCH)
+        return 1;
+
+      kill(dhcp_pid, *sigs);
+
+      sleep(2);
+    }
+  }
+  
+  return 0;
+}

@@ -118,7 +118,7 @@ int main(void)
                 case 30:
 		    state = BACKUP;
 		    break;
-                default:
+                case 15:
 		    state = GET_STATIC;
 		    break;
 	        }

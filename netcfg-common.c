@@ -364,7 +364,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
  * Set the hostname. 
  * @return 0 on success, 30 on BACKUP being selected.
  */
-int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname)
+int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short hdset)
 {
     static const char *valid_chars =
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
@@ -373,7 +373,8 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
     char *s;
 
     do {
-	have_domain = 0;
+        if (hdset)
+          have_domain = 0;
         debconf_input(client, "high", template);
         ret = debconf_go(client);
 
@@ -407,10 +408,10 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
     {
       if (s[1] == '\0') /* "somehostname." <- . should be ignored */
 	*s = '\0';
-      else /* assume we have a valid domain name here */
+      else if (hdset) /* assume we have a valid domain name here */
       {
-	have_domain = 1;
 	debconf_set(client, "netcfg/get_domain", strdup(s + 1));
+        have_domain = 1;
       }
     }
     return 0;
@@ -480,35 +481,10 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 }
 
 
-int kill_dhcp_client(void)
-{
-  if (dhcp_pid != -1)
-  {
-    int s[] = { SIGTERM, SIGKILL, 0 }, *sigs = s;
-
-    while (*sigs)
-    {
-      kill(dhcp_pid, 0);
-
-      /* looks like it died */
-      if (errno == ESRCH)
-        return 1;
-
-      kill(dhcp_pid, *sigs);
-
-      sleep(2);
-    }
-  }
-  
-  return 0;
-}
-
 int deconfigure_network(void) {
 
     char buf[256];
 
-    kill_dhcp_client();
-    
     /* deconfiguring network interfaces */
     di_exec_shell_log("ifconfig lo down");
     snprintf(buf, sizeof(buf), "ifconfig %s down", interface);
