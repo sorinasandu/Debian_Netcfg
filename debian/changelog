@@ -4,8 +4,12 @@ netcfg (0.62) UNRELEASED; urgency=low
     - Switch to new debhelper udeb support.
     - Stick /sbin back. It was module-init-tools' fault.
     - Re-UTF8ize changelog.
+  * Per Olofsson
+    - Check for hotpluggable (PCMCIA) network interfaces in
+      /etc/network/hotplug and don't generate auto entries for them.
+      Also put them in a "mapping hotplug" stanza. Closes: #239284.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Wed,  7 Apr 2004 09:51:59 -0700
+ -- Per Olofsson <pelle@dsv.su.se>  Fri,  9 Apr 2004 21:46:00 +0200
 
 netcfg (0.61) unstable; urgency=high
 
