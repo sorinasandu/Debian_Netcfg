@@ -5,6 +5,7 @@ netcfg (1.08) UNRELEASED; urgency=low
       any. closes: #281924
     - Pass broadcast parameter to ip because it doesn't actually set it.
       Generally harmless, but we crash DSL modems now. closes: #295482
+    - Fix some translation issues with Choices.
   * Joey Hess
     - If heuristics fail to determine a default interface, use the first
       interface as the default.
@@ -15,7 +16,7 @@ netcfg (1.08) UNRELEASED; urgency=low
     - That should make interface preseeding work in all situations.
       Closes: #293682
 
- -- Joshua Kwan <joshk@triplehelix.org>  Tue, 15 Feb 2005 21:52:08 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Wed, 16 Feb 2005 16:37:43 -0800
 
 netcfg (1.07.1) unstable; urgency=low
 
