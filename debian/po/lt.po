@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-19 09:37+0200\n"
-"PO-Revision-Date: 2004-08-18 19:20+0300\n"
+"PO-Revision-Date: 2004-08-19 19:49+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -233,15 +233,14 @@ msgstr "Vardas \"${hostname}\" netinkamas."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Tinkamą kompiuterio vardą gali sudaryti tik raidžių ir skaitmenų simboliai, "
-"bei minuso ženklas. Jis turi būtį nuo 2-jų iki 63-jų simbolių ilgio, ir "
-"negali prasidėti ar baigtis minuso ženklu."
+"Tinkamą kompiuterio vardą gali sudaryti tik skaitmenys 0-9, mažosios raidės "
+"a-z ir minuso ženklas. Vardas turi būtį nuo 2-jų iki 63-jų simbolių ilgio, "
+"ir negali prasidėti ar baigtis minuso ženklu."
 
 #. Type: error
 #. Description
@@ -288,9 +287,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Tinklo konfigūravimas"
+msgstr "Ar tęsti be tinklo konfigūravimo?"
 
 #. Type: boolean
 #. Description
@@ -548,7 +546,6 @@ msgstr "Tinklo konfigūravimo metodas:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -560,8 +557,8 @@ msgstr ""
 "pakartojimą (kuris gali suveikti, jei yra dideli Jūsų DHCP serverio atsakymų "
 "laikai) arba konfigūruoti tinklą rankiniu būdu. Kai kuriems DHCP serveriams "
 "reikia, kad klientinė programa siųstų DHCP kompiuterio vardą (hostname), "
-"taigi Jūs galite pasirinkti pakartoti automatinį tinklo konfigūravimą su "
-"Jūsų pateiktu kompiuterio vardu."
+"taigi Jūs galite pasirinkti pakartotiną automatinį tinklo konfigūravimą su "
+"su DHCP, nurodant tą kompiuterio vardą."
 
 #. Type: note
 #. Description
@@ -738,7 +735,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
+"Jūs galbūt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
 
 #. Type: boolean
