@@ -4,6 +4,8 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Remove XSIisms in dhclient-script.
     - Patch by Thomas Hood to change interfaces options that use underscores
       to hyphens. No loss of functionality. (Closes: #255185)
+    - Evaluate argv[0] after calling basename on it so that we can strcmp it
+      against "ptom".
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 
