@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-11 11:47+0100\n"
-"PO-Revision-Date: 2003-12-10 08:57+0900\n"
+"PO-Revision-Date: 2003-12-11 21:35+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +27,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "configure network with DHCP, manual network configuration"
-msgstr ""
+msgstr "DHCP でネットワークを設定, 手動でネットワークを設定"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method"
-msgstr "DHCP ネットワーク設定"
+msgstr "ネットワーク設定の方法"
 
 #. Type: select
 #. Description
@@ -45,7 +44,7 @@ msgid ""
 "working configuration from a DHCP Server on you network you will be offered "
 "to configure your network manually after the atempt to configure it by DHCP. "
 "If unsure choose DHCP."
-msgstr ""
+msgstr "ネットワークは DHCP またはすべての情報を手動で入力のいずれでも設定できます。DHCP を選んだものの、インストーラがあなたのネットワークの DHCP サーバから設定を取得できないときには、DHCP の設定を試みたあとにあなたのネットワークを手動で設定するよう促されます。よくわからなければ、DHCP を選んでください。"
 
 #. Type: string
 #. Description
@@ -305,17 +304,15 @@ msgstr "未知のインターフェイス"
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "DHCP ネットワーク設定"
+msgstr "ネットワークの設定"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "DHCP でネットワークを設定しています"
+msgstr "ネットワークの設定"
 
 #. Type: string
 #. Description
@@ -376,9 +373,8 @@ msgstr "DHCP でネットワークを設定しています"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
-msgstr "これは数分かかります。"
+msgstr "これはしばらくかかります。"
 
 #. Type: error
 #. Description
@@ -403,9 +399,8 @@ msgstr "DHCP 設定プロセスが中断されました。"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "DHCP ネットワーク設定"
+msgstr "DHCP ネットワーク設定を再試行しますか?"
 
 #. Type: boolean
 #. Description
@@ -413,7 +408,7 @@ msgstr "DHCP ネットワーク設定"
 msgid ""
 "No IP address was offered during DHCP network configuration. Sometimes DHCP "
 "servers are really slow. In this case you can retry."
-msgstr ""
+msgstr "IP アドレスが DHCP ネットワーク設定中に提供されませんでした。もしかしたら DHCP が実際に遅いのかもしれません。この場合、再試行できます。"
 
 #. Type: text
 #. Description
