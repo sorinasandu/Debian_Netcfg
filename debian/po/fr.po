@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.53\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-22 15:51-0500\n"
-"PO-Revision-Date: 2004-03-20 16:39+0100\n"
+"POT-Creation-Date: 2004-03-23 22:12+0100\n"
+"PO-Revision-Date: 2004-03-23 22:12+0100\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,26 +17,23 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "Configuration du réseau avec DHCP"
+msgstr "Faut-il configurer le réseau avec DHCP ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
 "working configuration from a DHCP server on your network, you will be given "
-"the opportunity to configure your network manually after the atempt to "
+"the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
 "Pour configurer le réseau, on peut utiliser DHCP ou fournir soi-même toutes "
 "les informations. Si vous choisissez DHCP et si l'installateur ne réussit "
 "pas à configurer correctement le réseau à partir d'un serveur DHCP, vous "
-"pourrez configurer manuellement votre réseau après la tentative DHCP. Dans "
-"le doute, choisissez DHCP."
+"pourrez configurer manuellement votre réseau après la tentative DHCP."
 
 #. Type: string
 #. Description
@@ -688,9 +685,3 @@ msgstr "Configuration manuelle du réseau"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Configuration automatique (DHCP), Configuration manuelle"
-
-#~ msgid "Network configuration method:"
-#~ msgstr "Méthode de configuration du réseau :"
