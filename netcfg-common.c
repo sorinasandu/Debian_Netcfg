@@ -517,8 +517,9 @@ void netcfg_write_loopback (void)
 
   if ((fp = file_open(INTERFACES_FILE, "w"))) {
     fprintf(fp, HELPFUL_COMMENT);
+    fprintf(fp, "\n# The loopback network interface\n");
     fprintf(fp, "auto lo\n");
-    fprintf(fp, "iface lo inet loopback\n\n");
+    fprintf(fp, "iface lo inet loopback\n");
     fclose(fp);
   }
 }

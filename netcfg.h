@@ -28,9 +28,7 @@
 
 #define HELPFUL_COMMENT \
 "# This file describes the network interfaces available on your system\n" \
-"# and how to activate them. For more information, see interfaces(5).\n" \
-"\n" \
-"# This entry denotes the loopback (127.0.0.1) interface.\n"
+"# and how to activate them. For more information, see interfaces(5).\n"
 
 #define IPV6_HOSTS \
 "# The following lines are desirable for IPv6 capable hosts\n" \

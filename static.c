@@ -244,10 +244,7 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
         goto error;
 
     if ((fp = file_open(INTERFACES_FILE, "a"))) {
-        fprintf(fp,
-                "\n# This entry was created during the Debian installation\n");
-        fprintf(fp,
-                "# (network, broadcast and gateway are optional)\n");
+        fprintf(fp, "\n# The primary network interface\n");
         if (!iface_is_hotpluggable(interface))
             fprintf(fp, "auto %s\n", interface);
         fprintf(fp, "iface %s inet static\n", interface);

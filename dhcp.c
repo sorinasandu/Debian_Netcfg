@@ -30,6 +30,42 @@ static pid_t dhcp_pid = -1;
 
 
 /*
+ * Add DHCP-related lines to /etc/network/interfaces
+ */
+static void netcfg_write_dhcp (char *iface, char *dhostname)
+{
+    FILE *fp;
+
+    if ((fp = file_open(INTERFACES_FILE, "a"))) {
+        fprintf(fp, "\n# The primary network interface\n");
+        if (!iface_is_hotpluggable(iface))
+            fprintf(fp, "auto %s\n", iface);
+        fprintf(fp, "iface %s inet dhcp\n", iface);
+        if (dhostname)
+        {
+          fprintf(fp, "\thostname %s\n", dhostname);
+        }
+        if (is_wireless_iface(iface))
+        {
+          fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
+          fprintf(fp, "\twireless-mode %s\n",
+              (mode == MANAGED) ? "managed" : "adhoc");
+          fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
+          if (wepkey != NULL)
+            fprintf(fp, "\twireless-key %s\n", wepkey);
+        }
+        fclose(fp);
+    }
+
+#if 0
+    if ((fp = file_open(RESOLV_FILE, "a"))) {
+      fclose(fp);
+    }
+#endif
+}
+
+
+/*
  * Signal handler for DHCP client child
  */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
@@ -131,38 +167,6 @@ static int kill_dhcp_client(void)
 {
   system("killall.sh"); 
   return 0;
-}
-
-
-static void netcfg_write_dhcp (char *iface, char *dhostname)
-{
-    FILE *fp;
-
-    if ((fp = file_open(INTERFACES_FILE, "a"))) {
-        fprintf(fp,
-                "\n# This entry was created during the Debian installation\n");
-        if (!iface_is_hotpluggable(iface))
-            fprintf(fp, "auto %s\n", iface);
-        fprintf(fp, "iface %s inet dhcp\n", iface);
-        if (dhostname)
-        {
-          fprintf(fp, "\thostname %s\n", dhostname);
-        }
-        if (is_wireless_iface(iface))
-        {
-          fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
-          fprintf(fp, "\twireless-mode %s\n",
-              (mode == MANAGED) ? "managed" : "adhoc");
-          fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
-          if (wepkey != NULL)
-            fprintf(fp, "\twireless-key %s\n", wepkey);
-        }
-        fclose(fp);
-    }
-
-    if ((fp = file_open(RESOLV_FILE, "a"))) {
-      fclose(fp);
-    }
 }
 
 
