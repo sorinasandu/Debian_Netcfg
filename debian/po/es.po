@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-17 11:05+0200\n"
+"PO-Revision-Date: 2004-07-03 13:09+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -552,27 +552,19 @@ msgstr "Método de configuración de red:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr ""
-"Se produjo un fallo al realizar la auto-configuración de la red. Esto puede "
-"deberse a que el servidor de DHCP de la red sea lento en responder, así que "
-"puede querer reintentarlo. Puede que desee configurar su red manualmente si "
-"ésta no utiliza DHCP para auto-configuración. Puede también escoger "
-"introducir el nombre de su servidor DHCP antes de reintentar ya que algunos "
-"servidores necesitan un nombre DHCP específico."
+msgstr "Desde aquí puede intentar reintentar su auto-configuración de la red a través de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en responder) o configurar su red manualmente. Puede también escoger introducir un nombre de sistema DHCP antes de reintentar la auto-configuración de red por DHCP ya que algunos servidores exigen que el cliente de DHCP les envíe un nombre de sistema DHCP específico."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Tuvo éxito la auto-configuración de la red"
+msgstr "Se produjo un fallo al realizar la auto-configuración de la red"
 
 #. Type: note
 #. Description
@@ -580,13 +572,13 @@ msgstr "Tuvo éxito la auto-configuración de la red"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "Es posible que su red no utilice el protolo DHCP. Sino, es posible que el servidor de DHCP tarde en responder o que algún equipamiento de red no esté funcionando debidamente."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "¿Desea continuar sin una ruta por omisión?"
 
 #. Type: boolean
 #. Description
@@ -597,7 +589,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
+msgstr "La auto-configuración de la red tuvo éxito. Sin embargo, no se ha establecido una ruta por omisión: el sistema no sabe cómo comunicarse con equipos en Internet. Esto impedirá que sea posible continuar con la instalación a no ser que tenga el primer CD-ROM oficial Debian, un CD-ROM 'Netinst' o todos los paquetes estén disponibles en la red local."
 
 #. Type: boolean
 #. Description
@@ -605,7 +597,7 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "No debería continuar sin una ruta por defecto si no está seguro: contacte con su administrador de red local e infórmele de este problema."
 
 #. Type: text
 #. Description
