@@ -544,7 +544,10 @@ int netcfg_get_pointopoint(struct debconfclient *client)
 	return ret;
 
       if (empty_str(ptr)) /* No P-P is ok */
+      {
+	memset(&pointopoint, 0, sizeof(struct in_addr));
 	return 0;
+      }
       
       ok = inet_pton (AF_INET, ptr, &pointopoint);
       
@@ -613,7 +616,10 @@ int netcfg_get_gateway(struct debconfclient *client)
 	return ret;
 
       if (empty_str(ptr)) /* No gateway, that's fine */
+      {
+	memset(&gateway, 0, sizeof(struct in_addr)); /* clear existing gateway setting */
 	return 0;
+      }
 
       ok = inet_pton (AF_INET, ptr, &gateway);
       
