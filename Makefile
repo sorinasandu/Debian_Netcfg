@@ -4,7 +4,7 @@ endif
 
 LDOPTS=-ldebconfclient -ldebian-installer
 PREFIX=$(DESTDIR)/usr/
-CFLAGS=-Wall  -Os
+CFLAGS=-W -Wall  -Os
 
 ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -g
