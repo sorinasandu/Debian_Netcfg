@@ -379,6 +379,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     for (i = 0; i < num_interfaces; i++)
     {
 	size_t newchars;
+	char *temp = NULL;
 
 	inter = ifs[i];
 
@@ -390,11 +391,17 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
                 goto error;
             len += newchars + 128;
         }
-        di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
+	
+	temp = malloc(newchars);
+	
+        snprintf(temp, newchars, "%s: %s", inter, ifdsc);
 
-		if (num_interfaces > 1 && !strcmp(defif, inter))
-			debconf_set(client, "netcfg/get_interfaces", ptr);
+	if (num_interfaces > 1 && defif != NULL && !strcmp(defif, inter))
+		debconf_set(client, "netcfg/choose_interface", temp);
 
+	di_snprintfcat(ptr, len, "%s, ", temp);
+
+	free(temp);
         free(ifdsc);
     }
 

@@ -97,16 +97,24 @@ int main(int argc, char *argv[])
 		{
 			while (*ifaces)
 			{
+				interface_up(*ifaces);
+				
+				usleep(250);
+				
 				if (ethtool_lite (*ifaces) == 1) /* CONNECTED */
 				{
 					defiface = strdup(*ifaces);
+					interface_down(*ifaces);
 					break;
 				}
+
+				interface_down(*ifaces);
+
 				ifaces++;
 			}
 		}
-		
-	    if(netcfg_get_interface(client, &interface, &num_interfaces, defiface))
+	    
+		if(netcfg_get_interface(client, &interface, &num_interfaces, defiface))
 	      state = BACKUP;
 	    else if (! interface || ! num_interfaces)
 	      state = GET_HOSTNAME_ONLY;

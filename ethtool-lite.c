@@ -5,7 +5,9 @@
 #include <net/if.h>
 #include <sys/types.h>
 #include <sys/ioctl.h>
-#include <debian-installer/log.h>
+#ifndef TEST
+# include <debian-installer/log.h>
+#endif
 
 #define CONNECTED 1
 #define DISCONNECTED 2
@@ -31,12 +33,14 @@ int main(int argc, char** argv)
 int ethtool_lite (char * iface)
 #endif
 {
-	struct ethtool_value edata = { .cmd = ETHTOOL_GLINK };
+	struct ethtool_value edata;
 	struct ifreq ifr;
 #ifdef TEST
 	char* iface;
 #endif
 	int fd = socket(AF_INET, SOCK_DGRAM, 0);
+
+	memset (&edata, 0, sizeof(struct ethtool_value));
 	
 	if (fd < 0)
 	{
@@ -44,6 +48,7 @@ int ethtool_lite (char * iface)
 		fprintf(stderr, "Error: could not open control socket\n");
 		return 1;
 #else
+		di_warning("could not open control socket\n");
 		return UNKNOWN;
 #endif
 	}
@@ -57,10 +62,18 @@ int ethtool_lite (char * iface)
 	iface = argv[1];
 #endif
 	
-	ifr.ifr_data = (void *)&edata;
+	edata.cmd = ETHTOOL_GLINK;
+	ifr.ifr_data = (char *)&edata;
 	strncpy (ifr.ifr_name, iface, IFNAMSIZ);
 	
-	ioctl (fd, SIOCETHTOOL, &ifr);
+	if (ioctl (fd, SIOCETHTOOL, &ifr) < 0)
+	{
+#ifdef TEST
+		printf("ethtool ioctl failed\n");
+#else
+		di_info("ethtool ioctl on %s failed", iface);
+#endif
+	}
 	
 	if (edata.data)
 	{
@@ -76,6 +89,10 @@ int ethtool_lite (char * iface)
 		u_int16_t *data = (u_int16_t *)&ifr.ifr_data;
 		int ctl;
 		data[0] = 0;
+
+#ifndef TEST
+		di_info("%s is disconnected / ethtool not implemented.", iface);
+#endif
 
 		if (ioctl (fd, 0x8947, &ifr) >= 0)
 			ctl = 0x8948;
@@ -112,7 +129,7 @@ int ethtool_lite (char * iface)
 			fprintf(stderr, "MII ioctl failed\n");
 			return 1;
 #else
-			di_error("MII ioctl failed for %s\n", iface);
+			di_warning("MII ioctl failed for %s\n", iface);
 			return UNKNOWN;
 #endif
 		}
