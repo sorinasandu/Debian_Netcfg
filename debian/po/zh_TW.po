@@ -17,9 +17,9 @@ msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-05-24 09:40+0800\n"
+"PO-Revision-Date: 2004-07-25 18:08+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "要使用 DHCP 來自動設定網路嗎？"
+msgstr "是否使用 DHCP 來自動設定網路？"
 
 #. Type: boolean
 #. Description
@@ -327,7 +327,7 @@ msgstr "無線網路卡 (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "無線網路"
 
 #. Type: text
 #. Description
@@ -518,7 +518,6 @@ msgstr "網路的設定方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -526,17 +525,17 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"網路自動設定失敗了。這也許是因為網路上的 DHCP 伺服器太慢了，所以您可能希望能"
-"再次嘗試。如果您的網路上並沒有使用 DHCP 來進行自動設定，您可以替而進行手動設"
-"定。同時，有些 DHCP 伺服器需要特定的 DHCP 主機名稱，您可以選擇在再次嘗試使用 "
-"DHCP 之前輸入這個主機名稱。"
+"您可以在此選擇重新試著使用 DHCP 來自動設定網路，"
+"（如果是因為您的 DHCP 伺服器的回應時間較長，那有可能會成功）﹔"
+"或是試著手動來設定網路。"
+"有些 DHCP 伺服器會要求用戶端傳送特定的 DHCP 主機名稱，"
+"因而您可以選擇提供這個主機名稱並再次嘗試使用 DHCP 來自動設定網路。"
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "網路自動設定作業已經完成！"
+msgstr "網路自動設定作業失敗了"
 
 #. Type: note
 #. Description
@@ -544,13 +543,14 @@ msgstr "網路自動設定作業已經完成！"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "您的網路很可能並不使用 DHCP 協定。"
+"而或者，是 DHCP 伺服器回應過慢，或是某些網路硬體未能正常作業。"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "是否不使用 Default Route 並繼續進行？"
 
 #. Type: boolean
 #. Description
@@ -561,7 +561,11 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
+msgstr "網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)："
+"那麼系統會無法知道該如何和 Internet 上的主機進行連線。"
+"除非您手上有 Debian 官方的第一張光碟、一個 'Netinst' 光碟、"
+"或是在您區域網路中可以取得所需套件，"
+"否則將會導致安裝作業無法繼續進行。"
 
 #. Type: boolean
 #. Description
@@ -569,7 +573,8 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行："
+"請向您區域網路的管理員反應這個問題。"
 
 #. Type: text
 #. Description
@@ -699,7 +704,7 @@ msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "這些資訊正確嗎？"
+msgstr "這些資訊是否正確？"
 
 #. Type: boolean
 #. Description
