@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-13 06:29+0200\n"
-"PO-Revision-Date: 2004-09-13 00:22+0300\n"
+"POT-Creation-Date: 2004-09-13 12:30+0200\n"
+"PO-Revision-Date: 2004-09-13 11:00+0300\n"
 "Last-Translator: Recai Oktaş <roktas@omu.edu.tr>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -91,31 +91,31 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:33
+#: ../netcfg-common.templates:32
 msgid "Primary network interface:"
 msgstr "Birincil ağ arayüzü:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:33
-#, fuzzy
+#: ../netcfg-common.templates:32
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Sisteminizde birden fazla sayıda ağ arayüzü var.  Debian kurulumu sırasında "
-"birincil ağ arayüzü olarak bunlardan birisini seçin."
+"birincil ağ arayüzü olarak bunlardan birisini seçin.  Eğer bu mümkünse, "
+"bağlantı kurulduğu görülen ilk ağ arayüzü seçilmiştir."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} için kablosuz ESSID:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:39
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -127,13 +127,13 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:47
+#: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Kablosuz ${iface} aygıtı için WEP anahtarı:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:47
+#: ../netcfg-common.templates:46
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -143,7 +143,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:47
+#: ../netcfg-common.templates:46
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -153,7 +153,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:47
+#: ../netcfg-common.templates:46
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -163,7 +163,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:47
+#: ../netcfg-common.templates:46
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -173,13 +173,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
 msgstr "Geçersiz WEP anahtarı"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:61
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -190,13 +190,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
 msgstr "Geçersiz ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:68
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -206,19 +206,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:76
+#: ../netcfg-common.templates:75
 msgid "Hostname:"
 msgstr "Makine adı:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:76
+#: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
 msgstr "Lütfen bu sisteme ait makine adını girin."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:76
+#: ../netcfg-common.templates:75
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -231,19 +231,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:85
 msgid "Invalid hostname"
 msgstr "Geçersiz makine adı"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
 msgstr "\"${hostname}\" geçersiz bir makine adı."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:85
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -255,13 +255,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:95
+#: ../netcfg-common.templates:94
 msgid "Error"
 msgstr "Hata"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:95
+#: ../netcfg-common.templates:94
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -271,13 +271,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:101
+#: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
 msgstr "Herhangi bir ağ arayüzü algılanamadı"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:101
+#: ../netcfg-common.templates:100
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -286,7 +286,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:101
+#: ../netcfg-common.templates:100
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -296,19 +296,19 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:110
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Planlı ağ (Managed), Plansız ağ (Ad-hoc, Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:111
 msgid "Wireless network kind:"
 msgstr "Kablosuz ağ türü:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:111
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -320,123 +320,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:119
+#: ../netcfg-common.templates:118
 msgid "Wireless network configuration"
 msgstr "Kablosuz ağ yapılandırması"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:123
+#: ../netcfg-common.templates:122
 msgid "Searching for wireless access points ..."
 msgstr "Kablosuz erişim noktaları araştırılıyor..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:132
 msgid "<none>"
 msgstr "<hiçbiri>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:137
+#: ../netcfg-common.templates:136
 msgid "Wireless ethernet (802.11x)"
 msgstr "Kablosuz ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:140
 msgid "wireless"
 msgstr "kablosuz"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#: ../netcfg-common.templates:144
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet veya Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:148
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:153
+#: ../netcfg-common.templates:152
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:156
 msgid "Serial-line IP"
 msgstr "Seri-hat IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:161
+#: ../netcfg-common.templates:160
 msgid "Parallel-port IP"
 msgstr "Paralel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:165
+#: ../netcfg-common.templates:164
 msgid "Point-to-Point Protocol"
 msgstr "Noktadan-noktaya protokolü (Point-to-Point)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:169
+#: ../netcfg-common.templates:168
 msgid "IPv6-in-IPv4"
 msgstr "IPv4 içinde IPv6 (IPv6-in-IPv4)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:172
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Noktadan-noktaya protokolü (ISDN Point-to-Point Protocol)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
+#: ../netcfg-common.templates:176
 msgid "Channel-to-channel"
 msgstr "Kanaldan-kanala (Channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:181
+#: ../netcfg-common.templates:180
 msgid "Real channel-to-channel"
 msgstr "Gerçek kanaldan-kanala (Real channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:185
+#: ../netcfg-common.templates:184
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:189
+#: ../netcfg-common.templates:188
 msgid "Inter-user communication vehicle"
 msgstr "Kullanıcılar arası bağlantı aracı (Inter-user communication vehicle)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:192
 msgid "Unknown interface"
 msgstr "Bilinmeyen arayüz"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:198
+#: ../netcfg-common.templates:197
 msgid "Configuring network ..."
 msgstr "Ağ yapılandırılıyor..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:203
+#: ../netcfg-common.templates:202
 msgid "Configure the network"
 msgstr "Ağı yapılandır"
 
