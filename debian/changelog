@@ -5,6 +5,10 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Evaluate argv[0] after calling basename on it so that we can strcmp it
       against "ptom". It somehow didn't happen in the internal dhclient-script
       context, but appeared during testing in the shell.
+    - Add Thomas Hood to Uploaders.
+    - Re-enable broadcast stuff in dhclient-script, fixing a Sparc (at least)
+      regression.
+    - Remove kill_dhcp_client prototype from netcfg.h because it's now static.
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
