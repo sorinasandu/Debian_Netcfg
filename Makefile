@@ -15,7 +15,6 @@ STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 all: $(PROGS)
 
 install:
-	mkdir -p $(PREFIX)/bin/
 	$(foreach PROG, $(PROGS), \
 	cp $(PROG) debian/$(PROG).config)
 

@@ -31,22 +31,22 @@ static char buf[MAXLINE];
 int is_interface_up (char *inter);
 void getif_start (void);
 void getif_end (void);
-char * getif (int all);
+char *getif (int all);
 void get_name (char *name, char *p);
-char * get_ifdsc (const char *ifp);
+char *get_ifdsc (const char *ifp);
 int get_interface ();
-FILE * file_open (char *path);
+FILE *file_open (char *path);
 int activate_net ();
 
 void debconf_unseen (char *template);
 void debconf_subst (char *template, char *key, char *string);
-char * debconf_input (char *priority, char *template);
+char *debconf_input (char *priority, char *template);
 
 #ifdef DHCP
 
 static char *dhcp_hostname = NULL;
 
-void write_dhcp_cfg(void);
+void write_dhcp_cfg (void);
 
 int
 main (int argc, char *argv[])
@@ -59,50 +59,54 @@ main (int argc, char *argv[])
   client->command (client, "go", NULL);
   client->command (client, "get", "netcfg/dhcp_hostname", NULL);
   dhcp_hostname = client->value;
-  write_dhcp_cfg();
-  activate_dhcp_net();
+  write_dhcp_cfg ();
+  activate_dhcp_net ();
 
   return 0;
 }
 
 void
-write_dhcp_cfg(void){
+write_dhcp_cfg (void)
+{
 
   FILE *fp;
   if ((fp = file_open (INTERFACES_FILE)))
     {
-      fprintf (fp, "\n# This entry was created during the Debian installation\n");
+      fprintf (fp,
+	       "\n# This entry was created during the Debian installation\n");
       fprintf (fp, "iface %s inet dhcp\n", interface);
     }
   if ((fp = file_open (DHCPCD_FILE)))
-  {
-      fprintf (fp, "\n# dhcpcd configuration: created during the Debian installation\n");
+    {
+      fprintf (fp,
+	       "\n# dhcpcd configuration: created during the Debian installation\n");
       fprintf (fp, "IFACE=%s", interface);
       if (dhcp_hostname)
-	  fprintf (fp, "OPTIONS='-h %s'", dhcp_hostname);
-  }
+	fprintf (fp, "OPTIONS='-h %s'", dhcp_hostname);
+    }
 }
 
 
 int
 activate_dhcp_net ()
 {
-    char *ptr;
-    int rv;
+  char *ptr;
+  int rv;
   system ("/sbin/ifconfig lo 127.0.0.1");
 
-      ptr=buf;
-      ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
-      if (dhcp_hostname)
-          snprintf(ptr, sizeof(buf)-(ptr-buf), " -h %s", dhcp_hostname);
+  ptr = buf;
+  ptr += snprintf (buf, sizeof (buf), "/sbin/dhcpcd-2.2.x");
+  if (dhcp_hostname)
+    snprintf (ptr, sizeof (buf) - (ptr - buf), " -h %s", dhcp_hostname);
 
-  
+
   rv = system (buf);
-  fprintf(stderr, "rv = %d\n", rv);
-  if (rv != 0) {
+  fprintf (stderr, "rv = %d\n", rv);
+  if (rv != 0)
+    {
       client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
       client->command (client, "go", NULL);
-  }
+    }
   return 0;
 }
 
@@ -128,8 +132,8 @@ static char buf[MAXLINE];
 
 void get_static_cfg (void);
 void write_static_cfg (void);
-char * dot2num (u_int32_t * num, char *dot);
-char * num2dot (u_int32_t num);
+char *dot2num (u_int32_t * num, char *dot);
+char *num2dot (u_int32_t num);
 
 int
 main (int argc, char *argv[])
@@ -140,7 +144,7 @@ main (int argc, char *argv[])
 
   get_static_cfg ();
   write_static_cfg ();
-  activate_static_net();
+  activate_static_net ();
 
   return 0;
 }
@@ -369,19 +373,20 @@ num2dot (u_int32_t num)
 int
 activate_static_net ()
 {
-    int rv;
+  int rv;
   system ("/sbin/ifconfig lo 127.0.0.1");
 
-      snprintf (buf, sizeof (buf),
-  	      "/sbin/ifconfig %s %s netmask %s broadcast %s", interface,
-  	      num2dot (ipaddress), num2dot (netmask), num2dot (broadcast));
-  
+  snprintf (buf, sizeof (buf),
+	    "/sbin/ifconfig %s %s netmask %s broadcast %s", interface,
+	    num2dot (ipaddress), num2dot (netmask), num2dot (broadcast));
+
   rv = system (buf);
-  fprintf(stderr, "rv = %d\n", rv);
-  if (rv != 0) {
+  fprintf (stderr, "rv = %d\n", rv);
+  if (rv != 0)
+    {
       client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
       client->command (client, "go", NULL);
-  }
+    }
   return 0;
 }
 
@@ -633,6 +638,3 @@ file_open (char *path)
     }
 
 }
-
-
-
