@@ -1,7 +1,10 @@
 #!/bin/sh
 
-if [ -z "`/sbin/ifconfig -a`"  ] ; then
-	exit 0
+if [ -z "`/sbin/ifconfig`"  ] &&
+[ -n "`cat /proc/net/dev | sed -e "s/lo://" | grep "[a-z0-9]*:[ ]*[0-9]*"`"  ]  ; then
+	echo "runme"
+        exit 0
 else
+	echo "dont"
 	exit -1
 fi
