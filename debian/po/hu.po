@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-23 13:37-0700\n"
-"PO-Revision-Date: 2004-02-24 01:06+0100\n"
+"POT-Creation-Date: 2004-02-23 17:37-0700\n"
+"PO-Revision-Date: 2004-02-24 01:56+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
@@ -120,8 +120,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "A rendszer felderítése drótnélküli hálózati csatolót (${iface}) talált. Adja "
-"meg az e csatoló révén használni kívánt drótnélküli hálózat nevét "
-"(ESSID). Ha bármely elérhető hálózat megfelel, hagyja üresen."
+"meg az e csatoló révén használni kívánt drótnélküli hálózat nevét (ESSID). "
+"Ha bármely elérhető hálózat megfelel, hagyja üresen."
 
 #. Type: string
 #. Description
@@ -156,8 +156,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ha a WEP-kulcs egy jelmondat, akkor azt egy 's:' előtaggal "
-"ellátva adja meg (az aposztrófok nélkül)."
+"Ha a WEP-kulcs egy jelmondat, akkor azt egy 's:' előtaggal ellátva adja meg "
+"(az aposztrófok nélkül)."
 
 #. Type: string
 #. Description
@@ -399,14 +399,15 @@ msgstr "Hálózat konfigurálása"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:177
-msgid "Configuring network .."
-msgstr "Hálózat konfigurálása folyamatban.."
+#. Prebaseconfig progress bar item
+#: ../netcfg-common.templates:178
+msgid "Configuring network ..."
+msgstr "Hálózat konfigurálása folyamatban..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:183
 msgid "Configure the network"
 msgstr "Hálózat konfigurálása"
 
@@ -444,8 +445,6 @@ msgstr "Az információk megfelelnek a valóságnak?"
 msgid "Currently configured network parameters:"
 msgstr "A jelenleg beállított hálózati paraméterek:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -554,9 +553,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"A megadott IP-cím hibás, az x.x.x.x mintát kellene követnie, ahol az "
-"x-ek 255-nél nem nagyobb természetes számokat jelölnek. "
-"Írja be ismét."
+"A megadott IP-cím hibás, az x.x.x.x mintát kellene követnie, ahol az x-ek "
+"255-nél nem nagyobb természetes számokat jelölnek. Írja be ismét."
 
 #. Type: string
 #. Description
@@ -640,8 +638,6 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Talán a megadott IP-cím, hálózati maszk és/vagy átjárócím hibás."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
