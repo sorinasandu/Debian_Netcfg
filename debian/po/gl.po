@@ -1,28 +1,28 @@
+# translation of debian-installer_packages_netcfg_gl.po to Galego
 #
 #    Translators, if you are not familiar with the PO format, gettext
 #    documentation is worth reading, especially sections dedicated to
 #    this format, e.g. by running:
 #         info -n '(gettext)PO Files'
 #         info -n '(gettext)Header Entry'
-#
 #    Some information specific to po-debconf are available at
 #            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
 #    Developers do not need to manually edit POT or PO files.
+# Héctor Fernández López <trorrr@yahoo.es>, 2004
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer_packages_netcfg_gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-13 16:20-0400\n"
-"PO-Revision-Date: 2004-04-07 23:46+0100\n"
+"POT-Creation-Date: 2004-04-14 01:40-0600\n"
+"PO-Revision-Date: 2004-04-14 12:09+0200\n"
 "Last-Translator: Héctor Fernández López <trorrr@yahoo.es>\n"
-"Language-Team: Proxecto Trasno <trasno@ceu.fi.udc.es>\n"
+"Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
 
 #. Type: boolean
 #. Description
@@ -74,7 +74,6 @@ msgstr "Direccións de servidores de nomes"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -82,8 +81,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"Os servidores de nomes úsanse para resolve-los nomes das máquinas na rede.  "
 "Por favor, escribe a dirección IP (non o nome da máquina) de ata tres "
-"servidor de nomes separados por espacios (Non use comas).  O primeiro "
+"servidores de nomes separados por espacios (Non use comas).  O primeiro "
 "servidor na lista será o primeiro en ser preguntado.  Se non vas usar un "
 "servidor de nomes de dominio deixa en branco."
 
@@ -306,7 +306,6 @@ msgstr "Tipo de rede inalámbrica:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:110
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -319,15 +318,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Configuración estática da rede"
+msgstr "Configuración da rede inalámbrica"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Buscando puntos de acceso inalámbricos..."
 
 #. Type: text
 #. Description
@@ -473,8 +471,6 @@ msgstr "¿Son estos datos correctos?"
 msgid "Currently configured network parameters:"
 msgstr "Parámetros de rede configurados neste momento:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -511,8 +507,7 @@ msgstr "Non se atopou ningún cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Non se atopou un cliente DHCP.  Este paquete require pump ou dhcp-client."
+msgstr "Non se atopou un cliente DHCP.  Este paquete require pump ou dhcp-client."
 
 #. Type: error
 #. Description
@@ -663,14 +658,11 @@ msgstr "Non se puido alcanza-la porta de enlace que escribiches"
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Pode que cometeras un erro ó escribi-la dirección IP, máscara de rede e/ou "
 "porta de enlace."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -707,3 +699,4 @@ msgstr "Configurar unha rede usando direccionamento estático"
 
 #~ msgid "Network Configuration"
 #~ msgstr "Configuración de rede"
+
