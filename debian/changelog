@@ -13,6 +13,8 @@ netcfg (0.62) UNRELEASED; urgency=low
       anymore.
     - Blank gateway is now accepted. (Closes: #241509, #238809)
     - Put own hostname in 127.0.0.1 hosts entry. (Closes: #238305, #237779)
+    - Add some missing newlines for wireless devices to netcfg_write_dhcp.
+    - Prune unused #defines.
   * Per Olofsson
     - Check for hotpluggable (PCMCIA) network interfaces in
       /etc/network/devhotplug and don't generate auto entries for them.

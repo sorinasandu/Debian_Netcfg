@@ -5,16 +5,11 @@
 #include <stdio.h>
 #include <cdebconf/debconfclient.h>
 
-#define ETC_DIR 	"/etc"
-#define NETWORK_DIR 	"/etc/network"
-#define DHCPCD_DIR 	"/etc/dhcpc"
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
 #define HOSTNAME_FILE   "/etc/hostname"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
-#define DHCPCD_FILE     "/etc/dhcpc/config"
-#define DHCLIENT_DIR	"/var/dhcp"
 
 #define _GNU_SOURCE
 
