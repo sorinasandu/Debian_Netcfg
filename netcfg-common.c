@@ -600,6 +600,7 @@ void seed_hostname_from_dns (struct debconfclient * client)
     .ai_flags = AI_CANONNAME
   };
   struct addrinfo *res;
+  struct sockaddr tmp;
   char ip[16]; /* 255.255.255.255 + 1 */
   int err;
 
@@ -610,6 +611,7 @@ void seed_hostname_from_dns (struct debconfclient * client)
   err = getaddrinfo(ip, NULL, &hints, &res);
 
   /* got it? */
-  if (!err && res->ai_canonname && !empty_str(res->ai_canonname))
+  if (!err && res->ai_canonname && !empty_str(res->ai_canonname) &&
+      inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
 }
