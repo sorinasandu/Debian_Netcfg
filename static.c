@@ -11,11 +11,9 @@
 #include <assert.h>
 
 struct in_addr old_ipaddress = { 0 };
-struct in_addr nameserver_array[4] = { { 0 }, };
 struct in_addr network = { 0 };
 struct in_addr broadcast = { 0 };
 struct in_addr netmask = { 0 };
-struct in_addr gateway = { 0 };
 struct in_addr pointopoint = { 0 };
 
 int netcfg_get_ipaddress(struct debconfclient *client)
@@ -174,62 +172,6 @@ int netcfg_get_gateway(struct debconfclient *client)
     }
 
     return 0;
-}
-
-int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
-{
-    char *ptr, ptr1[INET_ADDRSTRLEN];
-    int ret;
-       
-    if (*nameservers)
-        ptr = *nameservers;
-    else if (gateway.s_addr)
-    {
-        inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
-	ptr = ptr1;
-    }
-    else
-	ptr = "";
-    debconf_set(client, "netcfg/get_nameservers", ptr);
-    
-    debconf_input(client, "critical", "netcfg/get_nameservers");
-    ret = debconf_go(client);
-
-    if (ret)
-      return ret;
-
-    debconf_get(client, "netcfg/get_nameservers");
-    ptr = client->value;
-
-    if (*nameservers)
-        free(*nameservers);
-    *nameservers = NULL;
-    if (ptr)
-        *nameservers = strdup(ptr);
-    return ret;
-}
-
-void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[])
-{
-    char *save, *ptr, *ns;
-    int i;
-
-    if (nameservers) {
-        save = ptr = strdup(nameservers);
-
-        for (i = 0; i < 3; i++)
-        {
-          ns = strtok_r(ptr, " \n\t", &ptr);
-          if (ns)
-            inet_pton (AF_INET, ns, &array[i]);
-          else
-            array[i].s_addr = 0;
-        }
-
-        array[3].s_addr = 0;
-        free(save);
-    } else
-        array[0].s_addr = 0;
 }
 
 static int netcfg_write_static(char *domain, struct in_addr nameservers[])

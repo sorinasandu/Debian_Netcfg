@@ -95,6 +95,8 @@ extern int netcfg_get_static(struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);
 
+extern int resolv_conf_entries (void);
+
 extern int ask_dhcp_options (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 
