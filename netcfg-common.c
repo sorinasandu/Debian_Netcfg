@@ -760,10 +760,11 @@ int netcfg_get_static(struct debconfclient *client)
     debconf_metaget(client,  "netcfg/internal-none", "description");
     none = client->value ? strdup(client->value) : strdup("<none>");
 
-    while (1) {
+    while (state != QUIT) {
         switch (state) {
         case BACKUP:
             return 10; // Back to main
+            break;
         case GET_IPADDRESS:
             if (netcfg_get_ipaddress (client)) {
                 state = BACKUP;
@@ -840,6 +841,7 @@ int netcfg_get_static(struct debconfclient *client)
             break;
         case QUIT:
             return 0;
+            break;
         }
     }
     return 0;
