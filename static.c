@@ -124,6 +124,16 @@ int netcfg_get_netmask(struct debconfclient *client)
     }
 
     inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
+
+    /* if you entered a .1 ip, you'll get a .1 back, so makes sense
+     * to clear the last bit */
+    if (gateway.s_addr == ipaddress.s_addr)
+    {
+      char* ptr = strrchr(ptr1, '.');
+      assert (ptr); /* if there's no dot in ptr1 we're in deep shit */
+      ptr[1] = '\0';
+    }
+    
     debconf_set(client, "netcfg/get_gateway", ptr1);
 
     return 0;

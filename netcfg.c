@@ -104,14 +104,16 @@ int main(int argc, char *argv[])
               snprintf(buf, len, "mii-diag -s %s", interface);
 
               interface_up(interface);
-              ret = di_exec_shell(buf);
+	      di_info("executing: %s", buf);
+	      ret = di_exec_shell_log(buf);
               interface_down(interface);
 
               free(buf);
 
               di_info("link status for %s is: %s (%d)", interface,
                   (ret == 1) ? "unknown" :
-                  ((ret == 2) ? "disconnected" : "connected"), ret);
+                  ((ret == 2) ? "disconnected" :
+                  ((ret == 0) ? "connected" : "unknown")), ret);
 
               if (res == NOT_ASKED)
               {

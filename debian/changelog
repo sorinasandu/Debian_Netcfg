@@ -8,8 +8,10 @@ netcfg (0.65) UNRELEASED; urgency=low
     - DHCP server is not required to supply a domain name. (Closes: #250021)
     - Switch to using mii-diag-udeb instead of mii-lite.c, which doesn't
       seem to work across the board. (also addresses #250074)
+    - In static configuration, if the IP address specified turns out to be
+      the same as what we suggest for the gateway, nuke the last part of
+      the dotted quad because gateway == IP makes no sense. (Closes: #241490)
   * Bastian Blank
-    - Don't depend against libiw27-udeb.
     - Make it buildable again on s390.
 
  -- Bastian Blank <waldi@debian.org>  Sat, 22 May 2004 15:29:52 +0200
