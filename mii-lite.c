@@ -26,7 +26,7 @@
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <net/if.h>
-
+#include <debian-installer/log.h>
 #include "netcfg.h"
 
 typedef unsigned short u16;
@@ -42,9 +42,14 @@ mii_diag_status_lite (char *ifname)
 {
   u16 *data = NULL;
 
+  di_debug("poking at interface %s", ifname);
+
   /* Open a basic socket. */
   if ((skfd = socket(AF_INET, SOCK_DGRAM,0)) < 0)
+  {
+    di_debug("couldn't open skfd");
     return STATIC;
+  }
 
   /* Verify that the interface supports the ioctl(), and if
      it is using the new or old SIOCGMIIPHY value (grrr...).
@@ -61,14 +66,19 @@ mii_diag_status_lite (char *ifname)
     new_ioctl_nums = 0;
   } else {
     close(skfd);
+    di_log(DI_LOG_LEVEL_DEBUG, "none of the ioctls work!");
     return DUNNO;
   }
 
   if ((mdio_read(skfd, (unsigned)data[0], 1) & 0x0004) == 0)
+  {
+    di_debug("ioctl: media state is: disconnected");
     return STATIC;
+  }
   else
   {
     close(skfd);
+    di_debug("ioctl: media state is: connected");
     return DHCP;
   }
 }

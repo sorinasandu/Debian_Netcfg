@@ -1056,7 +1056,7 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface, char *host)
 	  fprintf(fp, "\twireless_mode %s\n",
 	      (mode == MANAGED) ? "managed" : "adhoc");
 	  fprintf(fp, "\twireless_essid %s\n", essid ? essid : "any");
-	  if (wepkey)
+	  if (wepkey != NULL)
 	    fprintf(fp, "\twireless_key %s\n", wepkey);
 	}
         fclose(fp);
