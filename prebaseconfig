@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # Copy all relevant networking-related files to /target.
 
-for file in /etc/network/interfaces /etc/networks /etc/hostname /etc/resolv.conf /etc/hosts ; do
+for file in /etc/network/interfaces /etc/networks /etc/hostname /etc/resolv.conf /etc/hosts /etc/dhclient.conf /etc/dhcp3/dhclient.conf ; do
 	if [ -f "$file" ]; then
 		mkdir /target/$(dirname $file) -p
 		cp $file /target/$file
