@@ -5,6 +5,7 @@
  */
 
 #include "netcfg.h"
+#include <debian-installer/log.h>
 #include <iwlib.h>
 #include <sys/types.h>
 #include <assert.h>
@@ -171,8 +172,8 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 {
   wireless_config wconf;
   char* rv = NULL;
-  int ret, keylen;
-  unsigned char buf [IW_ENCODING_TOKEN_MAX];
+  int ret, keylen, err = 0;
+  unsigned char buf [IW_ENCODING_TOKEN_MAX + 1];
   struct iwreq wrq;
   
   iw_get_basic_config (wfd, iface, &wconf);
@@ -216,10 +217,16 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     rv = client->value;
   }
 
+  /* Now rv is safe to store since it parsed fine */
+  wepkey = strdup(rv);
+
   wrq.u.data.pointer = buf;
   wrq.u.data.flags = 0;
+  wrq.u.data.length = keylen;
 
-  if (iw_set_ext(skfd, iface, SIOCSIWENCODE, &wrq) < 0) {
+  if ((err = iw_set_ext(skfd, iface, SIOCSIWENCODE, &wrq)) < 0)
+  {
+    di_warning("setting WEP key on %s failed with code %d", iface, err);
     return -1;
   }
   
