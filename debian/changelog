@@ -14,6 +14,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Now we can ask for a DHCP hostname to add. (Closes: #236533, #239591)
     - If we didn't use one, see if the server is offering us one and seed
       netcfg/get_hostname with it. (Closes: #237395, #240701)
+    - Failing that, bring the interface up and try to reverse-resolve
+      the IP address into a hostname. 
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate.
     - Silently load af_packet. (Closes: #244441)

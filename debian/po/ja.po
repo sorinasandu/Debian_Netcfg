@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 10:22-0300\n"
+"POT-Creation-Date: 2004-05-15 00:23-0700\n"
 "PO-Revision-Date: 2004-05-14 13:05+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -565,7 +565,12 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr "ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが遅いためであることがほとんどなので、おそらく再試行したいと思うでしょう。あなたのネットワークが自動設定に DHCP を使っていないのであれば、代わりに手動で設定できます。また、いくつかの DHCP サーバは特定の DHCP ホスト名を必要とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
+msgstr ""
+"ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが"
+"遅いためであることがほとんどなので、おそらく再試行したいと思うでしょう。あな"
+"たのネットワークが自動設定に DHCP を使っていないのであれば、代わりに手動で設"
+"定できます。また、いくつかの DHCP サーバは特定の DHCP ホスト名を必要とするの"
+"で、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
 
 #. Type: text
 #. Description
@@ -707,10 +712,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
-" hostname      = ${hostname}\n"
-" domain        = ${domain}\n"
 " ipaddress     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -729,6 +733,6 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:68
+#: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"

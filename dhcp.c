@@ -144,17 +144,13 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
 	break;
     }
-    di_error("reached end of switch!! dhcp_client = %d", dhcp_client);
     if (errno != 0)
-      di_error("exec died with: %s", strerror(errno));
+      di_error("Could not exec dhcp client: %s", strerror(errno));
 
     return 1; /* should NEVER EVER get here */
   }
   else if (dhcp_pid == -1)
-  {
-    di_error("oh shit, PID is -1");
     return 1;
-  }
   else
   {
     dhcp_running = 1;

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 10:22-0300\n"
+"POT-Creation-Date: 2004-05-15 00:23-0700\n"
 "PO-Revision-Date: 2004-05-13 18:53+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -23,7 +23,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
@@ -156,7 +157,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr ""
+"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -512,7 +514,8 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr ""
+"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -565,7 +568,13 @@ msgid ""
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr "Не вдалося автоматично налаштувати мережу. Це може бути викликано повільним DHCP сервером вашої мережі, тому вам можливо потрібно повторити. Якщо ваша мережа не використовує DHCP для автоматичного налаштовування, ви можете поровести налаштування вручну. Деякі DHCP сервери потребують певного DHCP-імені вузла, тому ви можете ввести це ім'я перед повторенням налаштування за допомогою DHCP."
+msgstr ""
+"Не вдалося автоматично налаштувати мережу. Це може бути викликано повільним "
+"DHCP сервером вашої мережі, тому вам можливо потрібно повторити. Якщо ваша "
+"мережа не використовує DHCP для автоматичного налаштовування, ви можете "
+"поровести налаштування вручну. Деякі DHCP сервери потребують певного DHCP-"
+"імені вузла, тому ви можете ввести це ім'я перед повторенням налаштування за "
+"допомогою DHCP."
 
 #. Type: text
 #. Description
@@ -699,7 +708,8 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережі та/або адреси "
 "шлюзу."
@@ -707,10 +717,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
-" hostname      = ${hostname}\n"
-" domain        = ${domain}\n"
 " ipaddress     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -729,7 +738,7 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:68
+#: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Налаштувати мережу із статичним адресуванням"
 
@@ -759,4 +768,3 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
-

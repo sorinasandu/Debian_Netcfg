@@ -92,8 +92,6 @@ int main(void)
 	    break;
 
 	case QUIT:
-	    if (netcfg_activate_static(client) != 0) 
-		return 1;
 	    return 0;
 	}
     }

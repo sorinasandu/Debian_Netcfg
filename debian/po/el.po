@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 10:22-0300\n"
+"POT-Creation-Date: 2004-05-15 00:23-0700\n"
 "PO-Revision-Date: 2004-05-14 11:56EEST\n"
 "Last-Translator: Konstantinos Margaritis <markos@debian.org>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -166,7 +166,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ""
+"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -300,7 +301,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr ""
+"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -711,7 +713,8 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
@@ -719,10 +722,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
-" hostname      = ${hostname}\n"
-" domain        = ${domain}\n"
 " ipaddress     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -741,7 +743,6 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:68
+#: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
-

@@ -336,8 +336,6 @@ int netcfg_activate_static(struct debconfclient *client)
     }
 
     /* write configuration */
-
-    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
     netcfg_write_static("40netcfg", domain, nameserver_array);
 
     return 0;
@@ -405,16 +403,17 @@ int netcfg_get_static(struct debconfclient *client)
             break;
         case GET_NAMESERVERS:
             state = (netcfg_get_nameservers (client, &nameservers)) ?
-                GET_GATEWAY : GET_HOSTNAME;
+                GET_GATEWAY : CONFIRM;
             break;
 	case GET_HOSTNAME:
+	    seed_hostname_from_dns(client, &ipaddress);
 	    state = (netcfg_get_hostname(client, "netcfg/get_hostname", &hostname, 1)) ?
 	      GET_NAMESERVERS : GET_DOMAIN;
 	    break;
         case GET_DOMAIN:
 	    if (!have_domain) {
 	      state = (netcfg_get_domain (client, &domain)) ?
-		GET_HOSTNAME : CONFIRM;
+		GET_HOSTNAME : QUIT;
 	    }
 	    else 
 	      state = CONFIRM;
@@ -429,9 +428,6 @@ int netcfg_get_static(struct debconfclient *client)
                           (netmask.s_addr ? inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)) : none));
             debconf_subst(client, "netcfg/confirm_static", "gateway",
                           (gateway.s_addr ? inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)) : none));
-            debconf_subst(client, "netcfg/confirm_static", "hostname", hostname);
-            debconf_subst(client, "netcfg/confirm_static", "domain",
-                          (domain ? domain : none));
             debconf_subst(client, "netcfg/confirm_static", "nameservers",
                           (nameservers ? nameservers : none));
             netcfg_nameservers_to_array(nameservers, nameserver_array);
@@ -441,8 +437,12 @@ int netcfg_get_static(struct debconfclient *client)
             debconf_input(client, "medium", "netcfg/confirm_static");
             debconf_go(client);
             debconf_get(client, "netcfg/confirm_static");
-            state = strstr(client->value, "true") ? QUIT : GET_IPADDRESS;
+            state = strstr(client->value, "true") ? GET_HOSTNAME : GET_IPADDRESS;
             debconf_capb(client, "backup");
+
+	    netcfg_write_static("40netcfg", domain, nameserver_array);
+	    netcfg_activate_static(client);
+
             break;
         case QUIT:
             return 0;

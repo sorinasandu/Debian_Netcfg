@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-13 10:22-0300\n"
+"POT-Creation-Date: 2004-05-15 00:23-0700\n"
 "PO-Revision-Date: 2004-05-14 19:55+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -557,11 +557,12 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
-"Otomatik ağ yapılandırması başarısız. Bunun nedeni ağ üzerindeki DHCP sunucusunun "
-"yavaşlığı olabileceğinden tekrar denemeyi isteyebilirsiniz. Eğer ağınız otomatik "
-"yapılandırma için DHCP kullanmıyorsa, elle yapılandırmayı tercih edebilirsiniz. "
-"Bazı DHCP sunucuları özel bir DHCP makine adı gerektirebilir. Bu tür durumlarda "
-"DHCP denemesinden önce böyle bir makine adını girmeyi seçebilirsiniz."
+"Otomatik ağ yapılandırması başarısız. Bunun nedeni ağ üzerindeki DHCP "
+"sunucusunun yavaşlığı olabileceğinden tekrar denemeyi isteyebilirsiniz. Eğer "
+"ağınız otomatik yapılandırma için DHCP kullanmıyorsa, elle yapılandırmayı "
+"tercih edebilirsiniz. Bazı DHCP sunucuları özel bir DHCP makine adı "
+"gerektirebilir. Bu tür durumlarda DHCP denemesinden önce böyle bir makine "
+"adını girmeyi seçebilirsiniz."
 
 #. Type: text
 #. Description
@@ -703,10 +704,9 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
+#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
-" hostname      = ${hostname}\n"
-" domain        = ${domain}\n"
 " ipaddress     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -725,6 +725,6 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:68
+#: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Ağı statik adresleme ile yapılandır"

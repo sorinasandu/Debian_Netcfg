@@ -130,14 +130,11 @@ int main(void)
 	    break;
 
 	case GET_STATIC:
+	    /* Misnomer - this should actually take care of activation */
 	    if (netcfg_get_static(client))
 		state = GET_METHOD;
-	    else {
-		if (netcfg_activate_static(client))
-                  return 1;
-		else
-                  state = QUIT;
-	    }
+	    else
+	        state = QUIT;
 	    break;
 
         case WCONFIG:
