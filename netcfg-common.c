@@ -422,7 +422,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 
 
 void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
-                         char *domain, char *hostname, u_int32_t nameservers[])
+			 char *hostname)
 {
     FILE *fp;
 
@@ -458,20 +458,8 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
                                        HOSTS_FILE, "/target" MAIL_FILE);
     }
 
-    if ((fp = file_open(RESOLV_FILE, "w"))) {
-        int i = 0;
-        if (domain)
-            fprintf(fp, "search %s\n", domain);
-
-        while (nameservers[i])
-            fprintf(fp, "nameserver %s\n",
-                    num2dot(nameservers[i++]));
-
-        fclose(fp);
-
-        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
-                                       RESOLV_FILE, "/target" RESOLV_FILE);
-    }
+    di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n", RESOLV_FILE,
+				   "/target" RESOLV_FILE);
 }
 
 int netcfg_get_ipaddress(struct debconfclient *client)
@@ -577,7 +565,8 @@ void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
         array[0] = 0;
 }
 
-static int netcfg_write_static(char *prebaseconfig)
+static int netcfg_write_static(char *prebaseconfig, char *domain,
+			       u_int32_t nameservers[])
 {
     FILE *fp;
 
@@ -610,6 +599,19 @@ static int netcfg_write_static(char *prebaseconfig)
         fclose(fp);
     } else
         goto error;
+
+    if ((fp = file_open(RESOLV_FILE, "w"))) {
+        int i = 0;
+        if (domain)
+            fprintf(fp, "search %s\n", domain);
+
+        while (nameservers[i])
+            fprintf(fp, "nameserver %s\n",
+                    num2dot(nameservers[i++]));
+
+        fclose(fp);
+    } else
+	goto error;
 
     return 0;
  error:
@@ -732,9 +734,8 @@ int netcfg_activate_static(struct debconfclient *client)
 
     strncat(progname, di_progname_get(), PATH_MAX-2);
 
-    netcfg_write_common(progname, ipaddress, domain, hostname,
-                        nameserver_array);
-    netcfg_write_static(progname);
+    netcfg_write_common(progname, ipaddress, hostname);
+    netcfg_write_static(progname, domain, nameserver_array);
 
     return 0;
 }
@@ -970,8 +971,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
             /* write configuration */
             strncat(progname, di_progname_get(), PATH_MAX-2);
 
-            netcfg_write_common(progname, ipaddress, domain, hostname,
-                                nameserver_array);
+            netcfg_write_common(progname, ipaddress, hostname);
             netcfg_write_dhcp(interface, dhcp_hostname);
             return 0;
         }
