@@ -40,9 +40,9 @@ extern int netcfg_get_interface(struct debconfclient *client, char **interface, 
 
 extern int netcfg_get_hostname(struct debconfclient *client, char **hostname);
 
-extern int netcfg_get_common (struct debconfclient *client, char **interface,
-			       char **hostname, char **domain,
-			       char **nameservers, int goback);
+extern int netcfg_get_nameservers (struct debconfclient *client, char **nameservers);
+
+extern int netcfg_get_domain(struct debconfclient *client,  char **domain);
 
 extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
 

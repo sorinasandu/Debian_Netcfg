@@ -400,56 +400,13 @@ netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 	char *ptr;
         int ret;
 
-	ret = my_debconf_input(client, "medium", "netcfg/get_nameservers", &ptr);
+	ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
 	if (*nameservers)
 		free(*nameservers);
 	*nameservers = NULL;
         if (ptr)
                 *nameservers = strdup(ptr);
 	return ret;
-}
-
-
-
-
-/*
- * @brief Get details common to both static & DHCP net configurations
- * @return 0 on success, 30 to goback. 
- *   If ret==0, interface, hostname, domain, nameservers set.
- */
-int
-netcfg_get_common(struct debconfclient *client, char **interface,
-                  char **hostname, char **domain, char **nameservers, int goback)
-{
-	int num_interfaces =0;
-	enum { GET_INTERFACE, GET_HOSTNAME, GET_DOMAIN, GET_NAMESERVERS, GOBACK, QUIT } 
-		state;
-
-	state = goback ? GET_NAMESERVERS : GET_INTERFACE ; 
-
-	/* netcfg_get_*() return either 30 to goback, or 0 to continue */
-	while (state != QUIT) {
-	switch (state) {
-		case GOBACK:
-			return 30;
-			break;
-		case GET_INTERFACE:
-			state = (netcfg_get_interface (client, interface, &num_interfaces)) ? GOBACK: GET_HOSTNAME;
-			break;
-		case GET_HOSTNAME:
-			state = (netcfg_get_hostname (client, hostname)) ? GOBACK: GET_DOMAIN;
-			break;
-		case GET_DOMAIN:
-			state = (netcfg_get_domain (client, domain)) ? GET_HOSTNAME : GET_NAMESERVERS;
-			break;
-		case GET_NAMESERVERS:
-			state = (netcfg_get_nameservers (client, nameservers)) ? GET_DOMAIN : QUIT;
-			break;
-		case QUIT:
-			break;
-		}
-	}
-	return 0;
 }
 		
 

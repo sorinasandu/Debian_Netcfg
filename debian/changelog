@@ -6,8 +6,11 @@ netcfg (0.31) unstable; urgency=low
     - apply debconf templates polishing
       (Thanks to Christian Perrier and
        Chris Tillman) (Closes: #219633)
+    - reworked state machine in netcfg-static to
+      show iface, ipaddr, p2p, netmask, gateway, 
+      nameservers, hostname, domain, confirm
 
- -- Gaudenz Steinlin <steinlin@sowipc4.unibe.ch>  Thu, 13 Nov 2003 20:44:54 +0100
+ -- Gaudenz Steinlin <steinlin@sowipc4.unibe.ch>  Thu, 13 Nov 2003 22:31:31 +0100
 
 netcfg (0.30) unstable; urgency=low
 
