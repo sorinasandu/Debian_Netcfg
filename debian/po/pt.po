@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: netcfg 0.62\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-09 18:32-0700\n"
-"PO-Revision-Date: 2004-04-10 11:14+0000\n"
+"PO-Revision-Date: 2004-04-10 23:14+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -48,10 +48,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"O nome do domínio é a parte de seu endereço Internet à direita do nome do "
+"O nome do domínio é a parte do seu endereço Internet à direita do nome do "
 "seu computador. Geralmente algo que finaliza com .com, .pt, .net, .edu ou ."
 "org. Caso esteja a configurar uma rede doméstica, pode usar qualquer nome, "
-"mas certifique-se de usar o mesmo nome de domínio em todos os computadores."
+"mas certifique-se que usa o mesmo nome de domínio em todos os computadores."
 
 #. Type: string
 #. Description
@@ -68,10 +68,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Por favor insira os endereços IP (e não os nomes dos computadores) de e até "
-"3 servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
-"servidor na lista será o primeiro a ser consultado. Caso você não queirausar "
-"nenhum servidor de nomes, deixe este campo em branco."
+"Por favor insira até 3 endereços IP (e não os nomes dos computadores) de "
+"servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
+"servidor na lista será o primeiro a ser consultado. Caso você não queira usar "
+"nenhum servidor de nomes, deixe este campo vazio."
 
 #. Type: select
 #. Description
@@ -86,7 +86,7 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"O seu sistem tem múltiplos interfaces de rede. Escolha o que vai utilizar "
+"O seu sistem tem vários interfaces de rede. Escolha o que vai utilizar "
 "como interface de rede primário enquanto instala Debian."
 
 #. Type: string
@@ -196,7 +196,7 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, informe o nome do computador (hostname) para este sistema."
+msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -530,7 +530,7 @@ msgid ""
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "Nenhum endereço IP foi encontrado durante a tentativa de configuração da "
-"rede com DHCP. Os servidores DHCP são ás vezes lentos. Caso deseje, pode "
+"rede com DHCP. Os servidores DHCP são por vezes lentos. Se desejar, pode "
 "tentar novamente."
 
 #. Type: text
@@ -615,9 +615,10 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"A máscara de rede é usada para determinar que computadores são locais na sua "
-"rede. Consulte o administrador da rede no caso de não saber o que usar. A "
-"máscara de rede deve ser informada como quatro números separados por pontos."
+"A máscara de rede é utilizada para determinar quais os computadores que são "
+"locais na sua rede. Consulte o administrador da rede no caso de não saber o "
+"que usar. A máscara de rede deve ser introduzida como quatro números "
+"separados por pontos."
 
 #. Type: string
 #. Description
@@ -636,12 +637,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"O gateway é um endereço IP (quatro numeros separados por pontos) que indica "
-"o roteador gateway, também conhecido como o roteador padrão. Todo o tráfego "
-"que vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
-"atravéz desse roteador. Em raras circunstâncias, pode não possuir um "
-"roteador, nesse caso, este campo deve ser deixado em branco. Caso não saiba "
-"a resposta correta para esta pergunta, consulte o admistrador da sua rede."
+"O gateway é um endereço IP (quatro números separados por pontos) que indica "
+"o router gateway, também conhecido como o router padrão. Todo o tráfego "
+"que vai para fora de sua LAN (e consequentemente, para a Internet) é enviado "
+"através desse router. Em raras circunstâncias, pode não possuir um router, "
+"nesse caso, este campo deve ser deixado em branco. Caso não saiba a resposta "
+"apropriada para esta pergunta, consulte o admistrador da sua rede."
 
 #. Type: error
 #. Description
