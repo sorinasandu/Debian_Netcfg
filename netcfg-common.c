@@ -26,6 +26,8 @@
 # define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 #endif
 
+#define empty_str(s) (s && *s == '\0')
+
 #include <assert.h>
 #include <ctype.h>
 #include <iwlib.h>
@@ -430,7 +432,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
     int ret;
     char *ptr;
         
-    ret = my_debconf_input(client, "medium", "netcfg/get_domain", &ptr);
+    ret = my_debconf_input(client, "high", "netcfg/get_domain", &ptr);
     if (ret)
         return ret;
     if (*domain)
@@ -473,7 +475,7 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress) {
             fprintf(fp, "127.0.0.1\tlocalhost\n");
-            if (domain && strlen(domain))
+            if (!empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         num2dot(ipaddress), hostname,
                         domain, hostname);
@@ -562,6 +564,8 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
     char *ptr;
     int ret;
 
+    debconf_subst(client, "netcfg/get_nameservers", "nameservers",
+	(gateway ? num2dot(gateway) : none));
     ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
     if (*nameservers)
         free(*nameservers);
@@ -638,7 +642,7 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 
     if ((fp = file_open(RESOLV_FILE, "w"))) {
         int i = 0;
-        if (domain && strlen(domain))
+        if (!empty_str(domain))
             fprintf(fp, "search %s\n", domain);
 
         while (nameservers[i])
@@ -1068,6 +1072,7 @@ int is_wireless_iface (const char* iface)
 
 int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
 {
+  enum { ADHOC, MANAGED } mode = MANAGED;
   int ret;
   char* tf = NULL;
   wireless_config wconf;
@@ -1078,13 +1083,25 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   iw_get_basic_config (wfd, iface, &wconf);
 
   debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
+  debconf_subst(client, "netcfg/wireless_adhoc_managed", "iface", iface);
+
+  ret = my_debconf_input(client, "low", "netcfg/wireless_adhoc_managed", &tf);
+
+  if (ret == 30)
+    return ret;
+
+  if (!strcmp(tf, "Ad-hoc network (Peer to peer)"))
+    mode = ADHOC;
+
+  tf = NULL;
+  
   ret = my_debconf_input(client, "low", "netcfg/wireless_essid", &tf);
 
   if (ret == 30)
     return ret;
   
   /* question not asked or user doesn't care or we're successfully associated */
-  if (strlen(wconf.essid) != 0 || (tf && *tf == '\0')) 
+  if (!empty_str(wconf.essid) || empty_str(tf)) 
   {
     /* Default to mode managed, AP any */
     wconf.essid[0] = '\0';
@@ -1104,7 +1121,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
     if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
       user_essid = tf;
     
-    while (!user_essid || (user_essid && user_essid[0] == '\0') ||
+    while (!user_essid || empty_str(user_essid) ||
 	strlen(user_essid) > IW_ESSID_MAX_SIZE)
     {
       debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
@@ -1143,7 +1160,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   if (ret == 30)
     return ret;
 
-  if (rv && *rv == '\0')
+  if (empty_str(rv))
     return 0;
 
   while ((keylen = iw_in_key (rv, buf)) == -1)

@@ -2,6 +2,10 @@ netcfg (0.46) UNRELEASED; urgency=low
 
   * Joshua Kwan
     - Added wireless configuration support for ESSIDs and WEP keys
+      using libiw. (Closes: #225512, #214491)
+    - Made default text for nameserver match gateway when in static
+      configuration. (Closes: #231106)
+    - Bump netcfg/get_domain to priority high. (Closes: #231107)
       using libiw.
   * Joey Hess
     - First round of template polishing on new templates.
@@ -11,7 +15,7 @@ netcfg (0.46) UNRELEASED; urgency=low
     - Elian Myftiu
       - Updated Albanian translation (sq.po)
 
- -- Miroslav Kure <kurem@debian.cz>  Sun, 22 Feb 2004 20:27:38 +0100
+ -- Joshua Kwan <joshk@triplehelix.org>  Mon, 23 Feb 2004 01:53:21 -0800
 
 netcfg (0.45) unstable; urgency=low
 

@@ -41,7 +41,7 @@ int netcfg_get_method(struct debconfclient *client)
     char *method;
     int ret;
 
-    ret = my_debconf_input(client, "medium", "netcfg/get_method", &method);
+    ret = my_debconf_input(client, "high", "netcfg/get_method", &method);
 
     if (strcmp(method, "Dynamic addressing (DHCP)") == 0) 
 	netcfg_method = DHCP;
@@ -57,6 +57,7 @@ int main(void)
     int num_interfaces = 0;
     enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
+    static int requested_wireless_tools = 0;
 
     /* initialize libd-i */
     di_system_init("netcfg");
@@ -117,6 +118,11 @@ int main(void)
 	    }
 	    break;
 	case WCONFIG:
+	    if (requested_wireless_tools == 0)
+	    {
+	      di_exec_shell_log("apt-install wireless-tools");
+	      requested_wireless_tools = 1;
+	    }
 	    if (netcfg_wireless_set_essid (client, interface) == 30
 		|| netcfg_wireless_set_wep (client, interface) == 30)
 	    {
