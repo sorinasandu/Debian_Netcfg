@@ -1,4 +1,4 @@
-# translation of de.po to 
+# translation of de.po to
 # translation of de.po to
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
@@ -10,15 +10,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: de\n"
+"Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-07-12 12:51+0200\n"
-"Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
-"Language-Team:  <gnome-de@gnome.org>\n"
+"PO-Revision-Date: 2004-07-20 12:39GMT\n"
+"Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
+"Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #. Type: boolean
 #. Description
@@ -194,7 +195,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Die ESSID \"${essid}\" ist ungültig. ESSIDs dürfen nur 32 Zeichen lang sein, "
+"Die ESSID »${essid}« ist ungültig. ESSIDs dürfen nur 32 Zeichen lang sein, "
 "können aber alle Arten von Zeichen enthalten."
 
 #. Type: string
@@ -233,7 +234,7 @@ msgstr "Ungültiger Rechnername"
 #. Description
 #: ../netcfg-common.templates:84
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Der Rechnername \"${hostname}\" ist ungültig."
+msgstr "Der Rechnername »${hostname}« ist ungültig."
 
 #. Type: error
 #. Description
@@ -310,10 +311,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Drahtlose Netzwerke sind entweder \"managed\" oder \"ad-hoc\". Wenn Sie "
-"einen echten Access Point benutzen, ist Ihr Netzwerk \"managed\". Wenn ein "
+"Drahtlose Netzwerke sind entweder »managed« oder »ad-hoc«. Wenn Sie "
+"einen echten Access Point benutzen, ist Ihr Netzwerk »managed«. Wenn ein "
 "anderer Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich "
-"\"ad-hoc\"."
+"»ad-hoc«."
 
 #. Type: text
 #. Description
@@ -450,9 +451,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"In einigen Situationen muss man einen DHCP Rechnername angeben. Das kommt "
-"selten vor, vor allem aber bei Kabelmodembenutzern. Wenn Sie ein Kabelmodem "
-"besitzen, muss hier oft eine Benutzernummer angegeben werden."
+"In einigen Situationen muss man einen DHCP Rechnername angeben. Wenn Sie ein "
+"Kabelmodem besitzen, muss hier oft eine Benutzernummer angegeben werden."
 
 #. Type: string
 #. Description
@@ -488,8 +488,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -507,8 +506,7 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr ""
-"Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
+msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername"
 
 #. Type: select
 #. Choices
@@ -526,7 +524,7 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "Netzwerk jetzt nicht einrichten"
+msgstr "Netzwerk unkonfiguriert belassen"
 
 #. Type: select
 #. Description
@@ -612,8 +610,7 @@ msgstr "Das drahtlose Netzwerk neu konfigurieren"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -630,7 +627,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "Die IP-Adresse bestimmt eindeutig Ihren Computer und besteht aus vier durch "
-"Punkte getrennten Zahlen. Wenn Sie Ihre Nummer nicht kennen, fragen Sie "
+"Punkte getrennten Zahlen. Wenn Sie Ihre IP-Adresse nicht kennen, fragen Sie "
 "Ihren Netzwerkadministrator."
 
 #. Type: error
@@ -728,8 +725,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -768,5 +764,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
