@@ -61,7 +61,7 @@ mii_diag_status_lite (char *ifname)
     new_ioctl_nums = 0;
   } else {
     close(skfd);
-    return STATIC;
+    return DUNNO;
   }
 
   if ((mdio_read(skfd, (unsigned)data[0], 1) & 0x0004) == 0)

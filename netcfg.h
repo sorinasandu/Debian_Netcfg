@@ -14,7 +14,7 @@
 #define _GNU_SOURCE
 
 enum { NOT_ASKED = 30, GO_BACK };
-typedef enum { DHCP, STATIC } method_t;
+typedef enum { DHCP, STATIC, DUNNO } method_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd;

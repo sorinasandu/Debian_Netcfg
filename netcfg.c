@@ -87,7 +87,10 @@ int main(void)
 	    else
 	    {
 	        /* See if link is established? */
-		netcfg_method = mii_diag_status_lite(interface);
+	        method_t tmp = mii_diag_status_lite(interface);
+		
+		if (tmp != DUNNO)
+		  netcfg_method = tmp;
 
 		if (netcfg_method == DHCP) 
 		    state = GET_DHCP;
