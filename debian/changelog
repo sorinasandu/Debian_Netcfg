@@ -8,6 +8,17 @@ netcfg (0.71) UNRELEASED; urgency=low
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
+    - *.c:
+      + Test for NULL pointers before using empty_str()
+    - netcfg.c, netcfg-dhcp.c, netcfg-static.c
+      + Handle the case where there are no interfaces.  Just ask for a
+        hostname and write basic /etc/network/interfaces and /etc/hosts
+        files.  (Closes: #243543)
+    - netcfg-common.c:
+      + netcfg_get_interface(): Don't exit if there are no interfaces.
+        Instead just return with variables set to 0.
+      + netcfg_write_common(): write basic /etc/network/interfaces and
+        /etc/hosts files even if the ipaddress is 0.
     - static.c:
       + Add resolvconf support (Closes: #255187)
       + Add comments to /e/n/i about which packages implement which options
@@ -32,9 +43,7 @@ netcfg (0.71) UNRELEASED; urgency=low
         . Always use spaces for indentation
         . Improve comments
         . Reorder state machine states
-        . Move kill_dhcp_client() to top of file
-    - prebaseconfig
-      + Don't cp /etc/dhclient.conf and /etc/dhcp3/dhclient.conf to target
+        . Move some functions around
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 

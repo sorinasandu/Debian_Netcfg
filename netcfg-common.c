@@ -524,15 +524,25 @@ void netcfg_write_loopback (void)
   }
 }
 
+/*
+ * ipaddress.s_addr may be 0
+ * domain may be null
+ * interface may be null
+ * hostname may _not_ be null
+ */
 void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 {
     FILE *fp;
 
+    if (!hostname)
+      return;
+
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
         fprintf(fp, HELPFUL_COMMENT);
+        fprintf(fp, "\n# The loopback network interface\n");
         fprintf(fp, "auto lo\n");
         fprintf(fp, "iface lo inet loopback\n");
-        if (iface_is_hotpluggable(interface)) {
+        if (interface && iface_is_hotpluggable(interface)) {
             fprintf(fp, "\n");
             fprintf(fp, "# This is a list of hotpluggable network interfaces.\n");
             fprintf(fp, "# They will be activated automatically by the "
@@ -541,7 +551,6 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
             fprintf(fp, "\tscript grep\n");
             fprintf(fp, "\tmap %s\n", interface);
         }
-
 	fclose(fp);
     }
 
@@ -561,7 +570,7 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
         if (ipaddress.s_addr)
         {
           inet_ntop (AF_INET, &ipaddress, ptr1, sizeof(ptr1));
-          if (!empty_str(domain))
+          if (domain && !empty_str(domain))
             fprintf(fp, "\n%s\t%s.%s\t%s\n", ptr1, hostname, domain, hostname);
           else
             fprintf(fp, "\n%s\t%s\n", ptr1, hostname);

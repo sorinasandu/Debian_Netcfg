@@ -33,7 +33,7 @@ int main(int argc, char** argv)
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
 
-    enum { BACKUP, GET_INTERFACE, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT} state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_HOSTNAME_ONLY, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT} state = GET_INTERFACE;
     
     /* initialize libd-i */
     di_system_init("netcfg-static");
@@ -54,15 +54,24 @@ int main(int argc, char** argv)
 	    if (netcfg_get_interface(client, &interface, &num_interfaces))
 		state = BACKUP;
 	    else if (! interface || ! num_interfaces)
-	    {
-	      state = BACKUP;
-	    }
+		state = GET_HOSTNAME_ONLY;
 	    else
 	    {
 	      if (is_wireless_iface(interface))
 		state = WCONFIG;
 	      else
 	        state = GET_STATIC;
+	    }
+	    break;
+	case GET_HOSTNAME_ONLY:
+	    if(netcfg_get_hostname(client, "netcfg/get_hostname", &hostname, 0))
+	      state = BACKUP;
+	    else
+	    {
+	      struct in_addr null_ipaddress;
+	      null_ipaddress.s_addr = 0;
+	      netcfg_write_common(null_ipaddress, hostname, NULL);
+	      return 0;
 	    }
 	    break;
 	case GET_STATIC:
