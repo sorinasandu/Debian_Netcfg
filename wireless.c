@@ -25,7 +25,7 @@ int is_wireless_iface (const char* iface)
   return (iw_get_basic_config (wfd, (char*)iface, &wc) == 0);
 }
 
-int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
+int netcfg_wireless_set_essid (struct debconfclient * client, char *iface, char* priority)
 {
   int ret, couldnt_associate = 0;
   wireless_config wconf;
@@ -36,7 +36,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
   debconf_subst(client, "netcfg/wireless_adhoc_managed", "iface", iface);
 
-  debconf_input(client, "low", "netcfg/wireless_adhoc_managed");
+  debconf_input(client, priority ? priority : "low", "netcfg/wireless_adhoc_managed");
 
   if (debconf_go(client) == 30)
     return GO_BACK;
@@ -49,7 +49,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   wconf.has_mode = 1;
   wconf.mode = mode;
 
-  debconf_input(client, "low", "netcfg/wireless_essid");
+  debconf_input(client, priority ? priority : "low", "netcfg/wireless_essid");
 
   if (debconf_go(client) == 30)
     return GO_BACK;

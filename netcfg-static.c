@@ -79,7 +79,7 @@ int main(int argc, char** argv)
 	    break;
 
 	case WCONFIG_ESSID:
-	    if (netcfg_wireless_set_essid (client, interface))
+	    if (netcfg_wireless_set_essid (client, interface, NULL))
 	      state = BACKUP;
 	    else
 	      state = WCONFIG_WEP;

@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
 	    break;
 
 	case WCONFIG_ESSID:
-	    if (netcfg_wireless_set_essid (client, interface) == GO_BACK)
+	    if (netcfg_wireless_set_essid (client, interface, NULL) == GO_BACK)
 	      state = BACKUP;
 	    else
 	      state = WCONFIG_WEP;
