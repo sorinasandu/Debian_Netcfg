@@ -93,16 +93,17 @@ int main(int argc, char *argv[])
 	    return 10;
 	case GET_INTERFACE:
 		/* Choose a default from ethtool-lite */
-		get_all_ifs(1, &ifaces);
-		
-		while (*ifaces)
+		if (get_all_ifs(1, &ifaces) > 1)
 		{
-			if (ethtool_lite (*ifaces) == 1) /* CONNECTED */
+			while (*ifaces)
 			{
-				defiface = strdup(*ifaces);
-				break;
+				if (ethtool_lite (*ifaces) == 1) /* CONNECTED */
+				{
+					defiface = strdup(*ifaces);
+					break;
+				}
+				ifaces++;
 			}
-			ifaces++;
 		}
 		
 	    if(netcfg_get_interface(client, &interface, &num_interfaces, defiface))

@@ -32,7 +32,8 @@ Choices: ${ifchoices}
 Default: ${ifdefault}
 _Description: Primary network interface:
  Your system has multiple network interfaces. Choose the one to use as
- the primary network interface while installing Debian.
+ the primary network interface while installing Debian. If possible, the
+ first connected network interface found has been selected.
 
 Template: netcfg/wireless_essid
 Type: string
