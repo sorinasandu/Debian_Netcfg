@@ -48,10 +48,10 @@ static char *none;
 
 static char *my_debconf_input(char *priority, char *template)
 {
-        client->command(client, "fset", template, "seen", "false", NULL);
-        client->command(client, "input", priority, template, NULL);
-        client->command(client, "go", NULL);
-        client->command(client, "get", template, NULL);
+        debconf_fset(client, template, "seen", "false");
+        debconf_input(client, priority, template);
+        debconf_go(client);
+        debconf_get(client,  template);
         return client->value;
 }
 
@@ -66,9 +66,8 @@ static void netcfg_get_static()
         ptr = my_debconf_input("critical", "netcfg/get_ipaddress");
         dot2num(&ipaddress, ptr);
 
-        client->command(client, "subst", "netcfg/confirm_static",
-                        "ipaddress",
-                        (ipaddress ? num2dot(ipaddress) : none), NULL);
+        debconf_subst(client, "netcfg/confirm_static", "ipaddress",
+                        (ipaddress ? num2dot(ipaddress) : none));
 
         if (strncmp(interface, "plip", 4) == 0
             || strncmp(interface, "slip", 4) == 0
@@ -86,8 +85,7 @@ static void netcfg_get_static()
                 dot2num(&netmask, ptr);
                 gateway = ipaddress & netmask;
                 
-                client->command(client, "set", "netcfg/get_gateway",
-                                num2dot(gateway+1), NULL);
+                debconf_set(client, "netcfg/get_gateway", num2dot(gateway+1));
 
                 ptr = my_debconf_input("critical", "netcfg/get_gateway");
                 dot2num(&gateway, ptr);
@@ -95,25 +93,19 @@ static void netcfg_get_static()
                 network = ipaddress & netmask;
 
                 if (gateway && ((gateway & netmask) != network)) {
-                        client->command(client, "input", "high",
-                                        "netcfg/gateway_unreachable",
-                                        NULL);
-                        client->command(client, "go", NULL);
+                        debconf_input(client, "high", "netcfg/gateway_unreachable");
+                        debconf_go(client);
                 }
         }
 
-        client->command(client, "subst", "netcfg/confirm_static",
-                        "netmask", (netmask ? num2dot(netmask) : none),
-                        NULL);
+        debconf_subst(client, "netcfg/confirm_static", "netmask", 
+		      (netmask ? num2dot(netmask) : none));
 
-        client->command(client, "subst", "netcfg/confirm_static",
-                        "gateway", (gateway ? num2dot(gateway) : none),
-                        NULL);
+        debconf_subst(client, "netcfg/confirm_static", "gateway", 
+		      (gateway ? num2dot(gateway) : none));
 
-        client->command(client, "subst", "netcfg/confirm_static",
-                        "pointopoint",
-                        (pointopoint ? num2dot(pointopoint) : none),
-                        NULL);
+        debconf_subst(client, "netcfg/confirm_static", "pointopoint",
+                        (pointopoint ? num2dot(pointopoint) : none));
 
         broadcast = (network | ~netmask);
 }
@@ -204,9 +196,8 @@ static int netcfg_activate_static()
 #endif
 
         if (rv != 0) {
-                client->command(client, "input", "critical",
-                                "netcfg/error_cfg", NULL);
-                client->command(client, "go", NULL);
+                debconf_input(client, "critical", "netcfg/error_cfg");
+                debconf_go(client);
         }
         return 0;
 }
@@ -218,30 +209,25 @@ int main(int argc, char *argv[])
         char *nameservers = NULL;
 
         client = debconfclient_new();
-        client->command(client, "SETTITLE", "netcfg/static-title", NULL);
+        // debconf_(client, "SETTITLE", "netcfg/static-title", NULL);
 
 
-        client->command(client, "METAGET", "netcfg/internal-none", "description", NULL);
+        debconf_metaget(client,  "netcfg/internal-none", "description");
         none = client->value ? strdup(client->value) : strdup("<none>");
 
         do {
                 netcfg_get_common(client, &interface, &hostname, &domain,
                                   &nameservers);
 
-                client->command(client, "subst", "netcfg/confirm_static",
-                                "interface", interface, NULL);
+                debconf_subst(client, "netcfg/confirm_static", "interface", interface);
 
-                client->command(client, "subst", "netcfg/confirm_static",
-                                "hostname", hostname, NULL);
+                debconf_subst(client, "netcfg/confirm_static", "hostname", hostname);
 
-                client->command(client, "subst", "netcfg/confirm_static",
-                                "domain", (domain ? domain : none),
-                                NULL);
+                debconf_subst(client, "netcfg/confirm_static", "domain", (domain ? domain : none));
 
-                client->command(client, "subst", "netcfg/confirm_static",
-                                "nameservers",
-                                (nameservers ? nameservers : none),
-                                NULL);
+                debconf_subst(client, "netcfg/confirm_static", "nameservers",
+                              (nameservers ? nameservers : none));
+
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 
                 netcfg_get_static();

@@ -53,10 +53,10 @@ static char *none;
 
 static char *my_debconf_input(char *priority, char *template)
 {
-        client->command(client, "fset", template, "seen", "false", NULL);
-        client->command(client, "input", priority, template, NULL);
-        client->command(client, "go", NULL);
-        client->command(client, "get", template, NULL);
+        debconf_fset(client, template, "seen", "false");
+        debconf_input(client, priority, template);
+        debconf_go(client);
+        debconf_get(client, template);
         return client->value;
 }
 
@@ -67,17 +67,15 @@ static void netcfg_get_dhcp()
                 dhcp_hostname = NULL;
         }
 
-        client->command(client, "input", "low", "netcfg/dhcp_hostname",
-                        NULL);
-        client->command(client, "go", NULL);
-        client->command(client, "get", "netcfg/dhcp_hostname", NULL);
+        debconf_input(client, "low", "netcfg/dhcp_hostname");
+        debconf_go(client);
+        debconf_get(client, "netcfg/dhcp_hostname");
 
         if (strcmp (client->value, "") != 0)
                 dhcp_hostname = strdup(client->value);
 
-        client->command(client, "subst", "netcfg/confirm_dhcp",
-                        "dhcp_hostname",
-                        (dhcp_hostname ? dhcp_hostname : none), NULL);
+        debconf_subst(client, "netcfg/confirm_dhcp", "dhcp_hostname",
+                     (dhcp_hostname ? dhcp_hostname : none));
 }
 
 
@@ -136,9 +134,9 @@ int main(int argc, char *argv[])
         int finished = 0;
         struct stat buf;
         client = debconfclient_new();
-        client->command(client, "SETTITLE", "netcfg/dhcp-title", NULL);
+        // client->command(client, "SETTITLE", "netcfg/dhcp-title", NULL);
 
-        client->command(client, "METAGET", "netcfg/internal-none", "description", NULL);
+        debconf_metaget(client, "netcfg/internal-none", "description");
         none = client->value ? strdup(client->value) : strdup("<none>");
 
         if (stat("/sbin/dhclient", &buf) == 0)
@@ -148,9 +146,8 @@ int main(int argc, char *argv[])
         else if (stat("/sbin/udhcpc", &buf) == 0)
                 dhcp_client = UDHCPC;
         else {
-                client->command(client, "input", "critical",
-                                "netcfg/no_dhcp_client", NULL);
-                client->command(client, "go", NULL);
+                debconf_input(client, "critical", "netcfg/no_dhcp_client");
+                debconf_go(client);
                 exit(1);
         }
 
@@ -159,22 +156,17 @@ int main(int argc, char *argv[])
                 netcfg_get_interface(client, &interface);
 		netcfg_get_hostname(client, &hostname);
 
-                client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "interface", interface, NULL);
+                debconf_subst(client, "netcfg/confirm_dhcp", "interface", interface);
 
-                client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "hostname", hostname, NULL);
+                debconf_subst(client, "netcfg/confirm_dhcp", "hostname", hostname);
 
-                client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "domain", (domain ? domain : none),
-                                NULL);
+                debconf_subst(client, "netcfg/confirm_dhcp", "domain", 
+		         	(domain ? domain : none));
 
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 
-                client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "nameservers",
-                                (nameservers ? nameservers : none),
-                                NULL);
+                debconf_subst(client, "netcfg/confirm_dhcp", "nameservers",
+                                (nameservers ? nameservers : none));
                 netcfg_get_dhcp();
 
 

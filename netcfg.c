@@ -38,10 +38,10 @@
 static char *my_debconf_input(struct debconfclient *client, char *priority,
                            char *template)
 {
-        client->command(client, "fset", template, "seen", "false", NULL);
-        client->command(client, "input", priority, template, NULL);
-        client->command(client, "go", NULL);
-        client->command(client, "get", template, NULL);
+        debconf_fset(client, template, "seen", "false");
+        debconf_input(client, priority, template);
+        debconf_go(client);
+        debconf_get(client, template);
         return client->value;
 }
 
@@ -148,11 +148,11 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
 
         if (strlen(ifp) < 100) {
             sprintf(template, "netcfg/internal-%s", ifp);
-            client->command(client, "METAGET", template, "description", NULL);
+            debconf_metaget(client, template, "description");
             if (client->value != NULL)
                 return strdup(client->value);
         }
-        client->command(client, "METAGET", "netcfg/internal-unknown-iface", "description", NULL);
+        debconf_metaget(client, "netcfg/internal-unknown-iface", "description");
         if (client->value != NULL)
             return strdup(client->value);
         else
@@ -227,8 +227,8 @@ char *num2dot(u_int32_t num)
 
 void netcfg_die(struct debconfclient *client)
 {
-        client->command(client, "input", "high", "netcfg/error", NULL);
-        client->command(client, "go", NULL);
+        debconf_input(client, "high", "netcfg/error");
+        debconf_go(client);
         exit(1);
 }
 
@@ -270,14 +270,12 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
         getif_end();
 
         if (num_interfaces == 0) {
-                client->command(client, "input", "high",
-                                "netcfg/no_interfaces", NULL);
-                client->command(client, "go", NULL);
+                debconf_input(client, "high", "netcfg/no_interfaces");
+                debconf_go(client);
                 free(ptr);
                 exit(1);
         } else if (num_interfaces > 1) {
-                client->command(client, "subst", "netcfg/choose_interface",
-                                "ifchoices", ptr, NULL);
+                debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
                 free(ptr);
                 inter =
                     my_debconf_input(client, "high",
@@ -328,15 +326,13 @@ netcfg_get_hostname(struct debconfclient *client, char **hostname)
                     (strspn(*hostname, valid_chars) != len) ||
 		    ((*hostname)[len - 1] == '-') ||
 		    ((*hostname)[0] == '-')) {
-			client->command(client, "subst", "netcfg/invalid_hostname",
-					"hostname", *hostname, NULL);
-                        client->command(client, "input", "high",
-                                        "netcfg/invalid_hostname", NULL);
-                        client->command(client, "go", NULL);
+			debconf_subst(client, "netcfg/invalid_hostname",
+					"hostname", *hostname);
+                        debconf_input(client, "high", "netcfg/invalid_hostname");
+                        debconf_go(client);
 			free(*hostname);
 			*hostname = NULL;
-                        client->command(client, "set",
-                                        "netcfg/get_hostname", "debian", NULL);
+                        debconf_set(client, "netcfg/get_hostname", "debian");
 		}
         
 	} while (!*hostname);
