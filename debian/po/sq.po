@@ -1,0 +1,559 @@
+# Translators, if you are not familiar with the PO format, gettext
+# documentation is worth reading, especially sections dedicated to
+# this format, e.g. by running:
+# info -n '(gettext)PO Files'
+# info -n '(gettext)Header Entry'
+# Some information specific to po-debconf are available at
+# /usr/share/doc/po-debconf/README-trans
+# or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Developers do not need to manually edit POT or PO files.
+# , fuzzy
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: netcfg 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"PO-Revision-Date: 2004-01-31 16:02+0100\n"
+"Last-Translator: Elian Myftiu <elian@lycos.com>\n"
+"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:4
+msgid "Dynamic addressing (DHCP), Static addressing (manual)"
+msgstr "Adresimi Dinamik (DHCP), adresimi statik (manual)"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid "Network configuration method:"
+msgstr "Mënyra e konfigurimit të rrjetit:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:5
+msgid ""
+"Networking can either be configured by DHCP or by manually entering all the "
+"information. If you choose DHCP and the installer is unable to get a working "
+"configuration from a DHCP server on your network, you will be given the "
+"opportunity to configure your network manually after the atempt to configure "
+"it by DHCP. If unsure choose DHCP."
+msgstr ""
+"Rrjeti mund të konfigurohet ose nga DHCP ose duke futur vetë gjithë të "
+"dhënat. Nëse zgjedh DHCP dhe instaluesi nuk arrin të lidhet me një server "
+"DHCP në rrjetin tënd, do të të jepet mundësia të konfigurosh vetë rrjetin. "
+"Nëse nuk je i sigurtë zgjidh DHCP."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid "Domain name:"
+msgstr "Emri i zonës (domain):"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:15
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Emri i zonës (domain) është pjesa e adresës tënde të Internetit në të "
+"djathtë të emrit të strehuesit (host).  Shpesh është diçka që mbaron "
+"me .com, .net, .edu, apo . org.  Nëse po konfiguron një rrjet shtpëiak, "
+"mund të sajosh diçka, por sigurohu që përdor të njëjtin emër zone "
+"(domain) në të gjithë kompjuterat tuaj."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid "Name server addresses:"
+msgstr "Adresat e serverit DNS:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:23
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The first server in the list will be "
+"the first to be queried. If you don't want to use any name server, just "
+"leave this field blank."
+msgstr ""
+"Të lutem shkruaj adresat IP (jo emrat e strehuesve) të deri 3 serverave "
+"DNS të ndara nga hapësira. Mos përdor presje. Serverat do pyeten sipas "
+"renditjes në listë. Mund ta lësh bosh këtë fushë nëse nuk dëshiron të "
+"përdoresh servera DNS."
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid "Primary network interface:"
+msgstr "Përballja kryesore e rrjetit:"
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:32
+msgid ""
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
+msgstr ""
+"Sistemi juaj ka përballje të shumta rrjeti. Zgjidh njërën për ta "
+"përdorur si kryesoren duke instalur Debian."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:38
+msgid "Error while activating the network"
+msgstr "Gabim gjatë aktivizimit të rrjetit"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:38
+msgid "An error occurred while activating the network."
+msgstr "Ndodhi një gabim gjatë aktivizimit të rrjetit."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid "Hostname:"
+msgstr "Emri i kompjuterit:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid "Please enter the hostname for this system."
+msgstr "Të lutem shkruaj emrin e këtij sistemi."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:44
+msgid ""
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
+"administrator. If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Emri i kompjuterit është një fjalë e vetme që identifikon sistemin tënd "
+"në rrjet. Nëse nuk di si duhet të jetë ky emër, këshillohu me drejtuesin "
+"e rrjetit tënd. Nëse po konfiguron një rrjet shtëpiak, mund të sajosh "
+"diçka këtu."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid "Invalid hostname"
+msgstr "Emër kompjuteri i pavlefshëm"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid "The name \"${hostname}\" is invalid."
+msgstr "Emri \"${hostname}\" është i pavlefshëm."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:54
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign. It must be between 2 and 63 characters long, and may not begin or end "
+"with a minus sign."
+msgstr ""
+"Një emër kompjuteri i vlefshëm mund të përmbajë vetëm gërma alfanumerike "
+"dhe shenjën minus. Duhet të jetë i gjatë nga 2 deri në 63 gërma, dhe nuk mund "
+"të fillojë apo mbarojë me shenjën minus."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:63
+msgid "Error"
+msgstr "Gabim"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:63
+msgid ""
+"An error occured and the network configuration process has been aborted. You "
+"may retry it from the installation main menu."
+msgstr ""
+"Ndodhi një gabim dhe proçesi i konfigurimit të rrjetit dështoi. Mund ta "
+"riprovosh nga menuja kryesore e instalimit."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid "No network interfaces detected"
+msgstr "Nuk u gjet asnjë përballje rrjeti"
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid ""
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
+msgstr ""
+"Nuk u gjet asnjë përballje rrjeti. Sistemi i instalimit nuk arriti të gjejë asnjë "
+"dispozitiv rrjeti."
+
+#. Type: error
+#. Description
+#: ../netcfg-common.templates:69
+msgid ""
+"You may need to load a specific module for your network card, if you have "
+"one. For this, go back to the network hardware detection step."
+msgstr ""
+"Ndoshta duhet të ngarkosh modulin përkatës për kartën e rrjetit tënd, "
+"nëse ke një të tillë. Për këtë, kthehu mbrapa tek hapi i gjetjes së kartës "
+"së rrjetit."
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:78
+msgid "<none>"
+msgstr "<asnjë>"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:82
+msgid "Ethernet or Fast Ethernet"
+msgstr "Ethernet ose Fast Ethernet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:86
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr "PC-Card (PCMCIA) Ethernet ose Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:90
+msgid "Token Ring"
+msgstr "Token Ring"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:94
+msgid "Arcnet"
+msgstr "Arcnet"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:98
+msgid "Serial-line IP"
+msgstr "Serial-line IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:102
+msgid "Parallel-port IP"
+msgstr "Parallel-port IP"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:106
+msgid "Point-to-Point Protocol"
+msgstr "Protokolli Point-to-Point"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:110
+msgid "IPv6-in-IPv4"
+msgstr "IPv6-in-IPv4"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:114
+msgid "ISDN Point-to-Point Protocol"
+msgstr "Protokolli Point-to-Point ISDN"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:118
+msgid "Channel-to-channel"
+msgstr "Channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:122
+msgid "Real channel-to-channel"
+msgstr "Real channel-to-channel"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:126
+msgid "Hypersocket"
+msgstr "Hypersocket"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:130
+msgid "Inter-user communication vehicle"
+msgstr "Inter-user communication vehicle"
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:134
+msgid "Unknown interface"
+msgstr "Përballje e panjohur"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:139
+msgid "Network Configuration"
+msgstr "Konfigurimi i Rrjetit"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:144
+msgid "Configure the network"
+msgstr "Konfiguro rrjetin"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "DHCP hostname:"
+msgstr "Emri DHCP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here."
+msgstr ""
+"Ndoshta duhet të shkruash një emër DHCP. Nëse je duke përdorur një "
+"cable modem ,duhet të përcaktosh një numër llogarie këtu."
+
+#. Type: string
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "Most other users can just leave this blank."
+msgstr "Shumë përdorues mund ta lënë bosh këtë."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Is this information correct?"
+msgstr "A janë këto të dhëna të sakta?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
+msgid "Currently configured network parameters:"
+msgstr "Parametrat e rrjetit të sapo konfiguruar:"
+
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" përballja                  = ${interface}\n"
+" emri i kompjuterit  = ${hostname}\n"
+" zona (domain)          = ${domain}\n"
+" emri dhcp                = ${dhcp_hostname}\n"
+" serverat DNS           = ${nameservers}"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:23
+msgid "Configuring the network with DHCP"
+msgstr "Duke konfiguruar rrjetin me DHCP"
+
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:27
+msgid "This may take some time."
+msgstr "Kjo mund të kërkojë pak kohë."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client found"
+msgstr "Nuk u gjet asnjë klient DHCP"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "No DHCP client was found. This package requires pump or dhcp-client."
+msgstr "Nuk u gjet asnjë klient DHCP. Ky paket kërkon pump ose dhcp-client."
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:31
+msgid "The DHCP configuration process will be aborted."
+msgstr "Proçesi i konfigurimit DHCP do ndalojë."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid "Do you want to retry DHCP network configuration?"
+msgstr "Dëshiron të riprovosh konfigurimin e rrjetit DHCP?"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. If you wish, you can retry."
+msgstr ""
+"Nuk u ofrua asnjë adresë IP gjatë konfigurimit të rrjetit me DHCP.  Serverat "
+"DHCP janë shpesh herë të ngadaltë."
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-dhcp.templates:46
+msgid "Dynamic network configuration (DHCP)"
+msgstr "Konfigurimi dinamik i rrjetit (DHCP)"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-dhcp.templates:51
+msgid "Configure the network using dynamic addressing (DHCP)"
+msgstr "Konfiguro rrjetin duke përdorur DHCP"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address:"
+msgstr "Adresa IP:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"Adresa IP është unike për kompjutrin tënd dhe përbëhet nga katër "
+"numra të ndarë nga pika.  Nëse nuk di çfarë të përdorësh këtu, "
+"këshillohu me drejtuesin e rrjetit."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Point-to-point address:"
+msgstr "Adresa point-to-point:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The point-to-point address is used to determine the other endpoint of the "
+"point to point network.  Consult your network administrator if you do not "
+"know the value.  The point-to-point address should be entered as four "
+"numbers separated by periods."
+msgstr ""
+"Adresa point-to-point përdoret për të vendosur pikën tjetër të rrjetit "
+"point-to-point.  Këshillohu me drejtuesin e rrjetit nëse nuk njeh të "
+"dhënat.  Adresa point-to-point duhet të jenë katër shifra të ndarë "
+"nga pika."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask:"
+msgstr "Netmask:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Netmask përdoret për të caktuar cilat kompjutera duhet të ndodhen në rrjetin "
+"tënd lokal.  Këshillohu me drejtuesin e rrjetit nëse nuk njeh vlerat.  Netmask "
+"duhet të jenë katër shifra të ndara nga pika."
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway:"
+msgstr "Gateway:"
+
+#. Type: string
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"The gateway is an IP address (four numbers separated by periods) that "
+"indicates the gateway router, also known as the default router.  All traffic "
+"that goes outside your LAN (for instance, to the Internet) is sent through "
+"this router.  In rare circumstances, you may have no router; in that case, "
+"you can leave this blank.  If you don't know the proper answer to this "
+"question, consult your network administrator."
+msgstr ""
+"Gateway është një adresë IP (katër numra të ndarë nga pika) që tregojnë "
+"router gateway, i njohur edhe si router i prezgjedhur.  I gjithë trafiku "
+"që del jashtë rrjetit tënd LAN (p.sh, në Internet) dërgohet nëpërmjet "
+"këtij router-i.  Ka raste të rralla, kur mund të mos kesh router, në këtë "
+"rast mund ta lësh bosh këtë fushë.  Nëse nuk di çfarë përgjigje të japësh "
+"këshillohu me drejtuesin e rrjetit."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "Unreachable gateway"
+msgstr "Gateway i paarritshëm"
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid "The gateway address you entered is unreachable."
+msgstr "Adresa e gateway që përdore është e paarritshme."
+
+#. Type: error
+#. Description
+#: ../netcfg-static.templates:38
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Mund të kesh gabuar në caktimin e adresës IP, netmask dhe/ose gateway."
+
+#: ../netcfg-static.templates:47
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" përballja                  = ${interface}\n"
+"emri i kompjuterit   = ${hostname}\n"
+"zona                          = ${domain}\n"
+"adresa IP                 = ${ipaddress}\n"
+"netmask                    = ${netmask}\n"
+"gateway                     = ${gateway}\n"
+"pointopoint               = ${pointopoint}\n"
+"serverat DNS            = ${nameservers}"
+
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-static.templates:62
+msgid "Static network configuration"
+msgstr "Konfigurimi i rrjetit static"
+
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-static.templates:67
+msgid "Configure a network using static addressing"
+msgstr "Konfiguro një rrjet duke përdorur adresimin static"
+
