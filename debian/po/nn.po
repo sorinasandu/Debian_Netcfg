@@ -1,9 +1,6 @@
 # translation of debian-installer.po to Norwegian (Nynorsk)
 # translation of debian-installer.po to Norwegian (Nynorsk)
 # translation of debian-installer.po to Norwegian (Nynorsk)
-# translation of debian-installer.po to Norwegian (Nynorsk)
-# translation of debian-installer.po to Norwegian (Nynorsk)
-# translation of debian-installer.po to Norwegian (Nynorsk)
 # Norwegian Nynorsk messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
@@ -14,7 +11,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-16 15:47-0700\n"
-"PO-Revision-Date: 2004-04-30 00:06+0200\n"
+"PO-Revision-Date: 2004-05-20 00:25+0200\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -469,9 +466,8 @@ msgstr "Dette kan ta litt tid."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statisk nettverksoppsett"
+msgstr "Automatisk oppsett av nettverket er ferdig."
 
 #. Type: error
 #. Description
@@ -494,23 +490,21 @@ msgstr "Avbryt oppsettet av DHCP."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statisk nettverksoppsett"
+msgstr "Prøv å setja opp nettverket automatisk ein gong til"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dynamisk nettverksoppsett (DHCP)"
+msgstr ""
+"Prøv å setja opp nettverket automatisk ein gong til med eit DHCP-vertsnamn"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Set opp nettverket"
+msgstr "Setja opp nettverket manuelt"
 
 #. Type: select
 #. Choices
@@ -521,16 +515,14 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Set opp nettverket"
+msgstr "Ikkje set opp nettverket no"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Statisk nettverksoppsett"
+msgstr "Metode for oppsett av nettverk:"
 
 #. Type: select
 #. Description
@@ -542,13 +534,17 @@ msgid ""
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
 msgstr ""
+"Automatisk oppsett av nettverket feila. Dette kan vera på grunn av ein treg "
+"DHCP-tenar på nettverket, så du vil kanskje prøva igjen. Du kan også oppgje "
+"eit DHCP-vertsnamn for å senda til den tenaren du trur treng det. Elles kan "
+"du setja opp nettverket manuelt, eller velja å ikkje setja det opp i det "
+"heile akkurat no."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:41
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Set opp nettverket"
+msgstr "Set opp det trådlause nettverket på ny"
 
 #. Type: text
 #. Description
@@ -719,29 +715,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " grensesnitt    = ${interface}\n"
-#~ " vertsnamn      = ${hostname}\n"
-#~ " domene         = ${domain}\n"
-#~ " DHCP-vertsnamn = ${dhcp_hostname}\n"
-#~ " namnetenarar   = ${nameservers}"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Vil du prøva å setja opp nettverket ved hjelp av DHCP ein gong til?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Fann ingen IP-adresse under oppsettet av nettverket med DHCP. DHCP-"
-#~ "tenarar er av og til svært trege. Viss du vil kan du prøva igjen."
