@@ -15,12 +15,15 @@ netcfg (0.62) UNRELEASED; urgency=low
     - Put own hostname in 127.0.0.1 hosts entry. (Closes: #238305, #237779)
     - Add some missing newlines for wireless devices to netcfg_write_dhcp.
     - Prune unused #defines.
+    - Nuke unused netcfg/title template.
+    - Clarify nameserver question by adding an introductory sentence.
+      (Closes: #243251) 
   * Per Olofsson
     - Check for hotpluggable (PCMCIA) network interfaces in
       /etc/network/devhotplug and don't generate auto entries for them.
       Also put them in a "mapping hotplug" stanza. Closes: #239284.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Sat, 10 Apr 2004 01:39:34 -0700
+ -- Joshua Kwan <joshk@triplehelix.org>  Sun, 11 Apr 2004 22:55:40 -0700
 
 netcfg (0.61) unstable; urgency=high
 

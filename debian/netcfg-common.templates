@@ -20,9 +20,10 @@ _Description: Domain name:
 Template: netcfg/get_nameservers
 Type: string
 _Description: Name server addresses:
+ The nameservers you specify here are used to look up Internet hostnames.
  Please enter the IP addresses (not host names) of up to 3 name servers,
- separated by spaces. Do not use commas. The first server in the list will
- be the first to be queried. If you don't want to use any name server,
+ separated by spaces. Do not use commas. The first nameserver in the list
+ will be the first to be queried. If you don't want to use any nameserver,
  just leave this field blank.
 
 Template: netcfg/choose_interface
@@ -182,11 +183,6 @@ _Description: Inter-user communication vehicle
 Template: netcfg/internal-unknown-iface
 Type: text
 _Description: Unknown interface
-
-Template: netcfg/title
-Type: text
-#  Title displayed when configuring this package
-_Description: Network Configuration
 
 Template: prebaseconfig/progress/netcfg
 Type: text
