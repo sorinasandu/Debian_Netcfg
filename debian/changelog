@@ -8,6 +8,9 @@ netcfg (0.25) UNRELEASED; urgency=low
    - Update Brazilian Portuguese (pt_BR) debconf template translations.
   * Martin Sjögren
    - Fix hostname corruption bug.
+   - Remove empty netcfg-ppp package.
+   - Use SETTITLE instead of TITLE for i18n reasons.
+   - Use debconf templates for i18n.
   * Pierre Machard
    - Update French debconf template translation [Philippe Batailler]
   * Javier Fernandez-Sanguino:
@@ -25,7 +28,7 @@ netcfg (0.25) UNRELEASED; urgency=low
   * Kenshi Muto
    - Update ja.po
 
- -- Bart Cornelis <cobaco@bartLaptop>  Thu, 25 Sep 2003 23:50:54 +0200
+ -- Martin Sjogren <sjogren@debian.org>  Sun, 28 Sep 2003 15:15:34 +0200
 
 netcfg (0.24) unstable; urgency=low
 

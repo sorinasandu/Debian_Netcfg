@@ -142,48 +142,21 @@ void getif_end()
 }
 
 
-char *get_ifdsc(const char *ifp)
+char *get_ifdsc(struct debconfclient *client, const char *ifp)
 {
-        int i;
-        struct if_alist_struct {
-                char *interface;
-                char *description;
-        } interface_alist[] = {
-                {
-                "eth", _("Ethernet or Fast Ethernet")}
-                , {
-                "pcmcia", _("PC-Card (PCMCIA) Ethernet or Token Ring")}
-                , {
-                "tr", _("Token Ring")}
-                , {
-                "arc", _("Arcnet")}
-                , {
-                "slip", _("Serial-line IP")}
-                , {
-                "plip", _("Parallel-line IP")}
-		, {
-		"ppp", _("Point-to-Point Protoccol")}
-		, {
-		"sit", _("Ipv6-in-IPv4")}
-		, {
-		"ippp", _("ISDN Point-to-Point Protocol")}
-                , {
-                "ctc", _("Channel-to-channel")}
-                , {
-                "escon", _("Real channel-to-channel")}
-                , {
-                "hsi", _("Hypersocket")}
-                , {
-                "iucv", _("Inter-user communication vehicle")}
-                , {
-                NULL, NULL}
-        };
+        char template[256];
 
-        for (i = 0; interface_alist[i].interface != NULL; i++)
-                if (!strncmp(ifp, interface_alist[i].interface,
-                             strlen(interface_alist[i].interface)))
-                        return interface_alist[i].description;
-        return _("unknown interface");
+        if (strlen(ifp) < 100) {
+            sprintf(template, "netcfg/internal-%s", ifp);
+            client->command(client, "METAGET", template, "description", NULL);
+            if (client->value != NULL)
+                return strdup(client->value);
+        }
+        client->command(client, "METAGET", "netcfg/internal-unknown-iface", "description", NULL);
+        if (client->value != NULL)
+            return strdup(client->value);
+        else
+            return strdup("Unknown interface");
 }
 
 
@@ -268,6 +241,7 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
         int newchars;
         char *ptr;
         int num_interfaces = 0;
+        char *ifdsc;
 
         if (*interface) {
                 free(*interface);
@@ -281,16 +255,17 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
 
         getif_start();
         while ((inter = getif(1)) != NULL) {
-                newchars = strlen(inter) + strlen(get_ifdsc(inter)) + 5;
+		ifdsc = get_ifdsc(client, inter);
+                newchars = strlen(inter) + strlen(ifdsc) + 5;
                 if (len < (strlen(ptr) + newchars)) {
                         if (!(ptr = realloc(ptr, len + newchars + 128)))
                                 goto error;
                         len += newchars + 128;
                 }
 
-                di_snprintfcat(ptr, len, "%s: %s, ", inter,
-                               get_ifdsc(inter));
+                di_snprintfcat(ptr, len, "%s: %s, ", inter, ifdsc);
                 num_interfaces++;
+		free(ifdsc);
         }
         getif_end();
 

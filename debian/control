@@ -29,12 +29,3 @@ Description: Configure a static network
  If you have information such as IP address, netmask, gateway, then you will be
  able to configure a static network.  If you don't know this information, you
  should ask you system administrator, or look at configuration via DHCP.
-
-Package: netcfg-ppp
-Architecture: any
-Depends: ${shlibs:Depends}, cdebconf-udeb
-Provides: configured-network
-XB-Installer-Menu-Item: 14
-Description: Configure a network via PPP over modem or serial line
- This package allows you to create a network connection via a modem
- or over a direct serial line

@@ -14,10 +14,6 @@
 #define DHCPCD_FILE     "/etc/dhcpc/config"
 #define DHCLIENT_DIR	"/var/dhcp"
 
-#ifndef _
-#define _(x)  (x)
-#endif
-
 
 extern int netcfg_mkdir (char *path);
 
@@ -29,7 +25,7 @@ extern void getif_start ();
 
 extern void getif_end ();
 
-extern char *get_ifdsc (const char *ifp);
+extern char *get_ifdsc (struct debconfclient *client, const char *ifp);
 
 extern FILE *file_open (char *path, const char *opentype);
 

@@ -44,6 +44,7 @@ static u_int32_t netmask = 0;
 static u_int32_t gateway = 0;
 static u_int32_t pointopoint = 0;
 static struct debconfclient *client;
+static char *none;
 
 static char *my_debconf_input(char *priority, char *template)
 {
@@ -67,7 +68,7 @@ static void netcfg_get_static()
 
         client->command(client, "subst", "netcfg/confirm_static",
                         "ipaddress",
-                        (ipaddress ? num2dot(ipaddress) : _("<none>")), NULL);
+                        (ipaddress ? num2dot(ipaddress) : none), NULL);
 
         if (strncmp(interface, "plip", 4) == 0
             || strncmp(interface, "slip", 4) == 0
@@ -102,16 +103,16 @@ static void netcfg_get_static()
         }
 
         client->command(client, "subst", "netcfg/confirm_static",
-                        "netmask", (netmask ? num2dot(netmask) : _("<none>")),
+                        "netmask", (netmask ? num2dot(netmask) : none),
                         NULL);
 
         client->command(client, "subst", "netcfg/confirm_static",
-                        "gateway", (gateway ? num2dot(gateway) : _("<none>")),
+                        "gateway", (gateway ? num2dot(gateway) : none),
                         NULL);
 
         client->command(client, "subst", "netcfg/confirm_static",
                         "pointopoint",
-                        (pointopoint ? num2dot(pointopoint) : _("<none>")),
+                        (pointopoint ? num2dot(pointopoint) : none),
                         NULL);
 
         broadcast = (network | ~netmask);
@@ -215,10 +216,13 @@ int main(int argc, char *argv[])
         int finished = 0;
         char *ptr;
         char *nameservers = NULL;
-        client = debconfclient_new();
-        client->command(client, "title", _("Static Network Configuration"),
-                        NULL);
 
+        client = debconfclient_new();
+        client->command(client, "SETTITLE", "netcfg/static-title", NULL);
+
+
+        client->command(client, "METAGET", "netcfg/internal-none", "description", NULL);
+        none = client->value ? strdup(client->value) : strdup("<none>");
 
         do {
                 netcfg_get_common(client, &interface, &hostname, &domain,
@@ -231,12 +235,12 @@ int main(int argc, char *argv[])
                                 "hostname", hostname, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_static",
-                                "domain", (domain ? domain : _("<none>")),
+                                "domain", (domain ? domain : none),
                                 NULL);
 
                 client->command(client, "subst", "netcfg/confirm_static",
                                 "nameservers",
-                                (nameservers ? nameservers : _("<none>")),
+                                (nameservers ? nameservers : none),
                                 NULL);
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 

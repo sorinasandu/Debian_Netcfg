@@ -49,6 +49,7 @@ enum {
 int dhcp_client = PUMP;
 
 static char *dhcp_hostname = NULL;
+static char *none;
 
 static char *my_debconf_input(char *priority, char *template)
 {
@@ -76,7 +77,7 @@ static void netcfg_get_dhcp()
 
         client->command(client, "subst", "netcfg/confirm_dhcp",
                         "dhcp_hostname",
-                        (dhcp_hostname ? dhcp_hostname : _("<none>")), NULL);
+                        (dhcp_hostname ? dhcp_hostname : none), NULL);
 }
 
 
@@ -135,9 +136,10 @@ int main(int argc, char *argv[])
         int finished = 0;
         struct stat buf;
         client = debconfclient_new();
-        client->command(client, "title", _("DHCP Network Configuration"),
-                        NULL);
+        client->command(client, "SETTITLE", "netcfg/dhcp-title", NULL);
 
+        client->command(client, "METAGET", "netcfg/internal-none", "description", NULL);
+        none = client->value ? strdup(client->value) : strdup("<none>");
 
         if (stat("/sbin/dhclient", &buf) == 0)
                 dhcp_client = DHCLIENT;
@@ -164,14 +166,14 @@ int main(int argc, char *argv[])
                                 "hostname", hostname, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "domain", (domain ? domain : _("<none>")),
+                                "domain", (domain ? domain : none),
                                 NULL);
 
                 netcfg_nameservers_to_array(nameservers, nameserver_array);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "nameservers",
-                                (nameservers ? nameservers : _("<none>")),
+                                (nameservers ? nameservers : none),
                                 NULL);
                 netcfg_get_dhcp();
 

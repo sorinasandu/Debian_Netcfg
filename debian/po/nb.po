@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-09-19 22:32+0200\n"
+"POT-Creation-Date: 2003-09-28 15:16+0200\n"
 "PO-Revision-Date: 2003-05-03 08:45+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans.fredrik@nordhaug.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -140,6 +140,82 @@ msgstr ""
 "opp nettverks-maskinvare»."
 
 #. Description
+#: ../netcfg-common.templates:61
+msgid "<none>"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Ethernet or Fast Ethernet"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:69
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Token Ring"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:77
+msgid "Arcnet"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:81
+msgid "Serial-line IP"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:85
+msgid "Parallel-line IP"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:89
+msgid "Point-to-Point Protocol"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:93
+msgid "IPv6-in-IPv4"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:97
+msgid "ISDN Point-to-Point Protocol"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:101
+msgid "Channel-to-channel"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:105
+msgid "Real channel-to-channel"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:109
+msgid "Hypersocket"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:113
+msgid "Inter-user communication vehicle"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:117
+#, fuzzy
+msgid "Unknown interface"
+msgstr "Velg et (nett)grensesnitt."
+
+#. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Hva er ditt DHCP-vertsnavn?"
@@ -196,6 +272,11 @@ msgstr "Fant ingen dhcp-klient. Jeg kan ikke fortsette."
 #: ../netcfg-dhcp.templates:25
 msgid "This package requires pump or dhcp-client."
 msgstr "Denne pakken trenger punp eller dhcp-klient."
+
+#. Description
+#: ../netcfg-dhcp.templates:30
+msgid "DHCP Network Configuration"
+msgstr ""
 
 #. Description
 #: ../netcfg-static.templates:3
@@ -303,3 +384,8 @@ msgstr ""
 " portner       = ${gateway}\n"
 " punktilpunkt  = ${pointopoint}\n"
 " navnetjenere   = ${nameservers}"
+
+#. Description
+#: ../netcfg-static.templates:56
+msgid "Static Network Configuration"
+msgstr ""

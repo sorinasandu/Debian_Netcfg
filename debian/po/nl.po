@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-09-19 22:32+0200\n"
+"POT-Creation-Date: 2003-09-28 15:16+0200\n"
 "PO-Revision-Date: 2003-09-20 02:40+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -37,11 +37,10 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "De domeinnaam is het gedeelte van uw Internetadres dat rechts van uw "
-"computernaam staat. Meestal eindigt een domeinnaam in .nl, .com, .net of "
-".org (bijvoorbeeld: mijndomein.nl). U kunt de domeinnaam zelf kiezen "
-"wanneer uw computer onderdeel uitmaakt van een thuisnetwerk. Zorg er in "
-"dat geval voor dat alle computers in dit netwerk dezelfde domeinnaam "
-"gebruiken."
+"computernaam staat. Meestal eindigt een domeinnaam in .nl, .com, .net of ."
+"org (bijvoorbeeld: mijndomein.nl). U kunt de domeinnaam zelf kiezen wanneer "
+"uw computer onderdeel uitmaakt van een thuisnetwerk. Zorg er in dat geval "
+"voor dat alle computers in dit netwerk dezelfde domeinnaam gebruiken."
 
 #. Description
 #: ../netcfg-common.templates:11
@@ -73,9 +72,9 @@ msgid ""
 "network interface that you will need for installing the Debian system (via "
 "NFS or HTTP)."
 msgstr ""
-"De volgende netwerkapparaten zijn gedetecteerd. Kies het netwerkapparaat "
-"dat u wilt gebruiken voor het installeren van Debian via het HTTP- of "
-"NFS-protocol."
+"De volgende netwerkapparaten zijn gedetecteerd. Kies het netwerkapparaat dat "
+"u wilt gebruiken voor het installeren van Debian via het HTTP- of NFS-"
+"protocol."
 
 #. Description
 #: ../netcfg-common.templates:27
@@ -125,7 +124,8 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
-msgstr "Er is een fout opgetreden, De netwerkconfigureatie kan niet voltooid worden."
+msgstr ""
+"Er is een fout opgetreden, De netwerkconfigureatie kan niet voltooid worden."
 
 #. Description
 #: ../netcfg-common.templates:48
@@ -149,6 +149,82 @@ msgstr ""
 "netwerkapparaat bevat dan heeft u mogelijk de verkeerde module geselecteerd. "
 "Ga in dat geval terug naar het scherm 'Detecteer netwerk-hardware en laad de "
 "nodige kernel-stuurprogramma's'."
+
+#. Description
+#: ../netcfg-common.templates:61
+msgid "<none>"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:65
+msgid "Ethernet or Fast Ethernet"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:69
+msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:73
+msgid "Token Ring"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:77
+msgid "Arcnet"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:81
+msgid "Serial-line IP"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:85
+msgid "Parallel-line IP"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:89
+msgid "Point-to-Point Protocol"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:93
+msgid "IPv6-in-IPv4"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:97
+msgid "ISDN Point-to-Point Protocol"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:101
+msgid "Channel-to-channel"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:105
+msgid "Real channel-to-channel"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:109
+msgid "Hypersocket"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:113
+msgid "Inter-user communication vehicle"
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:117
+#, fuzzy
+msgid "Unknown interface"
+msgstr "Kies een interface (netwerkapparaat)."
 
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -199,14 +275,21 @@ msgstr "Dit kan enige tijd duren, tot een minuut of twee."
 #. Description
 #: ../netcfg-dhcp.templates:25
 msgid "No dhcp client found. I cannot continue."
-msgstr "Er is geen DHCP-clientsoftware gevonden. De automatische "
-"netwerkconfiguratie via DHCP kan niet worden voltooid."
+msgstr ""
+"Er is geen DHCP-clientsoftware gevonden. De automatische netwerkconfiguratie "
+"via DHCP kan niet worden voltooid."
 
 #. Description
 #: ../netcfg-dhcp.templates:25
 msgid "This package requires pump or dhcp-client."
-msgstr "Automatische netwerkconfiguratie via DHCP vereist de 'pump'- of "
-"'dhcp-client'-software."
+msgstr ""
+"Automatische netwerkconfiguratie via DHCP vereist de 'pump'- of 'dhcp-"
+"client'-software."
+
+#. Description
+#: ../netcfg-dhcp.templates:30
+msgid "DHCP Network Configuration"
+msgstr ""
 
 #. Description
 #: ../netcfg-static.templates:3
@@ -238,11 +321,11 @@ msgid ""
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
-"Gelieve het IP-adres van de PPP-server in te voeren. Dit adres wordt gebruikt"
-" om het andere eindpunt in een PPP-netwerk te bepalen. Het adres bestaat uit "
-"vier door punten gescheiden getallen tussen 0 en 255 (bijvoorbeeld: "
-"192.169.1.10) . Neem contact op met uw netwerkbeheerder als u niet weet wat u "
-"hier in moet vullen."
+"Gelieve het IP-adres van de PPP-server in te voeren. Dit adres wordt "
+"gebruikt om het andere eindpunt in een PPP-netwerk te bepalen. Het adres "
+"bestaat uit vier door punten gescheiden getallen tussen 0 en 255 "
+"(bijvoorbeeld: 192.169.1.10) . Neem contact op met uw netwerkbeheerder als u "
+"niet weet wat u hier in moet vullen."
 
 #. Description
 #: ../netcfg-static.templates:19
@@ -277,11 +360,12 @@ msgid ""
 "consult your network administrator."
 msgstr ""
 "Gelieve hier het IP-adres van de gateway (ofwel 'default router') in te "
-"voeren. De gateway routeert al het netwerkverkeer dat niet bestemd is voor uw "
-"lokale netwerk (zoals communicatie met Internet). U kunt dit veld leeg laten "
-"wanneer u geen gateway gebruikt. Het adres bestaat uit 4 door punten "
-"gescheiden getallen tussen 0 en 255 (bijvoorbeeld: 192.168.0.1). Neem contact "
-"op met uw netwerkbeheerder wanneer u niet weet wat u hier in moet vullen."
+"voeren. De gateway routeert al het netwerkverkeer dat niet bestemd is voor "
+"uw lokale netwerk (zoals communicatie met Internet). U kunt dit veld leeg "
+"laten wanneer u geen gateway gebruikt. Het adres bestaat uit 4 door punten "
+"gescheiden getallen tussen 0 en 255 (bijvoorbeeld: 192.168.0.1). Neem "
+"contact op met uw netwerkbeheerder wanneer u niet weet wat u hier in moet "
+"vullen."
 
 #. Description
 #: ../netcfg-static.templates:37
@@ -321,3 +405,8 @@ msgstr ""
 " gateway        = ${gateway}\n"
 " punt-naar-punt = ${pointopoint}\n"
 " DNS-servers    = ${nameservers}"
+
+#. Description
+#: ../netcfg-static.templates:56
+msgid "Static Network Configuration"
+msgstr ""
