@@ -6,15 +6,15 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.36\n"
+"Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-20 21:58+0200\n"
+"PO-Revision-Date: 2004-01-14 23:01+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
@@ -87,9 +87,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "Tinklo sąsajų neaptikta"
+msgstr "Pagrindinė tinklo sąsaja:"
 
 #. Type: select
 #. Description
@@ -98,6 +97,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"Jūsų sistemoje yra kelios tinklo sąsajos. Pasirinkite vieną iš jų, kuri bus naudojama "
+"kaip pagrindinė Debian'o diegimo metu."
 
 #. Type: error
 #. Description
@@ -552,16 +553,3 @@ msgstr "Statinis tinklo konfigūravimas"
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
-#~ msgid "Interface:"
-#~ msgstr "Sąsaja:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Prašau pasirinkti norimą konfigūruoti sąsają. Žemiau pateiktos visos "
-#~ "dabar aptiktos tinklo sąsajos. Pasirinkite Jūsų pirminės tinklo sąsajos "
-#~ "tipą. Ši sąsaja  bus ·naudojama Debian'o sistemos diegimui (per NFS ar "
-#~ "HTTP)."
