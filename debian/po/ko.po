@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 11:39+0100\n"
+"POT-Creation-Date: 2004-04-01 14:20+0200\n"
 "PO-Revision-Date: 2004-03-27 21:14+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -26,7 +26,11 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr "네트워크는 DHCP로 설정할 수도 있고, 수동으로 모든 정보를 입력해서 설정할 수도 있습니다. DHCP를 사용했을 때 네트워크의 DHCP 서버에서 올바른 설정을 가져오지 못하는 경우에는, DHCP 설정 시도 후에 수동으로 네트워크를 설정할 기회가 있습니다."
+msgstr ""
+"네트워크는 DHCP로 설정할 수도 있고, 수동으로 모든 정보를 입력해서 설정할 수"
+"도 있습니다. DHCP를 사용했을 때 네트워크의 DHCP 서버에서 올바른 설정을 가져오"
+"지 못하는 경우에는, DHCP 설정 시도 후에 수동으로 네트워크를 설정할 기회가 있"
+"습니다."
 
 #. Type: string
 #. Description
@@ -440,6 +444,8 @@ msgstr "이 정보가 맞습니까?"
 msgid "Currently configured network parameters:"
 msgstr "현재 설정된 네트워크 인수:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -628,6 +634,8 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "IP 주소, 네트마스크, 게이트웨이중에 잘못 입력한 게 있을 것입니다."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

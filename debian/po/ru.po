@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-26 11:39+0100\n"
+"POT-Creation-Date: 2004-04-01 14:20+0200\n"
 "PO-Revision-Date: 2004-03-31 22:59+0200\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -20,7 +20,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -309,7 +310,11 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
-msgstr "Беспроводные сети бывает двух видов: управляемая сеть (managed network) и прямое соединение (ad hoc). Если вы подсоединены к сети через какую-либо настоящую точку доступа (access point), то у вас управляемая сеть. Если точкой доступа является другой компьютер, то у вас прямое соединение."
+msgstr ""
+"Беспроводные сети бывает двух видов: управляемая сеть (managed network) и "
+"прямое соединение (ad hoc). Если вы подсоединены к сети через какую-либо "
+"настоящую точку доступа (access point), то у вас управляемая сеть. Если "
+"точкой доступа является другой компьютер, то у вас прямое соединение."
 
 #. Type: text
 #. Description
@@ -463,6 +468,8 @@ msgstr "Эта информация верна?"
 msgid "Currently configured network parameters:"
 msgstr "Текущие сетевые настройки:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -651,9 +658,13 @@ msgstr "Указанный вами адрес шлюза недоступен."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Вы могли ошибиться при вводе вашего IP-адреса, маски подсети и/или шлюза."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Вы могли ошибиться при вводе вашего IP-адреса, маски подсети и/или шлюза."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -687,4 +698,3 @@ msgstr "Настройка статического адреса"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
-
