@@ -3,11 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#    Translators, please read /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-09-22 15:18+0200\n"
+"POT-Creation-Date: 2002-10-20 23:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +19,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Description
-#: ../po/netcfg-common._templates:3
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "W‰hlen Sie den Domainnamen."
+
+#. Description
+#: ../netcfg-common.templates:3
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
@@ -29,17 +37,12 @@ msgstr ""
 "sollte dann aber auf allen Rechnern gleich sein."
 
 #. Description
-#: ../po/netcfg-common._templates:3
-msgid "Choose the domain name."
-msgstr "W‰hlen Sie den Domainnamen."
-
-#. Description
-#: ../po/netcfg-common._templates:11
+#: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "W‰hlen Sie die Adresse des DNS Server"
 
 #. Description
-#: ../po/netcfg-common._templates:11
+#: ../netcfg-common.templates:11
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The servers will be queried in the "
@@ -52,7 +55,12 @@ msgstr ""
 "wollen, lassen Sie diese Feld bitte einfach leer."
 
 #. Description
-#: ../po/netcfg-common._templates:20
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "W‰hlen Sie ein Interface."
+
+#. Description
+#: ../netcfg-common.templates:20
 msgid ""
 "The following interfaces were detected. Choose the type of your primary "
 "network interface that you will need for installing the Debian system (via "
@@ -63,22 +71,22 @@ msgstr ""
 "HTTP) benutzen wollen."
 
 #. Description
-#: ../po/netcfg-common._templates:20
-msgid "Choose an interface."
-msgstr "W‰hlen Sie ein Interface."
-
-#. Description
-#: ../po/netcfg-common._templates:27
-msgid "Something went wrong when I tried to activate your network."
-msgstr "Es ist ein Fehler bei der Aktivierung Ihres Netzwerks aufgetreten."
-
-#. Description
-#: ../po/netcfg-common._templates:27
+#: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Ein Fehler ist aufgetreten."
 
 #. Description
-#: ../po/netcfg-common._templates:33
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Es ist ein Fehler bei der Aktivierung Ihres Netzwerks aufgetreten."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Geben Sie den Rechnernamen an."
+
+#. Description
+#: ../netcfg-common.templates:33
 msgid ""
 "The hostname is a single word that identifies your system to the network.  "
 "If you don't know what your hostname should be, consult your network "
@@ -91,12 +99,12 @@ msgstr ""
 "was Sie angeben."
 
 #. Description
-#: ../po/netcfg-common._templates:33
-msgid "Enter the system's hostname."
-msgstr "Geben Sie den Rechnernamen an."
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr ""
 
 #. Description
-#: ../po/netcfg-common._templates:41
+#: ../netcfg-common.templates:41
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
@@ -104,32 +112,28 @@ msgid ""
 msgstr ""
 
 #. Description
-#: ../po/netcfg-common._templates:41
-msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
-
-#. Description
-#: ../po/netcfg-common._templates:48
-msgid "Feel free to retry."
-msgstr "Vielleicht versuchen Sie es noch ein Mal."
-
-#. Description
-#: ../po/netcfg-common._templates:48
+#: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Ein Fehler ist aufgetreten und es wurde abgebrochen"
 
 #. Description
-#: ../po/netcfg-common._templates:53
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "Vielleicht versuchen Sie es noch ein Mal."
+
+#. Description
+#: ../netcfg-common.templates:53
 msgid "No interfaces were detected."
 msgstr "Kein Interface wurde erkannt."
 
 #. Description
-#: ../po/netcfg-common._templates:53
+#: ../netcfg-common.templates:53
+#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
 "is possible that the module for it hasn't been selected yet.  Go back to "
-"'Configure Network Hardware'."
+"'Configure network hardware'."
 msgstr ""
 "Kein Netzwerkinterface wurde gefunden. Das Installationssystem konnte also "
 "keine Netzwerkkarte finden. Wenn Sie eine Netzwerkkarte haben, ist bestimmt "
@@ -137,12 +141,18 @@ msgstr ""
 "'Configure Network Hardware'."
 
 #. Description
-#: ../po/netcfg-dhcp._templates:3
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Was ist Ihr DHCP Hostname?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+#, fuzzy
 msgid ""
 "In some situations, you may need to supply a DHCP host name.  These "
-"situations are rare.  Most commonly, it applies to cable modem users.  If "
-"you are a cable modem user, you might need to specify an account number "
-"here.  Otherwise, you can just leave this blank."
+"situations are rare.  Most commonly, it applies to cable modem users. If you "
+"are a cable modem user, you might need to specify an account number here.  "
+"Otherwise, you can just leave this blank."
 msgstr ""
 "In einigen Situationen muﬂ man einen DHCP Hostname angeben. Das kommt selten "
 "vor, aber vorallen bei Kabelmodembenutzer. Wenn Sie ein Kabelmodem besitzen, "
@@ -150,17 +160,12 @@ msgstr ""
 "Feld einfach leer."
 
 #. Description
-#: ../po/netcfg-dhcp._templates:3
-msgid "What is your dhcp hostname?"
-msgstr "Was ist Ihr DHCP Hostname?"
-
-#. Description
-#: ../po/netcfg-dhcp._templates:12
+#: ../netcfg-dhcp.templates:12
 msgid "Is this information correct?"
 msgstr "Sind diese Informationen richtig?"
 
 #. Description
-#: ../po/netcfg-dhcp._templates:12
+#: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
 " hostname       = ${hostname}\n"
@@ -175,28 +180,33 @@ msgstr ""
 " Nameserver     = ${nameservers}"
 
 #. Description
-#: ../po/netcfg-dhcp._templates:21
+#: ../netcfg-dhcp.templates:21
 msgid "I will now configure the network."
 msgstr "Das Netzwerk wird jetzt konfiguriert"
 
 #. Description
-#: ../po/netcfg-dhcp._templates:21
+#: ../netcfg-dhcp.templates:21
 msgid "This may take some time.  It shouldn't take more than a minute or two."
 msgstr "Das kann bis zu ein oder zwei Minuten dauern."
 
 #. Description
-#: ../po/netcfg-dhcp._templates:26
+#: ../netcfg-dhcp.templates:26
 #, fuzzy
 msgid "No dhcp client found. I cannot continue."
 msgstr "Ein Fehler ist aufgetreten und es wurde abgebrochen"
 
 #. Description
-#: ../po/netcfg-dhcp._templates:26
+#: ../netcfg-dhcp.templates:26
 msgid "This package requires pump or dhcp-client."
 msgstr ""
 
 #. Description
-#: ../po/netcfg-static._templates:3
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "IP Nummer?"
+
+#. Description
+#: ../netcfg-static.templates:3
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
@@ -207,12 +217,13 @@ msgstr ""
 "Netzwerkadministrator."
 
 #. Description
-#: ../po/netcfg-static._templates:3
-msgid "IP address?"
+#: ../netcfg-static.templates:10
+#, fuzzy
+msgid "Pointopoint address?"
 msgstr "IP Nummer?"
 
 #. Description
-#: ../po/netcfg-static._templates:10
+#: ../netcfg-static.templates:10
 #, fuzzy
 msgid ""
 "The pointopoint address is used to determine the other endpoint of the point "
@@ -226,13 +237,12 @@ msgstr ""
 "getrennet Zahlen."
 
 #. Description
-#: ../po/netcfg-static._templates:10
-#, fuzzy
-msgid "Pointopoint address?"
-msgstr "IP Nummer?"
+#: ../netcfg-static.templates:18
+msgid "Netmask?"
+msgstr "Netmask?"
 
 #. Description
-#: ../po/netcfg-static._templates:18
+#: ../netcfg-static.templates:18
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -244,12 +254,12 @@ msgstr ""
 "getrennet Zahlen."
 
 #. Description
-#: ../po/netcfg-static._templates:18
-msgid "Netmask?"
-msgstr "Netmask?"
+#: ../netcfg-static.templates:26
+msgid "Gateway?"
+msgstr "Gateway?"
 
 #. Description
-#: ../po/netcfg-static._templates:25
+#: ../netcfg-static.templates:26
 msgid ""
 "This is an IP address (four numbers separated by periods) that indicates the "
 "gateway router, also known as the default router.  All traffic that goes "
@@ -266,12 +276,12 @@ msgstr ""
 "kennen, fragen Sie Ihren Netzwerkadministrator."
 
 #. Description
-#: ../po/netcfg-static._templates:25
-msgid "Gateway?"
-msgstr "Gateway?"
+#: ../netcfg-static.templates:36
+msgid "The gateway you entered is unreachable."
+msgstr "Der angegebene Gateway ist nicht erreichbar."
 
 #. Description
-#: ../po/netcfg-static._templates:35
+#: ../netcfg-static.templates:36
 msgid ""
 "You may have made an error entering your ipaddress, netmask and/or gateway."
 msgstr ""
@@ -279,12 +289,13 @@ msgstr ""
 "Gateways einen Fehler gemacht."
 
 #. Description
-#: ../po/netcfg-static._templates:35
-msgid "The gateway you entered is unreachable."
-msgstr "Der angegebene Gateway ist nicht erreichbar."
+#: ../netcfg-static.templates:43
+msgid "Is this configuration correct?"
+msgstr "Sind diese Informationen richtig?"
 
 #. Description
-#: ../po/netcfg-static._templates:42
+#: ../netcfg-static.templates:43
+#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -302,8 +313,3 @@ msgstr ""
 " Netmask        = ${netmask}\n"
 " Gateway        = ${gateway}\n"
 " Nameserver     = ${nameservers}"
-
-#. Description
-#: ../po/netcfg-static._templates:42
-msgid "Is this configuration correct?"
-msgstr "Sind diese Informationen richtig?"
