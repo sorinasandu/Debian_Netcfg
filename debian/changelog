@@ -7,13 +7,15 @@ netcfg (0.46) UNRELEASED; urgency=low
       configuration. (Closes: #231106)
     - Bump netcfg/get_domain to priority high. (Closes: #231107)
       using libiw.
+    - Check entered IP addresses for gateway, netmask (special case allowing
+      '0' entries), IP address, and PPP endpoint. (Closes: #224912)
   * Joey Hess
     - First round of template polishing on new templates.
   * Translations:
     - Miroslav Kure
       - Updated Czech translation
     - Elian Myftiu
-      - Updated Albanian translation (sq.po)
+      - Updated Albanian translation (sq.po) 
     - Carlos Z.F. Liu
       - Updated Simplified Chinese translation (zh_CN.po)
     - Kenshi Muto
@@ -25,7 +27,7 @@ netcfg (0.46) UNRELEASED; urgency=low
     - Jordi Mallach
       - Updated Catalan translation (ca.po)
 
- -- Joshua Kwan <joshk@triplehelix.org>  Mon, 23 Feb 2004 01:53:21 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Mon, 23 Feb 2004 09:32:27 -0800
 
 netcfg (0.45) unstable; urgency=low
 

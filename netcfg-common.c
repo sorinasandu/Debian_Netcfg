@@ -493,14 +493,54 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
     }
 }
 
+static int is_valid_ip (char* ipaddr, short is_netmask)
+{
+  int error = 1;
+  
+  if (!empty_str(ipaddr))
+  {
+    char* ptr = strdup(ipaddr), *tok;
+    tok = strtok(ptr, ".");
+
+    while (tok)
+    {
+      int spaz;
+
+      spaz = atoi(tok);
+      if (((!is_netmask && spaz > 0) || (is_netmask && spaz >= 0)) && spaz <= 255)
+	error = 0;
+      else
+      {
+	error = 1;
+	break;
+      }
+
+      tok = strtok(NULL, ".");
+    }
+  }
+  
+  return error;
+}
+
 int netcfg_get_ipaddress(struct debconfclient *client)
 {
-    int ret;
+    int ret, error = 1;
     char *ptr;
-        
-    ret = my_debconf_input(client,"critical", "netcfg/get_ipaddress", &ptr);
-    if (ret)
-        return ret;
+
+    while (error == 1)
+    {
+      ret = my_debconf_input(client,"critical", "netcfg/get_ipaddress", &ptr);
+      if (ret)
+	return ret;
+
+      error = is_valid_ip (ptr, 0);
+      
+      if (error)
+      {
+	debconf_input (client, "critical", "netcfg/bad_ipaddress");
+	debconf_go (client);
+      }
+    }
 
     dot2num(&ipaddress, ptr);
     return 0;
@@ -511,9 +551,13 @@ int netcfg_get_pointopoint(struct debconfclient *client)
     int ret;
     char *ptr;
 
-    ret = my_debconf_input(client,"critical", "netcfg/get_pointopoint", &ptr);
-    if (ret)  
-        return ret;
+    do
+    {
+      ret = my_debconf_input(client,"critical", "netcfg/get_pointopoint", &ptr);
+      if (ret)  
+	return ret;
+    }
+    while (!is_valid_ip(ptr, 0));
 
     dot2num(&pointopoint, ptr);
     dot2num(&netmask, "255.255.255.255");
@@ -528,10 +572,14 @@ int netcfg_get_netmask(struct debconfclient *client)
     int ret;
     char *ptr;
         
-    ret = my_debconf_input(client,"critical", "netcfg/get_netmask", &ptr);
+    do
+    {
+      ret = my_debconf_input(client,"critical", "netcfg/get_netmask", &ptr);
 
-    if (ret)
-        return ret;
+      if (ret)
+	return ret;
+    }
+    while (!is_valid_ip(ptr, 1));
 
     dot2num(&netmask, ptr);
     network = ipaddress & netmask;
@@ -549,9 +597,13 @@ int netcfg_get_gateway(struct debconfclient *client)
     int ret;
     char *ptr;
 
-    ret  = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
-    if (ret)  
-        return ret;
+    do
+    {
+      ret = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
+      if (ret)  
+	return ret;
+    }
+    while (!is_valid_ip(ptr, 0));
 
     dot2num(&gateway, ptr);
 
@@ -561,8 +613,11 @@ int netcfg_get_gateway(struct debconfclient *client)
 
 int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 {
-    char *ptr;
+    char *ptr, *none;
     int ret;
+       
+    debconf_metaget(client,  "netcfg/internal-none", "description");
+    none = client->value ? strdup(client->value) : strdup("<none>");
 
     debconf_subst(client, "netcfg/get_nameservers", "nameservers",
 	(gateway ? num2dot(gateway) : none));

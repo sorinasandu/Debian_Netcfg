@@ -39,7 +39,7 @@ Type: string
 _Description: Wireless ESSID for ${iface}:
  ${iface} is a wireless network interface. Please enter the name (the ESSID)
  of the wireless network you would like ${iface} to use. If you would like
- to use any available network, leave this form blank.
+ to use any available network, leave this field blank.
 
 Template: netcfg/wireless_wep
 Type: string
@@ -48,13 +48,13 @@ _Description: WEP key for ${iface}:
  There are two ways to do this:
  .
  If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n
- is a number, just enter it as it is into the box.
+ is a number, just enter it as it is into this field.
  .
  If your WEP key is in the format of a passphrase, prefix it with 's:'
- (without quotes.)
+ (without quotes).
  .
  Of course, if there is no WEP key for your wireless network, leave this
- form blank.
+ field blank.
 
 Template: netcfg/invalid_wep
 Type: error

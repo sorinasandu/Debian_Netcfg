@@ -5,6 +5,12 @@ _Description: IP address:
  separated by periods.  If you don't know what to use here, consult your
  network administrator.
 
+Template: netcfg/bad_ipaddress
+Type: error
+_Description: Malformed IP address
+ The IP address you provided is malformed. It should be in the form
+ x.x.x.x where each 'x' is no larger than 255. Please try again.
+
 Template: netcfg/get_pointopoint
 Type: string
 _Description: Point-to-point address:
