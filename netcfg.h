@@ -92,7 +92,7 @@ extern int netcfg_get_static(struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);
 
-extern int ask_dhcp_retry (struct debconfclient *client);
+extern int ask_dhcp_options (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 
 extern void netcfg_write_loopback (void);

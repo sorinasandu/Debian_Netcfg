@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_tools_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-15 22:13-0700\n"
+"POT-Creation-Date: 2004-06-28 14:40-0700\n"
 "PO-Revision-Date: 2004-05-17 10:51+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
@@ -529,12 +529,11 @@ msgstr "Spôsob nastavenia siete:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This may be due to a slow DHCP server on "
-"the network, so you may want to retry. If your network does not use DHCP for "
-"autoconfiguration, you can instead configure it manually. Also, some DHCP "
-"servers need a specific DHCP hostname, so you can choose to enter such a "
-"hostname before retrying DHCP."
+"From here, you can choose to retry DHCP network autoconfiguration or "
+"configure the network manually. Also, some DHCP servers need a specific DHCP "
+"hostname, so you can choose to enter such a hostname before retrying DHCP."
 msgstr ""
 "Automatické nastavenie siete zlyhalo. Väè¹inou je to kvôli pomalému DHCP "
 "serveru, tak¾e to mô¾ete skúsi» znova. Ak sa na va¹ej sieti nepou¾íva DHCP, "
@@ -542,16 +541,49 @@ msgstr ""
 "urèenie DHCP názvu poèítaèa, tak¾e musíte zada» nejaký názov poèítaèa, kým "
 "sa znovu pokúsite o nastavenie siete pomocou DHCP."
 
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+#, fuzzy
+msgid "Network autoconfiguration failed."
+msgstr "Automatické nastavenie siete prebehlo úspe¹ne"
+
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"This may be due to a slow DHCP server, a loose network cable, or "
+"malfunctioning routers or hubs on your network, or your network is simply "
+"not set up for DHCP."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid "Continue without a default route?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid ""
+"The network has been autoconfigured successfully, but there seems to be no "
+"usable default route to external networks such as the Internet. You may not "
+"be able to continue your Debian installation, unless everything necessary is "
+"on a CD. If you are unsure, you should go ahead and come back to network "
+"configuration if necessary."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:55
 msgid "Reconfigure the wireless network"
 msgstr "Znovunastavenie bezdrôtovej siete"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:60
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Nastavenie siete s dynamickými adresami (DHCP)"
 

@@ -64,6 +64,27 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
 #endif
 }
 
+/* Returns 1 if no default route is available */
+static short no_default_route (void)
+{
+  FILE* iproute = NULL;
+  char buf[256] = { 0 };
+  
+  if ((iproute = popen("ip route", "r")) != NULL)
+  {
+    while (fgets (buf, 256, iproute) != NULL)
+    {
+      if (buf[0] == 'd' && strstr (buf, "default via "))
+      {
+        pclose(iproute);
+        return 0;
+      }
+    }
+    pclose(iproute);
+  }
+  
+  return 1;
+}
 
 /*
  * Signal handler for DHCP client child
@@ -230,28 +251,28 @@ int poll_dhcp_client (struct debconfclient *client)
 #define REPLY_RECONFIGURE_WIFI       4
 #define REPLY_LOOP_BACK              5
 
-int ask_dhcp_retry (struct debconfclient *client)
+int ask_dhcp_options (struct debconfclient *client)
 {
   int ret;
   
   if (is_wireless_iface(interface))
   {
     debconf_metaget(client, "netcfg/internal-wifireconf", "description");
-    debconf_subst(client, "netcfg/dhcp_retry", "wifireconf", client->value);
+    debconf_subst(client, "netcfg/dhcp_options", "wifireconf", client->value);
   }
   else /* blank from last time */
-    debconf_subst(client, "netcfg/dhcp_retry", "wifireconf", "");
+    debconf_subst(client, "netcfg/dhcp_options", "wifireconf", "");
 
   /* critical, we don't want to enter a loop */
-  debconf_input(client, "critical", "netcfg/dhcp_retry");
+  debconf_input(client, "critical", "netcfg/dhcp_options");
   ret = debconf_go(client);
 
   if (ret == 30)
     return GO_BACK;
   
-  debconf_get(client, "netcfg/dhcp_retry");
+  debconf_get(client, "netcfg/dhcp_options");
 
-    /* strcmp sucks */
+  /* strcmp sucks */
   if (client->value[0] == 'R') /* _R_etry ... or _R_econfigure ... */
   {
     size_t len = strlen(client->value);
@@ -275,7 +296,7 @@ int ask_dhcp_retry (struct debconfclient *client)
 int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
-  enum { START, POLL, ASK_RETRY, DHCP_HOSTNAME, HOSTNAME, DOMAIN, HOSTNAME_SANS_NETWORK } state = START;
+  enum { START, POLL, ASK_OPTIONS, DHCP_HOSTNAME, HOSTNAME, DOMAIN, HOSTNAME_SANS_NETWORK } state = START;
 
   kill_dhcp_client();
   loop_setup();
@@ -294,8 +315,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
       case POLL:
         if (poll_dhcp_client(client))
         {
-          /* could not get a lease */
-          state = ASK_RETRY;
+          /* could not get a lease, show the error, present options */
+          debconf_input(client, "critical", "netcfg/dhcp_failed");
+          debconf_go(client);
+          state = ASK_OPTIONS;
         }
         else
         {
@@ -304,6 +327,21 @@ int netcfg_activate_dhcp (struct debconfclient *client)
            * That means that the DHCP client has exited, although its
            * child is still running as a daemon
            */
+
+          /* Before doing anything else, check for a default route */
+
+          if (no_default_route())
+          {
+            debconf_input(client, "critical", "netcfg/no_default_route");
+            debconf_go(client);
+            debconf_get(client, "netcfg/no_default_route");
+
+            if (!strcmp(client->value, "false"))
+            {
+              state = ASK_OPTIONS;
+              break;
+            }
+          }
 
           /*
            * Set defaults for domain name and hostname
@@ -380,9 +418,9 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         }
         break;
 
-      case ASK_RETRY:
+      case ASK_OPTIONS:
         /* DHCP client may still be running */
-        switch (ask_dhcp_retry (client))
+        switch (ask_dhcp_options (client))
         {
           case GO_BACK:
             kill_dhcp_client();
@@ -425,7 +463,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                       ESSID : DONE;
                     break;
                   case ABORT:
-                    state = ASK_RETRY;
+                    state = ASK_OPTIONS;
                     break;
                   case DONE:
                     if (dhcp_pid > 0)
@@ -448,7 +486,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
       case DHCP_HOSTNAME:
         /* DHCP client may still be running */
         if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0))
-          state = ASK_RETRY;
+          state = ASK_OPTIONS;
         else
         {
           if (empty_str(dhostname))
@@ -470,7 +508,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
            * screen where the user can elect to retry DHCP with
            * a requested DHCP hostname, etc.
            */
-          state = ASK_RETRY;
+          state = ASK_OPTIONS;
         }
         else
           state = DOMAIN;
@@ -489,7 +527,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case HOSTNAME_SANS_NETWORK:
         if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
-          state = ASK_RETRY;
+          state = ASK_OPTIONS;
         else
         {
           struct in_addr null_ipaddress;

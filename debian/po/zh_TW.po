@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-15 22:13-0700\n"
+"POT-Creation-Date: 2004-06-28 14:40-0700\n"
 "PO-Revision-Date: 2004-05-24 09:40+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
@@ -512,28 +512,60 @@ msgstr "網路的設定方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This may be due to a slow DHCP server on "
-"the network, so you may want to retry. If your network does not use DHCP for "
-"autoconfiguration, you can instead configure it manually. Also, some DHCP "
-"servers need a specific DHCP hostname, so you can choose to enter such a "
-"hostname before retrying DHCP."
+"From here, you can choose to retry DHCP network autoconfiguration or "
+"configure the network manually. Also, some DHCP servers need a specific DHCP "
+"hostname, so you can choose to enter such a hostname before retrying DHCP."
 msgstr ""
 "網路自動設定失敗了。這也許是因為網路上的 DHCP 伺服器太慢了，所以您可能希望能"
 "再次嘗試。如果您的網路上並沒有使用 DHCP 來進行自動設定，您可以替而進行手動設"
 "定。同時，有些 DHCP 伺服器需要特定的 DHCP 主機名稱，您可以選擇在再次嘗試使用 "
 "DHCP 之前輸入這個主機名稱。"
 
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+#, fuzzy
+msgid "Network autoconfiguration failed."
+msgstr "網路自動設定作業已經完成！"
+
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"This may be due to a slow DHCP server, a loose network cable, or "
+"malfunctioning routers or hubs on your network, or your network is simply "
+"not set up for DHCP."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid "Continue without a default route?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid ""
+"The network has been autoconfigured successfully, but there seems to be no "
+"usable default route to external networks such as the Internet. You may not "
+"be able to continue your Debian installation, unless everything necessary is "
+"on a CD. If you are unsure, you should go ahead and come back to network "
+"configuration if necessary."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:55
 msgid "Reconfigure the wireless network"
 msgstr "重新設定無線網路"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:60
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用動態位址 (DHCP) 來設定網路"
 

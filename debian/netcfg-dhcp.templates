@@ -25,16 +25,30 @@ _Description: No DHCP client found
  .
  The DHCP configuration process will be aborted.
 
-Template: netcfg/dhcp_retry
+Template: netcfg/dhcp_options
 Type: select
 __Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, ${wifireconf}, Do not configure the network at this time
 Default: Configure network manually
 _Description: Network configuration method:
- Network autoconfiguration failed. This may be due to a slow DHCP
- server on the network, so you may want to retry. If your network does not
- use DHCP for autoconfiguration, you can instead configure it manually.
- Also, some DHCP servers need a specific DHCP hostname, so you can choose
- to enter such a hostname before retrying DHCP.
+ From here, you can choose to retry DHCP network autoconfiguration or configure
+ the network manually. Also, some DHCP servers need a specific DHCP hostname,
+ so you can choose to enter such a hostname before retrying DHCP.
+
+Template: netcfg/dhcp_failed
+Type: note
+_Description: Network autoconfiguration failed.
+ This may be due to a slow DHCP server, a loose network cable, or
+ malfunctioning routers or hubs on your network, or your network is simply
+ not set up for DHCP.
+
+Template: netcfg/no_default_route
+Type: boolean
+_Description: Continue without a default route?
+ The network has been autoconfigured successfully, but there seems to be no
+ usable default route to external networks such as the Internet. You may not
+ be able to continue your Debian installation, unless everything necessary is
+ on a CD. If you are unsure, you should go ahead and come back to network
+ configuration if necessary.
 
 Template: netcfg/internal-wifireconf
 Type: text

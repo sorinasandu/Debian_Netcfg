@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-15 22:13-0700\n"
+"POT-Creation-Date: 2004-06-28 14:40-0700\n"
 "PO-Revision-Date: 2004-05-23 12:50+0100\n"
 "Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -556,12 +556,11 @@ msgstr "Način nastavitve mreže:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This may be due to a slow DHCP server on "
-"the network, so you may want to retry. If your network does not use DHCP for "
-"autoconfiguration, you can instead configure it manually. Also, some DHCP "
-"servers need a specific DHCP hostname, so you can choose to enter such a "
-"hostname before retrying DHCP."
+"From here, you can choose to retry DHCP network autoconfiguration or "
+"configure the network manually. Also, some DHCP servers need a specific DHCP "
+"hostname, so you can choose to enter such a hostname before retrying DHCP."
 msgstr ""
 "Samodejna nastavitev mreže ni uspela. To je morda posledica počasnega DHCP "
 "strežnika na mreži, tako da boste morda želeti ponovno poskusiti. Če vašo "
@@ -569,16 +568,49 @@ msgstr ""
 "ročno. Prav tako nekateri DHCP strežniki potrebujejo določeno DHCP ime, ki "
 "ga lahko vnesete preden ponovno poskusite z DHCP."
 
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+#, fuzzy
+msgid "Network autoconfiguration failed."
+msgstr "Samodejna nastavitev mreže je uspela"
+
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"This may be due to a slow DHCP server, a loose network cable, or "
+"malfunctioning routers or hubs on your network, or your network is simply "
+"not set up for DHCP."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid "Continue without a default route?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid ""
+"The network has been autoconfigured successfully, but there seems to be no "
+"usable default route to external networks such as the Internet. You may not "
+"be able to continue your Debian installation, unless everything necessary is "
+"on a CD. If you are unsure, you should go ahead and come back to network "
+"configuration if necessary."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:55
 msgid "Reconfigure the wireless network"
 msgstr "Ponastavi brezžično omrežje"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:60
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Nastavi omrežje z uporabo dinamičnega naslavljanja (DHCP)"
 

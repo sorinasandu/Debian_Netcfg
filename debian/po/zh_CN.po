@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-15 22:13-0700\n"
+"POT-Creation-Date: 2004-06-28 14:40-0700\n"
 "PO-Revision-Date: 2004-05-15 22:53+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -510,27 +510,59 @@ msgstr "网络配置方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
-"Network autoconfiguration failed. This may be due to a slow DHCP server on "
-"the network, so you may want to retry. If your network does not use DHCP for "
-"autoconfiguration, you can instead configure it manually. Also, some DHCP "
-"servers need a specific DHCP hostname, so you can choose to enter such a "
-"hostname before retrying DHCP."
+"From here, you can choose to retry DHCP network autoconfiguration or "
+"configure the network manually. Also, some DHCP servers need a specific DHCP "
+"hostname, so you can choose to enter such a hostname before retrying DHCP."
 msgstr ""
 "网络自动设置失败。这可能是由于网络中 DHCP 服务器的速度过慢造成的，您可能会想"
 "重试一次。如果您的网络并不使用 DHCP 进行自动配置，请进行手动设置。另外，某些 "
 "DHCP 服务器需要特定的 DHCP 主机名，因此您也可以在重试 DHCP 之前输入该主机名。"
 
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+#, fuzzy
+msgid "Network autoconfiguration failed."
+msgstr "网络自动设置成功！"
+
+#. Type: note
+#. Description
+#: ../netcfg-dhcp.templates:39
+msgid ""
+"This may be due to a slow DHCP server, a loose network cable, or "
+"malfunctioning routers or hubs on your network, or your network is simply "
+"not set up for DHCP."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid "Continue without a default route?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+msgid ""
+"The network has been autoconfigured successfully, but there seems to be no "
+"usable default route to external networks such as the Internet. You may not "
+"be able to continue your Debian installation, unless everything necessary is "
+"on a CD. If you are unsure, you should go ahead and come back to network "
+"configuration if necessary."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:41
+#: ../netcfg-dhcp.templates:55
 msgid "Reconfigure the wireless network"
 msgstr "重新设置无线网络"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:60
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用动态地址(DHCP)配置网络"
 
