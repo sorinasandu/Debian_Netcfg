@@ -168,8 +168,6 @@ char *get_ifdsc(const char *ifp)
                 , {
                 "hsi", "Hypersocket"}
                 , {
-                "qeth", "Ethernet"}
-                , {
                 "iucv", "Inter-user communication vehicle"}
                 , {
                 NULL, NULL}
