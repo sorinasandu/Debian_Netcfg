@@ -109,16 +109,26 @@ int main(int argc, char *argv[])
 
               free(buf);
 
-              switch (ret)
-              {
-                /* SIOCGMIIPHY not supported */
-                case 1: di_info("link status for %s is unknown", interface); break;
-                /* Supported; no connection */
-                case 2: if (res == NOT_ASKED) netcfg_method = STATIC; break;
-                /* Supported; connected */    
-                case 0: if (res == NOT_ASKED) netcfg_method = DHCP; break;
-              }
+              di_info("link status for %s is: %s", interface,
+                  (ret == 1) ? "unknown" :
+                  (ret == 2) ? "disconnected" : "connected");
 
+              if (res == NOT_ASKED)
+              {
+                switch (ret)
+                {
+                  /* Supported; no connection */
+                  case 2:
+                    netcfg_method = STATIC;
+                    break;
+
+                  /* Supported; connected */    
+                  case 0:
+                    netcfg_method = DHCP;
+                    break;
+                }
+              }
+              
               if (netcfg_method == DHCP) 
                 state = GET_DHCP;
               else
