@@ -28,7 +28,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg VERSION\n"
-"POT-Creation-Date: 2003-02-23 15:39+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-07-15 13:38+0100\n"
 "PO-Revision-Date: 2003-04-28 21:02+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -49,12 +50,11 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"El nombre de dominio es la parte de su dirección de Internet a la derecha "
-"de su nombre de sistema. Es habitualmente algo que termina por .com, .net, "
-".edu, o .org. Si está seleccionando una red doméstica, puede inventárselo, "
+"El nombre de dominio es la parte de su dirección de Internet a la derecha de "
+"su nombre de sistema. Es habitualmente algo que termina por .com, .net, ."
+"edu, o .org. Si está seleccionando una red doméstica, puede inventárselo, "
 "pero asegurese de que utiliza el mismo nombre de dominio en todos sus "
 "ordenadores."
-
 
 #. Description
 #: ../netcfg-common.templates:11
@@ -113,8 +113,8 @@ msgid ""
 "something up here."
 msgstr ""
 "El nombre del host es una sóla palabra que identifica su sistema en la red."
-"Si no sabe qué nombre debería tener, consulte a su administrador de red. "
-"Si está configurando una red doméstica, puede inventarse el valor del nombre."
+"Si no sabe qué nombre debería tener, consulte a su administrador de red. Si "
+"está configurando una red doméstica, puede inventarse el valor del nombre."
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -149,16 +149,17 @@ msgstr "No se detectó ninguna interfaz."
 
 #. Description
 #: ../netcfg-common.templates:53
+#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
 "is possible that the module for it hasn't been selected yet.  Go back to "
-"'Configure network hardware'."
+"'Detect network hardware and load kernel drivers for it'."
 msgstr ""
 "No se detectón ninguna interfaz de red. Esto significa que el sistema de "
-"instalación no pudo encontrar un dispositivo de red. Si vd. tiene una tarjeta "
-"de red, entonces es posible que no haya seleccionado aún un módulo para ésta. "
-"Vuelva a la sección 'Configure su hardware de red'."
+"instalación no pudo encontrar un dispositivo de red. Si vd. tiene una "
+"tarjeta de red, entonces es posible que no haya seleccionado aún un módulo "
+"para ésta. Vuelva a la sección 'Configure su hardware de red'."
 
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -173,10 +174,10 @@ msgid ""
 "are a cable modem user, you might need to specify an account number here.  "
 "Otherwise, you can just leave this blank."
 msgstr ""
-"En algunas circunstancias será necesario que indique el nombre de su servidor "
-"DHCP. Estas situaciones son infrecuentes. Habitualmente aplica a usuarios de "
-"cable módem. Si usted es un usuario de cable modem, puede necesitar un "
-"número de cuenta aquí. Si no lo es, deje éste en blanco."
+"En algunas circunstancias será necesario que indique el nombre de su "
+"servidor DHCP. Estas situaciones son infrecuentes. Habitualmente aplica a "
+"usuarios de cable módem. Si usted es un usuario de cable modem, puede "
+"necesitar un número de cuenta aquí. Si no lo es, deje éste en blanco."
 
 #. Description
 #: ../netcfg-dhcp.templates:12
@@ -206,8 +207,9 @@ msgstr "Ahora se configurará su red."
 #. Description
 #: ../netcfg-dhcp.templates:21
 msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr "Esto puede tardar algún tiempo. Aunque no debería tardar más de uno "
-"o dos minutos."
+msgstr ""
+"Esto puede tardar algún tiempo. Aunque no debería tardar más de uno o dos "
+"minutos."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
@@ -250,8 +252,8 @@ msgid ""
 msgstr ""
 "La dirección punto a punto se utiliza para determinar el otro extremo de una "
 "red punto a punto. Consulte a su administrador de red si no conoce el valor. "
-"La dirección punto a punto debe ser introducida como cuatro números separados "
-"por puntos."
+"La dirección punto a punto debe ser introducida como cuatro números "
+"separados por puntos."
 
 #. Description
 #: ../netcfg-static.templates:19
@@ -284,8 +286,8 @@ msgid ""
 "can leave this blank.  If you don't know the proper answer to this question, "
 "consult your network administrator."
 msgstr ""
-"Ésta es una dirección IP (cuatro números separados por puntos) que indica "
-"el router de pasarela, también conocido como router por defecto. Todo el "
+"Ésta es una dirección IP (cuatro números separados por puntos) que indica el "
+"router de pasarela, también conocido como router por defecto. Todo el "
 "tráfico que se envía fuera de su LAN (por ejemplo, hacia Internet) se envía "
 "a este router.  En algunas circunstancias anormales, puede no tener un "
 "router; si es así lo puede dejar en blanco. Si no sabe la respuesta correcta "
