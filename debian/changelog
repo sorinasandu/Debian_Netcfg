@@ -8,10 +8,10 @@ netcfg (0.71) UNRELEASED; urgency=low
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
-    - Add comment to /e/n/i about who implements the wireless-* options
-      (viz., the wireless-tools package)
     - static.c:
       + Add resolvconf support (Closes: #255187)
+      + Add comments to /e/n/i about which packages implement which options
+    - dhcp.c
       + Add comments to /e/n/i about which packages implement which options
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700

@@ -45,7 +45,7 @@ static void netcfg_write_dhcp (char *iface)
         fprintf(fp, "iface %s inet dhcp\n", iface);
 	if (is_wireless_iface(iface))
 	{
-	  fprintf(fp, "\t# The wireless-* options are implemented by the wireless-tools package\n");
+	  fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
 	  fprintf(fp, "\twireless-mode %s\n",
 	      (mode == MANAGED) ? "managed" : "adhoc");
 	  fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
