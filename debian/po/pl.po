@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-06 10:28+0200\n"
+"PO-Revision-Date: 2004-04-12 12:37+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,6 @@ msgstr "Adresy serwerów nazw:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
@@ -82,10 +81,11 @@ msgid ""
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
 msgstr ""
-"Podaj adresy IP (a nie nazwy hostów) maksymalnie trzech serwerów nazw "
-"oddzielonych spacjami. Nie u¿ywaj przecinków. Serwery bêd± odpytywane w "
-"kolejno¶ci podawania. Je¶li nie chcesz korzystaæ z serwerów nazw, pozostaw "
-"to pole puste."
+"Adresy serwerów nazw, które tu wprowadzisz s± u¿ywane do rozwi±zywania "
+"nazw komputerów w sieci Internet. Podaj adresy IP (a nie nazwy hostów) "
+"maksymalnie trzech serwerów nazw oddzielonych spacjami. Nie u¿ywaj "
+"przecinków. Pierwszy podany bêdzie pierwszym odpytywanym. "
+"Je¶li nie chcesz korzystaæ z serwerów nazw, pozostaw to pole puste."
 
 #. Type: select
 #. Description
@@ -320,15 +320,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Statyczna konfiguracja sieci"
+msgstr "Konfiguracja sieci bezprzewodowej"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Poszukiwanie bezprzewodowych punktów dostêpowych ..."
 
 #. Type: text
 #. Description
@@ -701,6 +700,3 @@ msgstr "Statyczna konfiguracja sieci"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
-
-#~ msgid "Network Configuration"
-#~ msgstr "Konfiguracja sieci"
