@@ -7,6 +7,15 @@ netcfg (1.08) UNRELEASED; urgency=low
   * Christian Perrier
     - Add a note to translators about the maximum length of
       individual Choices translations for Select templates
+  * Joey Hess
+    - If heuristics fail to determine a default interface, use the first
+      interface as the default.
+    - Back up netcfg/choose_interface preseeded value, and if the question
+      is not displayed to the user, restore that value, overriding the
+      selected default interface. Unless it was preseeded to "auto", then we
+      use the selected default interface anyway.
+    - That should make interface preseeding work in all situations.
+      Closes: #293682
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 24 Dec 2004 00:22:31 -0800
 
