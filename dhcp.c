@@ -446,7 +446,15 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case HOSTNAME:
         if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
-          exit(10); /* go back, going back to poll isn't intuitive */
+        {
+          /*
+           * Going back to POLL wouldn't make much sense.
+           * However, it does make sense to go to the retry
+           * screen where the user can elect to retry DHCP with
+           * a requested host-name, etc.
+           */
+          state = ASK_RETRY;
+        }
         else
         {
 #if 0

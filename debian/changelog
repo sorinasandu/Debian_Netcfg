@@ -26,6 +26,7 @@ netcfg (0.71) UNRELEASED; urgency=low
         (Closes: #239591)
       + Write host-name provided to the DHCP client in order to get a lease
         on the "hostname" option line for the interface in /e/n/i
+      + If the user backs up from netcfg/get_hostname, go to retry question
       + Clean up code
         . Always use spaces for indentation
         . Improve comments
