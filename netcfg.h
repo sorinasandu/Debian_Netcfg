@@ -9,6 +9,7 @@
 #define DHCPCD_DIR 	"/etc/dhcpc"
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
+#define MAIL_FILE       "/etc/mailname"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
 #define DHCPCD_FILE     "/etc/dhcpc/config"

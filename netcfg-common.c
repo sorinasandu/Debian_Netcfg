@@ -456,6 +456,8 @@ void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
                                        HOSTS_FILE, "/target" HOSTS_FILE);
+        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+                                       HOSTS_FILE, "/target" MAIL_FILE);
     }
 
     if ((fp = file_open(RESOLV_FILE, "w"))) {
