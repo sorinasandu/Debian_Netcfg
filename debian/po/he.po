@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-10 03:22+0300\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: Hebrew\n"
@@ -409,11 +409,35 @@ msgstr ""
 "אולי תצטרך לטעון מודול ספציפי לכרטיס הרשת שלך, אם יש לך כזה. בשביל זאת, חזור "
 "אחורה לשלב זיהוי חומרת הרשת."
 
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "מגדיר את הרשת..."
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #  Type: select
 #  Choices
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "רשת תשתית או רשת יעודית (peer to peer)"
 
@@ -423,7 +447,7 @@ msgstr "רשת תשתית או רשת יעודית (peer to peer)"
 #  Description
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "סוגר רשת אלחוטית:"
 
@@ -433,7 +457,7 @@ msgstr "סוגר רשת אלחוטית:"
 #  Description
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -453,7 +477,7 @@ msgstr ""
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "הגדרת רשת אלחוטית"
 
@@ -461,7 +485,7 @@ msgstr "הגדרת רשת אלחוטית"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "מחפש נקודותת גישה לרשת האלחוטית..."
 
@@ -469,9 +493,9 @@ msgstr "מחפש נקודותת גישה לרשת האלחוטית..."
 #  Description
 #  Type: text
 #  Description
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<none>"
 
@@ -481,13 +505,13 @@ msgstr "<none>"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "Wireless ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "אלחוטי"
 
@@ -497,7 +521,7 @@ msgstr "אלחוטי"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet or Fast Ethernet"
 
@@ -507,7 +531,7 @@ msgstr "Ethernet or Fast Ethernet"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
@@ -517,7 +541,7 @@ msgstr "Token Ring"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
@@ -527,7 +551,7 @@ msgstr "Arcnet"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
@@ -537,7 +561,7 @@ msgstr "Serial-line IP"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
@@ -547,7 +571,7 @@ msgstr "Parallel-port IP"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
@@ -557,7 +581,7 @@ msgstr "Point-to-Point Protocol"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
@@ -567,7 +591,7 @@ msgstr "IPv6-in-IPv4"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
@@ -577,7 +601,7 @@ msgstr "ISDN Point-to-Point Protocol"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
@@ -587,7 +611,7 @@ msgstr "Channel-to-channel"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
@@ -597,7 +621,7 @@ msgstr "Real channel-to-channel"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
@@ -607,7 +631,7 @@ msgstr "Hypersocket"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
@@ -617,7 +641,7 @@ msgstr "Inter-user communication vehicle"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "ממשק לא מוכר"
 
@@ -633,7 +657,7 @@ msgstr "ממשק לא מוכר"
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "מגדיר רשת..."
 
@@ -646,7 +670,7 @@ msgstr "מגדיר רשת..."
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "מגדיר את הרשת..."
 
@@ -812,12 +836,13 @@ msgstr "שיטת הגדרת רשת:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
 msgstr ""
 "מכאן תוכל לנסות מחדש הגדרת אוטומטית של הרשת שלך בעזרת DHCP (שתעבוד אם לוקח "
 "לשרת DHCP שלך הרבה זמן לענות) או להגדיר את הרשת ידנית. חלק משרתי DHCP צריכים "
@@ -1074,6 +1099,8 @@ msgstr "האם המידע נכון?"
 msgid "Currently configured network parameters:"
 msgstr "פרמרטים שנקבעו  כרגע:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

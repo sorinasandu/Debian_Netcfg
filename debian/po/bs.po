@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-13 13:52+0200\n"
 "Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -292,21 +292,42 @@ msgstr ""
 "Možda biste trebali učitati određeni modul za vašu mrežnu karticu, ako je "
 "imate. Za ovo, idite nazad na korak detekcije mrežnog hardwarea."
 
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "Podesi mrežu"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Infrastrukturna (Managed) mreža, Ad-hoc mreža (Peer to Peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "Vrsta bezične mreže:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -320,85 +341,85 @@ msgstr ""
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "Konfiguracija bežične (wireless) mreže"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "Tražim bežične pristupne tačke (access points) ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "Bežični (Wireless) ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "bežična mreža"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ili Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
@@ -406,25 +427,25 @@ msgstr "Channel-to-channel"
 #  Description
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "Nepoznati interfejs"
 
@@ -434,7 +455,7 @@ msgstr "Nepoznati interfejs"
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "Podešavam mrežu ..."
 
@@ -444,7 +465,7 @@ msgstr "Podešavam mrežu ..."
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "Podesi mrežu"
 
@@ -553,12 +574,13 @@ msgstr "Metod podešavanja mreže:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
 msgstr ""
 "Odavde možete izabrati da ponovo pokušate DHCP automatsku konfiguraciju "
 "mreže (što može raditi ako vašem DHCP serveru treba dugo vremena da "
@@ -755,6 +777,8 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

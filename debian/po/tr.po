@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-11 05:58+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -282,21 +282,39 @@ msgstr ""
 "Eğer bir ağ kartınız varsa, belirli bir çekirdek modülünü yüklemeniz "
 "gerekebilir.  Bunu yapmak için ağ donanımının algılandığı adıma geri dönün."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "Ağı yapılandır"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Planlı ağ (Managed), Plansız ağ (Ad-hoc, Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "Kablosuz ağ türü:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -308,123 +326,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "Kablosuz ağ yapılandırması"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "Kablosuz erişim noktaları araştırılıyor..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<hiçbiri>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "Kablosuz ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "kablosuz"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet veya Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Seri-hat IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Paralel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "Noktadan-noktaya protokolü (Point-to-Point)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv4 içinde IPv6 (IPv6-in-IPv4)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Noktadan-noktaya protokolü (ISDN Point-to-Point Protocol)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Kanaldan-kanala (Channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Gerçek kanaldan-kanala (Real channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Kullanıcılar arası bağlantı aracı (Inter-user communication vehicle)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "Bilinmeyen arayüz"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "Ağ yapılandırılıyor..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "Ağı yapılandır"
 
@@ -528,12 +546,13 @@ msgstr "Ağ yapılandırma yöntemi:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
 msgstr ""
 "Buradan itibaren, DHCP ile otomatik ağ yapılandırmasını tekrar denemeyi (ki "
 "DHCP sunucunuz çok geç yanıt veriyorsa iş görebilir) veya ağı elle "
@@ -735,6 +754,8 @@ msgstr "Bu bilgiler doğru mu?"
 msgid "Currently configured network parameters:"
 msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

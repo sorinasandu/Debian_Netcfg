@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-17 16:05+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -271,21 +271,39 @@ msgstr ""
 "네트워크 카드를 위해 특정 모듈을 읽어들여야 할 수도 있습니다. 그렇게 하려면, "
 "네트워크 하드웨어 찾기 단계로 돌아가십시오."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "네트워크 설정"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "인프라스트럭쳐 (관리) 네트워크, 자체 구성 네트워크 (일대일)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "무선 네트워크 종류:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -297,123 +315,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "무선 네트워크 설정"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "무선 액세스 포인트를 찾는 중입니다 ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<없음>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "무선 네트워크 (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "무선"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "이더넷 혹은 패스트 이더넷"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "토큰 링"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "시리얼 라인 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "병렬 포트 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "실제 채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "하이퍼소켓"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "사용자간 통신 수단"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "알 수 없는 인터페이스"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "네트워크를 설정하는 중입니다 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "네트워크 설정"
 
@@ -516,12 +534,13 @@ msgstr "네트워크 설정 방법:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
 msgstr ""
 "여기에서 DHCP 네트워크 자동 설정을 다시 시도하거나 (DHCP 서버가 응답하는 데 "
 "너무 느린 경우에 이렇게 하면 동작할 수도 있습니다) 아니면 네트워크를 수동으"
@@ -714,6 +733,8 @@ msgstr "이 정보가 맞습니까?"
 msgid "Currently configured network parameters:"
 msgstr "현재 설정된 네트워크 인수:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

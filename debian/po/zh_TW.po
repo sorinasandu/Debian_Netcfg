@@ -16,10 +16,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-25 18:08+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
-"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists.debian.org>\n"
+"Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
+"debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -276,21 +277,39 @@ msgstr ""
 "如果有的話，您可能必須載入您的網路卡的專用模組。請返回至網路硬體裝置偵測步驟"
 "來進行這個動作。"
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "設定網路"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "共用 (Managed) 網路, Ad-hoc 網路 (點對點)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "無線網路類別："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -301,123 +320,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "無線網路設定"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "正在尋找無線基地台 ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<無>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "無線網路卡 (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "無線網路"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "網路卡或高速網路卡"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Serial-line IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "點對點通訊協定 (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 點對點通訊協定"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "不明介面"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "正在設定網路 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "設定網路"
 
@@ -518,18 +537,18 @@ msgstr "網路的設定方式："
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
 msgstr ""
-"您可以在此選擇重新試著使用 DHCP 來自動設定網路，"
-"（如果是因為您的 DHCP 伺服器的回應時間較長，那有可能會成功）﹔"
-"或是試著手動來設定網路。"
-"有些 DHCP 伺服器會要求用戶端傳送特定的 DHCP 主機名稱，"
-"因而您可以選擇提供這個主機名稱並再次嘗試使用 DHCP 來自動設定網路。"
+"您可以在此選擇重新試著使用 DHCP 來自動設定網路，（如果是因為您的 DHCP 伺服器"
+"的回應時間較長，那有可能會成功）﹔或是試著手動來設定網路。有些 DHCP 伺服器會"
+"要求用戶端傳送特定的 DHCP 主機名稱，因而您可以選擇提供這個主機名稱並再次嘗試"
+"使用 DHCP 來自動設定網路。"
 
 #. Type: note
 #. Description
@@ -543,8 +562,9 @@ msgstr "網路自動設定作業失敗了"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "您的網路很可能並不使用 DHCP 協定。"
-"而或者，是 DHCP 伺服器回應過慢，或是某些網路硬體未能正常作業。"
+msgstr ""
+"您的網路很可能並不使用 DHCP 協定。而或者，是 DHCP 伺服器回應過慢，或是某些網"
+"路硬體未能正常作業。"
 
 #. Type: boolean
 #. Description
@@ -561,11 +581,11 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)："
-"那麼系統會無法知道該如何和 Internet 上的主機進行連線。"
-"除非您手上有 Debian 官方的第一張光碟、一個 'Netinst' 光碟、"
-"或是在您區域網路中可以取得所需套件，"
-"否則將會導致安裝作業無法繼續進行。"
+msgstr ""
+"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)：那麼系統"
+"會無法知道該如何和 Internet 上的主機進行連線。除非您手上有 Debian 官方的第一"
+"張光碟、一個 'Netinst' 光碟、或是在您區域網路中可以取得所需套件，否則將會導致"
+"安裝作業無法繼續進行。"
 
 #. Type: boolean
 #. Description
@@ -573,8 +593,9 @@ msgstr "網路自動設定作業完成了。然而，卻沒有設定預設的路
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行："
-"請向您區域網路的管理員反應這個問題。"
+msgstr ""
+"如果您並不確定，您不該在沒有設定 Default Route 的情況下繼續進行：請向您區域網"
+"路的管理員反應這個問題。"
 
 #. Type: text
 #. Description
@@ -712,6 +733,8 @@ msgstr "這些資訊是否正確？"
 msgid "Currently configured network parameters:"
 msgstr "當前被設定的網路參數："
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

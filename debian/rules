@@ -3,7 +3,7 @@
 # GNU copyright 1997 to 1999 by Joey Hess.
 
 PACKAGES	= $(shell dh_listpackages -s)
-DHCP_PACKAGES	= netcfg netcfg-dhcp
+DHCP_PACKAGES	= netcfg 
 
 build: build-stamp
 build-stamp:

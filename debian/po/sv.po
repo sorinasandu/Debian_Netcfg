@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-25 20:25+0200\n"
 "Last-Translator: Per Olofsson <pelle@dsv.su.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
@@ -284,22 +284,40 @@ msgstr ""
 "För att göra detta ska du gå tillbaka till steget för identifiering av "
 "nätverksmaskinvaran."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "Konfigurera nätverket"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Infrastrukturnätverk (styrt), Ad-hoc-nätverk (icke-hierarkiskt)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "Typ av trådlöst nätverk:"
 
 # FIXME: Någon lämpligare översättning av "managed"?
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -311,123 +329,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "Konfigurering av trådlöst nätverk"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "Söker efter trådlösa åtkomstpunkter ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<inget>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "Trådlöst ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "trådlöst"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet eller Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "Punkt till punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN-Punkt till punkt-prokotoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Riktig channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "Okänt nätverkskort"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "Konfigurerar nätverket ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "Konfigurera nätverket"
 
@@ -500,7 +518,8 @@ msgstr "Försök att konfigurera nätverket automatiskt igen"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Försök att konfigurera nätverket automatiskt igen med ett DHCP-värdnamn"
+msgstr ""
+"Försök att konfigurera nätverket automatiskt igen med ett DHCP-värdnamn"
 
 #. Type: select
 #. Choices
@@ -529,13 +548,19 @@ msgstr "Metod för nätverkskonfigurering"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
-msgstr "Här kan du välja att försöka konfigurera nätverket automatiskt med DHCP igen (vilket kanske fungerar om din DHCP-server tar lång tid på sig att svara), eller att konfigurera nätverket manuellt. Vissa DHCP-servrar kräver att ett DHCP-värdnamn skickas av klienten, i så fall kan du välja att försöka konfigurera nätverket med DHCP och ett värdnamn som du anger."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
+msgstr ""
+"Här kan du välja att försöka konfigurera nätverket automatiskt med DHCP igen "
+"(vilket kanske fungerar om din DHCP-server tar lång tid på sig att svara), "
+"eller att konfigurera nätverket manuellt. Vissa DHCP-servrar kräver att ett "
+"DHCP-värdnamn skickas av klienten, i så fall kan du välja att försöka "
+"konfigurera nätverket med DHCP och ett värdnamn som du anger."
 
 #. Type: note
 #. Description
@@ -549,7 +574,10 @@ msgstr "Automatisk konfigurering av nätverket misslyckades"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "Ditt nätverk använder förmodligen inte DHCP-protokollet. Det kan också vara så att DHCP-servern är långsam eller att någon nätverkshårdvara inte fungerar ordentligt."
+msgstr ""
+"Ditt nätverk använder förmodligen inte DHCP-protokollet. Det kan också vara "
+"så att DHCP-servern är långsam eller att någon nätverkshårdvara inte "
+"fungerar ordentligt."
 
 #. Type: boolean
 #. Description
@@ -566,7 +594,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "Automatisk konfigurering av nätverket lyckades. Ingen standardrutt aktiverades dock, systemet vet alltså inte hur det ska kommunicera med andra noder på Internet. Det här gör det omöjligt att fortsätta installationen om du inte har den första officiella Debian-CD:n, en \"Netinst\"-CD, eller paketen tillgängliga på det lokala nätverket."
+msgstr ""
+"Automatisk konfigurering av nätverket lyckades. Ingen standardrutt "
+"aktiverades dock, systemet vet alltså inte hur det ska kommunicera med andra "
+"noder på Internet. Det här gör det omöjligt att fortsätta installationen om "
+"du inte har den första officiella Debian-CD:n, en \"Netinst\"-CD, eller "
+"paketen tillgängliga på det lokala nätverket."
 
 #. Type: boolean
 #. Description
@@ -574,7 +607,9 @@ msgstr "Automatisk konfigurering av nätverket lyckades. Ingen standardrutt akti
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "Om du är osäker bör du inte fortsätta utan en standardrutt. Kontakta i stället din lokala nätverksadministratör rörande det här problemet."
+msgstr ""
+"Om du är osäker bör du inte fortsätta utan en standardrutt. Kontakta i "
+"stället din lokala nätverksadministratör rörande det här problemet."
 
 #. Type: text
 #. Description
@@ -716,6 +751,8 @@ msgstr "Är denna information korrekt?"
 msgid "Currently configured network parameters:"
 msgstr "Nätverksparametrar som är konfigurerade:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

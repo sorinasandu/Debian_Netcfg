@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.72\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-20 22:56+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -283,22 +283,40 @@ msgstr ""
 "caricare un modulo specifico. Per farlo, tornare indietro alla rilevazione "
 "automatica dell'hardware."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "Configura la rete"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 "Rete «Infrastructure» (Managed), Rete «Ad-hoc» (connessione uno ad uno)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "Tipologia di rete wireless:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -310,123 +328,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "Configurazione della rete wireless"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "Ricerca degli «access point» wireless in corso."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<nessuno>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet wireless (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "wireless"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "Interfaccia sconosciuta"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "Configurazione della rete in corso,"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "Configura la rete"
 
@@ -531,13 +549,19 @@ msgstr "Metodo di configurazione della rete:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
-msgstr "Adesso è possibile ritentare la configurazione automatica della rete (che potrebbe funzionare se il server DHCP impiegasse molto tempo a rispondere) o proseguire con la configurazione manuale. Alcuni server DHCP richiedono che uno hostname sia inviato dal client, quindi è anche possibile ritentare la configurazione automatica tramite DHCP specificando questo nome."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
+msgstr ""
+"Adesso è possibile ritentare la configurazione automatica della rete (che "
+"potrebbe funzionare se il server DHCP impiegasse molto tempo a rispondere) o "
+"proseguire con la configurazione manuale. Alcuni server DHCP richiedono che "
+"uno hostname sia inviato dal client, quindi è anche possibile ritentare la "
+"configurazione automatica tramite DHCP specificando questo nome."
 
 #. Type: note
 #. Description
@@ -551,7 +575,10 @@ msgstr "La configurazione automatica della rete ha funzionato"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "La rete potrebbe essere priva di un server DHCP o, in alternativa, il server potrebbe essere molto lento o uno dei componenti hardware di rete potrebbe essere guasto."
+msgstr ""
+"La rete potrebbe essere priva di un server DHCP o, in alternativa, il server "
+"potrebbe essere molto lento o uno dei componenti hardware di rete potrebbe "
+"essere guasto."
 
 #. Type: boolean
 #. Description
@@ -568,7 +595,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "La configurazione automatica della rete ha funzionato, ma non è stata specificata una \"route\" predefinita: il sistema non sa come comunicare con host in Internet. Questo rende impossibile proseguire l'installazione a meno che non si abbia un CD-ROM ufficiale, un CD-ROM \"NetInst\" o i pacchetti disponibili sulla rete locale."
+msgstr ""
+"La configurazione automatica della rete ha funzionato, ma non è stata "
+"specificata una \"route\" predefinita: il sistema non sa come comunicare con "
+"host in Internet. Questo rende impossibile proseguire l'installazione a meno "
+"che non si abbia un CD-ROM ufficiale, un CD-ROM \"NetInst\" o i pacchetti "
+"disponibili sulla rete locale."
 
 #. Type: boolean
 #. Description
@@ -576,7 +608,9 @@ msgstr "La configurazione automatica della rete ha funzionato, ma non è stata s
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "Nel dubbio è meglio non continuare senza una \"route\" predefinita: contattare l'amministratore locale della rete per chiarire il problema."
+msgstr ""
+"Nel dubbio è meglio non continuare senza una \"route\" predefinita: "
+"contattare l'amministratore locale della rete per chiarire il problema."
 
 #. Type: text
 #. Description
@@ -720,6 +754,8 @@ msgstr "Le informazioni inserite sono corrette?"
 msgid "Currently configured network parameters:"
 msgstr "Parametri di rete attualmente configurati:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"

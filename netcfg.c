@@ -175,13 +175,18 @@ int main(int argc, char *argv[])
 	    break;
 
 	case GET_STATIC:
+        {
+            int ret;
 	    /* Misnomer - this should actually take care of activation */
-	    if (netcfg_get_static(client))
-		state = GET_METHOD;
+	    if ((ret = netcfg_get_static(client)) == 10)
+		state = GET_INTERFACE;
+            else if (ret)
+                state = GET_METHOD;
 	    else
 	        state = QUIT;
 	    break;
-
+        }
+        
         case WCONFIG:
 	    if (requested_wireless_tools == 0)
 	    {

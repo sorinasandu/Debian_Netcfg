@@ -1,10 +1,15 @@
 netcfg (1.01) UNRELEASED; urgency=low
 
   * Joey Hess
-    - Ignore failure from ip in dhclient-script whensetting mtu, in case
+    - Ignore failure from ip in dhclient-script when setting mtu, in case
       the supplied mtu is invalid.
+  * Joshua Kwan
+    - Give the user a choice to leave the network unconfigured if nothing is
+      plugged in. (Closes: #264476)
+    - netcfg-dhcp.templates: "may work" becomes "may succeed".
+      (Closes: #261471)
 
- -- Joey Hess <joeyh@debian.org>  Tue,  3 Aug 2004 16:05:32 -0400
+ -- Joshua Kwan <joshk@triplehelix.org>  Sat,  7 Aug 2004 17:12:20 -0700
 
 netcfg (1.00) unstable; urgency=low
 

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer.packages.netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-19 12:11+0200\n"
+"POT-Creation-Date: 2004-08-07 20:55-0700\n"
 "PO-Revision-Date: 2004-07-22 10:01+0300\n"
 "Last-Translator: Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -162,7 +162,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "طبعاً إذا لم يكن هنالك مفتاح WEP لشبكتك اللّاسلكيّة فاترك هذا الحقل فارغاً."
+msgstr ""
+"طبعاً إذا لم يكن هنالك مفتاح WEP لشبكتك اللّاسلكيّة فاترك هذا الحقل فارغاً."
 
 #. Type: error
 #. Description
@@ -257,7 +258,9 @@ msgstr "خطأ"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr "حدث خطأ و تمّ إجهاض عمليّة إعداد الشّبكة. يمكنك إعادة المحاولة من قائمة التّثبيت الرّئيسيّة."
+msgstr ""
+"حدث خطأ و تمّ إجهاض عمليّة إعداد الشّبكة. يمكنك إعادة المحاولة من قائمة التّثبيت "
+"الرّئيسيّة."
 
 #. Type: error
 #. Description
@@ -283,21 +286,39 @@ msgstr ""
 "قد تحتاج إلى تحميل وحدةٍ معيّنة لبطاقة الشّبكة إن كانت لديك واحدة. لذا ارجع إلى "
 "خطوة تفحّص عتاد الشّبكة."
 
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+#, fuzzy
+msgid "Continue without configuring the network?"
+msgstr "إعداد الشبكة"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-common.templates:109
+msgid ""
+"${IFACE} does not seem to be connected to any sort of network. This could be "
+"due to a missing network cable or network adapter malfunction. You can "
+"either forego configuring the network until you reboot into Debian and use "
+"the etherconf utility, or configure the network statically. You can also go "
+"back and choose a different interface."
+msgstr ""
+
 #. Type: select
 #. Choices
-#: ../netcfg-common.templates:109
+#: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "شبكة بنية تحتيّة (مدارة), شبكة مصطنعة (ند إلى ند)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
 msgstr "نوع الشّبكة اللّاسلكيّة:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:120
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -309,123 +330,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:117
+#: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
 msgstr "إعداد الشّبكة اللّاسلكيّة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:121
+#: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
 msgstr "جاري البحث عن نقاط الوصول اللّاسلكي ..."
 
-#. Type: boolean
+#. Type: text
 #. Description
-#: ../netcfg-common.templates:131
+#: ../netcfg-common.templates:141
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:135
+#: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
 msgstr "إيثرنت لاسلكي (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:149
 msgid "wireless"
 msgstr "لاسلكي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:153
 msgid "Ethernet or Fast Ethernet"
 msgstr "إيثرنت أو إيثرنت سريع"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:157
 msgid "Token Ring"
 msgstr "طوق رمزي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:161
 msgid "Arcnet"
 msgstr "آركنت"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:165
 msgid "Serial-line IP"
 msgstr "عنوان IP ذو خطٍّ متوالي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:169
 msgid "Parallel-port IP"
 msgstr "عنوان IP ذو منفذٍ متوازي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:173
 msgid "Point-to-Point Protocol"
 msgstr "بروتوكول نقطة لنقطة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:177
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:181
 msgid "ISDN Point-to-Point Protocol"
 msgstr "بروتوكول نقطة لنقطة ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:185
 msgid "Channel-to-channel"
 msgstr "قناة لقناة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
 msgstr "قناة لقناة حقيقي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:193
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:197
 msgid "Inter-user communication vehicle"
 msgstr "وسيلة اتّصال بين المستخدمين"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:201
 msgid "Unknown interface"
 msgstr "واجهة غير معروفة"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:206
 msgid "Configuring network ..."
 msgstr "جاري إعداد الشّبكة ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:201
+#: ../netcfg-common.templates:211
 msgid "Configure the network"
 msgstr "إعداد الشبكة"
 
@@ -526,13 +547,18 @@ msgstr "طريقة إعداد الشّبكة:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
+#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
-"work if your DHCP server takes a long time to respond) or to configure the "
-"network manually. Some DHCP servers require a DHCP hostname to be sent by "
-"the client, so you can also choose to retry DHCP network autoconfiguration "
-"with a hostname that you provide."
-msgstr "من هنا يمكنك إعادة محاولة إعداد شبكة DHCP آليّاً (ممّا قد ينجح إن كان خادم DHCP يستغرق وقتاً طويلاً للاستجابة) أو يمكنك إعداد الشّبكة يدويّاً. بعض خادمات DHCP تتطلّب أن يرسل اسم مضيف DHCP إلى العميل لذا فيمكنك أيضاً إعادة محاولة إعداد شبكة DHCP تلقائيّاً مع إضافة اسم مضيفٍ."
+"succeed if your DHCP server takes a long time to respond) or to configure "
+"the network manually. Some DHCP servers require a DHCP hostname to be sent "
+"by the client, so you can also choose to retry DHCP network "
+"autoconfiguration with a hostname that you provide."
+msgstr ""
+"من هنا يمكنك إعادة محاولة إعداد شبكة DHCP آليّاً (ممّا قد ينجح إن كان خادم DHCP "
+"يستغرق وقتاً طويلاً للاستجابة) أو يمكنك إعداد الشّبكة يدويّاً. بعض خادمات DHCP "
+"تتطلّب أن يرسل اسم مضيف DHCP إلى العميل لذا فيمكنك أيضاً إعادة محاولة إعداد "
+"شبكة DHCP تلقائيّاً مع إضافة اسم مضيفٍ."
 
 #. Type: note
 #. Description
@@ -546,7 +572,9 @@ msgstr "فشل إعداد الشّبكة آليّاً"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "من الأرجح أن شبكتك لا تستخدم بروتوكول DHCP. من ناحيةٍ أخرى قد يكون خادم DHCP بطيئاً أو أنّ بعض عتاد الشّبكة لا يعمل بشكلٍ صحيح."
+msgstr ""
+"من الأرجح أن شبكتك لا تستخدم بروتوكول DHCP. من ناحيةٍ أخرى قد يكون خادم DHCP "
+"بطيئاً أو أنّ بعض عتاد الشّبكة لا يعمل بشكلٍ صحيح."
 
 #. Type: boolean
 #. Description
@@ -563,7 +591,11 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "تمّ إعداد الشّبكة آليّاً بنجاح. رغم ذلك لم يعيّن أيّ مسلكٍ افتراضي: لا يعرف النّظام كيف يتواصل مع المضيفين على الإنترنت. هذا سيجعل الاستمرار بالتّثبيت أمراً مستحيلاً إلّا إذا كان بحوزتك قرص دبيان الرّسمي الأوّل أو قرص 'Netinst' (تثبيت شبكي) أو حزماً متوفّرة على الشّبكة المحلّيّة."
+msgstr ""
+"تمّ إعداد الشّبكة آليّاً بنجاح. رغم ذلك لم يعيّن أيّ مسلكٍ افتراضي: لا يعرف النّظام "
+"كيف يتواصل مع المضيفين على الإنترنت. هذا سيجعل الاستمرار بالتّثبيت أمراً "
+"مستحيلاً إلّا إذا كان بحوزتك قرص دبيان الرّسمي الأوّل أو قرص 'Netinst' (تثبيت "
+"شبكي) أو حزماً متوفّرة على الشّبكة المحلّيّة."
 
 #. Type: boolean
 #. Description
@@ -571,7 +603,9 @@ msgstr "تمّ إعداد الشّبكة آليّاً بنجاح. رغم ذلك 
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "إن لم تكن متأكّداً فلا ينبغي أن تستمر دون مسلكٍ افتراضي: اتّصل بمدير شبكتك المحلّيّة حول هذه المشكلة."
+msgstr ""
+"إن لم تكن متأكّداً فلا ينبغي أن تستمر دون مسلكٍ افتراضي: اتّصل بمدير شبكتك "
+"المحلّيّة حول هذه المشكلة."
 
 #. Type: text
 #. Description
@@ -694,7 +728,8 @@ msgstr "عنوان البوّابة الذي أدخلته لا يمكن الوص
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "قد تكون أدخلت خطأً في عنوان IP و/أو قناع الشّبكة و/أو البوّابة."
 
 #. Type: boolean
@@ -709,6 +744,8 @@ msgstr "هل هذه المعلومات صحيحة؟"
 msgid "Currently configured network parameters:"
 msgstr "معطيّات الشبكة المعدّة حالياً:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -731,4 +768,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "إعداد الشّبكة باستخدام العنونة ساكنة"
-
