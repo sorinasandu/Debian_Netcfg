@@ -698,6 +698,11 @@ void parse_args (int argc, char ** argv)
 	exit(EXIT_SUCCESS);
       }
     }
+    else if (!strcmp(argv[1], "-V"))
+    {
+      puts("netcfg version " NETCFG_VERSION);
+      exit(EXIT_SUCCESS);
+    }
     
     exit(EXIT_FAILURE);
   }

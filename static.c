@@ -466,15 +466,22 @@ int netcfg_get_static(struct debconfclient *client)
             debconf_input(client, "medium", "netcfg/confirm_static");
             debconf_go(client);
             debconf_get(client, "netcfg/confirm_static");
-            state = strstr(client->value, "true") ? GET_HOSTNAME : GET_IPADDRESS;
+            if (strstr(client->value, "true"))
+            {
+              state = GET_HOSTNAME;
+              netcfg_rewrite_resolv(domain, nameserver_array);
+              netcfg_activate_static(client);
+            }
+            else
+              state = GET_IPADDRESS;
+            
             debconf_capb(client, "backup");
+            
             break;
 	    
         case QUIT:
             netcfg_write_common("40netcfg", ipaddress, hostname, domain);
             netcfg_write_static("40netcfg", domain, nameserver_array);
-            netcfg_rewrite_resolv(domain, nameserver_array);
-            netcfg_activate_static(client);
             return 0;
             break;
         }
