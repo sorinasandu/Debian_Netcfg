@@ -15,12 +15,12 @@ msgstr ""
 "Project-Id-Version: netcfg 0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 01:26-0500\n"
-"PO-Revision-Date: 2004-02-22 22:55+0100\n"
+"PO-Revision-Date: 2004-02-23 11:35+0100\n"
 "Last-Translator: Elian Myftiu <elian@lycos.com>\n"
 "Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: select
 #. Choices
@@ -110,7 +110,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "Wireless ESSID për ${iface}:"
 
 #. Type: string
 #. Description
@@ -120,12 +120,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this form blank."
 msgstr ""
+"${iface} është një përballje rrjeti wireless. Të lutem fut emrin (ESSID) e "
+"rrjetit wireless që do të përdorë ${iface}. Nëse dëshiron të përdorësh një "
+"rrjet tjetër çfarëdo, lëre bosh këtë fushë."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "Kodi WEP për ${iface}:"
 
 #. Type: string
 #. Description
@@ -134,6 +137,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Nëse është e aplikueshme, të lutem fut kodin e sigurisë WEP për dispozitivin "
+"${iface}.Ka dy mënyra për ta bërë këtë:"
 
 #. Type: string
 #. Description
@@ -142,6 +147,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into the box."
 msgstr ""
+"Nëse kodi WEP është i formës 'nnnn-nnnn-nn' ose 'nnnnnnnn', ku n është "
+"një numër, shkruaje siç është."
 
 #. Type: string
 #. Description
@@ -150,6 +157,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes.)"
 msgstr ""
+"Nëse kodi WEP është një fjalëkalim, parashtoji një 's:' (pa thonjëza)"
 
 #. Type: string
 #. Description
@@ -158,12 +166,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this form "
 "blank."
 msgstr ""
+"Sigurisht, nëse nuk ke asnjë kod WEP për rrjetin tënd wireless, lëre bosh "
+"këtë fushë."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Kod WEP i pavlefshëm"
 
 #. Type: error
 #. Description
@@ -172,12 +182,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"Kodi WEP '${wepkey}' është invalid. Të lutem shiko me kujdes udhëzimet në "
+"ekranin që vjen si të përdorësh saktësisht kodin tënd WEP, dhe provoje sërisht."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "ESSID i pavlefshëm"
 
 #. Type: error
 #. Description
@@ -186,6 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID-i \"${essid}\" është i pavlefshëm. ESSID nuk mund të kalojë 32 gërmat, "
+"por mund të përmbajë të gjitha llojet e shkronjave."
 
 #. Type: string
 #. Description
@@ -290,7 +304,7 @@ msgstr "<asnjë>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Ethernet wireless (802.11x)"
 
 #. Type: text
 #. Description
