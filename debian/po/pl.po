@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-25 06:56+0100\n"
-"PO-Revision-Date: 2004-01-14 13:48+0100\n"
+"PO-Revision-Date: 2004-02-26 20:18+0100\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
@@ -111,7 +111,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "Bezprzewodowy ESSID dla ${iface}:"
 
 #. Type: string
 #. Description
@@ -121,12 +121,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} jest bezprzewodowym interfejsem sieciowym. Proszê wprowadziæ "
+"nazwê (ESSID) bezprzewodowej sieci, której chcesz u¿yæ z ${iface}. "
+"Je¶li chcesz u¿yæ jakiejkolwiek dostêpnej sieci, zostaw to pole puste."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "Klucz WEP dla ${iface}:"
 
 #. Type: string
 #. Description
@@ -135,6 +138,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Je¶li istnieje mo¿liwo¶æ, wprowad¼ klucz bezpieczeñstwa WEP dla urz±dzenia "
+"${iface}. S± dwa sposoby dokonania tego:"
 
 #. Type: string
 #. Description
@@ -143,6 +148,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
+"Je¶li Twój klucz WEP jest formatu 'nnnn-nnnn-nn' lub 'nnnnnnnn', gdzie "
+"n jest liczb±, wprowad¼ ten numer po prostu do tego pola."
 
 #. Type: string
 #. Description
@@ -151,6 +158,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Je¶li Twój klucz WEP jest w formacie has³a, poprzed¼ go przez 's:' "
+"(pomijaj±c znaki cytowania)."
 
 #. Type: string
 #. Description
@@ -159,12 +168,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Oczywi¶cie, je¶li nie posiadasz klucza WEP dla swojej sieci bezprzewodowej, "
+"zostaw to pole puste."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Nieprawid³owy klucz WEP"
 
 #. Type: error
 #. Description
@@ -173,12 +184,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"Klucz WEP '${wepkey}' jest nieprawid³owy. Proszê uwa¿nie przeczytaæ "
+"instrukcje opisuj±ce jak prawid³owo wprowadziæ klucz WEP, znajduj±ce "
+"siê na nastêpnym ekranie, a nastêpnie spróbowaæ ponownie." 
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Nieprawid³owy ESSID"
 
 #. Type: error
 #. Description
@@ -187,6 +201,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID \"${essid}\" jest nieprawid³owy. ESSID mo¿e zawieraæ maksimum "
+"32 znaki, ale ka¿dego rodzaju."
 
 #. Type: string
 #. Description
@@ -291,7 +307,7 @@ msgstr "<brak>"
 #. Description
 #: ../netcfg-common.templates:112
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Bezprzewodowy ethernet (802.11x)"
 
 #. Type: text
 #. Description
@@ -388,9 +404,8 @@ msgstr "Konfiguracja sieci"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
 msgid "Configuring network ..."
-msgstr "Konfiguruj sieæ"
+msgstr "Konfigurowanie sieci ..."
 
 #. Type: text
 #. Description
@@ -531,9 +546,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "Adres IP:"
+msgstr "Nieprawid³owy adres IP"
 
 #. Type: error
 #. Description
@@ -542,6 +556,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Wprowadzony adres IP jest nieprawid³owy. Powinien byæ podany w formie "
+"x.x.x.x, gdzie ka¿dy 'x' jest nie wiêkszy ni¿ 255. Proszê spróbowaæ "
+"ponownie."
 
 #. Type: string
 #. Description
@@ -660,22 +677,3 @@ msgstr "Statyczna konfiguracja sieci"
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
 
-#~ msgid "Error while activating the network"
-#~ msgstr "B³±d podczas aktywacji sieci"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Wyst±pi³ b³±d podczas aktywacji sieci."
-
-#~ msgid "Interface:"
-#~ msgstr "Interfejs:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Proszê wybraæ interfejs do skonfigurowania. Poni¿ej pokazane s± wszystkie "
-#~ "aktualnie wykryte interfejsy. Wybierz typ Twojego podstawowego interfejsu "
-#~ "sieciowego. Zostanie on u¿yty do instalacji systemu Debian (przez NFS lub "
-#~ "HTTP)."
