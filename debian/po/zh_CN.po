@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 18:28+0200\n"
-"PO-Revision-Date: 2004-04-12 23:08+1200\n"
+"PO-Revision-Date: 2004-04-13 11:04+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "使用 DHCP 进行网络自动设置"
+msgstr "使用 DHCP 进行网络自动设置吗？"
 
 #. Type: boolean
 #. Description
@@ -72,7 +72,6 @@ msgstr "域名服务器地址："
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -80,9 +79,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"您在此处指定的域名服务器将被用来查询互联网主机名。请输入至多三个域名服务器的 "
-"IP 地址(不是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查"
-"询。如果您不想用任何域名服务器，请将此栏置空。"
+"域名服务器将被用来在网络中查询主机名称。请输入至多三个域名服务器的 IP 地址(不"
+"是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查询。如果您"
+"不想用任何域名服务器，请将此栏置空。"
 
 #. Type: select
 #. Description
@@ -128,7 +127,7 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
-"如果合适，请为 ${iface} 设备输入 WEP 安全密钥。有两种方法可以完成此任务："
+"如果需要，请为 ${iface} 设备输入 WEP 安全密钥。输入方式有以下两种："
 
 #. Type: string
 #. Description
@@ -155,7 +154,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "当然，如果您的无线网络没有 WEP 密钥，请将此处置空。"
+msgstr "当然，如果您的无线网络没有 WEP 密钥，请将此栏置空。"
 
 #. Type: error
 #. Description
@@ -271,8 +270,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"如果您有这个网卡的特殊模块，大概就需要加载它。为了加载模块，请返回到网络硬件"
-"探测步骤。"
+"如果您的网卡使用其特有的模块，您可能还需要加载它。要完成此任务，请返回到网络"
+"硬件探测步骤。"
 
 #. Type: select
 #. Choices
@@ -326,7 +325,7 @@ msgstr "无线局域网(802.11x)"
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Ethernet or Fast Ethernet"
-msgstr "以太网或速以太网"
+msgstr "以太网或高速以太网"
 
 #. Type: text
 #. Description
@@ -411,14 +410,14 @@ msgstr "未知接口"
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:190
 msgid "Configuring network ..."
-msgstr "正在配置网络 ..."
+msgstr "正在设置网络 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:195
 msgid "Configure the network"
-msgstr "配置网络"
+msgstr "网络设置"
 
 #. Type: string
 #. Description
@@ -439,7 +438,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "大多数其他用户可以留空。"
+msgstr "大多数其他用户可以将此栏置空。"
 
 #. Type: boolean
 #. Description
@@ -616,8 +615,8 @@ msgid ""
 msgstr ""
 "网关是用以指示网关路由服务器的 IP 地址(四个用句点分隔的数字)，也叫做默认路"
 "由。所有与局域网外的通信(例如，对互联网的访问)都要经过它。在某些罕见情况下，"
-"您可能并不使用路由；这时，留空就可以了。如果不知道应该回答什么，请向网管咨"
-"询。"
+"您可能并不使用路由；这时，置空就可以了。如果不知道应该回答什么，请咨询网络管"
+"理员。"
 
 #. Type: error
 #. Description
