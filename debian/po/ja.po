@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-28 14:40-0700\n"
-"PO-Revision-Date: 2004-05-16 11:53+0900\n"
+"PO-Revision-Date: 2004-06-29 08:49+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -531,24 +531,17 @@ msgstr "ネットワークの設定方法:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here, you can choose to retry DHCP network autoconfiguration or "
 "configure the network manually. Also, some DHCP servers need a specific DHCP "
 "hostname, so you can choose to enter such a hostname before retrying DHCP."
-msgstr ""
-"ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが"
-"遅いためであることがほとんどなので、おそらく再試行したいと思うでしょう。あな"
-"たのネットワークが自動設定に DHCP を使っていないのであれば、代わりに手動で設"
-"定できます。また、いくつかの DHCP サーバは特定の DHCP ホスト名を必要とするの"
-"で、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
+msgstr "ここでは、DHCP ネットワークの自動設定の再試行またはネットワークの手動設定を選ぶことができます。また、ある種の DHCP サーバは特定の DHCP ホスト名を必要とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Network autoconfiguration failed."
-msgstr "ネットワークの自動設定に成功しました"
+msgstr "ネットワークの自動設定に失敗しました。"
 
 #. Type: note
 #. Description
@@ -557,13 +550,13 @@ msgid ""
 "This may be due to a slow DHCP server, a loose network cable, or "
 "malfunctioning routers or hubs on your network, or your network is simply "
 "not set up for DHCP."
-msgstr ""
+msgstr "これは遅い DHCP サーバのためか、ネットワークケーブルが外れているか、あなたのネットワークのルータまたはハブが壊れているか、ネットワークが単に DHCP のセットアップを用意していないかといったことによるものでしょう。"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:46
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "デフォルトルートなしに続けますか?"
 
 #. Type: boolean
 #. Description
@@ -574,7 +567,7 @@ msgid ""
 "be able to continue your Debian installation, unless everything necessary is "
 "on a CD. If you are unsure, you should go ahead and come back to network "
 "configuration if necessary."
-msgstr ""
+msgstr "ネットワークの自動設定には成功しましたが、インターネットのような外部のネットワークへの利用可能なデフォルトルートがないようです。必要なものすべてが CD にあるという場合以外は、Debian のインストールを続けることができないかもしれません。よくわからなければ、ネットワーク設定に戻ってください。"
 
 #. Type: text
 #. Description
@@ -742,19 +735,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "動的ネットワークの設定 (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " インターフェイス = ${interface}\n"
-#~ " ホスト名         = ${hostname}\n"
-#~ " ドメイン         = ${domain}\n"
-#~ " dhcpホスト名     = ${dhcp_hostname}\n"
-#~ " ネームサーバ     = ${nameservers}"
