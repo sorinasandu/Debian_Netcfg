@@ -52,7 +52,7 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
               (mode == MANAGED) ? "managed" : "adhoc");
           fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
           if (wepkey != NULL)
-            fprintf(fp, "\twireless-key %s\n", wepkey);
+            fprintf(fp, "\twireless-key1 %s\n", wepkey);
         }
         fclose(fp);
     }
