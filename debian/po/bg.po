@@ -1,24 +1,16 @@
-# translation of bg.po to Bulgarian
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
-#    Developers do not need to manually edit POT or PO files.
-# Ognyan Kulev <ogi@fmi.uni-sofia.bg>, 2003.
+# Bulgarian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
+"POT-Creation-Date: 2004-08-26 03:36+0200\n"
 "PO-Revision-Date: 2004-07-13 13:09+0300\n"
-"Last-Translator: Ognyan Kulev <ogi@fmi.uni-sofia.bg>\n"
-"Language-Team: Bulgarian <dict@linux.zonebg.com>\n"
+"Last-Translator:  <>\n"
+"Language-Team: Debian L10n Bulgarian <debian-l10n-bulgarian@lists.debian."
+"org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -759,8 +751,6 @@ msgstr "Вярна ли е тази информация?"
 msgid "Currently configured network parameters:"
 msgstr "Текущите настроени параметри на мрежата:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -783,77 +773,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Настройка на мрежа чрез статични адреси"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Настройка на мрежата"
-
-#~ msgid ""
-#~ "This may be due to a slow DHCP server, malfunctioning network equipment, "
-#~ "or your network simply not being set up for DHCP."
-#~ msgstr ""
-#~ "Причината може да е в бавен DHCP сървър, неизправност на мрежовото "
-#~ "оборудване или просто Вашата мрежа да не използва DHCP."
-
-#~ msgid ""
-#~ "If you are unsure then you can continue and come back to the network "
-#~ "configuration step later if necessary."
-#~ msgstr ""
-#~ "Ако не сте сигурен(на), можете да продължите и да се върнете към "
-#~ "настройването на мрежата по-късно, ако е нужно."
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Динамична мрежова настройка (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ "интерфейс      = ${interface}\n"
-#~ "име на хост    = ${hostname}\n"
-#~ "домейн         = ${domain}\n"
-#~ "DHCP хост      = ${dhcp_hostname}\n"
-#~ "DNS сървъри    = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Метод за настройка на мрежата:"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Искате ли да пробвате отново да настроите мрежата чрез DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Не беше получен IP адрес по време на мрежовата настройка чрез DHCP. DHCP-"
-#~ "сървърите понякога са наистина бавни. Ако искате, можете да пробвате пак."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Динамично адресиране (DHCP), статично адресиране (ръчно)"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Грешка при активирането на мрежата"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Получи се грешка при активирането на мрежата."
-
-#~ msgid "Interface:"
-#~ msgstr "Интерфейс:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Моля изберете интерфейса, който искате да настройвате. Всички открити "
-#~ "интерфейси във Вашата система са изброени по-долу. Моля изберете типа на "
-#~ "Вашия основен мрежов интерфейс. Този интерфейс ще бъде използван за "
-#~ "инсталирането на Debian (чрез NFS или HTTP)."
