@@ -8,4 +8,4 @@
 * currently we get an internal error if the user has lots of network interfaces, find a better way of handling that.
 * etherconf has some good descriptive text, perhaps I want to use it in place of the existing text.
 * when the real dhcpcd installs itself we want to make sure it doesn't destroy our nice working configuration, how to do that?
-* dhcp and static config udebs share a fair amount of code, perhaps a shared library?
+* dhcp and static config udebs share a fair amount of code, perhaps a shared library? They also share templates, need to make a netcfg-shared udeb?
