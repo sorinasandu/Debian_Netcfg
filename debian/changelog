@@ -1,3 +1,13 @@
+ netcfg (0.57) UNRELEASED; urgency=low
+ 
+   * Bastian Blank
+     - Use inet_pton and inet_ntop. Why must people always write its own
+       instead of using well tested default functions?
+     - Only recalculate gateway if ipaddress or netmask is changed.
+     - Never recalculate nameserver.
+ 
+  -- Petter Reinholdtsen <pere@debian.org>  Sun, 14 Mar 2004 19:22:30 +0100
+
 netcfg (0.56) unstable; urgency=low
 
   * Petter Reinholdtsen
