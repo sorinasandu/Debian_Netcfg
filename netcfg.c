@@ -175,7 +175,6 @@ continue_configure:
                   }
                   
                   netcfg_method = STATIC;
-                  break;
                 }
                 else if (ret == 0)
                 {
@@ -183,7 +182,6 @@ continue_configure:
                   debconf_get(client, "netcfg/disable_dhcp");
                   if (strcmp(client->value, "true") != 0)
                     netcfg_method = DHCP;
-                  break;
                 }
               }
               
