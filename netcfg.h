@@ -31,7 +31,7 @@ extern void getif_end ();
 
 extern char *get_ifdsc (const char *ifp);
 
-extern FILE *file_open (char *path);
+extern FILE *file_open (char *path, const char *opentype);
 
 extern void dot2num (u_int32_t * num, char *dot);
 
@@ -41,11 +41,14 @@ extern void netcfg_die (struct debconfclient *client);
 
 extern void netcfg_get_interface(struct debconfclient *client, char **interface);
 
+extern void netcfg_get_hostname(struct debconfclient *client, char **hostname);
+
 extern void netcfg_get_common (struct debconfclient *client, char **interface,
 			       char **hostname, char **domain,
 			       char **nameservers);
 
-extern void netcfg_write_common (u_int32_t ipaddress, char *domain,
+extern void netcfg_write_common (const char *prebaseconfig,
+				 u_int32_t ipaddress, char *domain,
 				 char *hostname, u_int32_t nameservers[]);
 
 void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]);

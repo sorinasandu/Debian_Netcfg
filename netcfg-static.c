@@ -122,17 +122,22 @@ static int netcfg_write_static()
 {
         FILE *fp;
 
-        if ((fp = file_open(NETWORKS_FILE))) {
+        if ((fp = file_open(NETWORKS_FILE, "w"))) {
                 fprintf(fp, "localnet %s\n", num2dot(network));
                 fclose(fp);
+
+		di_prebaseconfig_append("40netcfg-static", "cp %s %s\n",
+					NETWORKS_FILE,
+					"/target" NETWORKS_FILE);
         } else
                 goto error;
 
-        if ((fp = file_open(INTERFACES_FILE))) {
+        if ((fp = file_open(INTERFACES_FILE, "a"))) {
                 fprintf(fp,
                         "\n# This entry was created during the Debian installation\n");
                 fprintf(fp,
                         "# (network, broadcast and gateway are optional)\n");
+		fprintf(fp, "auto %s\n", interface);
                 fprintf(fp, "iface %s inet static\n", interface);
                 fprintf(fp, "\taddress %s\n", num2dot(ipaddress));
                 fprintf(fp, "\tnetmask %s\n", num2dot(netmask));
@@ -245,7 +250,8 @@ int main(int argc, char *argv[])
         }
         while (!finished);
 
-        netcfg_write_common(ipaddress, domain, hostname, nameserver_array);
+        netcfg_write_common("40netcfg-static", ipaddress, domain, hostname,
+			    nameserver_array);
         netcfg_write_static();
         netcfg_activate_static();
 

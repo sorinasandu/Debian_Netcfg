@@ -49,6 +49,12 @@ install: build
 	cp netcfg-static debian/netcfg-static.postinst
 	mkdir -p debian/netcfg-dhcp/etc/dhcp debian/netcfg-dhcp/var/dhcp
 	mkdir -p debian/netcfg-static/etc/network
+	mkdir -p debian/netcfg-dhcp/usr/lib/prebaseconfig.d
+	install -m 755 prebaseconfig \
+	        debian/netcfg-dhcp/usr/lib/prebaseconfig.d/40netcfg-dhcp
+	mkdir -p debian/netcfg-static/usr/lib/prebaseconfig.d
+	install -m 755 prebaseconfig \
+	        debian/netcfg-static/usr/lib/prebaseconfig.d/40netcfg-static
 
 # Build architecture-independent files here.
 binary-indep: build install

@@ -85,9 +85,10 @@ static void netcfg_write_dhcp()
 
         FILE *fp;
 
-        if ((fp = file_open(INTERFACES_FILE))) {
+        if ((fp = file_open(INTERFACES_FILE, "a"))) {
                 fprintf(fp,
                         "\n# This entry was created during the Debian installation\n");
+		fprintf(fp, "auto %s\n", interface);
                 fprintf(fp, "iface %s inet dhcp\n", interface);
                 if (dhcp_hostname)
                         fprintf(fp, "\thostname %s\n", dhcp_hostname);
@@ -154,13 +155,13 @@ int main(int argc, char *argv[])
 
         do {
                 netcfg_get_interface(client, &interface);
+		netcfg_get_hostname(client, &hostname);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "interface", interface, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
-                                "hostname", (hostname ? hostname : _("<none>")),
-				NULL);
+                                "hostname", hostname, NULL);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "domain", (domain ? domain : _("<none>")),
@@ -182,8 +183,9 @@ int main(int argc, char *argv[])
         }
         while (!finished);
 
+        netcfg_write_common("40netcfg-dhcp", ipaddress, domain, hostname,
+			    nameserver_array);
         netcfg_write_dhcp();
-        netcfg_write_common(ipaddress, domain, hostname, nameserver_array);
 
         my_debconf_input("medium", "netcfg/do_dhcp");
         netcfg_activate_dhcp();

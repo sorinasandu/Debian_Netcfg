@@ -181,10 +181,10 @@ char *get_ifdsc(const char *ifp)
 }
 
 
-FILE *file_open(char *path)
+FILE *file_open(char *path, const char *opentype)
 {
         FILE *fp;
-        if ((fp = fopen(path, "w")))
+        if ((fp = fopen(path, opentype)))
                 return fp;
         else {
                 fprintf(stderr, "%s\n", path);
@@ -325,17 +325,12 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
         netcfg_die(client);
 }
 
-
 void
-netcfg_get_common(struct debconfclient *client, char **interface,
-                  char **hostname, char **domain, char **nameservers)
+netcfg_get_hostname(struct debconfclient *client, char **hostname)
 {
-        char *ptr;
         static const char *valid_chars =
             "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
         size_t len;
-
-        netcfg_get_interface(client, interface);
 
         do {
 		free(*hostname);
@@ -364,7 +359,17 @@ netcfg_get_common(struct debconfclient *client, char **interface,
 		}
         
 	} while (!*hostname);
+}
 
+
+void
+netcfg_get_common(struct debconfclient *client, char **interface,
+                  char **hostname, char **domain, char **nameservers)
+{
+        char *ptr;
+
+        netcfg_get_interface(client, interface);
+	netcfg_get_hostname(client, hostname);
 
 	free(*domain);
 
@@ -409,15 +414,24 @@ void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
 
 
 void
-netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname, 
-		u_int32_t nameservers[])
+netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
+		    char *domain, char *hostname, u_int32_t nameservers[])
 {
         FILE *fp;
 
+	if ((fp = file_open(INTERFACES_FILE, "w"))) {
+		fprintf(fp, "auto lo\n");
+		fprintf(fp, "iface lo inet loopback\n");
+		fclose(fp);
 
-        if ((fp = file_open(HOSTS_FILE))) {
-                fprintf(fp, "127.0.0.1\tlocalhost\n");
+		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+					INTERFACES_FILE,
+					"/target" INTERFACES_FILE);
+	}
+
+        if ((fp = file_open(HOSTS_FILE, "w"))) {
                 if (ipaddress) {
+			fprintf(fp, "127.0.0.1\tlocalhost\n");
                         if (domain)
                                 fprintf(fp, "%s\t%s.%s\t%s\n",
                                         num2dot(ipaddress), hostname,
@@ -425,12 +439,17 @@ netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname,
                         else
                                 fprintf(fp, "%s\t%s\n", num2dot(ipaddress),
 						hostname);
-                }
+                } else {
+			fprintf(fp, "127.0.0.1\t%s\tlocalhost\n", hostname);
+		}
 
                 fclose(fp);
+
+		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+					HOSTS_FILE, "/target" HOSTS_FILE);
         }
 
-        if ((fp = file_open(RESOLV_FILE))) {
+        if ((fp = file_open(RESOLV_FILE, "w"))) {
                 int i = 0;
                 if (domain)
                         fprintf(fp, "search %s\n", domain);
@@ -440,5 +459,8 @@ netcfg_write_common(u_int32_t ipaddress, char *domain, char *hostname,
                                 num2dot(nameservers[i++]));
 
                 fclose(fp);
+
+		di_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+					RESOLV_FILE, "/target" RESOLV_FILE);
         }
 }
