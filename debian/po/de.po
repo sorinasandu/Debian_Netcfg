@@ -1,3 +1,4 @@
+# translation of de.po to 
 # translation of netcfg to German
 # This file is distributed under the same license as the PACKAGE package.
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
@@ -11,7 +12,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-04-17 19:15+0200\n"
+"PO-Revision-Date: 2004-05-12 17:50+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +57,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Der Domainname ist der rechte Teil Ihrer Internetadresse nach Ihren "
+"Der Domainname ist der rechte Teil Ihrer Internetadresse nach Ihrem "
 "Rechnernamen. Er endet oft mit .de, .com, .net oder .org. Wenn Sie ein "
 "lokales Heimnetz aufbauen, ist es egal, was Sie angeben. Diese Information "
 "sollte dann aber auf allen Rechnern gleich sein."
@@ -478,8 +479,7 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -490,37 +490,32 @@ msgstr "Der DHCP-Konfigurationsprozess wird abgebrochen."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statische Netzwerkkonfiguration"
+msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
+msgstr "Netzwerk-Autokonfiguration nochmals mit DHCP-Hostname versuchen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Netzwerk einrichten"
+msgstr "Netzwerk manuell konfigurieren"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Netzwerk einrichten"
+msgstr "Netzwerk jetzt nicht konfigurieren"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Next network configuration step:"
-msgstr "Statische Netzwerkkonfiguration"
+msgstr "Nächster Netzwerkkonfigurations-Schritt:"
 
 #. Type: select
 #. Description
@@ -532,14 +527,19 @@ msgid ""
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
 msgstr ""
+"Die Netzwerk-Autokonfiguration schlug fehl. Dies liegt häufig an einem "
+"langsamen DHCP-Server im Netzwerk, deshalb möchsten Sie es vielleicht "
+"nochmals versuchen. Sie können auch einen DHCP-Hostnamen angeben, der an "
+"den Server gesendet wird, wenn Sie glauben, dass einer benötigt wird. "
+"Andernfalls können Sie das Netzwerk manuell einrichten oder es jetzt gar "
+"nicht konfigurieren."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:42
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr ""
-"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -654,8 +654,7 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -714,3 +713,4 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
 #~ msgid "Most other users can just leave this blank."
 #~ msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."
+
