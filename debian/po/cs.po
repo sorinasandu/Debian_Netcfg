@@ -14,14 +14,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
-"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 09:39-0800\n"
-"PO-Revision-Date: 2004-02-22 20:02+0100\n"
+"PO-Revision-Date: 2004-02-23 18:51+0100\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #. Type: select
 #. Choices
@@ -107,7 +107,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "ESSID pro bezdrátové ${iface}:"
 
 #. Type: string
 #. Description
@@ -117,12 +117,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} je rozhraní k bezdrátové síti. Zadejte jméno (ESSID) bezdrátové "
+"sítì, kterou chcete pøes rozhraní ${iface} pou¾ívat. Jestli¾e chcete pou¾ít "
+"libovolnou dostupnou sí», ponechte pole prázdné."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "WEP klíè pro ${iface}:"
 
 #. Type: string
 #. Description
@@ -131,6 +134,8 @@ msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
 msgstr ""
+"Pokud mù¾ete, zadejte bezpeènostní klíè WEP pro zaøízení ${iface}. Existují "
+"dvì mo¾nosti:"
 
 #. Type: string
 #. Description
@@ -139,6 +144,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
+"Pokud je vá¹ WEP klíè ve tvaru 'nnnn-nnnn-nn' nebo 'nnnnnnnn', kde n jsou "
+"èíslice, jednodu¹e jej pøepi¹te do pole."
 
 #. Type: string
 #. Description
@@ -147,6 +154,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Pokud je vá¹ WEP klíè ve formì hesla, napi¹te pøed nìj 's:' (bez apostrofù)."
 
 #. Type: string
 #. Description
@@ -155,12 +163,13 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Samozøejmì, pokud WEP klíè na bezdrátové síti nepou¾íváte, nezadávejte nic."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Neplatný WEP klíè"
 
 #. Type: error
 #. Description
@@ -169,12 +178,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"WEP klíè '${wepkey}' je neplatný. Pozornì si pøeètete návod na dal¹í "
+"obrazovce a zkuste to znovu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Neplatné ESSID"
 
 #. Type: error
 #. Description
@@ -183,6 +194,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID \"${essid}\" je neplatné. ESSID mù¾e obsahovat libovolné znaky, ale "
+"musí být krat¹í ne¾ 32 znakù."
 
 #. Type: string
 #. Description
@@ -284,7 +297,7 @@ msgstr "<nic>"
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Bezdrátový ethernet (802.11x)"
 
 #. Type: text
 #. Description
@@ -521,9 +534,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP adresa:"
+msgstr "Zkomolená IP adresa"
 
 #. Type: error
 #. Description
@@ -532,6 +544,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Zadaná IP adresa je zkomolená. Mìla by být ve tvaru x.x.x.x, kde ka¾dé x je "
+"èíslo men¹í nebo rovno 255. Zkuste to znovu."
 
 #. Type: string
 #. Description
