@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: 2003-05-18 11:39+0200\n"
 "Last-Translator: Thorsten Sauter <tsauter@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -18,11 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "Wählen Sie den Domainnamen."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -36,11 +38,13 @@ msgstr ""
 "lokales Heimnetz aufbauen, ist es egal was Sie angeben. Diese Information "
 "sollte dann aber auf allen Rechnern gleich sein."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "Wählen Sie die Adresse des DNS Server"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -54,11 +58,13 @@ msgstr ""
 "in der angegebenen Reihenfolge abgefragt. Wenn Sie keine Nameserver benutzen "
 "wollen, lassen Sie diese Feld bitte einfach leer."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "Wählen Sie ein Interface."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -70,21 +76,25 @@ msgstr ""
 "die Sie zur Installation des Debian-Systems (via NFS oder HTTP) benutzen "
 "wollen."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Ein Fehler ist aufgetreten."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "Es ist ein Fehler bei der Aktivierung Ihres Netzwerks aufgetreten."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "Geben Sie den Rechnernamen an."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -98,11 +108,13 @@ msgstr ""
 "Netzwerkadministrator. Wenn Sie ein lokales Heimnetz aufbauen, ist es egal "
 "was Sie angeben."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr "Der Rechnername \"${hostname}\" ist ungültig."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -114,22 +126,26 @@ msgstr ""
 "enthalten. Er darf nur 2 bis 63 Zeichen lang sein, und nicht mit einem Minus "
 "beginnen oder enden."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Ein Fehler ist aufgetreten und es wurde abgebrochen"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "Vielleicht versuchen Sie es noch ein Mal."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
 msgid "No network interfaces were detected."
 msgstr "Kein Interface wurde erkannt."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
@@ -144,87 +160,104 @@ msgstr ""
 "entsprechende Modul noch nicht ausgewählt worden. Gehen Sie zurück zum "
 "'Configure Network Hardware'."
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 #, fuzzy
 msgid "Unknown interface"
 msgstr "Wählen Sie ein Interface."
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Was ist Ihr DHCP Hostname?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 #, fuzzy
@@ -238,11 +271,13 @@ msgstr ""
 "besitzen, muss hier oft eine Benutzernummer angegeben werden. Sonst lassen "
 "Sie dieses Feld einfach leer."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "Sind diese Informationen richtig?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -258,45 +293,53 @@ msgstr ""
 " DHCP Hostname  = ${dhcp_hostname}\n"
 " Nameserver     = ${nameservers}"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 #, fuzzy
 msgid "Configuring the network with DHCP"
 msgstr "Das Netzwerk wird jetzt konfiguriert"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr ""
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Kein DHCP-Client gefunden. Es kann nicht fortgefahren werden."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Diese Paket benötigt den pump- oder dhcp-Client."
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Das Netzwerk wird jetzt konfiguriert"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP Nummer?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
@@ -308,11 +351,13 @@ msgstr ""
 "Punkte getrennte Zahlen. Wenn Sie Ihre Nummer nicht kennen, fragen Sie Ihren "
 "Netzwerkadministrator."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
 msgstr "Point-to-Point Adresse?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid ""
@@ -326,11 +371,13 @@ msgstr ""
 "Sie Ihren Netzwerkadministrator. Die Netzmaske besteht aus vier durch Punkte "
 "getrennte Zahlen."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Netzmaske?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
@@ -343,11 +390,13 @@ msgstr ""
 "Sie Ihren Netzwerkadministrator. Die Netzmaske besteht aus vier durch Punkte "
 "getrennte Zahlen."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Gateway?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -365,11 +414,13 @@ msgstr ""
 "Sie hier einfach nichts ein. Wenn Sie die richtige Antwort hier nicht "
 "kennen, fragen Sie Ihren Netzwerkadministrator."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "Der angegebene Gateway ist nicht erreichbar."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid ""
@@ -378,11 +429,13 @@ msgstr ""
 "Sie haben bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/oder des "
 "Gateways einen Fehler gemacht."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Sind diese Informationen richtig?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -403,14 +456,16 @@ msgstr ""
 " Gateway        = ${gateway}\n"
 " Nameserver     = ${nameservers}"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 #, fuzzy
 msgid "Configure a static network"

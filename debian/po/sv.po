@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.20\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: 2002-11-27 15:20+0100\n"
 "Last-Translator: David Weinehall <tao@kernel.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -16,11 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "Välj domännamn."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -34,11 +36,13 @@ msgstr ""
 "Om du installerar ett nätverk för hemmabruk kan du hitta på någonting, men "
 "se till att du använder samma domännamn på alla dina datorer."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "Välj adresser till namnservrar"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -52,11 +56,13 @@ msgstr ""
 "du anger dem. Om du inte vill använda några namnservrar, kan du lämna fältet "
 "tomt."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "Välj ett nätverkskort."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -67,21 +73,25 @@ msgstr ""
 "Följande nätverkskort har hittats. Välj typen av nätverkskort du vill "
 "använda för att installera Debiansystemet (via NFS eller HTTP)."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Ett fel uppstod."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "Någonting gick fel vid aktiveringen av ditt nätverk."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "Ange systemets värdnamn."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -94,11 +104,13 @@ msgstr ""
 "vet vad ditt värdnamn skall vara bör du fråga din nätverksadministratör. Om "
 "du installerar ett nätverk för hemmabruk kan du hitta på ett namn."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr "Värdnamnet \"${hostname}\" är ogiltigt."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -110,22 +122,26 @@ msgstr ""
 "måste vara mellan 2 och 63 tecken långt, och får inte börja eller sluta med "
 "ett minustecken."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Ett fel uppstod. Kan inte fortsätta."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "Om du vill kan du försöka igen."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
 msgid "No network interfaces were detected."
 msgstr "Inga nätverkskort kunde hittas."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
@@ -139,87 +155,104 @@ msgstr ""
 "nätverkskort kan det vara så att dess modul inte är vald. Gå tillbaka till "
 "menyn 'Konfigurera nätverkshårdvara'."
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 #, fuzzy
 msgid "Unknown interface"
 msgstr "Välj ett nätverkskort."
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Vad är ditt dhcp-värdnamn?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 #, fuzzy
@@ -233,11 +266,13 @@ msgstr ""
 "av ett kabelmodem, kan du behöva ange ett kontonummer här. I annat fall kan "
 "du lämna fältet tomt."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "Är dessa inställningar korrekta?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -253,45 +288,53 @@ msgstr ""
 " dhcp-värdnamn  = ${dhcp_hostname}\n"
 " namnservrar    = ${nameservers}"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 #, fuzzy
 msgid "Configuring the network with DHCP"
 msgstr "Nätverket kommer nu att konfigureras."
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr ""
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Inga DHCP-klienter funna. Kan inte fortsätta."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Det här paketet kräver paketen pump eller dhcp-client."
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Nätverket kommer nu att konfigureras."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP-adress?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
@@ -303,11 +346,13 @@ msgstr ""
 "punkter. Om du inte vet vad du skall ange här bör du fråga din "
 "nätverksadministratör."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
 msgstr "Punkt-till-punkt-adress?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid ""
@@ -321,11 +366,13 @@ msgstr ""
 "fråga din nätverksadministratör. Punkt-till-punkt-adressen skall anges som "
 "fyra nummer åtskilda av punkter."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Nätmask?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
@@ -337,11 +384,13 @@ msgstr ""
 "nätverk. Om du inte vet vad du skall ange här bör du fråga din "
 "nätverksadministratör. Nätmasken anges som fyra nummer åtskilda av punkter."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Gateway?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -359,11 +408,13 @@ msgstr ""
 "fältet tomt. Om du inte vet vad du skall ange här bör du fråga din "
 "nätverksadministratör."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "Den gateway du angav kan inte nås."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 #, fuzzy
@@ -372,11 +423,13 @@ msgid ""
 msgstr ""
 "Du kan ha skrivit fel när du angav din IP-adress, nätmask och/eller gateway."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Är de här inställningarna korrekta?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -398,14 +451,16 @@ msgstr ""
 " punkt-till-punkt = ${pointopoint}\n"
 " namnservrar      = ${nameservers}"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 #, fuzzy
 msgid "Configure a static network"

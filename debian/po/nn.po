@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: 2003-04-25 19:53+0200\n"
 "Last-Translator: Gaute Hvoslef Kvalnes <gaute@verdsveven.com>\n"
 "Language-Team: Norwegian (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
@@ -24,11 +24,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "Vel domenenamnet."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -42,11 +44,13 @@ msgstr ""
 "org». Dersom du set opp eit heimenettverk, kan du finna på eit domenenamn, "
 "men pass på at du brukar det same på alle datamaskinene."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "Vel adressene til DNS-tenarane"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -59,11 +63,13 @@ msgstr ""
 "mellomrom. Bruk ikkje komma. Tenarane blir brukte i den rekkjefølgja du "
 "skriv dei. Dersom du ikkje vil bruka namnetenarar, kan du la feltet stå tomt."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "Vel eit grensesnitt."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -75,21 +81,25 @@ msgstr ""
 "nettverksgrensesnittet du vil bruka for å installera Debian-systemet (via "
 "NFS eller HTTP)."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Det oppstod ein feil."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "Noko gjekk gale då nettverket vart aktivert."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "Oppgi vertsnamnet til systemet."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -103,11 +113,13 @@ msgstr ""
 "nettverksadministratoren. Dersom du set opp ditt eige heimenettverk, kan du "
 "finna på eit vertsnamn sjølv."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr "Vertsnamnet «${hostname}» er ugyldig."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -119,22 +131,26 @@ msgstr ""
 "minusteiknet. Det må vera mellom 2 og 63 teikn langt, og kan ikkje starta "
 "eller slutta med eit minusteikn."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Ein feil oppstod, kan ikkje halda fram."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "Prøv gjerne på nytt."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
 msgid "No network interfaces were detected."
 msgstr "Fann ingen grensesnitt."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
@@ -148,87 +164,104 @@ msgstr ""
 "har eit nettverkskort, kan det henda modulen for kortet ikkje er valt. Gå "
 "tilbake til «Oppsett av nettverksmaskinvare»."
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 #, fuzzy
 msgid "Unknown interface"
 msgstr "Vel eit grensesnitt."
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Kva er DHCP-vertsnamnet?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 #, fuzzy
@@ -241,11 +274,13 @@ msgstr ""
 "dersom du brukar kabelmodem. I så fall kan det henda du må oppgi eit "
 "kontonummer her. Viss ikkje, kan du la feltet stå tomt."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "Er denne informasjonen rett?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -261,45 +296,53 @@ msgstr ""
 " DHCP-vertsnamn = ${dhcp_hostname}\n"
 " namnetenarar   = ${nameservers}"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 #, fuzzy
 msgid "Configuring the network with DHCP"
 msgstr "Nettverket blir no sett opp."
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr ""
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Fann ingen DHCP-klient. Kan ikkje halda fram."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Denne pakken treng pump eller dhcp-client."
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Nettverket blir no sett opp."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP-adresse?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
@@ -311,11 +354,13 @@ msgstr ""
 "med mellomrom. Dersom du ikkje veit kva du skal bruka her, bør du ta kontakt "
 "med nettverksadministratoren."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
 msgstr "Punkt-til-punkt-adresse?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid ""
@@ -329,11 +374,13 @@ msgstr ""
 "ikkje veit kva for verdi du skal bruka. Punkt-til-punkt-adressa skal "
 "skrivast som fire tal med punktum mellom."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Nettmaske?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
@@ -346,11 +393,13 @@ msgstr ""
 "for verdi du skal bruka. Nettmaska skal skrivast som fire tal med punktum "
 "mellom."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Portnar?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -368,22 +417,26 @@ msgstr ""
 "Dersom du ikkje veit kva du bør svara, kan du ta kontakt med "
 "nettverksadministratoren."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "Det går ikkje an å koma fram til portnaren du oppgav."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "Du kan ha oppgitt feil IP-adresse, nettmaske og/eller portnaradresse."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Er desse innstillingane rette?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -405,14 +458,16 @@ msgstr ""
 " punk-til-punkt= ${pointopoint}\n"
 " namnetenarar   = ${nameservers}"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 #, fuzzy
 msgid "Configure a static network"

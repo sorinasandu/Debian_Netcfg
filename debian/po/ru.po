@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=KOI8-R\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "Выберите имя домена."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -37,11 +39,13 @@ msgstr ""
 "устанавливаете домашнюю сеть, то вы можете указать что-нибудь свое, но "
 "будьте уверены, что используете одинаковое имя домена на всех ваших машинах."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "Выберите адреса серверов DNS."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -55,11 +59,13 @@ msgstr ""
 "порядке их указания. Если вы вообще не хотите использовать никакие севера "
 "имен, то оставьте поле пустым."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "Выберите интерфейс."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -71,21 +77,25 @@ msgstr ""
 "сетевого интерфейса, который вам нужен для установки системы Debian (по NFS "
 "или HTTP)."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Произошла ошибка."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "Что-то пошло не так, когда я попытался активизировать вашу сеть."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "Введите системное имя хоста."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -99,11 +109,13 @@ msgstr ""
 "сетевым администратором. Если вы устанавливаете вашу собственную домашнюю "
 "сеть, то введите что-либо по вашему вкусу."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -112,22 +124,26 @@ msgid ""
 "minus sign."
 msgstr ""
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Произошла ошибка, и я не могу продолжить."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "Вы можете попробовать повторить."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
 msgid "No network interfaces were detected."
 msgstr "Интерфейсы не обнаружены."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 #, fuzzy
@@ -142,87 +158,104 @@ msgstr ""
 "что для нее пока не был выбран модуль. Вернитесь назад к пункту 'Configure "
 "Network Hardware'."
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 #, fuzzy
 msgid "Unknown interface"
 msgstr "Выберите интерфейс."
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Какое имя у вашей машины dhcp?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 #, fuzzy
@@ -236,11 +269,13 @@ msgstr ""
 "Если вы пользуетесь кабельным модемом, то часто от вас требутся указать "
 "здесь номер аккаунта. В противном случае можете оставить поле пустым."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "Эта информация корректна?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -251,45 +286,53 @@ msgid ""
 " nameservers    = ${nameservers}"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 #, fuzzy
 msgid "Configuring the network with DHCP"
 msgstr "Сейчас я приступаю к настройке сети."
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr ""
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Клиент dhcp не найден. Работа приостановлена."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Для этого пакета требуется установить пакет pump или dhcp-client."
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 #, fuzzy
 msgid "Configure the network via DHCP"
 msgstr "Сейчас я приступаю к настройке сети."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP адрес?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
@@ -301,12 +344,14 @@ msgstr ""
 "разделенных точками. Если вы не знаете, что нужно указать, то "
 "проконсультируйтесь с вашим сетевым администратором."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 #, fuzzy
 msgid "Pointopoint address?"
 msgstr "IP адрес?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 #, fuzzy
@@ -321,11 +366,13 @@ msgstr ""
 "не знаете, какой она должна быть. Сетевая маска вводится как четыре числа, "
 "разделенные точками."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Сетевая маска?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
@@ -338,11 +385,13 @@ msgstr ""
 "не знаете, какой она должна быть. Сетевая маска вводится как четыре числа, "
 "разделенные точками."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Шлюз?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -361,11 +410,13 @@ msgstr ""
 "знаете правильного ответа на этот вопрос, то посоветуйтесь с вашим сетевым "
 "администратором."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "Указанный вами шлюз недоступен."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 #, fuzzy
@@ -374,11 +425,13 @@ msgid ""
 msgstr ""
 "Вы могли ошибиться при вводе вашего IP адреса, сетевой маски и/или шлюза."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Эта настройка верна?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -392,14 +445,16 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr ""
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 #, fuzzy
 msgid "Configure a static network"

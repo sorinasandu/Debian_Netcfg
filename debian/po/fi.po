@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: 2003-10-20 19:10+0300\n"
 "Last-Translator: Tommi Vainikainen <thv+debian@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -23,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "Valitse toimialueesi nimi."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -41,11 +43,13 @@ msgstr ""
 "olet pystyttämässä kotiverkkoa, voit keksiä tähän jotain, mutta varmista, "
 "että käytät samaa toimialueen nimeä kaikissa tietokoneissasi."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "Valitse DNS-palvelinten osoitteet"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -59,11 +63,13 @@ msgstr ""
 "kysytään siinä järjestyksessä kuin syötät ne. Jos et halua käyttää mitään "
 "nimipalvelimia, voit jättää tämän kentän tyhjäksi."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "Valitse sovitin."
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -75,21 +81,25 @@ msgstr ""
 "tyyppi eli se, jota tarvitset Debian-järjestelmän asentamiseen (NFS:n tai "
 "HTTP:n kautta)."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "Tapahtui virhe."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "Jotain meni pieleen yritettäessä aktivoida verkkoasi."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "Syötä järjestelmän isäntänimi."
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -102,11 +112,13 @@ msgstr ""
 "Jos et tiedä mikä isäntänimesi pitäisi olla, kysy verkkoylläpitäjältäsi.  "
 "Jos olet pystyttämässä omaa kotiverkkoasi, voit keksiä tähän jotain."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr "Isäntänimi \"${hostname}\" ei kelpaa."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -118,21 +130,25 @@ msgstr ""
 "on pituudeltaan kahden ja 63 merkin välillä ja ei voi alkaa tai loppua "
 "miinusmerkkiin."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "Tapahtui virhe eikä jatkaminen onnistu."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "Voit vapaasti yrittää uudelleen."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 msgid "No network interfaces were detected."
 msgstr "Verkkosovittimia ei havaittu."
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 msgid ""
@@ -146,99 +162,121 @@ msgstr ""
 "että sille ei ole vielä valittu moduulia.  Mene takaisin kohtaan \"Tunnista "
 "verkkokortti ja lataa ytimen moduulit sille\"."
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr "<ei mitään>"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet tai Fast Ethernet"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card(PCMCIA)-Ethernet tai -Token Ring"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr "Token Ring"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr "Arcnet"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr "Sarjalinja-IP"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr "Rinnakkaislinja-IP"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point-protokolla"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN-Point-to-Point-protokolla"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr "Oikea channel-to-channel"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr ""
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 msgid "Unknown interface"
 msgstr "Tuntematon sovitin"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "Mikä on dhcp-isäntänimesi?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here.  Most other users can just "
 "leave this blank."
-msgstr "Sinun kenties tarvitsee syöttää DHCP-isäntänimi. Jos käytät kaapelimodeemia, sinun kenties tarvitsee määrittää käyttäjätunnusluku tähän.  Useimmat käyttäjät voivat jättää tämän tyhjäksi."
+msgstr ""
+"Sinun kenties tarvitsee syöttää DHCP-isäntänimi. Jos käytät kaapelimodeemia, "
+"sinun kenties tarvitsee määrittää käyttäjätunnusluku tähän.  Useimmat "
+"käyttäjät voivat jättää tämän tyhjäksi."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "Ovatko nämä tiedot oikein?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -254,56 +292,69 @@ msgstr ""
 " dhcp-isäntänimi= ${dhcp_hostname}\n"
 " nimipalvelimet = ${nameservers}"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 msgid "Configuring the network with DHCP"
 msgstr "Aseta verkko DHCP:lla"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr "Tämä voi kestää muutaman minuutin."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "Dhcp-asiakasta ei löydy. Jatkaminen ei onnistu."
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "Tämä paketti vaatii pump:n tai dhcp-client:n."
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "DHCP-verkkoasetukset"
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "Aseta verkko DHCP:lla"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP-osoite?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr "IP-osoite on uniikki juuri sinun tietokoneellesi ja sisältää neljä lukua eroteltuna pisteillä.  Jos et tiedä mitä käyttää tässä, konsultoi verkkosi ylläpitäjää."
+msgstr ""
+"IP-osoite on uniikki juuri sinun tietokoneellesi ja sisältää neljä lukua "
+"eroteltuna pisteillä.  Jos et tiedä mitä käyttää tässä, konsultoi verkkosi "
+"ylläpitäjää."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
 msgstr "Pointopoint-osoite?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid ""
@@ -311,26 +362,36 @@ msgid ""
 "to point network.  Consult your network administrator if you do not know the "
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
-msgstr "Pointopoint-osoitetta käytetään määrittämään vastapuoli pisteestä pisteeseen -verkossasi.  Konsultoi verkkosi ylläpitäjää jos et tiedä tätä arvoa.  Pointopoint-osoite syötetään neljänä lukuna eroteltuna pistein."
+msgstr ""
+"Pointopoint-osoitetta käytetään määrittämään vastapuoli pisteestä pisteeseen "
+"-verkossasi.  Konsultoi verkkosi ylläpitäjää jos et tiedä tätä arvoa.  "
+"Pointopoint-osoite syötetään neljänä lukuna eroteltuna pistein."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "Verkkopeite?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr "Verkkopeitettä käytetään määrittämään, mitkä koneet ovat paikalliseverkossasi.  Konsultoi verkkosi ylläpitäjää, jos et tiedä tätä arvoa.  Verkkopeite syötetään neljänä lukuna eroteltuna pistein."
+msgstr ""
+"Verkkopeitettä käytetään määrittämään, mitkä koneet ovat "
+"paikalliseverkossasi.  Konsultoi verkkosi ylläpitäjää, jos et tiedä tätä "
+"arvoa.  Verkkopeite syötetään neljänä lukuna eroteltuna pistein."
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "Yhdyskäytävä?"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -340,24 +401,36 @@ msgid ""
 "router.  In rare circumstances, you may have no router; in that case, you "
 "can leave this blank.  If you don't know the proper answer to this question, "
 "consult your network administrator."
-msgstr "Tämä on IP-osoite (neljä numeroa eroteltuna pistein), joka kertoo yhdyskäytäväreitittimesi, joka tunnetaan myös oletusreitittimenä.  Kaikki lähiverkkosi ulkopuolelle (esimerkiksi Internetiin) menevä liikenne lähetetään tämän reitittimen kautta.  Harvoissa tapauksissa sinulla ei ole reititintä; tällöin voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa tähän kysymykseen, konsultoi verkkosi ylläpitäjää."
+msgstr ""
+"Tämä on IP-osoite (neljä numeroa eroteltuna pistein), joka kertoo "
+"yhdyskäytäväreitittimesi, joka tunnetaan myös oletusreitittimenä.  Kaikki "
+"lähiverkkosi ulkopuolelle (esimerkiksi Internetiin) menevä liikenne "
+"lähetetään tämän reitittimen kautta.  Harvoissa tapauksissa sinulla ei ole "
+"reititintä; tällöin voit jättää tämän tyhjäksi.  Jos et tiedä oikeaa arvoa "
+"tähän kysymykseen, konsultoi verkkosi ylläpitäjää."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "Syöttämäsi yhdyskäytävä ei ole kantamalla."
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai yhdyskäytävän."
+msgstr ""
+"Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
+"yhdyskäytävän."
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "Ovatko nämä asetukset oikein?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -379,14 +452,16 @@ msgstr ""
 " pointopoint   = ${pointopoint}\n"
 " nimipalvelimet= ${nameservers}"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr "Pysyvät verkkoasetukset"
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 msgid "Configure a static network"
 msgstr "Aseta pysyvät verkkoasetukset"

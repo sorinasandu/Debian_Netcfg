@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-10-17 15:35-0400\n"
+"POT-Creation-Date: 2003-10-30 23:42+0100\n"
 "PO-Revision-Date: 2003-10-19 15:33+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
@@ -23,11 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Choose the domain name."
 msgstr "ドメイン名の入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:3
 msgid ""
@@ -41,11 +43,13 @@ msgstr ""
 "をセットアップしているのであれば、何を指定してもよいですが、あなたの保有する"
 "コンピュータにはすべて同じドメイン名を使うようにしたほうがよいでしょう。"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Choose the DNS Server Addresses"
 msgstr "DNS サーバのアドレスの入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:11
 msgid ""
@@ -58,11 +62,13 @@ msgstr ""
 "ん) で入力してください。コンマは使えません。サーバには入力した順に問い合わせ"
 "が行われます。ネームサーバを使わないのであれば、単に空のままにしておきます。"
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Choose an interface."
 msgstr "インターフェイスの選択"
 
+#. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid ""
@@ -74,21 +80,25 @@ msgstr ""
 "たは HTTP 経由) するのに必要なプライマリネットワークインターフェイスのタイプ"
 "を選んでください。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
 msgstr "エラーが発生しました。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
 msgstr "ネットワークのアクティブ化中に何か問題が発生しました。"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
 msgstr "システムのホスト名の入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-common.templates:33
 msgid ""
@@ -102,11 +112,13 @@ msgstr ""
 "なた自身のホームネットワークをセットアップしているのであれば、ここに何を指定"
 "してもかまいません。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
 msgstr "ホスト \"${hostname}\" は無効です。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:41
 msgid ""
@@ -117,21 +129,25 @@ msgstr ""
 "有効なホスト名は英字文字とマイナス記号だけから構成され、2 文字から最長 63 文"
 "字までで、マイナス記号で開始または終了することはできません。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
 msgstr "エラーが発生し、継続できません。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
 msgstr "どうか再試行してみてください。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 msgid "No network interfaces were detected."
 msgstr "インターフェイスが検出されませんでした。"
 
+#. Type: error
 #. Description
 #: ../netcfg-common.templates:53
 msgid ""
@@ -146,86 +162,103 @@ msgstr ""
 "いでしょう。'ネットワークハードウェアの検出とカーネルドライバのロード' に戻っ"
 "てください。"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:61
 msgid "<none>"
 msgstr "<なし>"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:65
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet または Fast Ethernet"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:69
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC カード (PCMCIA) Ethernet または Token Ring"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:73
 msgid "Token Ring"
 msgstr "Token Ring"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:77
 msgid "Arcnet"
 msgstr "Arcnet"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:81
 msgid "Serial-line IP"
 msgstr "シリアルライン IP"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Parallel-line IP"
 msgstr "パラレルライン IP"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:89
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point プロトコル (PPP)"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:93
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:97
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point プロトコル (PPP)"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:101
 msgid "Channel-to-channel"
 msgstr "channel-to-channel"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:105
 msgid "Real channel-to-channel"
 msgstr "リアル channel-to-channel"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Hypersocket"
 msgstr "ハイパーソケット"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:113
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
+#. Type: text
 #. Description
 #: ../netcfg-common.templates:117
 msgid "Unknown interface"
 msgstr "未知のインターフェイス"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
 msgstr "dhcp ホスト名は何ですか?"
 
+#. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid ""
@@ -237,11 +270,13 @@ msgstr ""
 "アカウント番号をここに指定する必要があるでしょう。そうでなければ、単にここは"
 "空のままにしておきます。"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Is this information correct?"
 msgstr "この情報で正しいですか?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid ""
@@ -257,43 +292,51 @@ msgstr ""
 " dhcpホスト名     = ${dhcp_hostname}\n"
 " ネームサーバ     = ${nameservers}"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:20
 msgid "Configuring the network with DHCP"
 msgstr "DHCP でネットワークを設定しています"
 
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:24
 msgid "This may take a few minutes."
 msgstr "これは数分かかります。"
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "No dhcp client found. I cannot continue."
 msgstr "dhcp クライアントが見つかりません。継続できません。"
 
+#. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:28
 msgid "This package requires pump or dhcp-client."
 msgstr "このパッケージは pump または dhcp-client を必要とします。"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:34
 msgid "DHCP Network Configuration"
 msgstr "DHCP ネットワーク設定"
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:39
 msgid "Configure the network via DHCP"
 msgstr "DHCP 経由でネットワークを設定"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
 msgstr "IP アドレスの入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid ""
@@ -305,11 +348,13 @@ msgstr ""
 "ら成ります。ここで何を使ったらよいかわからなければ、ネットワーク管理者に相談"
 "してください。"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
 msgstr "Point-to-Point アドレスの入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:10
 msgid ""
@@ -323,11 +368,13 @@ msgstr ""
 "さい。Point-to-Point アドレスにはピリオドで区切られた 4 つの数字を入力しま"
 "す。"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
 msgstr "ネットマスクの入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:19
 msgid ""
@@ -339,11 +386,13 @@ msgstr ""
 "がよくわからなければ、ネットワーク管理者に相談してください。ネットマスクには"
 "ピリオドで区切られた 4 つの数字を入力します。"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
 msgstr "ゲートウェイの入力"
 
+#. Type: string
 #. Description
 #: ../netcfg-static.templates:27
 msgid ""
@@ -361,11 +410,13 @@ msgstr ""
 "す。この質問の適切な答えがわからない場合は、ネットワーク管理者に相談してくだ"
 "さい。"
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
 msgstr "入力されたゲートウェイに到達できません。"
 
+#. Type: note
 #. Description
 #: ../netcfg-static.templates:37
 msgid ""
@@ -374,11 +425,13 @@ msgstr ""
 "入力された IP アドレス、ネットマスク、ゲートウェイのどこかにエラーがありま"
 "す。"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
 msgstr "この設定は正しいですか?"
 
+#. Type: boolean
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
@@ -400,14 +453,16 @@ msgstr ""
 " Point-to-Point   = ${pointopoint}\n"
 " ネームサーバ     = ${nameservers}"
 
-#. Title displayed when configuring this package
+#. Type: text
 #. Description
+#. Title displayed when configuring this package
 #: ../netcfg-static.templates:57
 msgid "Static Network Configuration"
 msgstr "静的ネットワークの設定"
 
-#. Item in the main menu to select this package
+#. Type: text
 #. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:62
 msgid "Configure a static network"
 msgstr "静的ネットワークの設定"
