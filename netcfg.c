@@ -361,7 +361,7 @@ netcfg_get_hostname(struct debconfclient *client, char **hostname)
 			free(*hostname);
 			*hostname = NULL;
                         client->command(client, "set",
-                                        "netcfg/get_hostname", "debian");
+                                        "netcfg/get_hostname", "debian", NULL);
 		}
         
 	} while (!*hostname);
