@@ -20,22 +20,17 @@
    
 */
 
-#include <ctype.h>
 #include <iwlib.h>
-#include <sys/socket.h>
-#include <sys/ioctl.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
 #include "netcfg.h"
 
-
-int main(void)
+int main(int argc, char *argv[])
 {
     int num_interfaces;
     static struct debconfclient *client;
@@ -47,6 +42,8 @@ int main(void)
 
     /* initialize libd-i */
     di_system_init("netcfg-dhcp");
+
+    parse_args(argc, argv);
 
     /* initialize debconf */
     client = debconfclient_new();

@@ -101,10 +101,14 @@ extern void deconfigure_network(void);
 
 extern method_t mii_diag_status_lite (char *ifname);
 
-extern void ifconfig_up (char*);
-extern void ifconfig_down (char*);
+extern void interface_up (char*);
+extern void interface_down (char*);
 
 extern void loop_setup(void);
 extern void seed_hostname_from_dns(struct debconfclient *client, struct in_addr * ipaddress);
+
+extern int inet_ptom (const char *src, int *dst, struct in_addr * addrp);
+extern const char *inet_mtop (int src, char *dst, socklen_t cnt);
+extern void parse_args (int argc, char** argv);
 
 #endif /* _NETCFG_H_ */

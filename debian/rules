@@ -18,8 +18,6 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	rm -f debian/netcfg-dhcp.postinst debian/netcfg-static.postinst \
-	   debian/netcfg.postinst
 
 	# Add here commands to clean up after the build process.
 	-$(MAKE) clean
@@ -33,15 +31,16 @@ install: build
 	dh_installdirs -A usr/lib/prebaseconfig.d etc/network
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
-	  cp $(PACKAGE) debian/$(PACKAGE).postinst; \
-	  mkdir -p debian/$(PACKAGE)/usr/bin; \
-	  install -m 755 sleep debian/$(PACKAGE)/usr/bin/sleep; \
-	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
+	  mkdir -p debian/$(PACKAGE)/bin; \
+	  install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
+	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; \
+	  ln -sf netcfg debian/$(PACKAGE)/bin/sleep; \
+	  ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
 		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3; \
 		mkdir -p debian/$(PACKAGE)/var/dhcp ; \
-		install -m 755 killall.sh debian/$(PACKAGE)/usr/bin/killall.sh; \
+		install -m 755 killall.sh debian/$(PACKAGE)/bin/killall.sh; \
 		install -m 755 dhclient-script debian/$(PACKAGE)/etc/dhcp3/dhclient-script; )
 
 

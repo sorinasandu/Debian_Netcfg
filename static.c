@@ -282,7 +282,7 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 
 int netcfg_activate_static(struct debconfclient *client)
 {
-    int rv = 0;
+    int rv = 0, masksize;
     char buf[256], ptr1[INET_ADDRSTRLEN];
 
 #ifdef __GNU__
@@ -305,25 +305,34 @@ int netcfg_activate_static(struct debconfclient *client)
 #else
     deconfigure_network();
 
-    snprintf(buf, sizeof(buf), "ifconfig %s %s",
-             interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
-    di_snprintfcat(buf, sizeof(buf), " netmask %s", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
-    di_snprintfcat(buf, sizeof(buf), " broadcast %s",
-                   inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)));
-    buf[sizeof(buf) - 1] = '\0';
+    interface_up(interface);
 
-    if (pointopoint.s_addr)
-        di_snprintfcat(buf, sizeof(buf), " pointopoint %s",
-                       inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
-
+    /* Flush all previous addresses, routes */
+    snprintf(buf, sizeof(buf), "ip addr flush dev %s", interface);
     rv |= di_exec_shell_log(buf);
 
+    snprintf(buf, sizeof(buf), "ip route flush dev %s", interface);
+    rv |= di_exec_shell_log(buf);
+    
+    rv |= !inet_ptom (NULL, &masksize, &netmask);
+    
+    /* Add the new IP address, and broadcast, and netmask */
+    snprintf(buf, sizeof(buf), "ip addr add %s/%d broadcast %s dev %s",
+	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
+	inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)), interface);
+
+    rv |= di_exec_shell_log(buf);
+	
+    if (pointopoint.s_addr)
+    {
+      snprintf(buf, sizeof(buf), "ip route add default dev %s", interface);
+      rv |= di_exec_shell_log(buf);
+    }
+
     if (gateway.s_addr) {
-        snprintf(buf, sizeof(buf),
-                 "route add default gateway %s",
+        snprintf(buf, sizeof(buf), "ip route add default via %s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
         rv |= di_exec_shell_log(buf);
-	printf("rv = %i, buf = %s\n", rv, buf);
     }
 #endif
 
@@ -334,9 +343,6 @@ int netcfg_activate_static(struct debconfclient *client)
         debconf_capb(client, "backup");
         return -1;
     }
-
-    /* write configuration */
-    netcfg_write_static("40netcfg", domain, nameserver_array);
 
     return 0;
 }
@@ -445,6 +451,7 @@ int netcfg_get_static(struct debconfclient *client)
 
             break;
         case QUIT:
+	    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
             return 0;
             break;
         }

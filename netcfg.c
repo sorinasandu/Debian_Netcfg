@@ -20,16 +20,12 @@
 
 */
 
-#include <ctype.h>
-#include <net/if.h>
-#include <sys/socket.h>
-#include <sys/ioctl.h>
+#include <iwlib.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
 #include "netcfg.h"
@@ -59,7 +55,7 @@ response_t netcfg_get_method(struct debconfclient *client)
     return 0;
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
     int num_interfaces = 0;
     enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT } state = GET_INTERFACE;
@@ -69,6 +65,8 @@ int main(void)
 
     /* initialize libd-i */
     di_system_init("netcfg");
+
+    parse_args (argc, argv);
 
     /* initialize debconf */
     client = debconfclient_new();
@@ -100,9 +98,9 @@ int main(void)
 	    {
 	        method_t mii_result;
 		
-		ifconfig_up(interface);
+		interface_up(interface);
 		mii_result = mii_diag_status_lite(interface);
-		ifconfig_down(interface);
+		interface_down(interface);
 
 		if (mii_result != DUNNO && res == NOT_ASKED)
 		  netcfg_method = mii_result;
@@ -138,6 +136,8 @@ int main(void)
 	    break;
 
         case WCONFIG:
+	    if (!wfd)
+	      wfd = iw_sockets_open();
 	    if (requested_wireless_tools == 0)
 	    {
 	      di_exec_shell_log("apt-install wireless-tools");

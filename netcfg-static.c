@@ -18,31 +18,31 @@
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
    
 */
-#include <ctype.h>
-#include <sys/socket.h>
-#include <sys/ioctl.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
 #include <iwlib.h>
 #include "netcfg.h"
 
-int main(void)
+int main(int argc, char** argv)
 {
     int num_interfaces = 0;
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
 
     enum { BACKUP, GET_INTERFACE, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT} state = GET_INTERFACE;
+    
+    wfd = iw_sockets_open();
 
     /* initialize libd-i */
     di_system_init("netcfg-static");
 
+    parse_args(argc, argv);
+    
     /* initialize debconf */
     client = debconfclient_new();
     debconf_capb(client, "backup");
@@ -68,6 +68,7 @@ int main(void)
 	    else
 		state = QUIT;
 	    break;
+	    
 	case WCONFIG:
             if (requested_wireless_tools == 0)
             {

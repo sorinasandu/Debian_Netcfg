@@ -22,10 +22,6 @@ int wfd = 0;
 int is_wireless_iface (const char* iface)
 {
   wireless_config wc;
-
-  if (wfd == 0)
-    wfd = iw_sockets_open();
-  
   return (iw_get_basic_config (wfd, (char*)iface, &wc) == 0);
 }
 
@@ -34,9 +30,6 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   int ret, couldnt_associate = 0;
   wireless_config wconf;
   char* tf = NULL, *user_essid = NULL, *ptr = wconf.essid;
-
-  if (wfd == 0) /* shouldn't happen */
-    wfd = iw_sockets_open();
 
   iw_get_basic_config (wfd, iface, &wconf);
 
@@ -85,7 +78,7 @@ automatic:
 
     for (i = 0; i <= MAX_SECS; i++)
     {
-      ifconfig_up(iface);
+      interface_up(iface);
       sleep (1);
       iw_get_basic_config (wfd, iface, &wconf);
 
@@ -99,7 +92,7 @@ automatic:
       }
 
       debconf_progress_step(client, 1);
-      ifconfig_down(iface);
+      interface_down(iface);
     }
 
     debconf_progress_stop(client);
@@ -166,9 +159,6 @@ void unset_wep_key (char* iface)
 {
   wireless_config wconf;
   int ret;
-
-  if (!wfd)
-    wfd = iw_sockets_open();
 
   iw_get_basic_config(wfd, iface, &wconf);
 

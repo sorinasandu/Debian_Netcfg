@@ -90,9 +90,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     exit(1);
   }
 
-  /* Some clients need this ... */
-  ifconfig_up (interface);
-
   if ((dhcp_pid = fork()) == 0) /* child */
   {
     /* get dhcp lease */

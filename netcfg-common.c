@@ -51,6 +51,54 @@ int have_domain = 0;
 
 pid_t dhcp_pid = -1;
 
+/* convert a netmask (255.255.255.0) into the length (24) */
+int inet_ptom (const char *src, int *dst, struct in_addr *addrp)
+{
+        struct in_addr newaddr, *addr;
+        in_addr_t mask, num;
+
+	if (src && !addrp)
+	{
+          if (inet_pton (AF_INET, src, &newaddr) < 0)
+                return 0;
+	  addr = &newaddr;
+	}
+	else
+	  addr = addrp;
+
+        mask = ntohl(addr->s_addr);
+
+        for (num = mask; num & 1; num >>= 1);
+
+        if (num != 0 && mask != 0)
+        {
+                for (num = ~mask; num & 1; num >>= 1);
+                if (num)
+                        return 0;
+        }
+
+        for (num = 0; mask; mask <<= 1)
+                num++;
+
+        *dst = num;
+
+        return 1;
+}
+
+/* convert a length (24) into the netmask (255.255.255.0) */
+const char *inet_mtop (int src, char *dst, socklen_t cnt)
+{
+        struct in_addr addr;
+        in_addr_t mask = 0;
+
+        for(; src; src--)
+                mask |= 1 << (32 - src);
+
+        addr.s_addr = htonl(mask);
+
+        return inet_ntop (AF_INET, &addr, dst, cnt);
+}
+
 int is_interface_up(char *inter)
 {
     struct ifreq ifr;
@@ -296,7 +344,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     while ((inter = getif(1)) != NULL) {
 	size_t newchars;
 
-	ifconfig_down(inter);
+	interface_down(inter);
 	ifdsc = get_ifdsc(client, inter);
         newchars = strlen(inter) + strlen(ifdsc) + 5;
         if (len < (strlen(ptr) + newchars)) {
@@ -533,8 +581,8 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 void deconfigure_network(void)
 {
     /* deconfiguring network interfaces */
-    ifconfig_down("lo");
-    ifconfig_down(interface);
+    interface_down("lo");
+    interface_down(interface);
 }
 
 void loop_setup(void)
@@ -546,7 +594,9 @@ void loop_setup(void)
   if (afpacket_notloaded)
     afpacket_notloaded = di_exec_shell("modprobe af_packet"); /* should become 0 */
       
-  di_exec_shell_log("ifconfig lo 127.0.0.1 up");
+  di_exec_shell_log("ip link set lo up");
+  di_exec_shell_log("ip addr flush dev lo");
+  di_exec_shell_log("ip addr add 127.0.0.1 dev lo");
 }
 
 void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)
@@ -576,7 +626,7 @@ void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipad
   freeaddrinfo(res);
 }
 
-void ifconfig_up (char* iface)
+void interface_up (char* iface)
 {
   struct ifreq ifr;
   int skfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -592,7 +642,7 @@ void ifconfig_up (char* iface)
   }
 }
 
-void ifconfig_down (char* iface)
+void interface_down (char* iface)
 {
   struct ifreq ifr;
   int skfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -605,5 +655,28 @@ void ifconfig_down (char* iface)
     ifr.ifr_flags &= ~IFF_UP;
     ioctl(skfd, SIOCSIFFLAGS, &ifr);
     close(skfd);
+  }
+}
+
+void parse_args (int argc, char ** argv)
+{
+  if (argc == 2)
+  {
+    if (!strcmp(argv[0], "sleep"))
+    {
+      sleep(atoi(argv[1]));
+      exit(EXIT_SUCCESS);
+    }
+    else if (!strcmp(argv[0], "ptom"))
+    {
+      int ret;
+      if (inet_ptom(argv[1], &ret, NULL) > 0)
+      {
+	printf("%d\n", ret);
+	exit(EXIT_SUCCESS);
+      }
+    }
+    
+    exit(EXIT_FAILURE);
   }
 }

@@ -5,6 +5,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Port wireless fixes back to netcfg-static and netcfg-dhcp, which
       have been rather neglected lately.
     - Fix the GO_BACK interaction between WEP and ESSID configuration.
+    - Switch to using iproute for everything, a step towards removing
+      ifconfig and route applets from busybox.
     - Write loopback all the time, even when you abort network config.
       (Closes: #248636)
     - Redesign DHCP strategy with a new template that uses a select,
@@ -21,7 +23,7 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Silently load af_packet. (Closes: #244441)
     - Add some code hunks from mii-diag to determine code path on link
       connection. (Closes: #247178)
-    - Add some ifconfig_up and ifconfig_down functions.
+    - Add some interface_up and interface_down functions.
     - Fix a long standing bug in devnames retrieval that did not strip
       newlines from the devnames input and caused cdebconf to screw
       up on subsequent questions.
