@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-16 10:48+0300\n"
+"PO-Revision-Date: 2004-07-06 15:08+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -35,8 +35,8 @@ msgid ""
 msgstr ""
 "Tinklas gali būti konfigūruojamas su DHCP arba įvedant visą informaciją "
 "rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis negalės gauti "
-"veikiančios konfigūracijos iš DHCP serverio Jūsų tinkle, Jums bus pasiūlyta "
-"konfigūruoti Jūsų tinklą rankiniu būdu, po bandymo konfigūruoti su DHCP."
+"veikiančios konfigūracijos iš DHCP serverio Jūsų tinkle, po bandymo konfigūruoti "
+"su DHCP, Jums bus pasiūlyta konfigūruoti Jūsų tinklą rankiniu būdu."
 
 #. Type: string
 #. Description
@@ -155,8 +155,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+msgstr "Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -269,8 +268,7 @@ msgstr "Tinklo sąsajų neaptikta"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
+msgstr "Tinko sąsajų nerasta. Diegimo sistemai nepavyko rasti tinklo įrenginio."
 
 #. Type: error
 #. Description
@@ -522,7 +520,6 @@ msgstr "Tinklo konfigūravimo metodas:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -530,19 +527,16 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Automatinis tinklo konfigūravimas nepavyko. Paprastai tai atsitinka dėl lėto "
-"DHCP serverio tinkle, taigi Jūs galite norėti pakartoti. Jei Jūsų tinklas "
-"automatiniam konfigūravimui nenaudoja DHCP, vietoj to Jūs galite "
-"konfigūruoti rankiniu būdu. Be to, kai kuriems DHCP serveriams reikia "
-"nurodyti DHCP kompiuterio vardą (hostname), taigi Jūs galite pasirinkti "
-"tokio vardo įvedimą prieš pakartojant su DHCP."
+"Čia Jūs galite pasirinkti automatinio tinklo konfigūravimo su DHCP pakartojimą "
+"(kuris gali suveikti, jei yra dideli Jūsų DHCP serverio atsakymų laikai) arba konfigūruoti tinklą rankiniu būdu. Kai kuriems DHCP serveriams reikia, kad "
+"klientinė programa siųstų DHCP kompiuterio vardą (hostname), taigi Jūs galite pasirinkti pakartoti automatinį tinklo konfigūravimą su Jūsų pateiktu kompiuterio "
+"vardu."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Automatinis tinklo konfigūravimas pavyko sėkmingai"
+msgstr "Automatinis tinklo konfigūravimas nepavyko"
 
 #. Type: note
 #. Description
@@ -551,12 +545,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Tai gali būti dėl lėto DHCP serverio, tinklo įrenginių veikimo sutrikimų, arba "
+"tiesiog Jūsų tinkle nenumatytas dinaminio adresavimo (DHCP) naudojimas."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Ar tęsti be numatytojo pagal nutylėjimą maršruto?"
 
 #. Type: boolean
 #. Description
@@ -568,6 +564,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Tinklo konfigūravimas pavyko sėkmingai. Tačiau nėra nustatytas pagal nutylėjimą "
+"numatytasis maršrutas (default route): sistema nežino kaip susirišti su "
+"kompiuteriais Internete. Jei Jūs neturite pirmojo oficialaus Debian'o kompaktinio "
+"disko, 'Netinst' disko arba paketų, prieinamų lokaliame tinkle, - įdiegimo "
+"tęsimas bus nebeįmanomas."
 
 #. Type: boolean
 #. Description
@@ -576,6 +577,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Jei abejojate, nebetęskite diegimo be pagal nutylėjimą numatytojo maršruto: "
+"susisiekite su Jūsų lokalaus tinklo administratoriumi dėl šios problemos."
 
 #. Type: text
 #. Description
@@ -701,8 +704,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
@@ -744,18 +746,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
