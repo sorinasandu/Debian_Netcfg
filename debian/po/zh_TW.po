@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-02-28 10:44+0800\n"
+"POT-Creation-Date: 2004-02-25 06:56+0100\n"
+"PO-Revision-Date: 2004-03-01 01:43+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
 "MIME-Version: 1.0\n"
@@ -107,82 +107,98 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "${iface} 的無線 ESSID："
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
+#. New,2004/02/29
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr ""
+msgstr "${iface} 是一個無線網路的介面。請輸入 ${iface} 所要使用的無線網路的名稱 (ESSID)。"
+"如果您想使用任何可用的網路，在欄位中留白即可。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#. New,2004/02/29
 msgid "WEP key for ${iface}:"
-msgstr ""
+msgstr "${iface} 的 WEP 密鑰："
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#. New,2004/02/29
 msgid ""
 "If applicable, please enter the WEP security key for device ${iface}. There "
 "are two ways to do this:"
-msgstr ""
+msgstr "如果適用的話，請輸入 ${iface} 裝置的 WEP 安全密鑰。"
+"有兩種方法可以採用："
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#. New,2004/02/29
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
-msgstr ""
+msgstr "如果您的 WEP 密鑰使用的是 nnnn-nnnn-nn 或 nnnnnnnn (其中的 n 是數字) 這種格式的話，"
+"請直接在欄位中依原樣輸入即可。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#. New,2004/02/29
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
+msgstr "如果您的 WEP 密鑰使用的是密碼文字的話，請在前面加上 s:。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
+#. New,2004/02/29
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
+msgstr "當然囉，如果您的無線網路中並沒有使用到 WEP 密鑰，"
+"在欄位中留白即可。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
+#. New,2004/02/29
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "不正確的 WEP 密鑰"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
+#. New,2004/02/29
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr ""
+msgstr "該 WEP 密鑰 ${wepkey} 是不正確的。請仔細參考下一個畫面裡的說明"
+"來了解如何正確得輸入 WEP 密鑰，然後再試一次。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
+#. New,2004/02/29
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "不正確的 ESSID"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
+#. New,2004/02/29
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr ""
+msgstr "該 ESSID，${essid} 是不正確的。ESSID 最多只能長至 32 個字元，"
+"不過任何類型的字元都可以使用。"
 
 #. Type: string
 #. Description
@@ -279,20 +295,21 @@ msgstr "<無>"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:112
+#. New,2004/02/29
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "無線網路卡 (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:116
 msgid "Ethernet or Fast Ethernet"
-msgstr "以太網路或高速乙太網路"
+msgstr "網路卡或高速網路卡"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:120
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-msgstr "PC 卡 (PCMCIA) 以太網路或 Token Ring"
+msgstr "PC-Card (PCMCIA) 網路卡或 Token Ring"
 
 #. Type: text
 #. Description
@@ -377,9 +394,9 @@ msgstr "網路設定"
 #. Description
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:178
-#, fuzzy
+#. Fuzzy
 msgid "Configuring network ..."
-msgstr "設定網路"
+msgstr "正在設定網路 ..."
 
 #. Type: text
 #. Description
@@ -477,10 +494,9 @@ msgstr "您想要重新嘗試由 DHCP 來設定網路嗎？"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
-"No IP address was found during automatic network configuration with DHCP. "
-"DHCP servers are sometimes really slow. If you wish, you can retry."
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. If you wish, you can retry."
 msgstr ""
 "在經由 DHCP 來設定網路的過程中沒有取得 IP 位址。DHCP 伺服器有時會非常慢，如果"
 "您希望的話可以重新嘗試。"
@@ -519,17 +535,19 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
+#. Fuzzy
 msgid "Malformed IP address"
-msgstr "IP 位址："
+msgstr "IP 位址格式有誤"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
+#. New,2004/02/29
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
+msgstr "您所提供的 IP 位址格式是錯誤的。它的格式應該像是 x.x.x.x，"
+"其中的每一個 x 都不可以超過 255。請再試一次。"
 
 #. Type: string
 #. Description
