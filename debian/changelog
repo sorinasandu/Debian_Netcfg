@@ -1,55 +1,59 @@
-netcfg (0.26) UNRELEASED; urgency=low
+netcfg (0.26) unstable; urgency=low
 
   * Claus Hindsgaul
     - Update da (Danish) translation.
   * Alastair McKinstry
-   - Move to new cdebconf macros.
-   - Added versioned depends on libdebconfclient-dev to ensure we get
-     working debonf_* macros
+    - Move to new cdebconf macros.
+    - Added versioned depends on libdebconfclient-dev to ensure we get
+      working debonf_* macros
+  * Joey Hess
+    - Fixed the libdebconfclient0-dev package name.
+    - Run a progress bar with dhcp, just so something will be on the screen
+      then.
 
- -- Alastair McKinstry <mckinstry@debian.org>  Sat, 11 Oct 2003 21:50:07 +0100
+ -- Joey Hess <joeyh@debian.org>  Fri, 17 Oct 2003 15:23:52 -0400
 
 netcfg (0.25) unstable; urgency=low
 
   * Alastair McKinstry
-   - Change references to "Configure network hardware" to "Detect hardware"
-   - remove unnecessary menutest scripts
-   - Move changelog to UTF-8
-   - Moved to Standards-Version: 3.6.1
+    - Change references to "Configure network hardware" to "Detect hardware"
+    - remove unnecessary menutest scripts
+    - Move changelog to UTF-8
+    - Moved to Standards-Version: 3.6.1
   * ANdré Luís Lopes
-   - Update Brazilian Portuguese (pt_BR) debconf template translations.
+    - Update Brazilian Portuguese (pt_BR) debconf template translations.
   * Martin Sjögren
-   - Fix hostname corruption bug.
-   - Remove empty netcfg-ppp package.
-   - Use SETTITLE instead of TITLE for i18n reasons.
-   - Use debconf templates for i18n.
+    - Fix hostname corruption bug.
+    - Remove empty netcfg-ppp package.
+    - Use SETTITLE instead of TITLE for i18n reasons.
+    - Use debconf templates for i18n.
   * Pierre Machard
-   - Update French debconf template translation [Philippe Batailler]
+    - Update French debconf template translation [Philippe Batailler]
   * Javier Fernandez-Sanguino:
-   - Updated Spanish translation
+    - Updated Spanish translation
   * Kenshi Muto
-   - Added Japanese translation (ja.po)
+    - Added Japanese translation (ja.po)
   * Steinar H. Gunderson
-   - Now includes directory /etc/network. (Closes: #211300)
+    - Now includes directory /etc/network. (Closes: #211300)
   * Chris Tillman
-   - Update English usage in message templates
+    - Update English usage in message templates
   * Bart Cornelis
-   - Update Dutch po-debconf translation, incorporated changes
-     suggested by newly started review process of debian-l10n-dutch
-     team
+    - Update Dutch po-debconf translation, incorporated changes
+      suggested by newly started review process of debian-l10n-dutch
+      team
   * Kenshi Muto
-   - Update ja.po
+    - Update ja.po
   * Petter Reinholdtsen
-   - Make menu entries translatable.
-   - Improve text of the missing interface template.
-   - Use the error template type on error templates.
-   - Update dependency from libdebian-installer3-dev to
-     libdebian-installer4-dev, patch from Goswin von Brederlow.
+    - Make menu entries translatable.
+    - Improve text of the missing interface template.
+    - Use the error template type on error templates.
+    - Update dependency from libdebian-installer3-dev to
+      libdebian-installer4-dev, patch from Goswin von Brederlow.
   * Denis Barbier
-   - Add comments in templates files to tell which strings are titles
-     and menu entries.  These comments are removed by po2debconf.
+    - Add comments in templates files to tell which strings are titles
+      and menu entries.  These comments are removed by po2debconf.
   * Miroslav Kure
-   - Added Czech translation.
+    - Added Czech translation.
 
  -- Sebastian Ley <ley@debian.org>  Thu,  9 Oct 2003 17:09:04 +0200
 
