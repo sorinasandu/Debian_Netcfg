@@ -118,7 +118,8 @@ netcfg_write_static ()
       fprintf (fp, "\tnetmask %s\n", num2dot (netmask));
       fprintf (fp, "\tnetwork %s\n", num2dot (network));
       fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
-      fprintf (fp, "\tgateway %s\n", num2dot (gateway));
+      if (gateway)
+	  fprintf (fp, "\tgateway %s\n", num2dot (gateway));
       fclose (fp);
     }
   else
@@ -132,7 +133,7 @@ error:
 static int
 netcfg_activate_static ()
 {
-  int rv;
+  int rv = 0;
   char *ptr;
   char buf[128];
   execlog ("/sbin/ifconfig lo 127.0.0.1");
@@ -148,12 +149,24 @@ netcfg_activate_static ()
     snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s",
 	      num2dot (broadcast));
 
-  rv = execlog (buf);
+  rv |= execlog (buf);
+
+  if (gateway)
+  {
+      ptr = buf;
+      ptr +=
+	  snprintf (buf, sizeof (buf), "/usr/bin/route add default gateway %s",
+	      num2dot (gateway));
+      rv |= execlog (buf);
+  }
+
   if (rv != 0)
-    {
-      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
+  {
+      client->command (client, "input", 
+	      "critical", "netcfg/error_cfg", NULL);
       client->command (client, "go", NULL);
-    }
+  }
+
   return 0;
 }
 
