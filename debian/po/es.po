@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg VERSION\n"
 "POT-Creation-Date: 2003-02-23 15:39+0100\n"
-"PO-Revision-Date: 2003-04-27 23:02+0100\n"
+"PO-Revision-Date: 2003-04-28 21:02+0100\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,21 +86,23 @@ msgid ""
 "network interface that you will need for installing the Debian system (via "
 "NFS or HTTP)."
 msgstr ""
+"Se detectaron las siguientes interfaces. Escoga el tipo de su interfaz de "
+"red primeria que utilizará para instalar su sistema Debian (vía NFS o HTTP)."
 
 #. Description
 #: ../netcfg-common.templates:27
 msgid "An error occured."
-msgstr ""
+msgstr "Se produjo un error"
 
 #. Description
 #: ../netcfg-common.templates:27
 msgid "Something went wrong when I tried to activate your network."
-msgstr ""
+msgstr "Se produjo un error al intentar activar su red."
 
 #. Description
 #: ../netcfg-common.templates:33
 msgid "Enter the system's hostname."
-msgstr ""
+msgstr "Introduzca el nombre del host."
 
 #. Description
 #: ../netcfg-common.templates:33
@@ -110,11 +112,14 @@ msgid ""
 "administrator.  If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
+"El nombre del host es una sóla palabra que identifica su sistema en la red."
+"Si no sabe qué nombre debería tener, consulte a su administrador de red. "
+"Si está configurando una red doméstica, puede inventarse el valor del nombre."
 
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
+msgstr "El nombre de host \"${hostname}\" no es válido"
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -123,21 +128,24 @@ msgid ""
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
+"Un nombre de host válido debe contener sólo caracteres alfanúmericos y el "
+"signo menos, debe tener entre 2 y 63 caracteres, y no puede empezar o "
+"terminar con el signo menos."
 
 #. Description
 #: ../netcfg-common.templates:48
 msgid "An error occured and I cannot continue."
-msgstr ""
+msgstr "Se produjo un error y es imposible continuar."
 
 #. Description
 #: ../netcfg-common.templates:48
 msgid "Feel free to retry."
-msgstr ""
+msgstr "Intentelo de nuevo si así lo desea."
 
 #. Description
 #: ../netcfg-common.templates:53
 msgid "No interfaces were detected."
-msgstr ""
+msgstr "No se detectó ninguna interfaz."
 
 #. Description
 #: ../netcfg-common.templates:53
@@ -147,11 +155,15 @@ msgid ""
 "is possible that the module for it hasn't been selected yet.  Go back to "
 "'Configure network hardware'."
 msgstr ""
+"No se detectón ninguna interfaz de red. Esto significa que el sistema de "
+"instalación no pudo encontrar un dispositivo de red. Si vd. tiene una tarjeta "
+"de red, entonces es posible que no haya seleccionado aún un módulo para ésta. "
+"Vuelva a la sección 'Configure su hardware de red'."
 
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "What is your dhcp hostname?"
-msgstr ""
+msgstr "¿Cuál es su nombre de host DHCP?"
 
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -161,11 +173,15 @@ msgid ""
 "are a cable modem user, you might need to specify an account number here.  "
 "Otherwise, you can just leave this blank."
 msgstr ""
+"En algunas circunstancias será necesario que indique el nombre de su servidor "
+"DHCP. Estas situaciones son infrecuentes. Habitualmente aplica a usuarios de "
+"cable módem. Si usted es un usuario de cable modem, puede necesitar un "
+"número de cuenta aquí. Si no lo es, deje éste en blanco."
 
 #. Description
 #: ../netcfg-dhcp.templates:12
 msgid "Is this information correct?"
-msgstr ""
+msgstr "¿Es esta información correcta?"
 
 #. Description
 #: ../netcfg-dhcp.templates:12
@@ -176,31 +192,37 @@ msgid ""
 " dhcp hostname  = ${dhcp_hostname}\n"
 " nameservers    = ${nameservers}"
 msgstr ""
+" interfaz              = ${interface}\n"
+" nombre de host        = ${hostname}\n"
+" dominio               = ${domain}\n"
+" nombre de dhcp        = ${dhcp_hostname}\n"
+" servidores de nombres = ${nameservers}"
 
 #. Description
 #: ../netcfg-dhcp.templates:21
 msgid "I will now configure the network."
-msgstr ""
+msgstr "Ahora se configurará su red."
 
 #. Description
 #: ../netcfg-dhcp.templates:21
 msgid "This may take some time.  It shouldn't take more than a minute or two."
-msgstr ""
+msgstr "Esto puede tardar algún tiempo. Aunque no debería tardar más de uno "
+"o dos minutos."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
 msgid "No dhcp client found. I cannot continue."
-msgstr ""
+msgstr "No se encontró un cliente de DHCP. No se puede proseguir."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
 msgid "This package requires pump or dhcp-client."
-msgstr ""
+msgstr "Este paquete require pump o dhcp-client."
 
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address?"
-msgstr ""
+msgstr "¿Dirección IP?"
 
 #. Description
 #: ../netcfg-static.templates:3
@@ -209,11 +231,14 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
+"La dirección IP es única para su ordenador y consiste de cuatro números "
+"separados por puntos. Si no sabe qué usar aquí, consulte a su administrador "
+"de red."
 
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Pointopoint address?"
-msgstr ""
+msgstr "¿Dirección punto a punto?"
 
 #. Description
 #: ../netcfg-static.templates:10
@@ -223,11 +248,15 @@ msgid ""
 "value.  The pointopoint address should be entered as four numbers separated "
 "by periods."
 msgstr ""
+"La dirección punto a punto se utiliza para determinar el otro extremo de una "
+"red punto a punto. Consulte a su administrador de red si no conoce el valor. "
+"La dirección punto a punto debe ser introducida como cuatro números separados "
+"por puntos."
 
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
-msgstr ""
+msgstr "¿Máscara de red?"
 
 #. Description
 #: ../netcfg-static.templates:19
@@ -236,11 +265,14 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
+"La máscara de red se utiliza para determina qué sistemas están incluidos en "
+"su red. Consulte a su administrador de red si no conoce el valor. La máscara "
+"de red debería introducirse como cuatro números separados por puntos."
 
 #. Description
 #: ../netcfg-static.templates:27
 msgid "Gateway?"
-msgstr ""
+msgstr "¿Pasarela?"
 
 #. Description
 #: ../netcfg-static.templates:27
@@ -252,22 +284,30 @@ msgid ""
 "can leave this blank.  If you don't know the proper answer to this question, "
 "consult your network administrator."
 msgstr ""
+"Ésta es una dirección IP (cuatro números separados por puntos) que indica "
+"el router de pasarela, también conocido como router por defecto. Todo el "
+"tráfico que se envía fuera de su LAN (por ejemplo, hacia Internet) se envía "
+"a este router.  En algunas circunstancias anormales, puede no tener un "
+"router; si es así lo puede dejar en blanco. Si no sabe la respuesta correcta "
+"a esta pregunta, consulte a su administrador de red."
 
 #. Description
 #: ../netcfg-static.templates:37
 msgid "The gateway you entered is unreachable."
-msgstr ""
+msgstr "No se puede alcanzar a la pasarela que introdujo."
 
 #. Description
 #: ../netcfg-static.templates:37
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
+"Puede haberse equivocado al introducir la dirección IP, máscara de red y/o "
+"pasarela."
 
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Is this configuration correct?"
-msgstr ""
+msgstr "¿Es esta configuración correcta?"
 
 #. Description
 #: ../netcfg-static.templates:44
@@ -281,3 +321,11 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
+" interfaz              = ${interface}\n"
+" nombre de host        = ${hostname}\n"
+" dominio               = ${domain}\n"
+" dirección IP          = ${ipaddress}\n"
+" máscara de red        = ${netmask}\n"
+" pasarela              = ${gateway}\n"
+" punto a punto         = ${pointopoint}\n"
+" servidores de nombres = ${nameservers}"
