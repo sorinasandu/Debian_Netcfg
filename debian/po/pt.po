@@ -1,9 +1,14 @@
-# Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
+# Portuguese translation for the Debian Installer
+# by the Portguese team: http://www.DebianPT.org/traduz/
+# 1º Tradutor: Daniel Costa <dacosta@vodafone.pt>, 21-12-2003
+# ...
+# 2005.01.19 Miguel Figueiredo <elmig@debianpt.org> - Fixed typo, small corrections.
+
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 1.01\n"
+"Project-Id-Version: netcfg 1.08\n"
 "POT-Creation-Date: 2004-11-24 00:33-0700\n"
-"PO-Revision-Date: 2004-11-09 00:08+0000\n"
+"PO-Revision-Date: 2005-01-19 21:57+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -500,13 +505,13 @@ msgstr "O processo de configuração DHCP vai ser terminado."
 #. below the 70 columns limit (which means 70 characters for most languages)
 #: ../netcfg-dhcp.templates:32
 msgid "Retry network autoconfiguration"
-msgstr "Tentar de novo a autoconfiguração da rede"
+msgstr "Tentar de novo a auto-configuração da rede"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:32
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Tentar de novo a autoconfiguração da rede com um hostname DHCP"
+msgstr "Tentar de novo a auto-configuração da rede com um hostname DHCP"
 
 #. Type: select
 #. Choices
@@ -542,17 +547,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"A partir daqui pode escolher tentar de novo a autoconfiguração da rede DHCP "
+"A partir daqui pode escolher tentar de novo a auto-configuração da rede DHCP "
 "(pode funcionar se o servidor de DHCP demorou muito tempo a responder) ou "
 "configurar a rede manualmente. Alguns servidores de DHCP necessitam que o "
 "cliente envie um DHCP hostname, por isso pode tentar de novo a "
-"autoconfiguração da rede DHCP com um hostname fornecido por si."
+"auto-configuração da rede DHCP com um hostname fornecido por si."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:44
 msgid "Network autoconfiguration failed"
-msgstr "A autoconfiguração da rede falhou"
+msgstr "A auto-configuração da rede falhou"
 
 #. Type: note
 #. Description
@@ -581,7 +586,7 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"A autoconfiguração da rede teve sucesso. No entanto, não está definido "
+"A auto-configuração da rede teve sucesso. No entanto, não está definido "
 "nenhum route: o sistema não sabe como comunicar com hosts na Internet. Isto "
 "vai fazer com que seja impossível continuar com a instalação a menos que "
 "tenha o primeiro CD-ROM Debian oficial, um CD-ROM 'Netinst', ou os pacotes "
@@ -701,11 +706,11 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "O gateway é um endereço IP (quatro números separados por pontos) que indica "
-"o router gateway, também conhecido como o router padrão. Todo o tráfego que "
-"vai para fora de sua LAN (e consequentemente, para a Internet) é enviado "
-"através desse router. Em raras circunstâncias, pode não possuir um router, "
+"o router gateway, também conhecido como o router por omissão. Todo o tráfego "
+"que vai para fora de sua LAN (por exemplo, para a Internet) é enviado "
+"através deste router. Em raras circunstâncias, pode não possuir um router, "
 "nesse caso, este campo deve ser deixado em branco. Caso não saiba a resposta "
-"apropriada para esta pergunta, consulte o admistrador da sua rede."
+"apropriada para esta pergunta, consulte o administrador da sua rede."
 
 #. Type: error
 #. Description
@@ -717,7 +722,7 @@ msgstr "Gateway inatingível"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "O gateway escolhido é inalcançavel."
+msgstr "O endereço de gateway escolhido é inalcançavel."
 
 #. Type: error
 #. Description
@@ -763,7 +768,7 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Configurar a rede usando endereçamento estático"
+msgstr "Configurar a rede utilizando endereçamento estático"
 
 #~ msgid "Configure the network statically?"
 #~ msgstr "Configurar a rede estáticamente?"
