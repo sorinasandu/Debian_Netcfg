@@ -11,6 +11,10 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Remove kill_dhcp_client prototype from netcfg.h because it's now static.
     - Change newline + a space to just a newline to end some disable_dhcp
       woes.
+    - Warn if there's no default route available after getting a DHCP lease.
+      (Closes: #253543)
+    - Don't add 'auto' or hotplug mapping lines for 16-bit PCMCIA devices.
+      (Closes: #248071, #239284)
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
