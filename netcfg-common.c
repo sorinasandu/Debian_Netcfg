@@ -75,6 +75,7 @@ char* essid = NULL;
 
 /* IW socket for global use - init in main */
 int wfd = 0;
+int input_result = 0;
 
 static int have_domain = 0;
 
@@ -82,8 +83,7 @@ int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
     int ret = 0;
-    debconf_fset(client, template, "seen", "false");
-    debconf_input(client, priority, template);
+    input_result = debconf_input(client, priority, template);
     ret = debconf_go(client);
     debconf_get(client, template);
     *p = client->value;
@@ -219,6 +219,11 @@ char *find_in_devnames(const char* iface)
 
   fclose(dn);
 
+  len = strlen(result);
+  
+  if (result[len - 1] == '\n')
+    result[len - 1] = '\0';
+
   return result;
 }
 
@@ -339,16 +344,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 	size_t newchars;
 	char *downbuf;
 
-	/* Idempotency hack */
-	if (asprintf(&downbuf, "/sbin/ifconfig %s down", inter) != -1)
-	{
-	  di_exec_shell_log(downbuf);
-	  free(downbuf);
-	}
-	else
-	  di_log(DI_LOG_LEVEL_ERROR, "asprintf failed trying to take interface %s down!",
-	      inter);
-	
+	ifconfig_down(inter);
 	ifdsc = get_ifdsc(client, inter);
         newchars = strlen(inter) + strlen(ifdsc) + 5;
         if (len < (strlen(ptr) + newchars)) {
@@ -873,9 +869,9 @@ int netcfg_activate_static(struct debconfclient *client)
     deconfigure_network();
 
     /* configure loopback */
-    di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
+    di_exec_shell_log("ifconfig lo 127.0.0.1");
 
-    snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s",
+    snprintf(buf, sizeof(buf), "ifconfig %s %s",
              interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
     di_snprintfcat(buf, sizeof(buf), " netmask %s", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
     di_snprintfcat(buf, sizeof(buf), " broadcast %s",
@@ -890,7 +886,7 @@ int netcfg_activate_static(struct debconfclient *client)
 
     if (gateway.s_addr) {
         snprintf(buf, sizeof(buf),
-                 "/sbin/route add default gateway %s",
+                 "route add default gateway %s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
         rv |= di_exec_shell_log(buf);
 	printf("rv = %i, buf = %s\n", rv, buf);
@@ -1097,7 +1093,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     deconfigure_network();
 
     /* setup loopback */
-    di_exec_shell_log("/sbin/ifconfig lo 127.0.0.1");
+    di_exec_shell_log("ifconfig lo 127.0.0.1");
 
     /* load kernel module for network sockets silently */
     di_exec_shell("modprobe af_packet");
@@ -1105,18 +1101,18 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     /* get dhcp lease */
     switch (dhcp_client) {
     case PUMP:
-        snprintf(buf, sizeof(buf), "/sbin/pump -i %s", interface);
+        snprintf(buf, sizeof(buf), "pump -i %s", interface);
         if (dhcp_hostname)
             di_snprintfcat(buf, sizeof(buf), " -h %s",
                            dhcp_hostname);
         break;
 
     case DHCLIENT:
-        snprintf(buf, sizeof(buf), "/sbin/dhclient -e %s", interface);
+        snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
         break;
 
     case UDHCPC:
-        snprintf(buf, sizeof(buf), "/sbin/udhcpc -i %s -n",
+        snprintf(buf, sizeof(buf), "udhcpc -i %s -n",
                  interface);
         if (dhcp_hostname)
             di_snprintfcat(buf, sizeof(buf), " -H %s",
@@ -1254,9 +1250,6 @@ automatic:
   if (!empty_str(wconf.essid) || empty_str(client->value)) 
   {
     int i, success = 0;
-    /* Calculate here, we don't want to do it every time */
-    int len = strlen(iface) + sizeof("/sbin/ifconfig  down") + 1;
-    char *cmd = malloc(len);
 
     /* Default to any AP */
     wconf.essid[0] = '\0';
@@ -1272,11 +1265,8 @@ automatic:
 
     for (i = 0; i <= MAX_SECS; i++)
     {
-      snprintf(cmd, len, "/sbin/ifconfig %s up", iface);
-      di_exec_shell_log(cmd);
-      
+      ifconfig_up(iface);
       sleep (1);
-
       iw_get_basic_config (wfd, iface, &wconf);
 
       if (!empty_str(wconf.essid))
@@ -1289,8 +1279,7 @@ automatic:
       }
 
       debconf_progress_step(client, 1);
-      snprintf(cmd, len, "/sbin/ifconfig %s down", iface);
-      di_exec_shell_log(cmd);
+      ifconfig_down(iface);
     }
 
     debconf_progress_stop(client);
@@ -1422,4 +1411,41 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   iw_set_basic_config (wfd, iface, &wconf);
 
   return 0;
+}
+
+/* Utility functions. */
+int ifconfig_up (char* iface)
+{
+  char * cmd;
+  size_t len = sizeof("ifconfig  up") + strlen(iface) + 1;
+  int ret;
+
+  if (!(cmd = malloc(len)))
+		return 1;
+
+  snprintf(cmd, len, "ifconfig %s up", iface);
+
+  ret = di_exec_shell(cmd);
+
+  free(cmd);
+
+	return ret;
+}
+
+int ifconfig_down (char* iface)
+{
+  char * cmd;
+  size_t len = sizeof("ifconfig  down") + strlen(iface) + 1;
+  int ret;
+
+  if (!(cmd = malloc(len)))
+		return 1;
+
+  snprintf(cmd, len, "ifconfig %s down", iface);
+
+  ret = di_exec_shell(cmd);
+
+  free(cmd);
+
+	return ret;
 }

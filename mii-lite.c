@@ -41,14 +41,12 @@ method_t
 mii_diag_status_lite (char *ifname)
 {
   u16 *data = NULL;
-
-  di_debug("poking at interface %s", ifname);
-
+  
   /* Open a basic socket. */
-  if ((skfd = socket(AF_INET, SOCK_DGRAM,0)) < 0)
+  if ((skfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
   {
-    di_debug("couldn't open skfd");
-    return STATIC;
+    di_error("Couldn't open skfd!");
+    return DUNNO;
   }
 
   /* Verify that the interface supports the ioctl(), and if
@@ -60,25 +58,24 @@ mii_diag_status_lite (char *ifname)
   strncpy(ifr.ifr_name, ifname, IFNAMSIZ);
   data[0] = 0;
 
-  if (ioctl(skfd, 0x8947, &ifr) >= 0) {
+  if (ioctl(skfd, 0x8947, &ifr) >= 0) 
     new_ioctl_nums = 1;
-  } else if (ioctl(skfd, SIOCDEVPRIVATE, &ifr) >= 0) {
+  else if (ioctl(skfd, SIOCDEVPRIVATE, &ifr) >= 0)
     new_ioctl_nums = 0;
-  } else {
+  else {
     close(skfd);
-    di_log(DI_LOG_LEVEL_DEBUG, "none of the ioctls work!");
     return DUNNO;
   }
 
   if ((mdio_read(skfd, (unsigned)data[0], 1) & 0x0004) == 0)
   {
-    di_debug("ioctl: media state is: disconnected");
+    di_info("ioctl: media state for %s is: disconnected", ifname);
     return STATIC;
   }
   else
   {
     close(skfd);
-    di_debug("ioctl: media state is: connected");
+    di_info("ioctl: media state for %s is: connected", ifname);
     return DHCP;
   }
 }

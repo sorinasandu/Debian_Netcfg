@@ -18,6 +18,7 @@ typedef enum { DHCP, STATIC, DUNNO } method_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd;
+extern int input_result;
 
 /* network config */
 extern char *interface;
@@ -77,5 +78,8 @@ extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface)
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 
 extern method_t mii_diag_status_lite (char *ifname);
+
+extern int ifconfig_up (char*);
+extern int ifconfig_down (char*);
 
 #endif /* _NETCFG_H_ */

@@ -36,37 +36,28 @@
 
 static method_t netcfg_method = DHCP;
 
-int netcfg_get_method(struct debconfclient *client) 
+response_t netcfg_get_method(struct debconfclient *client)
 {
-    int ret, asked = 1;
+    int iret, ret;
 
-    ret = debconf_input(client, "medium", "netcfg/use_dhcp");
-   
-    di_debug("debconf_input returned %d", ret);
-    
-    if (ret == 30)
-      asked = 0;
-      
+    iret = debconf_input(client, "medium", "netcfg/use_dhcp");
     ret = debconf_go(client);
-    di_debug("debconf_go returned %d", ret);
-    if (ret == 30)
-      return GO_BACK;
 
     debconf_get(client, "netcfg/use_dhcp");
 
-    di_debug("hum, looks like client->value is %p", (void*)client->value);
+    if (ret == 30)
+      return GO_BACK;
 
-    if (strcmp(client->value, "true") == 0) 
-	netcfg_method = DHCP;
+    if (strcmp(client->value, "true") == 0)
+      netcfg_method = DHCP;
     else 
-	netcfg_method = STATIC;
+      netcfg_method = STATIC;
 
-    if (asked == 0)
+    if (iret == 30)
       return NOT_ASKED;
-    else
-      return 0;
-}
 
+    return 0;
+}
 
 int main(void)
 {
@@ -74,7 +65,7 @@ int main(void)
     enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
-    response_t response;
+    response_t res;
 
     /* initialize libd-i */
     di_system_init("netcfg");
@@ -99,29 +90,39 @@ int main(void)
 	    }
 	    break;
 	case GET_METHOD:
-	    if ((response = netcfg_get_method(client)) == GO_BACK)
-	    {
-	        di_debug("wtf get_method said GO_BACK??");
+	    if ((res = netcfg_get_method(client)) == GO_BACK)
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
-	    }
 	    else
 	    {
-	        char * bah;
-	        /* See if link is established? */
-	        method_t tmp = mii_diag_status_lite(interface);
+	        method_t mii_result;
+		
+		ifconfig_up(interface);
+		mii_result = mii_diag_status_lite(interface);
+		ifconfig_down(interface);
 
-		switch(tmp)
-		{
-		  case DUNNO: bah = "dunno"; break;
- 		  case DHCP: bah = "connected"; break;
-		  case STATIC: bah = "disconnected"; break;
-		  default: bah = "completely fucked up!"; break;
-		}
-		di_log(DI_LOG_LEVEL_DEBUG, "mii proposed: %s", bah);
+		di_debug("mii_result = %s",
+                    mii_result == DHCP ? "DHCP" :
+                    ( mii_result == STATIC ? "static" : 
+		      ( mii_result == DUNNO ? "dunno!" : "REALLY dunno")));
+
+		di_debug("res = %s",
+		    res == NOT_ASKED ? "not asked" :
+		    ( res == GO_BACK ? "go back" : "unknown" ));
 
 		/* Don't override the user's choice. */
-		if (tmp != DUNNO && response == NOT_ASKED)
-		  netcfg_method = tmp;
+		di_debug("netcfg_method = %s",
+		    netcfg_method == DHCP ? "DHCP" :
+		    ( netcfg_method == STATIC ? "static" :
+		      ( netcfg_method == DUNNO ? "dunno!" : "REALLY dunno")));
+		
+		if (mii_result != DUNNO && res == NOT_ASKED)
+		  netcfg_method = mii_result;
+
+
+		di_debug("netcfg_method = %s",
+		    netcfg_method == DHCP ? "DHCP" :
+		    ( netcfg_method == STATIC ? "static" : 
+		      ( netcfg_method == DUNNO ? "dunno!" : "REALLY dunno")));
 
 		if (netcfg_method == DHCP) 
 		    state = GET_DHCP;
@@ -129,6 +130,7 @@ int main(void)
 		    state = GET_STATIC;
 	    }
 	    break;
+
 	case GET_DHCP:
 	    if (netcfg_get_dhcp(client))
 		state = GET_METHOD;
