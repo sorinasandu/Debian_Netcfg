@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-10 06:48-0700\n"
-"PO-Revision-Date: 2004-09-08 22:29GMT\n"
+"POT-Creation-Date: 2004-09-10 18:28+0200\n"
+"PO-Revision-Date: 2004-09-10 23:58GMT\n"
 "Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +149,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Wenn Ihr WEP-Schlüssel im Format 'nnnn-nnnn-nn' oder 'nnnnnnnn', wobei n "
+"Wenn Ihr WEP-Schlüssel im Format »nnnn-nnnn-nn« oder »nnnnnnnn«, wobei n "
 "eine Ziffer ist, geben Sie ihn - einfach wie er ist - in dieses Feld ein."
 
 #. Type: string
@@ -160,7 +160,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein "
-"'s:' (ohne Anführungszeichen) voran."
+"»s:« (ohne Anführungszeichen) voran."
 
 #. Type: string
 #. Description
@@ -185,7 +185,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Der WEP-Schlüssel '${wepkey}' ist ungültig. Bitte beachten Sie die "
+"Der WEP-Schlüssel »${wepkey}« ist ungültig. Bitte beachten Sie die "
 "Anweisungen auf dem nächsten Bildschirm über die korrekte Eingabe des WEP-"
 "Schlüssels und versuchen Sie es noch einmal."
 
@@ -246,15 +246,14 @@ msgstr "Der Rechnername »${hostname}« ist ungültig."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Ein gültiger Rechnername darf nur alphanumerische und das Minuszeichen "
-"enthalten. Er darf nur 2 bis 63 Zeichen lang sein, und nicht mit einem Minus "
-"beginnen oder enden."
+"Ein gültiger Rechnername darf nur Kleinbuchstaben von a - z, 0-9 sowie "
+"Minuszeichen enthalten. Er darf nur 2 bis 63 Zeichen lang sein und nicht mit "
+"einem Minus beginnen oder enden."
 
 #. Type: error
 #. Description
@@ -285,8 +284,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Es wurde kein Netzwerkinterface wurde gefunden. Das Installationssystem "
-"konnte keine Netzwerkkarte finden."
+"Es wurde kein Netzwerkinterface wurde gefunden. Der Installer konnte keine "
+"Netzwerkkarte finden."
 
 #. Type: error
 #. Description
@@ -296,7 +295,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Es ist möglich, dass zunächst ein Kernel-Modul für Ihre Netzwerkkarte "
-"geladen werden muss. Gehen Sie dazu zum Schritt 'Netzwerk-Hardwareerkennung' "
+"geladen werden muss. Gehen Sie dazu zum Schritt »Netzwerk-Hardwareerkennung« "
 "zurück."
 
 #. Type: select
@@ -387,7 +386,7 @@ msgstr "IP über parallele Schnittstelle."
 #. Description
 #: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
-msgstr "Point-to-Point Protocol"
+msgstr "Punkt-zu-Punkt Protokoll"
 
 #. Type: text
 #. Description
@@ -399,7 +398,7 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN Point-to-Point Protocol"
+msgstr "ISDN Punkt-zu-Punkt Protokoll"
 
 #. Type: text
 #. Description
@@ -433,7 +432,7 @@ msgstr "Unbekanntes Interface"
 
 #. Type: text
 #. Description
-#. base-installer progress bar item
+#. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Konfiguriere das Netzwerk ..."
@@ -543,7 +542,6 @@ msgstr "Netzwerk-Konfigurationsmethode"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -552,7 +550,7 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Hier können Sie wählen, die DHCP-Netzwerk-Autokonfiguration nochmals zu "
-"probieren (was funktionieren könnte wenn Ihr DHCP-Server sehr langsam "
+"versuchen (was funktionieren könnte wenn Ihr DHCP-Server sehr langsam "
 "reagiert) oder das Netzwerk manuell zu konfigurieren. Manche DHCP-Server "
 "erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher "
 "können Sie auch wählen, die DHCP-Netzwerk-Autokonfiguration nochmals mit "
@@ -594,7 +592,7 @@ msgstr ""
 "Die Netzwerk-Autokonfiguration war erfolgreich. Es wurde allerdings keine "
 "Default-Route gesetzt: Das System wird nicht mit Rechnern im Internet "
 "kommunizieren können. Dies könnte ein Fortsetzen der Installation unmöglich "
-"machen, wenn Sie nicht die erste offizielle Debian-CD-ROM, eine 'Netinst'-CD-"
+"machen, wenn Sie nicht die erste offizielle Debian-CD-ROM, eine »Netinst«-CD-"
 "ROM oder Pakete im lokalen Netzwerk haben."
 
 #. Type: boolean
@@ -654,14 +652,14 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Die von Ihnen angegebene IP-Adresse ist ungültig. Sie sollte die Form x.x.x."
-"x haben, wobei jedes 'x' kleiner als 255 sein muss. Bitte versuchen Sie es "
+"x haben, wobei jedes »x« kleiner als 255 sein muss. Bitte versuchen Sie es "
 "noch einmal."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Point-to-Point-Adresse:"
+msgstr "Punkt-zu-Punkt Adresse:"
 
 #. Type: string
 #. Description
@@ -672,10 +670,10 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Die Point-to-Point-Adresse dient zur Feststellung des anderen Endpunkts des "
-"Point-to-Point-Netzwerks. Wenn Sie die Adresse nicht kennen, fragen Sie "
-"Ihren Netzwerkadministrator. Die Point-to-Point-Adresse sollte als Gruppe "
-"aus vier Zahlen, getrennt durch Punkte, eingegeben werden."
+"Die Punkt-zu-Punk-Adresse dient zur Feststellung des anderen Endpunkts des "
+"Punkt-zu-Punk-Netzwerks. Wenn Sie die Adresse nicht kennen, fragen Sie Ihren "
+"Netzwerkadministrator. Die Punkt-zu-Punk-Adresse sollte als Gruppe aus vier "
+"Zahlen, getrennt durch Punkte, eingegeben werden."
 
 #. Type: string
 #. Description
@@ -753,8 +751,6 @@ msgstr "Sind diese Informationen richtig?"
 msgid "Currently configured network parameters:"
 msgstr "Gegenwärtig konfigurierte Netzwerk-Parameter:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
