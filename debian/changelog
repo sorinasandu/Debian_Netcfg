@@ -11,6 +11,7 @@ netcfg (0.40) UNRELEASED; urgency=low
     - Initial Swedish translation (sv.po).
   * Matt Kraai
     - Do not overwrite /etc/resolv.conf if using DHCP.
+    - Do not set the domain if it is the empty string.
 
  -- Bart Cornelis <cobaco@linux.be>  Tue, 30 Dec 2003 21:46:30 +0100
 

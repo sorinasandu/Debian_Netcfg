@@ -415,7 +415,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
     if (*domain)
         free(*domain);
     *domain = NULL;
-    if (ptr)
+    if (ptr && ptr[0])
         *domain = strdup(ptr);
     return 0;
 }
