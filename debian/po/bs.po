@@ -1,28 +1,18 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Bosnian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
-"PO-Revision-Date: 2004-07-13 13:52+0200\n"
-"Last-Translator: Safir Šećerović <safir@open.net.ba>\n"
-"Language-Team: Bosnian <lokal@lugbih.org>\n"
+"POT-Creation-Date: 2004-08-26 03:36+0200\n"
+"PO-Revision-Date: 2004-08-29 09:47+0200\n"
+"Last-Translator:  Safir Šećerović <sapphire@linux.org.ba>\n"
+"Language-Team:  Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
 
 #. Type: boolean
 #. Description
@@ -199,8 +189,6 @@ msgstr ""
 "ESSID \"${essid}\" je neispravan. ESSID-ovi mogu biti do 32 znaka dugi i "
 "mogu da sadrže sve vrste znakova."
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
@@ -293,9 +281,6 @@ msgstr ""
 "Možda biste trebali učitati određeni modul za vašu mrežnu karticu, ako je "
 "imate. Za ovo, idite nazad na korak detekcije mrežnog hardwarea."
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
@@ -338,8 +323,6 @@ msgstr ""
 "point izvjesnog tipa, vaša mreža je Managed. Ako je drugi računar vaš "
 "'access point', onda je vaša mreža Ad-hoc."
 
-#  Type: text
-#  Description
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:127
@@ -424,8 +407,6 @@ msgstr "ISDN Point-to-Point Protocol"
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
-#  Type: text
-#  Description
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:189
@@ -450,9 +431,6 @@ msgstr "Inter-user communication vehicle"
 msgid "Unknown interface"
 msgstr "Nepoznati interfejs"
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
@@ -460,9 +438,6 @@ msgstr "Nepoznati interfejs"
 msgid "Configuring network ..."
 msgstr "Podešavam mrežu ..."
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
@@ -470,8 +445,6 @@ msgstr "Podešavam mrežu ..."
 msgid "Configure the network"
 msgstr "Podesi mrežu"
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
@@ -542,9 +515,6 @@ msgstr "Ponovi automatsku konfiguraciju mreže"
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Ponovi automatsku konfiguraciju mreže koristeći hostname DHCP servera"
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
@@ -557,9 +527,6 @@ msgstr "Ručno podesi mrežu"
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
@@ -636,9 +603,6 @@ msgstr ""
 "Ako niste sigurni, ne biste trebali nastavljati bez default route: "
 "kontaktirajte vašeg lokalnog mrežnog administratora u vezi sa ovim problemom."
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
@@ -778,8 +742,6 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -796,19 +758,9 @@ msgstr ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
-
-#  Type: text
-#  Description
-#  Item in the main menu to select this package
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Podesi mrežu"
