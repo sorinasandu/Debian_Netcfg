@@ -1,17 +1,18 @@
 netcfg (0.19) unstable; urgency=low
 
-  * NOT RELEASED YET
   * Martin SjÃ¶gren
     - Replace XBC with XB so our special control fields don't confuse the
       changes files.
   * André Luís Lopes
     - Set pt_BR.po control fields.
     - Update pt_BR translation.
-  * Fix menutest script
-  * Make -dhcp have higher priority than -static, since we presume more people
-    will be using that.
+  * Tollef Fog Heen:
+    - Fix menutest script
+    - Make -dhcp have higher priority than -static, since we presume more
+      people will be using that.
+    - Multiply installer-menu-item by ten.
 
- -- Tollef Fog Heen <tfheen@debian.org>  Wed, 13 Nov 2002 02:12:35 +0100
+ -- Tollef Fog Heen <tfheen@debian.org>  Thu, 14 Nov 2002 01:55:02 +0100
 
 netcfg (0.18) unstable; urgency=low
 
