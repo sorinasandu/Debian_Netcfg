@@ -62,7 +62,7 @@ response_t netcfg_get_method(struct debconfclient *client)
 int main(void)
 {
     int num_interfaces = 0;
-    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
     response_t res;
@@ -146,21 +146,21 @@ int main(void)
 	      di_exec_shell_log("apt-install wireless-tools");
 	      requested_wireless_tools = 1;
 	    }
-	    /* Must make sure WEP question is always asked, independent
-	     * of whether set essid question was asked. */
+	    state = WCONFIG_ESSID;
+	    break;
+
+	case WCONFIG_ESSID:
 	    if (netcfg_wireless_set_essid (client, interface) == GO_BACK)
-	    {
 	      state = BACKUP;
-	      break;
-	    }
+	    else
+	      state = WCONFIG_WEP;
+	    break;
             
+	case WCONFIG_WEP:
 	    if (netcfg_wireless_set_wep (client, interface) == GO_BACK)
-	    {
-	      state = BACKUP;
-	      break;
-	    }
-	    
-	    state = GET_METHOD;
+	      state = WCONFIG_ESSID;
+	    else
+	      state = GET_METHOD;
 	    break;
 
 	case QUIT:

@@ -4,6 +4,7 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Split out all functions into static.c, dhcp.c, wireless.c.
     - Port wireless fixes back to netcfg-static and netcfg-dhcp, which
       have been rather neglected lately.
+    - Fix the GO_BACK interaction between WEP and ESSID configuration.
     - Write loopback all the time, even when you abort network config.
       (Closes: #248636)
     - Redesign DHCP strategy with a new template that uses a select,
