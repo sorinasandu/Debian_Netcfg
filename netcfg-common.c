@@ -132,7 +132,7 @@ void get_name(char *name, char *p)
 static FILE *ifs = NULL;
 static char ibuf[512];
 
-void getif_start()
+void getif_start(void)
 {
     if (ifs != NULL) {
         fclose(ifs);
@@ -163,7 +163,7 @@ char *getif(int all)
 }
 
 
-void getif_end()
+void getif_end(void)
 {
     if (ifs != NULL) {
         fclose(ifs);
@@ -285,10 +285,10 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
                          int *numif)
 {
     char *inter;
-    int len, ret;
+    size_t len;
+    int ret;
     int num_interfaces = 0;
-    int newchars;
-    char *ptr;
+    char *ptr = NULL;
     char *ifdsc;
 
     if (*interface) {
@@ -297,13 +297,16 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     }
 
     if (!(ptr = malloc(128)))
-        netcfg_die(client);
+	goto error;
+
     len = 128;
     *ptr = '\0';
 
     getif_start();
     while ((inter = getif(1)) != NULL) {
-        ifdsc = get_ifdsc(client, inter);
+	size_t newchars;
+
+	ifdsc = get_ifdsc(client, inter);
         newchars = strlen(inter) + strlen(ifdsc) + 5;
         if (len < (strlen(ptr) + newchars)) {
             if (!(ptr = realloc(ptr, len + newchars + 128)))
@@ -615,7 +618,7 @@ static int netcfg_write_static(char *prebaseconfig)
     return -1;
 }
 
-int kill_dhcp_client() {
+int kill_dhcp_client(void) {
     FILE *ps;
     char *pid_char = NULL;
     int pid_int = 0;
@@ -654,7 +657,7 @@ int kill_dhcp_client() {
 
 }
 
-int deconfigure_network() {
+int deconfigure_network(void) {
 
     char buf[256];
 
@@ -864,7 +867,7 @@ static int netcfg_get_dhcp_hostname(struct debconfclient *client, char **dhcp_ho
 }
 
 
-static void netcfg_write_dhcp()
+static void netcfg_write_dhcp(char *iface, char *host)
 {
 
     FILE *fp;
@@ -872,10 +875,10 @@ static void netcfg_write_dhcp()
     if ((fp = file_open(INTERFACES_FILE, "a"))) {
         fprintf(fp,
                 "\n# This entry was created during the Debian installation\n");
-        fprintf(fp, "auto %s\n", interface);
-        fprintf(fp, "iface %s inet dhcp\n", interface);
-        if (dhcp_hostname)
-            fprintf(fp, "\thostname %s\n", dhcp_hostname);
+        fprintf(fp, "auto %s\n", iface);
+        fprintf(fp, "iface %s inet dhcp\n", iface);
+        if (host)
+            fprintf(fp, "\thostname %s\n", host);
         fclose(fp);
     }
 }

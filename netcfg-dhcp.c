@@ -35,7 +35,7 @@
 #include "netcfg.h"
 
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int num_interfaces;
     static struct debconfclient *client;

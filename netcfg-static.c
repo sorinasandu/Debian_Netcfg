@@ -32,7 +32,7 @@
 #include <debian-installer.h>
 #include "netcfg.h"
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int num_interfaces =0;
     static struct debconfclient *client;

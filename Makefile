@@ -18,12 +18,18 @@ STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 
 all: $(TARGETS)
 
-netcfg-dhcp netcfg-static netcfg: netcfg-dhcp.c netcfg-static.c netcfg.c netcfg-common.o 
-	$(CC) $(CFLAGS) $@.c  -o $@ $(INCS) $(LDOPTS) netcfg-common.o
+netcfg-dhcp: netcfg-dhcp.o
+netcfg-static: netcfg-static.o
+netcfg: netcfg.o
+
+$(TARGETS): netcfg-common.o
+	$(CC) $(LDOPTS) -o $@ $^
 	$(STRIP) $@
 
-netcfg-common.o: netcfg-common.c
-	$(CC) -c $(CFLAGS) netcfg-common.c  -o $@ $(INCS)
+%.o: %.c
+	$(CC) -c $(CFLAGS) $(INCS) -o $@ $<
 
 clean:
-	rm -f netcfg-dhcp netcfg-static netcfg *.o 
+	rm -f $(TARGETS) *.o
+
+.PHONY: all clean

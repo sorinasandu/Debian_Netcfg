@@ -54,7 +54,7 @@ int netcfg_get_method(struct debconfclient *client)
 }
 
 
-int main(int argc, char *argv[])
+int main(void)
 {
     int num_interfaces =0;
     enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT} state = GET_INTERFACE;
