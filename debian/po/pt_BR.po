@@ -8,10 +8,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg-0.34\n"
+"Project-Id-Version: netcfg-0.35\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-11 11:47+0100\n"
-"PO-Revision-Date: 2003-12-09 21:29-0300\n"
+"PO-Revision-Date: 2003-12-11 19:34-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,14 +22,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "configure network with DHCP, manual network configuration"
-msgstr ""
+msgstr "Configurar a rede via DHCP, Configurar a rede manualmente"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method"
-msgstr "Configuração de Rede via DHCP"
+msgstr "Método de configuração de rede"
 
 #. Type: select
 #. Description
@@ -41,6 +40,12 @@ msgid ""
 "to configure your network manually after the atempt to configure it by DHCP. "
 "If unsure choose DHCP."
 msgstr ""
+"A rede pode ser configurada via DHCP ou informando manualmente todos os "
+"dados necessários. Caso você opte por usar a configuração via DHCP e o "
+"instalador Debian não seja capaz de obter uma configuração funcional de "
+"um servidor DHCP em sua rede, você terá a possibilidade de informar os "
+"dados necessários para sua configuração de rede manualmente após a "
+"tentativa de configuração via DHCP."
 
 #. Type: string
 #. Description
@@ -302,17 +307,15 @@ msgstr "Interface desconhecida"
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-common.templates:141
-#, fuzzy
 msgid "Network Configuration"
-msgstr "Configuração de Rede via DHCP"
+msgstr "Configuração de Rede"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:146
-#, fuzzy
 msgid "Configure the network"
-msgstr "Configurar uma rede estática"
+msgstr "Configurar a rede"
 
 #. Type: string
 #. Description
@@ -375,9 +378,8 @@ msgstr "Configurando a rede via DHCP"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:27
-#, fuzzy
 msgid "This may take some time."
-msgstr "Este processo pode levar alguns minutos."
+msgstr "Este processo pode levar algum tempo."
 
 #. Type: error
 #. Description
@@ -402,9 +404,8 @@ msgstr "O processo de configuração DHCP será abortado."
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid "Do you want to retry DHCP network configuration?"
-msgstr "Configuração de Rede via DHCP"
+msgstr "Você deseja tentar a configuração via DHCP novamente ?"
 
 #. Type: boolean
 #. Description
@@ -413,6 +414,9 @@ msgid ""
 "No IP address was offered during DHCP network configuration. Sometimes DHCP "
 "servers are really slow. In this case you can retry."
 msgstr ""
+"Nenhum endereço IP foi oferecido durante a tentativa de configuração da "
+"rede via DHCP. Algumas vezes alguns servidores DHCP são realmente "
+"lentos. Caso seja esse o caso, você pode tentar novamente."
 
 #. Type: text
 #. Description
