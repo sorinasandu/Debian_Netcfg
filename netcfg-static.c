@@ -153,7 +153,7 @@ static int
 netcfg_activate_static ()
 {
   int rv = 0;
-  char buf[128];
+  char buf[256];
 #ifdef __GNU__
 /* I had to do something like this ? */
 /*  di_execlog ("settrans /servers/socket/2 -fg");  */
@@ -161,7 +161,7 @@ netcfg_activate_static ()
   snprintf (buf, sizeof (buf),
 	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
 	    interface, num2dot (ipaddress));
-  di_snprintfcat (buf, sizeof (buf) " --netmask=%s", num2dot (netmask));
+  di_snprintfcat (buf, sizeof (buf), " --netmask=%s", num2dot (netmask));
   buf[sizeof (buf) - 1] = '\0';
 
   if (gateway)
