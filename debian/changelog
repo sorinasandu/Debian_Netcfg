@@ -1,3 +1,12 @@
+netcfg (0.61) unstable; urgency=high
+
+  * Kenshi Muto
+    - modprobe in busybox won't load af_packet. This causes DHCP
+      configuration fail.
+      This can be avoid by running modprobe without '/sbin/'.
+
+ -- Kenshi Muto <kmuto@debian.org>  Thu,  1 Apr 2004 15:40:39 +0900
+
 netcfg (0.60) unstable; urgency=low
 
   * Updated translations: 
