@@ -1,12 +1,15 @@
-# Changwoo Ryu <cwryu@debian.org>, 2004.
+# Korean messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-31 21:51-0700\n"
+"POT-Creation-Date: 2004-09-01 09:36+0200\n"
 "PO-Revision-Date: 2004-08-11 20:55+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
-"Language-Team: Korean <cwryu@debian.org>\n"
+"Last-Translator:  Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team:  Korean <cwryu@debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -715,8 +718,6 @@ msgstr "이 정보가 맞습니까?"
 msgid "Currently configured network parameters:"
 msgstr "현재 설정된 네트워크 인수:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -739,24 +740,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "고정 주소를 사용해 네트워크를 설정합니다"
-
-#, fuzzy
-#~ msgid "Configure the network statically?"
-#~ msgstr "네트워크 수동 설정"
-
-#~ msgid ""
-#~ "${IFACE} does not seem to be connected to any sort of network. This could "
-#~ "be due to a missing network cable or network adapter malfunction. You can "
-#~ "either forego configuring the network until you reboot into Debian and "
-#~ "use the etherconf utility, or configure the network statically. You can "
-#~ "also go back and choose a different interface."
-#~ msgstr ""
-#~ "${IFACE} 인터페이스가 어떤 종류의 네트워크에도 연결되지 않은 걸로 보입니"
-#~ "다. 네트워크 케이블이 빠져 있어서 그럴 수도 있고, 네트워크 어댑터가 이상 "
-#~ "동작하기 때문일 수도 있습니다. 네트워크 설정을 나중에 다시 시작한 다음에 "
-#~ "할 수도 있고, etherconf 유틸리티를 사용할 수도 있고, 네트워크를 고정 주소"
-#~ "를 사용하도록 설정할 수도 있습니다. 또 뒤로 돌아가서 다른 인터페이스를 선"
-#~ "택할 수도 있습니다."
-
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "네트워크 설정 없이 계속하시겠습니ㄲK?"
