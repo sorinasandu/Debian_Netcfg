@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-10 01:14+0700\n"
+"PO-Revision-Date: 2004-04-12 17:04+0700\n"
 "Last-Translator: Parlin Imanuel Toh <parlin@ui.edu>\n"
 "Language-Team: Debian Indonesia <debid@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,6 @@ msgstr "Alamat name server:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
@@ -71,10 +70,11 @@ msgid ""
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
 msgstr ""
-"Silakan masukkan alamat IP (bukan nama host) dari name server (maksimum 3 "
-"name server, dipisahkan dengan spasi, bukan koma). Server pertama merupakan "
-"server yang akan dikueri pertama kali. Bila anda tidak menggunakan name "
-"server, biarkan ruas ini kosong."
+"Nameserver yang anda tentukan disini digunakan untuk mencari nama host "
+"Internet. Silakan masukkan alamat IP (bukan nama host) dari name server "
+"(maksimum 3 name server, dipisahkan dengan spasi, bukan koma). Server "
+"pertama merupakan server yang akan dikueri pertama kali. Bila anda tidak "
+"menggunakan name server, biarkan ruas ini kosong."
 
 #. Type: select
 #. Description
@@ -307,15 +307,14 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:117
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "Konfigurasi jaringan statis"
+msgstr "Konfigurasi jaringan nirkabel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:121
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Sedang mencari titik akses nirkabel ..."
 
 #. Type: text
 #. Description
