@@ -531,7 +531,6 @@ void netcfg_write_loopback(const char* prebaseconfig)
     fprintf(fp, HELPFUL_COMMENT);
     fprintf(fp, "auto lo\n");
     fprintf(fp, "iface lo inet loopback\n\n");
-    fprintf(fp, IPV6_HOSTS);
     fclose(fp);
   }
   di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
@@ -558,8 +557,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
             fprintf(fp, "\tmap %s\n", interface);
         }
 
-	fprintf(fp, "\n" IPV6_HOSTS);
-        fclose(fp);
+	fclose(fp);
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
                                        INTERFACES_FILE,
@@ -591,6 +589,8 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
             fprintf(fp, "127.0.0.1\tlocalhost\t%s\n", hostname);
         }
 
+	fprintf(fp, "\n" IPV6_HOSTS);
+	
         fclose(fp);
 
         di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
