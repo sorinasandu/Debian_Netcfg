@@ -24,10 +24,11 @@ int dhcp_running = 0, dhcp_exit_status = 1;
 static void dhcp_client_sigchld(int sig __attribute__ ((unused))) 
 {
     if (dhcp_running == 1) {
+        di_info("in sighandler, PID = %d", dhcp_pid);
 	dhcp_running = 0;
 	wait(&dhcp_exit_status);
-        dhcp_pid = -1;
-    } 
+	di_info("exited");
+    }
 }
 
 static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
@@ -72,7 +73,6 @@ static void netcfg_write_dhcp (char* prebaseconfig, char *iface)
 
 int start_dhcp_client (struct debconfclient *client, char* dhostname)
 {
-  char buf[128];
   FILE *dc = NULL;
   dhclient_t dhcp_client;
 
@@ -90,77 +90,78 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     exit(1);
   }
 
-  /* get dhcp lease */
-  switch (dhcp_client) {
-    case PUMP:
-      if (dhostname)
-        snprintf(buf, sizeof(buf), "pump -i %s -h %s", interface, dhostname);
-      else
-        snprintf(buf, sizeof(buf), "pump -i %s", interface);
-
-      break;
-
-    case DHCLIENT:
-      /* First, set up dhclient.conf if necessary */
-
-      if (dhostname)
-      {
-        if ((dc = file_open(DHCLIENT_CONF, "w")))
-        {
-          fprintf(dc, "send host-name \"%s\";\n", dhostname);
-          fclose(dc);
-        }
-      }
-      
-      snprintf(buf, sizeof(buf), "dhclient -e %s", interface);
-      break;
-
-    case DHCLIENT3:
-      /* Different place.. */
-
-      if (dhostname)
-      {
-        if ((dc = file_open(DHCLIENT3_CONF, "w")))
-        {
-          fprintf(dc, "send host-name \"%s\";\n", dhostname);
-          fclose(dc);
-        }
-      }
-      
-      snprintf(buf, sizeof(buf), "dhclient %s", interface);
-      break;
-
-    case UDHCPC:
-      if (dhostname)
-        snprintf(buf, sizeof(buf), "udhcpc -i %s -n -H %s", interface, dhostname);
-      else
-        snprintf(buf, sizeof(buf), "udhcpc -i %s -n", interface);
-      
-      break;
-  }
-
   /* Some clients need this ... */
   ifconfig_up (interface);
-  
+
   if ((dhcp_pid = fork()) == 0) /* child */
   {
-    int ret;
-
-    signal(SIGCHLD, &dhcp_client_sigchld);
+    di_info("in child, PID = %d", getpid());
     
-    /* these guys log to syslog already */
-    if (dhcp_client == DHCLIENT || dhcp_client == DHCLIENT3)
-      ret = di_exec_shell(buf);
-    else
-      ret = di_exec_shell_log(buf);
+    /* get dhcp lease */
+    switch (dhcp_client)
+    {
+      case PUMP:
+	if (dhostname)
+	  execlp("pump", "pump", "-i", interface, "-h", dhostname);
+	else
+	  execlp("pump", "pump", "-i", interface);
 
-    _exit(!!ret);
+	break;
+
+      case DHCLIENT:
+	/* First, set up dhclient.conf if necessary */
+
+	if (dhostname)
+	{
+	  if ((dc = file_open(DHCLIENT_CONF, "w")))
+	  {
+	    fprintf(dc, "send host-name \"%s\";\n", dhostname);
+	    fclose(dc);
+	  }
+	}
+
+	execlp("dhclient", "dhclient", "-e", interface);
+	break;
+
+      case DHCLIENT3:
+	/* Different place.. */
+
+	if (dhostname)
+	{
+	  if ((dc = file_open(DHCLIENT3_CONF, "w")))
+	  {
+	    fprintf(dc, "send host-name \"%s\";\n", dhostname);
+	    fclose(dc);
+	  }
+	}
+
+	execlp("dhclient", "dhclient", "-1", interface);
+	break;
+
+      case UDHCPC:
+	if (dhostname)
+	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", "-H", dhostname);
+	else
+	  execlp("udhcpc", "udhcpc", "-i", interface, "-n");
+
+	break;
+    }
+    di_error("reached end of switch!! dhcp_client = %d", dhcp_client);
+    if (errno != 0)
+      di_error("exec died with: %s", strerror(errno));
+
+    return 1; /* should NEVER EVER get here */
   }
   else if (dhcp_pid == -1)
+  {
+    di_error("oh shit, PID is -1");
     return 1;
+  }
   else
   {
+    di_info("in parent, PID = %d, child PID = %d", getpid(), dhcp_pid);
     dhcp_running = 1;
+    signal(SIGCHLD, &dhcp_client_sigchld);
     return 0;
   }
 }
@@ -196,8 +197,15 @@ int poll_dhcp_client (struct debconfclient *client)
   /* got a lease? */
   if (!dhcp_running && (dhcp_exit_status == 0))
   {
-    assert(dhcp_pid == -1);
+    di_info("unsetting PID (was %d)", dhcp_pid);
+    dhcp_pid = -1;
     return 0;
+  }
+  else if (dhcp_running)
+  {
+    di_info("end of poll, PID = %d", dhcp_pid);
+    kill_dhcp_client();
+    dhcp_running = 0;
   }
   
   return 1;
@@ -236,11 +244,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
   enum { START, ASK_RETRY, POLL, DHCP_HOSTNAME, HOSTNAME, STATIC, END } state = START;
-
-  /* Nuke */
-  di_exec_shell("killall dhclient");
-  di_exec_shell("killall pump");
-  di_exec_shell("killall udhcpc");
+  int i;
 
   kill_dhcp_client();
   loop_setup();
@@ -273,15 +277,17 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case ASK_RETRY:
         /* ooh, now it's a select */
-        switch (ask_dhcp_retry (client))
+        switch ((i = ask_dhcp_retry (client)))
         {
-          case GO_BACK: exit(10); /* XXX */
+          case GO_BACK: kill_dhcp_client(); exit(10); /* XXX */
           case 0: state = POLL; break;
           case 1: state = DHCP_HOSTNAME; break;
           case 2: state = STATIC; break;
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
                   return 0;
+	  default:
+		  di_info("unhandled: retry returned %d", i);
         }
         break;
 
@@ -305,12 +311,16 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
       case HOSTNAME:
         if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
+	{
+	  kill_dhcp_client();
           exit(10); /* go back, going back to poll isn't intuitive */
+	}
         else
           state = END;
         break;
 
       case STATIC:
+	kill_dhcp_client();
         return 15;
         break;
         
@@ -326,6 +336,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
 int kill_dhcp_client(void)
 {
+  di_info("about to kill PID %d", dhcp_pid);
+
   if (dhcp_pid != -1)
   {
     int sig = SIGTERM;
@@ -337,6 +349,7 @@ int kill_dhcp_client(void)
       /* looks like it died */
       if (errno == ESRCH)
       {
+	dhcp_pid = -1;
         return 1;
       }
 
