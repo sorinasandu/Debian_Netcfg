@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-25 20:25+0200\n"
+"PO-Revision-Date: 2004-08-15 22:01+0200\n"
 "Last-Translator: Per Olofsson <pelle@dsv.su.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -232,15 +232,14 @@ msgstr "\"${hostname}\" är ett ogiltigt namn."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Ett giltigt värdnamn får endast innehålla alfanumeriska tecken samt "
-"minustecken. Det måste vara mellan 2 och 63 tecken långt och får inte börja "
-"eller sluta med ett minustecken."
+"Ett giltigt värdnamn får endast innehålla siffrorna 0-9, de små bokstäverna "
+"a-z och minustecknet. Det måste vara mellan 2 och 63 tecken långt och får "
+"inte börja eller sluta med ett minustecken."
 
 #. Type: error
 #. Description
@@ -288,9 +287,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Konfigurera nätverket"
+msgstr "Fortsätt utan att konfigurera nätverket?"
 
 #. Type: boolean
 #. Description
@@ -302,6 +300,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} verkar inte vara kopplat till ett nätverk. Det här kan bero på att "
+"en nätverkskabel saknas eller på att nätverksadaptern inte fungerar. Du kan "
+"antingen skjuta upp nätverkskonfigurationen tills du startat om till Debian "
+"och använda etherconf-verktyget, eller konfigurera nätverket statiskt. Du "
+"kan också gå tillbaka och välja ett annat nätverksgränsnitt."
 
 #. Type: select
 #. Choices
@@ -549,7 +552,6 @@ msgstr "Metod för nätverkskonfigurering"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -560,7 +562,7 @@ msgstr ""
 "Här kan du välja att försöka konfigurera nätverket automatiskt med DHCP igen "
 "(vilket kanske fungerar om din DHCP-server tar lång tid på sig att svara), "
 "eller att konfigurera nätverket manuellt. Vissa DHCP-servrar kräver att ett "
-"DHCP-värdnamn skickas av klienten, i så fall kan du välja att försöka "
+"DHCP-värdnamn skickas av klienten, så du kan också välja att försöka "
 "konfigurera nätverket med DHCP och ett värdnamn som du anger."
 
 #. Type: note
