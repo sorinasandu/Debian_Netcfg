@@ -7,6 +7,7 @@ Build-Depends: debhelper (>= 4.1.13), dpkg-dev (>= 1.9.0), libdebconfclient0-dev
 Standards-Version: 3.6.1.0
 
 Package: netcfg
+XC-Package-Type: udeb
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
 Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection, libiw27-udeb
 Provides: configured-network
@@ -19,6 +20,7 @@ Description: Configure the network
  network settings will be copied to you newly installed system.
 
 Package: netcfg-dhcp
+XC-Package-Type: udeb
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
 Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb, ethernet-card-detection, libiw27-udeb
 Provides: configured-network
@@ -33,6 +35,7 @@ Description: Configure the network via DHCP
  is available.
 
 Package: netcfg-static
+XC-Package-Type: udeb
 Architecture: any
 Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection, libiw27-udeb
 Provides: configured-network

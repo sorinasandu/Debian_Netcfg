@@ -3,13 +3,7 @@
 # GNU copyright 1997 to 1999 by Joey Hess.
 
 PACKAGES=$(shell dh_listpackages)
-VERSION=$(shell dpkg-parsechangelog | grep ^Version: | cut -d ' ' -f 2)
-ARCH=$(shell dpkg --print-architecture)
-
 DHCP_PACKAGES=netcfg netcfg-dhcp
-
-# Udebs have no postrm file, don't make one
-export DH_OPTIONS=-n
 
 build: build-stamp
 build-stamp:
@@ -36,13 +30,11 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
+	dh_installdirs -A usr/lib/prebaseconfig.d etc/network
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
-		cp $(PACKAGE) debian/$(PACKAGE).postinst ; \
-		mkdir -p debian/$(PACKAGE)/etc/network ; \
-		mkdir -p debian/$(PACKAGE)/usr/lib/prebaseconfig.d ; \
-		install -m 755 prebaseconfig \
-		        debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; )
+	  cp $(PACKAGE) debian/$(PACKAGE).postinst; \
+	  cp prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
 		mkdir -p debian/$(PACKAGE)/usr/share/udhcpc ; \
@@ -77,15 +69,8 @@ binary-arch: build install
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
-	$(foreach PACKAGE, $(PACKAGES), \
-	( dpkg-gencontrol -Pdebian/$(PACKAGE) -isp -p$(PACKAGE) \
-	-Tdebian/$(PACKAGE).substvars \
-	-n$(PACKAGE)_$(VERSION)_$(ARCH).udeb ) ; )
-	$(foreach PACKAGE, $(PACKAGES), \
-	(cd debian ; \
-	dpkg-deb -b $(PACKAGE) ../../$(PACKAGE)_$(VERSION)_$(ARCH).udeb \
-	); )
-
+	dh_gencontrol
+	dh_builddeb
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install

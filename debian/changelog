@@ -1,3 +1,12 @@
+netcfg (0.62) UNRELEASED; urgency=low
+
+  * Joshua Kwan
+    - Switch to new debhelper udeb support.
+    - Stick /sbin back. It was module-init-tools' fault.
+    - Re-UTF8ize changelog.
+
+ -- Joshua Kwan <joshk@triplehelix.org>  Wed,  7 Apr 2004 09:51:59 -0700
+
 netcfg (0.61) unstable; urgency=high
 
   * Kenshi Muto
@@ -9,7 +18,7 @@ netcfg (0.61) unstable; urgency=high
     - German (de.po) by Alwin Meschede
     - Polish (pl.po) by Bartosz Fenski
     - Russian (ru.po) by Nikolai Prokoschenko
-    - Slovenian (sl.po) by Jure Čuhalev
+    - Slovenian (sl.po) by Jure Äuhalev
 
  -- Joey Hess <joeyh@debian.org>  Thu,  1 Apr 2004 20:26:33 -0500
 
@@ -21,8 +30,8 @@ netcfg (0.60) unstable; urgency=low
     - Indonesian (id.po) by Parlin Imanuel Toh
     - Korean (ko.po) by Changwoo Ryu
     - Albanian (sq.po) by Elian Myftiu
-    - Swedish (sv.po) by Andr� Dahlqvist
-    - Turkish (tr.po) by Osman Y�ksel
+    - Swedish (sv.po) by André Dahlqvist
+    - Turkish (tr.po) by Osman Yüksel
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
     - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
     - Traditional Chinese (zh_TW.po) by Tetralet
@@ -34,20 +43,20 @@ netcfg (0.59) unstable; urgency=low
   * Joey Hess
     - Fix endian problem in gateway calculation.
   * Updated translations: 
-    - Bosnian (bs.po) by Safir Šećerović
+    - Bosnian (bs.po) by Safir Å eÄeroviÄ
     - Catalan (ca.po) by Jordi Mallach
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
-    - Spanish (Castilian) (es.po) by Javier Fernandez-Sanguino Peña
+    - Spanish (Castilian) (es.po) by Javier Fernandez-Sanguino PeÃ±a
     - French (fr.po) by Philippe Batailler
-    - Hungarian (hu.po) by VERÓK István
+    - Hungarian (hu.po) by VERÃK IstvÃ¡n
     - Indonesian (id.po) by Parlin Imanuel Toh
     - Italian (it.po) by Giuseppe Sacco
     - Japanese (ja.po) by Kenshi Muto
-    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Lithuanian (lt.po) by KÄstutis BiliÅ«nas
     - Dutch (nl.po) by Bart Cornelis
     - Portuguese (pt.po) by Miguel Figueiredo
-    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Portuguese (Brazil) (pt_BR.po) by AndrÃ© LuÃ­s Lopes
     - Slovak (sk.po) by Peter KLFMANiK Mann
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
     - Albanian (sq.po) by Elian Myftiu
@@ -63,19 +72,19 @@ netcfg (0.58) unstable; urgency=low
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
     - French (fr.po) by Philippe Batailler
-    - Hungarian (hu.po) by VERÓK István
+    - Hungarian (hu.po) by VERÃK IstvÃ¡n
     - Italian (it.po) by Giuseppe Sacco
     - Japanese (ja.po) by Kenshi Muto
     - Korean (ko.po) by Changwoo Ryu
-    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Lithuanian (lt.po) by KÄstutis BiliÅ«nas
     - Dutch (nl.po) by Bart Cornelis
     - Polish (pl.po) by Bartosz Fenski
     - Portuguese (pt.po) by Miguel Figueiredo
-    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Portuguese (Brazil) (pt_BR.po) by AndrÃ© LuÃ­s Lopes
     - Slovak (sk.po) by Peter KLFMANiK Mann
     - Albanian (sq.po) by Elian Myftiu
-    - Swedish (sv.po) by André Dahlqvist
-    - Turkish (tr.po) by Osman Yüksel
+    - Swedish (sv.po) by AndrÃ© Dahlqvist
+    - Turkish (tr.po) by Osman YÃ¼ksel
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
 
  -- Joey Hess <joeyh@debian.org>  Mon, 22 Mar 2004 15:49:59 -0500
@@ -100,17 +109,17 @@ netcfg (0.57) unstable; urgency=low
   * Updated translations: 
     - Danish (da.po) by Claus Hindsgaul
     - French (fr.po) by Philippe Batailler
-    - Hungarian (hu.po) by VERÓK István
+    - Hungarian (hu.po) by VERÃK IstvÃ¡n
     - Japanese (ja.po) by Kenshi Muto
     - Korean (ko.po) by Changwoo Ryu
-    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Lithuanian (lt.po) by KÄstutis BiliÅ«nas
     - Dutch (nl.po) by Bart Cornelis
     - Polish (pl.po) by Bartosz Fenski
-    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Portuguese (Brazil) (pt_BR.po) by AndrÃ© LuÃ­s Lopes
     - Portuguese (pt.po) by Miguel Figueiredo
     - Albanian (sq.po) by Elian Myftiu
-    - Swedish (sv.po) by André Dahlqvist
-    - Turkish (tr.po) by Osman Yüksel
+    - Swedish (sv.po) by AndrÃ© Dahlqvist
+    - Turkish (tr.po) by Osman YÃ¼ksel
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 19 Mar 2004 18:30:38 -0800
@@ -131,7 +140,7 @@ netcfg (0.55) unstable; urgency=low
     - Only recalculate gateway if ipaddress or netmask is changed.
     - Never recalculate nameserver.
   * Translations:
-    - Kęstutis Biliūnas: Updated Lithuanian translation (lt.po)
+    - KÄstutis BiliÅ«nas: Updated Lithuanian translation (lt.po)
     - Jordi Mallach: Updated Catalan translation (ca.po)
     - Giuseppe Sacco: Updated italian translation (it.po)
     - Nikolai Prokoschenko: Russian updates (ru.po)
@@ -170,21 +179,21 @@ netcfg (0.51) unstable; urgency=low
     - Danish (da.po) by Claus Hindsgaul
     - German (de.po) by Alwin Meschede
     - Greek, Modern (1453-) (el.po) by Konstantinos Margaritis
-    - Spanish (Castilian) (es.po) by Javier Fernandez-Sanguino Peña
+    - Spanish (Castilian) (es.po) by Javier Fernandez-Sanguino PeÃ±a
     - Finnish (fi.po) by Tapio Lehtonen
     - French (fr.po) by Philippe Batailler
-    - Hungarian (hu.po) by VERÓK István
+    - Hungarian (hu.po) by VERÃK IstvÃ¡n
     - Italian (it.po) by Giuseppe Sacco
     - Japanese (ja.po) by Kenshi Muto
     - Korean (ko.po) by Changwoo Ryu
-    - Lithuanian (lt.po) by Kęstutis Biliūnas
+    - Lithuanian (lt.po) by KÄstutis BiliÅ«nas
     - Bokmal, Norwegian (nb.po) by Axel Bojer
     - Dutch (nl.po) by Bart Cornelis
-    - Norwegian Nynorsk (nn.po) by Håvard Korsvoll
+    - Norwegian Nynorsk (nn.po) by HÃ¥vard Korsvoll
     - Portuguese (pt.po) by Miguel Figueiredo
-    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Portuguese (Brazil) (pt_BR.po) by AndrÃ© LuÃ­s Lopes
     - Albanian (sq.po) by Elian Myftiu
-    - Swedish (sv.po) by André Dahlqvist
+    - Swedish (sv.po) by AndrÃ© Dahlqvist
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
     - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
 
@@ -195,8 +204,8 @@ netcfg (0.50) unstable; urgency=low
   * Joshua Kwan:
     - netcfg-{dhcp,static} Depends: libiw27-udeb.
   * Translations:
-    - Håvard Korsvoll
-      - Updated Norwegian, bokmål translation, (nb.po). From Axel Bojer
+    - HÃ¥vard Korsvoll
+      - Updated Norwegian, bokmÃ¥l translation, (nb.po). From Axel Bojer
 
  -- Joshua Kwan <joshk@triplehelix.org>  Tue,  2 Mar 2004 10:33:14 -0800
 
@@ -241,7 +250,7 @@ netcfg (0.48) unstable; urgency=low
       - Updated German translation (de.po)
     - Miroslav Kure
       - Updated Czech translation (cs.po)
-    - Håvard Korsvoll
+    - HÃ¥vard Korsvoll
       - Updated Norwegian nynorsk translation (nn.po)
     - Konstantinos Margaritis
       - Updated Greek translation (el.po)
@@ -269,9 +278,9 @@ netcfg (0.47) unstable; urgency=low
   * Translations :
     - Philippe Batailler
       - Updated French translation (fr.po)
-    - André Luís Lopes
+    - AndrÃ© LuÃ­s Lopes
       - Updated Brazilian Portuguese translation (pt_BR.po)
-    - Kęstutis Biliūnas
+    - KÄstutis BiliÅ«nas
       - Updated Lithuanian translation (lt.po)
     - KEnshi Muto
       - Updated Japanese translation (ja.po)
@@ -287,7 +296,7 @@ netcfg (0.47) unstable; urgency=low
       - Updated Ukrainian translation (uk.po)
     - Elian Myftiu
       - Updated Albanian translation (sq.po)
-    - Håvard Korsvoll
+    - HÃ¥vard Korsvoll
       - Updated Norwegian, nynorsk (nn.po) translation.
 
  -- Joey Hess <joeyh@debian.org>  Wed, 25 Feb 2004 00:44:43 -0500
@@ -316,7 +325,7 @@ netcfg (0.46) unstable; urgency=low
       - Updated Japanese translation (ja.po)
     - Eugeniy Meshcheryakov
       - Updated Ukrainian translation (uk.po)
-    - André Luís Lopes
+    - AndrÃ© LuÃ­s Lopes
       - Updated Brazilian Portuguese translation (pt_BR.po)
     - Jordi Mallach
       - Updated Catalan translation (ca.po)
@@ -332,7 +341,7 @@ netcfg (0.45) unstable; urgency=low
       This is to simplify the necessary progress templates.
     - Add a prebaseconfig progress template.
   * Translations :
-    - André Luís Lopes
+    - AndrÃ© LuÃ­s Lopes
       - Updated Brazilian Portuguese translations (pt_BR.po)
     - Kenshi Muto
       - Updated Japanese translation (ja.po)
@@ -342,7 +351,7 @@ netcfg (0.45) unstable; urgency=low
       - Updated Danish translation (da.po)
     - Eugeniy Meshcheryakov
       - Updated Ukrainian translation (uk.po)
-    - Kęstutis Biliūnas
+    - KÄstutis BiliÅ«nas
       - Updated Lithuanian translation (lt.po)
     - Carlos Z.F. Liu
       - Updated Simplified Chinese translation (zh_CN.po)
@@ -393,7 +402,7 @@ netcfg (0.42) unstable; urgency=low
     - Update Japanese translation (ja.po)
   * Bart Cornelis
     - Updated Dutch (nl.po) translation
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Updated Brazilian Portuguese (pt_BR) translation.
   * Konstantinos Margaritis
     - Updated Greek translation (el.po)
@@ -405,7 +414,7 @@ netcfg (0.42) unstable; urgency=low
     - Updated Czech translation
   * Peter Mann
     - Updated Slovak translation
-  * Teófilo Ruiz Suárez
+  * TeÃ³filo Ruiz SuÃ¡rez
     - Updated Spanish translation (po/es.po)
   * Nikolai Prokoschenko
     - updated russian translation (ru.po)
@@ -415,7 +424,7 @@ netcfg (0.42) unstable; urgency=low
     - Updated Danish translation.
   * Alwin Meschede
     - Updated German translation (de.po)
-  * Kęstutis Biliūnas
+  * KÄstutis BiliÅ«nas
     - Updated Lithuanian translation (lt.po).
   * Ming Hua
     - Updated Simplified Chinese translation (zh_CN.po)
@@ -477,7 +486,7 @@ netcfg (0.38) unstable; urgency=low
 
   * Peter Mann
     - Initial Slovak translation
-  * André Dahlqvist
+  * AndrÃ© Dahlqvist
     - Added Swedish translation
   * Giuseppe Sacco
     - Updated italian translation
@@ -513,7 +522,7 @@ netcfg (0.36) unstable; urgency=low
     - Fix function prototypes. Improve Makefile.
   * Ognyan Kulev
     - Added/updated bulgarian translation (bg.po).
-  * Kęstutis Biliūnas
+  * KÄstutis BiliÅ«nas
     - Updated Lithuanian translation (lt.po).
   * Petter Reinholdtsen
     - Update Norwegian Nynorsk (nn.po), thanks to Gaute Hvoslef Kvalnes.
@@ -521,7 +530,7 @@ netcfg (0.36) unstable; urgency=low
     - Updated Dutch translation (nl.po)
   * Daniel Costa
     - Updated Portuguese translation (pt.po)
-  * Teófilo Ruiz Suárez
+  * TeÃ³filo Ruiz SuÃ¡rez
     - (Very) updated Spanish translation (es.po)
     - Switched to UTF-8
 
@@ -529,9 +538,9 @@ netcfg (0.36) unstable; urgency=low
 
 netcfg (0.35) unstable; urgency=low
 
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Update pt_BR (Brazilian Portuguese) translation.
-  * Kęstutis Biliūnas
+  * KÄstutis BiliÅ«nas
     - Updated Lithuanian translation
   * Christian Perrier
     - Debconf templates polishing (Closes: #223762)
@@ -564,7 +573,7 @@ netcfg (0.34) unstable; urgency=low
 
   * Kenshi Muto
     - Update Japanese translation (ja.po)
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Update pt_BR (Brazilian Portuguese) translation.
   * Verok Istvan
     - Initial Hungarian translation
@@ -583,7 +592,7 @@ netcfg (0.34) unstable; urgency=low
 
 netcfg (0.33) unstable; urgency=low
 
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Update pt_BR (Brazilian Portuguese) translation.
   * Miroslav Kure
     - Update Czech translation.
@@ -598,7 +607,7 @@ netcfg (0.33) unstable; urgency=low
   * Axel Noetzold
     - Remove spurious space from the netcfg/no_interfaces template.
       Closes: #221203
-  * Safir Šećerović
+  * Safir Å eÄeroviÄ
     - Update Bosnian translation (bs.po)
   * Bastian Blank
     - remove dependency against different dhcp clients.
@@ -678,7 +687,7 @@ netcfg (0.29) unstable; urgency=low
      - Update French translation.
   * Christian Perrier
      - Fix Turkish PO file (closes: #219396).
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
      - Update pt_BR (Brazilian Portuguese) translation.
   * Miroslav Kure
      - Update Czech translation.
@@ -689,7 +698,7 @@ netcfg (0.29) unstable; urgency=low
 
 netcfg (0.28) unstable; urgency=low
 
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Updated pt_BR (Brazilian Portuguese) translation.
   * Kenshi Muto
     - Update Japanese translation (ja.po)
@@ -742,9 +751,9 @@ netcfg (0.25) unstable; urgency=low
     - remove unnecessary menutest scripts
     - Move changelog to UTF-8
     - Moved to Standards-Version: 3.6.1
-  * ANdré Luís Lopes
+  * ANdrÃ© LuÃ­s Lopes
     - Update Brazilian Portuguese (pt_BR) debconf template translations.
-  * Martin Sjögren
+  * Martin SjÃ¶gren
     - Fix hostname corruption bug.
     - Remove empty netcfg-ppp package.
     - Use SETTITLE instead of TITLE for i18n reasons.
@@ -793,17 +802,17 @@ netcfg (0.24) unstable; urgency=low
 netcfg (0.23) unstable; urgency=low
 
   * Petter Reinholdtsen
-    - Updated nb.po recieved from Bjørn Steensrud.
+    - Updated nb.po recieved from BjÃ¸rn Steensrud.
     - Added Norwegian Nynorsk (nn.po) translations recieved from
       Gaute Hvoslef Kvalnes.
-  * André Luís Lopes
+  * AndrÃ© LuÃ­s Lopes
     - Update Brazilian Portuguese (pt_BR) template translations.
   * Alastair McKinstry
     - netcfg.c: Add additional interfaces that we may use
   * Bastian Blank
     - add udhcpc script to support busybox-cvs
     - don't build netcfg-dhcp for s390
-  * Javier Fernández-Sanguino
+  * Javier FernÃ¡ndez-Sanguino
     - Translated to Spanish the template
 
  -- Bastian Blank <waldi@debian.org>  Sun, 04 May 2003 14:49:29 +0200
@@ -818,14 +827,14 @@ netcfg (0.22) unstable; urgency=low
   * Matt Kraai
     - Copy configuration to /target and make it work (closes: #177666)
   * Petter Reinholdtsen
-    - Added Norwegian Bokmål (nb.po) translations recieved from
-      Bjørn Steensrud.
+    - Added Norwegian BokmÃ¥l (nb.po) translations recieved from
+      BjÃ¸rn Steensrud.
 
  -- Matt Kraai <kraai@debian.org>  Mon, 03 Feb 2003 20:28:31 -0800
 
 netcfg (0.21) unstable; urgency=low
 
-  * Martin Sjögren
+  * Martin SjÃ¶gren
     - Added sv.po (thanks to David Weinehall)
     - Use libdebian-installer3
   * Denis Barbier
@@ -844,10 +853,10 @@ netcfg (0.20) unstable; urgency=low
 
 netcfg (0.19) unstable; urgency=low
 
-  * Martin Sjögren
+  * Martin SjÃ¶gren
     - Replace XBC with XB so our special control fields don't confuse the
       changes files.
-  * André Lusí Lopes
+  * AndrÃ© LusÃ­ Lopes
     - Set pt_BR.po control fields.
     - Update pt_BR translation.
   * Tollef Fog Heen:
