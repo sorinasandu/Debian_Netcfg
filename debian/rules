@@ -37,8 +37,6 @@ install: build
 	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ;)
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
-		mkdir -p debian/$(PACKAGE)/usr/share/udhcpc ; \
-		install -m755 udhcpc.default.script debian/$(PACKAGE)/usr/share/udhcpc/default.script ; \
 		mkdir -p debian/$(PACKAGE)/etc/dhcp ; \
 		mkdir -p debian/$(PACKAGE)/var/dhcp ; )
 

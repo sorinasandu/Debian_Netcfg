@@ -521,7 +521,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         if (ipaddress.s_addr) {
-            fprintf(fp, "127.0.0.1\tlocalhost\n");
+            fprintf(fp, "127.0.0.1\t%s\tlocalhost\n", hostname);
             if (domain && !empty_str(domain))
                 fprintf(fp, "%s\t%s.%s\t%s\n",
                         inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), hostname,
@@ -650,7 +650,8 @@ int netcfg_get_gateway(struct debconfclient *client)
 
       if (empty_str(ptr)) /* No gateway, that's fine */
       {
-	memset(&gateway, 0, sizeof(struct in_addr)); /* clear existing gateway setting */
+	/* clear existing gateway setting */
+	memset(&gateway, 0, sizeof(struct in_addr));
 	return 0;
       }
 
@@ -751,10 +752,7 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
 	{
 	  fprintf(fp, "\twireless_mode %s\n",
 	      (mode == MANAGED) ? "managed" : "ad-hoc");
-	  if (essid != NULL)
-	    fprintf(fp, "\twireless_essid %s\n", essid);
-	  else /* Some cards need an explicit set to 'any' */
-	    fprintf(fp, "\twireless_essid any\n");
+	  fprintf(fp, "\twireless_essid %s\n", essid ? essid : "any");
 
 	  if (wepkey != NULL)
 	    fprintf(fp, "\twireless_key %s\n", wepkey);
@@ -1043,10 +1041,11 @@ static void netcfg_write_dhcp(char *iface, char *host)
             fprintf(fp, "\thostname %s\n", host);
 	if (is_wireless_iface(iface))
 	{
-	  if (essid)
-	    fprintf(fp, "\twireless_essid %s", essid);
+	  fprintf(fp, "\twireless_mode %s\n",
+	      (mode == MANAGED) ? "managed" : "adhoc");
+	  fprintf(fp, "\twireless_essid %s\n", essid ? essid : "any");
 	  if (wepkey)
-	    fprintf(fp, "\twireless_key %s", wepkey);
+	    fprintf(fp, "\twireless_key %s\n", wepkey);
 	}
         fclose(fp);
     }
@@ -1229,8 +1228,9 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
     return GO_BACK;
 
   debconf_get(client, "netcfg/wireless_essid");
-  tf = client->value;
+  tf = strdup(client->value);
 
+automatic:
   /* question not asked or user doesn't care or we're successfully associated */
   if (!empty_str(wconf.essid) || empty_str(client->value)) 
   {
@@ -1245,10 +1245,8 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
 
     iw_set_basic_config (wfd, iface, &wconf);
 
-    di_debug("Begin wait for association");
-
     /* Wait for association.. (MAX_SECS seconds)*/
-#define MAX_SECS 5
+#define MAX_SECS 3
 
     debconf_progress_start(client, 0, MAX_SECS, "netcfg/wifi_progress_title");
     debconf_progress_info(client, "netcfg/wifi_progress_info");
@@ -1265,7 +1263,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
       if (!empty_str(wconf.essid))
       {
 	/* Done! */
-	di_log(DI_LOG_LEVEL_DEBUG, "associated with AP '%s'", wconf.essid);
+	di_log(DI_LOG_LEVEL_DEBUG, "Associated with AP '%s'", wconf.essid);
 	/* Save for later */
 	debconf_set(client, "netcfg/wireless_essid", wconf.essid);
 	debconf_progress_set(client, MAX_SECS);
@@ -1291,16 +1289,27 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
     user_essid = tf;
 
+  di_debug("user_essid seems to be '%s' right now", user_essid);
+
   while (!user_essid || empty_str(user_essid) ||
       strlen(user_essid) > IW_ESSID_MAX_SIZE)
   {
-    debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
-    debconf_input(client, "high", "netcfg/invalid_essid");
-    debconf_go(client);
+    /* Misnomer of a check. Basically, if we went through autodetection,
+     * we want to enter this loop, but we want to suppress anything that
+     * relied on the checking of tf/user_essid (i.e. "", in most cases.) */
+    if (!couldnt_associate)
+    {
+      debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
+      debconf_input(client, "high", "netcfg/invalid_essid");
+      debconf_go(client);
+    }
 
     ret = debconf_input(client,
 	couldnt_associate ? "critical" : "low",
 	"netcfg/wireless_essid");
+   
+    /* But now we'd not like to suppress any MORE errors */
+    couldnt_associate = 0;
     
     /* we asked the question once, why can't we ask it again? */
     assert (ret != 30);
@@ -1309,11 +1318,16 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
       return GO_BACK;
 
     debconf_get(client, "netcfg/wireless_essid");
-    di_debug("looks like our essid is '%s'", client->value);
-    user_essid = client->value;
+
+    if (empty_str(client->value))
+      goto automatic;
+
+    di_debug("Looks like our essid is '%s'", client->value);
+    free(user_essid);
+    user_essid = strdup(client->value);
   }
 
-  essid = strdup (user_essid);
+  essid = user_essid;
 
   memset(ptr, 0, IW_ESSID_MAX_SIZE + 1);
   snprintf(wconf.essid, IW_ESSID_MAX_SIZE + 1, "%s", essid);
