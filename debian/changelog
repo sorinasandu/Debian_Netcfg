@@ -1,3 +1,11 @@
+netcfg (0.17) unstable; urgency=low
+
+  * added libdebian-installer2-dev to Build-Depends, because it is needed by
+    other packages and it conflicts with libdebian-installer1-dev which was at
+    Build-Depends before.
+
+ -- Jonas Meurer <mejo@debian.org>  Wed, 30 Oct 2002 21:19:24 +0100
+
 netcfg (0.16) unstable; urgency=low
 
   * Build-dep on libdebian-installer1-dev, not libdebian-installer-dev.
