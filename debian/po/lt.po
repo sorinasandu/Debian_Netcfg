@@ -6,13 +6,13 @@
 # Lithuanian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004.
+# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: lt\n"
+"Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2004-11-24 00:33-0700\n"
-"PO-Revision-Date: 2004-12-03 23:28+0200\n"
+"PO-Revision-Date: 2005-01-16 00:59+0200\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -79,10 +79,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Vardų serveriai naudojami kompiuterių vardų tinkle ieškojimui. Prašau įvesti "
+"Vardų serveriai naudojami kompiuterių vardams tinkle ieškojimui. Įveskite "
 "iki 3-jų serverių IP adresus (ne kompiuterių vardus), atskirdami tarpais. "
-"Nenaudokite kablelių. Pirmasis serveris sąraše bus apklausiamas pirmuoju. "
-"Jei Jūs nenorite naudoti jokio serverio, tai palikite šį lauką tuščią."
+"Nenaudokite kablelių. Pirmasis sąraše esantis serveris bus apklausiamas "
+"pirmasis. Jei nenorite naudoti jokio serverio, palikite šį lauką tuščią."
 
 #. Type: select
 #. Description
@@ -98,9 +98,9 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Jūsų sistemoje yra kelios tinklo sąsajos. Pasirinkite vieną iš jų, kuri bus "
-"naudojama kaip pagrindinė Debian'o diegimo metu. Jei įmanoma, pirmoji rasta "
-"prie tinklo prijungta sąsaja yra pasirinkta."
+"Jūsų sistemoje yra kelios tinklo sąsajos. Pasirinkite tą iš jų, kuri bus "
+"pagrindinė Debian'o įdiegimo metu. Jei bus įmanoma, pirmoji rasta prie "
+"tinklo prijungta sąsaja bus pasirinkta."
 
 #. Type: string
 #. Description
@@ -116,9 +116,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} yra bevielio tinklo sąsaja. Prašau įvesti bevielio tinklo vardą "
-"(ESSID), kurį norite, kad ${iface} naudotų. Jei Jūs norite, kad būtų "
-"naudojamas bet kuris pasiekiamas tinklas, palikite šia lauką tuščią."
+"${iface} yra bevielio tinklo sąsaja. Įveskite bevielio tinklo vardą (ESSID), "
+"kurį naudotų ${iface}. Jei norite, kad būtų naudojamas bet kuris pasiekiamas "
+"tinklas, palikite šia lauką tuščią."
 
 #. Type: string
 #. Description
@@ -144,8 +144,8 @@ msgid ""
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
 "Jei Jūsų WEP rakto formatas yra 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
-"ar 'nnnnnnnn', kur n yra skaitmuo, tik įveskite jį tokį, koks jis yra, į šį "
-"lauką."
+"ar 'nnnnnnnn', kur n yra skaitmuo, tiesiog įveskite jį tokį, koks jis yra, į "
+"šį lauką."
 
 #. Type: string
 #. Description
@@ -164,7 +164,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Žinoma, jei nėra WEP rakto jūsų bevieliam tinklui, palikite šį lauką tuščią."
+"Žinoma, jei Jūsų bevieliam tinklui nėra WEP rakto , palikite šį lauką tuščią."
 
 #. Type: error
 #. Description
@@ -179,8 +179,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP raktas '${wepkey}' netinkamas. Prašau įdėmiai pažiūrėkite nurodymus "
-"sekančiame ekrane, apie tai kaip teisingai įvesti WEP raktą, ir pabandykite "
+"WEP raktas '${wepkey}' netinkamas. Įdėmiai peržiūrėkite tolesniame ekrane "
+"esančius nurodymus apie tai, kaip teisingai įvesti WEP raktą, ir bandykite "
 "dar kartą."
 
 #. Type: error
@@ -220,10 +220,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Kompiuterio vardas - tai vienas žodis, kuris identifikuoja Jūsų kompiuterį "
-"tinkle. Jei nežinote, koks Jūsų kompiuterio vardas turėtų būti, pasitarkite "
-"su Jūsų tinklo administratoriumi. Jei Jūs įrenginėjate savo nuosavą namų "
-"tinklą, įveskite ką nors pagal savo skonį."
+"Kompiuterio vardas - tai žodis, identifikuojantis Jūsų kompiuterį tinkle. "
+"Jei nežinote, koks turėtų būti Jūsų kompiuterio vardas, pasitarkite su Jūsų "
+"tinklo administratoriumi. Jei įrengiate savo namų tinklą, įveskite ką nors "
+"pagal savo skonį."
 
 #. Type: error
 #. Description
