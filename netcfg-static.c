@@ -119,7 +119,7 @@ netcfg_write_static ()
       fprintf (fp, "\tnetwork %s\n", num2dot (network));
       fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
       if (gateway)
-	  fprintf (fp, "\tgateway %s\n", num2dot (gateway));
+	fprintf (fp, "\tgateway %s\n", num2dot (gateway));
       fclose (fp);
     }
   else
@@ -136,37 +136,47 @@ netcfg_activate_static ()
   int rv = 0;
   char *ptr;
   char buf[128];
-  execlog ("/sbin/ifconfig lo 127.0.0.1");
-
+#ifdef __GNU__
+/* I had to do something like this ? */
+/*  execlog ("settrans /servers/socket/2 -fg");  */
+  execlog ("settrans /servers/socket/2 --goaway");
   ptr = buf;
   ptr +=
-    snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", interface,
-	      num2dot (ipaddress));
-  ptr +=
-    snprintf (ptr, sizeof (buf) - (ptr - buf), " netmask %s",
-	      num2dot (netmask));
-  ptr +=
-    snprintf (ptr, sizeof (buf) - (ptr - buf), " broadcast %s",
-	      num2dot (broadcast));
+    snprintf (buf, sizeof (buf),
+	      "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s --netmask=%s",
+	      interface, num2dot (ipaddress), num2dot (netmask));
+
+  if (gateway)
+    ptr +=
+      snprintf (ptr, sizeof (buf) - (ptr - buf), " --gateway=%s",
+		num2dot (gateway));
+
+  rv |= execlog (buf);
+
+#else
+  execlog ("/sbin/ifconfig lo 127.0.0.1");
+
+  snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s netmask %s broadcast %s",
+	    interface, num2dot (ipaddress), num2dot (netmask),
+	    num2dot (broadcast));
 
   rv |= execlog (buf);
 
   if (gateway)
-  {
+    {
       ptr = buf;
       ptr +=
-	  snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
-	      num2dot (gateway));
+	snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
+		  num2dot (gateway));
       rv |= execlog (buf);
-  }
+    }
+#endif
 
   if (rv != 0)
-  {
-      client->command (client, "input", 
-	      "critical", "netcfg/error_cfg", NULL);
+    {
+      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
       client->command (client, "go", NULL);
-  }
-
+    }
   return 0;
 }
 
