@@ -4,10 +4,10 @@
 # First translator: Stefano Melchior <stefano.melchior@openlabs.it>, 2003.
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg 0.64\n"
+"Project-Id-Version: netcfg 0.72\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-05-15 23:03+0200\n"
+"PO-Revision-Date: 2004-07-20 22:56+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -336,7 +336,7 @@ msgstr "Ethernet wireless (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "wireless"
 
 #. Type: text
 #. Description
@@ -531,25 +531,17 @@ msgstr "Metodo di configurazione della rete:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr ""
-"La configurazione automatica della rete è fallita. Questo potrebbe essere "
-"dovuto ad un server DHCP lento, quindi si potrebbe voler riprovare. Se la "
-"propria rete non usa DHCP per la configurazione automatica si può procedere "
-"con la configurazione manuale. Inoltre, alcuni server DHCP richiedono uno "
-"specifico nome di host, quindi si può decidere di inserire questo nome prima "
-"di riprovare DHCP."
+msgstr "Adesso è possibile ritentare la configurazione automatica della rete (che potrebbe funzionare se il server DHCP impiegasse molto tempo a rispondere) o proseguire con la configurazione manuale. Alcuni server DHCP richiedono che uno hostname sia inviato dal client, quindi è anche possibile ritentare la configurazione automatica tramite DHCP specificando questo nome."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
 msgstr "La configurazione automatica della rete ha funzionato"
 
@@ -559,13 +551,13 @@ msgstr "La configurazione automatica della rete ha funzionato"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "La rete potrebbe essere priva di un server DHCP o, in alternativa, il server potrebbe essere molto lento o uno dei componenti hardware di rete potrebbe essere guasto."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Proseguire senza specificare una \"route\" predefinita?"
 
 #. Type: boolean
 #. Description
@@ -576,7 +568,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
+msgstr "La configurazione automatica della rete ha funzionato, ma non è stata specificata una \"route\" predefinita: il sistema non sa come comunicare con host in Internet. Questo rende impossibile proseguire l'installazione a meno che non si abbia un CD-ROM ufficiale, un CD-ROM \"NetInst\" o i pacchetti disponibili sulla rete locale."
 
 #. Type: boolean
 #. Description
@@ -584,7 +576,7 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "Nel dubbio è meglio non continuare senza una \"route\" predefinita: contattare l'amministratore locale della rete per chiarire il problema."
 
 #. Type: text
 #. Description
@@ -751,19 +743,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Configura la rete usando indirizzi statici"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Configurazione dinamica della rete (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " interfaccia    = ${interface}\n"
-#~ " nome host      = ${hostname}\n"
-#~ " dominio        = ${domain}\n"
-#~ " hostname DHCP  = ${dhcp_hostname}\n"
-#~ " server DNS     = ${nameservers}"
