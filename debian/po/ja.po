@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-10 15:18+0900\n"
+"PO-Revision-Date: 2004-04-12 18:13+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -73,18 +73,13 @@ msgstr "ネームサーバアドレス:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first nameserver in the list "
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
-msgstr ""
-"3 つまでのネームサーバをスペースで区切って IP アドレス (ホスト名ではありませ"
-"ん) で入力してください。コンマは使えません。リストの最初のサーバが最初に問い"
-"合わせが行われます。ネームサーバを使わないのであれば、このフィールドは単に空"
-"のままにしておきます。"
+msgstr "インターネットホスト名を探すのに使うネームサーバをここに指定してください。3 つまでのネームサーバをスペースで区切って IP アドレス (ホスト名ではありません) で入力してください。コンマは使えません。リストの最初のサーバが最初に問い合わせが行われます。ネームサーバを使わないのであれば、このフィールドは単に空のままにしておきます。"
 
 #. Type: select
 #. Description
@@ -702,6 +697,3 @@ msgstr "静的ネットワークの設定"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "静的アドレスを使ってネットワークを設定"
-
-#~ msgid "Network Configuration"
-#~ msgstr "ネットワークの設定"
