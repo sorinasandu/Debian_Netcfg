@@ -110,14 +110,13 @@ msgstr "${iface} 的无线 ESSID："
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称"
-"(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
+"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称(ESSID)"
+"。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: string
 #. Description
@@ -137,7 +136,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -148,7 +146,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -158,7 +155,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -525,9 +521,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP 地址："
+msgstr "格式错误的 IP 地址"
 
 #. Type: error
 #. Description
@@ -536,6 +531,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"您所提供的 IP 地址的格式错误。它的格式应该是 x.x.x.x，其中的“x”不大于 255。请"
+"重试。"
 
 #. Type: string
 #. Description
