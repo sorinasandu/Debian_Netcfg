@@ -3,12 +3,12 @@ Type: select
 Default: Dynamic addressing (DHCP)
 _Choices: Dynamic addressing (DHCP), Static addressing (manual)
 _Description: Network configuration method:
- Networking can either be configure by DHCP or by manually
+ Networking can either be configured by DHCP or by manually
  entering all the information. If you choose DHCP and
- debian-installer is unable to get a working configuration
- from a DHCP Server on you network you will be offered to configure
- your network manually after the atempt to configure it by DHCP. If
- unsure choose DHCP.
+ the installer is unable to get a working configuration
+ from a DHCP Server on your network, you will be given the
+ opportunity to configure your network manually after the atempt
+ to configure it by DHCP. If unsure choose DHCP.
 
 Template: netcfg/get_domain
 Type: string
@@ -20,7 +20,7 @@ _Description: Domain name:
 
 Template: netcfg/get_nameservers
 Type: string
-_Description: Name servers addresses:
+_Description: Name server addresses:
  Please enter the IP addresses (not host names) of up to 3 name servers,
  separated by spaces. Do not use commas. The first server in the list will
  be the first to be queried. If you don't want to use any name server,
@@ -48,7 +48,7 @@ _Description: Hostname:
  .
  The hostname is a single word that identifies your system to the network. 
  If you don't know what your hostname should be, consult your network
- administrator.  If you are setting up your own home network, you can make
+ administrator. If you are setting up your own home network, you can make
  something up here.
 
 Template: netcfg/invalid_hostname
