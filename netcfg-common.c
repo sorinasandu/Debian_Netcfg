@@ -595,7 +595,7 @@ int netcfg_get_netmask(struct debconfclient *client)
 
       /* Preseed gateway */
       gateway.s_addr = ipaddress.s_addr & netmask.s_addr;
-      gateway.s_addr++;
+      gateway.s_addr |= htonl(1);
     }
 
     inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
