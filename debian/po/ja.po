@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-13 10:22-0300\n"
-"PO-Revision-Date: 2004-05-13 15:23+0900\n"
+"PO-Revision-Date: 2004-05-14 13:05+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -497,9 +497,8 @@ msgstr "これはしばらくかかります。"
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "ネットワークの自動設定を再試行"
+msgstr "ネットワークの自動設定に成功しました!"
 
 #. Type: error
 #. Description
@@ -543,7 +542,7 @@ msgstr "ネットワークを手動で設定"
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
@@ -554,33 +553,25 @@ msgstr "今ネットワークを設定しない"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "次のネットワークの設定手順"
+msgstr "ネットワークの設定方法:"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
-"ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが"
-"遅いためであることがほとんどです。そのため、おそらく再試行したいと思うでしょ"
-"う。必要であると思うなら、サーバに送る DHCP ホスト名を指定することもできま"
-"す。さらに、ネットワークを手動で設定するか、現時点ではネットワークを設定しな"
-"いことを選ぶこともできます。"
+msgstr "ネットワークの自動設定に失敗しました。これは、ネットワーク上の DHCP サーバが遅いためであることがほとんどなので、おそらく再試行したいと思うでしょう。あなたのネットワークが自動設定に DHCP を使っていないのであれば、代わりに手動で設定できます。また、いくつかの DHCP サーバは特定の DHCP ホスト名を必要とするので、DHCP を再試行する前にそのようなホスト名を入力することも選択できます。"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "ネットワークの設定"
+msgstr "無線ネットワークの再設定"
 
 #. Type: text
 #. Description
