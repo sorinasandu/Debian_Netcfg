@@ -1,3 +1,4 @@
+# translation of fi.po to Finnish
 # Translators, if you are not familiar with the PO format, gettext
 # documentation is worth reading, especially sections dedicated to
 # this format, e.g. by running:
@@ -8,19 +9,21 @@
 # or http://www.debian.org/intl/l10n/po-debconf/README-trans
 # Developers do not need to manually edit POT or PO files.
 # Tommi Vainikainen <thv+debian@iki.fi>, 2003.
-# 
-# 
+# Tapio Lehtonen <tale@debian.org>, 2004.
+#
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-01-08 09:23+0100\n"
-"PO-Revision-Date: 2003-12-26 17:01+0200\n"
+"PO-Revision-Date: 2004-01-08 11:50+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #. Type: select
 #. Choices
@@ -91,9 +94,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "Verkkoliitäntöjä ei havaittu"
+msgstr "Ensisijainen verkkoliitäntä:"
 
 #. Type: select
 #. Description
@@ -102,6 +104,8 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
+"Järjestelmässä on useita verkkoliitäntöjä. Valitse mitä niistä käytetään "
+"ensisijaisena verkkoliitäntänä Debiania asennettaessa."
 
 #. Type: error
 #. Description
@@ -381,8 +385,7 @@ msgstr "DHCP-asiakasohjelmaa ei löytynyt"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
+msgstr "DHCP-asiakasohjelmaa ei löydy. Tämä paketti vaatii pump:n tai dhcp-client:n."
 
 #. Type: error
 #. Description
@@ -514,8 +517,7 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
 "yhdyskäytävän."
@@ -566,3 +568,4 @@ msgstr "Tee verkkoasetukset itse"
 #~ "Valitse verkkoliitäntä jolle haluat tehdä asetukset. Seuraavat sovittimet "
 #~ "havaittiin. Valitse ensisijaisen verkkosovittimesi tyyppi eli se, jota "
 #~ "tarvitset Debian-järjestelmän asentamiseen (NFS:n tai HTTP:n kautta)."
+
