@@ -1,17 +1,15 @@
-# translation of sl.po to Slovenian
 # Slovenian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jure Čuhalev <gandalf@owca.info>, 2003.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
+"POT-Creation-Date: 2004-08-26 03:36+0200\n"
 "PO-Revision-Date: 2004-05-23 12:50+0100\n"
-"Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"Last-Translator:  Matjaz Horvat <matjaz@owca.info>\n"
+"Language-Team:  LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,16 +77,12 @@ msgstr ""
 "z njimi posvetoval v vrstnem po redu po katerem ste jih vnesli. Če imenskih "
 "strežnikov ne želite uporabljati, to polje pustite prazno."
 
-#  Type: select
-#  Description
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
 msgstr "Primarni mrežni vmesnik:"
 
-#  Type: select
-#  Description
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
@@ -99,16 +93,12 @@ msgstr ""
 "Vaš sistem ima več mrežnih naprav. Izberite napravo, ki jo želite uporabiti "
 "kot primarno mrežno napravo med namestitvijo Debiana."
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Brezžični ESSID za ${iface}:"
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
@@ -121,18 +111,12 @@ msgstr ""
 "omrežja za katerega želite, da ga ${iface} uporablja. Če želite uporabiti "
 "katerokoli omrežje, ki je na voljo, pustite to polje prazno."
 
-#  Type: string
-#  Description
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP ključ za brezžično napravo ${iface}:"
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
@@ -143,8 +127,6 @@ msgstr ""
 "Če je potrebno, vnesite varnostni ključ WEP za brezžično napravo ${iface}. "
 "To lahko storite na dva načina:"
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
@@ -155,8 +137,6 @@ msgstr ""
 "Če je vaš WEP ključ v obliki 'nnnn-nnnn-nn' ali 'nnnnnnnn', kjer je n "
 "številka, ga vnesite v to polje."
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
@@ -167,8 +147,6 @@ msgstr ""
 "Če je vaš WEP ključ v obliki gesla pred njega vstavite 's:' (brez "
 "narekovajev)."
 
-#  Type: string
-#  Description
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
@@ -179,16 +157,12 @@ msgstr ""
 "Seveda, če ne potrebujete WEP ključa za vaše omrežje, pustite to polje "
 "prazno."
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
 msgstr "Nepravilen WEP ključ"
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
@@ -199,16 +173,12 @@ msgstr ""
 "WEP kluč '${wepkey}' ni pravilen. Pozorno sledite navodilom na naslednjem "
 "zaslonu kako pravilno vnesti WEP ključ in poskusite ponovno."
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
 msgid "Invalid ESSID"
 msgstr "Nepravilen ESSID"
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:67
@@ -374,8 +344,6 @@ msgstr "Iščem brezžične dostopne točke ..."
 msgid "<none>"
 msgstr "<nobeden>"
 
-#  Type: text
-#  Description
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:145
@@ -466,9 +434,6 @@ msgstr "Inter-user communication vehicle"
 msgid "Unknown interface"
 msgstr "Neznani vmesniki"
 
-#  Type: text
-#  Description
-#  Prebaseconfig progress bar item
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
@@ -666,16 +631,12 @@ msgstr ""
 "ločene s pikami.  Če ne veste kaj morate uporabiti, se posvetujte z vašim "
 "skrbnikom omrežja."
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
 msgstr "IP naslov ni pravilne oblike"
 
-#  Type: error
-#  Description
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
@@ -779,8 +740,6 @@ msgstr "Ali so te informacije pravilne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutne nastavitve omrežja:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -803,10 +762,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavi omrežje z uporabo statičnega naslavljanja"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Nastavi omrežje"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dinamična nastavitev omrežja (DHCP)"
