@@ -1,8 +1,11 @@
 netcfg (0.11) unstable; urgency=low
 
   * use new dpkg features so build is less cludgy 
+  * dhcp and static templates thanks to 
+    ilgiz kalmetev <i.kalmetev@bis.bashtelecom.ru>
+    (closes: #114843, #114844, #114845)
 
- -- David Whedon <dwhedon@debian.org>  Mon,  7 May 2001 23:31:11 -0700
+ -- David Kimdon <dwhedon@debian.org>  Mon,  7 May 2001 23:31:11 -0700
 
 netcfg (0.10) unstable; urgency=low
 
@@ -31,7 +34,8 @@ netcfg (0.07) unstable; urgency=low
 
 netcfg (0.06) unstable; urgency=low
 
-  * added German translations from Michael Bramer <grisu@debian.org> (Closes: #83153, #83159)
+  * added German translations from Michael Bramer <grisu@debian.org> 
+    (Closes: #83153, #83159)
   * automatically choose between dhcp-client or pump
 
  -- David Whedon <dwhedon@debian.org>  Tue, 23 Jan 2001 20:20:00 -0800

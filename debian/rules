@@ -18,7 +18,6 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
-	
 
 	touch configure-stamp
 
@@ -47,9 +46,6 @@ install: build
 	dh_clean -k
 	cp netcfg-dhcp debian/netcfg-dhcp.postinst
 	cp netcfg-static debian/netcfg-static.postinst
-# if you ever decide to make the netcfg-common package, uncomment these to install it
-#	mkdir -p `pwd`/debian/netcfg-common/usr/lib/
-#	cp libnetcfg.so.0.1.0 `pwd`/debian/netcfg-common/usr/lib/
 	mkdir -p debian/netcfg-dhcp/etc/dhcp debian/netcfg-dhcp/var/dhcp
 	mkdir -p debian/netcfg-static/etc/network
 
@@ -62,8 +58,10 @@ binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installdebconf
-	cat debian/netcfg-common.templates >> debian/netcfg-static/DEBIAN/templates	
-	cat debian/netcfg-common.templates >> debian/netcfg-dhcp/DEBIAN/templates	
+	cat debian/netcfg-common.templates \
+	   >> debian/netcfg-static/DEBIAN/templates	
+	cat debian/netcfg-common.templates \
+	   >> debian/netcfg-dhcp/DEBIAN/templates	
 	cp debian/menutest-common debian/netcfg-dhcp/DEBIAN/menutest	
 	cp debian/menutest-common debian/netcfg-static/DEBIAN/menutest	
 	dh_strip
