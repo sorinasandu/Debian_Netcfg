@@ -686,7 +686,6 @@ int netcfg_activate_static(struct debconfclient *client)
 {
     int rv = 0;
     char buf[256];
-    char progname[PATH_MAX] = "40";
 
 #ifdef __GNU__
     /* I had to do something like this ? */
@@ -743,10 +742,8 @@ int netcfg_activate_static(struct debconfclient *client)
 
     /* write configuration */
 
-    strncat(progname, di_progname_get(), PATH_MAX-2);
-
-    netcfg_write_common(progname, ipaddress, hostname, domain);
-    netcfg_write_static(progname, domain, nameserver_array);
+    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+    netcfg_write_static("40netcfg", domain, nameserver_array);
 
     return 0;
 }
@@ -899,7 +896,6 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     pid_t pid = 0;
     int retry = 1;
     char *ptr;
-    char progname[PATH_MAX] = "40";
 
     enum { PUMP, DHCLIENT, UDHCPC } dhcp_client;
 
@@ -984,9 +980,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
                 return 30; // backup
 	    
             /* write configuration */
-            strncat(progname, di_progname_get(), PATH_MAX-2);
-
-            netcfg_write_common(progname, ipaddress, hostname, domain);
+            netcfg_write_common("40netcfg", ipaddress, hostname, domain);
             netcfg_write_dhcp(interface, dhcp_hostname);
 
             return 0;

@@ -56,7 +56,7 @@ install: build
 		mkdir -p debian/$(PACKAGE)/etc/network ; \
 		mkdir -p debian/$(PACKAGE)/usr/lib/prebaseconfig.d ; \
 		install -m 755 prebaseconfig \
-		        debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40$(PACKAGE) ; )
+		        debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; )
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
 		mkdir -p debian/$(PACKAGE)/usr/share/udhcpc ; \

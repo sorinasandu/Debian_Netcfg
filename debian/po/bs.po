@@ -14,7 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-21 15:04-0500\n"
 "PO-Revision-Date: 2004-01-17 21:42+0100\n"
 "Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -106,33 +107,23 @@ msgstr ""
 "Vaš sistem ima višestruke mrežne interfejse. Odaberite jedan koji ćete "
 "koristiti kao primarni mrežni interfejs tokom instaliranja Debiana."
 
-#  Type: error
-#  Description
-#: ../netcfg-common.templates:38
-msgid "Error while activating the network"
-msgstr "Greška pri aktiviranju mreže"
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "An error occurred while activating the network."
-msgstr "Došlo je do greške prilikom aktiviranja mreže."
-
 #  Type: string
 #  Description
-#: ../netcfg-common.templates:44
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:39
 msgid "Hostname:"
 msgstr "Hostname:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Please enter the hostname for this system."
 msgstr "Molim unesite hostname za ovaj sistem."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -146,19 +137,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "Invalid hostname"
 msgstr "Neispravan hostname"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Hostname \"${hostname}\" je neispravan."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -169,13 +160,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid "Error"
 msgstr "Greška"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -185,13 +176,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid "No network interfaces detected"
 msgstr "Mrežni interfejsi nisu detektovani"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -201,7 +192,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -211,110 +202,130 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:73
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:82
+#: ../netcfg-common.templates:77
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ili Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:81
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet ili Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:90
+#: ../netcfg-common.templates:85
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:89
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:93
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:102
+#: ../netcfg-common.templates:97
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:106
+#: ../netcfg-common.templates:101
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:105
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:114
+#: ../netcfg-common.templates:109
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:113
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #  Type: text
 #  Description
-#: ../netcfg-common.templates:122
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:117
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:126
+#: ../netcfg-common.templates:121
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:130
+#: ../netcfg-common.templates:125
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:129
 msgid "Unknown interface"
 msgstr "Nepoznati interfejs"
 
 #  Type: text
 #  Description
 #  Title displayed when configuring this package
-#: ../netcfg-common.templates:139
+#. Type: text
+#. Description
+#. Title displayed when configuring this package
+#: ../netcfg-common.templates:134
 msgid "Network Configuration"
 msgstr "Mrežna konfiguracija"
 
 #  Type: text
 #  Description
 #  Item in the main menu to select this package
-#: ../netcfg-common.templates:144
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:138
+#, fuzzy
+msgid "Configuring network .."
+msgstr "Podesi mrežu"
+
+#  Type: text
+#  Description
+#  Item in the main menu to select this package
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
+#: ../netcfg-common.templates:143
 msgid "Configure the network"
 msgstr "Podesi mrežu"
 
 #  Type: string
 #  Description
+#. Type: string
+#. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
 msgstr "DHCP hostname:"
@@ -347,6 +358,8 @@ msgstr "Jesu li ove informacije tačne?"
 msgid "Currently configured network parameters:"
 msgstr "Trenutno podešeni mrežni parametri:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -519,6 +532,8 @@ msgstr ""
 "Napravili ste grešku prilikom unošenja vaše IP adrese, netmaska i/ili "
 "gatewaya."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -549,6 +564,17 @@ msgstr "Statička konfiguracija mreže"
 #  Type: text
 #  Description
 #  Item in the main menu to select this package
+#. Type: text
+#. Description
+#. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Podesi mrežu koristeći statičko adresiranje"
+
+#  Type: error
+#  Description
+#~ msgid "Error while activating the network"
+#~ msgstr "Greška pri aktiviranju mreže"
+
+#~ msgid "An error occurred while activating the network."
+#~ msgstr "Došlo je do greške prilikom aktiviranja mreže."

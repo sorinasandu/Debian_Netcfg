@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tools_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"POT-Creation-Date: 2004-02-21 15:04-0500\n"
 "PO-Revision-Date: 2004-01-10 20:50+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -101,35 +101,25 @@ msgstr "الواجهة الأولية للشبكة:"
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
-msgstr "يحتوي نظام على عدة واجهات شبكة. اختر التي ترغب باستخدامها بكواجهة أولية للشبكة خلال تثبيت ديبيان."
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "Error while activating the network"
-msgstr "حدث خطأ خلال تنشيط الشبكة"
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "An error occurred while activating the network."
-msgstr "حدث خطأ خلال تنشيط الشبكة."
+msgstr ""
+"يحتوي نظام على عدة واجهات شبكة. اختر التي ترغب باستخدامها بكواجهة أولية "
+"للشبكة خلال تثبيت ديبيان."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Hostname:"
 msgstr "اسم المضيف:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Please enter the hostname for this system."
 msgstr "رجاء أدخل اسم المضيف لهذا النظام."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -142,19 +132,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "Invalid hostname"
 msgstr "اسم مضيف غير صالح"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "The name \"${hostname}\" is invalid."
 msgstr "الاسم \"${hostname}\" غير صالح"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -165,13 +155,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid "Error"
 msgstr "خطأ"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -181,13 +171,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid "No network interfaces detected"
 msgstr "لم يتم العثور على واجهات شبكة"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -195,7 +185,7 @@ msgstr "لم يوجد أي واجهات شبكة. نظام التثبيت لم �
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -205,105 +195,112 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:73
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:82
+#: ../netcfg-common.templates:77
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet أو Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:81
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:90
+#: ../netcfg-common.templates:85
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:89
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:93
 msgid "Serial-line IP"
 msgstr "عنوان IP للخط المتوالي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:102
+#: ../netcfg-common.templates:97
 msgid "Parallel-port IP"
 msgstr "عنوان IP للمنفذ المتوازي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:106
+#: ../netcfg-common.templates:101
 msgid "Point-to-Point Protocol"
 msgstr "بروتوكول Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:105
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:114
+#: ../netcfg-common.templates:109
 msgid "ISDN Point-to-Point Protocol"
 msgstr "بروتوكول ISDN Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:113
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:117
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:126
+#: ../netcfg-common.templates:121
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:130
+#: ../netcfg-common.templates:125
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:129
 msgid "Unknown interface"
 msgstr "واجهة غير معروفة"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:134
 msgid "Network Configuration"
 msgstr "إعداد الشبكة"
 
 #. Type: text
 #. Description
+#: ../netcfg-common.templates:138
+#, fuzzy
+msgid "Configuring network .."
+msgstr "أعدّ الشبكة"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:143
 msgid "Configure the network"
 msgstr "أعدّ الشبكة"
 
@@ -341,6 +338,8 @@ msgstr "هل هذه المعلومات صحيحة؟"
 msgid "Currently configured network parameters:"
 msgstr "متغيّرات الشبكة المعدّة حالياً:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -507,9 +506,12 @@ msgstr "عنوان البوابة الذي أدخله لا يمكن الوصول
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "قد تكون قمت بخطأ بإدخال عنوان IP، قناع الشبكة و/أو البوابة."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -544,6 +546,12 @@ msgstr "إعداد الشبكة الثابت"
 msgid "Configure a network using static addressing"
 msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 
+#~ msgid "Error while activating the network"
+#~ msgstr "حدث خطأ خلال تنشيط الشبكة"
+
+#~ msgid "An error occurred while activating the network."
+#~ msgstr "حدث خطأ خلال تنشيط الشبكة."
+
 #~ msgid "Interface:"
 #~ msgstr "الواجهة:"
 
@@ -556,4 +564,3 @@ msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
 #~ "رجاء اختر الواجهة التي تريد إعدادها. كل الواجهات التي وجدت في نظامك ظاهرة "
 #~ "أدناه. رجاء اختر النوع الأولي لواجهة شبكتك. سوف تستخدم هذه الواجهة لتثبيت "
 #~ "نظام ديبيان (من خلال NFS أو HTTP)."
-

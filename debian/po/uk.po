@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"POT-Creation-Date: 2004-02-21 15:04-0500\n"
 "PO-Revision-Date: 2004-02-08 18:02+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -46,10 +46,10 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"Мережа може бути налаштована або за допомогою DHCP, або вручну. Якщо ви виберете "
-"DHCP, але програма встановлення не зможе отримати необхідну інформацію від "
-"DHCP сервера вашої мережі, то вам буде надана можливість налаштувати вашу "
-"мережу вручну. Якщо не впевнені, виберіть DHCP."
+"Мережа може бути налаштована або за допомогою DHCP, або вручну. Якщо ви "
+"виберете DHCP, але програма встановлення не зможе отримати необхідну "
+"інформацію від DHCP сервера вашої мережі, то вам буде надана можливість "
+"налаштувати вашу мережу вручну. Якщо не впевнені, виберіть DHCP."
 
 #. Type: string
 #. Description
@@ -66,10 +66,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Ім'я домену - це частина вашої Інтернет-адреси, правіше від імені комп'ютера. "
-"Часто вона закінчується на .com, .net, .edu або.org. Якщо ви встановлюєте "
-"домашню мережу, то можете вказати щось своє, але впевніться, що ім'я домену "
-"однакове на всіх ваших комп'ютерах."
+"Ім'я домену - це частина вашої Інтернет-адреси, правіше від імені "
+"комп'ютера. Часто вона закінчується на .com, .net, .edu або.org. Якщо ви "
+"встановлюєте домашню мережу, то можете вказати щось своє, але впевніться, що "
+"ім'я домену однакове на всіх ваших комп'ютерах."
 
 #. Type: string
 #. Description
@@ -86,8 +86,8 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Введіть IP-адреси серверів імен (не більше 3), розділені пробілами. "
-"Не використовуйте коми. Сервери будуть опитуватися в порядку їх вказування. "
+"Введіть IP-адреси серверів імен (не більше 3), розділені пробілами. Не "
+"використовуйте коми. Сервери будуть опитуватися в порядку їх вказування. "
 "Якщо ви не хочете використовувати сервери імен, то залиште поле порожнім."
 
 #. Type: select
@@ -103,96 +103,84 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"На вашій системі знайдено декілька мережевих інтерфейсів. Виберіть той, "
-"який буде використовуватися як первинний під час встановлення Debian."
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "Error while activating the network"
-msgstr "Помилка під час активації мережі"
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "An error occurred while activating the network."
-msgstr "Виникла помилка під час активації мережі."
+"На вашій системі знайдено декілька мережевих інтерфейсів. Виберіть той, який "
+"буде використовуватися як первинний під час встановлення Debian."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Hostname:"
 msgstr "Ім'я комп'ютера:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Please enter the hostname for this system."
 msgstr "Введіть ім'я цього комп'ютера:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Ім'я комп'ютера - це одне слово, що ідентифікує вашу систему в мережі. "
-"Якщо ви не знаєте, яким повинно бути ім'я вашого комп'ютера, то "
-"порадьтеся з адміністратором вашої мережі. Якщо ви встановлюєте вашу власну "
-"мережу, можете ввести щось на ваш смак."
+"Ім'я комп'ютера - це одне слово, що ідентифікує вашу систему в мережі. Якщо "
+"ви не знаєте, яким повинно бути ім'я вашого комп'ютера, то порадьтеся з "
+"адміністратором вашої мережі. Якщо ви встановлюєте вашу власну мережу, "
+"можете ввести щось на ваш смак."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "Invalid hostname"
 msgstr "Невірне ім'я комп'ютера"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Ім'я комп'ютера \"${hostname}\" не припустиме."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"Вірне ім'я комп'ютера повинно містити тільки латинські літери, "
-"цифри та знак мінус. Воно повинно мати довжину від 2 до 63 символів та не "
-"може починатися або закінчуватися знаком мінус."
+"Вірне ім'я комп'ютера повинно містити тільки латинські літери, цифри та знак "
+"мінус. Воно повинно мати довжину від 2 до 63 символів та не може починатися "
+"або закінчуватися знаком мінус."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid "Error"
 msgstr "Помилка"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"Виникла помилка і процес налаштовування мережі було перервано. "
-"Ви можете повторити його з меню встановлення."
+"Виникла помилка і процес налаштовування мережі було перервано. Ви можете "
+"повторити його з меню встановлення."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid "No network interfaces detected"
 msgstr "Мережеві інтерфейси не знайдені"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -202,7 +190,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -212,105 +200,112 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:73
 msgid "<none>"
 msgstr "<жоден>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:82
+#: ../netcfg-common.templates:77
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet або Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:81
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet або Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:90
+#: ../netcfg-common.templates:85
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:89
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:93
 msgid "Serial-line IP"
 msgstr "IP по послідовній лінії (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:102
+#: ../netcfg-common.templates:97
 msgid "Parallel-port IP"
 msgstr "IP по паралельній лінії (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:106
+#: ../netcfg-common.templates:101
 msgid "Point-to-Point Protocol"
 msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:105
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-в-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:114
+#: ../netcfg-common.templates:109
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:113
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:117
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:126
+#: ../netcfg-common.templates:121
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:130
+#: ../netcfg-common.templates:125
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:129
 msgid "Unknown interface"
 msgstr "Невідомий інтерфейс"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:134
 msgid "Network Configuration"
 msgstr "Налаштовування мережі"
 
 #. Type: text
 #. Description
+#: ../netcfg-common.templates:138
+#, fuzzy
+msgid "Configuring network .."
+msgstr "Налаштувати мережу"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:143
 msgid "Configure the network"
 msgstr "Налаштувати мережу"
 
@@ -327,9 +322,9 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"В деяких випадках вам може знадобитися DHCP ім'я машини. Якщо ви користуєтесь "
-"кабельним модемом, то часто провайдер вимагає вказати тут номер облікового "
-"запису."
+"В деяких випадках вам може знадобитися DHCP ім'я машини. Якщо ви "
+"користуєтесь кабельним модемом, то часто провайдер вимагає вказати тут номер "
+"облікового запису."
 
 #. Type: string
 #. Description
@@ -349,6 +344,8 @@ msgstr "Чи вірна ця інформація?"
 msgid "Currently configured network parameters:"
 msgstr "Поточні мережеві налаштовування:"
 
+#. Type: boolean
+#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -385,7 +382,8 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr ""
+"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -438,8 +436,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP-адреса унікальна для вашого комп'ютера і складається із чотирьох чисел, "
-"розділених крапками. Якщо ви не знаєте, що тут використати, проконсультуйтеся "
-"у вашого мережевого адміністратора."
+"розділених крапками. Якщо ви не знаєте, що тут використати, "
+"проконсультуйтеся у вашого мережевого адміністратора."
 
 #. Type: string
 #. Description
@@ -457,9 +455,8 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Адреса PPP використовується для визначення другого кінця PPP з'єднання. "
-"Проконсультуйтеся з вашим мережевим адміністратором, якщо ви не знаєте "
-"цієї адреси. PPP адреса повинна бути введена як чотири числа, розділені "
-"крапками."
+"Проконсультуйтеся з вашим мережевим адміністратором, якщо ви не знаєте цієї "
+"адреси. PPP адреса повинна бути введена як чотири числа, розділені крапками."
 
 #. Type: string
 #. Description
@@ -475,10 +472,10 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Маска підмережи використовується для визначення того, які машини "
-"вважаються локальними для вашої мережі. Проконсультуйтеся з адміністратором "
-"мережі, якщо ви не знаєте, якою вона повинна бути. Маска підмережи "
-"повинна бути введена як чотири числа, розділені крапками."
+"Маска підмережи використовується для визначення того, які машини вважаються "
+"локальними для вашої мережі. Проконсультуйтеся з адміністратором мережі, "
+"якщо ви не знаєте, якою вона повинна бути. Маска підмережи повинна бути "
+"введена як чотири числа, розділені крапками."
 
 #. Type: string
 #. Description
@@ -498,12 +495,12 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Шлюз - це IP-адреса (чотири числа, розділені крапками), яка вказує на "
-"шлюзовий маршрутизатор, також відомий як маршрутизатор за замовчанням. "
-"Весь трафік, що направляється за межі вашої локальної мережі "
-"(наприклад, в Інтернет), проходить через цей маршрутизатор. В рідких "
-"випадках ви можете не мати такого маршрутизатора; в цьому випадку "
-"залиште це поле порожнім. Якщо ви не знаєте правильної відповіді на "
-"це питання, проконсультуйтеся в адміністратора мережі."
+"шлюзовий маршрутизатор, також відомий як маршрутизатор за замовчанням. Весь "
+"трафік, що направляється за межі вашої локальної мережі (наприклад, в "
+"Інтернет), проходить через цей маршрутизатор. В рідких випадках ви можете не "
+"мати такого маршрутизатора; в цьому випадку залиште це поле порожнім. Якщо "
+"ви не знаєте правильної відповіді на це питання, проконсультуйтеся в "
+"адміністратора мережі."
 
 #. Type: error
 #. Description
@@ -520,11 +517,14 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Ви могли помилитися при введенні IP-адреси, маски підмережи та/або "
-"адреси шлюзу."
+"Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
+"шлюзу."
 
+#. Type: boolean
+#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -559,3 +559,8 @@ msgstr "Налаштовування статичної адреси"
 msgid "Configure a network using static addressing"
 msgstr "Налаштувати мережу із статичним адресуванням"
 
+#~ msgid "Error while activating the network"
+#~ msgstr "Помилка під час активації мережі"
+
+#~ msgid "An error occurred while activating the network."
+#~ msgstr "Виникла помилка під час активації мережі."

@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-01-09 11:36-0700\n"
+"POT-Creation-Date: 2004-02-21 15:04-0500\n"
 "PO-Revision-Date: 2004-01-09 20:16+0100\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: select
 #. Choices
@@ -105,33 +105,21 @@ msgstr ""
 "A gép több hálózati interfésszel is rendelkezik. Válassza ki a Debian "
 "telepítésére használni kívánt elsődleges interfészt."
 
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "Error while activating the network"
-msgstr "Hiba a hálózat felélesztése közben"
-
-#. Type: error
-#. Description
-#: ../netcfg-common.templates:38
-msgid "An error occurred while activating the network."
-msgstr "A hálózat életre keltése közben hiba történt."
-
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Hostname:"
 msgstr "Gépnév:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid "Please enter the hostname for this system."
 msgstr "Adja meg a rendszer gépnevét."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:44
+#: ../netcfg-common.templates:39
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -145,19 +133,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "Invalid hostname"
 msgstr "Érvénytelen gépnév"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid "The name \"${hostname}\" is invalid."
 msgstr "A gépnév (\"${hostname}\") érvénytelen."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:54
+#: ../netcfg-common.templates:49
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
@@ -169,13 +157,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid "Error"
 msgstr "Hiba"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:63
+#: ../netcfg-common.templates:58
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
@@ -185,13 +173,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid "No network interfaces detected"
 msgstr "A felderítés nem talált hálózati interfészt"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -201,7 +189,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:69
+#: ../netcfg-common.templates:64
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -212,105 +200,112 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:73
 msgid "<none>"
 msgstr "<semmi>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:82
+#: ../netcfg-common.templates:77
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet vagy Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:81
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet vagy Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:90
+#: ../netcfg-common.templates:85
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:89
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:98
+#: ../netcfg-common.templates:93
 msgid "Serial-line IP"
 msgstr "Soros vonali·IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:102
+#: ../netcfg-common.templates:97
 msgid "Parallel-port IP"
 msgstr "Párhuzamos vonali IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:106
+#: ../netcfg-common.templates:101
 msgid "Point-to-Point Protocol"
 msgstr "Pont-Pont Protokoll (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:110
+#: ../netcfg-common.templates:105
 msgid "IPv6-in-IPv4"
 msgstr "IPv4 feletti IPv6"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:114
+#: ../netcfg-common.templates:109
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Pont-Pont Protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:118
+#: ../netcfg-common.templates:113
 msgid "Channel-to-channel"
 msgstr "Csatorna-Csatorna (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:117
 msgid "Real channel-to-channel"
 msgstr "Valós csatorna-csatorna"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:126
+#: ../netcfg-common.templates:121
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:130
+#: ../netcfg-common.templates:125
 msgid "Inter-user communication vehicle"
 msgstr "Felhasználók közti kommunikációs eszköz (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:129
 msgid "Unknown interface"
 msgstr "Ismeretlen hálózati interfész"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:139
+#: ../netcfg-common.templates:134
 msgid "Network Configuration"
 msgstr "Hálózat konfigurálása"
 
 #. Type: text
 #. Description
+#: ../netcfg-common.templates:138
+#, fuzzy
+msgid "Configuring network .."
+msgstr "Hálózat konfigurálása"
+
+#. Type: text
+#. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:143
 msgid "Configure the network"
 msgstr "Hálózat konfigurálása"
 
@@ -562,6 +557,12 @@ msgstr "Statikus hálózatkonfigurálás"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Hálózat konfigurálása statikus címzéssel"
+
+#~ msgid "Error while activating the network"
+#~ msgstr "Hiba a hálózat felélesztése közben"
+
+#~ msgid "An error occurred while activating the network."
+#~ msgstr "A hálózat életre keltése közben hiba történt."
 
 #~ msgid "Interface:"
 #~ msgstr "Hálózati interfész:"
