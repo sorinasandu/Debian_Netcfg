@@ -51,6 +51,7 @@ install: build
 	install -m755 udhcpc.default.script debian/netcfg-dhcp/usr/share/udhcpc/default.script
 	mkdir -p debian/netcfg-dhcp/etc/dhcp debian/netcfg-dhcp/var/dhcp
 	mkdir -p debian/netcfg-static/etc/network
+	mkdir -p debian/netcfg-dhcp/etc/network
 	mkdir -p debian/netcfg-dhcp/usr/lib/prebaseconfig.d
 	install -m 755 prebaseconfig \
 	        debian/netcfg-dhcp/usr/lib/prebaseconfig.d/40netcfg-dhcp
