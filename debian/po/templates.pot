@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-11 11:47+0100\n"
+"POT-Creation-Date: 2003-12-12 11:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,21 +27,21 @@ msgstr ""
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:4
-msgid "configure network with DHCP, manual network configuration"
+msgid "Dynamic addressing (DHCP), Static addressing (manual)"
 msgstr ""
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-msgid "Network configuration method"
+msgid "Network configuration method:"
 msgstr ""
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
 msgid ""
-"Networking can either be configure by DHCP or by manually  entering all the "
-"information. If you choose DHCP and  debian-installer is unable to get a "
+"Networking can either be configure by DHCP or by manually entering all the "
+"information. If you choose DHCP and debian-installer is unable to get a "
 "working configuration from a DHCP Server on you network you will be offered "
 "to configure your network manually after the atempt to configure it by DHCP. "
 "If unsure choose DHCP."
@@ -89,7 +89,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid ""
-"Please choose the interface you want to configure. All currently  detected "
+"Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
@@ -373,15 +373,15 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:39
 msgid ""
-"No IP address was offered during DHCP network configuration. Sometimes DHCP "
-"servers are really slow. In this case you can retry."
+"No IP address was offered during DHCP network configuration.  DHCP servers "
+"are sometimes really slow. In this case you can retry."
 msgstr ""
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-msgid "DHCP Network Configuration"
+msgid "Dynamic network configuration (DHCP)"
 msgstr ""
 
 #. Type: text
@@ -492,7 +492,7 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-msgid "Static Network Configuration"
+msgid "Static network configuration"
 msgstr ""
 
 #. Type: text

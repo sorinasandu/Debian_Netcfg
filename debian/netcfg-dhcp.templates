@@ -2,7 +2,7 @@ Template: netcfg/dhcp_hostname
 Type: string
 _Description: DHCP hostname:
  You may need to supply a DHCP host name. If you are using
- a cable modem, you might need to specify an account number here.  
+ a cable modem, you might need to specify an account number here.
  .
  Most other users can just leave this blank.
 
@@ -37,13 +37,13 @@ Template: netcfg/dhcp_retry
 Type: boolean
 Default: false
 _Description: Do you want to retry DHCP network configuration?
- No IP address was offered during DHCP network configuration. Sometimes
- DHCP servers are really slow. In this case you can retry.
+ No IP address was offered during DHCP network configuration.  DHCP servers
+ are sometimes really slow. In this case you can retry.
 
 Template: netcfg/dhcp-title
 Type: text
 #  Title displayed when configuring this package
-_Description: DHCP Network Configuration
+_Description: Dynamic network configuration (DHCP)
 
 Template: debian-installer/netcfg-dhcp/title
 Type: text
