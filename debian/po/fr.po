@@ -1,13 +1,11 @@
-# translation of fr.po to French
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# Christian Perrier <bubulle@debian.org>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.71\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-02 18:30+0200\n"
+"PO-Revision-Date: 2004-08-13 10:23+0200\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -230,15 +228,14 @@ msgstr "Le nom « ${hostname} » n'est pas valable."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nom valable ne peut contenir que des caractères alphanumériques et le "
-"signe moins ; sa longueur doit être comprise entre 2 et 63 caractères et il "
-"ne peut ni commencer ni finir par un signe moins."
+"Un nom valable ne peut contenir que les chiffres 0-9, les lettres minuscules "
+"a-z et le signe moins ; sa longueur doit être comprise entre 2 et 63 "
+"caractères et il ne peut ni commencer ni finir par un signe moins."
 
 #. Type: error
 #. Description
@@ -287,9 +284,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Configurer le réseau"
+msgstr "Faut-il continuer sans réseau configuré ?"
 
 #. Type: boolean
 #. Description
@@ -301,6 +297,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"${IFACE} ne semble pas connectée à un réseau. C'est peut-être dû à un cable "
+"manquant ou au mauvais fonctionnement d'un adaptateur réseau. Vous pouvez "
+"soit renoncer à la configuration du réseau jusqu'au prochain redémarrage et "
+"utiliser le programme etherconf, soit vous pouvez configurer le réseau sans "
+"dhcp. Vous pouvez aussi revenir en arrière et choisir une autre interface."
 
 #. Type: select
 #. Choices
@@ -546,7 +547,6 @@ msgstr "Méthode pour la configuration du réseau :"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -555,7 +555,7 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Vous pouvez maintenant réessayer la configuration automatique du réseau, - "
-"cela peut marcher si le serveur DHCP met du temps à répondre -, ou bien vous "
+"cela peut réussir si le serveur DHCP met du temps à répondre -, ou bien vous "
 "pouvez configurer vous-même le réseau. Certains serveurs DHCP demandent "
 "qu'un hôte DHCP soit donné par le client, vous pouvez l'indiquer avant de "
 "réessayer la configuration automatique."
