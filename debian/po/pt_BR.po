@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: netcfg-0.35\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-12 11:03+0100\n"
-"PO-Revision-Date: 2003-12-11 19:34-0300\n"
+"PO-Revision-Date: 2003-12-13 13:53-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,19 +22,17 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:4
 msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-msgstr ""
+msgstr "Endereçamento dinâmico (DHCP), Endereçamento estático (manual)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Método de configuração de rede"
+msgstr "Método de configuração de rede :"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:5
-#, fuzzy
 msgid ""
 "Networking can either be configure by DHCP or by manually entering all the "
 "information. If you choose DHCP and debian-installer is unable to get a "
@@ -47,7 +45,8 @@ msgstr ""
 "instalador Debian não seja capaz de obter uma configuração funcional de um "
 "servidor DHCP em sua rede, você terá a possibilidade de informar os dados "
 "necessários para sua configuração de rede manualmente após a tentativa de "
-"configuração via DHCP."
+"configuração via DHCP. Caso não tenha certeza sobre o que escolher, "
+"escolha DHCP."
 
 #. Type: string
 #. Description
@@ -99,7 +98,6 @@ msgstr "Interface :"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently detected "
 "interfaces on your system are shown below. Please choose the type of your "
@@ -413,22 +411,20 @@ msgstr "Você deseja tentar a configuração via DHCP novamente ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. In this case you can retry."
 msgstr ""
-"Nenhum endereço IP foi oferecido durante a tentativa de configuração da rede "
-"via DHCP. Algumas vezes alguns servidores DHCP são realmente lentos. Caso "
-"seja esse o caso, você pode tentar novamente."
+"Nenhum endereço IP foi oferecido durante a tentativa de configuração da "
+"rede via DHCP. Algumas vezes, alguns servidores DHCP são realmente "
+"lentos. Caso seja esse o caso, você pode tentar novamente."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Configuração de Rede Estática"
+msgstr "Configuração dinâmica de rede (DHCP)"
 
 #. Type: text
 #. Description
@@ -565,9 +561,8 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
-msgstr "Configuração de Rede Estática"
+msgstr "Configuração de rede estática"
 
 #. Type: text
 #. Description
