@@ -7,10 +7,14 @@ netcfg (0.31) unstable; urgency=low
       (Thanks to Christian Perrier and
        Chris Tillman) (Closes: #219633)
     - reworked state machine in netcfg-static to
-      show iface, ipaddr, p2p, netmask, gateway, 
+      show iface, ipaddr, p2p, netmask, gateway,
       nameservers, hostname, domain, confirm
+      (Closes: #220182)
+    - set nameserver question to high
+    - depend on ethernet-card-detection
+      (Closes: #219309)
 
- -- Gaudenz Steinlin <steinlin@sowipc4.unibe.ch>  Thu, 13 Nov 2003 22:31:31 +0100
+ -- Gaudenz Steinlin <steinlin@sowipc4.unibe.ch>  Thu, 13 Nov 2003 22:44:23 +0100
 
 netcfg (0.30) unstable; urgency=low
 
