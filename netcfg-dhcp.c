@@ -99,6 +99,7 @@ static void netcfg_activate_dhcp()
 {
         char buf[128];
         di_execlog("/sbin/ifconfig lo 127.0.0.1");
+	di_execlog("/sbin/modprobe af_packet");
 
         switch (dhcp_client) {
         case PUMP:
