@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-12 12:32+0200\n"
-"PO-Revision-Date: 2004-04-16 17:45+0300\n"
+"PO-Revision-Date: 2004-05-12 16:18+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
@@ -156,8 +156,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -482,8 +481,7 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -494,37 +492,32 @@ msgstr "Процес налаштовування DHCP було перерван
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Налаштовування статичної адреси"
+msgstr "Повторити автоматичне налаштування мережі"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Налаштовування динамічної адреси (DHCP)"
+msgstr "Повторити автоматичне налаштування мережі з DHCP-іменем вузла"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Налаштувати мережу"
+msgstr "Налаштувати мережу вручну"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Налаштувати мережу"
+msgstr "Не конфігурувати мережу зараз"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Next network configuration step:"
-msgstr "Спосіб налаштовування мережі:"
+msgstr "Наступний етап налаштування мережі:"
 
 #. Type: select
 #. Description
@@ -535,7 +528,7 @@ msgid ""
 "specify a DHCP hostname to send to the server if you think it needs one. "
 "Otherwise, you may configure the network manually, or choose not to "
 "configure it at all right now."
-msgstr ""
+msgstr "Не вдалося провести автоматичне налаштування мережі. Це звичайно може бути викликано повільним DHCP сервером у вашій мережі, тому вам мабуть потрібно повторити знову. Ви також можете вказати DHCP-ім'я вузла, яке потрібно відіслати серверу, якщо ви думаєте, що це потрібно. Інакше, ви можете налаштувати мережу вручну або вказати, що її не потрібно налаштовувати зараз."
 
 #. Type: text
 #. Description
@@ -601,7 +594,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Маска підмережи:"
+msgstr "Маска підмережі:"
 
 #. Type: string
 #. Description
@@ -611,9 +604,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Маска підмережи використовується для визначення того, які машини вважаються "
+"Маска підмережі використовується для визначення того, які машини вважаються "
 "локальними для вашої мережі. Проконсультуйтеся з адміністратором мережі, "
-"якщо ви не знаєте, якою вона повинна бути. Маска підмережи повинна бути "
+"якщо ви не знаєте, якою вона повинна бути. Маска підмережі повинна бути "
 "введена як чотири числа, розділені крапками."
 
 #. Type: string
@@ -656,10 +649,9 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
+"Ви могли помилитися при введенні IP-адреси, маски підмережі та/або адреси "
 "шлюзу."
 
 #: ../netcfg-static.templates:53
@@ -677,7 +669,7 @@ msgstr ""
 " ім'я системи  = ${hostname}\n"
 " домен         = ${domain}\n"
 " IP-адреса     = ${ipaddress}\n"
-" маска підмережи= ${netmask}\n"
+" маска підмережі= ${netmask}\n"
 " шлюз          = ${gateway}\n"
 " PPP адреса    = ${pointopoint}\n"
 " сервери імен  = ${nameservers}"
@@ -729,3 +721,4 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
+
