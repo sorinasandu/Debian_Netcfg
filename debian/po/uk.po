@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: netcfg-templates_ua\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 09:46-0800\n"
-"PO-Revision-Date: 2004-02-23 16:42+0200\n"
+"PO-Revision-Date: 2004-02-24 18:25+0200\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,6 @@ msgstr "Бездротовий ESSID для ${iface}:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -145,7 +144,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -156,17 +154,14 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Якщо ваш WEP ключ є паролем, то додайте до нього префікс 's:' (без лапок)."
+msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс 's:' (без лапок)."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -487,8 +482,7 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -547,9 +541,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "IP-адреса:"
+msgstr "Неприпустима IP адреса"
 
 #. Type: error
 #. Description
@@ -558,6 +551,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Введена вами IP адреса неприпустима. Вона повинна бути введена в форматі "
+"x.x.x.x де кожен \"x\" є числом не більшим 255. Спробуйте знову."
 
 #. Type: string
 #. Description
@@ -637,8 +632,7 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
 "шлюзу."
@@ -684,3 +678,4 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
+
