@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-26 11:39+0100\n"
-"PO-Revision-Date: 2004-03-06 04:36+1300\n"
+"PO-Revision-Date: 2004-03-30 13:06+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +27,12 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid "Auto-configure network with DHCP?"
-msgstr "使用 DHCP 来配置网络"
+msgstr "使用 DHCP 进行网络自动设置"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
-#, fuzzy
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -42,9 +40,9 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"网络可以用 DHCP 配置，或者手动输入所有信息。如果您选择了 DHCP，但安装程序无法"
-"从网络中的 DHCP 服务器获得网络配置，那么在尝试失败之后，您仍然可以手动输入。"
-"如果不确定，请选用 DHCP。"
+"您可以使用 DHCP 对网络进行配置，或者手动输入所有信息。如果您选择了 DHCP，但安"
+"装程序无法从网络中的 DHCP 服务器获得网络配置，那么在尝试失败之后，您仍然可以"
+"手动输入。"
 
 #. Type: string
 #. Description
@@ -61,7 +59,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"域名是您的互联网地址的一部分，附加在主机名之后。它通常是以 .com，.net，.edu "
+"域名是您的互联网地址的一部分，附加在主机名之后。它通常是以 .com、.net、.edu "
 "或 .org 结尾。如果您正在设置一个内部网络，您可以随意写一个，但是要确保您所有"
 "计算机的域名都是一样的。"
 
@@ -136,7 +134,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"如果您的 WEP 密钥的格式是“nnnn-nnnn-nn”或“nnnnnnnn”，其中 n 是一个数字，请将"
+"如果您的 WEP 密钥的格式是“nnnn-nnnn-nn”或“nnnnnnnn”(其中 n 是一个数字)，请将"
 "它直接填写到输入框中。"
 
 #. Type: string
@@ -277,13 +275,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:108
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "共用 (Managed) 网络, Ad-hoc 网络 (点对点)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "无线网络类别："
 
 #. Type: select
 #. Description
@@ -293,6 +291,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network is Ad-hoc."
 msgstr ""
+"无线网络可以是 managed 或 ad-hoc 两种类型。如果您使用了某种实体装置作为接入点"
+"(access point)，您的网络就是 Managed。如果是以另一台计算机作为您的接入点"
+"(access plint)，那么您的网络则是 Ad-hoc。"
 
 #. Type: text
 #. Description
