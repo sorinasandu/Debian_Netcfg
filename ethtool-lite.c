@@ -63,11 +63,14 @@ int ethtool_lite (char * iface)
 	ioctl (fd, SIOCETHTOOL, &ifr);
 	
 	if (edata.data)
+	{
 #ifdef TEST
 		printf("%s is connected.\n", iface);
 #else
+		di_info("%s is connected.\n", iface);
 		return CONNECTED;
 #endif
+	}
 	else
 	{
 		u_int16_t *data = (u_int16_t *)&ifr.ifr_data;
@@ -84,6 +87,7 @@ int ethtool_lite (char * iface)
 			fprintf(stderr, "Error: couldn't determine MII ioctl to use\n");
 			return 1;
 #else
+			di_error("couldn't determine MII ioctl to use for %s\n", iface);
 			return UNKNOWN;
 #endif
 		}
@@ -108,7 +112,7 @@ int ethtool_lite (char * iface)
 			fprintf(stderr, "MII ioctl failed\n");
 			return 1;
 #else
-			di_error("MII ioctl failed\n");
+			di_error("MII ioctl failed for %s\n", iface);
 			return UNKNOWN;
 #endif
 		}
