@@ -195,10 +195,6 @@ int poll_dhcp_client (struct debconfclient *client)
     assert(hostname != NULL);
     assert(dhcp_pid == -1);
 
-    /* write configuration */
-    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
-    netcfg_write_dhcp("40netcfg", interface);
-
     return 0;
   }
   
@@ -277,7 +273,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           case 2: state = STATIC; break;
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
-                  state = END;
+                  return 0;
         }
         break;
 
@@ -311,6 +307,10 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
         
       case END:
+        /* write configuration */
+        netcfg_write_common("40netcfg", ipaddress, hostname, domain);
+        netcfg_write_dhcp("40netcfg", interface);
+        
         return 0;
     }
   }
