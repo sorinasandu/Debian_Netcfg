@@ -1,0 +1,304 @@
+# Lithuanian messages for netcfg.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# This file is distributed under the same license as debian-installer.
+# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2003
+# 
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: netcfg 0.25\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2003-09-19 22:32+0200\n"
+"PO-Revision-Date: 2003-10-25 02:11+0300\n"
+"Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Pasirinkite srities vardą (domain name)."
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"Srities vardas - tai jūsų internetinio adreso dalis, esanti dešiniau jūsų "
+"kompiuterio vardo. Tankiausiai tai yra .com, .net, .edu ar ,org. Jei jūs "
+"įrenginėjate namų tinklą, galite nurodyti kažką savo, bet įsitikinkite, kad "
+"jūs naudojate tą patį srities vardą visuose savo kompiuteriuose."
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr "Pasirinkite DNS serverių adresus"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+"Prašau įvesti iki 3-jų serverių IP adresus (ne kompiuterių vardus), atskirdami "
+"tarpais. Nenaudokite kablelių. Serveriai bus apklausiami jų nurodymo eiles tvarka. "
+"Jei jūs nenorite naudoti jokio serverio, tai palikite šį lauką tuščią."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Pasirinkite tinklo sąsają."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+"Nustatytos sekančios esamos tinklo sąsajos. Pasirinkite jūsų pirminės tinklo "
+"sąsajos tipą, kuri bus reikalinga Debian'o sistemos diegimui (per NFS ar HTTP)."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr "Įvyko klaida."
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr "Kažkas vyksta neteisingai, kuomet bandau aktyvuoti jūsų tinklą."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr "Įveskite sistemos kompiuterio vardą."
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+"Kompiuterio vardas - tai vienas žodis, kuris identifikuoja jūsų kompiuterį tinkle. "
+"Jei nežinote, koks jūsų kompiuterio vardas turėtų būti, pasitarkite su jūsų "
+"tinklo administratoriumi. Jei jūs įrenginėjate savo nuosavą namų tinklą, "
+"įveskite ką nors pagal savo skonį."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr "Kompiuterio vardas \"${hostname}\" netinkamas."
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+"Tinkamą kompiuterio vardą gali sudaryti tik raidžių ir skaitmenų simboliai, bei "
+"minuso ženklas. Jis turi būtį nuo 2-jų iki 63-jų simbolių ilgio, ir negali prasidėti "
+"ar baigtis minuso ženklu."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr "Įvyko klaida ir aš nebegaliu tęsti."
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr "Jūs galite drąsiai bandyti pakartoti."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No interfaces were detected."
+msgstr "Tinklo sąsajų neaptikta."
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Detect network hardware and load kernel drivers for it'."
+msgstr ""
+"Tinko sąsajų nerasta. Tai reiškia, kad diegimo sistemai nepavyko rasti tinklo "
+"įrenginio. Jei jūs turite tinklo plokštę, tai gal būt jai nebuvo pasirinktas modulis. "
+"Grįžkite atgal į \"Tinklo įrangos paieška\" ir įkelkite branduolio tvarkykles skirtas "
+"šiai tinklo plokštei."
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr "Koks jūsų dhcp kompiuterio vardas?"
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"You may need to supply a DHCP host name. If you are using a cable modem, you "
+"might need to specify an account number here.  Most other users can just "
+"leave this blank."
+msgstr ""
+"Jums gali reikėti pateikti DHCP kompiuterio vardą. Jei jūs naudojate kabelinį modemą, "
+"tai gali tekti čia nurodyti paskyros (account) numerį. Dauguma kitų naudotojų gali "
+"palikti tuščią."
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid "Is this information correct?"
+msgstr "Ar ši informacija teisinga?"
+
+#. Description
+#: ../netcfg-dhcp.templates:11
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp·hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "I will now configure the network."
+msgstr "Dabar aš konfigūruosiu tinklą."
+
+#. Description
+#: ../netcfg-dhcp.templates:20
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr "Tai truks tam tikrą laiko tarpą. Ne daugiau kaip vieną ar dvi minutes."
+
+#. Description
+#: ../netcfg-dhcp.templates:25
+msgid "No dhcp client found. I cannot continue."
+msgstr "Nerastas dhcp klientas. Negaliu tęsti."
+
+#. Description
+#: ../netcfg-dhcp.templates:25
+msgid "This package requires pump or dhcp-client."
+msgstr "Šiam paketui reikia, kad būtų įdiegtas paketas pump arba dhcp-client."
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr "IP adresas?"
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+"Jūsų kompiuterio IP adresas yra unikalus ir sudarytas iš keturių skaičių, "
+"atskirtų taškais. Jei jūs nežinote, ką čia reikia nurodyti, pasikonsultuokite "
+"su savo tinklo administratoriumi."
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr "Ryšio (pointopoint) adresas?"
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+"Ryšio adresas nurodo kito galinio taško adresą, esant iš taško į tašką (point "
+"to point) tinklui.   Pasitarkite·su·savo·tinklo·administratoriumi,·jei·nežinote·šio "
+"adreso.   Ryšio adresas turi būti įvestas, kaip keturi skaičiai, atskirti taškais."
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr "Tinklo trafaretas (netmask)?"
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+"Tinklo trafaretas apibrėžia, kurie kompiuteriai yra lokalūs jūsų tinkle. "
+"Pasitarkite su savo tinklo administratoriumi, jei nežinote šios reikšmės. "
+"Tinklo trafaretas turi būti įvestas, kaip keturi skaičiai, atskirti taškais."
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr "Tinklų sąsaja (gateway)?"
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+"Šis IP adresas (keturi skaičiai atskirti taškais) nurodo tinklų sąsajos kelvedį, "
+"taip pat vadinamą numatytuoju kelvedžių (default router). Visa informacija "
+"išeinanti į jūsų lokalaus tinklo išorę (pvz. į internetą), yra siunčiama per šį "
+"kelvedį. Kartais jūs galite neturėti kelvedžio, tokiu atveju palikite tuščią. Jei "
+"nežinote tinkamo atsakymo, pasitarkite su savo tinklo administratoriumi."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr "Jūsų nurodyta tinklų·sąsaja (gateway) nepasiekiama."
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Jūs gal būt padarėte klaidą įvedant IP adresą, tinklo trafaretą ir/ar tinklų sąsają."
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr "Ar ši konfigūracija teisinga?"
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+
