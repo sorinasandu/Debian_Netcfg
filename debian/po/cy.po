@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-05-26 18:44-0300\n"
+"PO-Revision-Date: 2004-07-24 12:35+0100\n"
 "Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
 "Language-Team: Welsh <daf@muse.19inch.net>\n"
 "MIME-Version: 1.0\n"
@@ -347,7 +347,7 @@ msgstr "Ethernet diwifren (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "diwifren"
 
 #. Type: text
 #. Description
@@ -538,7 +538,6 @@ msgstr "Dull cyfluniad rhwydwaith:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -546,18 +545,18 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Methodd awtogyfluniad rhwydwaith. Fe all hyn fod oherwydd gweinydd DHCP araf "
-"ar y rhwydwaith, felly efallai hoffech ailgeisio. Os nad yw eich rhwydwaith "
-"yn defnyddio DHCP ar gyfer awtogyfluniad, fe allwch ei gyflunio â llaw yn "
-"lle. Hefyd, mae rhai gweinyddion DHCP angen enw gweinydd DHCP penodol, felly "
-"gallwch ddewis rhoi'r fath enw gwesteiwr cyn ailgeisio DHCP."
+"O fan hyn fe allwch ddewis ailgeisio awtogyfluniad rhwydwaith DHCP (a all "
+"weithio os yw eich gweinydd DHCP yn cymryd amser hir i ymateb) nei i "
+"gyflunio'r rhwydwaith â llaw. Mae rhai gweinyddion DHCP yn mynnu fod enw "
+"gwesteiwr DHCP yn cael ei ddanfon gan y cleient, felly gallwch hefyd ddewis "
+"ailgeisio awtogyfluniad rhwydwaith DHCP gan ddefnyddio enw gwesteiwr a "
+"rhoddir gennych chi."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Mae awtogyfluniad rhwydwaith wedi llwyddo"
+msgstr "Methodd awtogyfluniad rhwydwaith"
 
 #. Type: note
 #. Description
@@ -566,12 +565,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Mae'n debygol nad yw eich rhwydwaith yn defnyddio'r protocol DHCP. Ar y llaw "
+"arall, efalli fod y gweinydd DHCP yn araf neu dyw eich caledwedd rhwydwaith "
+"ddim yn gweithio'n gywir."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Mynd ymlaen heb lwybr rhagosod?"
 
 #. Type: boolean
 #. Description
@@ -583,6 +585,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Roedd y awtogyfluniad rhwydwaith yn llwyddiannus. Fodd bynnag, ni chafodd "
+"llwybr rhagosod ei osod: ni yw'r system yn gwybod sut i gyfathrebu a "
+"gwesteion ar y Rhyngrwyd. Mi fydd hyn yn ei wneud hi'n amhosib i fynd ymlaen "
+"gyda'r sefydliad os nad oes gennych y CD-ROM Debian swyddogol cyntaf, "
+"CD-ROM 'Netinst', neu becynnau ar gael ar y rhwydwaith leol."
 
 #. Type: boolean
 #. Description
@@ -591,6 +598,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Os nad ydych chi'n siwr, ni ddylwch fynd ymlaen heb lwybr rhagosod: "
+"cysylltwch a gweinydd eich rhwydwaith lleol ynghylch y broblem hon."
 
 #. Type: text
 #. Description
