@@ -1,12 +1,5 @@
 # translation of debian-installer.po to Norsk (Nynorsk)
 # translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Norsk (Nynorsk)
-# translation of debian-installer.po to Nynorsk
 # translation of debian-installer.po to Norwegian Nynorsk
 # Norwegian Nynorsk messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
@@ -20,7 +13,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2003-12-26 16:55+0100\n"
+"PO-Revision-Date: 2003-12-28 13:56+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norsk (Nynorsk) <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -422,24 +415,21 @@ msgstr ""
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:46
-#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Er desse innstillingane rette?"
+msgstr "Dynamisk nettverksoppsett (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Nettverket blir no sett opp."
+msgstr "Set opp nettverket med dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
-msgstr "IP-adresse?"
+msgstr "IP-adresse:"
 
 #. Type: string
 #. Description
@@ -456,14 +446,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "Punkt-til-punkt-adresse?"
+msgstr "Punkt-til-punkt-adresse:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -478,9 +466,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "Nettmaske?"
+msgstr "Nettmaske:"
 
 #. Type: string
 #. Description
@@ -498,14 +485,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "Portnar?"
+msgstr "Standardrutar:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -514,8 +499,8 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Dette er ei IP-adresse (fire tal skilde med punktum) som høyrer til portnar-"
-"rutaren, òg kalla standardrutar.  All trafikk som går ut av lokalnettet (til "
+"Dette er ei IP-adresse (fire tal skilde med punktum) som høyrer til "
+"standardrutaren («gateway»). All trafikk som går ut av lokalnettet (til "
 "dømes til Internett) blir sendt gjennom denne rutaren. I sjeldne tilfelle "
 "kan det henda du ikkje har nokon rutar. I så fall skal feltet stå tomt. "
 "Dersom du ikkje veit kva du bør svara, kan du ta kontakt med "
@@ -525,21 +510,23 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Kjem ikkje fram til standardrutar"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "Det går ikkje an å koma fram til portnaren du oppgav."
+msgstr ""
+"Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller portnaradresse."
+msgstr ""
+"Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller adresse til "
+"standardrutar."
 
 #. Type: boolean
 #. Description
@@ -554,110 +541,28 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" grensesnitt     = ${interface}\n"
-" vertsnamn       = ${hostname}\n"
-" domene        = ${domain}\n"
-" ip-adresse...${ipadress}\n"
-" nettmaske     = ${netmask}\n"
-" portnar       = ${gateway}\n"
-" punk-til-punkt= ${pointopoint}\n"
+" grensesnitt    = ${interface}\n"
+" vertsnamn      = ${hostname}\n"
+" domene         = ${domain}\n"
+" ip-adresse...  = ${ipadress}\n"
+" nettmaske      = ${netmask}\n"
+" standardrutar  = ${gateway}\n"
+" punk-til-punkt = ${pointopoint}\n"
 " namnetenarar   = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-static.templates:62
-#, fuzzy
 msgid "Static network configuration"
-msgstr "Er desse innstillingane rette?"
+msgstr "Statisk nettverksoppsett"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Nettverket blir no sett opp."
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
-
-#, fuzzy
+msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
 
 #, fuzzy
 
