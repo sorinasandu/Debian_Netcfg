@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-23 09:46-0800\n"
-"PO-Revision-Date: 2004-02-23 17:56+0100\n"
+"PO-Revision-Date: 2004-02-24 14:34+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,6 @@ msgstr "ESSID wireless per a ${iface}:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -137,7 +136,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
@@ -148,18 +146,14 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Si la vostra clau WEP és una contrasenya, introduïu-la amb el prefix "
-"«s:» (sense les cometes)."
+msgstr "Si la vostra clau WEP té el format de contrasenya, introduïu-la amb el prefix «s:» (sense les cometes)."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -543,9 +537,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Malformed IP address"
-msgstr "Adreça IP:"
+msgstr "L'adreça IP és malformada"
 
 #. Type: error
 #. Description
@@ -553,7 +546,7 @@ msgstr "Adreça IP:"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
+msgstr "L'adreça IP que heu proveït és malformada. Haura d'estar en el format x.x.x.x on cada «x» no és més gran que 255. Si us plau, proveu de nou."
 
 #. Type: string
 #. Description
