@@ -82,8 +82,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     dhcp_client = DHCLIENT;
   else if (access("/sbin/pump", F_OK) == 0)
     dhcp_client = PUMP;
-  else if (access("/sbin/udhcpc", F_OK) == 0)
-    dhcp_client = UDHCPC;
   else {
     debconf_input(client, "critical", "netcfg/no_dhcp_client");
     debconf_go(client);
@@ -131,14 +129,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 	}
 
 	execlp("dhclient", "dhclient", "-1", interface, NULL);
-	break;
-
-      case UDHCPC:
-	if (dhostname)
-	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", "-H", dhostname, NULL);
-	else
-	  execlp("udhcpc", "udhcpc", "-i", interface, "-n", NULL);
-
 	break;
     }
     if (errno != 0)

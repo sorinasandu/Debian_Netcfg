@@ -25,7 +25,7 @@
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
-typedef enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhclient_t;
+typedef enum { DHCLIENT, DHCLIENT3, PUMP } dhclient_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd, skfd;

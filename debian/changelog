@@ -1,7 +1,12 @@
-netcfg (0.64) UNRELEASED; urgency=low
+netcfg (0.64) UNRELEASED; urgency=medium
 
   * Joshua Kwan
     - Split out all functions into static.c, dhcp.c, wireless.c.
+    - Remove dep alternative to busybox-cvs-udeb etc., since udhcpc is no
+      longer available in any initrd. This causes businesscard and netinst
+      installs to fail because busybox is already provided and hence gets
+      used.
+    - Remove udhcpc support in dhcp.c.
     - Port wireless fixes back to netcfg-static and netcfg-dhcp, which
       have been rather neglected lately.
     - Fix the GO_BACK interaction between WEP and ESSID configuration.
@@ -19,7 +24,7 @@ netcfg (0.64) UNRELEASED; urgency=low
     - If we didn't use one, see if the server is offering us one and seed
       netcfg/get_hostname with it. (Closes: #239121, #240701)
     - Failing that, bring the interface up and try to reverse-resolve
-      the IP address into a hostname. 
+      the IP address into a hostname.
     - For idempotency reasons, down all interfaces after finding each
       one so that we can start from a clean slate. (Probably deals with
       Bug#227722)
@@ -41,7 +46,7 @@ netcfg (0.64) UNRELEASED; urgency=low
   * Bastian Blank
     - Remove sleep.
 
- -- Bastian Blank <waldi@debian.org>  Sun, 16 May 2004 18:08:12 +0200
+ -- Joshua Kwan <joshk@triplehelix.org>  Sun, 16 May 2004 20:36:04 -0700
 
 netcfg (0.63) unstable; urgency=low
 
