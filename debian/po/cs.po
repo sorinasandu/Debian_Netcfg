@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-11 10:57+0200\n"
+"PO-Revision-Date: 2004-04-12 12:57+0200\n"
 "Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team: Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,6 @@ msgstr "Adresy jmenných serverù:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The nameservers you specify here are used to look up Internet hostnames. "
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
@@ -80,9 +79,11 @@ msgid ""
 "will be the first to be queried. If you don't want to use any nameserver, "
 "just leave this field blank."
 msgstr ""
-"Zadejte IP adresy (ne názvy) maximálnì tøí jmenných serverù oddìlené "
-"mezerami. Nepou¾ívejte èárky. Servery budou dotazovány v poøadí, v jakém je "
-"zadáte. Pokud nechcete pou¾ívat jmenné servery, nechte pole prázdné. "
+"Jmenné servery, které zde zadáte, slou¾í pro vyhledávání Internetových "
+"poèítaèù podle jejich jmen. Zadejte IP adresy (ne názvy) maximálnì tøí "
+"jmenných serverù oddìlené mezerami. Nepou¾ívejte èárky. Servery budou "
+"dotazovány v poøadí, v jakém je zadáte. Pokud nechcete pou¾ívat jmenné "
+"servery, nechte pole prázdné. "
 
 #. Type: select
 #. Description
@@ -688,6 +689,3 @@ msgstr "Statické nastavení sítì"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Nastavit sí» se statickými adresami"
-
-#~ msgid "Network Configuration"
-#~ msgstr "Nastavení sítì"
