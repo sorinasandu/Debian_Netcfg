@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 17:18+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
@@ -258,8 +258,8 @@ msgstr "Fehler"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Es ist ein Fehler aufgetreten und der Netzwerk-Konfigurationsprozess wurde "
 "abgebrochen. Sie können es vom Installations-Hauptmenü noch einmal versuchen."
@@ -343,92 +343,98 @@ msgstr "Drahtloses Ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet oder Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP über serielle Schnittstelle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP über parallele Schnittstelle."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Unbekanntes Interface"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Konfiguriere das Netzwerk ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Netzwerk einrichten"
 
@@ -483,7 +489,8 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -501,7 +508,8 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
+msgstr ""
+"Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnername versuchen"
 
 #. Type: select
 #. Choices
@@ -540,9 +548,9 @@ msgstr ""
 "Hier können Sie wählen, die DHCP-Netzwerk-Autokonfiguration nochmals zu "
 "probieren (was funktionieren könnte wenn Ihr DHCP-Server sehr langsam "
 "reagiert) oder das Netzwerk manuell zu konfigurieren. Manche DHCP-Server "
-"erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher können "
-"Sie auch wählen, die DHCP-Netzwerk-Autokonfiguration nochmals mit einem von "
-"Ihnen angegebenen Rechnernamen zu versuchen."
+"erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher "
+"können Sie auch wählen, die DHCP-Netzwerk-Autokonfiguration nochmals mit "
+"einem von Ihnen angegebenen Rechnernamen zu versuchen."
 
 #. Type: note
 #. Description
@@ -580,8 +588,8 @@ msgstr ""
 "Die Netzwerk-Autokonfiguration war erfolgreich. Es wurde allerdings keine "
 "Default-Route gesetzt: Das System wird nicht mit Rechnern im Internet "
 "kommunizieren können. Dies könnte ein Fortsetzen der Installation unmöglich "
-"machen, wenn Sie nicht die erste offizielle Debian-CD-ROM, eine "
-"'Netinst'-CD-ROM oder Pakete im lokalen Netzwerk haben."
+"machen, wenn Sie nicht die erste offizielle Debian-CD-ROM, eine 'Netinst'-CD-"
+"ROM oder Pakete im lokalen Netzwerk haben."
 
 #. Type: boolean
 #. Description
@@ -590,9 +598,9 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Wenn Sie nicht sicher sind, sollten Sie die Installation nicht ohne "
-"Default-Route fortsetzen: Informieren Sie Ihren Netzwerk-Administrator über "
-"das Problem."
+"Wenn Sie nicht sicher sind, sollten Sie die Installation nicht ohne Default-"
+"Route fortsetzen: Informieren Sie Ihren Netzwerk-Administrator über das "
+"Problem."
 
 #. Type: text
 #. Description
@@ -605,7 +613,8 @@ msgstr "Das drahtlose Netzwerk neu konfigurieren"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -720,7 +729,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP-Adresse, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -763,4 +773,3 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 
 #~ msgid "Dynamic network configuration (DHCP)"
 #~ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
-

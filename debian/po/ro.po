@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: d-i_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-03 03:27+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -263,8 +263,8 @@ msgstr "Eroare"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "A apărut o eroare şi procesul de configurare al reţelei a fost abandonat. "
 "Puteţi încerca din nou acest proces din meniul principal al instalării."
@@ -347,92 +347,98 @@ msgstr "Wireless ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet sau Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP prin linie serială"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP prin port paralel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punct-la Punct"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-în-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol ISDN Punct-la Punct"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-la-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-la-canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Vehicul de comunicare inter-utilizator"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interfaţă necunoscută"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Se configurează reţeaua ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configurează reţeaua"
 
@@ -543,10 +549,12 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Aic puteţi să alegeţi să reîncercaţi auto-configurarea nfigurarea reţelei prin DHCP(care s-ar putea să funcţioneze dacă serverul dvs.dhcp are nevoie de mult timp pentru a răspunde) sau să configuraţireţeaua manual. "
-"Unele servere DHCP necesită să se specifice un nume DHCP de către client, "
-"deci puteţi să alegeţi să introduceţi un asemenea nume înainte de a "
-"reîncerca DHCP."
+"Aic puteţi să alegeţi să reîncercaţi auto-configurarea nfigurarea reţelei "
+"prin DHCP(care s-ar putea să funcţioneze dacă serverul dvs.dhcp are nevoie "
+"de mult timp pentru a răspunde) sau să configuraţireţeaua manual. Unele "
+"servere DHCP necesită să se specifice un nume DHCP de către client, deci "
+"puteţi să alegeţi să introduceţi un asemenea nume înainte de a reîncerca "
+"DHCP."
 
 #. Type: note
 #. Description
@@ -560,7 +568,10 @@ msgstr "Autoconfigurarea reţelei a eşuat"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "Reţeaua dumneavostră probabil nu foloseşteprotocolul DHCP. Există şi posibilitatea ca serverul să fie lent sau o placa de reţea care nu funcţionează corect să încetinească sistemul."
+msgstr ""
+"Reţeaua dumneavostră probabil nu foloseşteprotocolul DHCP. Există şi "
+"posibilitatea ca serverul să fie lent sau o placa de reţea care nu "
+"funcţionează corect să încetinească sistemul."
 
 #. Type: boolean
 #. Description
@@ -577,7 +588,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "Autoconfigurarea reţelei a reuşit. Totuşi, nu s-a setat o rută implicită: sistemul nu ştie cum să comunice cu alte calculatoare de pe Internet. Acest lucru duce la imposibilitatea de a continua instalarea în cazul în care nu aveţi primul CD oficial Debian, un CD de tip Netinst sau pachete disponibile pe reţeaua locală."
+msgstr ""
+"Autoconfigurarea reţelei a reuşit. Totuşi, nu s-a setat o rută implicită: "
+"sistemul nu ştie cum să comunice cu alte calculatoare de pe Internet. Acest "
+"lucru duce la imposibilitatea de a continua instalarea în cazul în care nu "
+"aveţi primul CD oficial Debian, un CD de tip Netinst sau pachete disponibile "
+"pe reţeaua locală."
 
 #. Type: boolean
 #. Description
@@ -585,7 +601,9 @@ msgstr "Autoconfigurarea reţelei a reuşit. Totuşi, nu s-a setat o rută impli
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "Dacă nu sunteţi sigur, ar trebui să nu continuaţi fară o rută implicită: contactaţi administratorul reţelei localeîn legătură cu această problemă."
+msgstr ""
+"Dacă nu sunteţi sigur, ar trebui să nu continuaţi fară o rută implicită: "
+"contactaţi administratorul reţelei localeîn legătură cu această problemă."
 
 #. Type: text
 #. Description
@@ -713,7 +731,8 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -786,4 +805,3 @@ msgstr "Configurează reţeaua folosind adresare statică"
 #~ "Nu s-a găsit nici o adresă IP în timpul configurării automate cu DHCP. "
 #~ "Uneori serverele DHCP sunt foarte lente. Dacă doriţi, puteţi să încercaţi "
 #~ "din nou."
-

@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-03 13:09+0200\n"
 "Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -280,8 +280,8 @@ msgstr "Error"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Ocurrió un error y el proceso de configuración de la red ha sido abortado. "
 "Puede intentarlo de nuevo desde el menú principal de la instalación."
@@ -363,92 +363,98 @@ msgstr "Red inalámbrica (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP en linea serie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP en puerto paralelo"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo punto a punto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo punto a punto RDSI"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Comunicación vehículo entre-usuarios"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interfaz desconocida"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Configurando la red ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configurar la red"
 
@@ -558,7 +564,13 @@ msgid ""
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr "Desde aquí puede intentar reintentar su auto-configuración de la red a través de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en responder) o configurar su red manualmente. Puede también escoger introducir un nombre de sistema DHCP antes de reintentar la auto-configuración de red por DHCP ya que algunos servidores exigen que el cliente de DHCP les envíe un nombre de sistema DHCP específico."
+msgstr ""
+"Desde aquí puede intentar reintentar su auto-configuración de la red a "
+"través de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en "
+"responder) o configurar su red manualmente. Puede también escoger introducir "
+"un nombre de sistema DHCP antes de reintentar la auto-configuración de red "
+"por DHCP ya que algunos servidores exigen que el cliente de DHCP les envíe "
+"un nombre de sistema DHCP específico."
 
 #. Type: note
 #. Description
@@ -572,7 +584,10 @@ msgstr "Se produjo un fallo al realizar la auto-configuración de la red"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "Es posible que su red no utilice el protolo DHCP. Sino, es posible que el servidor de DHCP tarde en responder o que algún equipamiento de red no esté funcionando debidamente."
+msgstr ""
+"Es posible que su red no utilice el protolo DHCP. Sino, es posible que el "
+"servidor de DHCP tarde en responder o que algún equipamiento de red no esté "
+"funcionando debidamente."
 
 #. Type: boolean
 #. Description
@@ -589,7 +604,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "La auto-configuración de la red tuvo éxito. Sin embargo, no se ha establecido una ruta por omisión: el sistema no sabe cómo comunicarse con equipos en Internet. Esto impedirá que sea posible continuar con la instalación a no ser que tenga el primer CD-ROM oficial Debian, un CD-ROM 'Netinst' o todos los paquetes estén disponibles en la red local."
+msgstr ""
+"La auto-configuración de la red tuvo éxito. Sin embargo, no se ha "
+"establecido una ruta por omisión: el sistema no sabe cómo comunicarse con "
+"equipos en Internet. Esto impedirá que sea posible continuar con la "
+"instalación a no ser que tenga el primer CD-ROM oficial Debian, un CD-ROM "
+"'Netinst' o todos los paquetes estén disponibles en la red local."
 
 #. Type: boolean
 #. Description
@@ -597,7 +617,9 @@ msgstr "La auto-configuración de la red tuvo éxito. Sin embargo, no se ha esta
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "No debería continuar sin una ruta por defecto si no está seguro: contacte con su administrador de red local e infórmele de este problema."
+msgstr ""
+"No debería continuar sin una ruta por defecto si no está seguro: contacte "
+"con su administrador de red local e infórmele de este problema."
 
 #. Type: text
 #. Description

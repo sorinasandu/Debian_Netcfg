@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 22:51+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -239,8 +239,8 @@ msgstr "오류"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "오류가 발생했고 네트워크 설정 과정이 중지되었습니다. 설치 메인 메뉴에서 다시 "
 "시도할 수 있습니다."
@@ -322,92 +322,98 @@ msgstr "무선 네트워크 (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "이더넷 혹은 패스트 이더넷"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "토큰 링"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "시리얼 라인 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "병렬 포트 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 포인트 투 포인트 프로토콜"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "실제 채널 투 채널"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "하이퍼소켓"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "사용자간 통신 수단"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "알 수 없는 인터페이스"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "네트워크를 설정하는 중입니다 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "네트워크 설정"
 
@@ -516,7 +522,12 @@ msgid ""
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr "여기에서 DHCP 네트워크 자동 설정을 다시 시도하거나 (DHCP 서버가 응답하는 데 너무 느린 경우에 이렇게 하면 동작할 수도 있습니다) 아니면 네트워크를 수동으로 직접 설정할 수도 있습니다.  또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 사용해야 하는 경우가 있으므로, DHCP 네트워크 자동 설정을 다시 시도하기 전에 호스트 이름을 입력할 수도 있습니다."
+msgstr ""
+"여기에서 DHCP 네트워크 자동 설정을 다시 시도하거나 (DHCP 서버가 응답하는 데 "
+"너무 느린 경우에 이렇게 하면 동작할 수도 있습니다) 아니면 네트워크를 수동으"
+"로 직접 설정할 수도 있습니다.  또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 "
+"사용해야 하는 경우가 있으므로, DHCP 네트워크 자동 설정을 다시 시도하기 전에 "
+"호스트 이름을 입력할 수도 있습니다."
 
 #. Type: note
 #. Description
@@ -530,7 +541,9 @@ msgstr "네트워크 자동 설정이 실패했습니다"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "아마도 이 네트워크는 DHCP 프로토콜을 사용하지 않을 것입니다. 아니면, DHCP 서버가 너무 느리거나 네트워크 하드웨어가 동작하지 않는 경우일 수도 있습니다."
+msgstr ""
+"아마도 이 네트워크는 DHCP 프로토콜을 사용하지 않을 것입니다. 아니면, DHCP 서"
+"버가 너무 느리거나 네트워크 하드웨어가 동작하지 않는 경우일 수도 있습니다."
 
 #. Type: boolean
 #. Description
@@ -547,7 +560,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "네트워크 자동 설정이 성공했습니다. 하지만 기본 라우팅이 설정되어 있지 않습니다: 즉 현재 시스템은 인터넷에 있는 호스트와 통신하는 방법을 알 지 못합니다. 이렇게 되면 설치가 불가능합니다. 단, 공식 데비안 CD-ROM의 첫 번째 장이 있거나, 'netinst' CD-ROM이 있거나, 로컬 네트워크에 꾸러미가 있다면 설치가 가능합니다."
+msgstr ""
+"네트워크 자동 설정이 성공했습니다. 하지만 기본 라우팅이 설정되어 있지 않습니"
+"다: 즉 현재 시스템은 인터넷에 있는 호스트와 통신하는 방법을 알 지 못합니다. "
+"이렇게 되면 설치가 불가능합니다. 단, 공식 데비안 CD-ROM의 첫 번째 장이 있거"
+"나, 'netinst' CD-ROM이 있거나, 로컬 네트워크에 꾸러미가 있다면 설치가 가능합"
+"니다."
 
 #. Type: boolean
 #. Description
@@ -555,7 +573,9 @@ msgstr "네트워크 자동 설정이 성공했습니다. 하지만 기본 라�
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "잘 모르겠으면, 기본 라우팅 없이 진행하면 안 됩니다: 이 문제에 관해선ㄴ 로컬 네트워크의 관리자에게 문의하십시오."
+msgstr ""
+"잘 모르겠으면, 기본 라우팅 없이 진행하면 안 됩니다: 이 문제에 관해선ㄴ 로컬 "
+"네트워크의 관리자에게 문의하십시오."
 
 #. Type: text
 #. Description

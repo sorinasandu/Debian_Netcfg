@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 18:26+0300\n"
 "Last-Translator: George Papamichelakis <george@step.gr>\n"
 "Language-Team:  <debian-l10n-greek@lists.debian.org>\n"
@@ -27,7 +27,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 "\n"
 
 #. Type: boolean
@@ -171,7 +172,8 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
+msgstr ""
+"Φυσικά, αν το δίκτυό σας δε χρειάζεται κλειδί WEP, αφήστε το πεδίο κενό."
 
 #. Type: error
 #. Description
@@ -267,8 +269,8 @@ msgstr "Σφάλμα"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Κάποιο σφάλμα παρουσιάστηκε και ακυρώθηκε η διαδικασία ρύθμισης του δικτύου. "
 "Μπορείτε να ξαναπροσπαθήσετε από την αντίστοιχη επιλογή του κυρίως μενού της "
@@ -305,7 +307,8 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:109
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
+msgstr ""
+"Δίκτυο υποδομής (Διαχειριζόμενο), Τυχαίας Τοπολογίας (Ad-hoc) (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -353,92 +356,98 @@ msgstr "Ασύρματο ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ή Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP σειριακής σύνδεσης"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP παράλληλης θύρας"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Πρωτόκολλο σύνδεσης σημείου-προς-σημείο (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Πρωτόκολλο σύνδεσης ISDN σημείου-προς-σημείο (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Διασύνδεση διαύλων"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Πραγματική διασύνδεση διαύλων"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Πλαίσιο επικοινωνίας χρηστών"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Άγνωστη διασύνδεση"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Ρύθμιση δικτύου ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Ρυθμίση των παραμέτρων του δικτύου"
 
@@ -567,9 +576,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Στο δίκτυο σας προφανώς δεν χρησιμοποιείται το πρωτόκολλο DHCP. "
-"Αλλη αιτία μπορεί να είναι η αργή απόκριση του εξυπηρετητή "
-"ή πιθανόν κάποιο υλικό δεν λειτουργεί σωστά."
+"Στο δίκτυο σας προφανώς δεν χρησιμοποιείται το πρωτόκολλο DHCP. Αλλη αιτία "
+"μπορεί να είναι η αργή απόκριση του εξυπηρετητή ή πιθανόν κάποιο υλικό δεν "
+"λειτουργεί σωστά."
 
 #. Type: boolean
 #. Description
@@ -590,9 +599,8 @@ msgstr ""
 "Η αυτόματη ρύθμιση του δικτύου ήταν επιτυχής. Πάραυτα δεν έχει καθοριστεί "
 "προκαθορισμένη δρομολόγηση: το σύστημα δεν γνωρίζει πως να επικοινωνήσει με "
 "άλλους υπολογιστές στο Διαδίκτυο. Αυτό ίσως κάνει αδύνατη τη συνέχιση της "
-"διαδικασίας εγκατάστασης εκτός και αν διαθέτετε τον επίσημο "
-"πρώτο δίσκο της διανομής, ή ένα δίσκο 'Netinst ή τα απαραίτητα "
-"πακέτα σε ένα τοπικό δίκτυο."
+"διαδικασίας εγκατάστασης εκτός και αν διαθέτετε τον επίσημο πρώτο δίσκο της "
+"διανομής, ή ένα δίσκο 'Netinst ή τα απαραίτητα πακέτα σε ένα τοπικό δίκτυο."
 
 #. Type: boolean
 #. Description
@@ -601,10 +609,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Αν δεν είστε σίγουροι, μην συνεχίσετε χωρίς προκαθορισμένη "
-"δρομολόγηση: "
-"επικοινωνήστε με τον διαχειριστή του δικτύου σας σχετικά με αυτό "
-"το πρόβλημα."
+"Αν δεν είστε σίγουροι, μην συνεχίσετε χωρίς προκαθορισμένη δρομολόγηση: "
+"επικοινωνήστε με τον διαχειριστή του δικτύου σας σχετικά με αυτό το πρόβλημα."
 
 #. Type: text
 #. Description
@@ -731,7 +737,8 @@ msgstr "Η πύλη δικτύου που δώσατε δεν είναι προ�
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Πιθανόν να έγινε κάποιο λάθος κατά την εισαγωγή της διεύθυνσης IP, της "
 "μάσκας ή/και της πύλης δικτύου."
@@ -772,4 +779,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Χειροκίνητη ρύθμιση δικτύου με στατική διευθυνσιοδότηση"
-

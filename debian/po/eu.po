@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 23:12+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
@@ -155,7 +155,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr ""
+"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -163,7 +164,8 @@ msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik ga
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsik utzi behar duzu."
+msgstr ""
+"Noski zure kablegabeko sareak ez badu WEP koderik hutsik utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -257,8 +259,8 @@ msgstr "Errorea"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Errore bat gertatu da eta sare konfigurazio prozesua ezeztatu egin da. Zu "
 "instalazio menu nagusitik berriz saiatu zaitezke."
@@ -341,92 +343,98 @@ msgstr "Wireless ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet edo Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "linea serie IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "Ataka paralelo IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Puntuz Puntuko Protokoloa"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-IPv4-n"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Puntuz Puntuko Protokoloa"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Kanaletik-kanalera"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Egiazko Kanaletik-kanalera"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket-a"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Erabiltzaile arteko komunikazio modua"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interfaze ezezaguna"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Sarea Konfiguratzen ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Sarea konfiguratu"
 
@@ -480,7 +488,8 @@ msgstr "Ez da DHCP bezeroa aurkitu"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr ""
+"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
@@ -575,9 +584,9 @@ msgstr ""
 "Sare autokonfigurazioa arrakastatsuki burutu da. Hala ere ez da "
 "lehenetsitako atebiderik ezarri, beraz sistema ez daki nola harremanetan "
 "jarri intereneteko osatalariekin. Honek sistema instalatzea ezinezko egin "
-"dezake zuk ez baduzu 'sare instalatzaile' CD-ROM bat edo beharrezko "
-"diren debian pakete guztiak CD-ROM antzerako batetan edo sare lokalaren "
-"bidez eskuragarri ez badituzu."
+"dezake zuk ez baduzu 'sare instalatzaile' CD-ROM bat edo beharrezko diren "
+"debian pakete guztiak CD-ROM antzerako batetan edo sare lokalaren bidez "
+"eskuragarri ez badituzu."
 
 #. Type: boolean
 #. Description
@@ -586,8 +595,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ziur ez bazaude zuk ez zenuke lehenetsitako bide bat gabe jarraitu: "
-"zure sare kudeatzailearekin harremanetan jarri zaitez arazo honetaz berri emateko."
+"Ziur ez bazaude zuk ez zenuke lehenetsitako bide bat gabe jarraitu: zure "
+"sare kudeatzailearekin harremanetan jarri zaitez arazo honetaz berri emateko."
 
 #. Type: text
 #. Description
@@ -712,7 +721,8 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo "
 "atebidea sartzerakoan."
@@ -800,4 +810,3 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
 #~ "DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
 #~ "ebrriz saia zaitezke."
-

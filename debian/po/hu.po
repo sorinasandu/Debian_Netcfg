@@ -14,13 +14,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-02 23:44+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
@@ -257,8 +257,8 @@ msgstr "Hiba"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Hiba történt és a hálózat konfigurálásának folyamata megszakadt. A telepítés "
 "főmenüjéből újra megpróbálhatja."
@@ -344,92 +344,98 @@ msgstr "Drótnélküli ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet vagy Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "Soros vonali·IP (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "Párhuzamos vonali IP (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Pont-Pont Protokoll (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv4 feletti IPv6"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Pont-Pont Protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Csatorna-Csatorna (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Valós csatorna-csatorna"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Felhasználók közti kommunikációs eszköz (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Ismeretlen hálózati csatoló"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Hálózat konfigurálása folyamatban..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Hálózat konfigurálása"
 
@@ -539,10 +545,10 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Ismét kísérletet tehet a hálózat DHCP-vel végzett automatikus konfigurálására "
-"(erre pl. a hálózat DHCP-kiszolgálójának lassúsága adhat okot), vagy kézi "
-"módszerekhez is folyamodhat. Egyes DHCP-kiszolgálók csak egy "
-"bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen kiszolgálót próbál "
+"Ismét kísérletet tehet a hálózat DHCP-vel végzett automatikus "
+"konfigurálására (erre pl. a hálózat DHCP-kiszolgálójának lassúsága adhat "
+"okot), vagy kézi módszerekhez is folyamodhat. Egyes DHCP-kiszolgálók csak "
+"egy bizonyos DHCP-gépnév megadására válaszolnak, ha ilyen kiszolgálót próbál "
 "megszólítani, akkor a DHCP újrapróbálása előtt megadhatja a megfelelő "
 "gépnevet is."
 
@@ -559,8 +565,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"A hálózat valószínűleg nem DHCP-vel működik. Nem kizárható azonban "
-"a DHCP-kiszolgáló lassú volta, illetve a hálózatihardver-hiba sem."
+"A hálózat valószínűleg nem DHCP-vel működik. Nem kizárható azonban a DHCP-"
+"kiszolgáló lassú volta, illetve a hálózatihardver-hiba sem."
 
 #. Type: boolean
 #. Description
@@ -578,12 +584,12 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"A hálózat automatikus konfigurálása sikeresen lezajlott. Alapértelmezett útvonal "
-"megállapítására azonban nem került sor, a rendszer így nem tud az Interneten "
-"levő gépekkel kapcsolatot teremteni. Vagyis a telepítés sem tud folytatódni, "
-"hacsak nincs kéznél a Debian CD-ROM-telepítőkészlet első lemeze vagy egy ún. "
-"'Netinst' CD-ROM, vagy pedig a helyi hálóról ki nem lehet pótolni a kellő "
-"csomagokat."
+"A hálózat automatikus konfigurálása sikeresen lezajlott. Alapértelmezett "
+"útvonal megállapítására azonban nem került sor, a rendszer így nem tud az "
+"Interneten levő gépekkel kapcsolatot teremteni. Vagyis a telepítés sem tud "
+"folytatódni, hacsak nincs kéznél a Debian CD-ROM-telepítőkészlet első lemeze "
+"vagy egy ún. 'Netinst' CD-ROM, vagy pedig a helyi hálóról ki nem lehet "
+"pótolni a kellő csomagokat."
 
 #. Type: boolean
 #. Description
@@ -592,9 +598,9 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Ha bizonytalan a helyes döntésben, ne lépjen tovább alapértelmezett "
-"útvonal nélkül: a probléma alapos megoldása érdekében inkább "
-"érdeklődjön rendszere adminisztrátoránál."
+"Ha bizonytalan a helyes döntésben, ne lépjen tovább alapértelmezett útvonal "
+"nélkül: a probléma alapos megoldása érdekében inkább érdeklődjön rendszere "
+"adminisztrátoránál."
 
 #. Type: text
 #. Description

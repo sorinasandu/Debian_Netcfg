@@ -253,7 +253,18 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
     char template[256], *ptr = NULL;
 
     if ((ptr = find_in_devnames(ifp)) != NULL)
+    {
+      debconf_metaget(client, "netcfg/internal-wireless", "description");
+      
+      if (is_wireless_iface(ifp))
+      {
+        size_t len = strlen(ptr) + strlen(client->value) + 4;
+        ptr = realloc(ptr, len);
+
+        di_snprintfcat(ptr, len, " (%s)", client->value);
+      }
       return ptr; /* already strdup'd */
+    }
     
     if (strlen(ifp) < 100) {
       if (!is_wireless_iface(ifp))

@@ -17,14 +17,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 18:10+0300\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
@@ -260,8 +260,8 @@ msgstr "Virhe"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Tapahtui virhe ja verkon asetusten teko on keskeytetty. Voit yrittää "
 "uudestaan asennusohjelman päävalikosta."
@@ -345,92 +345,98 @@ msgstr "Langaton ethernet (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet tai Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "Sarjalinja-IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "Rinnakkaisportin IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Kaksipisteyhteyskäytäntö (point-to-point)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN-kaksipisteyhteyskäytäntö (point-to-point)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Oikea channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Tuntematon sovitin"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Tehdään verkkoasetukset ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Tee verkkoasetukset"
 
@@ -542,9 +548,9 @@ msgid ""
 msgstr ""
 "Tässä voit yrittää uudelleen verkon asetusten tekoa automaattisesti DHCP:llä "
 "(se voi toimia jos DHCP-palvelin vastaa hitaasti) tai tehdä verkon asetukset "
-"itse. Jotkin DHCP-palvelimet vaativat asiakkaan lähettämän konenimen, "
-"joten voit kokeilla myös verkon asetusten tekoa automaattiseti DHCP:llä "
-"antamasi konenimen kera."
+"itse. Jotkin DHCP-palvelimet vaativat asiakkaan lähettämän konenimen, joten "
+"voit kokeilla myös verkon asetusten tekoa automaattiseti DHCP:llä antamasi "
+"konenimen kera."
 
 #. Type: note
 #. Description
@@ -558,8 +564,9 @@ msgstr "Verkkoasetusten teko automaattisesti epäonnistui"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "Verkko ei luultavasti käytä DHCP-protokollaa, tai sitten DHCP-palvelin"
-"saattaa olla hidas tai jokin verkon laite ei toimi kunnolla."
+msgstr ""
+"Verkko ei luultavasti käytä DHCP-protokollaa, tai sitten DHCP-"
+"palvelinsaattaa olla hidas tai jokin verkon laite ei toimi kunnolla."
 
 #. Type: boolean
 #. Description
@@ -576,11 +583,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "Verkon asetusten teko automaattisesti onnistui. Oletusreittiä ei kuitenkaan "
+msgstr ""
+"Verkon asetusten teko automaattisesti onnistui. Oletusreittiä ei kuitenkaan "
 "asetettu: järjestelmä ei tiedä miten ollaan yhteydessä Internetin koneiden "
-"kanssa. Tämän takia asennuksen jatkaminen on mahdotonta paitsi jos"
-"käytössä on ensimmäinen virallinen Debian-romppu, \"Netinst\"-romppu tai"
-"asennespaketit ovat saatavilla paikallisverkosta. "
+"kanssa. Tämän takia asennuksen jatkaminen on mahdotonta paitsi joskäytössä "
+"on ensimmäinen virallinen Debian-romppu, \"Netinst\"-romppu "
+"taiasennespaketit ovat saatavilla paikallisverkosta. "
 
 #. Type: boolean
 #. Description
@@ -588,8 +596,9 @@ msgstr "Verkon asetusten teko automaattisesti onnistui. Oletusreittiä ei kuiten
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "Jos olet epävarma, ei pitäisi jatkaa ilman oletusreittiä: ota yhteys"
-"verkon vastuuhenkilöön tässä asiassa. "
+msgstr ""
+"Jos olet epävarma, ei pitäisi jatkaa ilman oletusreittiä: ota yhteysverkon "
+"vastuuhenkilöön tässä asiassa. "
 
 #. Type: text
 #. Description

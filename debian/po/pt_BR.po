@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-03 12:33-0300\n"
 "Last-Translator: André Luís Lopes <andrelop@debian.org>\n"
 "Language-Team: Debian-BR Project <debian-l10n-portuguese@lists.debian.org>\n"
@@ -257,8 +257,8 @@ msgstr "Erro"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Um erro ocorreu e o processo de configuração de rede foi abortado. Você pode "
 "tentar iniciá-lo novamente a partir do menu principal."
@@ -341,92 +341,98 @@ msgstr "Rede sem fio (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ou Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP Linha-Serial"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP Porta-Paralela"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-em-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo ISDN Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-a-Canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-a-Canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Veículo de comunicação inter-usuário"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interface desconhecida"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "Configurando a rede ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configurar a rede"
 
@@ -559,8 +565,8 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "Sua rede provavelmente não está utilizando o protocolo DHCP. "
-"Alternativamente, o servidor DHCP pode ser lento ou algum hardware de "
-"rede pode não estar funcionando corretamente."
+"Alternativamente, o servidor DHCP pode ser lento ou algum hardware de rede "
+"pode não estar funcionando corretamente."
 
 #. Type: boolean
 #. Description
@@ -579,10 +585,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "A autoconfiguração de rede teve sucesso. Porém, nenhuma rota padrão foi "
-"definida : o sistema não sabe como se comunicar com hosts na Internet. "
-"Isto faz com que seja impossível continuar a instalação a menos que "
-"você possua o primeiro CD-ROM oficial do Debian, um CD-ROM do tipo "
-"'Netinst' ou pacotes disponíveis em sua rede local."
+"definida : o sistema não sabe como se comunicar com hosts na Internet. Isto "
+"faz com que seja impossível continuar a instalação a menos que você possua o "
+"primeiro CD-ROM oficial do Debian, um CD-ROM do tipo 'Netinst' ou pacotes "
+"disponíveis em sua rede local."
 
 #. Type: boolean
 #. Description
@@ -591,9 +597,9 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Em caso de dúvidas, você não deverá continuar sem uma rota padrão : "
-"entre em contato com o administrador de sua rede local para questioná-lo "
-"sobre esse problema."
+"Em caso de dúvidas, você não deverá continuar sem uma rota padrão : entre em "
+"contato com o administrador de sua rede local para questioná-lo sobre esse "
+"problema."
 
 #. Type: text
 #. Description

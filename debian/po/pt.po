@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.72\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-03 18:46+0000\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -198,7 +198,8 @@ msgstr "Nome do computador:"
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, introduza o nome do computador (hostname) para este sistema."
+msgstr ""
+"Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
@@ -248,8 +249,8 @@ msgstr "Erro"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "Ocorreu um erro e o processo de configuração de rede foi terminado. Pode "
 "tentar iniciá-lo novamente a partir do menu principal."
@@ -332,92 +333,98 @@ msgstr "Rede sem fio (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ou Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP Linha-serie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP Porta-Paralela"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-em-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo ISDN Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-a-Canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-a-Canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Veículo de comunicação inter-utilizador"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interface desconhecido"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "A configurar a rede ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configurar a rede"
 
@@ -472,7 +479,8 @@ msgstr "Não foi encontrado nenhum cliente DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
+msgstr ""
+"Não foi encontrado nenhum cliente DHCP. Este pacote requer o pump ou o dhcp-"
 "client. (Cliente DHCP)"
 
 #. Type: error
@@ -567,10 +575,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "A autoconfiguração da rede teve sucesso. No entanto, não está definido "
-"nenhum route: o sistema não sabe como comunicar com hosts na Internet. "
-"Isto vai fazer com que seja impossível continuar com a instalação a menos "
-"que tenha o primeiro CD-ROM Debian oficial, um CD-ROM 'Netinst', ou os "
-"pacotes disponíveis na rede local."
+"nenhum route: o sistema não sabe como comunicar com hosts na Internet. Isto "
+"vai fazer com que seja impossível continuar com a instalação a menos que "
+"tenha o primeiro CD-ROM Debian oficial, um CD-ROM 'Netinst', ou os pacotes "
+"disponíveis na rede local."
 
 #. Type: boolean
 #. Description
@@ -579,8 +587,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Se não estiver seguro, não deve continuar sem um route pré-definido: contacte "
-"o seu administrador da rede local acerca deste problema."
+"Se não estiver seguro, não deve continuar sem um route pré-definido: "
+"contacte o seu administrador da rede local acerca deste problema."
 
 #. Type: text
 #. Description

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-07-01 00:25-0700\n"
+"POT-Creation-Date: 2004-07-08 16:07-0700\n"
 "PO-Revision-Date: 2004-07-01 19:15+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -252,8 +252,8 @@ msgstr "Error"
 #. Description
 #: ../netcfg-common.templates:93
 msgid ""
-"An error occurred and the network configuration process has been aborted. You "
-"may retry it from the installation main menu."
+"An error occurred and the network configuration process has been aborted. "
+"You may retry it from the installation main menu."
 msgstr ""
 "S'ha produït un error i s'ha avortat el procés de configuració de la xarxa. "
 "Podeu tornar a intentar-ho des del menú principal de la instal·lació."
@@ -337,93 +337,99 @@ msgstr "Ethernet Wireless (802.11x)"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:139
+msgid "wireless"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../netcfg-common.templates:143
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o ethernet ràpida"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:147
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:151
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:155
 msgid "Serial-line IP"
 msgstr "IP per línia sèrie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:159
 msgid "Parallel-port IP"
 msgstr "IP per port paral·lel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:163
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:167
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:171
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt de XDSI"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:175
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:179
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 # La veritat, no se si s'ha de traduir moltes d'aquestes...
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:183
 msgid "Hypersocket"
 msgstr "Hipersòcol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:187
 msgid "Inter-user communication vehicle"
 msgstr "Vehicle de comunicació entre usuaris"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:191
 msgid "Unknown interface"
 msgstr "Interfície desconeguda"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:196
 msgid "Configuring network ..."
 msgstr "S'està configurant la xarxa..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:197
+#: ../netcfg-common.templates:201
 msgid "Configure the network"
 msgstr "Configura la xarxa"
 
@@ -552,7 +558,10 @@ msgstr "La configuració automàtica de la xarxa ha fallat"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "És probable que la vostra xarxa no estiga utilitzant el protocol DHCP. Alternativament, el servidor de DHCP pot ser lent o algun maquinari de xarxa no està funcionant correctament."
+msgstr ""
+"És probable que la vostra xarxa no estiga utilitzant el protocol DHCP. "
+"Alternativament, el servidor de DHCP pot ser lent o algun maquinari de xarxa "
+"no està funcionant correctament."
 
 #. Type: boolean
 #. Description
@@ -569,7 +578,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "La configuració de la xarxa ha tingut èxit. No obstant, no s'ha establert cap ruta per defecte: el sistema no sap com comunicar-se amb els ordinadors a Internet. Això farà que siga impossible continuar amb la instal·lació si no teniu el primer CD-ROM de Debian oficial, un CD-ROM «Netinstl», o els paquets disponibles a la xarxa local."
+msgstr ""
+"La configuració de la xarxa ha tingut èxit. No obstant, no s'ha establert "
+"cap ruta per defecte: el sistema no sap com comunicar-se amb els ordinadors "
+"a Internet. Això farà que siga impossible continuar amb la instal·lació si "
+"no teniu el primer CD-ROM de Debian oficial, un CD-ROM «Netinstl», o els "
+"paquets disponibles a la xarxa local."
 
 #. Type: boolean
 #. Description
@@ -577,7 +591,9 @@ msgstr "La configuració de la xarxa ha tingut èxit. No obstant, no s'ha establ
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "Si no esteu segur, no haurieu de continuar sense una ruta per defecte: consulteu el vostre administrador de xarxa local per aquest problema."
+msgstr ""
+"Si no esteu segur, no haurieu de continuar sense una ruta per defecte: "
+"consulteu el vostre administrador de xarxa local per aquest problema."
 
 #. Type: text
 #. Description
