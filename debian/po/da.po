@@ -1,24 +1,27 @@
 # Danish messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Claus Hindsgaul <claus_h@image.dk>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-16 08:07+0200\n"
-"PO-Revision-Date: 2004-08-17 13:24+0200\n"
-"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
-"Language-Team: Debian L10n Danish <debian-l10n-danish@lists.debian.org>\n"
+"PO-Revision-Date: 2004-08-17 21:09+0200\n"
+"Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
+"Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "SÃ¦t netvÃ¦rket op via DHCP?"
+msgstr "Sæt netværket op via DHCP?"
 
 #. Type: boolean
 #. Description
@@ -30,16 +33,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"NetvÃ¦rket kan enten sÃ¦ttes op med DHCP eller ved manuelt at angive alle "
-"oplysningerne. Hvis du vÃ¦lger DHCP, og installationsprogrammet ikke kan fÃ¥ "
-"en brugbar opsÃ¦tning fra en DHCP-server pÃ¥ dit netvÃ¦rk, fÃ¥r du mulighed for "
-"at sÃ¦tte netvÃ¦rket op manuelt, nÃ¥r det er forsÃ¸gt at sÃ¦tte det op med DHCP."
+"Netværket kan enten sættes op med DHCP eller ved manuelt at angive alle "
+"oplysningerne. Hvis du vælger DHCP, og installationsprogrammet ikke kan få "
+"en brugbar opsætning fra en DHCP-server på dit netværk, får du mulighed for "
+"at sætte netværket op manuelt, når det er forsøgt at sætte det op med DHCP."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "DomÃ¦nenavn:"
+msgstr "Domænenavn:"
 
 #. Type: string
 #. Description
@@ -50,10 +53,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"DomÃ¦nenavnet er den del af din internetadresse, der er til hÃ¸jre for dit "
-"maskinnavn. Det ender oftest pÃ¥ .com, .net, .edu, .org eller .dk. Hvis du er "
-"pÃ¥ et hjemmenetvÃ¦rk, kan du selv finde pÃ¥ et, men sÃ¸rg for at alle dine "
-"computere bruger samme domÃ¦nenavn."
+"Domænenavnet er den del af din internetadresse, der er til højre for dit "
+"maskinnavn. Det ender oftest på .com, .net, .edu, .org eller .dk. Hvis du er "
+"på et hjemmenetværk, kan du selv finde på et, men sørg for at alle dine "
+"computere bruger samme domænenavn."
 
 #. Type: string
 #. Description
@@ -71,16 +74,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Navneservere bruges til at slÃ¥ vÃ¦rtstnavne pÃ¥ internettet op med. Angiv IP-"
-"adressesrne pÃ¥ op til tre navneservere adskilt med mellemrum. Brug ikke "
-"kommaer. Den fÃ¸rste server i listen vil blive forespurgt fÃ¸rst. Hvis du ikke "
-"Ã¸nsker at bruge navneservere, kan du  blot lade dette felt stÃ¥ tomt."
+"Navneservere bruges til at slå værtstnavne på internettet op med. Angiv IP-"
+"adressesrne på op til tre navneservere adskilt med mellemrum. Brug ikke "
+"kommaer. Den første server i listen vil blive forespurgt først. Hvis du ikke "
+"ønsker at bruge navneservere, kan du  blot lade dette felt stå tomt."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "PrimÃ¦rt netkort:"
+msgstr "Primært netkort:"
 
 #. Type: select
 #. Description
@@ -89,14 +92,14 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface while installing Debian."
 msgstr ""
-"Dit system har flere netkort. VÃ¦lg det, der skal bruges som det primÃ¦re "
+"Dit system har flere netkort. Vælg det, der skal bruges som det primære "
 "netkort under installationen af Debian."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:38
 msgid "Wireless ESSID for ${iface}:"
-msgstr "TrÃ¥dlÃ¸s ESSID til ${iface}:"
+msgstr "Trådløs ESSID til ${iface}:"
 
 #. Type: string
 #. Description
@@ -106,15 +109,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} er et trÃ¥dlÃ¸st netkort. Angiv navnet (sÃ¥kaldt ESSID) pÃ¥ det "
-"trÃ¥dlÃ¸se netvÃ¦rk, du vil have ${iface} til at bruge. Hvis du vil bruge "
-"ethvert tilgÃ¦ngeligt netvÃ¦rk, skal du ikke skrive noget her."
+"${iface} er et trådløst netkort. Angiv navnet (såkaldt ESSID) på det "
+"trådløse netværk, du vil have ${iface} til at bruge. Hvis du vil bruge "
+"ethvert tilgængeligt netværk, skal du ikke skrive noget her."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:45
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP-nÃ¸gle til den trÃ¥dlÃ¸se enhed ${iface}:"
+msgstr "WEP-nøgle til den trådløse enhed ${iface}:"
 
 #. Type: string
 #. Description
@@ -123,8 +126,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Angiv WEB-sikkerhedsnÃ¸gle for den trÃ¥dlÃ¸se enhed ${iface}, hvis der skal "
-"bruges en sÃ¥dan nÃ¸gle. Der er to mÃ¥der at gÃ¸re dette pÃ¥:"
+"Angiv WEB-sikkerhedsnøgle for den trådløse enhed ${iface}, hvis der skal "
+"bruges en sådan nøgle. Der er to måder at gøre dette på:"
 
 #. Type: string
 #. Description
@@ -133,7 +136,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n is a "
 "number, just enter it as it is into this field."
 msgstr ""
-"Din WEB-nÃ¸gle har et af formaterne 'nnnn-nnnn-nn' eller 'nnnnnnnn', hvor n "
+"Din WEB-nøgle har et af formaterne 'nnnn-nnnn-nn' eller 'nnnnnnnn', hvor n "
 "er et tal. Skriv det blot, som det er, i dette felt."
 
 #. Type: string
@@ -143,8 +146,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Hvis din WEP-nÃ¸gles format er udformet som en adgangskode, skriv da \"s:\" "
-"foran WEP-nÃ¸glen (uden gÃ¥seÃ¸jnene)."
+"Hvis din WEP-nøgles format er udformet som en adgangskode, skriv da \"s:\" "
+"foran WEP-nøglen (uden gåseøjnene)."
 
 #. Type: string
 #. Description
@@ -153,14 +156,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Hvis der ikke er nogen WEP-nÃ¸gle til dit trÃ¥dlÃ¸se netvÃ¦rk, skal du blot lade "
-"feltet stÃ¥ tomt."
+"Hvis der ikke er nogen WEP-nøgle til dit trådløse netværk, skal du blot lade "
+"feltet stå tomt."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:60
 msgid "Invalid WEP key"
-msgstr "Ugyldig WEP-nÃ¸gle"
+msgstr "Ugyldig WEP-nøgle"
 
 #. Type: error
 #. Description
@@ -169,8 +172,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-nÃ¸glen \"${webkey}\" er ugyldig. LÃ¦s omhyggeligt instruktionerne pÃ¥ "
-"nÃ¦ste side, om hvordan du angiver din WEP-nÃ¸gle korrekt, og prÃ¸v igen."
+"WEP-nøglen \"${webkey}\" er ugyldig. Læs omhyggeligt instruktionerne på "
+"næste side, om hvordan du angiver din WEP-nøgle korrekt, og prøv igen."
 
 #. Type: error
 #. Description
@@ -185,20 +188,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID'en \"${essid}\" er ugyldig. ESSID'er mÃ¥ hÃ¸jst vÃ¦re pÃ¥ 32 tegn og kan "
+"ESSID'en \"${essid}\" er ugyldig. ESSID'er må højst være på 32 tegn og kan "
 "indeholde alle slags tegn."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Hostname:"
-msgstr "VÃ¦rtsnavn:"
+msgstr "Værtsnavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:74
 msgid "Please enter the hostname for this system."
-msgstr "Angiv dette systems vÃ¦rtsnavn."
+msgstr "Angiv dette systems værtsnavn."
 
 #. Type: string
 #. Description
@@ -209,16 +212,16 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"VÃ¦rtsnavnet er et enkelt ord, der identificerer dit system pÃ¥ netvÃ¦rket. "
-"Hvis du ikke ved, hvad dit vÃ¦rtsnavn bÃ¸r vÃ¦re, bÃ¸r du spÃ¸rge din "
-"netvÃ¦rksadministrator. Hvis du laver dit eget hjemmenetvÃ¦rk, kan du selv "
-"finde pÃ¥ et navn."
+"Værtsnavnet er et enkelt ord, der identificerer dit system på netværket. "
+"Hvis du ikke ved, hvad dit værtsnavn bør være, bør du spørge din "
+"netværksadministrator. Hvis du laver dit eget hjemmenetværk, kan du selv "
+"finde på et navn."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Invalid hostname"
-msgstr "Ugyldigt vÃ¦rtsnavn"
+msgstr "Ugyldigt værtsnavn"
 
 #. Type: error
 #. Description
@@ -234,8 +237,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Gyldige vÃ¦rtsnavne indeholder kun tallene 0-9, de smÃ¥ bogstaver a-z og "
-"minustegn. Det skal vÃ¦re mellem 2 og 63 tegn langt, og mÃ¥ hverken begynde "
+"Gyldige værtsnavne indeholder kun tallene 0-9, de små bogstaver a-z og "
+"minustegn. Det skal være mellem 2 og 63 tegn langt, og må hverken begynde "
 "eller ende med et minustegn."
 
 #. Type: error
@@ -251,7 +254,7 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Der opstod en fejl, og netvÃ¦rksopsÃ¦tningen er blevet afbrudt. Du kan forsÃ¸ge "
+"Der opstod en fejl, og netværksopsætningen er blevet afbrudt. Du kan forsøge "
 "igen fra installationens hovedmenu."
 
 #. Type: error
@@ -268,7 +271,7 @@ msgid ""
 "a network device."
 msgstr ""
 "Der blev ikke fundet nogen netkort. Installationssystemet var ikke i stand "
-"til at finde nogen netvÃ¦rksenhed."
+"til at finde nogen netværksenhed."
 
 #. Type: error
 #. Description
@@ -277,15 +280,15 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Det kan vÃ¦re nÃ¸dvendigt at indlÃ¦se et bestemt modul til dit netkort, hvis du "
-"virkelig har sÃ¥dan et. For at gÃ¸re dette, skal du gÃ¥ tilbage til trinnet for "
-"sÃ¸gning efter netvÃ¦rksudstyr."
+"Det kan være nødvendigt at indlæse et bestemt modul til dit netkort, hvis du "
+"virkelig har sådan et. For at gøre dette, skal du gå tilbage til trinnet for "
+"søgning efter netværksudstyr."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
 msgid "Continue without configuring the network?"
-msgstr "FortsÃ¦t uden at sÃ¦tte netvÃ¦rket op?"
+msgstr "Fortsæt uden at sætte netværket op?"
 
 #. Type: boolean
 #. Description
@@ -297,23 +300,23 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
-"${IFACE} lader ikke til at vÃ¦re forbundet med nogen form for netvÃ¦rk. Det "
+"${IFACE} lader ikke til at være forbundet med nogen form for netværk. Det "
 "kan skyldes et manglende netkabel eller at netkortet ikke fungerer "
-"ordentligt. Du kan enten udsÃ¦tte opsÃ¦tningen af netvÃ¦rket indtil du "
-"genstarter maskinen i Debian og benytte vÃ¦rktÃ¸jet etherconf, eller sÃ¦tte "
-"netvÃ¦rket op statisk. Du kan ogsÃ¥ gÃ¥ tilbage og vÃ¦lge et andet netkort."
+"ordentligt. Du kan enten udsætte opsætningen af netværket indtil du "
+"genstarter maskinen i Debian og benytte værktøjet etherconf, eller sætte "
+"netværket op statisk. Du kan også gå tilbage og vælge et andet netkort."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:119
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastruktur (Styret) netvÃ¦rk, Ad-hoc netvÃ¦rk (vÃ¦rt-til-vÃ¦rt)"
+msgstr "Infrastruktur (Styret) netværk, Ad-hoc netværk (vært-til-vært)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:120
 msgid "Wireless network kind:"
-msgstr "TrÃ¥dlÃ¸s netvÃ¦rkstype:"
+msgstr "Trådløs netværkstype:"
 
 #. Type: select
 #. Description
@@ -323,21 +326,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"TrÃ¥dlÃ¸se netvÃ¦rk er enten styrede ('managed') eller ad-hoc. Hvis du bruger "
-"et Ã¦gte adgangspunkt, er dit netvÃ¦rk styret. Hvis en anden computer er dit "
-"adgangspunkt, sÃ¥ kan dit netvÃ¦rk vÃ¦re ad-hoc."
+"Trådløse netværk er enten styrede ('managed') eller ad-hoc. Hvis du bruger "
+"et ægte adgangspunkt, er dit netværk styret. Hvis en anden computer er dit "
+"adgangspunkt, så kan dit netværk være ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:127
 msgid "Wireless network configuration"
-msgstr "TrÃ¥dlÃ¸s netvÃ¦rksopsÃ¦tning"
+msgstr "Trådløs netværksopsætning"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:131
 msgid "Searching for wireless access points ..."
-msgstr "SÃ¸ger efter trÃ¥dlÃ¸se stationer (\"access points\") ..."
+msgstr "Søger efter trådløse stationer (\"access points\") ..."
 
 #. Type: boolean
 #. Description
@@ -349,13 +352,13 @@ msgstr "<ingen>"
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Wireless ethernet (802.11x)"
-msgstr "TrÃ¥dlÃ¸st netvÃ¦rk (802.11x)"
+msgstr "Trådløst netværk (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:149
 msgid "wireless"
-msgstr "trÃ¥dlÃ¸st"
+msgstr "trådløst"
 
 #. Type: text
 #. Description
@@ -415,7 +418,7 @@ msgstr "Channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:189
 msgid "Real channel-to-channel"
-msgstr "Ã†gte channel-to-channel"
+msgstr "Ægte channel-to-channel"
 
 #. Type: text
 #. Description
@@ -440,20 +443,20 @@ msgstr "Ukendt netkort"
 #. Prebaseconfig progress bar item
 #: ../netcfg-common.templates:206
 msgid "Configuring network ..."
-msgstr "SÃ¦tter netvÃ¦rket op ..."
+msgstr "Sætter netværket op ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:211
 msgid "Configure the network"
-msgstr "SÃ¦t netvÃ¦rket op"
+msgstr "Sæt netværket op"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP-vÃ¦rtsnavn:"
+msgstr "DHCP-værtsnavn:"
 
 #. Type: string
 #. Description
@@ -462,20 +465,20 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Du kan vÃ¦re nÃ¸dt til at angive et DHCP-vÃ¦rtsnavn. Hvis du bruger et "
+"Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et "
 "kabelmodem, skal du muligvis angive et kontonummer her."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "De fleste andre brugere kan blot lade feltet vÃ¦re tomt."
+msgstr "De fleste andre brugere kan blot lade feltet være tomt."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "SÃ¦tter netvÃ¦rket op via DHCP"
+msgstr "Sætter netværket op via DHCP"
 
 #. Type: text
 #. Description
@@ -487,7 +490,7 @@ msgstr "Dette kan tage nogen tid."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Den automatiske netvÃ¦rksopsÃ¦tning lykkedes"
+msgstr "Den automatiske netværksopsætning lykkedes"
 
 #. Type: error
 #. Description
@@ -500,31 +503,31 @@ msgstr "Fandt ingen DHCP-klient"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Fandt ingen DHCP-klient. Denne pakke krÃ¦ver pakken pump eller dhcp-client."
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "OpsÃ¦tningen af DHCP afbrydes."
+msgstr "Opsætningen af DHCP afbrydes."
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration"
-msgstr "ForsÃ¸g automatisk netvÃ¦rksopsÃ¦tning igen"
+msgstr "Forsøg automatisk netværksopsætning igen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "ForsÃ¸g automatisk netvÃ¦rksopsÃ¦tning igen med et DHCP-vÃ¦rtsnavn"
+msgstr "Forsøg automatisk netværksopsætning igen med et DHCP-værtsnavn"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Configure network manually"
-msgstr "SÃ¦t netvÃ¦rket op manuelt"
+msgstr "Sæt netværket op manuelt"
 
 #. Type: select
 #. Choices
@@ -536,13 +539,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Do not configure the network at this time"
-msgstr "SÃ¦t ikke netvÃ¦rket op pÃ¥ nuvÃ¦rende tidspunkt"
+msgstr "Sæt ikke netværket op på nuværende tidspunkt"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
 msgid "Network configuration method:"
-msgstr "NetvÃ¦rksopsÃ¦tningsmetode:"
+msgstr "Netværksopsætningsmetode:"
 
 #. Type: select
 #. Description
@@ -554,17 +557,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Her kan du vÃ¦lge at gentage forsÃ¸get pÃ¥ automatisk netvÃ¦rksopsÃ¦tning med "
+"Her kan du vælge at gentage forsøget på automatisk netværksopsætning med "
 "DHCP (hvilket muligvis vil virke, hvis din DHCP-server er lang tid om at "
-"svare) eller sÃ¦tte netvÃ¦rket op manuelt. Visse DHCP-servere krÃ¦ver at "
-"klienten sender et DHCP-vÃ¦rtsnavn, sÃ¥ du kan ogsÃ¥ vÃ¦lge at forsÃ¸ge den "
-"automatiske opsÃ¦tning med DHCP igen med et vÃ¦rtsnavn, du angiver."
+"svare) eller sætte netværket op manuelt. Visse DHCP-servere kræver at "
+"klienten sender et DHCP-værtsnavn, så du kan også vælge at forsøge den "
+"automatiske opsætning med DHCP igen med et værtsnavn, du angiver."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
 msgid "Network autoconfiguration failed"
-msgstr "Den automatiske netvÃ¦rksopsÃ¦tning mislykkedes"
+msgstr "Den automatiske netværksopsætning mislykkedes"
 
 #. Type: note
 #. Description
@@ -573,15 +576,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Dit netvÃ¦rk benytter sandsynligvis ikke DHCP-protokollen. Alternativt kan "
-"det skyldes, at din DHCP-server er langsom, eller noget netvÃ¦rksudstyr "
+"Dit netværk benytter sandsynligvis ikke DHCP-protokollen. Alternativt kan "
+"det skyldes, at din DHCP-server er langsom, eller noget netværksudstyr "
 "fungerer muligvis ikke ordentligt."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr "FortsÃ¦t uden en standardrute?"
+msgstr "Fortsæt uden en standardrute?"
 
 #. Type: boolean
 #. Description
@@ -593,12 +596,12 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Den automatiske netvÃ¦rksopsÃ¦tning lykkedes. Der blev dog ikke angivet nogen "
-"standardrute (\"default route\"), sÃ¥ dit system ved ikke, hvordan det skal "
-"kommunikere med andre maskiner pÃ¥ internettet. Dette vil gÃ¸re det umuligt at "
-"fortsÃ¦tte installationen, medmindre du har den fÃ¸rste af de officielle "
-"Debian cdrommer, en \"Netinst\"-cdrom eller har de nÃ¸dvendige pakker "
-"liggende pÃ¥ det lokale netvÃ¦rk."
+"Den automatiske netværksopsætning lykkedes. Der blev dog ikke angivet nogen "
+"standardrute (\"default route\"), så dit system ved ikke, hvordan det skal "
+"kommunikere med andre maskiner på internettet. Dette vil gøre det umuligt at "
+"fortsætte installationen, medmindre du har den første af de officielle "
+"Debian cdrommer, en \"Netinst\"-cdrom eller har de nødvendige pakker "
+"liggende på det lokale netværk."
 
 #. Type: boolean
 #. Description
@@ -607,21 +610,21 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Hvis du er usikker, bÃ¸r du ikke fortsÃ¦tte uden en standardrute (\"default "
-"route\"). Kontakt din lokale netvÃ¦rksadministrator om problemet."
+"Hvis du er usikker, bør du ikke fortsætte uden en standardrute (\"default "
+"route\"). Kontakt din lokale netværksadministrator om problemet."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
 msgid "Reconfigure the wireless network"
-msgstr "Ret opsÃ¦tning af trÃ¥dlÃ¸st netvÃ¦rk"
+msgstr "Ret opsætning af trådløst netværk"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:65
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "SÃ¦t nÃ¦tvÃ¦rket op med dynamisk adressering (DHCP)"
+msgstr "Sæt nætværket op med dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
@@ -637,9 +640,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP-adressen er unik for din computer og bestÃ¥r af fire numre adskilt af "
-"punktummer. Hvis du ikke ved, hvad du skal bruge her, bÃ¸r du spÃ¸rge din "
-"netvÃ¦rksadministrator."
+"IP-adressen er unik for din computer og består af fire numre adskilt af "
+"punktummer. Hvis du ikke ved, hvad du skal bruge her, bør du spørge din "
+"netværksadministrator."
 
 #. Type: error
 #. Description
@@ -655,7 +658,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Den IP-adresse, du angav, er forkert udformet. Den skal have formatet x.x.x."
-"x, hvor hvert 'x' er et tal mellem 0 og 255. PrÃ¸v igen."
+"x, hvor hvert 'x' er et tal mellem 0 og 255. Prøv igen."
 
 #. Type: string
 #. Description
@@ -673,8 +676,8 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Punkt-til-punkt-adressen bruges til at definere den anden ende af et punkt-"
-"til-punkt-netvÃ¦rk. SpÃ¸rg din netvÃ¦rksadministrator, hvis du ikke kender "
-"vÃ¦rdien. Netmasken skal angives som fire tal adskilt af punktummer."
+"til-punkt-netværk. Spørg din netværksadministrator, hvis du ikke kender "
+"værdien. Netmasken skal angives som fire tal adskilt af punktummer."
 
 #. Type: string
 #. Description
@@ -690,8 +693,8 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmasken bruges til at afgÃ¸re hvilke maskiner, der er lokale pÃ¥ dit "
-"netvÃ¦rk. SpÃ¸rg din netvÃ¦rksadministrator, hvis du ikke kender vÃ¦rdien. "
+"Netmasken bruges til at afgøre hvilke maskiner, der er lokale på dit "
+"netværk. Spørg din netværksadministrator, hvis du ikke kender værdien. "
 "Netmasken skal angives som fire tal adskilt af punktummer."
 
 #. Type: string
@@ -712,23 +715,23 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Din gateway er en IP-adresse (fire numre adskilt af punktummer), der angiver "
-"din gateway, ogsÃ¥ kaldet standard-routeren. Al trafik, der skal ud fra dit "
-"lokale netvÃ¦rk (for eksempel til Internettet) sendes gennem denne. Kun i "
-"sjÃ¦ldne tilfÃ¦lde har du ingen router. I sÃ¥ fald kan du lade dette felt vÃ¦re "
-"tomt. Hvis du ikke kender svaret pÃ¥ dette spÃ¸rgsmÃ¥l, bÃ¸r du spÃ¸rge din "
-"netvÃ¦rksadministrator."
+"din gateway, også kaldet standard-routeren. Al trafik, der skal ud fra dit "
+"lokale netværk (for eksempel til Internettet) sendes gennem denne. Kun i "
+"sjældne tilfælde har du ingen router. I så fald kan du lade dette felt være "
+"tomt. Hvis du ikke kender svaret på dette spørgsmål, bør du spørge din "
+"netværksadministrator."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Kunne ikke nÃ¥ gateway"
+msgstr "Kunne ikke nå gateway"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Den angivne gateway-adresse kan ikke nÃ¥s."
+msgstr "Den angivne gateway-adresse kan ikke nås."
 
 #. Type: error
 #. Description
@@ -749,7 +752,7 @@ msgstr "Er disse oplysninger korrekte?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Aktuel netvÃ¦rksopsÃ¦tning:"
+msgstr "Aktuel netværksopsætning:"
 
 #: ../netcfg-static.templates:53
 msgid ""
@@ -772,4 +775,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "SÃ¦t nÃ¦tvÃ¦rket op med statisk adressering"
+msgstr "Sæt nætværket op med statisk adressering"
