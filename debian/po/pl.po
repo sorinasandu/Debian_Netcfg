@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-06-10 16:25+0200\n"
+"PO-Revision-Date: 2004-07-03 11:23+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
@@ -531,7 +531,6 @@ msgstr "Sposób konfiguracji sieci:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -539,18 +538,16 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Autokonfiguracja sieci nie powiod³a siê. Mo¿liwe, ¿e przez zbyt wolny serwer "
-"DHCP wiêc mo¿esz spróbowaæ powtórzyæ. Je¶li Twoja sieæ nie korzysta z DHCP "
-"mo¿esz skonfigurowaæ sieæ rêcznie. Dodatkowo niektóre serwery DHCP "
-"potrzebuj± by wprowadziæ nazwê hosta, wiêc mo¿esz spróbowaæ j± wprowadziæ "
-"przez powtórzeniem autokonfiguracji."
+"W tym miejscu mo¿esz ponowiæ autokonfiguracjê sieci z u¿yciem DHCP (co mo¿e "
+"pomóc je¶li serwer jest wolny) lub skonfigurowaæ sieæ rêcznie. Niektóre "
+"serwery DHCP wymagaj± by klient przes³a³ nazwê komputera. Z tego miejsca "
+"mo¿esz równie¿ ponowiæ autokonfiguracjê z t± nazw±."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Autokonfiguracja sieci powiod³a siê"
+msgstr "Autokonfiguracja sieci nie powiod³a siê"
 
 #. Type: note
 #. Description
@@ -559,12 +556,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Ta sieæ prawdopodobnie nie u¿ywa protoko³u DHCP. Mo¿liwe równie¿, ¿e "
+"serwer DHCP jest zbyt wolny lub jaki¶ sprzêt sieciowy nie dzia³a "
+"poprawnie."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Kontynuowaæ bez domy¶lnego routingu?"
 
 #. Type: boolean
 #. Description
@@ -576,6 +576,11 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Autokonfiguracja sieci powiod³a siê. Jednak¿e domy¶lny routing nie zosta³ "
+"ustawiony. System nie wie jak komunikowaæ siê z komputerami w sieci "
+"Internet. Przez to instalacja bêdzie niemo¿liwa chyba, ¿e posiadasz "
+"pierwsz± oficjaln± p³ytê Debiana, CD 'Netinst' lub pakiety w sieci "
+"lokalnej."
 
 #. Type: boolean
 #. Description
@@ -584,6 +589,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Je¶li nie jeste¶ pewien, nie powiniene¶ kontynuowaæ bez domy¶lnego "
+"routingu. Skontaktuj siê ze swoim lokalnym administratorem sieci."
 
 #. Type: text
 #. Description
@@ -750,5 +757,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
 
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamiczna konfiguracja sieci (DHCP)"
