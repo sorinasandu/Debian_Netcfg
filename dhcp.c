@@ -193,6 +193,13 @@ int poll_dhcp_client (struct debconfclient *client)
   return ret;
 }
 
+#define REPLY_RETRY_AUTOCONFIG       0
+#define REPLY_RETRY_WITH_HOSTNAME    1
+#define REPLY_CONFIGURE_MANUALLY     2
+#define REPLY_DONT_CONFIGURE         3
+#define REPLY_RECONFIGURE_WIFI       4
+#define REPLY_LOOP_BACK              5
+
 int ask_dhcp_retry (struct debconfclient *client)
 {
   int ret;
@@ -215,24 +222,22 @@ int ask_dhcp_retry (struct debconfclient *client)
   debconf_get(client, "netcfg/dhcp_retry");
 
     /* strcmp sucks */
-  if (client->value[0] == 'R')
+  if (client->value[0] == 'R') /* _R_etry ... or _R_econfigure ... */
   {
     size_t len = strlen(client->value);
-    /* with DHCP hostnam_e_ */
-    if (client->value[len - 1] == 'e')
-      return 1;
-    /* wireless networ_k_ */
-    else if (client->value[len - 1] == 'k')
-      return 4;
+    if (client->value[len - 1] == 'e') /* ... with DHCP hostnam_e_ */
+      return REPLY_RETRY_WITH_HOSTNAME;
+    else if (client->value[len - 1] == 'k') /* ... wireless networ_k_ */
+      return REPLY_RECONFIGURE_WIFI;
     else
-      return 0;
+      return REPLY_RETRY_AUTOCONFIG;
   }
-  else if (client->value[0] == 'C')
-    return 2; /* manual */
+  else if (client->value[0] == 'C') /* _C_onfigure ... */
+    return REPLY_CONFIGURE_MANUALLY;
   else if (empty_str(client->value))
-    return 5; /* loop back into dhcp_retry */
+    return REPLY_LOOP_BACK;
   else
-    return 3; /* no config */
+    return REPLY_DONT_CONFIGURE;
 }
 
 /* Here comes another Satan machine. */
@@ -277,16 +282,16 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         switch (ask_dhcp_retry (client))
         {
           case GO_BACK: kill_dhcp_client(); exit(10); /* XXX */
-          case 0: state = POLL; break;
-          case 1: state = DHCP_HOSTNAME; break;
-          case 2: state = STATIC; break;
-          case 3: /* no net config at this time :( */
+          case REPLY_RETRY_AUTOCONFIG: state = POLL; break;
+          case REPLY_RETRY_WITH_HOSTNAME: state = DHCP_HOSTNAME; break;
+          case REPLY_CONFIGURE_MANUALLY: state = STATIC; break;
+          case REPLY_DONT_CONFIGURE:
                   kill_dhcp_client();
 		  netcfg_write_loopback();
                   quit_after_hostname = 1;
 		  state = HOSTNAME;
 		  break;
-	  case 4: /* reconfig wifi */
+	  case REPLY_RECONFIGURE_WIFI:
           {
 	    /* oh god - a NESTED satan machine */
  	    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
