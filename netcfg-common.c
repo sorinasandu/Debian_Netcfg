@@ -422,7 +422,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 
 
 void netcfg_write_common(const char *prebaseconfig, u_int32_t ipaddress,
-			 char *hostname)
+			 char *hostname, char *domain)
 {
     FILE *fp;
 
@@ -734,7 +734,7 @@ int netcfg_activate_static(struct debconfclient *client)
 
     strncat(progname, di_progname_get(), PATH_MAX-2);
 
-    netcfg_write_common(progname, ipaddress, hostname);
+    netcfg_write_common(progname, ipaddress, hostname, domain);
     netcfg_write_static(progname, domain, nameserver_array);
 
     return 0;
@@ -971,7 +971,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
             /* write configuration */
             strncat(progname, di_progname_get(), PATH_MAX-2);
 
-            netcfg_write_common(progname, ipaddress, hostname);
+            netcfg_write_common(progname, ipaddress, hostname, domain);
             netcfg_write_dhcp(interface, dhcp_hostname);
             return 0;
         }

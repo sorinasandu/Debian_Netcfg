@@ -72,7 +72,8 @@ extern int netcfg_activate_static(struct debconfclient *client);
 extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
 
 extern void netcfg_write_common (const char *prebaseconfig,
-				 u_int32_t ipaddress, char *hostname);
+				 u_int32_t ipaddress, char *hostname,
+				 char *domain);
 
 void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]);
 
