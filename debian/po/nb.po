@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-11-13 22:58+0100\n"
+"POT-Creation-Date: 2003-11-17 21:02+0100\n"
 "PO-Revision-Date: 2003-11-16 20:36+0100\n"
 "Last-Translator: Steinar H. Gunderson <sgunderson@bigfoot.com>\n"
 "Language-Team: Norsk bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -36,8 +36,8 @@ msgid ""
 msgstr ""
 "Domenenavnet er den delen av Internet-adressen din som står til høyre for "
 "vertsnavnet.  Det er ofte noe som slutter med .no, .com, .net, eller .org.  "
-"Hvis du nå setter opp et hjemme-nettverk, kan du finne på noe, men pass på at du "
-"bruker samme domenenavn på alle maskinene dine."
+"Hvis du nå setter opp et hjemme-nettverk, kan du finne på noe, men pass på "
+"at du bruker samme domenenavn på alle maskinene dine."
 
 #. Type: string
 #. Description
@@ -54,9 +54,10 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"Tast inn IP-adresser (ikke vertsnavn) for opptil tre navnetjenere, atskilt med "
-"mellomrom. Ikke bruk komma. Tjenerne blir spurt i den rekkefølgen du taster "
-"dem inn. Hvis du ikke vil bruke noen navnetjenere, bare la feltet stå tomt."
+"Tast inn IP-adresser (ikke vertsnavn) for opptil tre navnetjenere, atskilt "
+"med mellomrom. Ikke bruk komma. Tjenerne blir spurt i den rekkefølgen du "
+"taster dem inn. Hvis du ikke vil bruke noen navnetjenere, bare la feltet stå "
+"tomt."
 
 #. Type: select
 #. Description
@@ -73,9 +74,9 @@ msgid ""
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Velg grensesnittet du ønsker å konfigurere. Følgende grensesnitt ble oppdaget. "
-"Velg type for ditt hoved-nettgrensesnitt, som du vil trenge for å installere "
-"Debian-systemet (via NFS eller HTTP)."
+"Velg grensesnittet du ønsker å konfigurere. Følgende grensesnitt ble "
+"oppdaget. Velg type for ditt hoved-nettgrensesnitt, som du vil trenge for å "
+"installere Debian-systemet (via NFS eller HTTP)."
 
 #. Type: error
 #. Description
@@ -111,9 +112,9 @@ msgid ""
 "something up here."
 msgstr ""
 "Vertsnavnet er ett ord som navngir systemet ditt overfor nettet.  Hvis du "
-"ikke vet hva vertsnavnet bør være, så snakk med nettverksadministratoren din. "
-"Hvis du er i ferd med å sette opp ditt eget hjemmenett kan du bare finne på "
-"noe her."
+"ikke vet hva vertsnavnet bør være, så snakk med nettverksadministratoren "
+"din. Hvis du er i ferd med å sette opp ditt eget hjemmenett kan du bare "
+"finne på noe her."
 
 #. Type: error
 #. Description
@@ -152,8 +153,8 @@ msgid ""
 "An error occured and the network configuration process had been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
-"En feil oppsto, og nettverkskonfigureringen ble avbrutt. Du kan prøve på nytt fra "
-"hovedmenyen i installasjonen."
+"En feil oppsto, og nettverkskonfigureringen ble avbrutt. Du kan prøve på "
+"nytt fra hovedmenyen i installasjonen."
 
 #. Type: error
 #. Description
@@ -164,9 +165,10 @@ msgstr "Kunne ikke oppdage noen nettverks-grensesnitt."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
+#, fuzzy
 msgid ""
-"No network interfaces were found.   That means that the installation system "
-"was unable to find a network device."
+"No network interfaces were found. The installation system was unable to find "
+"a network device."
 msgstr ""
 "Fant ingen nettverksgrensesnitt.  Det betyr at installasjonssystemet ikke "
 "klarte å finne en nettverksenhet."
@@ -178,9 +180,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
 msgstr ""
-"Det kan være du må laste en spesifikk modul for nettverkskortet ditt, hvis du "
-"virkelig har et. For å gjøre dette, gå tilbake til skrittet «Sett "
-"opp nettverks-maskinvare»."
+"Det kan være du må laste en spesifikk modul for nettverkskortet ditt, hvis "
+"du virkelig har et. For å gjøre dette, gå tilbake til skrittet «Sett opp "
+"nettverks-maskinvare»."
 
 #. Type: text
 #. Description
@@ -440,9 +442,9 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Dette er en IP-adresse (fire tall atskilt med punktum) som tilhører portner-"
-"ruteren, også kalt standardruteren.  All trafikk som går ut av lokalnettet (f."
-"eks. til Internett) sendes gjennom denne ruteren. I sjeldne tilfeller kan det "
-"være at du ikke har noen, la det da stå åpent. Hvis du ikke kjenner rett "
+"ruteren, også kalt standardruteren.  All trafikk som går ut av lokalnettet "
+"(f.eks. til Internett) sendes gjennom denne ruteren. I sjeldne tilfeller kan "
+"det være at du ikke har noen, la det da stå åpent. Hvis du ikke kjenner rett "
 "svar på dette spørsmålet, snakk med nettverksadministratoren din."
 
 #. Type: error
@@ -460,8 +462,11 @@ msgstr "Det går ikke an å komme fram til standardruteren du oppga."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Du kan ha oppgitt feil IP-adresse, nettmaske og/eller adresse til standardruter."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Du kan ha oppgitt feil IP-adresse, nettmaske og/eller adresse til "
+"standardruter."
 
 #. Type: boolean
 #. Description
@@ -498,4 +503,3 @@ msgstr "Statisk nettverkskonfigurasjon"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "Sett opp nettverket med statisk adressering"
-
