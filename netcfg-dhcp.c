@@ -115,36 +115,6 @@ static void netcfg_activate_dhcp(struct debconfclient *client,
                 netcfg_die(client);
 }
 
-/* 
- * Ask a question to confirm all of these settings. 
- * @return 0 if OK, 30 if we backup.
- */
-int netcfg_get_confirm (struct debconfclient *client,
-	    	       char *interface, char *hostname, 
-		       char *domain, char *dhcp_hostname)
-{
-	char *ptr;
-	int finished = 0;
-	 char *nameservers = NULL;
-
-	debconf_subst(client, "netcfg/confirm_dhcp", "interface", interface);
-	debconf_subst(client, "netcfg/confirm_dhcp", "hostname", hostname);
-	debconf_subst(client, "netcfg/confirm_dhcp", "domain", 
-		         	(domain ? domain : none));
-
-	netcfg_nameservers_to_array(nameservers, nameserver_array);
-	debconf_subst(client, "netcfg/confirm_dhcp", "nameservers",
-                      (nameservers ? nameservers : none));
-        netcfg_get_dhcp_hostname(client, &dhcp_hostname);
-
-	debconf_capb(client); // turn off backup, just ask yes/no
-        my_debconf_input(client, "medium", "netcfg/confirm_dhcp", &ptr);
-	if (strstr (ptr, "true"))
-		finished = 1;
-	debconf_capb(client, "backup");
-	return (finished ? 0 : 30);
-}
-
 
 int main(int argc, char *argv[])
 {
@@ -153,7 +123,7 @@ int main(int argc, char *argv[])
 	int num_interfaces;
 	char *interface = NULL, *hostname = NULL,*domain = NULL, *dhcp_hostname = NULL;
        	enum { BACKUP, GET_INTERFACE, GET_HOSTNAME, GET_DHCP_HOSTNAME, 
-	       GET_CONFIRM, QUIT } state = GET_INTERFACE;
+	       QUIT } state = GET_INTERFACE;
 
 	client = debconfclient_new();
 	debconf_capb(client,"backup");
@@ -191,12 +161,8 @@ int main(int argc, char *argv[])
 			break;
 		case GET_DHCP_HOSTNAME:
 			state = netcfg_get_dhcp_hostname(client, &dhcp_hostname) ?
-				GET_HOSTNAME : GET_CONFIRM;
+				GET_HOSTNAME : QUIT;
 			break;
-		case GET_CONFIRM:
-			state = netcfg_get_confirm(client, interface, 
-						   hostname, domain, dhcp_hostname) ?
-				GET_INTERFACE : QUIT;
 		case QUIT:
 			break;
 		}
