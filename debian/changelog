@@ -1,3 +1,13 @@
+netcfg (0.70) UNRELEASED; urgency=medium
+
+  * Joshua Kwan
+    - Brown paper bag upload.
+    - Add the netcfg/disable_dhcp template, default to false.
+    - usleep(1500) actually sleeps for 1500 _micro_seconds, not milliseconds.
+      sleep(2) instead for simplicity.
+
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 15 Jun 2004 15:00:53 -0700
+
 netcfg (0.69) unstable; urgency=medium
 
   * Sylvain Ferriol

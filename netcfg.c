@@ -77,7 +77,11 @@ int main(int argc, char *argv[])
     /* always always always default back to DHCP, unless you've specified
      * disable_dhcp on the command line. */
     debconf_get(client, "netcfg/disable_dhcp");
-    debconf_set(client, "netcfg/use_dhcp", client->value);
+    
+    if (!strcmp(client->value, "true"))
+      debconf_set(client, "netcfg/use_dhcp", "false");
+    else
+      debconf_set(client, "netcfg/use_dhcp", "true");
 
     for (;;)
     {
@@ -107,7 +111,7 @@ int main(int argc, char *argv[])
               snprintf(buf, 64, "mii-diag -s %s", interface);
 
               interface_up(interface);
-              usleep(1500);
+              sleep(2);
 	      di_info("Executing: %s", buf);
 	      ret = di_exec_shell_log(buf);
               interface_down(interface);
