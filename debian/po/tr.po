@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-28 23:15-0700\n"
+"POT-Creation-Date: 2004-06-29 09:02+0200\n"
 "PO-Revision-Date: 2004-06-29 02:09+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -542,10 +542,11 @@ msgstr "Otomatik ağ yapılandırması başarısızlıkla sonuçlandı."
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:39
+#, fuzzy
 msgid ""
-"This may be due to a slow DHCP server, a loose network cable, or "
-"malfunctioning routers or hubs on your network, or your network is simply "
-"not set up for DHCP."
+"This may be due to a slow DHCP server, a loose network cable, malfunctioning "
+"routers or hubs on your network, or your network is simply not set up for "
+"DHCP."
 msgstr ""
 "Bunun nedeni; ağ üzerindeki DHCP sunucusunun yavaşlığı, ağ kablolarındaki "
 "bir bağlantı sorunu, ağınızdaki bozuk yönlendirici veya hub'lar veya basitçe "
@@ -561,11 +562,18 @@ msgstr "Öntanımlı bir yönlendirici olmadan devam edilsin mi?"
 #. Description
 #: ../netcfg-dhcp.templates:46
 msgid ""
-"The network has been autoconfigured successfully, but there seems to be no "
-"usable default route to external networks such as the Internet. You may not "
-"be able to continue your Debian installation, unless everything necessary is "
-"on a CD. If you are unsure, you should go ahead and come back to network "
-"configuration if necessary."
+"The network automatic configuration has been successful. However, no default "
+"route currently exists to external networks such as the Internet."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:46
+#, fuzzy
+msgid ""
+"You may not be able to continue your Debian installation, unless you are "
+"using a CD-ROM with all needed software. If you are unsure, you should "
+"continue and come back to the network configuration step if necessary."
 msgstr ""
 "Otomatik ağ yapılandırması başarıyla sonuçlandı.  Fakat Internet gibi dış "
 "ağlara çıkmanızı sağlayacak kullanılabilir durumda bir öntanımlı "
@@ -575,14 +583,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:55
+#: ../netcfg-dhcp.templates:58
 msgid "Reconfigure the wireless network"
 msgstr "Kablosuz ağı yapılandır"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:60
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Ağı dinamik adresleme (DHCP) ile yapılandır"
 
@@ -715,8 +723,6 @@ msgstr "Bu bilgiler doğru mu?"
 msgid "Currently configured network parameters:"
 msgstr "Şu an ki ağ yapılandırma parametreleri:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
