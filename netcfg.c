@@ -150,7 +150,15 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
         char template[256];
 
         if (strlen(ifp) < 100) {
-            sprintf(template, "netcfg/internal-%s", ifp);
+	    /* strip away the number from the interface (eth0 -> eth) */
+	    char *new_ifp = strdup(ifp), *ptr = new_ifp;
+	    while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
+	        ptr++;
+	    *ptr = '\0';
+	
+            sprintf(template, "netcfg/internal-%s", new_ifp);
+	    free(new_ifp);
+	    
             debconf_metaget(client, template, "description");
             if (client->value != NULL)
                 return strdup(client->value);
