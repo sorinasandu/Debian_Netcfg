@@ -39,7 +39,8 @@ install: build
 		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3; \
 		mkdir -p debian/$(PACKAGE)/var/dhcp ; \
 		install -m 755 killall.sh debian/$(PACKAGE)/bin/killall.sh; \
-		install -m 755 dhclient-script debian/$(PACKAGE)/etc/dhcp3/dhclient-script; )
+		install -m 755 dhclient-script debian/$(PACKAGE)/etc/dhcp3/dhclient-script; \
+		install -m 755 dhclient-script debian/$(PACKAGE)/etc/dhclient-script; )
 
 
 # Build architecture-independent files here.
