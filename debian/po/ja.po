@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-11-14 09:25+0100\n"
-"PO-Revision-Date: 2003-11-08 11:33+0900\n"
+"PO-Revision-Date: 2003-11-14 22:18+0900\n"
 "Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Domain name:"
-msgstr ""
+msgstr "ドメイン名:"
 
 #. Type: string
 #. Description
@@ -47,66 +47,57 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Name servers addresses:"
-msgstr ""
+msgstr "ネームサーバアドレス:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
-msgstr ""
-"3 つまでのネームサーバをスペースで区切って IP アドレス (ホスト名ではありませ"
-"ん) で入力してください。コンマは使えません。サーバには入力した順に問い合わせ"
-"が行われます。ネームサーバを使わないのであれば、単に空のままにしておきます。"
+msgstr "3 つまでのネームサーバをスペースで区切って IP アドレス (ホスト名ではありません) で入力してください。コンマは使えません。リストの最初のサーバが最初に問い合わせが行われます。ネームサーバを使わないのであれば、このフィールドは単に空のままにしておきます。"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Interface:"
-msgstr ""
+msgstr "インターフェイス:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently  detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
-msgstr ""
-"以下のインターフェイスが検出されました。Debian システムをインストール (NFS ま"
-"たは HTTP 経由) するのに必要なプライマリネットワークインターフェイスのタイプ"
-"を選んでください。"
+msgstr "設定するインターフェイスを選んでください。あなたのシステムで現在検出されているすべてのインターフェイスが以下に示されています。プライマリのネットワークインターフェイスのタイプを選択してください。このインターフェイスは、Debian システムをインストール (NFS または HTTP 経由) するのに使われます。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
 msgid "Error while activating the network"
-msgstr ""
+msgstr "ネットワークのアクティブ化中にエラーが発生しました"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
-#, fuzzy
 msgid "An error occurred while activating the network."
-msgstr "エラーが発生し、継続できません。"
+msgstr "ネットワークのアクティブ化中にエラーが発生しました。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Hostname:"
-msgstr ""
+msgstr "ホスト名:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "このシステムのホスト名を入力してください。"
 
 #. Type: string
 #. Description
@@ -126,14 +117,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Invalid hostname"
-msgstr ""
+msgstr "無効なホスト名"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:44
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
-msgstr "ホスト \"${hostname}\" は無効です。"
+msgstr "名前 \"${hostname}\" は無効です。"
 
 #. Type: error
 #. Description
@@ -150,7 +140,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:53
 msgid "Error"
-msgstr ""
+msgstr "エラー"
 
 #. Type: error
 #. Description
@@ -158,27 +148,21 @@ msgstr ""
 msgid ""
 "An error occured and the network configuration process had been aborted. You "
 "may retry it from the installation main menu."
-msgstr ""
+msgstr "エラーが発生し、ネットワークの設定処理は中止されました。インストールメインメニューから再試行することができます。"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid "No network interfaces detected"
-msgstr "インターフェイスが検出されませんでした。"
+msgstr "インターフェイスが検出されませんでした"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device."
-msgstr ""
-"ネットワークインターフェイスが見つかりませんでした。これはインストールシステ"
-"ムがネットワークデバイスを見つけられなかったことを意味します。ネットワーク"
-"カードを持っているのであれば、まだ選択されていないモジュールを試してみるとよ"
-"いでしょう。'ネットワークハードウェアの検出' に戻ってください。"
+msgstr "ネットワークインターフェイスが見つかりませんでした。これはインストールシステムがネットワークデバイスを見つけられなかったことを意味します。"
 
 #. Type: error
 #. Description
@@ -186,7 +170,7 @@ msgstr ""
 msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
-msgstr ""
+msgstr "ネットワークカードを持っているのであれば、あなたのネットワークカード向けの特定のモジュールをロードする必要があるでしょう。このためには、ネットワークのハードウェア検出のステップに戻ってください。"
 
 #. Type: text
 #. Description
@@ -282,25 +266,21 @@ msgstr "未知のインターフェイス"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "DHCP ホスト名:"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr ""
-"DHCP ホスト名を与える必要があるかもしれません。ケーブルモデルのユーザならば、"
-"アカウント番号をここに指定する必要があるでしょう。そうでなければ、単にここは"
-"空のままにしておきます。"
+msgstr "DHCP ホスト名を与える必要があるかもしれません。ケーブルモデルのユーザならば、アカウント番号をここに指定する必要があるでしょう。"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr "ほとんどのユーザでは、単にここは空のままにしておけます。"
 
 #. Type: boolean
 #. Description
@@ -312,7 +292,7 @@ msgstr "この情報で正しいですか?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "現在設定されているネットワークパラメータ:"
 
 #. Type: boolean
 #. Description
@@ -346,20 +326,19 @@ msgstr "これは数分かかります。"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "DHCP クライアントがありません"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "このパッケージは pump または dhcp-client を必要とします。"
+msgstr "DHCP クライアントがありません。このパッケージは pump または dhcp-client を必要とします。"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "DHCP 設定プロセスが中断されました。"
 
 #. Type: text
 #. Description
@@ -372,16 +351,14 @@ msgstr "DHCP ネットワーク設定"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "DHCP 経由でネットワークを設定"
+msgstr "動的アドレス (DHCP) を利用してネットワークを設定"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
-msgstr "IP アドレスの入力"
+msgstr "IP アドレス:"
 
 #. Type: string
 #. Description
@@ -398,31 +375,24 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "Point-to-Point アドレスの入力"
+msgstr "Point-to-Point アドレス:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr ""
-"Point-to-Point アドレスは、Point-to-Point ネットワークにおいてほかの終端を決"
-"めるのに使われます。値がよくわからなければ、ネットワーク管理者に相談してくだ"
-"さい。Point-to-Point アドレスにはピリオドで区切られた 4 つの数字を入力しま"
-"す。"
+msgstr "Point-to-Point アドレスは、Point-to-Point ネットワークにおいてほかの終端を決めるのに使われます。値がよくわからなければ、ネットワーク管理者に相談してください。Point-to-Point アドレスにはピリオドで区切られた 4 つの数字を入力します。"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "ネットマスクの入力"
+msgstr "ネットマスク:"
 
 #. Type: string
 #. Description
@@ -439,14 +409,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "ゲートウェイの入力"
+msgstr "ゲートウェイ:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -454,26 +422,19 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr ""
-"これは、デフォルトルータとしても知られるゲートウェイルータを示す (ピリオドで"
-"区切られた 4 つの数字から成る) IP アドレスです。LAN 外 (たとえばインターネッ"
-"ト) に行くすべてのトラフィックは、このルータを通って送られます。めったにない"
-"ことですが、ルータがないこともあります。その場合、ここは空のままにしておきま"
-"す。この質問の適切な答えがわからない場合は、ネットワーク管理者に相談してくだ"
-"さい。"
+msgstr "ゲートウェイは、デフォルトルータとしても知られるゲートウェイルータを示す (ピリオドで区切られた 4 つの数字から成る) IP アドレスです。LAN 外 (たとえばインターネット) に行くすべてのトラフィックは、このルータを通って送られます。めったにないことですが、ルータがないこともあります。その場合、ここは空のままにしておきます。この質問の適切な答えがわからない場合は、ネットワーク管理者に相談してください。"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "ゲートウェイに到達できません"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "入力されたゲートウェイに到達できません。"
+msgstr "入力されたゲートウェイアドレスに到達できません。"
 
 #. Type: error
 #. Description
@@ -517,39 +478,5 @@ msgstr "静的ネットワークの設定"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "DHCP 経由でネットワークを設定"
-
-#~ msgid "Choose the domain name."
-#~ msgstr "ドメイン名の入力"
-
-#~ msgid "Choose the DNS Server Addresses"
-#~ msgstr "DNS サーバのアドレスの入力"
-
-#~ msgid "Choose an interface."
-#~ msgstr "インターフェイスの選択"
-
-#~ msgid "An error occured."
-#~ msgstr "エラーが発生しました。"
-
-#~ msgid "Something went wrong when I tried to activate your network."
-#~ msgstr "ネットワークのアクティブ化中に何か問題が発生しました。"
-
-#~ msgid "Enter the system's hostname."
-#~ msgstr "システムのホスト名の入力"
-
-#~ msgid "Feel free to retry."
-#~ msgstr "どうか再試行してみてください。"
-
-#~ msgid "What is your dhcp hostname?"
-#~ msgstr "dhcp ホスト名は何ですか?"
-
-#~ msgid "No dhcp client found. I cannot continue."
-#~ msgstr "dhcp クライアントが見つかりません。継続できません。"
-
-#~ msgid "Is this configuration correct?"
-#~ msgstr "この設定は正しいですか?"
-
-#~ msgid "Configure a static network"
-#~ msgstr "静的ネットワークの設定"
+msgstr "静的アドレスを使ってネットワークを設定"
