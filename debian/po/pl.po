@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-15 00:23-0700\n"
-"PO-Revision-Date: 2004-04-16 12:09+0200\n"
+"PO-Revision-Date: 2004-05-16 13:00+0200\n"
 "Last-Translator: Bartosz Fenski <fenio@o2.pl>\n"
 "Language-Team: Polish <pddp@debian.linux.org.pl>\n"
 "MIME-Version: 1.0\n"
@@ -438,7 +438,7 @@ msgstr "Konfiguruj sieæ"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "nazwa hosta DHCP:"
+msgstr "Nazwa hosta DHCP:"
 
 #. Type: string
 #. Description
@@ -447,14 +447,14 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Mo¿liwe, ¿e musisz podaæ nazwê hosta DHCP. Je¶li korzystasz z modemu "
-"kablowego, mo¿e byæ konieczne podanie numeru dostêpowego. "
+"Mo¿liwe, ¿e musisz wprowadziæ nazwê hosta DHCP. Je¶li u¿ywasz modemu "
+"kablowego, mo¿liwe, ¿e musisz wprowadziæ tutaj numer konta."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Wiêkszo¶æ u¿ytkowników powinna pozostawiæ to pole puste."
+msgstr "Wiêkszo¶æ innych u¿ytkowników mo¿e zostawiæ to pole puste."
 
 #. Type: boolean
 #. Description
@@ -499,9 +499,8 @@ msgstr "To mo¿e chwilê potrwaæ."
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "Network autoconfiguration has succeeded!"
-msgstr "Statyczna konfiguracja sieci"
+msgstr ""
 
 #. Type: error
 #. Description
@@ -524,43 +523,38 @@ msgstr "Proces konfiguracji DHCP zostanie przerwany."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statyczna konfiguracja sieci"
+msgstr "Powtórz konfiguracjê sieci"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dynamiczna konfiguracja sieci (DHCP)"
+msgstr "Powtórz autokonfiguracjê sieci z nazw± hosta DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Konfiguruj sieæ"
+msgstr "Konfiguruj sieæ rêcznie"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
-msgstr ""
+msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Konfiguruj sieæ"
+msgstr "Nie konfiguruj sieci teraz"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Statyczna konfiguracja sieci"
+msgstr "Sposób konfiguracji sieci:"
 
 #. Type: select
 #. Description
@@ -576,16 +570,16 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:53
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Konfiguruj sieæ"
+msgstr "Przekonfiguruj sieæ bezprzewodow±"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
 #: ../netcfg-dhcp.templates:58
+#, fuzzy
 msgid "Dynamic network configuration (DHCP)"
-msgstr "Dynamiczna konfiguracja sieci (DHCP)"
+msgstr "Konfiguracja sieci bezprzewodowej"
 
 #. Type: text
 #. Description
@@ -712,7 +706,6 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -722,8 +715,6 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " interfejs         = ${interface}\n"
-" nazwa hosta       = ${hostname}\n"
-" domena            = ${domain}\n"
 " adres IP          = ${ipaddress}\n"
 " maska sieci       = ${netmask}\n"
 " brama sieciowa    = ${gateway}\n"
@@ -737,16 +728,3 @@ msgstr ""
 msgid "Configure a network using static addressing"
 msgstr "Konfiguruj sieæ opart± na adresach statycznych"
 
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet lub Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Czy chcesz powtórzyæ konfiguracje sieci poprzez DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "¯aden adres IP nie zosta³ znaleziony podczas konfiguracji sieci poprzez "
-#~ "DHCP. Serwery DHCP s± czasami bardzo wolne. Je¶li chcesz mo¿esz spróbowaæ "
-#~ "ponownie."
