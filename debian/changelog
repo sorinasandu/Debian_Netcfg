@@ -4,8 +4,14 @@ netcfg (0.69) UNRELEASED; urgency=low
     - Remove trailing exclamation mark from netcfg/dhcp_success_note
     - Run debconf-updatepo and unfuzzy templates for removed exclamation mark
   * Joshua Kwan
-    - Corrected reference to the pppconfig package. Closes:#253086
-    - killall.sh: add grep -v grep
+    - Corrected reference to the pppconfig package. (Closes: #253086)
+    - killall.sh: add grep -v grep (Closes: #253099)
+    - Allow netcfg/disable_dhcp option that governs what use_dhcp is
+      set to every time we start, instead of hardcoding true. Defaults
+      to true, so default behavior has not changed. (Closes: #248147)
+    - Don't set the broadcast address in either dhclient-script or
+      static configuration. (Closes: #253361)
+    - Fix /etc/hosts writing after much deliberation. (Closes: #247734)
 
  -- Joshua Kwan <joshk@triplehelix.org>  Thu, 10 Jun 2004 21:51:33 -0700
 

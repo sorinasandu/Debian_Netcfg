@@ -31,9 +31,6 @@ set_hostname() {
     fi
 }
 
-if [ -n "$new_broadcast_address" ]; then
-    new_broadcast_arg="broadcast $new_broadcast_address"
-fi
 if [ -n "$new_subnet_mask" ]; then
     new_mask="/$(ptom $new_subnet_mask)"
 fi
@@ -73,7 +70,7 @@ case "$reason" in
 
             ip link set $interface up
 	    ip addr flush dev $interface
-            ip addr add $new_ip_address$new_mask $new_broadcast_arg dev $interface
+            ip addr add $new_ip_address$new_mask dev $interface
 
             for router in $new_routers; do
                 ip route add default via $router

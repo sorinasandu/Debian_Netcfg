@@ -293,7 +293,7 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
 int netcfg_activate_static(struct debconfclient *client)
 {
     int rv = 0, masksize;
-    char buf[256], ptr1[INET_ADDRSTRLEN], ptr2[INET_ADDRSTRLEN];
+    char buf[256], ptr1[INET_ADDRSTRLEN];
 
 #ifdef __GNU__
     /* I had to do something like this ? */
@@ -327,9 +327,9 @@ int netcfg_activate_static(struct debconfclient *client)
     rv |= !inet_ptom (NULL, &masksize, &netmask);
     
     /* Add the new IP address, and broadcast, and netmask */
-    snprintf(buf, sizeof(buf), "ip addr add %s/%d broadcast %s dev %s",
+    snprintf(buf, sizeof(buf), "ip addr add %s/%d dev %s",
 	inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)), masksize,
-	inet_ntop (AF_INET, &broadcast, ptr2, sizeof (ptr2)), interface);
+	interface);
 
     di_info("executing: %s", buf);
     rv |= di_exec_shell_log(buf);
