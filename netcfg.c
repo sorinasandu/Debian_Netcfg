@@ -76,8 +76,10 @@ int main(int argc, char *argv[])
      * one can't get back to DHCP from static. yet. */
     debconf_set(client, "netcfg/use_dhcp", "true");
     
-    while (1) {
-	switch(state) {
+    for (;;)
+    {
+	switch(state)
+	{
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
@@ -107,6 +109,8 @@ int main(int argc, char *argv[])
 	      di_info("executing: %s", buf);
 	      ret = di_exec_shell_log(buf);
               interface_down(interface);
+
+	      ret = di_exec_mangle_status(ret);
 
               free(buf);
 
