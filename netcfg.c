@@ -288,6 +288,9 @@ netcfg_get_interface(struct debconfclient *client, char **interface)
                 free(ptr);
                 exit(1);
         } else if (num_interfaces > 1) {
+                /* remove the trailing ", ", which confuses cdebconf */
+                ptr[strlen(ptr) - 2] = '\0';
+		
                 debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
                 free(ptr);
                 inter =
