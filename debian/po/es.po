@@ -1,0 +1,283 @@
+# netcfg translation to spanish
+# Copyright (C) 2003 Software in the Public Interest
+# This file is distributed under the same license as the netcfg package.
+#
+# Changes:
+# - Initial translation
+# 	Javier Fernandez-Sanguino Peña <jfs@computer.org>, 2003
+#
+#
+#  Traductores, si no conoce el formato PO, merece la pena leer la 
+#  documentación de gettext, especialmente las secciones dedicadas a este
+#  formato, por ejemplo ejecutando:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+# Equipo de traducción al español, por favor lean antes de traducir
+# los siguientes documentos:
+# 
+# - El proyecto de traducción de Debian al español
+#   http://www.debian.org/intl/spanish/coordinacion
+#   especialmente las notas de traducción en
+#   http://www.debian.org/intl/spanish/notas
+#
+# - La guía de traducción de po's de debconf:
+#   /usr/share/doc/po-debconf/README-trans
+#   o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: netcfg VERSION\n"
+"POT-Creation-Date: 2003-02-23 15:39+0100\n"
+"PO-Revision-Date: 2003-04-27 23:02+0100\n"
+"Last-Translator: Javier Fernandez-Sanguino Peña <jfs@computer.org>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid "Choose the domain name."
+msgstr "Escoga el nombre de dominio."
+
+#. Description
+#: ../netcfg-common.templates:3
+msgid ""
+"The domain name is the part of your Internet address to the right of your "
+"host name.  It is often something that ends in .com, .net, .edu, or .org.  "
+"If you are setting up a home network, you can make something up, but make "
+"sure you use the same domain name on all your computers."
+msgstr ""
+"El nombre de dominio es la parte de su dirección de Internet a la derecha "
+"de su nombre de sistema. Es habitualmente algo que termina por .com, .net, "
+".edu, o .org. Si está seleccionando una red doméstica, puede inventárselo, "
+"pero asegurese de que utiliza el mismo nombre de dominio en todos sus "
+"ordenadores."
+
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid "Choose the DNS Server Addresses"
+msgstr "Escoga la dirección del servidor de DNS"
+
+#. Description
+#: ../netcfg-common.templates:11
+msgid ""
+"Please enter the IP addresses (not host names) of up to 3 name servers, "
+"separated by spaces. Do not use commas. The servers will be queried in the "
+"order in which you enter them. If you don't want to use any name servers "
+"just leave this field blank."
+msgstr ""
+"Por favor introduzca la dirección IP (no nombre de sistema) de hasta tres "
+"servidores de nombres, separados por espacios. No utilice comas. Los "
+"servidores serán preguntados en el orden en que se introduzcan. Si no quiere "
+"utilizar ningún servidor de nombres deje este campo en blanco."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid "Choose an interface."
+msgstr "Escoja una interfaz."
+
+#. Description
+#: ../netcfg-common.templates:20
+msgid ""
+"The following interfaces were detected. Choose the type of your primary "
+"network interface that you will need for installing the Debian system (via "
+"NFS or HTTP)."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "An error occured."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:27
+msgid "Something went wrong when I tried to activate your network."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid "Enter the system's hostname."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:33
+msgid ""
+"The hostname is a single word that identifies your system to the network.  "
+"If you don't know what your hostname should be, consult your network "
+"administrator.  If you are setting up your own home network, you can make "
+"something up here."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid "The hostname \"${hostname}\" is invalid."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:41
+msgid ""
+"A valid hostname may contain only alphanumeric characters and the minus "
+"sign, be between 2 and 63 characters long, and cannot begin or end with a "
+"minus sign."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "An error occured and I cannot continue."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:48
+msgid "Feel free to retry."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid "No interfaces were detected."
+msgstr ""
+
+#. Description
+#: ../netcfg-common.templates:53
+msgid ""
+"No network interfaces were found.   That means that the installation system "
+"was unable to find a network device.  If you do have a network card, then it "
+"is possible that the module for it hasn't been selected yet.  Go back to "
+"'Configure network hardware'."
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid "What is your dhcp hostname?"
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:3
+msgid ""
+"In some situations, you may need to supply a DHCP host name.  These "
+"situations are rare.  Most commonly, it applies to cable modem users. If you "
+"are a cable modem user, you might need to specify an account number here.  "
+"Otherwise, you can just leave this blank."
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid "Is this information correct?"
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "I will now configure the network."
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:21
+msgid "This may take some time.  It shouldn't take more than a minute or two."
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "No dhcp client found. I cannot continue."
+msgstr ""
+
+#. Description
+#: ../netcfg-dhcp.templates:26
+msgid "This package requires pump or dhcp-client."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid "IP address?"
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:3
+msgid ""
+"The IP address is unique to your computer and consists of four numbers "
+"separated by periods.  If you don't know what to use here, consult your "
+"network administrator."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid "Pointopoint address?"
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:10
+msgid ""
+"The pointopoint address is used to determine the other endpoint of the point "
+"to point network.  Consult your network administrator if you do not know the "
+"value.  The pointopoint address should be entered as four numbers separated "
+"by periods."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid "Netmask?"
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:19
+msgid ""
+"The netmask is used to determine which machines are local to your network.  "
+"Consult your network administrator if you do not know the value.  The "
+"netmask should be entered as four numbers separated by periods."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid "Gateway?"
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:27
+msgid ""
+"This is an IP address (four numbers separated by periods) that indicates the "
+"gateway router, also known as the default router.  All traffic that goes "
+"outside your LAN (for instance, to the Internet) is sent through this "
+"router.  In rare circumstances, you may have no router; in that case, you "
+"can leave this blank.  If you don't know the proper answer to this question, "
+"consult your network administrator."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid "The gateway you entered is unreachable."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:37
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid "Is this configuration correct?"
+msgstr ""
+
+#. Description
+#: ../netcfg-static.templates:44
+msgid ""
+" interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
+msgstr ""
