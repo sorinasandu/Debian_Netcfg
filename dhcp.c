@@ -49,7 +49,7 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
         {
           fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
           fprintf(fp, "\twireless-mode %s\n",
-              (mode == MANAGED) ? "managed" : "adhoc");
+              (mode == MANAGED) ? "managed" : "ad-hoc");
           fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
           if (wepkey != NULL)
             fprintf(fp, "\twireless-key1 %s\n", wepkey);
