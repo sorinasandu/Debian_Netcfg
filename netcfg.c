@@ -162,6 +162,16 @@ char *get_ifdsc(const char *ifp)
                 , {
                 "plip", "Parallel-line IP"}
                 , {
+                "ctc", "Channel-to-channel"}
+                , {
+                "escon", "Real channel-to-channel"}
+                , {
+                "hsi", "Hypersocket"}
+                , {
+                "qeth", "Ethernet"}
+                , {
+                "iucv", "Inter-user communication vehicle"}
+                , {
                 NULL, NULL}
         };
 

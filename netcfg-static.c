@@ -70,7 +70,10 @@ static void netcfg_get_static()
                         (ipaddress ? num2dot(ipaddress) : "<none>"), NULL);
 
         if (strncmp(interface, "plip", 4) == 0
-            || strncmp(interface, "slip", 4) == 0) {
+            || strncmp(interface, "slip", 4) == 0
+            || strncmp(interface, "ctc", 3) == 0
+            || strncmp(interface, "escon", 5) == 0
+            || strncmp(interface, "iucv", 4) == 0) {
                 ptr = debconf_input("critical", "netcfg/get_pointopoint");
                 dot2num(&pointopoint, ptr);
 
