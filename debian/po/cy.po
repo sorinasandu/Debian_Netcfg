@@ -1,24 +1,15 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# Welsh messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-25 00:57-0700\n"
+"POT-Creation-Date: 2004-08-26 03:36+0200\n"
 "PO-Revision-Date: 2004-07-24 12:35+0100\n"
-"Last-Translator: Dafydd Harries <daf@muse.19inch.net>\n"
-"Language-Team: Welsh <daf@muse.19inch.net>\n"
+"Last-Translator:  <>\n"
+"Language-Team: Debian L10n Welsh <debian-l10n-welsh@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -765,8 +756,6 @@ msgstr "Ydy'r wybodaeth hyn yn gywir?"
 msgid "Currently configured network parameters:"
 msgstr "Paramedrau rhwydwatih cyfluniedig cyfredol:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
@@ -789,43 +778,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Cyflunio rhwydwaith gan ddefnyddio cyfeiriadaeth statig"
-
-#, fuzzy
-#~ msgid "Continue without configuring the network?"
-#~ msgstr "Cyflunio'r rhwydwaith"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Cyfluniad rhwydwaith deinamig (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " rhyngwyneb         = ${interface}\n"
-#~ " enw gwesteiwr      = ${hostname}\n"
-#~ " parth              = ${domain}\n"
-#~ " enw gwesteiwr DHCP = ${dhcp_hostname}\n"
-#~ " gweinyddion enw    = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Dull cyfluniad rhwydwaith:"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "Cerdyn PC-Card (PCMCIA) Ethernet neu Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "A hoffech ailgeisio cyfluniad rhwydwaith DHCP?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Ni chanfuwyd cyfeiriad IP yn ystod cyfluniad rhwydwaith DHCP. Weithiau, "
-#~ "mae gweinyddion DHCP yn araf iawn. Os hoffech, gallwch ailgeisio."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Cyfeiriadaeth deinamig (DHCP), Cyfeiriadaeth statig (â llaw)"
