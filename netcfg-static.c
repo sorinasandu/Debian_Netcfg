@@ -46,201 +46,202 @@ static u_int32_t gateway = 0;
 static u_int32_t pointopoint = 0;
 static struct debconfclient *client;
 
-char *
-debconf_input (char *priority, char *template)
+char *debconf_input(char *priority, char *template)
 {
-  client->command (client, "fset", template, "seen", "false", NULL);
-  client->command (client, "input", priority, template, NULL);
-  client->command (client, "go", NULL);
-  client->command (client, "get", template, NULL);
-  return client->value;
+        client->command(client, "fset", template, "seen", "false", NULL);
+        client->command(client, "input", priority, template, NULL);
+        client->command(client, "go", NULL);
+        client->command(client, "get", template, NULL);
+        return client->value;
 }
 
 
-static void
-netcfg_get_static ()
+static void netcfg_get_static()
 {
-  char *ptr;
+        char *ptr;
 
-  ipaddress = network = broadcast = netmask = gateway = pointopoint = 0;
+        ipaddress = network = broadcast = netmask = gateway = pointopoint =
+            0;
 
-  ptr = debconf_input ("critical", "netcfg/get_ipaddress");
-  dot2num (&ipaddress, ptr);
+        ptr = debconf_input("critical", "netcfg/get_ipaddress");
+        dot2num(&ipaddress, ptr);
 
-  client->command (client, "subst", "netcfg/confirm_static",
-		   "ipaddress",
-		   (ipaddress ? num2dot (ipaddress) : "<none>"), NULL);
+        client->command(client, "subst", "netcfg/confirm_static",
+                        "ipaddress",
+                        (ipaddress ? num2dot(ipaddress) : "<none>"), NULL);
 
-  if (strncmp (interface, "plip", 4) == 0
-      || strncmp (interface, "slip", 4) == 0)
-    {
-      ptr = debconf_input ("critical", "netcfg/get_pointopoint");
-      dot2num (&pointopoint, ptr);
+        if (strncmp(interface, "plip", 4) == 0
+            || strncmp(interface, "slip", 4) == 0) {
+                ptr = debconf_input("critical", "netcfg/get_pointopoint");
+                dot2num(&pointopoint, ptr);
 
-      dot2num (&netmask, "255.255.255.255");
-      network = ipaddress;
-      gateway = pointopoint;
-    }
-  else
-    {
-      ptr = debconf_input ("critical", "netcfg/get_netmask");
-      dot2num (&netmask, ptr);
+                dot2num(&netmask, "255.255.255.255");
+                network = ipaddress;
+                gateway = pointopoint;
+        } else {
+                ptr = debconf_input("critical", "netcfg/get_netmask");
+                dot2num(&netmask, ptr);
 
-      ptr = debconf_input ("critical", "netcfg/get_gateway");
-      dot2num (&gateway, ptr);
+                ptr = debconf_input("critical", "netcfg/get_gateway");
+                dot2num(&gateway, ptr);
 
-      network = ipaddress & netmask;
+                network = ipaddress & netmask;
 
-      if (gateway && ((gateway & netmask) != network))
-	{
-	  client->command (client, "input", "high",
-			   "netcfg/gateway_unreachable", NULL);
-	  client->command (client, "go", NULL);
-	}
-    }
+                if (gateway && ((gateway & netmask) != network)) {
+                        client->command(client, "input", "high",
+                                        "netcfg/gateway_unreachable",
+                                        NULL);
+                        client->command(client, "go", NULL);
+                }
+        }
 
-  client->command (client, "subst", "netcfg/confirm_static", "netmask",
-		   (netmask ? num2dot (netmask) : "<none>"), NULL);
+        client->command(client, "subst", "netcfg/confirm_static",
+                        "netmask", (netmask ? num2dot(netmask) : "<none>"),
+                        NULL);
 
-  client->command (client, "subst", "netcfg/confirm_static", "gateway",
-		   (gateway ? num2dot (gateway) : "<none>"), NULL);
+        client->command(client, "subst", "netcfg/confirm_static",
+                        "gateway", (gateway ? num2dot(gateway) : "<none>"),
+                        NULL);
 
-  client->command (client, "subst", "netcfg/confirm_static", "pointopoint",
-		   (pointopoint ? num2dot (pointopoint) : "<none>"), NULL);
+        client->command(client, "subst", "netcfg/confirm_static",
+                        "pointopoint",
+                        (pointopoint ? num2dot(pointopoint) : "<none>"),
+                        NULL);
 
-  broadcast = (network | ~netmask);
+        broadcast = (network | ~netmask);
 }
 
 
-static int
-netcfg_write_static ()
+static int netcfg_write_static()
 {
-  FILE *fp;
+        FILE *fp;
 
-  if ((fp = file_open (NETWORKS_FILE)))
-    {
-      fprintf (fp, "localnet %s\n", num2dot (network));
-      fclose (fp);
-    }
-  else
-    goto error;
+        if ((fp = file_open(NETWORKS_FILE))) {
+                fprintf(fp, "localnet %s\n", num2dot(network));
+                fclose(fp);
+        } else
+                goto error;
 
-  if ((fp = file_open (INTERFACES_FILE)))
-    {
-      fprintf (fp,
-	       "\n# This entry was created during the Debian installation\n");
-      fprintf (fp, "# (network, broadcast and gateway are optional)\n");
-      fprintf (fp, "iface %s inet static\n", interface);
-      fprintf (fp, "\taddress %s\n", num2dot (ipaddress));
-      fprintf (fp, "\tnetmask %s\n", num2dot (netmask));
-      fprintf (fp, "\tnetwork %s\n", num2dot (network));
-      fprintf (fp, "\tbroadcast %s\n", num2dot (broadcast));
-      if (gateway)
-	fprintf (fp, "\tgateway %s\n", num2dot (gateway));
-      if (pointopoint)
-	fprintf (fp, "\tpointopoint %s\n", num2dot (pointopoint));
-      fclose (fp);
-    }
-  else
-    goto error;
+        if ((fp = file_open(INTERFACES_FILE))) {
+                fprintf(fp,
+                        "\n# This entry was created during the Debian installation\n");
+                fprintf(fp,
+                        "# (network, broadcast and gateway are optional)\n");
+                fprintf(fp, "iface %s inet static\n", interface);
+                fprintf(fp, "\taddress %s\n", num2dot(ipaddress));
+                fprintf(fp, "\tnetmask %s\n", num2dot(netmask));
+                fprintf(fp, "\tnetwork %s\n", num2dot(network));
+                fprintf(fp, "\tbroadcast %s\n", num2dot(broadcast));
+                if (gateway)
+                        fprintf(fp, "\tgateway %s\n", num2dot(gateway));
+                if (pointopoint)
+                        fprintf(fp, "\tpointopoint %s\n",
+                                num2dot(pointopoint));
+                fclose(fp);
+        } else
+                goto error;
 
-  return 0;
-error:
-  return -1;
+        return 0;
+      error:
+        return -1;
 }
 
-static int
-netcfg_activate_static ()
+static int netcfg_activate_static()
 {
-  int rv = 0;
-  char buf[256];
+        int rv = 0;
+        char buf[256];
 #ifdef __GNU__
 /* I had to do something like this ? */
 /*  di_execlog ("settrans /servers/socket/2 -fg");  */
-  di_execlog ("settrans /servers/socket/2 --goaway");
-  snprintf (buf, sizeof (buf),
-	    "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
-	    interface, num2dot (ipaddress));
-  di_snprintfcat (buf, sizeof (buf), " --netmask=%s", num2dot (netmask));
-  buf[sizeof (buf) - 1] = '\0';
+        di_execlog("settrans /servers/socket/2 --goaway");
+        snprintf(buf, sizeof(buf),
+                 "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
+                 interface, num2dot(ipaddress));
+        di_snprintfcat(buf, sizeof(buf), " --netmask=%s",
+                       num2dot(netmask));
+        buf[sizeof(buf) - 1] = '\0';
 
-  if (gateway)
-    snprintf (buf, sizeof (buf), " --gateway=%s", num2dot (gateway));
+        if (gateway)
+                snprintf(buf, sizeof(buf), " --gateway=%s",
+                         num2dot(gateway));
 
-  rv |= di_execlog (buf);
+        rv |= di_execlog(buf);
 
 #else
-  di_execlog ("/sbin/ifconfig lo 127.0.0.1");
+        di_execlog("/sbin/ifconfig lo 127.0.0.1");
 
-  snprintf (buf, sizeof (buf), "/sbin/ifconfig %s %s", 
-	    interface, num2dot (ipaddress));
-  di_snprintfcat (buf, sizeof (buf), " netmask %s", num2dot (netmask));
-  di_snprintfcat (buf, sizeof (buf), " broadcast %s", num2dot (broadcast));
-  buf[sizeof (buf) - 1] = '\0';
+        snprintf(buf, sizeof(buf), "/sbin/ifconfig %s %s",
+                 interface, num2dot(ipaddress));
+        di_snprintfcat(buf, sizeof(buf), " netmask %s", num2dot(netmask));
+        di_snprintfcat(buf, sizeof(buf), " broadcast %s",
+                       num2dot(broadcast));
+        buf[sizeof(buf) - 1] = '\0';
 
-  if (pointopoint)
-    di_snprintfcat (buf, sizeof (buf), " pointopoint %s", num2dot (pointopoint));
+        if (pointopoint)
+                di_snprintfcat(buf, sizeof(buf), " pointopoint %s",
+                               num2dot(pointopoint));
 
-  rv |= di_execlog (buf);
+        rv |= di_execlog(buf);
 
-  if (gateway)
-    {
-      snprintf (buf, sizeof (buf), "/sbin/route add default gateway %s",
-		num2dot (gateway));
-      rv |= di_execlog (buf);
-    }
+        if (gateway) {
+                snprintf(buf, sizeof(buf),
+                         "/sbin/route add default gateway %s",
+                         num2dot(gateway));
+                rv |= di_execlog(buf);
+        }
 #endif
 
-  if (rv != 0)
-    {
-      client->command (client, "input", "critical", "netcfg/error_cfg", NULL);
-      client->command (client, "go", NULL);
-    }
-  return 0;
+        if (rv != 0) {
+                client->command(client, "input", "critical",
+                                "netcfg/error_cfg", NULL);
+                client->command(client, "go", NULL);
+        }
+        return 0;
 }
 
-int
-main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  int finished = 0;
-  char *ptr;
-  char *nameservers = NULL;
-  client = debconfclient_new ();
-  client->command (client, "title", "Static Network Configuration", NULL);
+        int finished = 0;
+        char *ptr;
+        char *nameservers = NULL;
+        client = debconfclient_new();
+        client->command(client, "title", "Static Network Configuration",
+                        NULL);
 
 
-  do
-    {
-      netcfg_get_common (client, &interface, &hostname, &domain,
-			 &nameservers);
+        do {
+                netcfg_get_common(client, &interface, &hostname, &domain,
+                                  &nameservers);
 
-      client->command (client, "subst", "netcfg/confirm_static", "interface",
-		       interface, NULL);
+                client->command(client, "subst", "netcfg/confirm_static",
+                                "interface", interface, NULL);
 
-      client->command (client, "subst", "netcfg/confirm_static",
-		       "hostname", hostname, NULL);
+                client->command(client, "subst", "netcfg/confirm_static",
+                                "hostname", hostname, NULL);
 
-      client->command (client, "subst", "netcfg/confirm_static", "domain",
-		       (domain ? domain : "<none>"), NULL);
+                client->command(client, "subst", "netcfg/confirm_static",
+                                "domain", (domain ? domain : "<none>"),
+                                NULL);
 
-      client->command (client, "subst", "netcfg/confirm_static",
-		       "nameservers", (nameservers ? nameservers : "<none>"),
-		       NULL);
-      netcfg_nameservers_to_array (nameservers, nameserver_array);
+                client->command(client, "subst", "netcfg/confirm_static",
+                                "nameservers",
+                                (nameservers ? nameservers : "<none>"),
+                                NULL);
+                netcfg_nameservers_to_array(nameservers, nameserver_array);
 
-      netcfg_get_static ();
+                netcfg_get_static();
 
-      ptr = debconf_input ("medium", "netcfg/confirm_static");
+                ptr = debconf_input("medium", "netcfg/confirm_static");
 
-      if (strstr (ptr, "true"))
-	finished = 1;
+                if (strstr(ptr, "true"))
+                        finished = 1;
 
-    }
-  while (!finished);
+        }
+        while (!finished);
 
-  netcfg_write_common (ipaddress, domain, hostname, nameserver_array);
-  netcfg_write_static ();
-  netcfg_activate_static ();
+        netcfg_write_common(ipaddress, domain, hostname, nameserver_array);
+        netcfg_write_static();
+        netcfg_activate_static();
 
-  return 0;
+        return 0;
 }
