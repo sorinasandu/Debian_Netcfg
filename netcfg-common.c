@@ -66,6 +66,9 @@ struct in_addr netmask = { 0 };
 struct in_addr gateway = { 0 };
 struct in_addr pointopoint = { 0 };
 
+/* Wireless mode */
+enum { ADHOC, MANAGED } mode = MANAGED;
+
 /* wireless config */
 char* wepkey = NULL;
 char* essid = NULL;
@@ -447,6 +450,11 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
     return 0;
 }
 
+#define HELPFUL_COMMENT \
+"# This file describes the network interfaces available on your system\n" \
+"# and how to activate them. For more information, see interfaces(5).\n" \
+"\n" \
+"# This entry denotes the loopback (127.0.0.1) interface.\n"
 
 void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 			 char *hostname, char *domain)
@@ -455,6 +463,7 @@ void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
     FILE *fp;
 
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
+        fprintf(fp, HELPFUL_COMMENT);
         fprintf(fp, "auto lo\n");
         fprintf(fp, "iface lo inet loopback\n");
         fclose(fp);
@@ -1140,7 +1149,6 @@ int is_wireless_iface (const char* iface)
 
 int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
 {
-  enum { ADHOC, MANAGED } mode = MANAGED;
   int ret;
   char* tf = NULL;
   wireless_config wconf;
@@ -1153,12 +1161,9 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
   debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
   debconf_subst(client, "netcfg/wireless_adhoc_managed", "iface", iface);
 
-  ret = debconf_input(client, "low", "netcfg/wireless_adhoc_managed");
+  debconf_input(client, "low", "netcfg/wireless_adhoc_managed");
 
-  if (ret == 30)
-    return NOT_ASKED;
-
-  if (debconf_go(client))
+  if (debconf_go(client) == 30)
     return GO_BACK;
 
   debconf_get(client, "netcfg/wireless_adhoc_managed");

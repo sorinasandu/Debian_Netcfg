@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg_ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-02 14:19-0500\n"
+"POT-Creation-Date: 2004-03-19 13:13-0800\n"
 "PO-Revision-Date: 2004-03-13 23:26+0100\n"
 "Last-Translator: Nikolai Prokoschenko <nikolai@prokoschenko.de>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -20,7 +20,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -296,120 +297,141 @@ msgstr ""
 "Если у вас есть сетевая карта, то возможно, что для неё пока не был загружен "
 "модуль. Вернитесь назад к шагу определения сетевого оборудования."
 
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:109
+msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid "What kind of network is your wireless network?"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network is Ad-hoc."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:117
 msgid "<none>"
 msgstr "<ни один из них>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Wireless ethernet (802.11x)"
 msgstr "Беспроводная сеть (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:125
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet или Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet или Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:137
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:141
 msgid "Serial-line IP"
 msgstr "IP по последовательной линии (SLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:145
 msgid "Parallel-port IP"
 msgstr "IP по параллельной линии (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:149
 msgid "Point-to-Point Protocol"
 msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:153
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:157
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:161
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel (CTC)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:165
 msgid "Real channel-to-channel"
 msgstr "Реальный channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:169
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:173
 msgid "Inter-user communication vehicle"
 msgstr "Межпользовательская связь (IUCV)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:177
 msgid "Unknown interface"
 msgstr "Неизвестный интерфейс"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:182
 msgid "Network Configuration"
 msgstr "Настройка сети"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Configuring network ..."
 msgstr "Идёт настройка сети..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:192
 msgid "Configure the network"
 msgstr "Настроить сеть"
 
@@ -638,8 +660,10 @@ msgstr "Указанный вами адрес шлюза недоступен."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Вы могли ошибиться при вводе вашего IP-адреса, маски подсети и/или шлюза."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
+msgstr ""
+"Вы могли ошибиться при вводе вашего IP-адреса, маски подсети и/или шлюза."
 
 #. Type: boolean
 #. Description
@@ -676,4 +700,3 @@ msgstr "Настройка статического адреса"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Настройка сети со статической адресацией."
-

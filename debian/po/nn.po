@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-02 14:19-0500\n"
+"POT-Creation-Date: 2004-03-19 13:13-0800\n"
 "PO-Revision-Date: 2004-03-04 23:19+0100\n"
 "Last-Translator: Håvard Korsvoll <korsvoll@skulelinux.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -300,120 +300,141 @@ msgstr ""
 "For å gjera det må du gå tilbake til steget der installasjonsystemet finn "
 "nettverksutstyr."
 
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:109
+msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid "What kind of network is your wireless network?"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network is Ad-hoc."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:117
 msgid "<none>"
 msgstr "<ingen>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Wireless ethernet (802.11x)"
 msgstr "Trådlaust ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:125
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet eller Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-kort (PCMCIA) Ethernet eller Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:137
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:141
 msgid "Serial-line IP"
 msgstr "IP over seriell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:145
 msgid "Parallel-port IP"
 msgstr "IP over parallell-linje"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:149
 msgid "Point-to-Point Protocol"
 msgstr "Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:153
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-i-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:157
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Punkt-til-punkt-protokoll"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:161
 msgid "Channel-to-channel"
 msgstr "Kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:165
 msgid "Real channel-to-channel"
 msgstr "Ekte kanal-til-kanal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:169
 msgid "Hypersocket"
 msgstr "Hypersokkel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:173
 msgid "Inter-user communication vehicle"
 msgstr "Kommunikasjonsmotor mellom brukarar"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:177
 msgid "Unknown interface"
 msgstr "Ukjent grensesnitt."
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:182
 msgid "Network Configuration"
 msgstr "Nettverksoppsett"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Configuring network ..."
 msgstr "Set opp nettverk ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:192
 msgid "Configure the network"
 msgstr "Set opp nettverket"
 
@@ -430,8 +451,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Det kan vera du må oppgje eit DHCP-vertsnamn. Viss du brukar eit "
-"kabelmodem må du kanskje oppgje eit kontonummer."
+"Det kan vera du må oppgje eit DHCP-vertsnamn. Viss du brukar eit kabelmodem "
+"må du kanskje oppgje eit kontonummer."
 
 #. Type: string
 #. Description
@@ -510,8 +531,8 @@ msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Fann ingen IP-adresse under oppsettet av nettverket med DHCP. "
-"DHCP-tenarar er av og til svært trege. Viss du vil kan du prøva igjen."
+"Fann ingen IP-adresse under oppsettet av nettverket med DHCP. DHCP-tenarar "
+"er av og til svært trege. Viss du vil kan du prøva igjen."
 
 #. Type: text
 #. Description
@@ -542,8 +563,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP-adressa er unik for denne datamaskina og er bygd opp av fire tal skilde "
-"med punktum. Spør nettverksadministratoren din viss du ikkje veit kva "
-"du skal bruka."
+"med punktum. Spør nettverksadministratoren din viss du ikkje veit kva du "
+"skal bruka."
 
 #. Type: error
 #. Description
@@ -620,9 +641,9 @@ msgstr ""
 "Dette er ei IP-adresse (fire tal skilde med punktum) som høyrer til "
 "standardrutaren («gateway»). All trafikk som går ut av lokalnettet (til "
 "dømes til Internett) blir sendt gjennom denne rutaren. I sjeldne tilfelle "
-"kan det henda du ikkje har nokon rutar. I så fall skal feltet stå tomt. "
-"Ta kontakt med nettverksadministratoren din viss du ikkje veit kva "
-"du skal skriva inn."
+"kan det henda du ikkje har nokon rutar. I så fall skal feltet stå tomt. Ta "
+"kontakt med nettverksadministratoren din viss du ikkje veit kva du skal "
+"skriva inn."
 
 #. Type: error
 #. Description
@@ -634,12 +655,14 @@ msgstr "Kjem ikkje fram til standardrutar"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
+msgstr ""
+"Det går ikkje an å koma fram til adressa du oppgav for standardrutaren."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan ha oppgjeve feil IP-adresse, nettmaske og/eller adresse til "
 "standardrutar."
@@ -679,4 +702,3 @@ msgstr "Statisk nettverksoppsett"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Set opp eit nettverk ved hjelp av statisk adressering"
-

@@ -8,16 +8,18 @@ netcfg (0.57) UNRELEASED; urgency=low
     - Only recalculate gateway if ipaddress or netmask is changed.
     - Never recalculate nameserver.
   * Joshua Kwan
-    - Make the question about adhoc/managed actually do something.
+    - Make the question about adhoc/managed actually do something,
+      add a template for its question. Note: needs translation.
     - Make sure the WEP question, priority high, always gets asked.
     - If netcfg/get_hostname returns a FQDN, seed netcfg/get_domain with it
       and do not ask that question a second time. Only ask it if FQDN was
-      _not_ passwd. (Closes: #174360)
+      _not_ passed. (Closes: #174360)
+    - Write out some informative text to INTERFACES_FILE.
   * Translators: do not modify this changelog to record changes you make to
     po files. A record of your contributions will be added to the changelog
     at package release time by the output-l10n-changes program.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Fri, 19 Mar 2004 02:16:29 -0800
+ -- Joshua Kwan <joshk@triplehelix.org>  Fri, 19 Mar 2004 13:00:49 -0800
 
 netcfg (0.56) unstable; urgency=low
 

@@ -103,6 +103,15 @@ _Description: No network interfaces detected
  You may need to load a specific module for your network card, if you have
  one. For this, go back to the network hardware detection step.
 
+Template: netcfg/wireless_adhoc_managed
+Type: select
+Default: Infrastructure (Managed) network
+_Choices: Infrastructure (Managed) network, Ad-hoc network (Peer to peer)
+_Description: What kind of network is your wireless network?
+ Wireless networks are either managed or ad-hoc. If you use a real access
+ point of some sort, your network is Managed. If another computer is your
+ 'access point', then your network is Ad-hoc.
+
 Template: netcfg/internal-none
 Type: text
 _Description: <none>

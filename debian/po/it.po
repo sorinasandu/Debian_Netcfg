@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.57\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-02 14:19-0500\n"
+"POT-Creation-Date: 2004-03-19 13:13-0800\n"
 "PO-Revision-Date: 2004-03-19 09:36+0100\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
@@ -35,7 +35,13 @@ msgid ""
 "configuration from a DHCP server on your network, you will be given the "
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
-msgstr "La rete può essere o configurata con il DHCP oppure manualmente inserendo tutte le informazioni. Se si scegliesse il DHCP e l'installatore non fosse capace di ottenere una configurazione funzionante dal server DHCP sulla rete, sarà offerta l'opportunità di configurare la rete manualmente in seguito al tentativo di configurare il DHCP. Se non si fosse sicuri si scelga DHCP"
+msgstr ""
+"La rete può essere o configurata con il DHCP oppure manualmente inserendo "
+"tutte le informazioni. Se si scegliesse il DHCP e l'installatore non fosse "
+"capace di ottenere una configurazione funzionante dal server DHCP sulla "
+"rete, sarà offerta l'opportunità di configurare la rete manualmente in "
+"seguito al tentativo di configurare il DHCP. Se non si fosse sicuri si "
+"scelga DHCP"
 
 #. Type: string
 #. Description
@@ -51,7 +57,11 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr "Il nome del dominio è la parte dell'indirizzo a destra del nome del computer e che, di solito, finisce in .com, .net, .edu o .org. Se si sta usando una rete domestica è possibile usare un nome qualsiasi purché sia eguale in tutti i computer."
+msgstr ""
+"Il nome del dominio è la parte dell'indirizzo a destra del nome del computer "
+"e che, di solito, finisce in .com, .net, .edu o .org. Se si sta usando una "
+"rete domestica è possibile usare un nome qualsiasi purché sia eguale in "
+"tutti i computer."
 
 #. Type: string
 #. Description
@@ -278,120 +288,141 @@ msgstr ""
 "caricare un modulo specifico. Per farlo, tornare indietro alla rilevazione "
 "automatica dell'hardware."
 
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:109
+msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid "What kind of network is your wireless network?"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../netcfg-common.templates:110
+msgid ""
+"Wireless networks are either managed or ad-hoc. If you use a real access "
+"point of some sort, your network is Managed. If another computer is your "
+"'access point', then your network is Ad-hoc."
+msgstr ""
+
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:117
 msgid "<none>"
 msgstr "<nessuno>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet wireless (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:125
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet o Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:137
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:141
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:145
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:140
+#: ../netcfg-common.templates:149
 msgid "Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:144
+#: ../netcfg-common.templates:153
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:157
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:152
+#: ../netcfg-common.templates:161
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:156
+#: ../netcfg-common.templates:165
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:160
+#: ../netcfg-common.templates:169
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:164
+#: ../netcfg-common.templates:173
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:168
+#: ../netcfg-common.templates:177
 msgid "Unknown interface"
 msgstr "Interfaccia sconosciuta"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:182
 msgid "Network Configuration"
 msgstr "Configurazione della rete"
 
 #. Type: text
 #. Description
 #. Prebaseconfig progress bar item
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Configuring network ..."
 msgstr "Configurazione della rete in corso,"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:192
 msgid "Configure the network"
 msgstr "Configurare la rete"
 
@@ -576,7 +607,10 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr "La maschera di rete è usata per determinare quali computer nella rete sono locali. Consultare l'amministratore della rete se non se ne conosce il valore, il quale deve essere formato da quattro numeri separati da punti."
+msgstr ""
+"La maschera di rete è usata per determinare quali computer nella rete sono "
+"locali. Consultare l'amministratore della rete se non se ne conosce il "
+"valore, il quale deve essere formato da quattro numeri separati da punti."
 
 #. Type: string
 #. Description
@@ -619,7 +653,9 @@ msgstr "Il gateway inserito non è raggiungibile."
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Si può aver commesso un errore inserendo l'indirizzo IP, la maschera di rete o il gateway."
+msgstr ""
+"Si può aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
+"o il gateway."
 
 #. Type: boolean
 #. Description
