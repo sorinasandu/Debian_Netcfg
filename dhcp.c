@@ -275,7 +275,7 @@ int ask_dhcp_retry (struct debconfclient *client)
 int netcfg_activate_dhcp (struct debconfclient *client)
 {
   char* dhostname = NULL;
-  enum { START, POLL, ASK_RETRY, DHCP_HOST_NAME, HOSTNAME, DOMAIN, HOSTNAME_SANS_NETWORK, DOMAIN_SANS_NETWORK } state = START;
+  enum { START, POLL, ASK_RETRY, DHCP_HOSTNAME, HOSTNAME, DOMAIN, HOSTNAME_SANS_NETWORK } state = START;
 
   kill_dhcp_client();
   loop_setup();
@@ -388,7 +388,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             kill_dhcp_client();
             exit(10); /* XXX */
           case REPLY_RETRY_WITH_HOSTNAME:
-            state = DHCP_HOST_NAME;
+            state = DHCP_HOSTNAME;
             break;
           case REPLY_CONFIGURE_MANUALLY:
             kill_dhcp_client();
@@ -445,7 +445,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         }
         break;
 
-      case DHCP_HOST_NAME:
+      case DHCP_HOSTNAME:
         /* DHCP client may still be running */
         if (netcfg_get_hostname(client, "netcfg/dhcp_hostname", &dhostname, 0))
           state = ASK_RETRY;
@@ -473,34 +473,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           state = ASK_RETRY;
         }
         else
-        {
-#if 0
-          /*
-           * If we haven't already created the DHCLIENT_CONF file
-           * (by calling start_dhcp_client() with dhostname set)
-           * then set up that file now with hostname as the
-           * DHCP hostname to request.  See #236533.
-           */
-          /*
-           * I don't like this because it changes the DHCLIENT_CONF
-           * file from what it was when dhclient successfully obtained
-           * a lease.  Furthermore, the file gets written even if the
-           * client is pump.  --jdthood
-           */
-          if (!dhostname)
-          {
-            FILE* dc = NULL;
-            if ((dc = file_open(DHCLIENT_CONF, "w")))
-            {
-              fprintf(dc, "send host-name \"%s\";\n", hostname);
-              fclose(dc);
-            }
-            /* prebaseconfig will take care of copying it in. */
-          }
-#endif
-      
           state = DOMAIN;
-        }
         break;
 
       case DOMAIN:
@@ -515,18 +488,13 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         break;
 
       case HOSTNAME_SANS_NETWORK:
-        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 1))
+        if (netcfg_get_hostname (client, "netcfg/get_hostname", &hostname, 0))
           state = ASK_RETRY;
         else
-          state = DOMAIN_SANS_NETWORK;
-        break;
-
-      case DOMAIN_SANS_NETWORK:
-        if (!have_domain && netcfg_get_domain (client, &domain))
-          state = HOSTNAME_SANS_NETWORK;
-        else
         {
-          netcfg_write_common(ipaddress, hostname, domain);
+          struct in_addr null_ipaddress;
+          null_ipaddress.s_addr = 0;
+          netcfg_write_common(null_ipaddress, hostname, NULL);
           exit(0);
         }
         break;
