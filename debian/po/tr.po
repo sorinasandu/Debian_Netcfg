@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-06-29 02:09+0300\n"
+"PO-Revision-Date: 2004-06-30 01:49+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -522,7 +522,6 @@ msgstr "Ağ yapılandırma yöntemi:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -530,29 +529,27 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Buradan itibaren, DHCP ile otomatik ağ yapılandırmasını tekrar denemeyi veya "
-"ağı elle yapılandırmayı seçebilirsiniz.  Bazı DHCP sunucuları özel bir DHCP "
-"makine adı gerektirebilir.  Bu tür durumlarda DHCP denemesinden önce bu "
-"makine adını girmeyi seçebilirsiniz."
+"Buradan itibaren, DHCP ile otomatik ağ yapılandırmasını tekrar denemeyi (ki "
+"DHCP sunucunuz çok geç yanıt veriyorsa iş görebilir) veya ağı elle yapılandırmayı "
+"seçebilirsiniz.  Bazı DHCP sunucuları istemci tarafından gönderilen bir DHCP "
+"makine adı gerektirebildiğinden, DHCP ile otomatik ağ yapılandırmasını böyle bir "
+"makine adı girerek tekrar etmeyi de seçebilirsiniz."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
 msgstr "Otomatik ağ yapılandırması başarısızlıkla sonuçlandı."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
 msgstr ""
-"Bunun nedeni; ağ üzerindeki DHCP sunucusunun yavaşlığı, ağ kablolarındaki "
-"bir bağlantı sorunu, ağınızdaki bozuk yönlendirici veya hub'lar veya basitçe "
-"ağınızın DHCP ile çalışacak şekilde tasarlanmamış olması olabilir."
+"Bunun nedeni; DHCP sunucusunun yavaşlığı, ağ donanımındaki bir bozukluk veya "
+"basitçe ağınızın DHCP ile çalışacak şekilde tasarlanmamış olması olabilir."
 
 #. Type: boolean
 #. Description
@@ -570,6 +567,11 @@ msgid ""
 "all the Debian packages you need on the local network or on a local medium "
 "such as CD-ROM."
 msgstr ""
+"Otomatik ağ yapılandırması başarıyla sonuçlandı.  Bununla beraber herhangi bir "
+"öntanımlı yönlendirici ayarlanmamış; yani sistem İnternet üzerindeki makinelerle "
+"nasıl haberleşeceğini bilmiyor.  Bu durum, gerekli bütün Debian paketleri yerel "
+"ağda veya CD-ROM gibi bir yerel ortamda bulunmadıkça kuruluma devam etmenizi "
+"imkansız hale getirecektir."
 
 #. Type: boolean
 #. Description
@@ -578,6 +580,8 @@ msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
 msgstr ""
+"Eğer emin değilseniz devam edebilir ve daha sonra gerekirse ağ yapılandırması "
+"adımına geri dönebilirsiniz."
 
 #. Type: text
 #. Description
