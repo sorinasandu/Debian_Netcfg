@@ -6,9 +6,17 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Silently load af_packet. (Closes: #244441, #244696)
     - Add some code hunks from mii-diag to determine code path on link
       connection. (Closes: #247178)
+    - Add some ifconfig_up and ifconfig_down functions.
+    - Fix a long standing bug in devnames retrieval that did not strip
+      newlines from the devnames input and caused cdebconf to screw
+      up on subsequent questions.
+    - Bump the DHCP wait to 15 seconds. The magic number seems to be just
+      over 10 for me. (Closes: #244819)
+    - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's
+      rant on debian-boot.
   * Pierre Machard
     - Add only hostname after localhost when loopback is alone.
-    (Closes: #247734)
+      (Closes: #247734)
 
  -- Pierre Machard <pmachard@debian.org>  Fri,  7 May 2004 00:38:24 +0200
 
