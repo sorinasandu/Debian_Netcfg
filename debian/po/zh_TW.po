@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-16 15:47-0700\n"
+"POT-Creation-Date: 2004-05-14 09:47-0600\n"
 "PO-Revision-Date: 2004-04-11 09:57+0800\n"
 "Last-Translator: Tetralet <tetralet@pchome.com.tw>\n"
 "Language-Team: Chinese/Traditional <tetralet@pchome.com.tw>\n"
@@ -437,113 +437,134 @@ msgstr ""
 msgid "Most other users can just leave this blank."
 msgstr "其他大多數的使用者可以在此直接留白。"
 
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+msgid "Is this information correct?"
+msgstr "這些資訊正確嗎？"
+
+#. Type: boolean
+#. Description
+#: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:53
+msgid "Currently configured network parameters:"
+msgstr "當前被設定的網路參數："
+
+#: ../netcfg-dhcp.templates:12
+msgid ""
+" interface      = ${interface}\n"
+" hostname       = ${hostname}\n"
+" domain         = ${domain}\n"
+" dhcp hostname  = ${dhcp_hostname}\n"
+" nameservers    = ${nameservers}"
+msgstr ""
+" 介面           = ${interface}\n"
+" 主機名稱       = ${hostname}\n"
+" 網域名稱       = ${domain}\n"
+" DHCP 主機名稱  = ${dhcp_hostname}\n"
+" 名稱伺服器     = ${nameservers}"
+
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:11
+#: ../netcfg-dhcp.templates:23
 msgid "Configuring the network with DHCP"
 msgstr "使用 DHCP 來設定網路"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#: ../netcfg-dhcp.templates:27
 msgid "This may take some time."
 msgstr "這也許會花上一些時間。"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
-#, fuzzy
+#: ../netcfg-dhcp.templates:31
 msgid "Network autoconfiguration has succeeded!"
-msgstr "靜態網路設定"
+msgstr "網路自動設定作業已經完成！"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "找不到 DHCP 客戶端"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "找不到 DHCP 客戶端。這個套件需要安裝 pump 或者 dhcp-client。"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 的網路設定程序將被中止。"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
-#, fuzzy
+#: ../netcfg-dhcp.templates:42
 msgid "Retry network autoconfiguration"
-msgstr "靜態網路設定"
+msgstr "再次嘗試網路自動設定"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
-#, fuzzy
+#: ../netcfg-dhcp.templates:42
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "動態網路設定 (DHCP)"
+msgstr "使用 DHCP 主機名稱來再次嘗試網路自動設定"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
-#, fuzzy
+#: ../netcfg-dhcp.templates:42
 msgid "Configure network manually"
-msgstr "設定網路"
+msgstr "手動設定網路"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:30
-#, fuzzy
+#: ../netcfg-dhcp.templates:42
 msgid "Do not configure the network at this time"
-msgstr "設定網路"
+msgstr "不要在此時進行網路的設定"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
-#, fuzzy
+#: ../netcfg-dhcp.templates:44
 msgid "Network configuration method:"
-msgstr "網路設定"
+msgstr "網路的設定方式："
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:32
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This may be due to a slow DHCP server on "
 "the network, so you may want to retry. If your network does not use DHCP for "
 "autoconfiguration, you can instead configure it manually. Also, some DHCP "
 "servers need a specific DHCP hostname, so you can choose to enter such a "
 "hostname before retrying DHCP."
-msgstr ""
+msgstr "網路自動設定失敗了。這也許是因為網路上的 DHCP 伺服器太慢了，所以您可能希望能再次嘗試。"
+"如果您的網路上並沒有使用 DHCP 來進行自動設定，您可以替而進行手動設定。"
+"同時，有些 DHCP 伺服器需要特定的 DHCP 主機名稱，您可以選擇在再次嘗試使用 DHCP 之前輸入這個主機名稱。"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:41
-#, fuzzy
+#: ../netcfg-dhcp.templates:53
 msgid "Reconfigure the wireless network"
-msgstr "設定網路"
+msgstr "重新設定無線網路"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:46
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "動態網路設定 (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "使用動態位址 (DHCP) 來設定網路"
 
@@ -658,23 +679,11 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "也許您所輸入的 IP 位址、網路遮罩 和/或 閘道 有誤。"
 
-#. Type: boolean
-#. Description
-#: ../netcfg-static.templates:53
-msgid "Is this information correct?"
-msgstr "這些資訊正確嗎？"
-
-#. Type: boolean
-#. Description
-#: ../netcfg-static.templates:53
-msgid "Currently configured network parameters:"
-msgstr "當前被設定的網路參數："
-
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:53
 msgid ""
 " interface     = ${interface}\n"
+" hostname      = ${hostname}\n"
+" domain        = ${domain}\n"
 " ipaddress     = ${ipaddress}\n"
 " netmask       = ${netmask}\n"
 " gateway       = ${gateway}\n"
@@ -682,6 +691,8 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " 介面          = ${interface}\n"
+" 主機名稱      = ${hostname}\n"
+" 網域名稱      = ${domain}\n"
 " IP 位址       = ${ipaddress}\n"
 " 網路遮罩      = ${netmask}\n"
 " 閘道          = ${gateway}\n"
@@ -691,22 +702,9 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:66
+#: ../netcfg-static.templates:68
 msgid "Configure a network using static addressing"
 msgstr "使用靜態位址來設定網路"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " 介面           = ${interface}\n"
-#~ " 主機名稱       = ${hostname}\n"
-#~ " 網域名稱       = ${domain}\n"
-#~ " DHCP 主機名稱  = ${dhcp_hostname}\n"
-#~ " 名稱伺服器     = ${nameservers}"
 
 #, fuzzy
 #~ msgid "Next network configuration step:"
