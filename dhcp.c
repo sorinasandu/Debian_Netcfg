@@ -153,12 +153,12 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
  *
  * The client should be run such that it dies once a lease is acquired.
  *
- * This function will NOT reap the DHCP client after an unsuccessful poll. 
+ * This function will NOT kill the DHCP client after an unsuccessful poll. 
  */
 
 int poll_dhcp_client (struct debconfclient *client)
 {
-  time_t start_time, now;
+  int seconds_slept = 0;
   int ret = 1;
 
   /* show progress bar */
@@ -166,14 +166,17 @@ int poll_dhcp_client (struct debconfclient *client)
   debconf_progress_info(client, "netcfg/dhcp_progress_note");
   netcfg_progress_displayed = 1;
 
-  now = start_time = time(NULL);
-
   /* wait DHCP_SECONDS seconds for a DHCP lease */
-  while (dhcp_running && ((now - start_time) < DHCP_SECONDS)) {
+  while (dhcp_running && (seconds_slept < DHCP_SECONDS)) {
     sleep(1);
+    seconds_slept++; /* Not exact but close enough */
     debconf_progress_step(client, 1);
-    now = time(NULL);
   }
+
+  /*
+   * Either the client exited or time ran out, in which case
+   * we leave the DHCP client running
+   */
 
   /* got a lease? display a success message */
   if (!dhcp_running && (dhcp_exit_status == 0))
