@@ -576,15 +576,15 @@ void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[])
 
 }
 
-static int netcfg_write_static()
+static int netcfg_write_static(char *prebaseconfig)
 {
     FILE *fp;
 
     if ((fp = file_open(NETWORKS_FILE, "w"))) {
         fprintf(fp, "localnet %s\n", num2dot(network));
         fclose(fp);
-
-        di_system_prebaseconfig_append("40netcfg-static", "cp %s %s\n",
+        
+        di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
                                        NETWORKS_FILE,
                                        "/target" NETWORKS_FILE);
     } else
@@ -672,6 +672,8 @@ int netcfg_activate_static(struct debconfclient *client)
 {
     int rv = 0;
     char buf[256];
+    char progname[PATH_MAX] = "40";
+
 #ifdef __GNU__
     /* I had to do something like this ? */
     /*  di_exec_shell_log ("settrans /servers/socket/2 -fg");  */
@@ -727,9 +729,12 @@ int netcfg_activate_static(struct debconfclient *client)
     }
 
     /* write configuration */
-    netcfg_write_common("40netcfg-static", ipaddress, domain, hostname,
+
+    strncat(progname, di_progname_get(), PATH_MAX-2); 
+
+    netcfg_write_common(progname, ipaddress, domain, hostname,
                         nameserver_array);
-    netcfg_write_static();
+    netcfg_write_static(progname);
 
     return 0;
 }
@@ -885,6 +890,7 @@ int netcfg_activate_dhcp(struct debconfclient *client)
     int retry = 1;
     char *ptr;
     int ret;
+    char progname[PATH_MAX] = "40";
 
     enum { PUMP, DHCLIENT, UDHCPC } dhcp_client = PUMP;
 
@@ -966,7 +972,9 @@ int netcfg_activate_dhcp(struct debconfclient *client)
         /* got a lease? */
         if (!dhcp_running && (dhcp_exit_status == 0)) {
             /* write configuration */
-            netcfg_write_common("40netcfg-dhcp", ipaddress, domain, hostname,
+            strncat(progname, di_progname_get(), PATH_MAX-2); 
+
+            netcfg_write_common(progname, ipaddress, domain, hostname,
                                 nameserver_array);
             netcfg_write_dhcp(interface, dhcp_hostname); 
             return 0;
