@@ -56,10 +56,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Ime domene je dio va¹e Internet adrese pokraj va¹eg imena domaæina. To je "
-"obièno ne¹to ¹to zavr¹ava s .com, .net, .edu ili .org. Ako pode¹avate kuænu "
-"mre¾u, mo¾ete ga proizvoljno odrediti, ali morate koristiti isto ime domene "
-"na svim va¹im raèunalima."
+"Ime domene je dio va¹e Internet adrese pokraj va¹eg imena raèunala. To je "
+"obièno ne¹to ¹to zavr¹ava s .hr, .com, .net, .edu ili .org. Ako pode¹avate "
+"kuænu mre¾u, mo¾ete ga proizvoljno odrediti, ali morate koristiti isto ime "
+"domene na svim va¹im raèunalima."
 
 #. Type: string
 #. Description
@@ -77,7 +77,7 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Imenski poslu¾itelji koriste se za tra¾enje imena domaæina na mre¾i. Molim "
+"Imenski poslu¾itelji koriste se za tra¾enje imena raèunala na mre¾i. Molim "
 "unesite IP adrese (ne imena domaæina) do 3 imenska poslu¾itelja, odvojene "
 "razmacima. Ne koristite zareze. Prvi imenski poslu¾itelj na popisu æe biti "
 "prvi upitan. Ako ne ¾elite koristiti imenske poslu¾itelje, ostavite prazno."
@@ -198,13 +198,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Ime domaæina:"
+msgstr "Ime raèunala:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Molim unesite ime domaæina za ovaj sustav."
+msgstr "Molim unesite ime raèunala za ovaj sustav."
 
 #. Type: string
 #. Description
@@ -215,7 +215,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Ime domaæina je jedna rijeè koja identificira va¹e raèunalo na mre¾i. Ako ne "
+"Ime raèunala je jedna rijeè koja identificira va¹e raèunalo na mre¾i. Ako ne "
 "znate kakvo ono treba biti, pitajte svog mre¾nog administratora. Ako "
 "pode¹avate svoju kuænu mre¾u, mo¾ete ga proizvoljno odrediti."
 
@@ -223,7 +223,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Nevaljano ime domaæina"
+msgstr "Nevaljano ime raèunala"
 
 #. Type: error
 #. Description
@@ -239,7 +239,7 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Valjano ime domaæina mo¾e sadr¾avati samo brojke 0 - 9, mala slova a - z i "
+"Valjano ime raèunala mo¾e sadr¾avati samo brojke 0 - 9, mala slova a - z i "
 "znak minusa. Mora biti izmeðu 2 i 63 znaka dugaèko i ne smije zapoèinjati "
 "ili zavr¹avati s minusom."
 
@@ -257,7 +257,7 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Pojavila se pogre¹ka i postupak pode¹avanja mre¾e je prekinut. Mo¾ete "
-"poku¹ati ponovo iz glavnog instalacijskog izabirnika."
+"poku¹ati ponovo iz glavnog instalacijskog izbornika."
 
 #. Type: error
 #. Description
@@ -435,7 +435,7 @@ msgstr "Podesi mre¾u"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Ime DHCP domaæina:"
+msgstr "Ime raèunala u DHCP-u:"
 
 #. Type: string
 #. Description
@@ -444,8 +444,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Mo¾da trebate unijeti ime DHCP domaæina. Ako koristite kabelski modem, ovdje "
-"trebate upisati broj raèuna."
+"Mo¾da trebate unijeti ime raèunala u DHCP-u. Ako koristite kabelski modem, "
+"ovdje trebate upisati broj raèuna."
 
 #. Type: string
 #. Description
@@ -499,7 +499,7 @@ msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e"
 #. Choices
 #: ../netcfg-dhcp.templates:30
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e s imenom DHCP domaæina"
+msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e s imenom raèunala u DHCP-u"
 
 #. Type: select
 #. Choices
@@ -537,7 +537,7 @@ msgid ""
 msgstr ""
 "Odavde mo¾ete iznova poku¹ati automatsko DHCP pode¹avanje mre¾e (mo¾da va¹em "
 "DHCP poslu¾itelju treba vremena da odgovori), ili ruèno podesiti mre¾u. Neki "
-"DHCP poslu¾itelji tra¾e da klijent po¹alje ime DHCP domaæina, pa mo¾ete "
+"DHCP poslu¾itelji tra¾e da klijent po¹alje ime raèunala DHCP-om, pa mo¾ete "
 "poku¹ati i na taj naèin."
 
 #. Type: note
@@ -573,7 +573,7 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Automatsko pode¹avanje mre¾e je uspjelo. Meðutim, nije postavljen zadani put "
-"(default route): sustav ne zna kako komunicirati s domaæinima na Internetu. "
+"(default route): sustav ne zna kako komunicirati s raèunalima na Internetu. "
 "Zbog toga neæete moæi nastaviti instalaciju, osim ako nemate prvi slu¾beni "
 "Debianiov CD-ROM, ili 'Netinst' CD-ROM, ili pakete dostupne na lokalnoj "
 "mre¾i."
