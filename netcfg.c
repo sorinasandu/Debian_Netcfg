@@ -47,6 +47,8 @@ int netcfg_get_method(struct debconfclient *client)
     else
       ret = debconf_go(client);
 
+    debconf_get(client, "netcfg/use_dhcp");
+
     if (strcmp(client->value, "true") == 0) 
 	netcfg_method = DHCP;
     else 
