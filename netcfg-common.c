@@ -73,6 +73,8 @@ char* essid = NULL;
 /* IW socket for global use - init in main */
 int wfd = 0;
 
+static int have_domain = 0;
+
 int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
@@ -372,13 +374,13 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 int netcfg_get_hostname(struct debconfclient *client, char **hostname)
 {
     static const char *valid_chars =
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
     size_t len;
     int ret;
-    char *p;
+    char *p, *s;
 
     do {
-
+	have_domain = 0;
         ret = my_debconf_input(client, "high", "netcfg/get_hostname", &p);
         if (ret == 30) // backup
             return ret;
@@ -402,6 +404,17 @@ int netcfg_get_hostname(struct debconfclient *client, char **hostname)
         }
         
     } while (!*hostname);
+
+    if ((s = strchr(hostname, '.')))
+    {
+      if (s[1] == '\0') /* "somehostname." <- . should be ignored */
+	*s = '\0';
+      else /* assume we have a valid domain name here */
+      {
+	have_domain = 1;
+	debconf_set(client, "netcfg/get_domain", strdup(s + 1));
+      }
+    }
     return 0;
 }
 
@@ -412,7 +425,18 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 {
     int ret;
     char *ptr;
-        
+       
+    if (have_domain == 1)
+    {
+      char *p = NULL;
+      debconf_get(client, "netcfg/get_domain");
+      assert (!empty_str(client->value));
+      if (*domain)
+	free(*domain);
+      *domain = strdup(client->value);
+      return 0;
+    }
+    
     ret = my_debconf_input(client, "high", "netcfg/get_domain", &ptr);
     if (ret)
         return ret;
