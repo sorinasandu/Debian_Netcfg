@@ -2,7 +2,7 @@ ifndef TARGETS
 TARGETS=netcfg-dhcp netcfg-static netcfg
 endif
 
-LDOPTS=-ldebconfclient -ldebian-installer
+LDOPTS=-ldebconfclient -ldebian-installer -liw
 PREFIX=$(DESTDIR)/usr/
 CFLAGS=-W -Wall  -Os
 

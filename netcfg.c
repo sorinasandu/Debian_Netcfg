@@ -36,7 +36,6 @@
 
 static enum {DHCP, STATIC} netcfg_method = DHCP;
 
-
 int netcfg_get_method(struct debconfclient *client) 
 {
     char *method;
@@ -56,7 +55,7 @@ int netcfg_get_method(struct debconfclient *client)
 int main(void)
 {
     int num_interfaces = 0;
-    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, QUIT } state = GET_INTERFACE;
     static struct debconfclient *client;
 
     /* initialize libd-i */
@@ -71,8 +70,15 @@ int main(void)
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
-	    state = netcfg_get_interface(client, &interface, &num_interfaces) ?
-		BACKUP : GET_METHOD;
+	    if(netcfg_get_interface(client, &interface, &num_interfaces))
+	      state = BACKUP;
+	    else
+	    {
+	      if (is_wireless_iface (interface))
+		state = WCONFIG;
+	      else
+		state = GET_METHOD;
+	    }
 	    break;
 	case GET_METHOD:
 	    if (netcfg_get_method(client))
@@ -109,6 +115,15 @@ int main(void)
 		else
 		    state = QUIT;
 	    }
+	    break;
+	case WCONFIG:
+	    if (netcfg_wireless_set_essid (client, interface) == 30
+		|| netcfg_wireless_set_wep (client, interface) == 30)
+	    {
+	      state = BACKUP;
+	      break;
+	    }
+	    state = GET_METHOD;
 	    break;
 	case QUIT:
 	    return 0;

@@ -21,7 +21,7 @@
 */
 
 #include <ctype.h>
-#include <net/if.h>
+#include <iwlib.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <string.h>
@@ -40,8 +40,9 @@ int main(void)
     int num_interfaces;
     static struct debconfclient *client;
 
-    enum { BACKUP, GET_INTERFACE, GET_DHCP,
-	   QUIT } state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_DHCP, WCONFIG, QUIT } state = GET_INTERFACE;
+
+    wfd = iw_sockets_open();
 
     /* initialize libd-i */
     di_system_init("netcfg-dhcp");
@@ -55,8 +56,24 @@ int main(void)
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
-	    state = netcfg_get_interface(client, &interface, &num_interfaces) ?
-		BACKUP : GET_DHCP;
+	    if (netcfg_get_interface(client, &interface, &num_interfaces))
+	      state = BACKUP;
+	    else
+	    {
+	      if (is_wireless_iface(interface))
+		state = WCONFIG;
+	      else
+		state = GET_DHCP;
+	    }
+	    break;
+	case WCONFIG:
+	    if (netcfg_wireless_set_essid (client, interface)
+		|| netcfg_wireless_set_wep (client, interface))
+	    {
+	      state = BACKUP;
+	      break;
+	    }
+	    state = GET_DHCP;	    
 	    break;
 	case GET_DHCP:
 	    if (netcfg_get_dhcp(client)) 

@@ -19,7 +19,6 @@
    
 */
 #include <ctype.h>
-#include <net/if.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <string.h>
@@ -30,6 +29,7 @@
 #include <sys/stat.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
+#include <iwlib.h>
 #include "netcfg.h"
 
 int main(void)
@@ -37,7 +37,8 @@ int main(void)
     int num_interfaces = 0;
     static struct debconfclient *client;
 
-    enum { BACKUP, GET_INTERFACE, GET_STATIC, QUIT} state = GET_INTERFACE;
+    enum { BACKUP, GET_INTERFACE, GET_STATIC, WCONFIG, QUIT} state = GET_INTERFACE;
+
 
     /* initialize libd-i */
     di_system_init("netcfg-static");
@@ -51,14 +52,30 @@ int main(void)
 	case BACKUP:
 	    return 10;
 	case GET_INTERFACE:
-	    state = netcfg_get_interface(client, &interface, &num_interfaces) ?
-		BACKUP : GET_STATIC;
+	    if (netcfg_get_interface(client, &interface, &num_interfaces))
+		state = BACKUP;
+	    else
+	    {
+	      if (is_wireless_iface(interface))
+		state = WCONFIG;
+	      else
+	        state = GET_STATIC;
+	    }
 	    break;
 	case GET_STATIC:
 	    if (netcfg_get_static(client)) 
 		state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
 	    else
 		state = QUIT;
+	    break;
+	case WCONFIG:
+	    if (netcfg_wireless_set_essid (client, interface)
+		|| netcfg_wireless_set_wep (client, interface))
+	    {
+	      state = BACKUP;
+	      break;
+	    }
+	    state = GET_STATIC;
 	    break;
 	case QUIT:
 	    if (netcfg_activate_static(client) != 0) 

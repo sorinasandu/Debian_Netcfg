@@ -33,6 +33,41 @@ _Description: Primary network interface:
  Your system has multiple network interfaces. Choose the one to use as
  the primary network interface while installing Debian.
 
+Template: netcfg/wireless_essid
+Type: string
+_Description: Wireless configuration for ${iface}
+ Please enter the ESSID of the wireless network you would like ${iface}
+ to use. If you would like the installer to select whichever is available,
+ just hit Enter and continue.
+
+Template: netcfg/wireless_wep
+Type: string
+_Description: Wireless configuration for ${iface}
+ If applicable, please enter the WEP security key for device ${iface}.
+ There are two ways to do this:
+ .
+ If your WEP key is in the format 'nnnn-nnnn-nn' or 'nnnnnnnn', where n
+ is a number, just enter it as it is into the box.
+ .
+ If your WEP key is in the format of a passphrase, prefix it with 's:'
+ (without quotes.)
+ .
+ Of course, if there is no WEP key for your wireless network, leave this
+ form blank.
+
+Template: netcfg/invalid_wep
+Type: error
+_Description: Invalid WEP key
+ The WEP key '${wepkey}' is invalid. Please refer to the instructions on
+ the next screen carefully on how to enter your WEP key correctly, and try
+ again.
+
+Template: netcfg/invalid_essid
+Type: error
+_Description: Invalid ESSID
+ The ESSID "${essid}" is invalid. ESSIDs may only be up to 32 characters,
+ but may contain all kinds of characters.
+
 Template: netcfg/get_hostname
 Type: string
 Default: debian
@@ -71,6 +106,10 @@ _Description: No network interfaces detected
 Template: netcfg/internal-none
 Type: text
 _Description: <none>
+
+Template: netcfg/internal-wifi
+Type: text
+_Description: Wireless ethernet (802.11x)
 
 Template: netcfg/internal-eth
 Type: text

@@ -18,6 +18,7 @@
 #define _GNU_SOURCE
 
 extern int netcfg_progress_displayed;
+extern int wfd;
 
 /* network config */
 extern char *interface;
@@ -76,5 +77,11 @@ extern void netcfg_write_common (const char *prebaseconfig,
 				 char *domain);
 
 void netcfg_nameservers_to_array(char *nameservers, u_int32_t array[]);
+
+extern int is_wireless_iface (const char* iface);
+
+
+extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface);
+extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 
 #endif /* _NETCFG_H_ */

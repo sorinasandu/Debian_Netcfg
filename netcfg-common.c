@@ -22,8 +22,13 @@
 
 #define _GNU_SOURCE
 
+#ifndef ARRAY_SIZE
+# define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
+#endif
+
+#include <assert.h>
 #include <ctype.h>
-#include <net/if.h>
+#include <iwlib.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <string.h>
@@ -58,6 +63,13 @@ u_int32_t netmask = 0;
 u_int32_t gateway = 0;
 u_int32_t pointopoint = 0;
 
+/* wireless config */
+char* wepkey = NULL;
+char* essid = NULL;
+
+/* IW socket for global use - init in main */
+int wfd = 0;
+
 int my_debconf_input(struct debconfclient *client, char *priority,
                      char *template, char **p)
 {
@@ -73,6 +85,7 @@ int my_debconf_input(struct debconfclient *client, char *priority,
 /* Signal handler for DHCP client child */
 static void dhcp_client_sigchld(int sig) 
 {
+    (void)sig;
     if (dhcp_running == 1) {
 	dhcp_running = 0;
 	wait(&dhcp_exit_status);
@@ -177,6 +190,8 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
     char template[256];
 
     if (strlen(ifp) < 100) {
+      if (!is_wireless_iface(ifp))
+      {
         /* strip away the number from the interface (eth0 -> eth) */
         char *new_ifp = strdup(ifp), *ptr = new_ifp;
         while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
@@ -189,6 +204,12 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
         debconf_metaget(client, template, "description");
         if (client->value != NULL)
             return strdup(client->value);
+      }
+      else
+      {
+	strcpy(template, "netcfg/internal-wifi");
+	debconf_metaget(client, template, "description");
+      }
     }
     debconf_metaget(client, "netcfg/internal-unknown-iface", "description");
     if (client->value != NULL)
@@ -604,6 +625,13 @@ static int netcfg_write_static(char *prebaseconfig, char *domain,
         if (pointopoint)
             fprintf(fp, "\tpointopoint %s\n",
                     num2dot(pointopoint));
+	if (is_wireless_iface(interface))
+	{
+	  if (essid != NULL)
+	    fprintf(fp, "\twireless_essid %s\n", essid);
+	  if (wepkey != NULL)
+	    fprintf(fp, "\twireless_key %s\n", wepkey);
+	}
         fclose(fp);
     } else
         goto error;
@@ -883,6 +911,13 @@ static void netcfg_write_dhcp(char *iface, char *host)
         fprintf(fp, "iface %s inet dhcp\n", iface);
         if (host)
             fprintf(fp, "\thostname %s\n", host);
+	if (is_wireless_iface(iface))
+	{
+	  if (essid)
+	    fprintf(fp, "\twireless_essid %s", essid);
+	  if (wepkey)
+	    fprintf(fp, "\twireless_key %s", wepkey);
+	}
         fclose(fp);
     }
 }
@@ -1019,4 +1054,115 @@ int netcfg_get_dhcp(struct debconfclient *client) {
         }
     }
     return 0;
+}
+
+int is_wireless_iface (const char* iface)
+{
+  wireless_config wc;
+
+  if (wfd == 0)
+    wfd = iw_sockets_open();
+  
+  return (iw_get_basic_config (wfd, (char*)iface, &wc) == 0);
+}
+
+int netcfg_wireless_set_essid (struct debconfclient * client, char *iface)
+{
+  int ret;
+  char* tf = NULL;
+  wireless_config wconf;
+  
+  if (wfd == 0) /* shouldn't happen */
+    wfd = iw_sockets_open();
+
+  iw_get_basic_config (wfd, iface, &wconf);
+
+  debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
+  ret = my_debconf_input(client, "low", "netcfg/wireless_essid", &tf);
+
+  if (ret == 30)
+    return ret;
+  
+  /* question not asked or user doesn't care or we're successfully associated */
+  if (strlen(wconf.essid) != 0 || (tf && *tf == '\0')) 
+  {
+    /* Default to mode managed, AP any */
+    wconf.essid[0] = '\0';
+    wconf.essid_on = 0;
+    wconf.has_mode = 1;
+    wconf.mode = 2; /* MANAGED */
+
+    iw_set_basic_config (wfd, iface, &wconf);
+    
+    return 0;
+  }
+  /* yes, wants to set an essid by himself */
+  else
+  {
+    char* user_essid = NULL, *ptr = wconf.essid;
+
+    if (strlen(tf) <= IW_ESSID_MAX_SIZE) /* looks ok, let's use it */
+      user_essid = tf;
+    
+    while (!user_essid || (user_essid && user_essid[0] == '\0') ||
+	strlen(user_essid) > IW_ESSID_MAX_SIZE)
+    {
+      debconf_subst(client, "netcfg/invalid_essid", "essid", user_essid);
+      debconf_input(client, "high", "netcfg/invalid_essid");
+      debconf_go(client);
+      
+      ret = my_debconf_input(client, "low", "netcfg/wireless_essid", &user_essid);
+      assert (ret != 30);
+    }
+
+    essid = strdup (user_essid);
+
+    memset(ptr, 0, IW_ESSID_MAX_SIZE + 1);
+    snprintf(wconf.essid, IW_ESSID_MAX_SIZE + 1, "%s", essid);
+    wconf.has_essid = 1;
+    wconf.essid_on = 1;
+
+    iw_set_basic_config (wfd, iface, &wconf);
+  }
+
+  return 0;
+}
+
+int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
+{
+  wireless_config wconf;
+  char* rv = NULL;
+  int ret, keylen;
+  unsigned char buf [IW_ENCODING_TOKEN_MAX];
+  
+  iw_get_basic_config (wfd, iface, &wconf);
+
+  debconf_subst(client, "netcfg/wireless_wep", "iface", iface);
+  ret = my_debconf_input (client, "high", "netcfg/wireless_wep", &rv);
+
+  if (ret == 30)
+    return ret;
+
+  if (rv && *rv == '\0')
+    return 0;
+
+  while ((keylen = iw_in_key (rv, buf)) == -1)
+  {
+    debconf_subst(client, "netcfg/invalid_wep", "wepkey", rv);
+    debconf_input(client, "high", "netcfg/invalid_wep");
+    debconf_go(client);
+    
+    ret = my_debconf_input (client, "high", "netcfg/wireless_wep", &rv);
+  }
+
+  wconf.has_key = 1;
+  wconf.key_size = keylen;
+  wconf.key_flags = 16385; /* who khows.. it works */
+  strncpy (wconf.key, buf, keylen);
+
+  wepkey = strdup(rv);
+
+  iw_set_basic_config (wfd, iface, &wconf);
+
+  return 0;
 }
