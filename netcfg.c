@@ -92,6 +92,10 @@ int main(int argc, char *argv[])
 	case GET_INTERFACE:
 	    if(netcfg_get_interface(client, &interface, &num_interfaces))
 	      state = BACKUP;
+	    else if (! interface || ! num_interfaces)
+	    {
+	      state = BACKUP;
+	    }
 	    else
 	    {
 	      if (is_wireless_iface (interface))

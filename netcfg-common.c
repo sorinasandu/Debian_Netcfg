@@ -363,7 +363,13 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         debconf_input(client, "high", "netcfg/no_interfaces");
         debconf_go(client);
         free(ptr);
-        exit(1);
+        *numif = 0;
+        return 0;
+    }
+    else if (num_interfaces == 1)
+    {
+        inter = ptr;
+        *numif = 1;
     }
     else if (num_interfaces > 1)
     {
@@ -388,11 +394,6 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         if (!inter)
             netcfg_die(client);
     }
-    else if (num_interfaces == 1)
-    {
-        inter = ptr;
-        *numif = 1;
-    }
 
     /* grab just the interface name, not the description too */
     *interface = inter;
@@ -400,7 +401,6 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     if (ptr == NULL)
         goto error;
     *ptr = '\0';
-
     *interface = strdup(*interface);
 
     /* Free allocated memory */
