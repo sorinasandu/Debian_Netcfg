@@ -109,9 +109,9 @@ int main(int argc, char *argv[])
 
               free(buf);
 
-              di_info("link status for %s is: %s", interface,
+              di_info("link status for %s is: %s (%d)", interface,
                   (ret == 1) ? "unknown" :
-                  (ret == 2) ? "disconnected" : "connected");
+                  ((ret == 2) ? "disconnected" : "connected"), ret);
 
               if (res == NOT_ASKED)
               {

@@ -37,7 +37,9 @@ int netcfg_get_ipaddress(struct debconfclient *client)
       
       if (!ok)
       {
+	debconf_capb(client);
 	debconf_input (client, "critical", "netcfg/bad_ipaddress");
+	debconf_capb(client, "backup");
 	debconf_go (client);
       }
     }
@@ -69,8 +71,10 @@ int netcfg_get_pointopoint(struct debconfclient *client)
       
       if (!ok)
       {
+	debconf_capb(client);
 	debconf_input (client, "critical", "netcfg/bad_ipaddress");
 	debconf_go (client);
+	debconf_capb(client, "backup");
       }
     }
 
@@ -101,8 +105,10 @@ int netcfg_get_netmask(struct debconfclient *client)
       
       if (!ok)
       {
+	debconf_capb(client);
 	debconf_input (client, "critical", "netcfg/bad_ipaddress");
 	debconf_go (client);
+	debconf_capb(client, "backup");
       }
     }
 
@@ -150,8 +156,10 @@ int netcfg_get_gateway(struct debconfclient *client)
       
       if (!ok)
       {
+	debconf_capb(client);
 	debconf_input (client, "critical", "netcfg/bad_ipaddress");
 	debconf_go (client);
+	debconf_capb(client, "backup");
       }
     }
 
@@ -362,7 +370,7 @@ int netcfg_get_static(struct debconfclient *client)
     debconf_metaget(client,  "netcfg/internal-none", "description");
     none = client->value ? strdup(client->value) : strdup("<none>");
 
-    while (state != QUIT) {
+    for (;;) {
         switch (state) {
         case BACKUP:
             return 10; /* Back to main */
@@ -417,13 +425,18 @@ int netcfg_get_static(struct debconfclient *client)
 	      GET_NAMESERVERS : GET_DOMAIN;
 	    break;
         case GET_DOMAIN:
-	    if (!have_domain) {
+	    if (!have_domain)
+	    {
 	      state = (netcfg_get_domain (client, &domain)) ?
 		GET_HOSTNAME : QUIT;
 	    }
 	    else 
+	    {
+	      di_info("domain = %s", domain);
 	      state = QUIT;
+	    }
             break;
+	    
         case CONFIRM:
             debconf_subst(client, "netcfg/confirm_static", "interface", interface);
             debconf_subst(client, "netcfg/confirm_static", "ipaddress",
@@ -448,8 +461,8 @@ int netcfg_get_static(struct debconfclient *client)
 
 	    netcfg_write_static("40netcfg", domain, nameserver_array);
 	    netcfg_activate_static(client);
-
             break;
+	    
         case QUIT:
 	    netcfg_write_common("40netcfg", ipaddress, hostname, domain);
             netcfg_rewrite_resolv(domain, nameserver_array);
@@ -467,7 +480,7 @@ void netcfg_rewrite_resolv (char* domain, struct in_addr* nameservers)
 
   if ((fp = file_open(RESOLV_FILE, "w"))) {
     int i = 0;
-    if (domain && !empty_str(domain))
+    if (!empty_str(domain))
       fprintf(fp, "search %s\n", domain);
 
     while (nameservers[i].s_addr)

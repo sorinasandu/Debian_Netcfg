@@ -459,7 +459,10 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 	*s = '\0';
       else /* assume we have a valid domain name here */
       {
-	debconf_set(client, "netcfg/get_domain", strdup(s + 1));
+	if (domain)
+	  free(domain);
+	domain = strdup(s + 1);
+	debconf_set(client, "netcfg/get_domain", domain);
         have_domain = 1;
       }
     }
