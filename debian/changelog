@@ -14,6 +14,9 @@ netcfg (0.72) UNRELEASED; urgency=low
       Seed get_domain with it instead.
   * Colin Watson
     - Fix typo (s/occured/occurred/g). Unfuzzy translations.
+  * Per Olofsson
+    - Generate hotplug mapping entries for 16-bit PCMCIA cards as well,
+      since they will be managed by hotplug in pcmcia-cs 3.2.5-8.
 
  -- Joshua Kwan <joshk@triplehelix.org>  Sat, 17 Jul 2004 01:49:33 -0700
 
