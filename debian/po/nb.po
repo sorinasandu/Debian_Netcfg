@@ -1,3 +1,4 @@
+# translation of netcfg.po to
 # translation of netcfg.po to Norwegian bokmål
 # translation of netcfg.po to
 #
@@ -12,13 +13,14 @@
 #    Developers do not need to manually edit POT or PO files.
 # Håvard Korsvoll <korsvoll@stud.ntnu.no>, 2004.
 # Axel Bojer <axelb@skolelinux.no>, 2004.
+# Knut Yrvin <knuty@skolelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-03-02 14:19-0500\n"
-"PO-Revision-Date: 2004-03-02 19:43GMT+2\n"
+"PO-Revision-Date: 2004-03-03 22:53GMT+2\n"
 "Last-Translator: Axel Bojer <axelb@skolelinux.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -51,8 +53,8 @@ msgstr ""
 "Nettverket kan enten settes opp ved hjelp av en DHCP-tjener, eller ved å "
 "skrive inn all informasjonen manuelt. Hvis du bruker DHCP og "
 "installasjonsprogrammet ikke klarer å hente et oppsett som fungerer fra DHCP-"
-"tjeneren på nettverket ditt, vil du få anledning til å sette opp netteverket "
-"manuelt.. Hvis du er usikker, velg DHCP."
+"tjeneren på nettverket ditt, vil du få anledning til å sette opp nettverket "
+"manuelt. Hvis du er usikker, velg DHCP."
 
 #. Type: string
 #. Description
@@ -123,7 +125,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID'en) på "
+"${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID-en) på "
 "det trådløse nettverket du vil at ${iface} skal bruke. La feltet stå tomt "
 "hvis det er det samme hvilket nettverk du bruker."
 
@@ -159,8 +161,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Hvis WEP-nøkkelen har format som et passord, skriv inn «s:» foran passordet."
+msgstr "Hvis WEP-nøkkelen har format som et passord, skriv inn «s:» foran passordet."
 
 #. Type: string
 #. Description
@@ -168,8 +169,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Hvis det trådløse nettverket ikke har noen WEP-nøkkel, så la feltet stå tomt."
+msgstr "Hvis det trådløse nettverket ikke har noen WEP-nøkkel, så la feltet stå tomt."
 
 #. Type: error
 #. Description
@@ -201,7 +201,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "ESSID-en «${essid}» er ugyldig. ESSID-er kan ha opptil 32 tegn, og kan "
-"inneholde alle slags tegn."
+"inneholde all slags tegn."
 
 #. Type: string
 #. Description
@@ -225,7 +225,7 @@ msgid ""
 "something up here."
 msgstr ""
 "Vertsnavnet er ett ord som navngir systemet ditt på nettet. Hvis du ikke vet "
-"hva vertsnavnet bør være, så snakk med nettverksadministratoren. Hvis du er "
+"hva vertsnavnet skal være, så snakk med nettverksadministratoren. Hvis du er "
 "i ferd med å sette opp ditt eget hjemmenett, kan du bare finne på et navn "
 "selv."
 
@@ -382,9 +382,8 @@ msgstr "Hypersokkel"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:164
-#, fuzzy
 msgid "Inter-user communication vehicle"
-msgstr "Mellom-bruker kommunikasjonskjøretøy"
+msgstr "Kommunikasjonsmotor mellom brukere"
 
 #. Type: text
 #. Description
@@ -502,12 +501,11 @@ msgstr "Vil du prøve en gang til å sette opp et DHCP-nettverk?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:39
-#, fuzzy
 msgid ""
 "No IP address was found during automatic network configuration with DHCP. "
 "DHCP servers are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"Ingen IP-adresse ble angitt ut under oppsettet av DHCP-nettverket. Noen "
+"Ingen IP-adresse ble angitt under oppsettet av DHCP-nettverket. Noen "
 "ganger er DHCP-tjenere veldig trege. Hvis du vil kan du prøve igjen."
 
 #. Type: text
@@ -632,8 +630,7 @@ msgstr "Det går ikke å komme frem til standardruteren du oppga."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan ha oppgitt feil IP-adresse, nettmaske og/eller adresse til "
 "standardruter."
@@ -672,4 +669,5 @@ msgstr "Statisk nettverksoppsett"
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
-msgstr "Set opp et nettverk ved hjelp av statisk adressering"
+msgstr "Sett opp et nettverk ved hjelp av statisk adressering"
+
