@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-04-16 23:18+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: Korean <cwryu@debian.org>\n"
@@ -473,15 +473,22 @@ msgstr "DHCP로 네트워크를 설정하는 중입니다"
 msgid "This may take some time."
 msgstr "시간이 좀 걸릴 수도 있습니다."
 
-#. Type: error
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "고정 네트워크 설정"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "DHCP 클라이언트를 찾을 수 없습니다"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP 클라이언트를 찾을 수 없습니다. 이 꾸러미는 pump나 dhcp-client가 필요합니"
@@ -489,54 +496,54 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP 설정 단계가 중지되었습니다."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "고정 네트워크 설정"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "동적 네트워크 설정 (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Configure network manually"
 msgstr "네트워크 설정"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "네트워크 설정"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "네트워크 설정 방법:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -547,7 +554,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "네트워크 설정"
@@ -555,14 +562,14 @@ msgstr "네트워크 설정"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "동적 네트워크 설정 (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "동적 주소를 사용해 네트워크 설정 (DHCP)"
 

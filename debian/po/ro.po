@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-05-13 00:58+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
@@ -499,15 +499,22 @@ msgstr "Se configurează reţeaua cu DHCP"
 msgid "This may take some time."
 msgstr "Aceasta poate dura ceva timp."
 
-#. Type: error
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "Reîncearcă autoconfigurarea reţelei"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "Nu s-a găsit client DHCP"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nu s-a găsit nici un client DHCP. Acest pachet are nevoie de pump sau de "
@@ -515,49 +522,49 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "Procesul de configurare DHCP va fi abandonat."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Retry network autoconfiguration"
 msgstr "Reîncearcă autoconfigurarea reţelei"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Reîncearcă autoconfigurarea reţelei cu un nume DHCP"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Configure network manually"
 msgstr "Configurează reţeaua manual"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "Do not configure the network at this time"
 msgstr "Nu configura reţeaua acum"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid "Next network configuration step:"
 msgstr "Următorul pas în configurarea reţelei:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -573,7 +580,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Configurează reţeaua"
@@ -581,14 +588,14 @@ msgstr "Configurează reţeaua"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Configurare dinamică a reţelei (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Configurează reţeaua dinamic folosind adresare dinamică (DHCP)"
 

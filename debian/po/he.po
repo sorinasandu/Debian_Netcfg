@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-04-18 20:42+0200\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: \n"
@@ -726,13 +726,26 @@ msgstr "מגדיר את הרשת עם DHCP"
 msgid "This may take some time."
 msgstr "הפעולה עלולה לקחת זמן מה..."
 
+#  Type: text
+#  Description
+#  Title displayed when configuring this package
+#  Type: text
+#  Description
+#  Title displayed when configuring this package
+#. Type: text
+#. Description
+#: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "הגדרת רשת קבועה:"
+
 #  Type: error
 #  Description
 #  Type: error
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "לא נמצא לקוח DHCP"
 
@@ -742,7 +755,7 @@ msgstr "לא נמצא לקוח DHCP"
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "לא נמצא לקוח DHCP. החבילה הנוכחית דורשת pump או dhcp-cleint."
 
@@ -752,7 +765,7 @@ msgstr "לא נמצא לקוח DHCP. החבילה הנוכחית דורשת pump
 #  Description
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "תהליך הגדרת DHCP יבוטל"
 
@@ -764,7 +777,7 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #  Title displayed when configuring this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "הגדרת רשת קבועה:"
@@ -774,7 +787,7 @@ msgstr "הגדרת רשת קבועה:"
 #  Title displayed when configuring this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "הגדרה משתנה של הרשת (DHCP)"
@@ -787,14 +800,14 @@ msgstr "הגדרה משתנה של הרשת (DHCP)"
 #  Item in the main menu to select this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Configure network manually"
 msgstr "מגדיר את הרשת..."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
@@ -806,7 +819,7 @@ msgstr ""
 #  Item in the main menu to select this package
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "מגדיר את הרשת..."
@@ -819,14 +832,14 @@ msgstr "מגדיר את הרשת..."
 #  Title displayed when configuring this package
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "הגדרת רשת קבועה:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -843,7 +856,7 @@ msgstr ""
 #  Item in the main menu to select this package
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "מגדיר את הרשת..."
@@ -854,7 +867,7 @@ msgstr "מגדיר את הרשת..."
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "הגדרה משתנה של הרשת (DHCP)"
 
@@ -864,7 +877,7 @@ msgstr "הגדרה משתנה של הרשת (DHCP)"
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "הגדר את הרשת שלך בעזרת כתובות משתנות (DHCP)"
 

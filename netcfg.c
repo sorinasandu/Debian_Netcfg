@@ -73,6 +73,10 @@ int main(void)
     /* initialize debconf */
     client = debconfclient_new();
     debconf_capb(client, "backup");
+
+    /* always always always default back to DHCP. This might be bad, but
+     * one can't get back to DHCP from static. yet. */
+    debconf_set(client, "netcfg/use_dhcp", "true");
     
     while (1) {
 	switch(state) {

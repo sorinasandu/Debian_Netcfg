@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-04-17 10:41+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -487,15 +487,22 @@ msgstr "Tinklo konfigūravimas su DHCP"
 msgid "This may take some time."
 msgstr "Tai gali užtrukti šiek tiek laiko."
 
-#. Type: error
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "Statinis tinklo konfigūravimas"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "Nerastas DHCP klientas"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas pump "
@@ -503,54 +510,54 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP konfigūravimo procesas bus nutrauktas."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statinis tinklo konfigūravimas"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Tinklo konfigūravimas"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Tinklo konfigūravimas"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Statinis tinklo konfigūravimas"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -561,7 +568,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Tinklo konfigūravimas"
@@ -569,14 +576,14 @@ msgstr "Tinklo konfigūravimas"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinaminis tinklo konfigūravimas (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Tinklo konfigūravimas naudojant dinaminį adresavimą (DHCP)"
 

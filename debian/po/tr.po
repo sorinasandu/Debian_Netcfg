@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-04-16 00:56+0300\n"
 "Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
 "Language-Team: Turkish <debian-l10n-turkish@lists.debian.org>\n"
@@ -485,15 +485,22 @@ msgstr "Ağınız DHCP ile yapılandırılıyor"
 msgid "This may take some time."
 msgstr "Bu işlem biraz zaman alabilir."
 
-#. Type: error
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "Statik ağ yapılandırması"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "Herhangi bir DHCP istemcisi bulunamadı"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Herhangi bir DHCP istemcisi bulunamadı. Bu paket pump veya dhcp-client "
@@ -501,54 +508,54 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "DHCP yapılandırması iptal edilecek."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statik ağ yapılandırması"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dinamik ağ yapılandırması (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Ağı yapılandır"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Ağı yapılandır"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Statik ağ yapılandırması"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -559,7 +566,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Ağı yapılandır"
@@ -567,14 +574,14 @@ msgstr "Ağı yapılandır"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinamik ağ yapılandırması (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "Ağı dinamik adresleme (DHCP) ile yapılandır"
 

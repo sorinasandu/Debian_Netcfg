@@ -457,6 +457,21 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 "\n" \
 "# This entry denotes the loopback (127.0.0.1) interface.\n"
 
+void netcfg_write_loopback(const char* prebaseconfig)
+{
+  FILE *fp;
+
+  if ((fp = file_open(INTERFACES_FILE, "w"))) {
+    fprintf(fp, HELPFUL_COMMENT);
+    fprintf(fp, "auto lo\n");
+    fprintf(fp, "iface lo inet loopback\n");
+    fclose(fp);
+  }
+  di_system_prebaseconfig_append(prebaseconfig, "cp %s %s\n",
+      INTERFACES_FILE,
+      "/target" INTERFACES_FILE);
+}
+
 void netcfg_write_common(const char *prebaseconfig, struct in_addr ipaddress,
 			 char *hostname, char *domain)
 {

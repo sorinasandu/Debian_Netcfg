@@ -175,6 +175,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 int poll_dhcp_client (struct debconfclient *client)
 {
   time_t start_time, now;
+  int ret = 1;
 
   /* show progress bar */
   debconf_progress_start(client, 0, DHCP_SECONDS, "netcfg/dhcp_progress");
@@ -190,19 +191,22 @@ int poll_dhcp_client (struct debconfclient *client)
     now = time(NULL);
   }
 
+  /* got a lease? display a success message */
+  if (!dhcp_running && (dhcp_exit_status == 0))
+  {
+    dhcp_pid = -1;
+    ret = 0;
+
+    debconf_progress_set(client, DHCP_SECONDS);
+    debconf_progress_info(client, "netcfg/dhcp_success_note");
+    sleep(2);
+  }
+  
   /* stop progress bar */
   debconf_progress_stop(client);
   netcfg_progress_displayed = 0;
-
-  /* got a lease? */
-  if (!dhcp_running && (dhcp_exit_status == 0))
-  {
-    di_info("unsetting PID (was %d)", dhcp_pid);
-    dhcp_pid = -1;
-    return 0;
-  }
   
-  return 1;
+  return ret;
 }
 
 int ask_dhcp_retry (struct debconfclient *client)
@@ -241,6 +245,8 @@ int ask_dhcp_retry (struct debconfclient *client)
   }
   else if (client->value[0] == 'C')
     return 2; /* manual */
+  else if (empty_str(client->value))
+    return 5; /* loop back into dhcp_retry */
   else
     return 3; /* no config */
 }
@@ -290,6 +296,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           case 2: state = STATIC; break;
           case 3: /* no net config at this time :( */
                   kill_dhcp_client();
+		  netcfg_write_loopback("40netcfg");
                   return 0;
 	  case 4: /* reconfig wifi */
           {

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-12 23:25-0700\n"
+"POT-Creation-Date: 2004-05-13 00:32-0700\n"
 "PO-Revision-Date: 2004-04-16 01:19+0200\n"
 "Last-Translator: VERÓK István <vi@fsf.hu>\n"
 "Language-Team: Debian Hungarian Localization Team <debian-l10n>\n"
@@ -495,15 +495,22 @@ msgstr "Hálózat konfigurálása DHCP-vel"
 msgid "This may take some time."
 msgstr "Ez percekbe is beletelhet."
 
-#. Type: error
+#. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:31
+#, fuzzy
+msgid "Network autoconfiguration has succeeded!"
+msgstr "Statikus hálózatkonfigurálás"
+
+#. Type: error
+#. Description
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client found"
 msgstr "DHCP-kliens keresése eredménytelen"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "DHCP-kliens keresése eredménytelen. Ez a csomag a pump vagy a dhcp-client "
@@ -511,54 +518,54 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:31
+#: ../netcfg-dhcp.templates:35
 msgid "The DHCP configuration process will be aborted."
 msgstr "A DHCP-konfiguráció folyamata megszakad."
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration"
 msgstr "Statikus hálózatkonfigurálás"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Configure network manually"
 msgstr "Hálózat konfigurálása"
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 msgid "${wifireconf}"
 msgstr ""
 
 #. Type: select
 #. Choices
-#: ../netcfg-dhcp.templates:38
+#: ../netcfg-dhcp.templates:42
 #, fuzzy
 msgid "Do not configure the network at this time"
 msgstr "Hálózat konfigurálása"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 #, fuzzy
 msgid "Next network configuration step:"
 msgstr "Hálózat konfigurálásának módja:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:44
 msgid ""
 "Network autoconfiguration failed. This is typically due to a slow DHCP "
 "server on the network, so you probably want to try again. You may also "
@@ -569,7 +576,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:49
+#: ../netcfg-dhcp.templates:53
 #, fuzzy
 msgid "Reconfigure the wireless network"
 msgstr "Hálózat konfigurálása"
@@ -577,14 +584,14 @@ msgstr "Hálózat konfigurálása"
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:58
 msgid "Dynamic network configuration (DHCP)"
 msgstr "Dinamikus hálózatkonfigurálás (DHCP)"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-dhcp.templates:59
+#: ../netcfg-dhcp.templates:63
 msgid "Configure the network using dynamic addressing (DHCP)"
 msgstr "A hálózat konfigurálása dinamikus címzéssel (DHCP)"
 
