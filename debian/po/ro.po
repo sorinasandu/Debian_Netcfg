@@ -14,10 +14,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: netcfg\n"
+"Project-Id-Version: d-i_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-01 00:25-0700\n"
-"PO-Revision-Date: 2004-05-20 01:47+0300\n"
+"PO-Revision-Date: 2004-07-03 03:27+0300\n"
 "Last-Translator: Eddy Petrisor <eddy_petrisor@yahoo.com>\n"
 "Language-Team: Romanian <Romanian>\n"
 "MIME-Version: 1.0\n"
@@ -536,7 +536,6 @@ msgstr "Metoda de configurare a reţelei:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -544,19 +543,16 @@ msgid ""
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
 msgstr ""
-"Autoconfigurarea reţelei a eşuat. Motivul probabil al acetui lucru un server "
-"DHCP lent în reţea, deci probabil doriţi să încercaţi din nou. Dacă în "
-"reţeaua dvs. nu se foloseşte DHCP pentru autoconfigurare, puteţi configura "
-"manual. De asemenea, unele server DHCP necesită să specificaţi un nume DHCP, "
+"Aic puteţi să alegeţi să reîncercaţi auto-configurarea nfigurarea reţelei prin DHCP(care s-ar putea să funcţioneze dacă serverul dvs.dhcp are nevoie de mult timp pentru a răspunde) sau să configuraţireţeaua manual. "
+"Unele servere DHCP necesită să se specifice un nume DHCP de către client, "
 "deci puteţi să alegeţi să introduceţi un asemenea nume înainte de a "
 "reîncerca DHCP."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Autoconfigurarea reţelei a reuşit"
+msgstr "Autoconfigurarea reţelei a eşuat"
 
 #. Type: note
 #. Description
@@ -564,13 +560,13 @@ msgstr "Autoconfigurarea reţelei a reuşit"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "Reţeaua dumneavostră probabil nu foloseşteprotocolul DHCP. Există şi posibilitatea ca serverul să fie lent sau o placa de reţea care nu funcţionează corect să încetinească sistemul."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Se continuă fără o rută implicită?"
 
 #. Type: boolean
 #. Description
@@ -581,7 +577,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
+msgstr "Autoconfigurarea reţelei a reuşit. Totuşi, nu s-a setat o rută implicită: sistemul nu ştie cum să comunice cu alte calculatoare de pe Internet. Acest lucru duce la imposibilitatea de a continua instalarea în cazul în care nu aveţi primul CD oficial Debian, un CD de tip Netinst sau pachete disponibile pe reţeaua locală."
 
 #. Type: boolean
 #. Description
@@ -589,7 +585,7 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "Dacă nu sunteţi sigur, ar trebui să nu continuaţi fară o rută implicită: contactaţi administratorul reţelei localeîn legătură cu această problemă."
 
 #. Type: text
 #. Description
@@ -717,8 +713,7 @@ msgstr "Adresa de gateway introdusă este inaccesibilă."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Este posibil să fi comis o eroare când aţi introdus adresa dvs. de IP, masca "
 "de reţea şi/sau gateway-ul."
@@ -791,3 +786,4 @@ msgstr "Configurează reţeaua folosind adresare statică"
 #~ "Nu s-a găsit nici o adresă IP în timpul configurării automate cu DHCP. "
 #~ "Uneori serverele DHCP sunt foarte lente. Dacă doriţi, puteţi să încercaţi "
 #~ "din nou."
+
