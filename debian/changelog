@@ -12,8 +12,10 @@ netcfg (0.69) UNRELEASED; urgency=low
     - Don't set the broadcast address in either dhclient-script or
       static configuration. (Closes: #253361)
     - Fix /etc/hosts writing after much deliberation. (Closes: #247734)
+  * Bastian Blank
+    - Readd postinst files for netcfg-dhcp and netcfg-static.
 
- -- Joshua Kwan <joshk@triplehelix.org>  Thu, 10 Jun 2004 21:51:33 -0700
+ -- Bastian Blank <waldi@debian.org>  Sat, 12 Jun 2004 20:47:11 +0200
 
 netcfg (0.68) unstable; urgency=medium
 
