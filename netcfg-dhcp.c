@@ -65,7 +65,7 @@ static void netcfg_get_dhcp()
                 dhcp_hostname = NULL;
         }
 
-        client->command(client, "input", "high", "netcfg/dhcp_hostname",
+        client->command(client, "input", "low", "netcfg/dhcp_hostname",
                         NULL);
         client->command(client, "go", NULL);
         client->command(client, "get", "netcfg/dhcp_hostname", NULL);
@@ -151,8 +151,7 @@ int main(int argc, char *argv[])
 
 
         do {
-                netcfg_get_common(client, &interface, &hostname, &domain,
-                                  &nameservers);
+                netcfg_get_interface(client, &interface);
 
                 client->command(client, "subst", "netcfg/confirm_dhcp",
                                 "interface", interface, NULL);

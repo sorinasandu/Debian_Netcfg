@@ -254,7 +254,7 @@ void netcfg_die(struct debconfclient *client)
 }
 
 
-static void
+void
 netcfg_get_interface(struct debconfclient *client, char **interface)
 {
         char *inter;
