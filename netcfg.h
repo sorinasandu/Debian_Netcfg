@@ -1,9 +1,5 @@
 #ifndef _NETCFG_H_
 #define _NETCFG_H_
-#include <sys/types.h>
-#include <arpa/inet.h>
-#include <stdio.h>
-#include <cdebconf/debconfclient.h>
 
 #define INTERFACES_FILE "/etc/network/interfaces"
 #define HOSTS_FILE      "/etc/hosts"
@@ -15,12 +11,25 @@
 
 #define _GNU_SOURCE
 
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <stdio.h>
+#include <cdebconf/debconfclient.h>
+
+#ifndef ARRAY_SIZE
+# define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
+#endif
+
+#define empty_str(s) (s && *s == '\0')
+
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
+typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
 
 extern int netcfg_progress_displayed;
 extern int wfd;
 extern int input_result;
+extern int have_domain;
 
 /* network config */
 extern char *interface;
@@ -34,6 +43,10 @@ extern struct in_addr broadcast;
 extern struct in_addr netmask;
 extern struct in_addr gateway;
 extern struct in_addr pointopoint;
+
+/* wireless */
+extern char *essid, *wepkey;
+extern wifimode_t mode;
 
 /* common functions */
 extern int is_interface_up (char *inter);
@@ -78,6 +91,9 @@ extern int is_wireless_iface (const char* iface);
 
 extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface);
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
+
+extern int iface_is_hotpluggable(const char *iface);
+extern int deconfigure_network(void);
 
 extern method_t mii_diag_status_lite (char *ifname);
 

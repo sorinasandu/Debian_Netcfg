@@ -1,10 +1,10 @@
-ifndef TARGETS
-TARGETS=netcfg-dhcp netcfg-static netcfg
-endif
+CC		?= gcc
+TARGETS		?= netcfg-dhcp netcfg-static netcfg
 
-LDOPTS=-ldebconfclient -ldebian-installer -liw
-PREFIX=$(DESTDIR)/usr/
-CFLAGS=-W -Wall  -Os
+LDOPTS		= -ldebconfclient -ldebian-installer -liw
+PREFIX		= $(DESTDIR)/usr/
+CFLAGS		= -W -Wall -Os
+COMMON_OBJS	= netcfg-common.o mii-lite.o wireless.o
 
 ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -g
@@ -12,17 +12,16 @@ else
 CFLAGS += -fomit-frame-pointer
 endif
 
-INSTALL=install
-STRIPTOOL=strip
-STRIP = $(STRIPTOOL) --remove-section=.note --remove-section=.comment
+STRIPTOOL	= strip
+STRIP		= $(STRIPTOOL) --remove-section=.note --remove-section=.comment
 
 all: $(TARGETS)
 
-netcfg-dhcp: netcfg-dhcp.o
-netcfg-static: netcfg-static.o
-netcfg: netcfg.o
+netcfg-dhcp: netcfg-dhcp.o dhcp.o
+netcfg-static: netcfg-static.o static.o
+netcfg: netcfg.o dhcp.o static.o
 
-$(TARGETS): netcfg-common.o mii-lite.o
+$(TARGETS): $(COMMON_OBJS)
 	$(CC) $(LDOPTS) -o $@ $^
 	$(STRIP) $@
 

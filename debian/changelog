@@ -15,6 +15,8 @@ netcfg (0.64) UNRELEASED; urgency=low
     - Ask for a hostname at the very beginning. This will be the DHCP
       hostname for netcfg and netcfg-dhcp.
     - As such, rip out netcfg_get_dhcp and netcfg_get_dhcp_hostname.
+    - Template cleanups: netcfg/static-title, netcfg/dhcp-title,
+      netcfg/internal-pcmcia
     - Remove a lot of calls to /sbin/this and /sbin/that in response to Joey's
       rant on debian-boot.
 

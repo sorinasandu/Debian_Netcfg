@@ -43,10 +43,10 @@ response_t netcfg_get_method(struct debconfclient *client)
     iret = debconf_input(client, "medium", "netcfg/use_dhcp");
     ret = debconf_go(client);
 
-    debconf_get(client, "netcfg/use_dhcp");
-
     if (ret == 30)
       return GO_BACK;
+    
+    debconf_get(client, "netcfg/use_dhcp");
 
     if (strcmp(client->value, "true") == 0)
       netcfg_method = DHCP;
