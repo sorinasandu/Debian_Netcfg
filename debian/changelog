@@ -7,8 +7,7 @@ netcfg (1.02) UNRELEASED; urgency=low
     - Rip out mii-diag support. Incidentally, this closes the 'Go Back'
       bugs regarding a template that now no longer exists.
       (Closes: #269081, #269236)
-    - Code consolidation - don't replicate the code that writes resolv.conf
-      twice.
+    - Code consolidation - don't duplicate the code that writes resolv.conf
   * Thomas Hood
     - Change function of backup button from netcfg/dhcp_options so that
       instead of causing an exit from netcfg it backs up to the
