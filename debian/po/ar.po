@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tools_netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2003-12-13 11:31-0500\n"
-"PO-Revision-Date: 2004-01-08 12:55+0300\n"
+"POT-Creation-Date: 2004-01-08 09:23+0100\n"
+"PO-Revision-Date: 2004-01-10 20:50+0300\n"
 "Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,9 +46,10 @@ msgid ""
 "opportunity to configure your network manually after the atempt to configure "
 "it by DHCP. If unsure choose DHCP."
 msgstr ""
-"يمكن إعداد التشبيك إما باستخدام DHCP أو بإدخال المعلومات يدوياً. إن اخترت DHCP وكان المثبّت غير "
-"قادر على الحصول على إعداد عامل من خادم DHCP على شبكتك، سوف تعطى الفرصة كي تعدّ شبكتك "
-"يدوياً بعد محاولة إعدادها باستخدام DHCP. إن لم تكن متأكداً اختر DHCP."
+"يمكن إعداد التشبيك إما باستخدام DHCP أو بإدخال المعلومات يدوياً. إن اخترت "
+"DHCP وكان المثبّت غير قادر على الحصول على إعداد عامل من خادم DHCP على شبكتك، "
+"سوف تعطى الفرصة كي تعدّ شبكتك يدوياً بعد محاولة إعدادها باستخدام DHCP. إن لم "
+"تكن متأكداً اختر DHCP."
 
 #. Type: string
 #. Description
@@ -65,8 +66,9 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"اسم المجال هو الجزء من عنوان الإنترنت إلى يمين اسم المضيف.  وهو عادة شيئ ينتهي بـ.com، .net، أو .org. "
-"إن كنت تقوم بإعداد شبكة منزلية، يمكنك اختيار شيء ما، ولكن تأكد من استخدام نفس اسم المجال على كل الأجهزة."
+"اسم المجال هو الجزء من عنوان الإنترنت إلى يمين اسم المضيف.  وهو عادة شيئ "
+"ينتهي بـ.com، .net، أو .org. إن كنت تقوم بإعداد شبكة منزلية، يمكنك اختيار "
+"شيء ما، ولكن تأكد من استخدام نفس اسم المجال على كل الأجهزة."
 
 #. Type: string
 #. Description
@@ -83,109 +85,109 @@ msgid ""
 "the first to be queried. If you don't want to use any name server, just "
 "leave this field blank."
 msgstr ""
-"رجاء أدخل عناوين IP (وليس أسماء المضيفين) لثلاثة خادمات أسماء كحد أقصى، مفصولة بمسافات. لا تستخدم "
-"الفواصل. أو خادم في اللائحة سيكون أول من يُستعلم. إن لم تكن تريد استخدام أي خادم اسم، دع هذا فارغاً."
+"رجاء أدخل عناوين IP (وليس أسماء المضيفين) لثلاثة خادمات أسماء كحد أقصى، "
+"مفصولة بمسافات. لا تستخدم الفواصل. أو خادم في اللائحة سيكون أول من يُستعلم. "
+"إن لم تكن تريد استخدام أي خادم اسم، دع هذا فارغاً."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-msgid "Interface:"
-msgstr "الواجهة:"
+msgid "Primary network interface:"
+msgstr "الواجهة الأولية للشبكة:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid ""
-"Please choose the interface you want to configure. All currently detected "
-"interfaces on your system are shown below. Please choose the type of your "
-"primary network interface. This interface will be used for installing the "
-"Debian system (via NFS or HTTP)."
-msgstr ""
-"رجاء اختر الواجهة التي تريد إعدادها. كل الواجهات التي وجدت في نظامك ظاهرة أدناه. رجاء اختر النوع الأولي "
-"لواجهة شبكتك. سوف تستخدم هذه الواجهة لتثبيت نظام ديبيان (من خلال NFS أو HTTP)."
+"Your system has multiple network interfaces. Choose the one to use as the "
+"primary network interface while installing Debian."
+msgstr "يحتوي نظام على عدة واجهات شبكة. اختر التي ترغب باستخدامها بكواجهة أولية للشبكة خلال تثبيت ديبيان."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "Error while activating the network"
 msgstr "حدث خطأ خلال تنشيط الشبكة"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:40
+#: ../netcfg-common.templates:38
 msgid "An error occurred while activating the network."
 msgstr "حدث خطأ خلال تنشيط الشبكة."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Hostname:"
 msgstr "اسم المضيف:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid "Please enter the hostname for this system."
 msgstr "رجاء أدخل اسم المضيف لهذا النظام."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:44
 msgid ""
-"The hostname is a single word that identifies your system to the network.  "
-"If you don't know what your hostname should be, consult your network "
+"The hostname is a single word that identifies your system to the network. If "
+"you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"اسم المضيف هو كلمة واحدة تعرّف عن نظامك للشبكة.  إن لم تكن تعرف ما الاسم الذي يجب أن يكون عليه، فاستشر "
-"مدير الشبكة. إن كنت تقوم بإعداد شبكة منزلك الخاصة، يمكن اختيار ما ترغب به."
+"اسم المضيف هو كلمة واحدة تعرّف عن نظامك للشبكة.  إن لم تكن تعرف ما الاسم الذي "
+"يجب أن يكون عليه، فاستشر مدير الشبكة. إن كنت تقوم بإعداد شبكة منزلك الخاصة، "
+"يمكن اختيار ما ترغب به."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "Invalid hostname"
 msgstr "اسم مضيف غير صالح"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid "The name \"${hostname}\" is invalid."
 msgstr "الاسم \"${hostname}\" غير صالح"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:56
+#: ../netcfg-common.templates:54
 msgid ""
 "A valid hostname may contain only alphanumeric characters and the minus "
 "sign. It must be between 2 and 63 characters long, and may not begin or end "
 "with a minus sign."
 msgstr ""
-"يمكن أن يحتوي اسم المضيف أحرفاً وأرقاماً وعلامة السالب فقط كي يكون صالحاً. ويجب أن يكون طوله حرفين وحتى "
-"63 حرف، ولا يبدأ أو ينتهي بعلامة السالب."
+"يمكن أن يحتوي اسم المضيف أحرفاً وأرقاماً وعلامة السالب فقط كي يكون صالحاً. ويجب "
+"أن يكون طوله حرفين وحتى 63 حرف، ولا يبدأ أو ينتهي بعلامة السالب."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid "Error"
 msgstr "خطأ"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:65
+#: ../netcfg-common.templates:63
 msgid ""
 "An error occured and the network configuration process has been aborted. You "
 "may retry it from the installation main menu."
-msgstr "حدث خطأ وتمّ إجهاض عملية إعداد الشبكة. قد ترغب بإعادة المحاولة من قائمة التثبيت الرئيسية."
+msgstr ""
+"حدث خطأ وتمّ إجهاض عملية إعداد الشبكة. قد ترغب بإعادة المحاولة من قائمة "
+"التثبيت الرئيسية."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid "No network interfaces detected"
 msgstr "لم يتم العثور على واجهات شبكة"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -193,113 +195,115 @@ msgstr "لم يوجد أي واجهات شبكة. نظام التثبيت لم �
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:71
+#: ../netcfg-common.templates:69
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr "قد تحتاج إلى تحميل وحدة معيّنة لبطاقة الشبكة، إن كان لديك واحدة. لهذا، ارجع إلى خطوة تفحّص عتاد الشبكة."
+msgstr ""
+"قد تحتاج إلى تحميل وحدة معيّنة لبطاقة الشبكة، إن كان لديك واحدة. لهذا، ارجع "
+"إلى خطوة تفحّص عتاد الشبكة."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:80
+#: ../netcfg-common.templates:78
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:84
+#: ../netcfg-common.templates:82
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet أو Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:88
+#: ../netcfg-common.templates:86
 msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
 msgstr "PC-Card (PCMCIA) Ethernet أو Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:92
+#: ../netcfg-common.templates:90
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:96
+#: ../netcfg-common.templates:94
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:98
 msgid "Serial-line IP"
 msgstr "عنوان IP للخط المتوالي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:104
+#: ../netcfg-common.templates:102
 msgid "Parallel-port IP"
 msgstr "عنوان IP للمنفذ المتوازي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:108
+#: ../netcfg-common.templates:106
 msgid "Point-to-Point Protocol"
 msgstr "بروتوكول Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:110
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:116
+#: ../netcfg-common.templates:114
 msgid "ISDN Point-to-Point Protocol"
 msgstr "بروتوكول ISDN Point-to-Point"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:118
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:122
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:128
+#: ../netcfg-common.templates:126
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:130
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:134
 msgid "Unknown interface"
 msgstr "واجهة غير معروفة"
 
 #. Type: text
 #. Description
 #. Title displayed when configuring this package
-#: ../netcfg-common.templates:141
+#: ../netcfg-common.templates:139
 msgid "Network Configuration"
 msgstr "إعداد الشبكة"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:144
 msgid "Configure the network"
 msgstr "أعدّ الشبكة"
 
@@ -315,7 +319,9 @@ msgstr "اسم مضيف DHCP:"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr "قد تحتاج إلى تزويد اسم مضيف DHCP. إن كنت تستخدم كابل مودم، قد تحتاج تحديد رقم الحساب هنا."
+msgstr ""
+"قد تحتاج إلى تزويد اسم مضيف DHCP. إن كنت تستخدم كابل مودم، قد تحتاج تحديد "
+"رقم الحساب هنا."
 
 #. Type: string
 #. Description
@@ -335,8 +341,6 @@ msgstr "هل هذه المعلومات صحيحة؟"
 msgid "Currently configured network parameters:"
 msgstr "متغيّرات الشبكة المعدّة حالياً:"
 
-#. Type: boolean
-#. Description
 #: ../netcfg-dhcp.templates:12
 msgid ""
 " interface      = ${interface}\n"
@@ -394,8 +398,8 @@ msgid ""
 "No IP address was offered during DHCP network configuration.  DHCP servers "
 "are sometimes really slow. If you wish, you can retry."
 msgstr ""
-"لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP بعض الأحيان بطيئة. "
-"إن رغبت، يمكنك إعادة المحاولة."
+"لم يقدّم أي عنوان IP خلال عملية إعداد الشبكة بواسطة DHCP. تكون خادمات DHCP "
+"بعض الأحيان بطيئة. إن رغبت، يمكنك إعادة المحاولة."
 
 #. Type: text
 #. Description
@@ -425,8 +429,8 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"عنوان IP هو خاص بحاسوبك ويتكون من أربعها أرقام تفصلها نقاط.  إن لم تكن تعرف ماذا تستخدم هنا، فاستشر "
-"مدير الشبكة."
+"عنوان IP هو خاص بحاسوبك ويتكون من أربعها أرقام تفصلها نقاط.  إن لم تكن تعرف "
+"ماذا تستخدم هنا، فاستشر مدير الشبكة."
 
 #. Type: string
 #. Description
@@ -443,9 +447,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"يستخدم عنوان point-to-point لتحديد نقطة النهاية الأخرى من شبكة point-to-point. "
-"  استشر مدير الشبكة إن لم تكن تعرف القيمة.  عنوان point-to-point يجب أن يدخل على شكل "
-"أربعة أرقام تفصلها نقاط."
+"يستخدم عنوان point-to-point لتحديد نقطة النهاية الأخرى من شبكة point-to-"
+"point.   استشر مدير الشبكة إن لم تكن تعرف القيمة.  عنوان point-to-point يجب "
+"أن يدخل على شكل أربعة أرقام تفصلها نقاط."
 
 #. Type: string
 #. Description
@@ -461,8 +465,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"يستخدم قناع الشبكة ليحدّد وجود أي من الأجهزة محلياً في شبكتك. استشر مدير الشبكة إن لم تكن تعرف القيمة. "
-"يجب أن يدخل قناع الشبكة على شكل أربعة أرقام تفصلها نقاط."
+"يستخدم قناع الشبكة ليحدّد وجود أي من الأجهزة محلياً في شبكتك. استشر مدير "
+"الشبكة إن لم تكن تعرف القيمة. يجب أن يدخل قناع الشبكة على شكل أربعة أرقام "
+"تفصلها نقاط."
 
 #. Type: string
 #. Description
@@ -481,10 +486,11 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"البوابة هي عنوان IP (أربعة أرقام تفصلها نقاط) تحدد موجّه البوابة، وتعرف كذلك بالموجه الافتراضي. كل السّير الذي "
-"يتّجه خارج شبكتك الداخلية (على سبيل المثال، إلى الإنترنت) يرسل من خلال هذا الموجّه. في بعض الحالات النادرة، "
-"قد لا يكون لديك موجّه؛ بتلك الحالة يمكنك ترك هذا الخيار فارغاً.  إن لم تكن تعرف الجواب المناسب لهذا السؤال، "
-"استشر مدير الشبكة."
+"البوابة هي عنوان IP (أربعة أرقام تفصلها نقاط) تحدد موجّه البوابة، وتعرف كذلك "
+"بالموجه الافتراضي. كل السّير الذي يتّجه خارج شبكتك الداخلية (على سبيل المثال، "
+"إلى الإنترنت) يرسل من خلال هذا الموجّه. في بعض الحالات النادرة، قد لا يكون "
+"لديك موجّه؛ بتلك الحالة يمكنك ترك هذا الخيار فارغاً.  إن لم تكن تعرف الجواب "
+"المناسب لهذا السؤال، استشر مدير الشبكة."
 
 #. Type: error
 #. Description
@@ -504,8 +510,6 @@ msgstr "عنوان البوابة الذي أدخله لا يمكن الوصول
 msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "قد تكون قمت بخطأ بإدخال عنوان IP، قناع الشبكة و/أو البوابة."
 
-#. Type: boolean
-#. Description
 #: ../netcfg-static.templates:47
 msgid ""
 " interface     = ${interface}\n"
@@ -539,4 +543,17 @@ msgstr "إعداد الشبكة الثابت"
 #: ../netcfg-static.templates:67
 msgid "Configure a network using static addressing"
 msgstr "أعدّ الشبكة باستخدام عنوان ثابت"
+
+#~ msgid "Interface:"
+#~ msgstr "الواجهة:"
+
+#~ msgid ""
+#~ "Please choose the interface you want to configure. All currently detected "
+#~ "interfaces on your system are shown below. Please choose the type of your "
+#~ "primary network interface. This interface will be used for installing the "
+#~ "Debian system (via NFS or HTTP)."
+#~ msgstr ""
+#~ "رجاء اختر الواجهة التي تريد إعدادها. كل الواجهات التي وجدت في نظامك ظاهرة "
+#~ "أدناه. رجاء اختر النوع الأولي لواجهة شبكتك. سوف تستخدم هذه الواجهة لتثبيت "
+#~ "نظام ديبيان (من خلال NFS أو HTTP)."
 
