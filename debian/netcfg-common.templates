@@ -57,8 +57,8 @@ _Description: Invalid hostname
  The name "${hostname}" is invalid.
  .
  A valid hostname may contain only alphanumeric characters and the minus
- sign, be between 2 and 63 characters long, and cannot begin or end with a
- minus sign.
+ sign. If must be between 2 and 63 characters long, and may not begin or
+ end with a minus sign.
 
 Template: netcfg/error
 Type: error
@@ -72,8 +72,8 @@ _Description: No network interfaces detected
  No network interfaces were found. The installation
  system was unable to find a network device. 
  .
- You may need to load a specific module for your network card, if you really
- own one. For this, go back to the network hardware detection step.
+ You may need to load a specific module for your network card, if you have
+ one. For this, go back to the network hardware detection step.
 
 Template: netcfg/internal-none
 Type: text
@@ -101,7 +101,7 @@ _Description: Serial-line IP
 
 Template: netcfg/internal-plip
 Type: text
-_Description: Parallel-line IP
+_Description: Parallel-port IP
 
 Template: netcfg/internal-ppp
 Type: text
