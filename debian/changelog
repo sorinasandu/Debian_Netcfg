@@ -22,9 +22,9 @@ netcfg (0.71) UNRELEASED; urgency=low
       + Mark local variables with "static"
       + Eliminate use of quit_after_hostname by creating HOSTNAME_SANS_NETWORK
         from HOSTNAME and DOMAIN_SANS_NETWORK from DOMAIN
-      + Use DHCP host-name as the default hostname if no hostname is set
+      + Use DHCP hostname as the default hostname if no hostname is set
         (Closes: #239591)
-      + Write host-name provided to the DHCP client in order to get a lease
+      + Write hostname provided to the DHCP client in order to get a lease
         on the "hostname" option line for the interface in /e/n/i
       + If the user backs up from netcfg/get_hostname, go to retry question
       + Wait at least two seconds for DHCP client to exit  (Closes: #255984)

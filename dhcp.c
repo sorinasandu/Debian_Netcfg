@@ -46,9 +46,7 @@ static void dhcp_client_sigchld(int sig __attribute__ ((unused)))
 
 /* 
  * This function will start whichever DHCP client is available
- * The host-name provided in the dhostname argument is requested
- *
- * The client should be run such that it dies once a lease is acquired.
+ * using the provided DHCP hostname, if supplied
  *
  * The client's PID is stored in dhcp_pid.  Once the client dies
  * dhcp_pid should be set to -1.
@@ -328,7 +326,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
 
           /*
            * Default to the hostname returned via DHCP, if any,
-           * otherwise to the host-name requested from DHCP
+           * otherwise to the requested DHCP hostname
            * otherwise to the hostname found in DNS for the IP address of the interface
            */
           if (
@@ -454,7 +452,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
            * Going back to POLL wouldn't make much sense.
            * However, it does make sense to go to the retry
            * screen where the user can elect to retry DHCP with
-           * a requested host-name, etc.
+           * a requested DHCP hostname, etc.
            */
           state = ASK_RETRY;
         }
@@ -464,8 +462,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           /*
 	   * If we haven't already created the DHCLIENT_CONF file
 	   * (by calling start_dhcp_client() with dhostname set)
-	   * then set up that file now with hostname as the host-name
-	   * to send.  See #236533.
+	   * then set up that file now with hostname as the
+	   * DHCP hostname to request.  See #236533.
 	   */
 	  /*
 	   * I don't like this because it changes the DHCLIENT_CONF
