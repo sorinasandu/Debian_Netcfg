@@ -1,11 +1,7 @@
-netcfg (0.52) UNRELEASED; urgency=low
+netcfg (0.52) unstable; urgency=low
 
-  * Translations:
-      - DO NOT update changelog anymore for translations. This will be done
-        by using scripts/l10n-changes script
-      - When releasing the package, don't forget to run
-        script/l10n-changes/output-l10n-changes and put its
-        output here. Then put this note in the new UNRELEASED entry.
+  * Joey Hess
+    - Fix "search (null)" in /etc/resolv.conf, again, sigh.
 
  -- Joey Hess <joeyh@debian.org>  Mon,  8 Mar 2004 19:19:30 -0500
 
