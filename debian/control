@@ -10,7 +10,7 @@ Package: netcfg-dhcp
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64
 Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | pump-udeb | busybox-cvs-udeb | busybox-cvs-net-udeb
 Provides: configured-network
-XB-Installer-Menu-Item: 13
+XB-Installer-Menu-Item: 18
 Description: Configure the network via DHCP
  Many networks allow automatic configuration via DHCP (Dynamic Host
  Configuration Protocol).  If you are on a corporate network, a cable modem,
@@ -24,7 +24,7 @@ Package: netcfg-static
 Architecture: any
 Depends: ${shlibs:Depends}, cdebconf-udeb
 Provides: configured-network
-XB-Installer-Menu-Item: 13
+XB-Installer-Menu-Item: 20
 Description: Configure a static network
  If you have information such as IP address, netmask, gateway, then you will be
  able to configure a static network.  If you don't know this information, you
