@@ -302,6 +302,7 @@ int iface_is_hotpluggable(const char *iface)
         if (!strncmp(buf, iface, len))
 	{
 	  di_info("Detected %s as a hotpluggable device", iface);
+          fclose(f);
 	  return 1;
 	}
     }

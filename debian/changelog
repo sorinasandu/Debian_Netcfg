@@ -1,4 +1,4 @@
-netcfg (0.71) UNRELEASED; urgency=low
+netcfg (0.71) unstable; urgency=low
 
   * Joshua Kwan
     - Remove XSIisms in dhclient-script.
@@ -15,6 +15,7 @@ netcfg (0.71) UNRELEASED; urgency=low
       (Closes: #253543)
     - Don't add 'auto' or hotplug mapping lines for 16-bit PCMCIA devices.
       (Closes: #248071, #239284)
+    - Add a missing fclose in iface_is_hotpluggable.
   * Christian Perrier
     - netcfg-dhcp.templates
       Some rewrite for being clearer, possibly. Run debconf-updatepo
@@ -60,8 +61,19 @@ netcfg (0.71) UNRELEASED; urgency=low
     - netcfg-dhcp.templates:
       + More updates
       + Run debconf-updatepo again
+   * Updated translations:
+    - German (de.po) by Alwin Meschede
+    - Greek (el.po) by George Papamichelakis
+    - Basque (eu.po) by Piarres Beobide Egaña
+    - Hebrew (he.po) by Lior Kaplan
+    - Japanese (ja.po) by Kenshi Muto
+    - Dutch (nl.po) by Bart Cornelis
+    - Portuguese (Brazil) (pt_BR.po) by André Luís Lopes
+    - Turkish (tr.po) by Osman Yüksel
+    - Ukrainian (uk.po) by Eugeniy Meshcheryakov
+    - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
 
- -- Christian Perrier <bubulle@kheops.frmug.org>  Tue, 29 Jun 2004 09:04:58 +0200
+ -- Joshua Kwan <joshk@triplehelix.org>  Tue, 29 Jun 2004 10:51:48 -0700
 
 netcfg (0.70) unstable; urgency=medium
 
