@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg-templates_uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 00:42-0700\n"
+"POT-Creation-Date: 2004-04-12 18:28+0200\n"
 "PO-Revision-Date: 2004-04-12 18:38+0300\n"
 "Last-Translator: Eugeniy Meshcheryakov <eugen@univ.kiev.ua>\n"
 "Language-Team: Ukrainian\n"
@@ -24,7 +24,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -82,16 +83,19 @@ msgstr "Адреси серверів імен:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
-"The nameservers you specify here are used to look up Internet hostnames. "
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first nameserver in the list "
-"will be the first to be queried. If you don't want to use any nameserver, "
-"just leave this field blank."
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
 msgstr ""
-"Сервери імен, які ви вкажете тут, будуть використовуватися для пошуку комп'ютерів за їх іменами. Введіть IP адреси серверів імен (не імена вузлів і не більше 3), розділені пробілами. Не "
-"використовуйте коми. Сервери будуть опитуватися в порядку їх вказування. "
-"Якщо ви не хочете використовувати сервери імен, то залиште поле порожнім."
+"Сервери імен, які ви вкажете тут, будуть використовуватися для пошуку "
+"комп'ютерів за їх іменами. Введіть IP адреси серверів імен (не імена вузлів "
+"і не більше 3), розділені пробілами. Не використовуйте коми. Сервери будуть "
+"опитуватися в порядку їх вказування. Якщо ви не хочете використовувати "
+"сервери імен, то залиште поле порожнім."
 
 #. Type: select
 #. Description
@@ -159,7 +163,8 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
+msgstr ""
+"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -514,7 +519,8 @@ msgstr "Клієнти DHCP не знайдені"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
+msgstr ""
+"Клієнти DHCP не знайдені. Цей пакет потребує пакети pump або dhcp-client."
 
 #. Type: error
 #. Description
@@ -664,7 +670,8 @@ msgstr "Вказана вами адреса шлюзу недоступна."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Ви могли помилитися при введенні IP-адреси, маски підмережи та/або адреси "
 "шлюзу."
@@ -719,4 +726,3 @@ msgstr "Налаштувати мережу із статичним адресу
 
 #~ msgid "An error occurred while activating the network."
 #~ msgstr "Виникла помилка під час активації мережі."
-

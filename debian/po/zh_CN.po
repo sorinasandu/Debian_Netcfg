@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer/tools/netcfg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 00:42-0700\n"
+"POT-Creation-Date: 2004-04-12 18:28+0200\n"
 "PO-Revision-Date: 2004-04-12 23:08+1200\n"
 "Last-Translator: Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -72,12 +72,13 @@ msgstr "域名服务器地址："
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
-"The nameservers you specify here are used to look up Internet hostnames. "
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first nameserver in the list "
-"will be the first to be queried. If you don't want to use any nameserver, "
-"just leave this field blank."
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
 msgstr ""
 "您在此处指定的域名服务器将被用来查询互联网主机名。请输入至多三个域名服务器的 "
 "IP 地址(不是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查"
@@ -672,4 +673,3 @@ msgstr "静态网络设置"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
-

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 00:42-0700\n"
+"POT-Creation-Date: 2004-04-12 18:28+0200\n"
 "PO-Revision-Date: 2004-04-12 13:54+0200\n"
 "Last-Translator: Alwin Meschede <ameschede@gmx.de>\n"
 "Language-Team:  <gnome-de@gnome.org>\n"
@@ -75,12 +75,13 @@ msgstr "Adresse des DNS-Servers:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
-"The nameservers you specify here are used to look up Internet hostnames. "
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first nameserver in the list "
-"will be the first to be queried. If you don't want to use any nameserver, "
-"just leave this field blank."
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
 msgstr ""
 "Die Nameserver, die Sie hier angeben, werden benutzt, um Internet-Hostnamen "
 "aufzulösen. Bitte geben Sie die IP Adresse (nicht den Namen) von bis zu drei "
@@ -514,7 +515,8 @@ msgstr "Kein DHCP-Client gefunden"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
+msgstr ""
+"Kein DHCP-Client gefunden. Diese Paket benötigt den pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -551,7 +553,8 @@ msgstr "Dynamische Netzwerkkonfiguration (DHCP)"
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:51
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
+msgstr ""
+"Das Netzwerk wird jetzt mit dynamischer Adressierung (DHCP) konfiguriert"
 
 #. Type: string
 #. Description
@@ -666,7 +669,8 @@ msgstr "Das angegebene Gateway ist nicht erreichbar."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben vielleicht bei der Eingabe von Ihrer IP Nummer, der Netzmaske und/"
 "oder des Gateways einen Fehler gemacht."
@@ -764,4 +768,3 @@ msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
 #~ msgid ""
 #~ "This may take some time.  It shouldn't take more than a minute or two."
 #~ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
-

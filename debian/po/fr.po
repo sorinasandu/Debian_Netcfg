@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netcfg 0.61\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 00:42-0700\n"
-"PO-Revision-Date: 2004-04-10 09:28+0200\n"
+"POT-Creation-Date: 2004-04-12 18:28+0200\n"
+"PO-Revision-Date: 2004-04-12 18:22+0100\n"
 "Last-Translator: Philippe Batailler <philippe.batailler@free.fr>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -64,18 +64,19 @@ msgstr "Adresses des serveurs de noms :"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
-"The nameservers you specify here are used to look up Internet hostnames. "
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first nameserver in the list "
-"will be the first to be queried. If you don't want to use any nameserver, "
-"just leave this field blank."
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
 msgstr ""
-"Veuillez donner les adresses IP (pas les noms des machines) ; vous pouvez "
-"inscrire au plus trois adresses, séparées par des espaces. N'utilisez pas de "
-"virgule. Le premier serveur indiqué sera interrogé en premier. Si vous ne "
-"voulez pas utiliser de serveur de noms, laissez ce champ vide."
+"Les serveurs de noms servent à la recherche des "
+"noms d'hôtes sur le réseau. Veuillez donner leurs adresses IP (pas les noms "
+"des machines) ; vous pouvez inscrire au plus trois adresses, séparées par "
+"des espaces. N'utilisez pas de virgule. Le premier serveur indiqué sera "
+"interrogé en premier. Si vous ne voulez pas utiliser de serveur de noms, "
+"laissez ce champ vide."
 
 #. Type: select
 #. Description
@@ -692,6 +693,3 @@ msgstr "Configuration manuelle du réseau"
 #: ../netcfg-static.templates:73
 msgid "Configure a network using static addressing"
 msgstr "Configurer manuellement le réseau"
-
-#~ msgid "Network Configuration"
-#~ msgstr "Configuration du réseau"

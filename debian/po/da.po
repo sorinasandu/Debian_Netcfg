@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-12 00:42-0700\n"
+"POT-Creation-Date: 2004-04-12 18:28+0200\n"
 "PO-Revision-Date: 2004-04-12 10:56+0200\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -70,18 +70,19 @@ msgstr "Navneserver-adresser:"
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
-"The nameservers you specify here are used to look up Internet hostnames. "
-"Please enter the IP addresses (not host names) of up to 3 name servers, "
-"separated by spaces. Do not use commas. The first nameserver in the list "
-"will be the first to be queried. If you don't want to use any nameserver, "
-"just leave this field blank."
+"The name servers are used to look up host names on the network. Please enter "
+"the IP addresses (not host names) of up to 3 name servers, separated by "
+"spaces. Do not use commas. The first name server in the list will be the "
+"first to be queried. If you don't want to use any name server, just leave "
+"this field blank."
 msgstr ""
-"De navneservere, du angiver her, vil blive brugt til at slå værtstnavne "
-"på internettet op i. Angiv IP-adressesrne på op til tre navneservere "
-"adskilt med mellemrum. Brug ikke kommaer. Den første server i listen vil "
-"blive forespurgt først. Hvis du ikke ønsker at bruge navneservere, kan "
-"du  blot lade dette felt stå tomt."
+"De navneservere, du angiver her, vil blive brugt til at slå værtstnavne på "
+"internettet op i. Angiv IP-adressesrne på op til tre navneservere adskilt "
+"med mellemrum. Brug ikke kommaer. Den første server i listen vil blive "
+"forespurgt først. Hvis du ikke ønsker at bruge navneservere, kan du  blot "
+"lade dette felt stå tomt."
 
 #. Type: select
 #. Description
@@ -505,7 +506,8 @@ msgstr "Fandt ingen DHCP-klient"
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
+msgstr ""
+"Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
@@ -653,7 +655,8 @@ msgstr "Den angivne gateway-adresse kan ikke nåes."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid "You may have made an error entering your IP address, netmask and/or gateway."
+msgid ""
+"You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -765,4 +768,3 @@ msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "debian"
 #~ msgstr "debian"
-
