@@ -5,9 +5,6 @@ netcfg (0.71) UNRELEASED; urgency=low
     - Evaluate argv[0] after calling basename on it so that we can strcmp it
       against "ptom". It somehow didn't happen in the internal dhclient-script
       context, but appeared during testing in the shell.
-    - Write new hostname into dhclient.conf. If a DHCP hostname was specified
-      beforehand, this won't happen, however. (Would shut #236533 if jdthood
-      hadn't ifendiffed it out --jdthood)
   * Thomas Hood
     - Change interfaces options that use underscore to hyphens. No loss
       of functionality. (Closes: #255185)
@@ -27,11 +24,15 @@ netcfg (0.71) UNRELEASED; urgency=low
         from HOSTNAME and DOMAIN_SANS_NETWORK from DOMAIN
       + Use DHCP host-name as the default hostname if no hostname is set
         (Closes: #239591)
+      + Write host-name provided to the DHCP client in order to get a lease
+        on the "hostname" option line for the interface in /e/n/i
       + Clean up code
         . Always use spaces for indentation
         . Improve comments
         . Reorder state machine states
         . Move kill_dhcp_client() to top of file
+    - prebaseconfig
+      + Don't cp /etc/dhclient.conf and /etc/dhcp3/dhclient.conf to target
 
  -- Joshua Kwan <joshk@triplehelix.org>  Fri, 18 Jun 2004 23:26:15 -0700
 

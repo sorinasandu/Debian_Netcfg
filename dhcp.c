@@ -136,7 +136,7 @@ static int kill_dhcp_client(void)
 }
 
 
-static void netcfg_write_dhcp (char *iface)
+static void netcfg_write_dhcp (char *iface, char *dhostname)
 {
     FILE *fp;
 
@@ -146,6 +146,10 @@ static void netcfg_write_dhcp (char *iface)
         if (!iface_is_hotpluggable(iface))
             fprintf(fp, "auto %s\n", iface);
         fprintf(fp, "iface %s inet dhcp\n", iface);
+        if (dhostname)
+        {
+          fprintf(fp, "\thostname %s\n", dhostname);
+        }
         if (is_wireless_iface(iface))
         {
           fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
@@ -291,14 +295,15 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         {
           /* got a lease */
           /* That means that the DHCP client is no longer running */
-          char buf[MAXHOSTNAMELEN + 1] = { 0 };
-          char *ptr = NULL;
-          FILE *d = NULL;
-
 
           /*
            * Set defaults for domain name and hostname
            */
+
+          char buf[MAXHOSTNAMELEN + 1] = { 0 };
+          char *ptr = NULL;
+          FILE *d = NULL;
+
           have_domain = 0;
           
           /*
@@ -360,7 +365,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             debconf_set(client, "netcfg/get_domain", ptr + 1);
             have_domain = 1;
           }
-          
+
           state = HOSTNAME;
         }
         break;
@@ -479,7 +484,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         else
         {
           netcfg_write_common(ipaddress, hostname, domain);
-          netcfg_write_dhcp(interface);
+          netcfg_write_dhcp(interface, dhostname);
           return 0;
         }
         break;
