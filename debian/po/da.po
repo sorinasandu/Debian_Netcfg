@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2003-11-14 09:25+0100\n"
-"PO-Revision-Date: 2003-11-12 20:52+0100\n"
+"PO-Revision-Date: 2003-11-14 19:05+0100\n"
 "Last-Translator: Claus Hindsgaul <claus_h@image.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:3
 msgid "Domain name:"
-msgstr ""
+msgstr "Domænenavn:"
 
 #. Type: string
 #. Description
@@ -42,12 +42,11 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:11
 msgid "Name servers addresses:"
-msgstr ""
+msgstr "Navneserver-adresser:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:11
-#, fuzzy
 msgid ""
 "Please enter the IP addresses (not host names) of up to 3 name servers, "
 "separated by spaces. Do not use commas. The first server in the list will be "
@@ -55,53 +54,52 @@ msgid ""
 "leave this field blank."
 msgstr ""
 "Angiv IP-adressen (ikke værtsnavne) på op til tre navneservere adskilt med "
-"mellemrum. Brug ikke kommaer. Serverne vil blive forespurgt i den "
-"rækkefølge, de er angivet. Hvis du ikke ønsker at bruge navneservere, kan du "
-"blot lade dette felt være tomt."
+"mellemrum. Brug ikke kommaer. Den første server i listen vil blive forespurgt "
+"først. Hvis du ikke ønsker at bruge navneservere, kan du  blot lade dette felt "
+"stå tomt."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
 msgid "Interface:"
-msgstr ""
+msgstr "Netkort:"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:20
-#, fuzzy
 msgid ""
 "Please choose the interface you want to configure. All currently  detected "
 "interfaces on your system are shown below. Please choose the type of your "
 "primary network interface. This interface will be used for installing the "
 "Debian system (via NFS or HTTP)."
 msgstr ""
-"Følgende netkort blev fundet. Vælg typen på det primære netkort, som du vil "
-"bruge til at installere Debiansystemet (via NFS eller HTTP)."
+"Vælg det netkort, du vil sætte op. De allerede fundne netkort på dit system "
+"er vist herunder. Vælg dit primære netkorts type. Dette netkort vil blive brugt "
+"til at installere Debiansystemet (via NFS eller HTTP)."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
 msgid "Error while activating the network"
-msgstr ""
+msgstr "Fejl under aktivering af netværket"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:28
-#, fuzzy
 msgid "An error occurred while activating the network."
-msgstr "Der skete en fejl og jeg kan ikke fortsætte."
+msgstr "Der skete en fejl under aktivering af netværket."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Hostname:"
-msgstr ""
+msgstr "Værtsnavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:34
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Angiv dette systems værtsnavn."
 
 #. Type: string
 #. Description
@@ -121,14 +119,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:44
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Ugyldigt værtsnavn"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:44
-#, fuzzy
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Maskinnavnet \"${hostname}\" er ugyldigt."
+msgstr "Navnet \"${hostname}\" er ugyldigt."
 
 #. Type: error
 #. Description
@@ -145,7 +142,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:53
 msgid "Error"
-msgstr ""
+msgstr "Fejl"
 
 #. Type: error
 #. Description
@@ -154,25 +151,24 @@ msgid ""
 "An error occured and the network configuration process had been aborted. You "
 "may retry it from the installation main menu."
 msgstr ""
+"Der opstod en fejl og netværks-opsætningen er blevet afbrudt. Du kan forsøge "
+"igen fra installationens hovedmenu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid "No network interfaces detected"
-msgstr "Der blev ikke fundet nogen netkort."
+msgstr "Der blev ikke fundet nogen netkort"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:59
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device."
 msgstr ""
 "Der blev ikke fundet nogen netkort. Det vil sige at installationssystemet "
-"ikke kunne finde et netkort. Hvis du har et netkort, kan det være at dets "
-"modul endnu ikke er blevet valgt. Gå tilbage til 'Find netværksudstyr'."
+"ikke kunne finde et netkort."
 
 #. Type: error
 #. Description
@@ -181,6 +177,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you really "
 "own one. For this, go back to the network hardware detection step."
 msgstr ""
+"Det kan være nødvendigt at indlæse et bestemt modul til dit netkort, hvis du "
+"virkelig har sådan et. For at gøre dette, skal du gå tilbage til "
+"netværksudstyrssøgnings-trinnet."
 
 #. Type: text
 #. Description
@@ -276,25 +275,23 @@ msgstr "Ukendt netkort"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "DHCP-værtsnavn:"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
 "Du kan være nødt til at angive et DHCP-værtsnavn. Hvis du bruger et "
-"kabelmodem, skal du muligvis angive et kontonummer her. De fleste andre "
-"brugere kan blot lade feltet være tomt."
+"kabelmodem, skal du muligvis angive et kontonummer her."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr " De fleste andre brugere kan blot lade feltet være tomt."
 
 #. Type: boolean
 #. Description
@@ -306,7 +303,7 @@ msgstr "Er disse oplysninger korrekte?"
 #. Description
 #: ../netcfg-dhcp.templates:12 ../netcfg-static.templates:47
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Aktuel netværksopsætning:"
 
 #. Type: boolean
 #. Description
@@ -340,20 +337,19 @@ msgstr "Det kan tage nogle minutter."
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "No DHCP client found"
-msgstr ""
+msgstr "Fandt ingen DHCP-klient"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
-#, fuzzy
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Denne pakke kræver pakken pump eller dhcp-client."
+msgstr "Fandt ingen DHCP-klient. Denne pakke kræver pakken pump eller dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:31
 msgid "The DHCP configuration process will be aborted."
-msgstr ""
+msgstr "Opsætningen af DHCP afbrydes."
 
 #. Type: text
 #. Description
@@ -366,16 +362,14 @@ msgstr "DHCP-netværksopsætning"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:44
-#, fuzzy
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Sæt nætværket op via DHCP"
+msgstr "Sæt nætværket op med dynamisk adressering (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
-#, fuzzy
 msgid "IP address:"
-msgstr "IP-adresse?"
+msgstr "IP-adresse:"
 
 #. Type: string
 #. Description
@@ -392,14 +386,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Point-to-point address:"
-msgstr "punkt-til-punkt-adresse?"
+msgstr "Punkt-til-punkt-adresse:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -413,9 +405,8 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:19
-#, fuzzy
 msgid "Netmask:"
-msgstr "Netmaske?"
+msgstr "Netmaske:"
 
 #. Type: string
 #. Description
@@ -432,14 +423,12 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid "Gateway:"
-msgstr "Gateway?"
+msgstr "Gateway:"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:27
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -448,7 +437,7 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Dette er en IP-adresse (fire numre adskilt af punktummer), der angiver din "
+"Din gateway er en IP-adresse (fire numre adskilt af punktummer), der angiver din "
 "gateway, også kaldet standard-routeren. Al trafik, der skal ud fra dit "
 "lokale netværk (for eksempel til Internettet) sendes gennem denne. Kun i "
 "sjældne tilfælde har du ingen router. I så fald kan du lade dette felt være "
@@ -459,20 +448,18 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:38
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Kunne ikke nå gateway"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-#, fuzzy
 msgid "The gateway address you entered is unreachable."
-msgstr "Den angivne gateway kan ikke nåes."
+msgstr "Den angivne gateway-adresse kan ikke nåes."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:38
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Du kan have skrevet forkert, da du angav IP-adresse, netmaske og/eller "
 "gateway."
@@ -510,9 +497,8 @@ msgstr "Statisk netværksopsætning"
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:67
-#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr "Sæt nætværket op via DHCP"
+msgstr "Sæt nætværket op med statisk adressering"
 
 #~ msgid "Choose the domain name."
 #~ msgstr "Vælg domænenavn."
@@ -560,3 +546,4 @@ msgstr "Sæt nætværket op via DHCP"
 
 #~ msgid "debian"
 #~ msgstr "debian"
+
