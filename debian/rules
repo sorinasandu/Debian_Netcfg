@@ -28,11 +28,11 @@ install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k
-	dh_installdirs -A usr/lib/prebaseconfig.d etc/network bin
+	dh_installdirs -A usr/lib/base-installer.d etc/network bin
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
 	  install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
-	  install -m 755 prebaseconfig debian/$(PACKAGE)/usr/lib/prebaseconfig.d/40netcfg ; \
+	  install -m 755 base-installer debian/$(PACKAGE)/usr/lib/base-installer.d/40netcfg ; \
 	  ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
