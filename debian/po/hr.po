@@ -3,13 +3,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer HR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-26 03:36+0200\n"
-"PO-Revision-Date: 2004-07-21 18:02+0200\n"
+"POT-Creation-Date: 2004-08-25 20:49-0600\n"
+"PO-Revision-Date: 2004-08-28 02:15+0200\n"
 "Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-2\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #. Type: boolean
 #. Description
@@ -223,14 +223,13 @@ msgstr "Ime \"${hostname}\" nije valjano."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Valjano ime domaæina mo¾e sadr¾avati samo alfanumerièko znakovlje i znak "
-"minusa. Mora biti izmeðu 2 i 63 znaka dugaèko i ne mo¾e zapoèinjati ili "
+"Valjano ime domaæina mo¾e sadr¾avati samo brojke 0 - 9, mala slova a - z i "
+"znak minusa. Mora biti izmeðu 2 i 63 znaka dugaèko i ne smije zapoèinjati ili "
 "zavr¹avati s minusom."
 
 #. Type: error
@@ -278,9 +277,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Configure the network statically?"
-msgstr "Ruèno podesi mre¾u"
+msgstr "Podesi mre¾u statièno?"
 
 #. Type: boolean
 #. Description
@@ -292,6 +290,10 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"Èini se da ${IFACE} nije spojeno na bilo kakvu mre¾u. To je mo¾da zbog "
+"neispravnosti mre¾nih ureðaja. Mo¾ete se ili odreæi pode¹avanja mre¾e dok "
+"ne podignete Debian i tada iskoristiti 'etherconf' alat, ili podesiti mre¾u "
+"statièno. Mo¾ete se i vratiti natrag i izabrati drugo mre¾no suèelje."
 
 #. Type: select
 #. Choices
@@ -329,7 +331,7 @@ msgstr "Pode¹avanje be¾iène mre¾e"
 msgid "Searching for wireless access points ..."
 msgstr "Tra¾im be¾iène toèke pristupa..."
 
-#. Type: text
+#. Type: boolean
 #. Description
 #: ../netcfg-common.templates:141
 msgid "<none>"
@@ -536,7 +538,6 @@ msgstr "Naèin pode¹avanja mre¾e:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -544,9 +545,9 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Odavde mo¾ete iznova poku¹ati automatsko DHCP pode¹avanje mre¾e (mo¾da va¹em "
-"DHCP poslu¾itelju treba vremena da odgovori) ili ruèno podesiti mre¾u. Neki "
-"DHCP poslu¾itelji tra¾e da klijent po¹alje ime DHCP domaæina, pa mo¾ete "
+"Odavde mo¾ete iznova poku¹ati automatsko DHCP pode¹avanje mre¾e (mo¾da "
+"va¹em DHCP poslu¾itelju treba vremena da odgovori), ili ruèno podesiti mre¾u. "
+"Neki DHCP poslu¾itelji tra¾e da klijent po¹alje ime DHCP domaæina, pa mo¾ete "
 "poku¹ati i na taj naèin."
 
 #. Type: note
@@ -760,4 +761,4 @@ msgstr "Podesi mre¾u rabeæi statièko adresiranje"
 
 #, fuzzy
 #~ msgid "Continue without configuring the network?"
-#~ msgstr "Podesi mre¾u"
+#~ msgstr "Podesi mreÅ¾u"
