@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-19 12:11+0200\n"
-"PO-Revision-Date: 2004-04-24 16:20+0100\n"
-"Last-Translator: André Dahlqvist <andre.dahlqvist@telia.com>\n"
+"PO-Revision-Date: 2004-07-25 20:25+0200\n"
+"Last-Translator: Per Olofsson <pelle@dsv.su.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -337,7 +337,7 @@ msgstr "Trådlöst ethernet (802.11x)"
 #. Description
 #: ../netcfg-common.templates:139
 msgid "wireless"
-msgstr ""
+msgstr "trådlöst"
 
 #. Type: text
 #. Description
@@ -493,23 +493,20 @@ msgstr "DHCP-konfigureringsprocessen kommer att avbrytas."
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr "Statisk nätverkskonfigurering"
+msgstr "Försök att konfigurera nätverket automatiskt igen"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Dynamisk nätverkskonfigurering (DHCP)"
+msgstr "Försök att konfigurera nätverket automatiskt igen med ett DHCP-värdnamn"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Configure network manually"
-msgstr "Konfigurera nätverket"
+msgstr "Konfigurera nätverket manuellt"
 
 #. Type: select
 #. Choices
@@ -520,16 +517,14 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:30
-#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr "Konfigurera nätverket"
+msgstr "Strunta i att konfigurera nätverket"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid "Network configuration method:"
-msgstr "Nätverkskonfigurering"
+msgstr "Metod för nätverkskonfigurering"
 
 #. Type: select
 #. Description
@@ -540,14 +535,13 @@ msgid ""
 "network manually. Some DHCP servers require a DHCP hostname to be sent by "
 "the client, so you can also choose to retry DHCP network autoconfiguration "
 "with a hostname that you provide."
-msgstr ""
+msgstr "Här kan du välja att försöka konfigurera nätverket automatiskt med DHCP igen (vilket kanske fungerar om din DHCP-server tar lång tid på sig att svara), eller att konfigurera nätverket manuellt. Vissa DHCP-servrar kräver att ett DHCP-värdnamn skickas av klienten, i så fall kan du välja att försöka konfigurera nätverket med DHCP och ett värdnamn som du anger."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Statisk nätverkskonfigurering"
+msgstr "Automatisk konfigurering av nätverket misslyckades"
 
 #. Type: note
 #. Description
@@ -555,13 +549,13 @@ msgstr "Statisk nätverkskonfigurering"
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr ""
+msgstr "Ditt nätverk använder förmodligen inte DHCP-protokollet. Det kan också vara så att DHCP-servern är långsam eller att någon nätverkshårdvara inte fungerar ordentligt."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Fortsätt utan en standardrutt?"
 
 #. Type: boolean
 #. Description
@@ -572,7 +566,7 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr ""
+msgstr "Automatisk konfigurering av nätverket lyckades. Ingen standardrutt aktiverades dock, systemet vet alltså inte hur det ska kommunicera med andra noder på Internet. Det här gör det omöjligt att fortsätta installationen om du inte har den första officiella Debian-CD:n, en \"Netinst\"-CD, eller paketen tillgängliga på det lokala nätverket."
 
 #. Type: boolean
 #. Description
@@ -580,14 +574,13 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr ""
+msgstr "Om du är osäker bör du inte fortsätta utan en standardrutt. Kontakta i stället din lokala nätverksadministratör rörande det här problemet."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:60
-#, fuzzy
 msgid "Reconfigure the wireless network"
-msgstr "Konfigurera nätverket"
+msgstr "Konfigurera om det trådlösa nätverket"
 
 #. Type: text
 #. Description
@@ -745,60 +738,3 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Konfigurera ett nätverk genom statisk adressering"
-
-#~ msgid "Dynamic network configuration (DHCP)"
-#~ msgstr "Dynamisk nätverkskonfigurering (DHCP)"
-
-#~ msgid ""
-#~ " interface      = ${interface}\n"
-#~ " hostname       = ${hostname}\n"
-#~ " domain         = ${domain}\n"
-#~ " dhcp hostname  = ${dhcp_hostname}\n"
-#~ " nameservers    = ${nameservers}"
-#~ msgstr ""
-#~ " nätverkskort   = ${interface}\n"
-#~ " värdnamn       = ${hostname}\n"
-#~ " domän          = ${domain}\n"
-#~ " dhcp-värdnamn  = ${dhcp_hostname}\n"
-#~ " namnservrar    = ${nameservers}"
-
-#, fuzzy
-#~ msgid "Next network configuration step:"
-#~ msgstr "Metod för nätverkskonfigurering"
-
-#~ msgid "PC-Card (PCMCIA) Ethernet or Token Ring"
-#~ msgstr "PC-Card (PCMCIA) Ethernet eller Token Ring"
-
-#~ msgid "Do you want to retry DHCP network configuration?"
-#~ msgstr "Vill du försöka nätverkskonfigurering via DHCP igen?"
-
-#~ msgid ""
-#~ "No IP address was found during automatic network configuration with DHCP. "
-#~ "DHCP servers are sometimes really slow. If you wish, you can retry."
-#~ msgstr ""
-#~ "Hittade ingen IP-adress under den automatiska nätverkskonfigureringen via "
-#~ "DHCP. DHCP-servrar är ibland riktigt långsamma. Om du vill så kan du "
-#~ "försöka igen."
-
-#~ msgid "Dynamic addressing (DHCP), Static addressing (manual)"
-#~ msgstr "Dynamisk adressering (DHCP), Statisk adressering (manuell)"
-
-#~ msgid "Error while activating the network"
-#~ msgstr "Fel uppstod när nätverket aktiverades"
-
-#~ msgid "An error occurred while activating the network."
-#~ msgstr "Ett fel inträffade när nätverket aktiverades."
-
-#~ msgid "Interface:"
-#~ msgstr "Nätverkskort:"
-
-#~ msgid ""
-#~ "Please choose the interface you want to configure. All currently detected "
-#~ "interfaces on your system are shown below. Please choose the type of your "
-#~ "primary network interface. This interface will be used for installing the "
-#~ "Debian system (via NFS or HTTP)."
-#~ msgstr ""
-#~ "Väl det nätverkskort som du vill konfigurera. Alla nätverkskort som har "
-#~ "identifierats i ditt system visas nedan. Välj typen på ditt primära "
-#~ "nätverkskort. Detta nätverkskort kommer att användas för att installera "
-#~ "Debiansystemet (via NFS eller HTTP)."
