@@ -32,7 +32,6 @@ static char *domain = NULL;
 static u_int32_t ipaddress = 0;
 static u_int32_t nameservers[4] = { 0 };
 static struct debconfclient *client;
-static char buf[128];
 
 
 char *
@@ -502,6 +501,7 @@ netcfg_write_dhcp ()
 static void
 netcfg_activate_dhcp ()
 {
+    char buf[128];
   char *ptr;
   execlog ("/sbin/ifconfig lo 127.0.0.1");
 
@@ -645,6 +645,7 @@ netcfg_activate_static ()
 {
   int rv;
   char *ptr;
+  char buf[128];
   execlog ("/sbin/ifconfig lo 127.0.0.1");
 
   ptr = buf;
