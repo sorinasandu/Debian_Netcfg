@@ -190,10 +190,14 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   iw_get_basic_config (wfd, iface, &wconf);
 
   debconf_subst(client, "netcfg/wireless_wep", "iface", iface);
-  ret = my_debconf_input (client, "high", "netcfg/wireless_wep", &rv);
-
+  debconf_input (client, "high", "netcfg/wireless_wep");
+  ret = debconf_go(client);
+ 
   if (ret == 30)
     return GO_BACK;
+  
+  debconf_get(client, "netcfg/wireless_wep");
+  rv = client->value;
 
   if (empty_str(rv))
   {
@@ -211,10 +215,17 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   while ((keylen = iw_in_key (rv, buf)) == -1)
   {
     debconf_subst(client, "netcfg/invalid_wep", "wepkey", rv);
-    debconf_input(client, "high", "netcfg/invalid_wep");
+    debconf_input(client, "critical", "netcfg/invalid_wep");
     debconf_go(client);
     
-    ret = my_debconf_input (client, "high", "netcfg/wireless_wep", &rv);
+    debconf_input (client, "high", "netcfg/wireless_wep");
+    ret = debconf_go(client);
+   
+    if (ret == 30)
+      return GO_BACK;
+
+    debconf_get(client, "netcfg/wireless_wep");
+    rv = client->value;
   }
 
   wconf.has_key = 1;

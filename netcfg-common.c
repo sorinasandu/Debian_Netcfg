@@ -51,17 +51,6 @@ int have_domain = 0;
 
 pid_t dhcp_pid = -1;
 
-int my_debconf_input(struct debconfclient *client, char *priority,
-                     char *template, char **p)
-{
-    int ret = 0;
-    debconf_input(client, priority, template);
-    ret = debconf_go(client);
-    debconf_get(client, template);
-    *p = client->value;
-    return ret;
-}
-
 int is_interface_up(char *inter)
 {
     struct ifreq ifr;
@@ -333,8 +322,15 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 
         debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
         free(ptr);
-        ret = my_debconf_input(client, "high",
-                               "netcfg/choose_interface", &inter);
+
+        debconf_input(client, "high", "netcfg/choose_interface");
+        ret = debconf_go(client);
+
+        if (ret)
+          return ret;
+
+        debconf_get(client, "netcfg/choose_interface");
+        inter = client->value;
 
         if (ret)
             return ret;
@@ -374,15 +370,20 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
     size_t len;
     int ret;
-    char *p, *s;
+    char *s;
 
     do {
 	have_domain = 0;
-        ret = my_debconf_input(client, "high", template, &p);
+        debconf_input(client, "high", template);
+        ret = debconf_go(client);
+
         if (ret == 30) /* backup */
-            return ret;
+          return ret;
+        
+        debconf_get(client, template);
+        
         free(*hostname);
-        *hostname = strdup(p);
+        *hostname = strdup(client->value);
         len = strlen(*hostname);
 
         /* Check the hostname for RFC 1123 compliance.  */
@@ -575,14 +576,15 @@ void seed_hostname_from_dns (struct debconfclient * client)
   };
   struct addrinfo *res;
   char ip[16]; /* 255.255.255.255 + 1 */
+  int err;
 
   /* convert ipaddress into a char* */
   inet_ntop(AF_INET, (void*)&ipaddress, ip, 16);
 
   /* attempt resolution */
-  getaddrinfo(ip, NULL, &hints, &res);
+  err = getaddrinfo(ip, NULL, &hints, &res);
 
-  /* got it */
-  if (res->ai_canonname && !empty_str(res->ai_canonname))
+  /* got it? */
+  if (!err && res->ai_canonname && !empty_str(res->ai_canonname))
     debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
 }

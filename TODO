@@ -1,4 +1,4 @@
-* do other sorts of network configurations (pcmcia, ppp)
+* do other sorts of network configurations (ppp)
 
 * pppconfig would be a good starting point for the ppp udeb.  There is also an
   example in there of how to use pppd to detect a modem.
@@ -10,5 +10,3 @@
   or retry DHCP without sacrificing UI usability
 
 * rewrite the whole getif() mess without static buffers
-
-* stop using my_debconf_input

@@ -83,8 +83,6 @@ extern int kill_dhcp_client(void);
 extern int ask_dhcp_retry (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 
-extern int my_debconf_input(struct debconfclient *client, char *priority, char *template, char **result);
-
 extern void netcfg_write_common (const char *prebaseconfig,
 				 struct in_addr ipaddress, char *hostname,
 				 char *domain);

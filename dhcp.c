@@ -206,7 +206,30 @@ int poll_dhcp_client (struct debconfclient *client)
 
 int ask_dhcp_retry (struct debconfclient *client)
 {
-  return 0;
+  int ret;
+  
+  /* critical, we don't want to enter a loop */
+  debconf_input(client, "critical", "netcfg/dhcp_retry");
+  ret = debconf_go(client);
+
+  if (ret == 30)
+    return GO_BACK;
+  
+  debconf_get(client, "netcfg/dhcp_retry");
+
+    /* strcmp sucks */
+  if (client->value[0] == 'R')
+  {
+    /* with DHCP hostnam_e_ */
+    if (client->value[strlen(client->value) - 1] == 'e')
+      return 1;
+    else
+      return 0;
+  }
+  else if (client->value[0] == 'C')
+    return 2; /* manual */
+  else
+    return 3; /* no config */
 }
 
 /* Here comes another Satan machine. */
@@ -236,6 +259,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
           /* ooh, now it's a select */
           switch (ask_dhcp_retry (client))
           {
+            case GO_BACK: exit(10); /* XXX */
             case 0: state = POLL; break;
             case 1: state = DHCP_HOSTNAME; break;
             case 2: state = STATIC; break;

@@ -21,17 +21,19 @@ struct in_addr pointopoint = { 0 };
 int netcfg_get_ipaddress(struct debconfclient *client)
 {
     int ret, ok = 0;
-    char *ptr;
 
     old_ipaddress = ipaddress;
 
     while (!ok)
     {
-      ret = my_debconf_input(client,"critical", "netcfg/get_ipaddress", &ptr);
-      if (ret)
-	return ret;
+      debconf_input (client, "critical", "netcfg/get_ipaddress");
+      ret = debconf_go (client);
 
-      ok = inet_pton (AF_INET, ptr, &ipaddress);
+      if (ret)
+        return ret;
+
+      debconf_get(client, "netcfg/get_ipaddress");
+      ok = inet_pton (AF_INET, client->value, &ipaddress);
       
       if (!ok)
       {
@@ -46,21 +48,24 @@ int netcfg_get_ipaddress(struct debconfclient *client)
 int netcfg_get_pointopoint(struct debconfclient *client)
 {
     int ret, ok = 0;
-    char *ptr;
 
     while (!ok)
     {
-      ret = my_debconf_input(client,"critical", "netcfg/get_pointopoint", &ptr);
-      if (ret)  
-	return ret;
+      debconf_input(client, "critical", "netcfg/get_pointopoint");
+      ret = debconf_go(client);
 
-      if (empty_str(ptr)) /* No P-P is ok */
+      if (ret)
+        return ret;
+
+      debconf_get(client, "netcfg/get_pointopoint");
+      
+      if (empty_str(client->value)) /* No P-P is ok */
       {
 	memset(&pointopoint, 0, sizeof(struct in_addr));
 	return 0;
       }
       
-      ok = inet_pton (AF_INET, ptr, &pointopoint);
+      ok = inet_pton (AF_INET, client->value, &pointopoint);
       
       if (!ok)
       {
@@ -79,17 +84,20 @@ int netcfg_get_pointopoint(struct debconfclient *client)
 int netcfg_get_netmask(struct debconfclient *client)
 {
     int ret, ok = 0;
-    char *ptr, ptr1[INET_ADDRSTRLEN];
+    char ptr1[INET_ADDRSTRLEN];
     struct in_addr old_netmask = netmask;
         
     while (!ok)
     {
-      ret = my_debconf_input(client,"critical", "netcfg/get_netmask", &ptr);
+      debconf_input (client, "critical", "netcfg/get_netmask");
+      ret = debconf_go(client);
 
       if (ret)
-	return ret;
+        return ret;
 
-      ok = inet_pton (AF_INET, ptr, &netmask);
+      debconf_get (client, "netcfg/get_netmask");
+
+      ok = inet_pton (AF_INET, client->value, &netmask);
       
       if (!ok)
       {
@@ -120,7 +128,6 @@ int netcfg_get_netmask(struct debconfclient *client)
 int netcfg_get_domain(struct debconfclient *client,  char **domain)
 {
     int ret;
-    char *ptr;
        
     if (have_domain == 1)
     {
@@ -131,15 +138,20 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
       *domain = strdup(client->value);
       return 0;
     }
-    
-    ret = my_debconf_input(client, "high", "netcfg/get_domain", &ptr);
+
+    debconf_input (client, "high", "netcfg/get_domain");
+    ret = debconf_go(client);
+
     if (ret)
-        return ret;
+      return ret;
+   
+    debconf_get (client, "netcfg/get_domain");
+    
     if (*domain)
         free(*domain);
     *domain = NULL;
-    if (ptr && ptr[0])
-        *domain = strdup(ptr);
+    if (!empty_str(client->value))
+        *domain = strdup(client->value);
     return 0;
 }
 
@@ -150,9 +162,14 @@ int netcfg_get_gateway(struct debconfclient *client)
 
     while (!ok)
     {
-      ret = my_debconf_input(client, "critical", "netcfg/get_gateway", &ptr);
+      debconf_input (client, "critical", "netcfg/get_gateway");
+      ret = debconf_go(client);
+
       if (ret)  
 	return ret;
+
+      debconf_get(client, "netcfg/get_gateway");
+      ptr = client->value;
 
       if (empty_str(ptr)) /* No gateway, that's fine */
       {
@@ -189,7 +206,15 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 	ptr = "";
     debconf_set(client, "netcfg/get_nameservers", ptr);
     
-    ret = my_debconf_input(client, "high", "netcfg/get_nameservers", &ptr);
+    debconf_input(client, "high", "netcfg/get_nameservers");
+    ret = debconf_go(client);
+
+    if (ret)
+      return ret;
+
+    debconf_get(client, "netcfg/get_nameservers");
+    ptr = client->value;
+
     if (*nameservers)
         free(*nameservers);
     *nameservers = NULL;
@@ -353,7 +378,7 @@ int netcfg_activate_static(struct debconfclient *client)
 int netcfg_get_static(struct debconfclient *client) 
 {
     char *nameservers = NULL;
-    char *ptr, ptr1[INET_ADDRSTRLEN];
+    char ptr1[INET_ADDRSTRLEN];
     char *none;
 
     enum { BACKUP, GET_IPADDRESS, GET_POINTOPOINT, GET_NETMASK, GET_GATEWAY, 
@@ -436,8 +461,11 @@ int netcfg_get_static(struct debconfclient *client)
             netcfg_nameservers_to_array(nameservers, nameserver_array);
 
             debconf_capb(client); /* Turn off backup for yes/no confirmation */
-            my_debconf_input(client, "medium", "netcfg/confirm_static", &ptr);
-            state = strstr(ptr, "true") ? QUIT : GET_IPADDRESS;
+
+            debconf_input(client, "medium", "netcfg/confirm_static");
+            debconf_go(client);
+            debconf_get(client, "netcfg/confirm_static");
+            state = strstr(client->value, "true") ? QUIT : GET_IPADDRESS;
             debconf_capb(client, "backup");
             break;
         case QUIT:
