@@ -2,7 +2,9 @@ ifndef TARGETS
 TARGETS=netcfg-dhcp netcfg-static netcfg
 endif
 
-LDOPTS=-ldebconfclient -ldebian-installer -liw
+# Note that the -lm is only here until we can go back to linking with libiw
+# synamically. Which is waiting on libiw-udeb, which will not use libm.
+LDOPTS=-ldebconfclient -ldebian-installer -lm # -liw
 PREFIX=$(DESTDIR)/usr/
 CFLAGS=-W -Wall  -Os
 
@@ -23,7 +25,7 @@ netcfg-static: netcfg-static.o
 netcfg: netcfg.o
 
 $(TARGETS): netcfg-common.o
-	$(CC) $(LDOPTS) -o $@ $^
+	$(CC) $(LDOPTS) -o $@ $^ /lib/libiw.a
 	$(STRIP) $@
 
 %.o: %.c
