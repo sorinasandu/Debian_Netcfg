@@ -1,3 +1,9 @@
+netcfg (0.53) unstable; urgency=low
+
+  * Fix dhcp killer to not segfault if the pid is < 1000 or > 9999.
+
+ -- Joey Hess <joeyh@debian.org>  Tue,  9 Mar 2004 15:01:06 -0500
+
 netcfg (0.52) unstable; urgency=low
 
   * Joey Hess
