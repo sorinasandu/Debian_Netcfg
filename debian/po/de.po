@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# translation of debian-installer to German
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #    Translators, please read /usr/share/doc/po-debconf/README-trans
 #         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Thorsten Sauter <tsauter@gmx.net>, 2003
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2003-03-17 07:00-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2003-05-11 01:59+0200\n"
+"Last-Translator: Thorsten Sauter <tsauter@gmx.net>\n"
+"Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
 
 #. Description
 #: ../netcfg-common.templates:3
@@ -101,7 +100,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:41
 msgid "The hostname \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Der Rechnername \"${hostname}\" ist ungültig."
 
 #. Description
 #: ../netcfg-common.templates:41
@@ -110,6 +109,9 @@ msgid ""
 "sign, be between 2 and 63 characters long, and cannot begin or end with a "
 "minus sign."
 msgstr ""
+"Ein gültiger Rechnername darf nur alphanumerische und das Minuszeichen "
+"enthalten. Er darf nur 2 bis 63 Zeichen lang sein, und nicht mit einem Minus "
+"beginnen oder enden."
 
 #. Description
 #: ../netcfg-common.templates:48
@@ -128,7 +130,6 @@ msgstr "Kein Interface wurde erkannt."
 
 #. Description
 #: ../netcfg-common.templates:53
-#, fuzzy
 msgid ""
 "No network interfaces were found.   That means that the installation system "
 "was unable to find a network device.  If you do have a network card, then it "
@@ -147,7 +148,6 @@ msgstr "Was ist Ihr DHCP Hostname?"
 
 #. Description
 #: ../netcfg-dhcp.templates:3
-#, fuzzy
 msgid ""
 "In some situations, you may need to supply a DHCP host name.  These "
 "situations are rare.  Most commonly, it applies to cable modem users. If you "
@@ -191,14 +191,13 @@ msgstr "Das kann bis zu ein oder zwei Minuten dauern."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
-#, fuzzy
 msgid "No dhcp client found. I cannot continue."
-msgstr "Ein Fehler ist aufgetreten und es wurde abgebrochen"
+msgstr "Kein DHCP-Client gefunden. Es kannt nicht fortgefahren werden."
 
 #. Description
 #: ../netcfg-dhcp.templates:26
 msgid "This package requires pump or dhcp-client."
-msgstr ""
+msgstr "Diese Paket benötigt den pump- oder dhcp-Client."
 
 #. Description
 #: ../netcfg-static.templates:3
@@ -218,13 +217,11 @@ msgstr ""
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid "Pointopoint address?"
-msgstr "IP Nummer?"
+msgstr "Point-to-Point Adresse?"
 
 #. Description
 #: ../netcfg-static.templates:10
-#, fuzzy
 msgid ""
 "The pointopoint address is used to determine the other endpoint of the point "
 "to point network.  Consult your network administrator if you do not know the "
@@ -239,7 +236,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:19
 msgid "Netmask?"
-msgstr "Netmask?"
+msgstr "Netzmaske?"
 
 #. Description
 #: ../netcfg-static.templates:19
@@ -282,9 +279,7 @@ msgstr "Der angegebene Gateway ist nicht erreichbar."
 
 #. Description
 #: ../netcfg-static.templates:37
-#, fuzzy
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Sie haben bei der Eingabe von Ihrer IP Nummer, der Netmask und/oder des "
 "Gateways einen Fehler gemacht."
@@ -296,7 +291,6 @@ msgstr "Sind diese Informationen richtig?"
 
 #. Description
 #: ../netcfg-static.templates:44
-#, fuzzy
 msgid ""
 " interface     = ${interface}\n"
 " hostname      = ${hostname}\n"
@@ -314,3 +308,4 @@ msgstr ""
 " Netmask        = ${netmask}\n"
 " Gateway        = ${gateway}\n"
 " Nameserver     = ${nameservers}"
+
