@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_netcfg_sk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-10 10:11-0700\n"
-"PO-Revision-Date: 2004-07-09 10:45+0200\n"
+"PO-Revision-Date: 2004-08-17 11:00+0200\n"
 "Last-Translator: Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -239,15 +239,14 @@ msgstr "Názov počítača \"${hostname}\" je neplatný."
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:84
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Názov počítača môže obsahovať iba alfanumerické znaky a znamienko mínus.Musí "
-"byť v rozmedzí od 2 do 63 znakov a nesmie začínať alebo končiť znamienkom "
-"mínus."
+"Názov počítača môže obsahovať iba číslice 0-9, malé písmená a-z a znamienko "
+"mínus. Musí byť v rozmedzí od 2 do 63 znakov a nesmie začínať alebo končiť "
+"znamienkom mínus."
 
 #. Type: error
 #. Description
@@ -294,9 +293,8 @@ msgstr ""
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:109
-#, fuzzy
 msgid "Continue without configuring the network?"
-msgstr "Nastavenie siete"
+msgstr "Pokračovať bez nastavenia siete?"
 
 #. Type: boolean
 #. Description
@@ -308,6 +306,11 @@ msgid ""
 "the etherconf utility, or configure the network statically. You can also go "
 "back and choose a different interface."
 msgstr ""
+"Zdá sa, že ${IFACE} nie je pripojené k žiadnej sieti. Môže to byť spôsobené "
+"chýbajúcim sieťovým káblom alebo nefunkčnou sieťovou kartou. Teraz sa musíte "
+"zaobísť bez siete, pričom ju neskôr nastavíte až v nainštalovanom systéme "
+"pomocou programu etherconf, alebo ju budete musieť nastaviť staticky. Tiež "
+"sa môžete vrátiť späť a zvoliť si iné sieťové rozhranie."
 
 #. Type: select
 #. Choices
@@ -554,7 +557,6 @@ msgstr "Spôsob nastavenia siete:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -565,8 +567,8 @@ msgstr ""
 "Teraz si môžete zvoliť medzi zopakovaním automatického nastavenia siete "
 "pomocou DHCP (môže to fungovať, ak má server dlhšie odozvy) a manuálnym "
 "nastavením siete. Niektoré DHCP servery vyžadujú určenie DHCP názvu "
-"počítača, takže musíte zadať nejaký názov počítača, kým sa znovu pokúsite o "
-"nastavenie siete pomocou DHCP."
+"počítača, takže musíte zadať názov počítača, kým sa znovu pokúsite "
+"o nastavenie siete pomocou DHCP."
 
 #. Type: note
 #. Description
