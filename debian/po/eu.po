@@ -18,13 +18,14 @@ msgstr ""
 "Project-Id-Version: netcfg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-29 10:35+0200\n"
-"PO-Revision-Date: 2004-05-18 23:51+0200\n"
+"PO-Revision-Date: 2004-06-29 17:20+0200\n"
 "Last-Translator: Piarres Beobide Egaña <pi@beobide.net>\n"
 "Language-Team: Euskara <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -154,8 +155,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr ""
-"Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
+msgstr "Zure WEP kodea pasahitz formatukoa bada, ipini 's:' aurretik (gakorik gabe)"
 
 #. Type: string
 #. Description
@@ -163,8 +163,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
-"Noski zure kablegabeko sareak ez badu WEP koderik hutsik utzi behar duzu."
+msgstr "Noski zure kablegabeko sareak ez badu WEP koderik hutsik utzi behar duzu."
 
 #. Type: error
 #. Description
@@ -481,8 +480,7 @@ msgstr "Ez da DHCP bezeroa aurkitu"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr ""
-"Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
+msgstr "Ez da DHCP bezeroa aurkitu. Pakete honek pump edo dhcp-client behar du."
 
 #. Type: error
 #. Description
@@ -529,7 +527,6 @@ msgstr "Sare Konfigurazioa modua:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:32
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "work if your DHCP server takes a long time to respond) or to configure the "
@@ -538,17 +535,16 @@ msgid ""
 "with a hostname that you provide."
 msgstr ""
 "Sare autokonfigurazioak huts egin du. Hau DHCP zerbitzari geldo baten errua "
-"izan liteke, eta ziurrenik berriz saiatu beharko zenuke. Zure sareak ez badu "
-"DHCP zerbitzaririk eskuz konfiguratu dezakezu. Izan liteke ere DHCP "
-"Zerbitzari batzuek DHCP ostalari izen berezi bat behar izatea, orduan zuk "
-"izen hori ezarri beharko zenuke DHCP eskaria egin aurretik."
+"izan liteke, eta ziurrenik berriz saiatu beharko zenuke. Edo sarea eskuz "
+"konfiguratu dezakezu. Izan liteke ere DHCP Zerbitzari batzuek DHCP "
+"ostalari izen berezi bat behar izatea, orduan zuk izen hori ezarri beharko zenuke "
+"DHCP eskaria egin aurretik."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:42
-#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr "Sare autokonfiguraizioa egoki amaitu da"
+msgstr "Sare autokonfiguraizioak huts egin du"
 
 #. Type: note
 #. Description
@@ -557,12 +553,14 @@ msgid ""
 "This may be due to a slow DHCP server, malfunctioning network equipment, or "
 "your network simply not being set up for DHCP."
 msgstr ""
+"Hau DHCP zerbitzari geldo bat, sare errore bat edo zure sareak DHCP "
+"zerbitzurik ez duelako izan daiteke."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:48
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Lehentesitako biderik gabe jarraitu?"
 
 #. Type: boolean
 #. Description
@@ -574,6 +572,11 @@ msgid ""
 "all the Debian packages you need on the local network or on a local medium "
 "such as CD-ROM."
 msgstr ""
+"Sare autokonfigurazioa arrakastatsuki burutu da. Hala ere ez da lehenetsitako "
+"atebiderik ezarri, beraz sistema ez daki nola harremanetan jarri intereneteko "
+"osatalariekin. Honek sistema instalatzea ezinezko egin dezake zuk ez badituzu "
+"beharrezko diren debian pakete guztiak CD-ROM antzerako batetan edo sare "
+"lokalaren bidez eskuragarri."
 
 #. Type: boolean
 #. Description
@@ -582,6 +585,8 @@ msgid ""
 "If you are unsure then you can continue and come back to the network "
 "configuration step later if necessary."
 msgstr ""
+"Ziu ez bazaude aurrera jo eta gero behar izan ezkero sare konfiguraziora "
+"itzuli ahal izango zara."
 
 #. Type: text
 #. Description
@@ -706,8 +711,7 @@ msgstr "Zuk emandako atebidea ezin da ailatu."
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
-msgid ""
-"You may have made an error entering your IP address, netmask and/or gateway."
+msgid "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Zuk errakuntzaren bat egin duzu zure IP helbide, sare maskara eta/edo "
 "atebidea sartzerakoan."
@@ -781,3 +785,4 @@ msgstr "Helbide tinkoak erabiliz sarea konfiguratu"
 #~ "Ez da IP helbiderik eskuratu DHCP bidezko sare konfigurazio automatikoan. "
 #~ "DHCP zerbitzariak oso geldoak izan daitezke batzutan. Nahi izan ezkero, "
 #~ "ebrriz saia zaitezke."
+
