@@ -11,7 +11,7 @@ set -e
 # Modified for Debian.  Matt Zimmerman and Eloy Paris, December 2003
 
 make_resolv_conf() {
-    if [ -n "$new_domain_name" -a -n "$new_domain_name_servers" ]; then
+    if [ -n "$new_domain_name" -o -n "$new_domain_name_servers" ]; then
         local new_resolv_conf=/etc/resolv.conf.dhclient-new
         rm -f $new_resolv_conf
         if [ -n "$new_domain_name" ]; then
