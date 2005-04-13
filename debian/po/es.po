@@ -16,6 +16,7 @@
 # Rudy Godoy <rudy@kernel-panik.org>, 2003
 # Javier Fernández-Sanguino <jfs@debian.org>, 2004-2005
 # Steve Langasek <vorlon@debian.org>, 2004
+# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005.
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -36,14 +37,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-03-16 18:51-0700\n"
-"PO-Revision-Date: 2005-04-11 23:02+0200\n"
+"PO-Revision-Date: 2005-04-13 09:34+0200\n"
 "Last-Translator:  Javier Fernandez-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -83,7 +83,7 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "El nombre de dominio es la parte de su dirección de Internet a la derecha "
-"del nombre de sistema. Es habitualmente algo que termina por .com, .net, ."
+"del nombre de sistema. Habitualmente es algo que termina por .com, .net, ."
 "edu, o .org. Si está seleccionando una red doméstica, puede inventárselo, "
 "pero asegúrese de que utiliza el mismo nombre de dominio en todos sus "
 "ordenadores."
@@ -105,9 +105,9 @@ msgid ""
 "this field blank."
 msgstr ""
 "Los servidores nombre se utilizan para buscar los nombres de servidores en "
-"la red. Por favor, introduzca la dirección IP (no nombre de sistema) de "
+"la red. Por favor, introduzca la dirección IP (no el nombre de sistema) de "
 "hasta tres servidores de nombres, separados por espacios. No utilice comas. "
-"Los servidores serán consultados en el orden en que se introduzcan. Si no "
+"Se consultarán los servidores en el orden en que se introduzcan. Si no "
 "quiere utilizar ningún servidor de nombres deje este campo en blanco."
 
 #. Type: select
@@ -252,7 +252,7 @@ msgid ""
 msgstr ""
 "El nombre del sistema es una sóla palabra que identifica el sistema en la "
 "red. Si no sabe qué nombre debería tener, consulte al administrador de red. "
-"Si está configurando una red doméstica, puede inventarse el valor del nombre."
+"Puede inventarse este nombre si está configurando una red doméstica."
 
 #. Type: error
 #. Description
@@ -291,14 +291,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Ocurrió un error y el proceso de configuración de la red ha sido abortado. "
+"Ocurrió un error y se ha interrumpido el proceso de configuración de la red. "
 "Puede intentarlo de nuevo desde el menú principal de la instalación."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "No se detectó ninguna interfaz"
+msgstr "No se detectó ninguna interfaz de red"
 
 #. Type: error
 #. Description
@@ -398,7 +398,7 @@ msgstr "Arcnet"
 #. Description
 #: ../netcfg-common.templates:158
 msgid "Serial-line IP"
-msgstr "IP en linea serie"
+msgstr "IP en línea serie"
 
 #. Type: text
 #. Description
@@ -472,7 +472,7 @@ msgstr "Configurar la red"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Nombre de sistema DHCP:"
+msgstr "Nombre del servidor DHCP:"
 
 #. Type: string
 #. Description
@@ -482,8 +482,8 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "En algunas circunstancias será necesario que indique el nombre de su "
-"servidor DHCP. Si usted es un usuario de cable módem, puede necesitar "
-"indicar un número de cuenta aquí."
+"servidor DHCP. Quizás deba indicar un número de cuenta si usted es un "
+"usuario de cable módem."
 
 #. Type: string
 #. Description
@@ -527,7 +527,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "La configuración con DHCP se abortará."
+msgstr "Se interrumpirá la configuración con DHCP."
 
 #. Type: select
 #. Choices
@@ -560,7 +560,7 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "No configurar la red en este momento."
+msgstr "No configurar la red en este momento"
 
 #. Type: select
 #. Description
@@ -630,7 +630,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"No debería continuar sin una ruta por defecto si no está seguro: contacte "
+"No debería continuar sin una ruta por omisión si no está seguro: contacte "
 "con el administrador de red local e infórmele de este problema."
 
 #. Type: text
@@ -660,9 +660,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"La dirección IP es única para su ordenador y consiste de cuatro números "
-"separados por puntos. Si no sabe qué usar aquí, consulte al administrador de "
-"red."
+"La dirección IP es única para su ordenador y está formada por cuatro números "
+"separados por puntos. Consulte al administrador de red si no sabe qué usar "
+"aquí."
 
 #. Type: error
 #. Description
@@ -737,11 +737,11 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "La pasarela es una dirección IP (cuatro números separados por puntos) que "
-"indica el router de pasarela, también conocido como router por defecto. Todo "
-"el tráfico que se envía fuera de su LAN (por ejemplo, hacia Internet) se "
-"envía a este router.  En algunas circunstancias anormales, puede no tener un "
-"router; si es así lo puede dejar en blanco. Si no sabe la respuesta correcta "
-"a esta pregunta, consulte al administrador de red."
+"indica el encaminador de pasarela, también conocido como encaminador por "
+"omisión. Todo el tráfico que se envía fuera de su LAN (por ejemplo, hacia "
+"Internet) se envía a este encaminador.  En algunas circunstancias anormales, "
+"puede no tener un encaminador; si es así lo puede dejar en blanco. Si no "
+"sabe la respuesta correcta a esta pregunta, consulte al administrador de red."
 
 #. Type: error
 #. Description
