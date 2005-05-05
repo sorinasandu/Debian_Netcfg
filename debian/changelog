@@ -3,6 +3,10 @@ netcfg (1.09) UNRELEASED; urgency=low
   * Christian Perrier
     - Change the comment about the Choices length for translators
       The limit is 65 characters, not 70
+  * Joey Hess
+    - Check to see if a preseeded interface name contains the card name too,
+      in case the user uses debconf-get-selections to generate their preseed
+      file.
     
  -- Christian Perrier <bubulle@debian.org>  Wed, 16 Mar 2005 20:12:48 +0100
 
