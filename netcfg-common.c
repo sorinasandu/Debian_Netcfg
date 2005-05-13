@@ -700,40 +700,39 @@ void loop_setup(void)
 
 void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)
 {
-  struct addrinfo hints = {
-    .ai_family = PF_UNSPEC,
-    .ai_socktype = 0,
-    .ai_protocol = 0,
-    .ai_flags = AI_CANONNAME
-  };
-  struct addrinfo *res;
-  struct sockaddr tmp;
-  char ip[INET_ADDRSTRLEN] = { 0 };
+  struct sockaddr_in sin;
+  char *host;
   int err;
 
-  /* convert ipaddress into a char* */
-  inet_ntop(AF_INET, (void*)ipaddr, ip, sizeof(ip));
+  host = malloc(NI_MAXHOST);
+  if (!host)
+    netcfg_die(client);
+
+  /* copy IP address into required format */
+  sin.sin_family = AF_INET;
+  sin.sin_port = 0;
+  memcpy(&sin.sin_addr, ipaddr, sizeof(*ipaddr));
 
   /* attempt resolution */
-  err = getaddrinfo(ip, NULL, &hints, &res);
+  err = getnameinfo((struct sockaddr *) &sin, sizeof(sin),
+                    host, NI_MAXHOST, NULL, 0, NI_NAMEREQD);
 
   /* got it? */
-  if (err == 0 && res->ai_canonname && !empty_str(res->ai_canonname) &&
-      inet_pton(AF_INET, res->ai_canonname, &tmp) == 0)
+  if (err == 0 && !empty_str(host))
   {
     /* remove domain part */
-    char* ptr = strchr(res->ai_canonname, '.');
+    char* ptr = strchr(host, '.');
 
     if (ptr)
       *ptr = '\0';
 
-    debconf_set(client, "netcfg/get_hostname", res->ai_canonname);
+    debconf_set(client, "netcfg/get_hostname", host);
 
     if (!have_domain && (ptr && ptr[1] != '\0'))
       debconf_set(client, "netcfg/get_domain", ptr + 1);
   }
 
-  freeaddrinfo(res);
+  free(host);
 }
 
 void interface_up (char* iface)

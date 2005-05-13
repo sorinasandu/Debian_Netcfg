@@ -7,6 +7,13 @@ netcfg (1.09) UNRELEASED; urgency=low
     - Check to see if a preseeded interface name contains the card name too,
       in case the user uses debconf-get-selections to generate their preseed
       file.
+  * Colin Watson
+    - On glibc 2.3.5, getaddrinfo() doesn't return a host name in
+      res->ai_canonname, so seeding the host name from DNS failed. This
+      appears to have been a bug in earlier versions of glibc, since POSIX
+      says: "A numeric host address string is not a 'name', and thus does
+      not have a 'canonical name' form; no address to host name translation
+      is performed." Use getnameinfo() instead.
     
  -- Christian Perrier <bubulle@debian.org>  Wed, 16 Mar 2005 20:12:48 +0100
 
