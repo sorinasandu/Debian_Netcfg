@@ -14,6 +14,8 @@ netcfg (1.09) UNRELEASED; urgency=low
       says: "A numeric host address string is not a 'name', and thus does
       not have a 'canonical name' form; no address to host name translation
       is performed." Use getnameinfo() instead.
+    - Detect ipw2100 and ipw2200 hardware kill switches, and warn the user
+      if they're enabled (Ubuntu bug #1877).
     
  -- Christian Perrier <bubulle@debian.org>  Wed, 16 Mar 2005 20:12:48 +0100
 

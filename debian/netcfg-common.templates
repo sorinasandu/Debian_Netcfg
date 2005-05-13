@@ -104,6 +104,15 @@ _Description: No network interfaces detected
  You may need to load a specific module for your network card, if you have
  one. For this, go back to the network hardware detection step.
 
+Template: netcfg/kill_switch_enabled
+Type: note
+# A "kill switch" is a physical switch found on some network cards that
+# disables the card.
+_Description: Kill switch enabled on ${iface}
+ ${iface} appears to have been disabled by means of a physical "kill
+ switch". If you intend to use this interface, please switch it on before
+ continuing.
+
 Template: netcfg/wireless_adhoc_managed
 Type: select
 Default: Infrastructure (Managed) network

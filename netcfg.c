@@ -98,6 +98,20 @@ int main(int argc, char *argv[])
 		{
 			while (*ifaces)
 			{
+				if (check_kill_switch(*ifaces)) {
+					debconf_subst(client, "netcfg/kill_switch_enabled", "iface", *ifaces);
+					debconf_input(client, "high", "netcfg/kill_switch_enabled");
+					if (debconf_go(client) == 30) {
+						state = BACKUP;
+						break;
+					}
+					/* Is it still enabled? */
+					if (check_kill_switch(*ifaces)) {
+						ifaces++;
+						continue;
+					}
+				}
+
 				interface_up(*ifaces);
 				
 				usleep(250);
@@ -150,6 +164,9 @@ int main(int argc, char *argv[])
 			}
 		}
 	    
+		if (state == BACKUP)
+			break;
+
 		if (!defiface && defwireless)
 			defiface = defwireless;
 

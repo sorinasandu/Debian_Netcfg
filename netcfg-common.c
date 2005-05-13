@@ -111,6 +111,67 @@ void open_sockets (void)
   skfd = socket (AF_INET, SOCK_DGRAM, 0);
 }
 
+#define SYSCLASSNET "/sys/class/net/"
+
+/* Returns non-zero if this interface has an enabled kill switch, otherwise
+ * zero.
+ */
+int check_kill_switch(const char *iface)
+{
+    char *temp, *linkbuf;
+    const char *killname;
+    char killstate;
+    size_t len;
+    int linklen, killlen;
+    int fd = -1;
+    int ret = 0;
+
+    /* longest string we need */
+    len = strlen(SYSCLASSNET) + strlen(iface) + strlen("/device/rf_kill") + 1;
+
+    temp = malloc(len);
+    snprintf(temp, len, SYSCLASSNET "%s/driver", iface);
+    linkbuf = malloc(1024); /* probably OK ... I hate readlink() */
+    linklen = readlink(temp, linkbuf, 1024);
+    if (linklen < 0)
+        goto out;
+
+    if (strncmp(linkbuf + linklen - 8, "/ipw2100", 8) == 0)
+        killname = "rf_kill";
+    else if (strncmp(linkbuf + linklen - 8, "/ipw2200", 8) == 0)
+        killname = "rf_kill";
+    else
+        goto out;
+
+    snprintf(temp, len, SYSCLASSNET "%s/device/%s", iface, killname);
+    di_info("Checking RF kill switch: %s", temp);
+    fd = open(temp, O_RDONLY);
+    if (fd == -1)
+        goto out;
+    killlen = read(fd, &killstate, 1);
+    if (killlen < 0) {
+        di_error("Failed to read RF kill state: %s", strerror(errno));
+        goto out;
+    } else if (killlen == 0) {
+        di_warning("RF kill state file empty");
+        goto out;
+    }
+
+    if (killstate == '2') {
+        di_info("RF kill switch enabled");
+        ret = 1;
+    }
+
+out:
+    free(temp);
+    free(linkbuf);
+    if (fd != -1)
+        close(fd);
+    return ret;
+}
+
+#undef SYSCLASSNET
+
 int is_interface_up(char *inter)
 {
     struct ifreq ifr;

@@ -67,6 +67,8 @@ extern char *essid, *wepkey;
 extern wifimode_t mode;
 
 /* common functions */
+extern int check_kill_switch (const char *iface);
+
 extern int is_interface_up (char *inter);
 
 extern void get_name (char *name, char *p);
