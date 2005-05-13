@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-03-16 18:51-0700\n"
-"PO-Revision-Date: 2004-11-10 16:18+0300\n"
+"POT-Creation-Date: 2005-05-13 10:52-0600\n"
+"PO-Revision-Date: 2005-04-14 15:33+0200\n"
 "Last-Translator:  Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team:  Arabeyes <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
@@ -281,23 +281,40 @@ msgstr ""
 "قد تحتاج إلى تحميل وحدةٍ معيّنة لبطاقة الشّبكة إن كانت لديك واحدة. لذا ارجع إلى "
 "خطوة تفحّص عتاد الشّبكة."
 
+#. Type: note
+#. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
+#: ../netcfg-common.templates:111
+msgid "Kill switch enabled on ${iface}"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../netcfg-common.templates:111
+msgid ""
+"${iface} appears to have been disabled by means of a physical \"kill switch"
+"\". If you intend to use this interface, please switch it on before "
+"continuing."
+msgstr ""
+
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "شبكة بنية تحتيّة (مدارة), شبكة مصطنعة (ند إلى ند)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
 msgstr "نوع الشّبكة اللّاسلكيّة:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -309,123 +326,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
 msgstr "إعداد الشّبكة اللّاسلكيّة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
 msgstr "جاري البحث عن نقاط الوصول اللّاسلكي ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:143
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:138
+#: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
 msgstr "إيثرنت لاسلكي (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:142
+#: ../netcfg-common.templates:151
 msgid "wireless"
 msgstr "لاسلكي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
 msgstr "إيثرنت أو إيثرنت سريع"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:150
+#: ../netcfg-common.templates:159
 msgid "Token Ring"
 msgstr "طوق رمزي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:154
+#: ../netcfg-common.templates:163
 msgid "Arcnet"
 msgstr "آركنت"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:158
+#: ../netcfg-common.templates:167
 msgid "Serial-line IP"
 msgstr "عنوان IP ذو خطٍّ متوالي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:171
 msgid "Parallel-port IP"
 msgstr "عنوان IP ذو منفذٍ متوازي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:166
+#: ../netcfg-common.templates:175
 msgid "Point-to-Point Protocol"
 msgstr "بروتوكول نقطة لنقطة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:170
+#: ../netcfg-common.templates:179
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-في-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:174
+#: ../netcfg-common.templates:183
 msgid "ISDN Point-to-Point Protocol"
 msgstr "بروتوكول نقطة لنقطة ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Channel-to-channel"
 msgstr "قناة لقناة"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:191
 msgid "Real channel-to-channel"
 msgstr "قناة لقناة حقيقي"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:195
 msgid "Hypersocket"
 msgstr "قابس تشعّبي (Hypersocket("
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:199
 msgid "Inter-user communication vehicle"
 msgstr "وسيلة اتّصال بين المستخدمين"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:203
 msgid "Unknown interface"
 msgstr "واجهة غير معروفة"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:208
 msgid "Configuring network ..."
 msgstr "جاري إعداد الشّبكة ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:204
+#: ../netcfg-common.templates:213
 msgid "Configure the network"
 msgstr "إعداد الشبكة"
 

@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-03-16 18:51-0700\n"
-"PO-Revision-Date: 2004-11-09 23:50+0100\n"
+"POT-Creation-Date: 2005-05-13 10:52-0600\n"
+"PO-Revision-Date: 2005-02-20 00:17+0100\n"
 "Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
 "Language-Team:  LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -291,11 +291,28 @@ msgstr ""
 "imate. Če želite to storiti pojdite nazaj na korak za zaznavo omrežne "
 "strojne opreme."
 
+#. Type: note
+#. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
+#: ../netcfg-common.templates:111
+msgid "Kill switch enabled on ${iface}"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../netcfg-common.templates:111
+msgid ""
+"${iface} appears to have been disabled by means of a physical \"kill switch"
+"\". If you intend to use this interface, please switch it on before "
+"continuing."
+msgstr ""
+
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 "Omrežje z infrastrukturo (upravljano), neposredno omrežje (uporabnik do "
@@ -303,13 +320,13 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
 msgstr "Tip brezžičnega omrežja:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -321,123 +338,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
 msgstr "Mrežne nastavitve brezžičnega omrežja"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
 msgstr "Iščem brezžične dostopne točke ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:143
 msgid "<none>"
 msgstr "<nobeden>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:138
+#: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
 msgstr "Brezžični ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:142
+#: ../netcfg-common.templates:151
 msgid "wireless"
 msgstr "brezžično"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ali Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:150
+#: ../netcfg-common.templates:159
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:154
+#: ../netcfg-common.templates:163
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:158
+#: ../netcfg-common.templates:167
 msgid "Serial-line IP"
 msgstr "Serijska-povezava IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:171
 msgid "Parallel-port IP"
 msgstr "Paralelna vrata IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:166
+#: ../netcfg-common.templates:175
 msgid "Point-to-Point Protocol"
 msgstr "Točka-do-Točka Protokol (Point-to-Point Protocol)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:170
+#: ../netcfg-common.templates:179
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-v-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:174
+#: ../netcfg-common.templates:183
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Točka-do-Točka Protokol (Point-to-Point)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Channel-to-channel"
 msgstr "Kanal-do-kanal (Channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:191
 msgid "Real channel-to-channel"
 msgstr "Pravi kanal-do-kanal (channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:195
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:199
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:203
 msgid "Unknown interface"
 msgstr "Neznani vmesniki"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:208
 msgid "Configuring network ..."
 msgstr "Nastavljam omrežje ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:204
+#: ../netcfg-common.templates:213
 msgid "Configure the network"
 msgstr "Nastavi omrežje"
 

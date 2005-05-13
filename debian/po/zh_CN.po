@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-03-16 18:51-0700\n"
-"PO-Revision-Date: 2004-11-09 22:01+1300\n"
+"POT-Creation-Date: 2005-05-13 10:52-0600\n"
+"PO-Revision-Date: 2005-05-14 00:20+1200\n"
 "Last-Translator:  Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team:  Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -272,23 +272,40 @@ msgstr ""
 "如果您的网卡使用其特有的模块，您可能还需要加载它。要完成此任务，请返回到网络"
 "硬件探测步骤。"
 
+#. Type: note
+#. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
+#: ../netcfg-common.templates:111
+msgid "Kill switch enabled on ${iface}"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../netcfg-common.templates:111
+msgid ""
+"${iface} appears to have been disabled by means of a physical \"kill switch"
+"\". If you intend to use this interface, please switch it on before "
+"continuing."
+msgstr ""
+
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "共用 (Managed) 网络, Ad-hoc 网络 (点对点)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
 msgstr "无线网络类别："
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -300,123 +317,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
 msgstr "无线网络设置"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
 msgstr "正在搜索无线网络接入点(AP) ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:143
 msgid "<none>"
 msgstr "<无>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:138
+#: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
 msgstr "无线局域网(802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:142
+#: ../netcfg-common.templates:151
 msgid "wireless"
 msgstr "无线网络"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
 msgstr "以太网或高速以太网"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:150
+#: ../netcfg-common.templates:159
 msgid "Token Ring"
 msgstr "令牌环"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:154
+#: ../netcfg-common.templates:163
 msgid "Arcnet"
 msgstr "Arcnet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:158
+#: ../netcfg-common.templates:167
 msgid "Serial-line IP"
 msgstr "串行 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:171
 msgid "Parallel-port IP"
 msgstr "并行口 IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:166
+#: ../netcfg-common.templates:175
 msgid "Point-to-Point Protocol"
 msgstr "点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:170
+#: ../netcfg-common.templates:179
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:174
+#: ../netcfg-common.templates:183
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 点对点协议"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:191
 msgid "Real channel-to-channel"
 msgstr "真实的 channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:195
 msgid "Hypersocket"
 msgstr "Hypersocket"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:199
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:203
 msgid "Unknown interface"
 msgstr "未知接口"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:208
 msgid "Configuring network ..."
 msgstr "正在设置网络 ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:204
+#: ../netcfg-common.templates:213
 msgid "Configure the network"
 msgstr "网络设置"
 
