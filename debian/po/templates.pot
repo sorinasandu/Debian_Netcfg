@@ -1,21 +1,12 @@
-#
-#    Translators, if you are not familiar with the PO format, gettext
-#    documentation is worth reading, especially sections dedicated to
-#    this format, e.g. by running:
-#         info -n '(gettext)PO Files'
-#         info -n '(gettext)Header Entry'
-#
-#    Some information specific to po-debconf are available at
-#            /usr/share/doc/po-debconf/README-trans
-#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
-#
-#    Developers do not need to manually edit POT or PO files.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2005-03-16 18:51-0700\n"
+"POT-Creation-Date: 2005-05-13 10:52-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -248,23 +239,40 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 
+#. Type: note
+#. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
+#: ../netcfg-common.templates:111
+msgid "Kill switch enabled on ${iface}"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../netcfg-common.templates:111
+msgid ""
+"${iface} appears to have been disabled by means of a physical \"kill switch"
+"\". If you intend to use this interface, please switch it on before "
+"continuing."
+msgstr ""
+
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of the choices
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:112
+#: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
 msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:113
+#: ../netcfg-common.templates:122
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -273,123 +281,123 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:120
+#: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:143
 msgid "<none>"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:138
+#: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:142
+#: ../netcfg-common.templates:151
 msgid "wireless"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:150
+#: ../netcfg-common.templates:159
 msgid "Token Ring"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:154
+#: ../netcfg-common.templates:163
 msgid "Arcnet"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:158
+#: ../netcfg-common.templates:167
 msgid "Serial-line IP"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:171
 msgid "Parallel-port IP"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:166
+#: ../netcfg-common.templates:175
 msgid "Point-to-Point Protocol"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:170
+#: ../netcfg-common.templates:179
 msgid "IPv6-in-IPv4"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:174
+#: ../netcfg-common.templates:183
 msgid "ISDN Point-to-Point Protocol"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:187
 msgid "Channel-to-channel"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:182
+#: ../netcfg-common.templates:191
 msgid "Real channel-to-channel"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:186
+#: ../netcfg-common.templates:195
 msgid "Hypersocket"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:190
+#: ../netcfg-common.templates:199
 msgid "Inter-user communication vehicle"
 msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:194
+#: ../netcfg-common.templates:203
 msgid "Unknown interface"
 msgstr ""
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:208
 msgid "Configuring network ..."
 msgstr ""
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:204
+#: ../netcfg-common.templates:213
 msgid "Configure the network"
 msgstr ""
 
