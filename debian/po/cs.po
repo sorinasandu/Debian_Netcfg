@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-05-13 10:52-0600\n"
-"PO-Revision-Date: 2005-05-07 21:23+0200\n"
+"PO-Revision-Date: 2005-05-15 12:26+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -289,7 +289,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "${iface} je vypnuto vypínačem"
 
 #. Type: note
 #. Description
@@ -299,6 +299,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"Zdá se, že rozhraní ${iface} bylo vypnuto fyzickým vypínačem někde na "
+"zařízení. Chcete-li toto rozhraní používat, před pokračováním jej prosím "
+"zapněte."
 
 #. Type: select
 #. Choices
