@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-05-13 10:52-0600\n"
-"PO-Revision-Date: 2005-04-18 03:11+0900\n"
+"PO-Revision-Date: 2005-05-22 22:12+0900\n"
 "Last-Translator:  Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <cwryu@debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -288,7 +288,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "${iface}에 kill switch가 걸려 있습니다"
 
 #. Type: note
 #. Description
@@ -298,6 +298,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} 인터페이스가 물리적인 \"kill switch\"로 막혀 있습니다. 이 인터페이스"
+"를 사용하려면 계속하시기 전에 스위치를 움직여서 막힌 부분을 푸십시오."
 
 #. Type: select
 #. Choices
@@ -607,7 +609,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"잘 모르겠으면, 기본 라우팅 없이 진행하면 안 됩니다: 이 문제에 관해선ㄴ 로컬 "
+"잘 모르겠으면, 기본 라우팅 없이 진행하면 안 됩니다: 이 문제에 관해서는 로컬 "
 "네트워크의 관리자에게 문의하십시오."
 
 #. Type: text
