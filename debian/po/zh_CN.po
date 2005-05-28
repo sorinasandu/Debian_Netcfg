@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-05-13 10:52-0600\n"
-"PO-Revision-Date: 2005-05-14 00:20+1200\n"
+"PO-Revision-Date: 2005-05-29 03:05+1200\n"
 "Last-Translator:  Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team:  Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -278,7 +278,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "${iface} 上的 kill switch 开关已开启"
 
 #. Type: note
 #. Description
@@ -288,6 +288,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} 应该已经被“kill switch”开关所禁用。如果您想要使用此接口，请在继续安"
+"装前开启之。"
 
 #. Type: select
 #. Choices
