@@ -5,10 +5,13 @@
  */
 
 #include "netcfg.h"
+
+#ifdef WIRELESS
 #include <debian-installer/log.h>
 #include <iwlib.h>
 #include <sys/types.h>
 #include <assert.h>
+#endif
 
 /* Wireless mode */
 wifimode_t mode = MANAGED;
@@ -16,6 +19,8 @@ wifimode_t mode = MANAGED;
 /* wireless config */
 char* wepkey = NULL;
 char* essid = NULL;
+
+#ifdef WIRELESS
 
 int is_wireless_iface (const char* iface)
 {
@@ -153,7 +158,7 @@ automatic:
   return 0;
 }
 
-void unset_wep_key (char* iface)
+static void unset_wep_key (char* iface)
 {
   wireless_config wconf;
   int ret;
@@ -232,3 +237,28 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
   
   return 0;
 }
+
+#else
+
+int is_wireless_iface (const char *iface)
+{
+  (void) iface;
+  return 0;
+}
+
+int netcfg_wireless_set_essid (struct debconfclient *client, char *iface, char *priority)
+{
+  (void) client;
+  (void) iface;
+  (void) priority;
+  return 0;
+}
+
+int netcfg_wireless_set_wep (struct debconfclient *client, char *iface)
+{
+  (void) client;
+  (void) iface;
+  return 0;
+}
+
+#endif

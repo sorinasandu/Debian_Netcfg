@@ -28,7 +28,9 @@
 #include <sys/types.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
+#ifdef WIRELESS
 #include <iwlib.h>
+#endif
 #include "netcfg.h"
 
 static method_t netcfg_method = DHCP;
@@ -122,6 +124,7 @@ int main(int argc, char *argv[])
 					interface_down(*ifaces);
 					break;
 				}
+#ifdef WIRELESS
 				else
 				{
 					struct wireless_config wc;
@@ -157,6 +160,7 @@ int main(int argc, char *argv[])
 
 					interface_down(*ifaces);
 				}
+#endif
 
 				interface_down(*ifaces);
 

@@ -5,6 +5,10 @@ LDOPTS		= -ldebconfclient -ldebian-installer -liw
 CFLAGS		= -W -Wall -DNDEBUG 
 COMMON_OBJS	= netcfg-common.o wireless.o
 
+ifeq ($(NO_WIRELESS),)
+CFLAGS		+= -DWIRELESS
+endif
+
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -O0 -g3
 else

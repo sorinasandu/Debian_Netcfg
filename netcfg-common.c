@@ -22,7 +22,11 @@
 */
 
 #include "netcfg.h"
+#if defined(WIRELESS)
 #include <iwlib.h>
+#elif defined(__linux__)
+#include <linux/if.h>
+#endif
 #include <errno.h>
 #include <assert.h>
 #include <ctype.h>
@@ -34,6 +38,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
 #include <time.h>
@@ -55,7 +60,9 @@ int have_domain = 0;
 
 /* File descriptors for ioctls and such */
 int skfd = 0;
+#ifdef WIRELESS
 int wfd = 0;
+#endif
 
 /* convert a netmask (255.255.255.0) into the length (24) */
 int inet_ptom (const char *src, int *dst, struct in_addr *addrp)
@@ -107,7 +114,9 @@ const char *inet_mtop (int src, char *dst, socklen_t cnt)
 
 void open_sockets (void)
 {
+#ifdef WIRELESS
   wfd = iw_sockets_open();
+#endif
   skfd = socket (AF_INET, SOCK_DGRAM, 0);
 }
 
