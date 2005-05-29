@@ -17,7 +17,7 @@
 # Steve Langasek <vorlon@debian.org>, 2004
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005
 # Javier Fernández-Sanguino <jfs@debian.org>, 2004-2005
-#
+# Rubén Porras Campo <nahoo@inicia.es>, 2005
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -38,7 +38,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-05-13 10:52-0600\n"
-"PO-Revision-Date: 2005-05-13 18:03+0100\n"
+"PO-Revision-Date: 2005-05-29 12:33+0200\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -184,8 +184,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Si la clave WEP es una palabra de paso, introdúzcala poniendo «s:» como "
-"prefijo (sin las comillas dobles)"
+"Si la clave WEP tiene el formato de una palabra de paso, introdúzcala "
+"poniendo «s:» como prefijo (sin las comillas dobles)"
 
 #. Type: string
 #. Description
@@ -251,7 +251,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"El nombre del sistema es una sóla palabra que identifica el sistema en la "
+"El nombre del sistema es una sola palabra que identifica el sistema en la "
 "red. Si no sabe qué nombre debería tener, consulte al administrador de red. "
 "Puede inventarse este nombre si está configurando una red doméstica."
 
@@ -541,8 +541,8 @@ msgstr "No se encontró un cliente DHCP"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"No se ha encontrado un cliente DHCP. Este paquete requiere pump o dhcp-"
-"client."
+"No se ha encontrado un cliente DHCP. Este paquete requiere «pump» o «dhcp-"
+"client»."
 
 #. Type: error
 #. Description
@@ -563,7 +563,7 @@ msgstr "Reintentar la auto-configuración de la red"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Reintentar la auto-configuración de red indicando un serv. DHCP"
+msgstr "Reintentar la auto-configuración de red indicando un servidor DHCP"
 
 #. Type: select
 #. Choices
@@ -689,7 +689,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Dirección IP malformada"
+msgstr "Dirección IP inválida"
 
 #. Type: error
 #. Description
