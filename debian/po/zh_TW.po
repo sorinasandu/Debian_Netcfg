@@ -279,7 +279,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "在 ${iface} 上啟用了無效開關 (kill switch)"
 
 #. Type: note
 #. Description
@@ -289,6 +289,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} 似乎被一種硬體的\"無效開關\" (kill switch) 給強制關閉了。如果您想要"
+"使用這個網路介面，請在繼續進行之前將它打開。"
 
 #. Type: select
 #. Choices
