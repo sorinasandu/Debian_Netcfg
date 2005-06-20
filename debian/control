@@ -3,13 +3,13 @@ Section: debian-installer
 Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: David Kimdon <dwhedon@debian.org>, Tollef Fog Heen <tfheen@debian.org>, Matt Kraai <kraai@debian.org>, Joey Hess <joeyh@debian.org>, Joshua Kwan <joshk@triplehelix.org>, Thomas Hood <jdthood@yahoo.co.uk>
-Build-Depends: debhelper (>= 4.2.0), dpkg-dev (>= 1.9.0), libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev, po-debconf (>= 0.5.0), libiw-dev (>= 26+27pre26-2)
+Build-Depends: debhelper (>= 4.2.0), dpkg-dev (>= 1.9.0), libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev, po-debconf (>= 0.5.0), libiw-dev (>= 27+28pre8-1)
 Standards-Version: 3.6.1.0
 
 Package: netcfg
 XC-Package-Type: udeb
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64 amd64
-Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | dhcp3-client-udeb | pump-udeb, ethernet-card-detection, libiw27-udeb
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | dhcp3-client-udeb | pump-udeb, ethernet-card-detection
 Provides: configured-network
 XB-Installer-Menu-Item: 18
 Description: Configure the network
@@ -22,7 +22,7 @@ Description: Configure the network
 Package: netcfg-dhcp
 XC-Package-Type: udeb
 Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64 amd64
-Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | dhcp3-client-udeb | pump-udeb, ethernet-card-detection, libiw27-udeb
+Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | dhcp3-client-udeb | pump-udeb, ethernet-card-detection
 Provides: configured-network
 XB-Installer-Menu-Item: 18
 Description: Configure the network via DHCP
@@ -37,7 +37,7 @@ Description: Configure the network via DHCP
 Package: netcfg-static
 XC-Package-Type: udeb
 Architecture: any
-Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection, libiw27-udeb
+Depends: ${shlibs:Depends}, cdebconf-udeb, ethernet-card-detection
 Provides: configured-network
 XB-Installer-Menu-Item: 20
 Description: Configure a static network

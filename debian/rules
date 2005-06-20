@@ -69,6 +69,8 @@ binary-arch: build install
 	dh_fixperms -s
 	dh_installdeb -s
 	dh_shlibdeps -s
+	# Temporary hack until we get support for udeb shlibdeps.
+	perl -i -pe 's/libiw([0-9]+) \(.*\)/libiw$$1-udeb/g' debian/*.substvars
 	dh_gencontrol -s
 	dh_builddeb -s
 
