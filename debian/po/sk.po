@@ -10,9 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-05-13 10:52-0600\n"
-"PO-Revision-Date: 2005-04-29 22:35+0200\n"
-"Last-Translator:  Peter KLFMANiK Mann <Peter.Mann@tuke.sk>\n"
+"POT-Creation-Date: 2005-06-26 13:29-0600\n"
+"PO-Revision-Date: 2005-06-26 10:56+0200\n"
+"Last-Translator: Peter Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team:  Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +116,7 @@ msgid ""
 msgstr ""
 "${iface} je rozhranie pre bezdrôtovú sieť. Zadajte názov (ESSID) bezdrôtovej "
 "siete, ktorú chcete používať cez rozhranie ${iface}. Ak chcete používať "
-"ľubovoľnú dostupnú sieť, nič nevzplňujte."
+"ľubovoľnú dostupnú sieť, nič nevyplňujte."
 
 #. Type: string
 #. Description
@@ -193,7 +193,7 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" je neplatné. ESSID môže obsahovať maximálne 32 znakov, "
-"ktoré môžu bzť ľubovoľné."
+"ktoré môžu byť ľubovoľné."
 
 #. Type: string
 #. Description
@@ -292,7 +292,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "${iface} je vypnuté vypínačom"
 
 #. Type: note
 #. Description
@@ -302,6 +302,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"Zdá sa, že ${iface} bolo vypnuté fyzickým vypínačom, ktorý sa nachádza "
+"niekde na zariadení. Ak chcete používať toto rozhranie, musíte ho najprv "
+"zapnúť."
 
 #. Type: select
 #. Choices
@@ -373,81 +376,69 @@ msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
-msgid "Arcnet"
-msgstr "Arcnet"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:167
+#: ../netcfg-common.templates:168
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#: ../netcfg-common.templates:172
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:176
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:180
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:184
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point Protocol"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:188
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:192
 msgid "Real channel-to-channel"
 msgstr "Skutočný channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:195
-msgid "Hypersocket"
-msgstr "Hypersocket"
-
-#. Type: text
-#. Description
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:201
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:203
+#: ../netcfg-common.templates:205
 msgid "Unknown interface"
 msgstr "Neznáme rozhranie"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:208
+#: ../netcfg-common.templates:210
 msgid "Configuring network ..."
 msgstr "Nastavujem sieť ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:213
+#: ../netcfg-common.templates:215
 msgid "Configure the network"
 msgstr "Nastavenie siete"
 
@@ -640,7 +631,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP adresa je jedinečná pre každý počítač a skladá sa zo štyroch čísiel "
+"IP adresa je jedinečná pre každý počítač a skladá sa zo štyroch čísel "
 "oddelených bodkami. Ak neviete, akú IP adresu máte použiť, kontaktujte "
 "správcu vašej siete."
 
