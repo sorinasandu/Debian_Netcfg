@@ -7,6 +7,9 @@ netcfg (1.12) UNRELEASED; urgency=low
   * Above also Closes: #282650
   * Note that above changes do make netcfg not fill in calculated values if
     the user re-does static network config a second time.
+  * Fix spelling of IBM's Hipersocket. Closes: #285124
+  * A few interface types seem to be pure product names and not translatable.
+    Do not mark these templates as translatable.
 
  -- Joey Hess <joeyh@debian.org>  Sun, 26 Jun 2005 11:46:23 -0400
 
