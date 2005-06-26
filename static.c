@@ -132,7 +132,9 @@ int netcfg_get_netmask(struct debconfclient *client)
       ptr[1] = '\0';
     }
     
-    debconf_set(client, "netcfg/get_gateway", ptr1);
+    debconf_get(client, "netcfg/get_gateway");
+    if (empty_str(client->value))
+      debconf_set(client, "netcfg/get_gateway", ptr1);
 
     return 0;
 }

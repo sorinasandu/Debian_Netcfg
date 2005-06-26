@@ -889,9 +889,12 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
 {
     char *ptr, ptr1[INET_ADDRSTRLEN];
     int ret;
-       
+    
+    debconf_get(client,"netcfg/get_nameservers");
     if (*nameservers)
         ptr = *nameservers;
+    else if (strlen(client->value))
+	ptr = client->value;
     else if (gateway.s_addr)
     {
         inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
