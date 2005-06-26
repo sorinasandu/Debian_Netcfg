@@ -3,7 +3,7 @@ netcfg (1.12) UNRELEASED; urgency=low
   [ Joey Hess ]
   * Apply patch from Christian Weeks and Geert Stappers to respect preseeded
     nameserver values. Closes: #315030
-  * Similar fix to respect preseeded gateway value. Closes: #314618
+  * Similar fix to respect preseeded gateway value. Closes: #314618, #308964
   * Above also Closes: #282650
   * Note that above changes do make netcfg not fill in calculated values if
     the user re-does static network config a second time.
