@@ -22,9 +22,6 @@
 #include <netdb.h>
 
 
-#define DHCP_SECONDS 15
-
-
 static int dhcp_exit_status = 1;
 static pid_t dhcp_pid = -1;
 
@@ -195,7 +192,7 @@ static int kill_dhcp_client(void)
 
 
 /*
- * Poll the started DHCP client for DHCP_SECONDS seconds
+ * Poll the started DHCP client for netcfg/dhcp_timeout seconds (def. 15)
  * and return 0 if a lease is known to have been acquired,
  * 1 otherwise.
  *
@@ -209,16 +206,21 @@ int poll_dhcp_client (struct debconfclient *client)
 {
   int seconds_slept = 0;
   int ret = 1;
+  int dhcp_seconds;
+  
+  debconf_get(client, "netcfg/dhcp_timeout");
+
+  dhcp_seconds = atoi(client->value);
 
   /* show progress bar */
-  debconf_progress_start(client, 0, DHCP_SECONDS, "netcfg/dhcp_progress");
+  debconf_progress_start(client, 0, dhcp_seconds, "netcfg/dhcp_progress");
   debconf_progress_info(client, "netcfg/dhcp_progress_note");
   netcfg_progress_displayed = 1;
 
-  /* wait between 2 and DHCP_SECONDS seconds for a DHCP lease */
+  /* wait between 2 and dhcp_seconds seconds for a DHCP lease */
   while (
       ((dhcp_pid > 0) || (seconds_slept < 2))
-      && (seconds_slept < DHCP_SECONDS)
+      && (seconds_slept < dhcp_seconds)
   ) {
     sleep(1);
     seconds_slept++; /* Not exact but close enough */
