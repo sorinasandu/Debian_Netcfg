@@ -6,7 +6,8 @@ netcfg (1.13) UNRELEASED; urgency=low
     associated in /etc/hosts then associate it with address 127.0.1.1
     rather than 127.0.0.1.  Associating the system hostname with the
     latter had the unwanted effect of making 'localhost.localdomain'
-    the canoncial hostname associated with the system hostname.
+    the canonical hostname associated with the system hostname.
+    That is, 'hostname --fqdn' returned 'localhost.localdomain'.
     (Closes: #316099)
     Programs that access local services at the IP address obtained by
     resolving the system hostname SHOULD NOT DO THIS, but those that
