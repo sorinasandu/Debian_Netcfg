@@ -1,3 +1,16 @@
+netcfg (1.13) unstable; urgency=low
+
+  [ Thomas Hood ]
+  * If there is no permanent IP address with which the UNIX hostname
+    (i.e., that which is returned by the "hostname" command) can be
+    associated in /etc/hosts then associate it with address 127.0.1.1
+    rather than 127.0.0.1.  Associating the UNIX hostname with the
+    latter had the unwanted effect of making 'localhost.localdomain'
+    the canoncial hostname associated with the UNIX hostname.
+    (Closes: #316099)
+
+ -- Thomas Hood <jdthood@yahoo.co.uk>  Sun, 10 Jul 2005 11:28:28 +0200
+
 netcfg (1.12) unstable; urgency=low
 
   [ Joey Hess ]
