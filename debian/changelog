@@ -1,13 +1,17 @@
 netcfg (1.13) UNRELEASED; urgency=low
 
   [ Thomas Hood ]
-  * If there is no permanent IP address with which the UNIX hostname
+  * If there is no permanent IP address with which the system hostname
     (i.e., that which is returned by the "hostname" command) can be
     associated in /etc/hosts then associate it with address 127.0.1.1
-    rather than 127.0.0.1.  Associating the UNIX hostname with the
+    rather than 127.0.0.1.  Associating the system hostname with the
     latter had the unwanted effect of making 'localhost.localdomain'
-    the canoncial hostname associated with the UNIX hostname.
+    the canoncial hostname associated with the system hostname.
     (Closes: #316099)
+    Programs that access local services at the IP address obtained by
+    resolving the system hostname SHOULD NOT DO THIS, but those that
+    do so will not be disappointed: most services that listen locally
+    listen on all 127/8 addresses, not just on 127.0.0.1.
 
  -- Thomas Hood <jdthood@yahoo.co.uk>  Sun, 10 Jul 2005 11:28:28 +0200
 
