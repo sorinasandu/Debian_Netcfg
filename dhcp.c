@@ -233,7 +233,7 @@ int poll_dhcp_client (struct debconfclient *client)
   {
     ret = 0;
 
-    debconf_progress_set(client, DHCP_SECONDS);
+    debconf_progress_set(client, dhcp_seconds);
     debconf_progress_info(client, "netcfg/dhcp_success_note");
     sleep(2);
   }
