@@ -16,14 +16,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eo\n"
 "POT-Creation-Date: 2005-06-26 13:29-0600\n"
-"PO-Revision-Date: 2005-03-15 17:11+0100\n"
+"PO-Revision-Date: 2005-07-18 21:00+0200\n"
 "Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.10\n"
 
 #. Type: boolean
 #. Description
@@ -81,6 +80,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"La nomserviloj estas uzata por trovi en la reto aliaj sistemnomoj. Bonvolu "
+"tajpi ĝiajn IP adresojn (ne la sistemnomo) ; vi povas enskirbi ĝis tri "
+"interpacajn adresojn. Ne uzas la komaj literoj. La unua servilo estos"
 
 #. Type: select
 #. Description
@@ -96,6 +98,9 @@ msgid ""
 "primary network interface while installing Debian. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
+"Via sistemo posedas plurajn retajn aparataradaptilojn. Elektu iun, kiun vi "
+"volas ĉefe uzi dum la instalado. La instalilo aŭtomate eblelektas la unuan "
+"konektan retan aparataradaptilon."
 
 #. Type: string
 #. Description
@@ -111,6 +116,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} estas sendrata reta aparataradaptilo. Bonvolu tajpi la sendratan "
+"retan nomon (ESSID), kiun vi volu ${iface} uzas. Se vi volus uzi alian "
+"reton,  malplenu la registrokampon."
 
 #. Type: string
 #. Description
@@ -125,6 +133,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
+"Se eble, bonvolu tajpi la WEP sekuran ĉifroŝlosilon por sendrata aparato "
+"${iface}. Estas du manieroj de fari tio :"
 
 #. Type: string
 #. Description
@@ -133,6 +143,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
+"Se via WEP ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', nn:nn:nn:nn:nn:"
+"nn:nn:nn', aŭ 'nnnnnnnn', kiu n estas nombro. Tajpu ĝin en la registrokampo "
+"nur kia ĝi estas."
 
 #. Type: string
 #. Description
@@ -141,6 +154,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Se via WEP ĉifroŝlosilo estas en pasofraza strukturo, tajpu ĝin kun "
+"autaŭmeta 's:' (sen la citiloj)."
 
 #. Type: string
 #. Description
@@ -149,12 +164,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Kompreneble, se WEP ne estas por via sendrata reto, malplenu la "
+"registrokampon."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Malvalida WEP ĉifroŝlosilo"
 
 #. Type: error
 #. Description
@@ -163,6 +180,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"La WEP ĉifroŝlosilo '${wepkey}' estas malvalida. Bonvolu atente konsulti la "
+"sekvantan ekranon pri la maniero de registri ĉifroŝlosila WEP, kaj reprovu."
 
 #. Type: error
 #. Description
@@ -201,6 +220,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
+"La gastnomo estas unuopa vorto kiu distingas vian sistemon en la reto. Se vi "
+"malkonas vian gastnomon, konsultu vian retan administriston. Se vi agordas "
+"vian hejman reton, vi uzeblas iajn nomojn."
 
 #. Type: error
 #. Description
@@ -398,13 +420,13 @@ msgstr "Real channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:201
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Inter uzantoj komunika veturilo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Unknown interface"
-msgstr ""
+msgstr "Nekonata aparatadaptilo"
 
 #. Type: text
 #. Description
