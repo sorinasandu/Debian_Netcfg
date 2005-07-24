@@ -485,7 +485,7 @@ msgstr "Tio daŭrus."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Sukcesis reta akomodado"
+msgstr "La reta akomodado sukcesis"
 
 #. Type: error
 #. Description
@@ -498,7 +498,7 @@ msgstr "Ne travas DHCP klienton"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Ne DHCP kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' or 'dhcp'."
+"Ne DHCP kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ 'dhcp'."
 
 #. Type: error
 #. Description
@@ -537,13 +537,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr ""
+msgstr "Ne akomodu tuj la retan"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr ""
+msgstr "Reta akomoda metodo :"
 
 #. Type: select
 #. Description
@@ -555,12 +555,16 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
+"Vi tuj reprovus la DHCP aŭtomatakomodadon (ĝi sukceseblos se via DHCP "
+"servilo malfrue respondas) aŭ por memakomodi la retan. Kelkaj DHCP servilo "
+"bezonas DHCP gastnomon nomitan de la kliento. Vi provizeblos ĝin antaŭe "
+"reprovi la aŭtomatakomodadon."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr ""
+msgstr "La reta automatakomodado malsukcesis"
 
 #. Type: note
 #. Description
@@ -569,12 +573,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Via reto neuzus la DHCP protokolon. Alternative, la DHCP servilo malrapidus "
+"aŭ iom aparatoj malfunkcius."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Daŭrigu sen implicita kurso ?"
 
 #. Type: boolean
 #. Description
@@ -586,6 +592,10 @@ msgid ""
 "have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"La reto aŭtomatakomodado sukcesis. Tamen, ne implicita itinero estis "
+"deklarita : la sistemo ne scias kiel komuniki kun aliaj retaj aparatoj. Tio "
+"maluzigas la instalaĵon, krom se vi uzas la aficialan unuan Debianan "
+"lumdiskon 'netinst' aŭ retan disponeblajn pakaĵojn."
 
 #. Type: boolean
 #. Description
