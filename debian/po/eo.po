@@ -289,7 +289,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Vi bezonus ŝargi specifan aparataradaptilon por via reta karto, se vi havas "
-"unu. Por tio, retroiru al la reta aparata detekta paŝo."
+"ĝin. Por tio, retroiru al la reta aparata detekta paŝo."
 
 #. Type: note
 #. Description
@@ -605,7 +605,7 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Dube, vi ne daŭrendu sen implicita kurso : kontaktu vian lokan retan "
-"administriston pri ci-tiu problemo."
+"administriston pri ĉi-tiu problemo."
 
 #. Type: text
 #. Description
@@ -634,7 +634,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"La IP adreso estas unika por via kumputilo ; ĝi konsistas el kvar nombroj "
+"La IP adreso estas unika por via kumputilo ; ĝi konsistas de kvar nombroj "
 "apartigas per punktoj. Se vi ne scius kion tajpi, konsultu vian retan "
 "administriston."
 
@@ -708,37 +708,43 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"La kluzo estas IP adreso (kvar nombroj apartigas per punktoj) kiu indikas la "
+"enkursigilan sistemon ; ĝia sistemo ankaŭ nomiĝas la implicita kurso. La "
+"tuta elira rettrafiko (ekzemple, al Internet) trairas ĝin. En kelkaj "
+"maloftaj okazo, vi malbezonas enkursigilon. Tiuokaze malplenus ĉi "
+"registrokampon. Se vi ne scius kion tajpi, konsultu vian retan "
+"administriston."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Malalirebla kluzo"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr ""
+msgstr "La indika kluzo estas malalirebla."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr ""
+msgstr "Vi malĝuste tajpus vian IP adreson, retmaskon kaj/aŭ kluzon."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr ""
+msgstr "Ĉu sekvantaj informoj estas korektaj ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Nuntempe akomada reta parametroj :"
 
 #. Type: boolean
 #. Description
@@ -751,10 +757,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
+" interface     = ${interface}\n"
+" ipaddress     = ${ipaddress}\n"
+" netmask       = ${netmask}\n"
+" gateway       = ${gateway}\n"
+" pointopoint   = ${pointopoint}\n"
+" nameservers   = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr "Memakomodu la retan"
