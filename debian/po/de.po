@@ -3,30 +3,32 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
+# translation of de.neu.po to 
+# translation of de.po to 
 # German messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+#
+# This file is maintained by Dennis Stampfer <seppy@debian.org>
 # Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
 # Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
 # Bastian Blank <waldi@debian.org>, 2003.
-# Jan Luebbe <jluebbe@lasnet.de>, 2003
-# Thorsten Sauter <tsauter@gmx.net>, 2003
-#
-# This file is maintained by Dennis Stampfer <seppy@debian.org>
+# Jan Luebbe <jluebbe@lasnet.de>, 2003.
+# Thorsten Sauter <tsauter@gmx.net>, 2003.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: de.neu\n"
 "POT-Creation-Date: 2005-06-26 13:29-0600\n"
-"PO-Revision-Date: 2005-05-25 09:57GMT\n"
-"Last-Translator: Dennis Stampfer <seppy@debian.org>\n"
-"Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
+"PO-Revision-Date: 2005-08-03 22:00+0200\n"
+"Last-Translator: \n"
+"Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -87,7 +89,7 @@ msgid ""
 "this field blank."
 msgstr ""
 "Die Nameserver werden benutzt, um Rechnernamen im Internet aufzulösen. Bitte "
-"geben Sie die IP Adresse (nicht die Rechnernamen) von bis zu drei "
+"geben Sie die IP-Adressen (nicht die Rechnernamen) von bis zu drei "
 "Nameservern getrennt durch Leerzeichen an. Benutzen Sie keine Kommas. Der "
 "erste Server in der Liste wird als erstes abgefragt. Wenn Sie keine "
 "Nameserver benutzen wollen, lassen Sie diese Feld bitte einfach leer."
@@ -96,7 +98,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Primäres Netzwerk-Interface:"
+msgstr "Primäre Netzwerk-Schnittstelle:"
 
 #. Type: select
 #. Description
@@ -151,9 +153,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Wenn Ihr WEP-Schlüssel im Format »nnnn-nnnn-nn«, »nn:nn:nn:nn:nn:nn:nn:nn « "
-"oder »nnnnnnnn«, wobei n eine Ziffer ist, geben Sie ihn - einfach wie er ist "
-"- in dieses Feld ein."
+"Wenn Ihr WEP-Schlüssel das Format »nnnn-nnnn-nn«, »nn:nn:nn:nn:nn:nn:nn:nn « "
+"oder »nnnnnnnn« hat, wobei n eine Ziffer ist, geben Sie ihn einfach - wie er "
+"ist - in dieses Feld ein."
 
 #. Type: string
 #. Description
@@ -163,7 +165,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein "
-"»s:« (ohne Anführungszeichen) voran."
+"»s:« (ohne die Anführungszeichen) voran."
 
 #. Type: string
 #. Description
@@ -272,13 +274,14 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Es ist ein Fehler aufgetreten und der Netzwerk-Konfigurationsprozess wurde "
-"abgebrochen. Sie können es vom Installations-Hauptmenü noch einmal versuchen."
+"abgebrochen. Sie können es vom Installations-Hauptmenü aus noch einmal "
+"versuchen."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Es wurde kein Netzwerk-Interface gefunden"
+msgstr "Es wurde keine Netzwerk-Schnittstelle gefunden."
 
 #. Type: error
 #. Description
@@ -287,8 +290,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Es wurde kein Netzwerkinterface wurde gefunden. Der Installer konnte keine "
-"Netzwerkkarte finden."
+"Es wurde keine Netzwerk-Schnittstelle gefunden. Der Installer konnte keine "
+"Netzwerkkarte erkennen."
 
 #. Type: error
 #. Description
@@ -317,8 +320,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} scheint abgeschalten zu sein. Beabsichtigen Sie dieses Interface zu "
-"verwenden, dann schalten Sie es bitte ein, bevor sie fortfahren."
+"${iface} scheint abgeschaltet worden zu sein. Beabsichtigen Sie diese "
+"Schnittstelle zu verwenden, dann schalten Sie es bitte ein, bevor sie "
+"fortfahren."
 
 #. Type: select
 #. Choices
@@ -440,7 +444,7 @@ msgstr "Inter-user communication vehicle"
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Unknown interface"
-msgstr "Unbekanntes Interface"
+msgstr "Unbekannte Schnittstelle"
 
 #. Type: text
 #. Description
@@ -460,7 +464,7 @@ msgstr "Netzwerk einrichten"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP Rechnername:"
+msgstr "DHCP-Rechnername:"
 
 #. Type: string
 #. Description
@@ -469,7 +473,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"In einigen Situationen muss man einen DHCP Rechnername angeben. Wenn Sie ein "
+"In einigen Situationen muss man einen DHCP-Rechnername angeben. Wenn Sie ein "
 "Kabelmodem besitzen, muss hier oft eine Benutzernummer angegeben werden."
 
 #. Type: string
@@ -528,7 +532,9 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Netzwerk-Autokonfiguration nochmals mit einem DHCP-Rechnernamen"
+msgstr ""
+"Netzwerk-Autokonfiguration nochmals versuchen mit Eingabe eines DHCP-"
+"Rechnernamens"
 
 #. Type: select
 #. Choices
@@ -565,7 +571,7 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Hier können Sie wählen, die DHCP-Netzwerk-Autokonfiguration nochmals zu "
-"versuchen (was funktionieren könnte wenn Ihr DHCP-Server sehr langsam "
+"versuchen (was funktionieren könnte, wenn Ihr DHCP-Server sehr langsam "
 "reagiert) oder das Netzwerk manuell zu konfigurieren. Manche DHCP-Server "
 "erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher "
 "können Sie auch wählen, die DHCP-Netzwerk-Autokonfiguration nochmals mit "
@@ -607,8 +613,8 @@ msgstr ""
 "Die Netzwerk-Autokonfiguration war erfolgreich. Es wurde allerdings keine "
 "Default-Route gesetzt: Das System wird nicht mit Rechnern im Internet "
 "kommunizieren können. Dies könnte ein Fortsetzen der Installation unmöglich "
-"machen, wenn Sie nicht die erste offizielle Debian-CD-ROM, eine »Netinst«-CD-"
-"ROM oder Pakete im lokalen Netzwerk haben."
+"machen, falls Sie nicht die erste offizielle Debian-CD-ROM, eine »Netinst«-"
+"CD-ROM oder Pakete im lokalen Netzwerk haben."
 
 #. Type: boolean
 #. Description
@@ -674,7 +680,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Punkt-zu-Punkt Adresse:"
+msgstr "Punkt-zu-Punkt-Adresse:"
 
 #. Type: string
 #. Description
