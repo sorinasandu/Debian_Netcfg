@@ -127,6 +127,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
   if ((dhcp_pid = fork()) == 0) /* child */
   {
+    /* disassociate from debconf */
+    fclose(client->out);
+
     /* get dhcp lease */
     switch (dhcp_client)
     {
