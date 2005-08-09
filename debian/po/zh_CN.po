@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-06-26 13:29-0600\n"
+"POT-Creation-Date: 2005-08-08 18:28-0600\n"
 "PO-Revision-Date: 2005-05-29 03:05+1200\n"
 "Last-Translator:  Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "Language-Team:  Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -87,9 +87,10 @@ msgstr "主网络接口："
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
+#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
-"primary network interface while installing Debian. If possible, the first "
+"primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "您的系统有多个网络接口。请选择其中之一作为主网络接口以安装 Debian。如果可能的"
@@ -562,11 +563,12 @@ msgstr "无默认路由，继续安装吗？"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
+#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
 "网络自动配置成功，但未设置默认路由，系统将无法连接 Internet 上的主机。除非您"

@@ -16,7 +16,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"POT-Creation-Date: 2005-06-26 13:29-0600\n"
+"POT-Creation-Date: 2005-08-08 18:28-0600\n"
 "PO-Revision-Date: 2005-05-23 12:17+0100\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -98,9 +98,10 @@ msgstr "Primært nettverksgrensesnitt:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
+#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
-"primary network interface while installing Debian. If possible, the first "
+"primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Systemet ditt har flere nettverksgrensesnitt. Velg det som skal brukes som "
@@ -590,11 +591,12 @@ msgstr "Vil du fortsett uten en standardrute (eng: route)?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
+#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
 "This will make it impossible to continue with the installation unless you "
-"have the first official Debian CD-ROM, a 'Netinst' CD-ROM, or packages "
+"have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
 "Har utført automatisk oppsett av nettverket. Likevel ble det ikke satt en "
