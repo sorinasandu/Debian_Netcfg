@@ -31,7 +31,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "नेटवर्क को डीएचसीपी के साथ स्वचालित कॉन्फ़िगर करें?"
+msgstr "       ?"
 
 #. Type: boolean
 #. Description
@@ -48,7 +48,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "डोमेन नामः"
+msgstr " "
 
 #. Type: string
 #. Description
@@ -64,7 +64,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "नाम सर्वर पताः"
+msgstr "  "
 
 #. Type: string
 #. Description
@@ -81,7 +81,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "प्रायमरी नेटवर्क इंटरफेसः"
+msgstr "  "
 
 #. Type: select
 #. Description
@@ -96,7 +96,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "वायरलेस ESSID ${iface} के लिए:"
+msgstr " ESSID ${iface}  :"
 
 #. Type: string
 #. Description
@@ -111,7 +111,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "वायरलेस उपकरण ${iface} के लिए डबल्यूईपी कुंजी:"
+msgstr "  ${iface}    :"
 
 #. Type: string
 #. Description
@@ -140,16 +140,17 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr ""
+msgstr "          ,     ."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "अवैध डबल्यूईपी कुंजी"
+msgstr "  "
 
 #. Type: error
 #. Description
@@ -163,7 +164,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "अवैध ESSID"
+msgstr " ESSID"
 
 #. Type: error
 #. Description
@@ -177,13 +178,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "होस्टनामः"
+msgstr ""
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "इस तंत्र के लिए कृपया होस्टनाम भरें."
+msgstr "      ."
 
 #. Type: string
 #. Description
@@ -199,13 +200,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "अवैध होस्ट-नाम"
+msgstr " -"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "नाम \"${hostname}\" अवैध है."
+msgstr " \"${hostname}\"  ."
 
 #. Type: error
 #. Description
@@ -220,7 +221,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Error"
-msgstr "त्रुटि"
+msgstr ""
 
 #. Type: error
 #. Description
@@ -234,7 +235,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "कोई नेटवर्क इंटरफेस नहीं मिला"
+msgstr "    "
 
 #. Type: error
 #. Description
@@ -242,8 +243,7 @@ msgstr "कोई नेटवर्क इंटरफेस नहीं म�
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr ""
-"कोई नेटवर्क इंटरफेस नहीं मिला. संस्थापना तंत्र नेटवर्क उपकरण का पता लगाने में अक्षम रहा."
+msgstr "    .          ."
 
 #. Type: error
 #. Description
@@ -276,13 +276,13 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "इन्फ्रास्ट्रक्चर (मैनेज्ड) नेटवर्क, एड-हॉक नेटवर्क (पीअर टू पीअर)"
+msgstr " () , -  (  )"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "बेतार नेटवर्क प्रकारः"
+msgstr "  "
 
 #. Type: select
 #. Description
@@ -297,117 +297,117 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
-msgstr "बेतार नेटवर्क कॉन्फ़िगरेशन"
+msgstr "  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "बेतार एक्सेस पाइंट्स ढूंढा जा रहा है..."
+msgstr "      ..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:143
 msgid "<none>"
-msgstr "<कुछ नहीं>"
+msgstr "< >"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr "बेतार इथरनेट (802.11x)"
+msgstr "  (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:151
 msgid "wireless"
-msgstr "बेतार"
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "इथरनेट या तेज इथरनेट"
+msgstr "   "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:159
 msgid "Token Ring"
-msgstr "टोकन रिंग"
+msgstr " "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:168
 msgid "Serial-line IP"
-msgstr "सीरियल-लाइन आईपी"
+msgstr "- "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Parallel-port IP"
-msgstr "पैरेलल-पोर्ट आईपी"
+msgstr "- "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Point-to-Point Protocol"
-msgstr "पाइंट-टू-पाइंट प्रोटोकॉल"
+msgstr "-- "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "IPv6-in-IPv4"
-msgstr "आईपीवी6-में-आईपीवी4"
+msgstr "6--4"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:184
 msgid "ISDN Point-to-Point Protocol"
-msgstr "आईएसडीएन पाइंट-टू-पाइंट प्रोटोकॉल"
+msgstr " -- "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Channel-to-channel"
-msgstr "चैनल-टू-चैनल"
+msgstr "--"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Real channel-to-channel"
-msgstr "रीयल चैनल-टू-चैनल"
+msgstr " --"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:201
 msgid "Inter-user communication vehicle"
-msgstr "अंतर्-उपोक्ता संचार वाहन"
+msgstr "-  "
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Unknown interface"
-msgstr "अज्ञात इंटरफेस"
+msgstr " "
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:210
 msgid "Configuring network ..."
-msgstr "नेटवर्क कॉन्फ़िगर किया जा रहा है..."
+msgstr "     ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:215
 msgid "Configure the network"
-msgstr "नेटवर्क कॉन्फ़िगर करें"
+msgstr "  "
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "डीएचसीपी होस्ट-नामः"
+msgstr " -"
 
 #. Type: string
 #. Description
@@ -421,43 +421,43 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "आमतौर पर प्रायः अन्य उपयोगकर्ताओं द्वारा इसे रिक्त छोड़ देना चाहिए."
+msgstr "          ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "नेटवर्क को डीएचसीपी के साथ कॉन्फ़िगर करें"
+msgstr "      "
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "यह कुछ समय ले सकता है."
+msgstr "     ."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "नेटवर्क आटोकॉन्फ़िगरेशन सफल रहा"
+msgstr "   "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "कोई डीएचसीपी क्लाएंट नहीं मिला"
+msgstr "    "
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "कोई डीएचसीपी क्लाएंट नहीं मिला. इस पैकेज हेतु पम्प या डीएचसीपी-क्लाएंट  आवश्यक है."
+msgstr "    .      -   ."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "डीएचसीपी कॉन्फ़िगरेशन प्रक्रिया छोड़ दिया जाएगा."
+msgstr "     ."
 
 #. Type: select
 #. Choices
@@ -466,19 +466,19 @@ msgstr "डीएचसीपी कॉन्फ़िगरेशन प्र�
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "नेटवर्क आटोकॉन्फ़िगरेशन हेतु फिर कोशिश करें"
+msgstr "     "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "डीएचसीपी होस्टनाम के साथ नेटवर्क आटोकॉन्फ़िगरेशन हेतु फिर कोशिश करें"
+msgstr "         "
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "नेटवर्क हस्तचालित कॉन्फ़िगर करें"
+msgstr "   "
 
 #. Type: select
 #. Choices
@@ -490,13 +490,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "इस समय नेटवर्क कॉन्फ़िगर नहीं करें"
+msgstr "     "
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "नेटवर्क कान्फ़िगरेशन विधिः"
+msgstr "  "
 
 #. Type: select
 #. Description
@@ -513,7 +513,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "नेटवर्क कान्फ़िगरेशन असफल"
+msgstr "  "
 
 #. Type: note
 #. Description
@@ -527,7 +527,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "डिफ़ॉल्ट रूट के बगैर जारी रखें?"
+msgstr "     ?"
 
 #. Type: boolean
 #. Description
@@ -552,20 +552,20 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "बेतार नेटवर्क रीकॉन्फ़िगर करें"
+msgstr "   "
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:68
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "डायनॉमिक एड्रेसिंग (डीएचसीपी) के उपयोग से नेटवर्क कॉन्फ़िगर करें"
+msgstr "  ()      "
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "आईपी पता:"
+msgstr " :"
 
 #. Type: string
 #. Description
@@ -580,7 +580,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "गलत आईपी पता"
+msgstr "  "
 
 #. Type: error
 #. Description
@@ -588,15 +588,13 @@ msgstr "गलत आईपी पता"
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr ""
-"आईपी पता जो आपने दिया है वह गलत है. यह इस रूप में होना चाहिए- x.x.x.x  जहाँ 'x' को "
-"255 से बड़ा होना नहीं चाहिए. कृपया फिर से कोशिश करें."
+msgstr "        .      - x.x.x.x   'x'  255     .     ."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "पाइंट-टू-पाइंट पताः"
+msgstr "-- "
 
 #. Type: string
 #. Description
@@ -612,7 +610,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "नेटमास्कः"
+msgstr ""
 
 #. Type: string
 #. Description
@@ -627,7 +625,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "गेटवेः"
+msgstr ""
 
 #. Type: string
 #. Description
@@ -645,32 +643,32 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "अ-पहुँच-योग्य गेटवे"
+msgstr "-- "
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "गेटवे पता जो आपने भरा है वह अ-पहुँच-योग्य है."
+msgstr "       -- ."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "आपने शायद अपने आईपी पता, नेटमास्क और / या गेटवे को भरते समय कुछ त्रुटियाँ की है."
+msgstr "    ,   /         ."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "क्या यह जानकारी सही है?"
+msgstr "    ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "वर्तमान में कॉन्फ़िगर्ड नेटवर्क पैरामीटर्सः"
+msgstr "    "
 
 #. Type: boolean
 #. Description
@@ -683,16 +681,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" इंटरफेस     = ${interface}\n"
-" आईपी-पता     = ${ipaddress}\n"
-" नेटमॉस्क       = ${netmask}\n"
-" गेटवे       = ${gateway}\n"
-" पाइंट-टू-पाइंट   = ${pointopoint}\n"
-" नेमसर्वर्स   = ${nameservers}"
+"      = ${interface}\n"
+" -     = ${ipaddress}\n"
+"        = ${netmask}\n"
+"        = ${gateway}\n"
+" --   = ${pointopoint}\n"
+"    = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "स्थैतिक एड्रेसिंग के उपयोग से नेटवर्क कॉन्फ़िगर करें"
+msgstr "       "
