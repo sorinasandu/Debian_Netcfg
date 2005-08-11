@@ -56,8 +56,9 @@ msgstr " (Domain Name)  .com.net.edu  .org "
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid "Name server addresses:"
-msgstr ""
+msgstr " Web "
 
 #. Type: string
 #. Description
@@ -170,14 +171,16 @@ msgstr " ESSID${essid} ESSID  32 "
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Hostname:"
-msgstr ""
+msgstr "DHCP "
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
+#, fuzzy
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr " VM peer "
 
 #. Type: string
 #. Description
@@ -192,8 +195,9 @@ msgstr " (HostName) "
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
+#, fuzzy
 msgid "Invalid hostname"
-msgstr ""
+msgstr "DHCP "
 
 #. Type: error
 #. Description
@@ -213,8 +217,9 @@ msgstr "  0-9 a-z   2  63 "
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "${error}"
 
 #. Type: error
 #. Description
@@ -289,8 +294,9 @@ msgstr " Managed  Ad-hoc  Managed Ad-hoc"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:129
+#, fuzzy
 msgid "Wireless network configuration"
-msgstr ""
+msgstr " quik "
 
 #. Type: text
 #. Description
@@ -393,8 +399,9 @@ msgstr " ..."
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:215
+#, fuzzy
 msgid "Configure the network"
-msgstr ""
+msgstr "..."
 
 #. Type: string
 #. Description
@@ -431,8 +438,9 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
+#, fuzzy
 msgid "Network autoconfiguration has succeeded"
-msgstr ""
+msgstr " DHCP "
 
 #. Type: error
 #. Description
@@ -458,8 +466,9 @@ msgstr "DHCP "
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
+#, fuzzy
 msgid "Retry network autoconfiguration"
-msgstr ""
+msgstr " DHCP "
 
 #. Type: select
 #. Choices
@@ -470,8 +479,9 @@ msgstr " DHCP "
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
+#, fuzzy
 msgid "Configure network manually"
-msgstr ""
+msgstr " ..."
 
 #. Type: select
 #. Choices
@@ -482,14 +492,16 @@ msgstr "${wifireconf}"
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
+#, fuzzy
 msgid "Do not configure the network at this time"
-msgstr ""
+msgstr " DHCP "
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
+#, fuzzy
 msgid "Network configuration method:"
-msgstr ""
+msgstr "LVM "
 
 #. Type: select
 #. Description
@@ -505,8 +517,9 @@ msgstr " DHCP  DHCP  DHCP  DHCP  DHCP "
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
+#, fuzzy
 msgid "Network autoconfiguration failed"
-msgstr ""
+msgstr "LVM "
 
 #. Type: note
 #. Description
@@ -587,8 +600,9 @@ msgstr " IP  x.x.x.x x  255"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
+#, fuzzy
 msgid "Point-to-point address:"
-msgstr ""
+msgstr " (PPP)"
 
 #. Type: string
 #. Description
@@ -686,5 +700,6 @@ msgstr ""
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
+#, fuzzy
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr " (DHCP) "
