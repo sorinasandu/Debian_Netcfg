@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk\n"
 "POT-Creation-Date: 2005-08-08 18:28-0600\n"
-"PO-Revision-Date: 2005-07-26 20:54+0200\n"
+"PO-Revision-Date: 2005-07-20 20:56+0200\n"
 "Last-Translator: Georgi Stanojevski <gogo@stavre>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "     DHCP?"
+msgstr "Конфигурирај ја мрежата автоматски со DHCP?"
 
 #. Type: boolean
 #. Description
@@ -40,13 +40,17 @@ msgid ""
 "working configuration from a DHCP server on your network, you will be given "
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
-msgstr "      DHCP      .     DHCP       DHCP    ,           ."
+msgstr ""
+"Мрежата може да биде конфигурирана со DHCP или рачно внесувајќи ги сите "
+"информации. Ако одбереш да користиш DHCP и инсталерот не може да најде DHCP "
+"сервер во твојата мрежа, ќе ти биде дадена шанса да си ја конфигурираш "
+"мрежата рачно."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr " :"
+msgstr "Домејн име:"
 
 #. Type: string
 #. Description
@@ -56,13 +60,17 @@ msgid ""
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
-msgstr "             .       .com, .net, .edu  .org.    ,     ,           ."
+msgstr ""
+"Домејн името е дел од твојата интернет адреса десно од твојето име на "
+"домаќинот. Најчесто е нешто што завршува на .com, .net, .edu или .org. Ако "
+"конфигураш домашна мрежа, можеш да измислиш нешто тука, но биди сигурен дека "
+"домејн името на сите компјутер е исто."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "     (Name server):"
+msgstr "Адреси на сервер за имиња (Name server):"
 
 #. Type: string
 #. Description
@@ -74,13 +82,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"   a         . (hostname).  IP ( )   3  ,    .   .       .              ."
+"Серверите за мрежни имињa се користат за да ги наоѓаат хостенејмовите на "
+"мрежата. (hostname). Внеси IP адреси(не имиња) на најмногу 3 вакви сервери, "
+"одделени со празни места. Не користи запирки. Првиот сервер во листата ќе "
+"биде прашуван. Ако не сакаш да користиш сервери за мрежни имиња остави го "
+"ова поле празно."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "  :"
+msgstr "Главен мрежен адаптер:"
 
 #. Type: select
 #. Description
@@ -90,13 +102,16 @@ msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
-msgstr "     .              .   ,       ."
+msgstr ""
+"Твојот систем има повеќе мрежни адаптери. Одбери еден кој ќе се користи како "
+"главен мрежен адаптер при инсталирање на Дебиан. Ако е можно, првиот најден "
+"приклучен мрежен адаптер беше одбран."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Wireless ESSID  ${iface}:"
+msgstr "Wireless ESSID за ${iface}:"
 
 #. Type: string
 #. Description
@@ -105,13 +120,16 @@ msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
-msgstr "${iface}      .      (ESSID)       ${iface}   .            ."
+msgstr ""
+"${iface} е мрежен адаптер за безжична мрежа. Те молам внеси го името (ESSID) "
+"на безжичната мрежа со која сакаш ${iface} да се користи. Ако сакаш да "
+"користиш било која достапна мрежа остави го полево празно."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP     ${iface}:"
+msgstr "WEP клучот за безжичниот уред ${iface}:"
 
 #. Type: string
 #. Description
@@ -119,7 +137,9 @@ msgstr "WEP     ${iface}:"
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
-msgstr "  ,   WEP      ${iface}.       :"
+msgstr ""
+"Ако е потребно, внеси го WEP сигурносниот клуч за безжичниот уред ${iface}. "
+"Има два начина да го сториш ова:"
 
 #. Type: string
 #. Description
@@ -127,7 +147,9 @@ msgstr "  ,   WEP      ${iface}.       :"
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
-msgstr "  WEP     --  :::::::  ,    ,         ."
+msgstr ""
+"Ако твојот WEP клуч е во формат „бббб-бббб-бб“ или „бб:бб:бб:бб:бб:бб:бб:бб“ "
+"или „бббббббб“, каде б е цифра, едноставно внеси го во ова поле како што е."
 
 #. Type: string
 #. Description
@@ -135,7 +157,8 @@ msgstr "  WEP     --  :::::::  ,    ,         ."
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "  WEP    ,    s: ( )."
+msgstr ""
+"Ако твојот WEP клуч е како реченица, пред него внеси „s:“ (без наводниците)."
 
 #. Type: string
 #. Description
@@ -143,13 +166,15 @@ msgstr "  WEP    ,    s: ( )."
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "    WEP     ,     ."
+msgstr ""
+"Се разбира ако нема WEP клучеви за твојата безжична мрежа, остави го ова "
+"поле празно."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr " WEP "
+msgstr "Неправиле WEP клуч"
 
 #. Type: error
 #. Description
@@ -157,13 +182,16 @@ msgstr " WEP "
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
-msgstr "WEP  ${wepkey}  .               WEP     ."
+msgstr ""
+"WEP клучот „${wepkey}“ е неправилен. Те молам прочитај ги внимателно "
+"инструкциите на следниот екран за како да се внесе WEP клучот правилно и "
+"пробај повторно."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr " ESSID"
+msgstr "Неправилен ESSID"
 
 #. Type: error
 #. Description
@@ -171,19 +199,21 @@ msgstr " ESSID"
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
-msgstr " (ESSID) ${essid}  .      32  ,        ."
+msgstr ""
+"Името (ESSID) „${essid}“ е неправилно. Имињата може да бидат до 32 карактери "
+"долги, но можат да се внесуваат било какви карактери."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "  :"
+msgstr "Име на компјутерот:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "       ."
+msgstr "Внеси го името на домаќинот за овој систем."
 
 #. Type: string
 #. Description
@@ -193,19 +223,23 @@ msgid ""
 "you don't know what your hostname should be, consult your network "
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
-msgstr "()          .          ,     .          ."
+msgstr ""
+"Хостнејм(име) е еден збор кој го идентификува твојот систем на мрежата. Ако "
+"не знаеш кое ќе биде твоето име на домаќинот, консултирај се со мрежниот "
+"администратор. Ако поставуваш твоја домашна мрежа можеш да измислиш нешто "
+"тука."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "   "
+msgstr "Неправилено име на домаќин"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr " ${hostname} ."
+msgstr "Името „${hostname}“е невалидно."
 
 #. Type: error
 #. Description
@@ -214,14 +248,16 @@ msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
-msgstr "          0-9,   ,  .     2  63  ,         ."
+msgstr ""
+"Валидно име на домаќинот може да содржи само цифри од 0-9, малите латинични "
+"букви, и минус. Може да биде помеѓу 2 и 63 карактери долг, и не смее да "
+"почнува или завршува со минус."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
-#, fuzzy
 msgid "Error"
-msgstr "${error}"
+msgstr "Грешка"
 
 #. Type: error
 #. Description
@@ -229,13 +265,15 @@ msgstr "${error}"
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
-msgstr "      .        ."
+msgstr ""
+"Се случи грешка при конфигурацијата на мрежата. Можеш да пробаш повторно "
+"одбирајќи од главното мени."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "    "
+msgstr "Не се пронајдени мрежни карти"
 
 #. Type: error
 #. Description
@@ -243,7 +281,9 @@ msgstr "    "
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "    .       ."
+msgstr ""
+"Не се пронајдени мрежни карти. Инсталацијата не успеа да најде мрежен "
+"адаптер."
 
 #. Type: error
 #. Description
@@ -251,7 +291,9 @@ msgstr "    .       ."
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
-msgstr "           .             ."
+msgstr ""
+"Можеби е потревно да се вчита специјален модул за твојата мрежна карта. Да "
+"го постигнеш тоа врати се на чекорото за детектирање на мрежниот хардвер."
 
 #. Type: note
 #. Description
@@ -259,7 +301,7 @@ msgstr "           .             ."
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "      ${iface}"
+msgstr "Копчето за гасење е овозможено на ${iface}"
 
 #. Type: note
 #. Description
@@ -268,7 +310,10 @@ msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
-msgstr "${iface}          .        ,       ."
+msgstr ""
+"${iface} изгледа како да е оневозможено со физичкото „копче за гасење“. Ако "
+"имаш намера да го користиш овој интерфејс, пред да продолжиш треба да го "
+"вклучиш."
 
 #. Type: select
 #. Choices
@@ -276,13 +321,13 @@ msgstr "${iface}          .        ,       ."
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "() , -  (Peer to Peer)"
+msgstr "Инфраструктурна(менаџирана) мрежа, Ад-хок мрежа (Peer to Peer)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "   :"
+msgstr "Тип на безжична мрежа:"
 
 #. Type: select
 #. Description
@@ -291,19 +336,22 @@ msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
-msgstr "      -.     ( )     ,             -."
+msgstr ""
+"Безчичните мрежи ниту се менаџирани ниту ад-хок. Ако користиш вистински "
+"аксец поинт(пристапен уред) тогаш твојата мрежа е Менаџирана, ако користиш "
+"друг компјутер како твој „аксес поинт“ тогаш мрежата ќе биде ад-хок."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
-msgstr "   "
+msgstr "Конфигурација на безжична мрежа"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "    ..."
+msgstr "Пребарување на безжични пристапни точки..."
 
 #. Type: text
 #. Description
@@ -315,19 +363,19 @@ msgstr "<none>"
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr " (802.11)"
+msgstr "Безжична мрежа(802.11х)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:151
 msgid "wireless"
-msgstr ""
+msgstr "безжично"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet   Ethernet"
+msgstr "Ethernet или брз Ethernet"
 
 #. Type: text
 #. Description
@@ -339,75 +387,75 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:168
 msgid "Serial-line IP"
-msgstr " IP"
+msgstr "Сериски IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Parallel-port IP"
-msgstr "IP   "
+msgstr "IP со паралелена порта"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Point-to-Point Protocol"
-msgstr "-- "
+msgstr "Точка-во-точка протокол"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "IPv6-in-IPv4"
-msgstr "IPv6--IPv4"
+msgstr "IPv6-во-IPv4"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:184
 msgid "ISDN Point-to-Point Protocol"
-msgstr " -- "
+msgstr "ИСДН точка-во-точка протокол"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
 msgid "Channel-to-channel"
-msgstr "Channel-to-channel (  )"
+msgstr "Channel-to-channel (Канал до канал)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Real channel-to-channel"
-msgstr "Real channel-to-channel (   )"
+msgstr "Real channel-to-channel (Вистински канал во канал)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:201
 msgid "Inter-user communication vehicle"
-msgstr "Inter-user  "
+msgstr "Inter-user комуникационо возило"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Unknown interface"
-msgstr " "
+msgstr "Непознат интерфејс"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:210
 msgid "Configuring network ..."
-msgstr "  ..."
+msgstr "Конфигурирање на мрежа..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:215
 msgid "Configure the network"
-msgstr " "
+msgstr "Конфигурирај мрежа"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP   :"
+msgstr "DHCP име на компјутерот:"
 
 #. Type: string
 #. Description
@@ -415,49 +463,51 @@ msgstr "DHCP   :"
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
-msgstr "     DHCP .    ,           ."
+msgstr ""
+"Можеби е потребно да напишеш DHCP име. Ако користиш кабелски модем, можеби е "
+"потребно да го внесеш бројот на твојата сметка тука."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "       ."
+msgstr "Повеќето корисници може да го остават ова празно."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "    DHCP"
+msgstr "Конфигурирање на мрежата со DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "   ."
+msgstr "Ова може да потрае."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "    "
+msgstr "Автоматската конфигурација на мрежата успеа"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "  DHCP "
+msgstr "Не најдов DHCP клиент"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "  DHCP .     pump  dhcp ."
+msgstr "Не најдов DHCP клиент. Овој пакет зависи од pump или dhcp клиент."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "  DHCP   ."
+msgstr "Конфигурација со DHCP ќе биде прекината."
 
 #. Type: select
 #. Choices
@@ -466,19 +516,19 @@ msgstr "  DHCP   ."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "      "
+msgstr "Пробај повторно автоматски да ја конфигурираш мрежата"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "       DHCP "
+msgstr "Повтори ја автоматската конфигурација на мрежата со DHCP име"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "   "
+msgstr "Конфигурарај ја мрежата рачно"
 
 #. Type: select
 #. Choices
@@ -490,13 +540,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "    "
+msgstr "Не конфигурирај мрежа во моментов"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "    :"
+msgstr "Метод за конфигурација на мрежата:"
 
 #. Type: select
 #. Description
@@ -508,14 +558,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"          DHCP (        DHCP         )      .  DHCP        DHCP   ,        "
-"DHCP ."
+"Тука можеш да одбереш да ја повториш автоматската конфигурација со DHCP (што "
+"можеби и ќе ти успее ако твојот DHCP сервер е спор и му треба време да "
+"одговори) или да ја конфигураш мрежата рачно. Некои DHCP сервери бараат да "
+"им се прати и DHCP име од клиентот, па можеш да пробаш повторно додавајќи и "
+"DHCP име."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "     "
+msgstr "Автоматската конфигурација на мрежата не успеа"
 
 #. Type: note
 #. Description
@@ -523,13 +576,15 @@ msgstr "     "
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "      DHCP .  DHCP          ."
+msgstr ""
+"Твојата мрежа најверојатно не го користи DHCP протоколот. Можеби DHCP "
+"серверот е спор или мрежната карта не ти работи правилно."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "   ?"
+msgstr "Продолжи без предефинираната рута?"
 
 #. Type: boolean
 #. Description
@@ -541,7 +596,12 @@ msgid ""
 "This will make it impossible to continue with the installation unless you "
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
-msgstr "    ,      .            .               -,  netinst -        ."
+msgstr ""
+"Автоматската конфигурација на мрежата успеа, но не беше поставена "
+"предефинирана рута. Компјутерот нема да знае како да комуницира со други "
+"компјутери на интернет. Инсталацијата нема да може да продолжи освен ако не "
+"ја вршиш од официјален Дебиан ЦД-РОМ,  „netinst“ ЦД-РОМ или пакетите не се "
+"наоѓаат на локалната мрежа."
 
 #. Type: boolean
 #. Description
@@ -549,26 +609,28 @@ msgstr "    ,      .            .               -,  netinst -        ."
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "   ,       .         ."
+msgstr ""
+"Ако не си сигурен, не треба да продолжиш без предефинирана рута. Контактирај "
+"го администраторот на локалната мрежа за овој проблем."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "    "
+msgstr "Повторно конфигурирај ја безжичната мрежа"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:68
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "      (DHCP)"
+msgstr "Конфигурирај ја мрежата користејќи динамилки адреси (DHCP)"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "IP :"
+msgstr "IP адреса:"
 
 #. Type: string
 #. Description
@@ -577,13 +639,16 @@ msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
-msgstr "IP        .         .           ."
+msgstr ""
+"IP адресата е уникатна и само за твојот компјутер. Таа се состои од четири "
+"бројки одвоени со точки. Ако незнаеш што да користиш тука консултирај се со "
+"мрежниот администратор."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr " IP "
+msgstr "Неправилна IP адреса"
 
 #. Type: error
 #. Description
@@ -591,13 +656,15 @@ msgstr " IP "
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
-msgstr "     .      ...        255.    ."
+msgstr ""
+"Адресата која ја внесе е неправилна. Треба да биде во облик х.х.х.х каде "
+"секој „х“ не е поголем од 255. Те молам пробај повторно."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Point-to-point :"
+msgstr "Point-to-point адреса:"
 
 #. Type: string
 #. Description
@@ -607,13 +674,16 @@ msgid ""
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr "Point-to-point             .          . Point-to-point           ."
+msgstr ""
+"Point-to-point адресата се користи да се најде другата точка на мрежа со две "
+"точки. Консултирај се со мрежниот администратор ако незнаш што е ова. Point-"
+"to-point адресата треба да биде внесена како четири бројки одвоени со точки."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr " :"
+msgstr "Мрежна маска:"
 
 #. Type: string
 #. Description
@@ -622,13 +692,16 @@ msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
-msgstr "Netmask( )           .          .             ."
+msgstr ""
+"Netmask(мрежна маска) се користи да се определи кои машини се во локалната "
+"мрежа. Консултирај се со мрежниот администратор ако не ја знаеш вредноста.  "
+"Мрежната маска треба да биде внесена како четири бројки одвоени со точки."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr ":"
+msgstr "Премин:"
 
 #. Type: string
 #. Description
@@ -640,38 +713,45 @@ msgid ""
 "this router.  In rare circumstances, you may have no router; in that case, "
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
-msgstr "  IP       .      (   )     .       ,       .           ."
+msgstr ""
+"Премин е IP адреса со која се определува предефинираниот рутер. Сиот "
+"сообраќај надвор од твојата мрежа(на пример кон интернет) се препраќа преку "
+"овој рутер. Во ретки случаи нема потреба од рутер, во таков случај остави го "
+"ова празно. Ако незнаеш како да одговориш консултирај се со твојот мрежен "
+"администратор."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr " "
+msgstr "Недостапен премин"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "       ."
+msgstr "Адресата за преминот кој ја внесе е недостапна."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "     IP ,   / ."
+msgstr ""
+"Можеби направи грешка внесувајќи ја IP адресата, мрежната маска и/или "
+"гејтвејот."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "   ?"
+msgstr "Дали информациите се точни?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "   :"
+msgstr "Моментално конфигурани мрежни параметри:"
 
 #. Type: boolean
 #. Description
@@ -684,10 +764,10 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-"              = ${interface}\n"
-"               = ${ipaddress}\n"
-"         = ${netmask}\n"
-"                  = ${gateway}\n"
+" интерфејс             = ${interface}\n"
+" ИП адреса             = ${ipaddress}\n"
+" мрежна маска       = ${netmask}\n"
+" премин                 = ${gateway}\n"
 " pointopoint            = ${pointopoint}\n"
 " nameservers         = ${nameservers}"
 
@@ -696,4 +776,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "    "
+msgstr "Конфигурирај мрежа користејќи статични адреси"

@@ -30,7 +30,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "     DHCP ?"
+msgstr "Аутаматычна канфігураваць сетку пры дапамозе DHCP ?"
 
 #. Type: boolean
 #. Description
@@ -47,7 +47,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr " :"
+msgstr "Імя дамену:"
 
 #. Type: string
 #. Description
@@ -63,7 +63,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "  :"
+msgstr "Адрасы сервероў імён:"
 
 #. Type: string
 #. Description
@@ -79,9 +79,8 @@ msgstr ""
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid "Primary network interface:"
-msgstr "   "
+msgstr ""
 
 #. Type: select
 #. Description
@@ -96,7 +95,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID  ${iface}:"
+msgstr "ESSID для ${iface}:"
 
 #. Type: string
 #. Description
@@ -140,18 +139,16 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "     ,     ."
+msgstr ""
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
-#, fuzzy
 msgid "Invalid WEP key"
-msgstr " ESSID"
+msgstr ""
 
 #. Type: error
 #. Description
@@ -165,7 +162,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr " ESSID"
+msgstr "Памылковы ESSID"
 
 #. Type: error
 #. Description
@@ -179,13 +176,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr " '"
+msgstr "Імя камп'ютра"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "   '"
+msgstr "Увядзіце імя гэтага камп'ютара"
 
 #. Type: string
 #. Description
@@ -201,13 +198,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "  "
+msgstr "Памылковае імя кампьютару"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr " \"${hostname}\"  ."
+msgstr "Імя \"${hostname}\" не дазволена."
 
 #. Type: error
 #. Description
@@ -221,9 +218,8 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
-#, fuzzy
 msgid "Error"
-msgstr "${error}"
+msgstr "Памылка"
 
 #. Type: error
 #. Description
@@ -237,7 +233,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "   "
+msgstr "Не выяўлены сеткавыя інтэрфейсы"
 
 #. Type: error
 #. Description
@@ -284,7 +280,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr " -:"
+msgstr "Тып радыё-сеткі:"
 
 #. Type: select
 #. Description
@@ -298,39 +294,38 @@ msgstr ""
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:129
-#, fuzzy
 msgid "Wireless network configuration"
-msgstr "   "
+msgstr ""
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "  ..."
+msgstr "Пошук кропак доступу..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:143
 msgid "<none>"
-msgstr "<   >"
+msgstr "<ні воднага з іх>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr "- (802.11x)"
+msgstr "Радыё-сетка (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:151
 msgid "wireless"
-msgstr ""
+msgstr "радыё"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet  Fast Ethernet"
+msgstr "Ethernet або Fast Ethernet"
 
 #. Type: text
 #. Description
@@ -342,19 +337,19 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:168
 msgid "Serial-line IP"
-msgstr "IP    (SLIP)"
+msgstr "IP па паслядоўнаму парту (SLIP)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Parallel-port IP"
-msgstr "IP    (PLIP)"
+msgstr "IP па раўналежнаму парту (PLIP)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Point-to-Point Protocol"
-msgstr " PPP"
+msgstr "Пратакол PPP"
 
 #. Type: text
 #. Description
@@ -366,7 +361,7 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:184
 msgid "ISDN Point-to-Point Protocol"
-msgstr " ISDN PPP"
+msgstr "Пратакол ISDN PPP"
 
 #. Type: text
 #. Description
@@ -378,39 +373,39 @@ msgstr "Channel-to-channel (CTC)"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Real channel-to-channel"
-msgstr " channel-to-channel"
+msgstr "Сапраўдны channel-to-channel"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:201
 msgid "Inter-user communication vehicle"
-msgstr "  (IUCV)"
+msgstr "Паміжкарыстальная сувязь (IUCV)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Unknown interface"
-msgstr " "
+msgstr "Невядомы інтэрфейс"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:210
 msgid "Configuring network ..."
-msgstr " ..."
+msgstr "Канфігураванне сеткі..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:215
 msgid "Configure the network"
-msgstr " "
+msgstr "Канфігураваць сетку"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr " DHCP:"
+msgstr "Імя DHCP:"
 
 #. Type: string
 #. Description
@@ -424,37 +419,39 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "      ."
+msgstr "Большасць астатніх карыстальнікаў можа пакінуць гэта пустым."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "    DHCP"
+msgstr "Канфігураваць сетку пры дапамозе DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "    ."
+msgstr "Гэта можа працягнуцца некаторы час."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "     "
+msgstr "Аўтамытчнае канфігураванне сеткі скончылася з поспехам"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "   DHCP "
+msgstr "Не знойдзена праграмм DHCP кліента"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "   DHCP -.    pump  dhcp-client."
+msgstr ""
+"Не было знойдзена DHCP праграм-кліентаў. Гэты пакет патрабуе pump або dhcp-"
+"client."
 
 #. Type: error
 #. Description
@@ -469,19 +466,19 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "   "
+msgstr "Паўтарыць аўтаматычную настройку сеткі"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "      DHCP"
+msgstr "Паўтарыць аўтаматычную настройку сеткі з імём DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "  "
+msgstr "Самаму настроіць сетку"
 
 #. Type: select
 #. Choices
@@ -493,13 +490,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "   "
+msgstr "Не канфігураваць сетку зараз"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "  :"
+msgstr "Метад канфігуравання сеткі:"
 
 #. Type: select
 #. Description
@@ -516,7 +513,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "   "
+msgstr "Загана аўтаматычнага канфігуравання сеткі"
 
 #. Type: note
 #. Description
@@ -524,13 +521,15 @@ msgstr "   "
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
-msgstr "         DHCP.     DHCP        ."
+msgstr ""
+"Хутчэй за ўсё ў увшай сетцы не выкарыстоўваецца пратакол DHCP. Але магчыма "
+"что сэрвер DHCP вельмі марудны або сеткавае абсталяванне працуе з памылкамі."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "    ?"
+msgstr "Працагваць без асноўнага шляху ?"
 
 #. Type: boolean
 #. Description
@@ -549,26 +548,30 @@ msgstr ""
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
-msgstr "   ,     ,      ."
+msgstr ""
+"Калі вы не ўпэўнены, непрацягвайце працу без асноўнага шляху, а звярніцесь "
+"да кіраўніка вашай сеткай."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr " "
+msgstr "Канфігураванне радыёсеткі"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:68
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "       (DHCP) ?"
+msgstr ""
+"Канфігураванне радыёсеткі з карыстаннем пратакола дынаміцнай адрасацыі "
+"(DHCP) ?"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "IP :"
+msgstr "IP адрас:"
 
 #. Type: string
 #. Description
@@ -583,7 +586,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr " IP-"
+msgstr "Памылковы IP-адрас"
 
 #. Type: error
 #. Description
@@ -597,7 +600,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr " PPP:"
+msgstr "Адрас PPP:"
 
 #. Type: string
 #. Description
@@ -613,7 +616,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr " :"
+msgstr "Маска падсеткі:"
 
 #. Type: string
 #. Description
@@ -628,7 +631,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr ":"
+msgstr "Брама:"
 
 #. Type: string
 #. Description
@@ -646,32 +649,33 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr " "
+msgstr "Недасягальная брама"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "  IP   "
+msgstr "Уведзены вамі IP адрас брамы недасягальны"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "      IP-,     ."
+msgstr ""
+"Вы маглі памыліцца пры уводзе вашага IP-адрасу, маскі падсеткі  або шлюза."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "  ?"
+msgstr "Гэтая інфармацыя сапраўдна?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "  :"
+msgstr "Бягучыя настройкі сеткі:"
 
 #. Type: boolean
 #. Description
@@ -684,16 +688,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-"       = ${interface}\n"
-" ip-       = ${ipaddress}\n"
-"    = ${netmask}\n"
-"            = ${gateway}\n"
-" PPP      = ${pointopoint}\n"
-"    = ${nameservers}"
+" інтэрфейс      = ${interface}\n"
+" ip-адрас       = ${ipaddress}\n"
+" маска падсеткі  = ${netmask}\n"
+" брама           = ${gateway}\n"
+" PPP адрас     = ${pointopoint}\n"
+" сэрверы імён  = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "    ."
+msgstr "Канфігураванне сеткі са статычнай адрасацыяй."

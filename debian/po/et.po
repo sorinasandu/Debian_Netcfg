@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: et\n"
 "POT-Creation-Date: 2005-08-08 18:28-0600\n"
 "PO-Revision-Date: 2005-06-08 11:11+0300\n"
-"Last-Translator: Siim Pder <windo@windowlicker.dyn.ee>\n"
+"Last-Translator: Siim Põder <windo@windowlicker.dyn.ee>\n"
 "Language-Team: Eesti <linuxiabi@hot.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Kas seadistada vrk DHCP abil automaatselt?"
+msgstr "Kas seadistada võrk DHCP abil automaatselt?"
 
 #. Type: boolean
 #. Description
@@ -46,9 +46,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Vrku saab konfigureerida kas DHCP abil vi siis kogu vajalikku infot ksitsi "
-"sisestades. Kui valid DHCP, aga paigaldaja ei saa vrgus asuvalt DHCP "
-"serverilt ttavat seadistust ktte, saad vimaluse vrku ksitsi seadistada."
+"Võrku saab konfigureerida kas DHCP abil või siis kogu vajalikku infot "
+"käsitsi sisestades. Kui valid DHCP, aga paigaldaja ei saa võrgus asuvalt "
+"DHCP serverilt töötavat seadistust kätte, saad võimaluse võrku käsitsi "
+"seadistada."
 
 #. Type: string
 #. Description
@@ -65,10 +66,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domeeni nimi on see osa Interneti aadressist, mis jb su arvuti vrgunimest "
-"paremale. Tihtilugu on ta lpus .ee, .com, .net, .edu vi .org. Kui sa sead "
-"les koduvrku, vid lihtsalt suvalise domeeni vlja melda - peamine on kasutada "
-"kikide arvutite seadistamisel sama domeeni."
+"Domeeni nimi on see osa Interneti aadressist, mis jääb su arvuti võrgunimest "
+"paremale. Tihtilugu on ta lõpus .ee, .com, .net, .edu või .org. Kui sa sead "
+"üles koduvõrku, võid lihtsalt suvalise domeeni välja mõelda - peamine on "
+"kasutada kõikide arvutite seadistamisel sama domeeni."
 
 #. Type: string
 #. Description
@@ -86,17 +87,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Nimeservereid kasutatakse vrgust nimede jrgi arvutite leidmiseks. Palun "
+"Nimeservereid kasutatakse võrgust nimede järgi arvutite leidmiseks. Palun "
 "sisesta kuni 3 nimeserveri IP aadressi (mitte nende nimesid), eraldades nad "
-"teineteisest thikutega. ra kasuta komasid. Esimesena prdutakse nimekirja "
-"alguses oleva nimeserveri poole. Kui sa ei soovi nimeserverid kasutada, jta "
-"vli thjaks."
+"teineteisest tühikutega. Ära kasuta komasid. Esimesena pöördutakse nimekirja "
+"alguses oleva nimeserveri poole. Kui sa ei soovi nimeserverid kasutada, jäta "
+"väli tühjaks."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Primaarne vrguliides:"
+msgstr "Primaarne võrguliides:"
 
 #. Type: select
 #. Description
@@ -107,9 +108,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Sinu ssteemil on mitu vrguliidest. Vali ks, mida kasutada Debiani "
-"paigaldamise juures primaarse vrguliidesena. Kui see oli vimalik, on valitud "
-"esimene tvimeline vrguliides."
+"Sinu süsteemil on mitu võrguliidest. Vali üks, mida kasutada Debiani "
+"paigaldamise juures primaarse võrguliidesena. Kui see oli võimalik, on "
+"valitud esimene töövõimeline võrguliides."
 
 #. Type: string
 #. Description
@@ -125,15 +126,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} on traadita vrguliides. Palun sisesta ${iface} jaoks kasutatava "
-"traadita vrgu nimi (ESSID). Kui sobib, et kasutatakse suvalist kttesaadavat "
-"vrku, jta vli thjaks."
+"${iface} on traadita võrguliides. Palun sisesta ${iface} jaoks kasutatava "
+"traadita võrgu nimi (ESSID). Kui sobib, et kasutatakse suvalist "
+"kättesaadavat võrku, jäta väli tühjaks."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Traadita seadme ${iface} WEP vti:"
+msgstr "Traadita seadme ${iface} WEP võti:"
 
 #. Type: string
 #. Description
@@ -142,8 +143,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Kui su vrk vajab seda, sisesta vrguliidese ${iface} jaoks WEP vti. Seda saab "
-"teha kahel moel:"
+"Kui su võrk vajab seda, sisesta võrguliidese ${iface} jaoks WEP võti. Seda "
+"saab teha kahel moel:"
 
 #. Type: string
 #. Description
@@ -152,8 +153,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Kui su WEP vti on hel jrgmistest kujudest - 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:"
-"nn:nn:nn' vi 'nnnnnnnn' - sisestagi ta sellisena otse siia vljale."
+"Kui su WEP võti on ühel järgmistest kujudest - 'nnnn-nnnn-nn', 'nn:nn:nn:nn:"
+"nn:nn:nn:nn' või 'nnnnnnnn' - sisestagi ta sellisena otse siia väljale."
 
 #. Type: string
 #. Description
@@ -162,7 +163,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Kui su WEP vti on salasna kujul, lisa talle ette 's:' (ilma jutumrkideta)."
+"Kui su WEP võti on salasõna kujul, lisa talle ette 's:' (ilma jutumärkideta)."
 
 #. Type: string
 #. Description
@@ -170,13 +171,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Loomulikult, kui su traadita vrgul pole WEP vtit, jta vli thjaks."
+msgstr "Loomulikult, kui su traadita võrgul pole WEP võtit, jäta väli tühjaks."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Kehv WEP vti"
+msgstr "Kehv WEP võti"
 
 #. Type: error
 #. Description
@@ -185,8 +186,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP vti '${wepkey}' on sobimatu. Palun jlrgi hoolikalt jrgmisel lehel "
-"olevaid WEP vtme sisestamise juhtnre ning proovi uuesti."
+"WEP võti '${wepkey}' on sobimatu. Palun jälrgi hoolikalt järgmisel lehel "
+"olevaid WEP võtme sisestamise juhtnööre ning proovi uuesti."
 
 #. Type: error
 #. Description
@@ -201,20 +202,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" on sobimatu. ESSID vib sisaldada kuni 32 kskik millist "
-"themrki."
+"ESSID \"${essid}\" on sobimatu. ESSID võib sisaldada kuni 32 ükskõik millist "
+"tähemärki."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Arvuti vrgunimi:"
+msgstr "Arvuti võrgunimi:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Palun sisesta selle arvuti vrgunimi."
+msgstr "Palun sisesta selle arvuti võrgunimi."
 
 #. Type: string
 #. Description
@@ -225,15 +226,15 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Vrgunimi on ksik sna, mis arvutit vrgus tuvastada laseb. Kui sa ei tea mida "
-"siia sisestada, palu abi vrgu administraatorilt. Kui sead les koduvrku, vid "
-"lihtsalt midagi suvalist vlja pakkuda."
+"Võrgunimi on üksik sõna, mis arvutit võrgus tuvastada laseb. Kui sa ei tea "
+"mida siia sisestada, palu abi võrgu administraatorilt. Kui sead üles "
+"koduvõrku, võid lihtsalt midagi suvalist välja pakkuda."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Kehv vrgunimi"
+msgstr "Kehv võrgunimi"
 
 #. Type: error
 #. Description
@@ -249,10 +250,10 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Et nimi oleks sobiv vrgunimena kasutamiseks, peab ta koosnema ainult "
-"arvudest 0-9, vikestest thtedest a-z (tpithed ei ole lubatud) ja "
-"sidekriipsust. Ta peab olema 2 kuni 63 themrki pikk ja sidekriipsu ei vi "
-"olla pris alguses ega lpus."
+"Et nimi oleks sobiv võrgunimena kasutamiseks, peab ta koosnema ainult "
+"arvudest 0-9, väikestest tähtedest a-z (täpitähed ei ole lubatud) ja "
+"sidekriipsust. Ta peab olema 2 kuni 63 tähemärki pikk ja sidekriipsu ei või "
+"olla päris alguses ega lõpus."
 
 #. Type: error
 #. Description
@@ -267,14 +268,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Vea tttu ji vrgu seadistamine pooleli. Vid seda paigaldaja peamenst uuesti "
-"proovida."
+"Vea tõttu jäi võrgu seadistamine pooleli. Võid seda paigaldaja peamenüüst "
+"uuesti proovida."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "htki vrguliidest ei avastatud"
+msgstr "Ühtki võrguliidest ei avastatud"
 
 #. Type: error
 #. Description
@@ -282,7 +283,7 @@ msgstr "htki vrguliidest ei avastatud"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "htki vrguliidest ei leitud. Paigaldaja ei suutnud leida vrgukaarti."
+msgstr "Ühtki võrguliidest ei leitud. Paigaldaja ei suutnud leida võrgukaarti."
 
 #. Type: error
 #. Description
@@ -291,8 +292,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Vib-olla pead vrgukaardi jaoks spetsiifilise mooduli laadima, kui sul see "
-"olemas on. Et seda teha, mine tagasi vrguriistvara avastamise sammu juurde."
+"Võib-olla pead võrgukaardi jaoks spetsiifilise mooduli laadima, kui sul see "
+"olemas on. Et seda teha, mine tagasi võrguriistvara avastamise sammu juurde."
 
 #. Type: note
 #. Description
@@ -300,7 +301,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "Vrguliidese ${iface} \"tapalliti\" kivitatud"
+msgstr "Võrguliidese ${iface} \"tapalüliti\" käivitatud"
 
 #. Type: note
 #. Description
@@ -310,8 +311,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Vrguliides ${iface} paistab olevat fsilise nn \"tapallitiga\" vlja llitatud. "
-"Kui plaanid seda liidest kasutada, palun llita ta enne jtkamist sisse."
+"Võrguliides ${iface} paistab olevat füüsilise nn \"tapalülitiga\" välja "
+"lülitatud. Kui plaanid seda liidest kasutada, palun lülita ta enne jätkamist "
+"sisse."
 
 #. Type: select
 #. Choices
@@ -319,13 +321,13 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastruktuuriga (Juhitav) vrk, Ad-hoc vrk (Peerilt peerile)"
+msgstr "Infrastruktuuriga (Juhitav) võrk, Ad-hoc võrk (Peerilt peerile)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "Traadita vrgu liik:"
+msgstr "Traadita võrgu liik:"
 
 #. Type: select
 #. Description
@@ -335,21 +337,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Traadita vrgud on kas juhitavad vi ad-hoc. Kui kasutad mnd telist "
-"prduspunkti on su vrk juhitav. Kui 'prduspunkti' rollis on mni teine arvuti, "
-"vib su vrk olla ad-hoc."
+"Traadita võrgud on kas juhitavad või ad-hoc. Kui kasutad mõnd tõelist "
+"pöörduspunkti on su võrk juhitav. Kui 'pöörduspunkti' rollis on mõni teine "
+"arvuti, võib su võrk olla ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
-msgstr "Traadita vrgu seadistus"
+msgstr "Traadita võrgu seadistus"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "Traadita prduspunktide otsimine..."
+msgstr "Traadita pöörduspunktide otsimine..."
 
 #. Type: text
 #. Description
@@ -373,7 +375,7 @@ msgstr "traadita"
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet vi Fast Ethernet"
+msgstr "Ethernet või Fast Ethernet"
 
 #. Type: text
 #. Description
@@ -421,7 +423,7 @@ msgstr "Channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Real channel-to-channel"
-msgstr "Teline channel-to-channel"
+msgstr "Tõeline channel-to-channel"
 
 #. Type: text
 #. Description
@@ -440,20 +442,20 @@ msgstr "Tundmatu liides"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:210
 msgid "Configuring network ..."
-msgstr "Vrgu seadistamine..."
+msgstr "Võrgu seadistamine..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:215
 msgid "Configure the network"
-msgstr "Seadista vrk"
+msgstr "Seadista võrk"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP vrgunimi:"
+msgstr "DHCP võrgunimi:"
 
 #. Type: string
 #. Description
@@ -462,32 +464,32 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Vib juhtuda, et vrgu seadistamisks lheb vaja DHCP vrgunime. Kui sa kasutad "
-"kaabelmodemit, vib juhtuda et pead sisestama oma konto numbri."
+"Võib juhtuda, et võrgu seadistamisks läheb vaja DHCP võrgunime. Kui sa "
+"kasutad kaabelmodemit, võib juhtuda et pead sisestama oma konto numbri."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Enamik lejnud kasutajatest vib selle thjaks jtta."
+msgstr "Enamik ülejäänud kasutajatest võib selle tühjaks jätta."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Vrgu seadistamine DHCP abil"
+msgstr "Võrgu seadistamine DHCP abil"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Vib kuluda natuke aega."
+msgstr "Võib kuluda natuke aega."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Vrgu iseseadistamumine nnestus"
+msgstr "Võrgu iseseadistamumine õnnestus"
 
 #. Type: error
 #. Description
@@ -500,7 +502,7 @@ msgstr "Ei leitud DHCP klienti"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"DHCP klienti ei leitud. Antud pakett vajab ttamiseks paketti pump vi dhcp-"
+"DHCP klienti ei leitud. Antud pakett vajab töötamiseks paketti pump või dhcp-"
 "client."
 
 #. Type: error
@@ -516,19 +518,19 @@ msgstr "DHCP seadistamine peatatakse."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Pa uuesti vrgu iseseadistumist"
+msgstr "Püüa uuesti võrgu iseseadistumist"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Pa uuesti vrgu iseseadistumist, kasutades DHCP vrgunime"
+msgstr "Püüa uuesti võrgu iseseadistumist, kasutades DHCP võrgunime"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Seadista vrk ksitsi"
+msgstr "Seadista võrk käsitsi"
 
 #. Type: select
 #. Choices
@@ -540,13 +542,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "ra praegu vrku seadista"
+msgstr "Ära praegu võrku seadista"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "Vrgu seadistamise meetod:"
+msgstr "Võrgu seadistamise meetod:"
 
 #. Type: select
 #. Description
@@ -558,17 +560,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Siit vid soovi korral uuesti proovida DHCP abil vrgu iseseadistumist (mis "
-"vib nnestuda, kui su DHCP serveril kulub vastamiseks palju aega) vi vrku "
-"ksitsi seadistada. Mned DHCP serverid tahavad, et klient varustaks nad DHCP "
-"vrgunimega, nii et vid uuesti proovida ka DHCP abil vrgu iseseadistumist "
-"sinu pakutud vrgunimega."
+"Siit võid soovi korral uuesti proovida DHCP abil võrgu iseseadistumist (mis "
+"võib õnnestuda, kui su DHCP serveril kulub vastamiseks palju aega) või võrku "
+"käsitsi seadistada. Mõned DHCP serverid tahavad, et klient varustaks nad "
+"DHCP võrgunimega, nii et võid uuesti proovida ka DHCP abil võrgu "
+"iseseadistumist sinu pakutud võrgunimega."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "Vrgu iseseadistumine nurjus"
+msgstr "Võrgu iseseadistumine nurjus"
 
 #. Type: note
 #. Description
@@ -577,14 +579,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Arvatavasti ei kasutata sinu vrgus DHCP protokolli. Teise vimalusena vib "
-"DHCP server vga aeglane olla vi osa riistvarast ebakorrektselt ttada."
+"Arvatavasti ei kasutata sinu võrgus DHCP protokolli. Teise võimalusena võib "
+"DHCP server väga aeglane olla või osa riistvarast ebakorrektselt töötada."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "Jtkata vaikemarsruudita?"
+msgstr "Jätkata vaikemarsruudita?"
 
 #. Type: boolean
 #. Description
@@ -597,10 +599,10 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Vrgu iseseadistumine nnestus, kuid vaikemarsruuti pole mratud: ssteem ei tea "
-"kuidas Internetis olevate arvutiteni juda. Seetttu on vimatu paigaldamist "
-"jtkata, kui sul just pole esimest ametlikku Debiani laserketast, 'Netinst' "
-"laserketast vi pakette kohtvrgus kttesaadaval."
+"Võrgu iseseadistumine õnnestus, kuid vaikemarsruuti pole määratud: süsteem "
+"ei tea kuidas Internetis olevate arvutiteni jõuda. Seetõttu on võimatu "
+"paigaldamist jätkata, kui sul just pole esimest ametlikku Debiani "
+"laserketast, 'Netinst' laserketast või pakette kohtvõrgus kättesaadaval."
 
 #. Type: boolean
 #. Description
@@ -609,21 +611,21 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Kui sa pole pris kindel, ei maksa ilma vaikemarsruudita jtkata: vta hendust "
-"kohaliku vrgu administraatoriga."
+"Kui sa pole päris kindel, ei maksa ilma vaikemarsruudita jätkata: võta "
+"ühendust kohaliku võrgu administraatoriga."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "Seadista traadita vrk mber"
+msgstr "Seadista traadita võrk ümber"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-dhcp.templates:68
 msgid "Configure the network using dynamic addressing (DHCP)"
-msgstr "Seadista vrk, kasutades dnaamilist adresseerimist (DHCP)"
+msgstr "Seadista võrk, kasutades dünaamilist adresseerimist (DHCP)"
 
 #. Type: string
 #. Description
@@ -640,7 +642,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP aadress on sinu arvuti jaoks unikaalne. Ta koosneb neljast punktidega "
-"eraldatud numbrist. Kui sa ei tea, mida siia sisestada, ksi abi oma vrgu "
+"eraldatud numbrist. Kui sa ei tea, mida siia sisestada, küsi abi oma võrgu "
 "administraatorilt."
 
 #. Type: error
@@ -656,7 +658,7 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Sinu pakutud IP aadress ei sobi. Ta peaks olema kujul x.x.x.x, kus kski 'x' "
+"Sinu pakutud IP aadress ei sobi. Ta peaks olema kujul x.x.x.x, kus ükski 'x' "
 "pole suurem kui 255. Palun proovi uuesti."
 
 #. Type: string
@@ -674,15 +676,15 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Point-to-point aadress mrab ra point-to-point vrgu lpp-punkti. Ksi vrgu "
-"administraatorilt abi, kui ei tea, mida sisestada. Point-to-point aadress "
-"koosneb neljast punktidega eraldatud numbrist."
+"Point-to-point aadress määrab ära point-to-point võrgu lõpp-punkti. Küsi "
+"võrgu administraatorilt abi, kui ei tea, mida sisestada. Point-to-point "
+"aadress koosneb neljast punktidega eraldatud numbrist."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Vrgumask:"
+msgstr "Võrgumask:"
 
 #. Type: string
 #. Description
@@ -692,15 +694,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Vrgumask nitab, millised arvutid kuuluvad kohalikku vrku. Kui sa ei tea, "
-"mida sisestada, ksi abi vrgu administraatorilt. Vrgumask peaks koosnema "
+"Võrgumask näitab, millised arvutid kuuluvad kohalikku võrku. Kui sa ei tea, "
+"mida sisestada, küsi abi võrgu administraatorilt. Võrgumask peaks koosnema "
 "neljast punktidega eraldatud numbrist."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Vrguvrav:"
+msgstr "Võrguvärav:"
 
 #. Type: string
 #. Description
@@ -713,23 +715,23 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Vrguvrav on IP aadress (neli punktidega eraldatud numbrit), mis mravad vrgu "
-"vravaks oleva marsruuteri. Kogu kohtvrgust lahkuv liiklus (niteks "
-"Internetti) kib lbi selle marsruuteri. On haruldasi juhte, kus marsruuterit "
-"polegi - sel juhul jta vli thjaks. Kui sa ei tea, mida sisestada, ksi abi "
-"vrgu administraatorilt."
+"Võrguvärav on IP aadress (neli punktidega eraldatud numbrit), mis määravad "
+"võrgu väravaks oleva marsruuteri. Kogu kohtvõrgust lahkuv liiklus (näiteks "
+"Internetti) käib läbi selle marsruuteri. On haruldasi juhte, kus "
+"marsruuterit polegi - sel juhul jäta väli tühjaks. Kui sa ei tea, mida "
+"sisestada, küsi abi võrgu administraatorilt."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Kttesaamatu vrguvrav"
+msgstr "Kättesaamatu võrguvärav"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Sisestatud vrguvrava aadress pole kttesaadav."
+msgstr "Sisestatud võrguvärava aadress pole kättesaadav."
 
 #. Type: error
 #. Description
@@ -737,20 +739,20 @@ msgstr "Sisestatud vrguvrava aadress pole kttesaadav."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Vib juhtuda, et tegid vea IP aadressi, vrgumaski ja/vi vrguvrava aadressi "
-"sisestamisel."
+"Võib juhtuda, et tegid vea IP aadressi, võrgumaski ja/või võrguvärava "
+"aadressi sisestamisel."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Kas see info on ige?"
+msgstr "Kas see info on õige?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Hetkel seadistatud vrgu parameetrid:"
+msgstr "Hetkel seadistatud võrgu parameetrid:"
 
 #. Type: boolean
 #. Description
@@ -765,8 +767,8 @@ msgid ""
 msgstr ""
 " liides        = ${interface}\n"
 " ip aadress    = ${ipaddress}\n"
-" vrgumask     = ${netmask}\n"
-" vrguvrav    = ${gateway}\n"
+" võrgumask     = ${netmask}\n"
+" võrguvärav    = ${gateway}\n"
 " pointopoint   = ${pointopoint}\n"
 " nimeserverid  = ${nameservers}"
 
@@ -775,4 +777,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Seadista vrk, kasutades staatilist adresseerimist"
+msgstr "Seadista võrk, kasutades staatilist adresseerimist"
