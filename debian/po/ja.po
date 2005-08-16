@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-08-08 18:28-0600\n"
-"PO-Revision-Date: 2005-06-21 20:30+0900\n"
+"PO-Revision-Date: 2005-08-15 15:01+0900\n"
 "Last-Translator:  Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian L10n Japanese <debian-l10n-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -91,16 +91,15 @@ msgstr "プライマリネットワークインターフェイス:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"システムに複数のネットワークインターフェイスがあります。Debian をインストール"
-"する上でのプライマリネットワークインターフェイスとして使うものを 1 つ選択して"
-"ください。可能であれば、最初に発見された接続済みネットワークインターフェイス"
-"が選択されています。"
+"システムに複数のネットワークインターフェイスがあります。インストール中にプラ"
+"イマリネットワークインターフェイスとして使うものを 1 つ選択してください。可能"
+"であれば、最初に発見された接続済みネットワークインターフェイスが選択されてい"
+"ます。"
 
 #. Type: string
 #. Description
@@ -588,7 +587,6 @@ msgstr "デフォルトルートなしに続けますか?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -598,9 +596,9 @@ msgid ""
 msgstr ""
 "ネットワークの自動設定に成功しました。ただ、デフォルトルートが設定されていな"
 "いようです。システムは、インターネット上のホストとやり取りする方法を知りませ"
-"ん。これは、1 枚目の公式 Debian CD-ROM、'ネットワークインストール' CD-ROM、"
-"ローカルネットワークにある利用可能なパッケージがない限り、インストールの継続"
-"を妨げることになります。"
+"ん。これは、1 枚目のインストール CD-ROM、'ネットワークインストール' CD-ROM、"
+"あるいはローカルネットワークにある利用可能なパッケージがない限り、インストー"
+"ルの継続ができないということです。"
 
 #. Type: boolean
 #. Description
