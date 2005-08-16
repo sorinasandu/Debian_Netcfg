@@ -352,9 +352,10 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
         sprintf(template, "netcfg/internal-%s", new_ifp);
         free(new_ifp);
 
-        debconf_metaget(client, template, "description");
-        if (client->value != NULL)
-            return strdup(client->value);
+        if (debconf_metaget(client, template, "description") == 0 &&
+            client->value != NULL) {
+		return strdup(client->value);
+	}
       }
       else
       {
