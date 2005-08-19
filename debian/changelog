@@ -1,4 +1,4 @@
-netcfg (1.13) UNRELEASED; urgency=low
+netcfg (1.13) unstable; urgency=low
 
   [ Thomas Hood ]
   * If there is no permanent IP address with which the system hostname
@@ -32,8 +32,9 @@ netcfg (1.13) UNRELEASED; urgency=low
   * Temporary workaround for #322723: use 'route add' instead of
     'ip route add' for both dynamic and static network configuration.
   * Fix error setting default value for new netcfg/dhcp_timeout template.
+  * Add myself to uploaders
 
- -- Frans Pop <fjp@debian.org>  Fri, 19 Aug 2005 21:02:02 +0200
+ -- Frans Pop <fjp@debian.org>  Fri, 19 Aug 2005 21:04:04 +0200
 
 netcfg (1.12) unstable; urgency=low
 
