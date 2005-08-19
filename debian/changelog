@@ -13,6 +13,7 @@ netcfg (1.13) UNRELEASED; urgency=low
     resolving the system hostname SHOULD NOT DO THIS, but those that
     do so will not be disappointed: most services that listen locally
     listen on all 127/8 addresses, not just on 127.0.0.1.
+
   [ Joshua Kwan ]
   * Add a netcfg/dhcp_timeout template that can be preseeded in case
     a network or a set of machines are known to take a long time to
@@ -27,7 +28,11 @@ netcfg (1.13) UNRELEASED; urgency=low
   * Add description for internal-usb template as used for usb net.
   * Fix fallthrough on missing template.
 
- -- Joey Hess <joeyh@debian.org>  Tue, 16 Aug 2005 17:19:44 -0400
+  [ Frans Pop ]
+  * Temporary workaround for #322723: use 'route add' instead of
+    'ip route add' for both dynamic and static network configuration
+
+ -- Frans Pop <fjp@debian.org>  Fri, 19 Aug 2005 19:35:49 +0200
 
 netcfg (1.12) unstable; urgency=low
 

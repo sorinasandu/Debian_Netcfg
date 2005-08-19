@@ -80,7 +80,9 @@ case "$reason" in
             ip addr add $new_ip_address$new_mask $new_broadcast_arg dev $interface
 
             for router in $new_routers; do
-                ip route add default via $router
+                # Use 'route' instead of 'ip': temporary workaround for #322723
+                # ip route add default via $router
+                route add default gw $router
             done
         fi
 
