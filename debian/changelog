@@ -30,9 +30,10 @@ netcfg (1.13) UNRELEASED; urgency=low
 
   [ Frans Pop ]
   * Temporary workaround for #322723: use 'route add' instead of
-    'ip route add' for both dynamic and static network configuration
+    'ip route add' for both dynamic and static network configuration.
+  * Fix error setting default value for new netcfg/dhcp_timeout template.
 
- -- Frans Pop <fjp@debian.org>  Fri, 19 Aug 2005 19:35:49 +0200
+ -- Frans Pop <fjp@debian.org>  Fri, 19 Aug 2005 21:02:02 +0200
 
 netcfg (1.12) unstable; urgency=low
 
