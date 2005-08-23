@@ -38,7 +38,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-08-16 18:29-0600\n"
-"PO-Revision-Date: 2005-06-06 00:01+0200\n"
+"PO-Revision-Date: 2005-08-21 01:46+0200\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -120,15 +120,14 @@ msgstr "Interfaz de red primaria:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "El sistema tiene varias interfaces de red. Por favor, elija la que quiere "
-"utilizar como interfaz de red primaria durante la instalación de Debian. Se "
-"ha seleccionado la primera interfaz de red conectada si había alguna que lo "
+"utilizar como interfaz de red primaria durante la instalación. Se ha "
+"seleccionado la primera interfaz de red conectada si había alguna que lo "
 "estaba."
 
 #. Type: string
@@ -414,7 +413,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "red USB"
 
 #. Type: text
 #. Description
@@ -627,7 +626,6 @@ msgstr "¿Desea continuar sin una ruta por omisión?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -638,7 +636,7 @@ msgstr ""
 "La configuración automática de la red tuvo éxito. Sin embargo, no se ha "
 "establecido una ruta por omisión: el sistema no sabe cómo comunicarse con "
 "equipos en Internet. Esto impedirá que sea posible continuar con la "
-"instalación a no ser que tenga el primer CD-ROM oficial Debian, un CD-ROM "
+"instalación a no ser que tenga el primer CD-ROM de instalación, un CD-ROM "
 "'Netinst' o todos los paquetes estén disponibles en la red local."
 
 #. Type: boolean
