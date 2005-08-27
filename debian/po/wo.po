@@ -5,6 +5,10 @@
 # 
 # translation of wo.po to 
 # translation of wo.po to
+# translation of wo.po to
+# translation of wo.po to
+# translation of wo.po to
+# translation of wo.po to
 # translation of Debian Installer to Wolof
 # Mouhamadou Mamoune Mbacke <mouhamadoumamoune@gmail.com>, 2005.
 #
@@ -13,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wo\n"
 "POT-Creation-Date: 2005-08-16 18:29-0600\n"
-"PO-Revision-Date: 2005-07-06 17:45+0000\n"
+"PO-Revision-Date: 2005-08-26 19:40+0000\n"
 "Last-Translator: Mouhamadou Mamoune Mbacke\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +30,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Komfiguraasioŋ otomatik bu resóobi ak DHCP?"
+msgstr "Ndax nu def komfiguraasioŋ otomatik bu resóobi ak DHCP?"
 
 #. Type: boolean
 #. Description
@@ -88,7 +92,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Interfaas bu resóp bi jiitu:"
+msgstr "Interfaas bu resóo bi jiitu:"
 
 #. Type: select
 #. Description
@@ -107,7 +111,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID u sãa fiil bu ${iface}:"
+msgstr "Tur (ESSID) wu résóo sãa fiil bu ${iface}:"
 
 #. Type: string
 #. Description
@@ -117,7 +121,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} ab interfaas bu resóo saa fiil la. Bindal tur (ESSID) bu resóo saa "
+"${iface} ab interfaas bu resóo saa fiil la. Bindal tur (ESSID) wu resóo saa "
 "fiil bi nga bëgg ${iface} di ko jëfandikoo. Bu fekkee dangaa bëgg a "
 "jëfandikoo beppu resóo bu jappundi, kon bayyil wii waar dara bañ cee nekk."
 
@@ -125,7 +129,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "caabi WEP bu appaare sãa fiil ${iface}:"
+msgstr "caabi WEP bu periferik sãa fiil ${iface}:"
 
 #. Type: string
 #. Description
@@ -189,7 +193,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "ESSID bi baaxul"
+msgstr "Tur (ESSID) bi baaxul"
 
 #. Type: error
 #. Description
@@ -198,20 +202,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID bi di \"${essid}\" baaxul. ESSID manul a ëppu 32 karakteer, waaye man "
-"naa ame beppu xeetu karakteer."
+"Tur (ESSID) wi di \"${essid}\" baaxul. ESSID manul a ëppu 32 karakteer, "
+"waaye man naa ame beppu xeetu karakteer."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Turumasinbi:"
+msgstr "Tur u masinbi:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Defal fii tu turumasin bu bii sistem."
+msgstr "Defal fii tu tur u masin bu bii sistem."
 
 #. Type: string
 #. Description
@@ -222,15 +226,15 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Turumasin benn baat lay doon buy raññale sa sistem ci biir resóobi. Boo "
-"xamul luy sa turumasin, man ngaa laaj ki yore administaraasioŋ bu resóobi. "
+"Tur u masin benn baat lay doon buy raññale sa sistem ci biir resóobi. Boo "
+"xamul luy sa tur u masin, man ngaa laaj ki yore administaraasioŋ bu resóobi. "
 "Bu fekkee resóo bu sa kër ngay defar, kon man ngaa def fii lula soob."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "turumasin bi baaxul"
+msgstr "tur u masin bi baaxul"
 
 #. Type: error
 #. Description
@@ -246,9 +250,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Turumasin bu wu baax man naa am ay nimero 0-9, ay araf yu ndaw a- z, mandaga "
-"waññi. Guddaayam dafa wara ne diggante 2 ba 63 karakteer, warula tambulee ci "
-"mandarga waññi, waru cee yam."
+"Tur u masin bu wu baax man naa am ay nimero 0-9, ay araf yu ndaw a- z, "
+"mandaga waññi. Guddaayam dafa wara ne diggante 2 ba 63 karakteer, warula "
+"tambulee ci mandarga waññi, waru cee yam."
 
 #. Type: error
 #. Description
@@ -298,7 +302,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "Kontaak u taxawal doxaleesna ko ci ${iface}"
+msgstr "'Kill switch' bi doxaleesna ko ci ${iface}"
 
 #. Type: note
 #. Description
@@ -308,8 +312,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} dafa mel ne lu ñu taxawal ak ap \"kontaak u taxawal \". bu fekkee "
-"da ngaa bëgg a jëfandikoo interfaas bi, kon taal ko bala ngay jall."
+"${iface} dafa mel ne lu ñu taxawal ak ap \"kill switch \". bu fekkee da ngaa "
+"bëgg a jëfandikoo interfaas bi, kon taal ko bala ngay jall."
 
 #. Type: select
 #. Choices
@@ -317,7 +321,9 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgstr ""
+"Resóo buy doxe infrastruktuur , Resóo buy doxe Ad-hoc (Diggënte nawle-ak-"
+"nawle)"
 
 #. Type: select
 #. Description
@@ -333,9 +339,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Resóo sãafiil benn mu maneged walla muy ad-hoc. Bu fekkeey yaa ngi yore ab "
-"poñ u jokkoo bu dëggdëgg, kon sa resóo maneged la. Bufekkee baneen "
-"kompiyutar mooy sa poñu jokkoo, kon amaana sa resóo ad-hoc la."
+"Resóo sãafiil benn muy doxe 'infrastruktuur' walla muy doxe ad-hoc. Bu "
+"fekkeey yaa ngi yore ab poñ u jokkoo mataryeel, kon sa resóo "
+"'infrastruktuur' la. Bufekkee baneen kompiyutar mooy sa poñu jokkoo, kon "
+"amaana sa resóo ad-hoc la."
 
 #. Type: text
 #. Description
@@ -353,7 +360,7 @@ msgstr "Mi ngi seet poñ u jokkoo yu sãafiil ..."
 #. Description
 #: ../netcfg-common.templates:143
 msgid "<none>"
-msgstr "<benn>"
+msgstr "<amul benn>"
 
 #. Type: text
 #. Description
@@ -383,19 +390,19 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "Resóo USB"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Serial-line IP"
-msgstr "IP liiñu séerii"
+msgstr "IP ci liiñu séeri"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Parallel-port IP"
-msgstr "IP poor paralel"
+msgstr "IP ci poor paralel"
 
 #. Type: text
 #. Description
@@ -419,19 +426,19 @@ msgstr "Porotokol u ISDN bu poñ-ba-poñ"
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Channel-to-channel"
-msgstr "kanaal-ba-kanaal"
+msgstr "kanaal-ak-kanaal"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:196
 msgid "Real channel-to-channel"
-msgstr "Real channel-to-channel"
+msgstr "Kanaal ak kanaal dëgg"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Inter-user communication vehicle"
-msgstr "Inter-user communication vehicle"
+msgstr "Jumtukaay u jokkoo diggënte jëfandikukat ak jëfandikukat"
 
 #. Type: text
 #. Description
@@ -451,13 +458,13 @@ msgstr "mingi komfigure resóo bi ..."
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "Komfiguréel resóo bi"
+msgstr "Komfigure resóo bi"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "turumasin u DHCP:"
+msgstr "tur u masin u DHCP:"
 
 #. Type: string
 #. Description
@@ -466,7 +473,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Amaana soxla ngaa joxe turumasin u DHCP. Bu fekkee dangaa yore ab modem bu "
+"Amaana soxla ngaa joxe tur u masin u DHCP. Bu fekkee dangaa yore ab modem bu "
 "kaabal, kon man naa am nga wara joxe fii ab nimero kontu."
 
 #. Type: string
@@ -491,7 +498,7 @@ msgstr "Lii man naa jël dara ci waxtu."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Komfiguraasioŋ otomatik bi mat na ak tawfeex"
+msgstr "Komfiguraasioŋ otomatik bi antuna"
 
 #. Type: error
 #. Description
@@ -520,13 +527,13 @@ msgstr "Komfiguraasioŋ u DHCP bi deesna ko taxawal."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Jéemaatal komfiguraasioŋ otomatik bu resóo bi"
+msgstr "Jéemaat komfiguraasioŋ otomatik bu resóo bi"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Jéemaatal komfiguraasioŋ otomatik bi ak turumasin DHCP"
+msgstr "Jéemaat komfiguraasioŋ otomatik bi ak turumasin DHCP"
 
 #. Type: select
 #. Choices
@@ -689,7 +696,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Netmask:"
+msgstr "Maaska bu resóo bi:"
 
 #. Type: string
 #. Description
@@ -699,15 +706,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Netmask bi mooy tax nu man a xam ban masin moo bokk ci sa resóo lokaal bi. "
-"Gisal ki yore administaraasioŋ bu resóo bu xamul li nga fi wara def. Netmask "
-"ñeenti lim lay doon yu ay tumbu taxale."
+"Maaka bu resóo bi mooy tax nu man a xam ban masin moo bokk ci sa resóo "
+"lokaal bi. Gisal ki yore administaraasioŋ bu resóo bu xamul li nga fi wara "
+"def. Maaska bu resóo bi ñeenti lim lay doon yu ay tumbu taxale."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Buntukër:"
+msgstr "Buntujokkoo:"
 
 #. Type: string
 #. Description
@@ -720,24 +727,24 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Buntukër ab adrees u IP lay doon (ñeenti lim yu ay tombu taxale) yoo xamne "
-"dafay wane sa router bu buntukër, nukoy tudde batay router u defóo. Sa "
-"taraafik yéppu yiy génn sa resóo lokaal bi (ci misaal, yi jëm ca Internet) "
-"ci boobu router la ñiy jaare. Bu fekkeey ame wóo ab router nak kon man ngaa "
-"baña bind dara.  Bu fekkee xamóo li nga wara toontu fii nak, giseel ak ki "
-"yore administaraasioŋ bu resóo bi."
+"Buntujokkoo ab adrees u IP lay doon (ñeenti lim yu ay tombu taxale) yoo "
+"xamne dafay wane masin biy taxaw taxawaayu router, nukoy tudde batay router "
+"u defóo. Sa taraafik yéppu yiy génn sa resóo lokaal bi (ci misaal, yi jëm ca "
+"Internet) ci boobu router la ñiy jaare. Bu fekkeey ame wóo ab router nak kon "
+"man ngaa baña bind dara.  Bu fekkee xamóo li nga wara toontu fii nak, giseel "
+"ak ki yore administaraasioŋ bu resóo bi."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Buntukër bi maneesu caa agg"
+msgstr "Buntujokkoo bi maneesu caa agg"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Adrees u buntukër bi nga joxe maneesucaa agg."
+msgstr "Adrees u buntujokkoo bi nga joxe maneesucaa agg."
 
 #. Type: error
 #. Description
@@ -745,14 +752,14 @@ msgstr "Adrees u buntukër bi nga joxe maneesucaa agg."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Amaana da ngaa juum bi ngay bind sa adrees u IP, sa netmask ak/walla sa "
-"buntukër."
+"Amaana da ngaa juum bi ngay bind sa adrees u IP, sa maaska bu resóo ak/walla "
+"sa buntujokkoo."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Ndax bii imformaasioŋ werna?"
+msgstr "Ndax bii imformaasioŋ wérna?"
 
 #. Type: boolean
 #. Description
@@ -771,16 +778,16 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" interface     = ${interface}\n"
-" ipaddress     = ${ipaddress}\n"
-" netmask       = ${netmask}\n"
-" gateway       = ${gateway}\n"
-" pointopoint   = ${pointopoint}\n"
-" nameservers   = ${nameservers}"
+" interfaas     = ${interface}\n"
+" adrees IP     = ${ipaddress}\n"
+" maaska resóo  = ${netmask}\n"
+" buntujokkoo   = ${gateway}\n"
+" poñ bapoñ   = ${pointopoint}\n"
+" serwóor u tur   = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Komfigure ab resóo ak ab adrees bu sax"
+msgstr "Komfigure ab resóo bi ak loxo"
