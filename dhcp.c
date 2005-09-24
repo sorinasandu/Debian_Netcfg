@@ -568,7 +568,7 @@ int resolv_conf_entries (void)
 	FILE *f;
 	int count = 0;
 
-	if ((f = fopen("/etc/resolv.conf", "r")) != NULL)
+	if ((f = fopen(RESOLV_FILE, "r")) != NULL)
 	{
 		char buf[256];
 
