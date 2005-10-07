@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-04-04 14:36+0200\n"
-"Last-Translator: Per Olofsson <pelle@debian.org>\n"
+"PO-Revision-Date: 2005-10-06 11:43+0200\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,15 +97,14 @@ msgstr "Primärt nätverkskort:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Ditt system har flera nätverkskort. Välj det som ska användas som primärt "
-"nätverkskort medan Debian installeras. Det första nätverkskortet som "
-"hittades har markerats, om möjligt."
+"Ditt system har flera nätverksinterface. Välj det som ska användas som "
+"primärt nätverksinterface under tiden Debian installeras. Det första "
+"nätverkskortet som hittades har markerats."
 
 #. Type: string
 #. Description
@@ -303,7 +302,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Kill switch aktiverat på ${iface}"
 
 #. Type: note
 #. Description
@@ -313,6 +312,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} verkar inte vara aktiverad (fysisk \"kill switch\"). Om du planerar "
+"att använda detta interface, vänligen aktivera det innan du fortsätter."
 
 #. Type: select
 #. Choices
@@ -386,7 +387,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB nät"
 
 #. Type: text
 #. Description
@@ -597,7 +598,6 @@ msgstr "Fortsätt utan en standardrutt?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -605,11 +605,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Automatisk konfigurering av nätverket lyckades. Ingen standardrutt "
+"Automatisk konfigurering av nätverket lyckades. Men ingen standardrutt "
 "aktiverades dock, systemet vet alltså inte hur det ska kommunicera med andra "
 "noder på Internet. Det här gör det omöjligt att fortsätta installationen om "
-"du inte har den första officiella Debian-CD:n, en \"Netinst\"-CD, eller "
-"paketen tillgängliga på det lokala nätverket."
+"du inte har den första installations-CD:n, en \"Netinst\"-CD-ROM, eller "
+"paket som är tillgängliga på det lokala nätverket."
 
 #. Type: boolean
 #. Description
