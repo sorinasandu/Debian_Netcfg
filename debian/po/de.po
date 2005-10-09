@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-08-03 22:00+0200\n"
-"Last-Translator: Holger Wansing <h.wansing@onlinehome.de>\n"
+"PO-Revision-Date: 2005-10-08 23:00+0200\n"
+"Last-Translator: Jens Seidel <jensseidel@users.sf.net>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,15 +101,14 @@ msgstr "Primäre Netzwerk-Schnittstelle:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Ihr System besitzt mehrere Netzwerk-Schnittstellen. Bitte wählen Sie die "
-"Schnittstelle (Netzwerkkarte), die für die Installation von Debian genutzt "
-"werden soll. Falls möglich, wurde die erste Schnittstelle ausgewählt."
+"Schnittstelle (Netzwerkkarte), die für die Installation genutzt werden soll. "
+"Falls möglich, wurde die erste angeschlossene Schnittstelle ausgewählt."
 
 #. Type: string
 #. Description
@@ -455,9 +454,8 @@ msgstr "Unbekannte Schnittstelle"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Konfiguriere das Netzwerk..."
+msgstr "Speichere Netzwerkeinstellungen ..."
 
 #. Type: text
 #. Description
@@ -609,7 +607,6 @@ msgstr "Ohne Default-Route fortsetzen?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -618,10 +615,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Die Netzwerk-Autokonfiguration war erfolgreich. Es wurde allerdings keine "
-"Default-Route gesetzt: Das System wird nicht mit Rechnern im Internet "
-"kommunizieren können. Dies könnte ein Fortsetzen der Installation unmöglich "
-"machen, falls Sie nicht die erste offizielle Debian-CD-ROM, eine »Netinst«-"
-"CD-ROM oder Pakete im lokalen Netzwerk haben."
+"Default-Route gesetzt: Das System weiß nicht, wie es mit Rechnern im "
+"Internet kommunizieren kann. Dies macht ein Fortsetzen der Installation "
+"unmöglich, falls Sie nicht die erste Installations-CD-ROM, eine »Netinst«-CD-"
+"ROM oder Pakete im lokalen Netzwerk haben."
 
 #. Type: boolean
 #. Description

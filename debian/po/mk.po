@@ -3,23 +3,25 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
+# translation of mk.po to
 # translation of mk.po to Macedonian
 # Macedonian strings from the debian-installer.
 # Georgi Stanojevski, <glisha@gmail.com>, 2004, 2005.
 # Georgi Stanojevski <gogo@stavre>, 2005.
+# Georgi Stanojevski <georgis@unet.com.mk>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mk\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-07-20 20:56+0200\n"
-"Last-Translator: Georgi Stanojevski <gogo@stavre>\n"
-"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"PO-Revision-Date: 2005-10-08 18:16+0200\n"
+"Last-Translator: Georgi Stanojevski <georgis@unet.com.mk>\n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #. Type: boolean
 #. Description
@@ -93,14 +95,13 @@ msgstr "Главен мрежен адаптер:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Твојот систем има повеќе мрежни адаптери. Одбери еден кој ќе се користи како "
-"главен мрежен адаптер при инсталирање на Дебиан. Ако е можно, првиот најден "
+"главен мрежен адаптер при инсталирањето. Ако е можно, првиот најден "
 "приклучен мрежен адаптер беше одбран."
 
 #. Type: string
@@ -383,7 +384,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "УСБ мрежа"
 
 #. Type: text
 #. Description
@@ -443,9 +444,8 @@ msgstr "Непознат интерфејс"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Конфигурирање на мрежа..."
+msgstr "Зачувување на мрежните поставки..."
 
 #. Type: text
 #. Description
@@ -592,7 +592,6 @@ msgstr "Продолжи без предефинираната рута?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -603,8 +602,8 @@ msgstr ""
 "Автоматската конфигурација на мрежата успеа, но не беше поставена "
 "предефинирана рута. Компјутерот нема да знае како да комуницира со други "
 "компјутери на интернет. Инсталацијата нема да може да продолжи освен ако не "
-"ја вршиш од официјален Дебиан ЦД-РОМ,  „netinst“ ЦД-РОМ или пакетите не се "
-"наоѓаат на локалната мрежа."
+"го имаш првиот инсталационен ЦД-РОМ,  „netinst“ ЦД-РОМ или пакетите достапни "
+"на локалната мрежа."
 
 #. Type: boolean
 #. Description
