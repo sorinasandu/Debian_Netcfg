@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-09-05 17:51+1200\n"
+"PO-Revision-Date: 2005-10-08 20:24-0500\n"
 "Last-Translator:  Ming Hua <minghua@rice.edu>\n"
 "Language-Team:  Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -424,16 +424,15 @@ msgstr "未知接口"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "正在设置网络 ..."
+msgstr "正在存储网络设置..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "网络设置"
+msgstr "配置网络"
 
 #. Type: string
 #. Description
@@ -570,7 +569,6 @@ msgstr "无默认路由，继续安装吗？"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -578,9 +576,9 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"网络自动配置成功，但未设置默认路由，系统将无法连接 Internet 上的主机。除非您"
-"拥有第一张官方 Debian 光盘、“Netinst”光盘、或在本地局域网上存有所需的软件包，"
-"否则将无法继续进行安装。"
+"网络自动配置成功。但是由于未设置默认路由，系统将无法连接 Internet 上的主机。"
+"除非您拥有第一张安装光盘、“Netinst”光盘、或在本地局域网上存有所需的软件包，否"
+"则将无法继续进行安装。"
 
 #. Type: boolean
 #. Description
