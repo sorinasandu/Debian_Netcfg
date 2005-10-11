@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-05-27 18:27+0300\n"
+"PO-Revision-Date: 2005-10-10 22:54+0300\n"
 "Last-Translator: Recai Oktaş <roktas@omu.edu.tr>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -99,15 +99,14 @@ msgstr "Birincil ağ arayüzü:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Sisteminizde birden fazla sayıda ağ arayüzü var.  Debian kurulumu sırasında "
-"birincil ağ arayüzü olarak bunlardan birisini seçin.  Eğer bu mümkünse, "
-"bağlantı kurulduğu görülen ilk ağ arayüzü seçilmiştir."
+"Sisteminizde birden fazla sayıda ağ arayüzü var.  Kurulum sırasında birincil "
+"ağ arayüzü olarak bunlardan birisini seçin.  Eğer bu mümkünse, bağlantı "
+"kurulduğu görülen ilk ağ arayüzü seçili durumdadır."
 
 #. Type: string
 #. Description
@@ -390,7 +389,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB ağı"
 
 #. Type: text
 #. Description
@@ -450,9 +449,8 @@ msgstr "Bilinmeyen arayüz"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Ağ yapılandırılıyor..."
+msgstr "Ağ ayarları kaydediliyor..."
 
 #. Type: text
 #. Description
@@ -604,7 +602,6 @@ msgstr "Öntanımlı bir yönlendirici olmadan devam edilsin mi?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -614,9 +611,9 @@ msgid ""
 msgstr ""
 "Otomatik ağ yapılandırması başarıyla sonuçlandı.  Bununla beraber herhangi "
 "bir öntanımlı yönlendirici ayarlanmamış; yani sistem İnternet üzerindeki "
-"makinelerle nasıl haberleşeceğini bilmiyor.  Bu durum, resmi Debian "
-"CD'lerinin birincisine veya ağ üzerinden kurulum yapan bir 'Netinst' CD'sine "
-"sahip değilseniz veya gerekli bütün paketleri yerel ağda bulundurmuyorsanız "
+"makinelerle nasıl haberleşeceğini bilmiyor.  Bu durum, kurulum CD'lerinin "
+"birincisine veya ağ üzerinden kurulum yapan bir 'Netinst' CD'sine sahip "
+"değilseniz veya gerekli bütün paketleri yerel ağda bulundurmuyorsanız "
 "kuruluma devam etmenizi imkansız hale getirecektir."
 
 #. Type: boolean

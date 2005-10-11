@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "POT-Creation-Date: 2005-10-04 18:31-0600\n"
-"PO-Revision-Date: 2005-07-05 22:25+0100\n"
+"PO-Revision-Date: 2005-07-08 00:05+0700\n"
 "Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
 "Language-Team: Debian Indonesia Team <debian-l10n-id@gurame.fisika.ui.ac."
 "id>\n"
@@ -100,16 +100,14 @@ msgstr "Antarmuka jaringan utama:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Sistem Anda memiliki beberapa antarmuka jaringan. Pilih satu yang akan "
-"digunakan sebagai antarmuka jaringan utama saat memasang Debian. Jika "
-"memungkinkan, antarmuka jaringan pertama yang ditemukan telah dipilih oleh d-"
-"i."
+"digunakan sebagai antarmuka jaringan utama saat instalasi. Jika "
+"memungkinkan, antarmuka jaringan pertama yang ditemukan telah dipilih."
 
 #. Type: string
 #. Description
@@ -451,9 +449,8 @@ msgstr "Antarmuka tak dikenal"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Sedang mengonfigurasi jaringan ..."
+msgstr "Menyimpan konfigurasi jaringan ..."
 
 #. Type: text
 #. Description
@@ -602,7 +599,6 @@ msgstr "Lanjutkan tanpa sebuah rute utama?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -610,11 +606,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Konfigurasi otomatis jaringan telah berjasil. Namun, rute utama tidak "
+"Konfigurasi otomatis jaringan telah berhasil. Namun, rute utama tidak "
 "diatur: sistem tidak tahu bagaimana berkomunikasi dengan host-host di "
 "Internet. Hal ini menyebabkan Anda tidak dapat melanjutkan instalasi, "
 "kecuali Anda memiliki CD-ROM Debian resmi pertama (#1), CD-ROM 'Netinst', "
-"atau paket-paket debian tersedia pada jaringan lokal."
+"atau paket-paket instalasi tersedia pada jaringan lokal."
 
 #. Type: boolean
 #. Description
