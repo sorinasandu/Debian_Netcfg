@@ -728,7 +728,7 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         char ptr1[INET_ADDRSTRLEN];
         
-        fprintf(fp, "127.0.0.1\tlocalhost.localdomain\tlocalhost\n");
+        fprintf(fp, "127.0.0.1\tlocalhost\n");
         
         if (ipaddress.s_addr)
         {

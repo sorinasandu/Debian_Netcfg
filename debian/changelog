@@ -1,3 +1,12 @@
+netcfg (1.17~1) UNRELEASED; urgency=low
+
+  [ Thomas Hood ]
+  * Don't make 'localhost.localdomain' the canonical hostname of 127.0.0.1.
+    See discussion in debian-devel with Subject: localhost.localdomain
+    for the reasons.
+
+ -- Thomas Hood <jdthood@yahoo.co.uk>  Thu, 13 Oct 2005 17:02:09 +0200
+
 netcfg (1.16) unstable; urgency=low
 
   * Use a less confising progress bar string for base-installer step.
