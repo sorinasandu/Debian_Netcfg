@@ -57,8 +57,6 @@ binary-arch: build install
 	(echo ; po2debconf debian/netcfg-common.templates ) \
 	   >> debian/netcfg-static/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-common.templates )\
-	   >> debian/netcfg-dhcp/DEBIAN/templates	
-	(echo ; po2debconf debian/netcfg-common.templates )\
 	   >> debian/netcfg/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-dhcp.templates )\
 	   >> debian/netcfg/DEBIAN/templates	

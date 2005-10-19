@@ -5,7 +5,11 @@ netcfg (1.17) UNRELEASED; urgency=low
     See Oct 2005 debian-devel discussion with Subject: localhost.localdomain,
     e.g., http://lists.debian.org/debian-devel/2005/10/msg00559.html
 
- -- Thomas Hood <jdthood@yahoo.co.uk>  Thu, 13 Oct 2005 17:02:09 +0200
+  [ Frans Pop ]
+  * Remove netcfg-dhcp udeb as it is no longer used and maintained.
+    The full netcfg is used instead. Closes: #329885.
+
+ -- Frans Pop <fjp@debian.org>  Wed, 19 Oct 2005 16:16:49 +0200
 
 netcfg (1.16) unstable; urgency=low
 
@@ -721,7 +725,7 @@ netcfg (0.69) unstable; urgency=medium
       just take that long to answer. And for those that take more that's
       just too bad.
   * Bastian Blank
-    - Readd postinst files for netcfg-dhcp and netcfg-static.
+    - Read postinst files for netcfg-dhcp and netcfg-static.
   * Updated translations:
     - Bosnian (bs.po) by Safir Šećerović
     - German (de.po) by Alwin Meschede

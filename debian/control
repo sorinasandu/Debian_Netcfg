@@ -19,21 +19,6 @@ Description: Configure the network
  you for static network configuration if this fails. The configured 
  network settings will be copied to your newly installed system.
 
-Package: netcfg-dhcp
-XC-Package-Type: udeb
-Architecture: i386 sparc alpha m68k arm powerpc mips mipsel hppa ia64 amd64 ppc64
-Depends: ${shlibs:Depends}, cdebconf-udeb, dhcp-client-udeb | dhcp3-client-udeb | pump-udeb, ethernet-card-detection
-Provides: configured-network
-XB-Installer-Menu-Item: 18
-Description: Configure the network via DHCP
- Many networks allow automatic configuration via DHCP (Dynamic Host
- Configuration Protocol).  If you are on a corporate network, a cable modem,
- some DSL connections, or have any other sort of dynamic IP for Ethernet, you
- will likely be able to configure via DHCP. If you have information such as IP
- address, netmask, gateway, then DHCP is not appropriate. This package uses
- the Internet Software Consortium's dhclient or Red Hat Linux's pump, whichever
- is available.
-
 Package: netcfg-static
 XC-Package-Type: udeb
 Architecture: any
