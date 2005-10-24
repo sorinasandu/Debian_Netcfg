@@ -142,15 +142,16 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
         break;
 
       case DHCLIENT:
-        /* First, set up dhclient.conf if necessary */
+        /* First, set up dhclient.conf */
 
-        if (dhostname)
+        if ((dc = file_open(DHCLIENT_CONF, "w")))
         {
-          if ((dc = file_open(DHCLIENT_CONF, "w")))
+          fprintf(dc, "send dhcp-class-identifier \"NetcfgDHClient\";\n" );
+          if (dhostname)
           {
             fprintf(dc, "send host-name \"%s\";\n", dhostname);
-            fclose(dc);
           }
+          fclose(dc);
         }
 
         execlp("dhclient", "dhclient", "-e", interface, NULL);
@@ -159,13 +160,14 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
       case DHCLIENT3:
         /* Different place.. */
 
-        if (dhostname)
+        if ((dc = file_open(DHCLIENT3_CONF, "w")))
         {
-          if ((dc = file_open(DHCLIENT3_CONF, "w")))
+          fprintf(dc, "send dhcp-class-identifier \"NetcfgDHClient\";\n" );
+          if (dhostname)
           {
             fprintf(dc, "send host-name \"%s\";\n", dhostname);
-            fclose(dc);
           }
+          fclose(dc);
         }
 
         execlp("dhclient", "dhclient", "-1", interface, NULL);
