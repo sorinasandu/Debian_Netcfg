@@ -19,11 +19,11 @@ msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-10-19 06:46+0200\n"
+"PO-Revision-Date: 2005-11-18 07:40+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Generator: KBabel 1.10.2\n"
@@ -32,7 +32,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Faut-il configurer le réseau avec DHCP ?"
+msgstr "Faut-il configurer le rÃ©seau avec DHCPÂ ?"
 
 #. Type: boolean
 #. Description
@@ -44,16 +44,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Pour configurer le réseau, on peut utiliser DHCP ou fournir soi-même toutes "
+"Pour configurer le rÃ©seau, on peut utiliser DHCP ou fournir soi-mÃªme toutes "
 "les informations. Si vous choisissez DHCP et si le programme d'installation "
-"ne réussit pas à configurer correctement le réseau à partir d'un serveur "
-"DHCP, vous pourrez configurer vous-même le réseau après la tentative DHCP."
+"ne rÃ©ussit pas Ã  configurer correctement le rÃ©seau Ã  partir d'un serveur "
+"DHCP, vous pourrez configurer vous-mÃªme le rÃ©seau aprÃ¨s la tentative DHCP."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Domaine :"
+msgstr "DomaineÂ :"
 
 #. Type: string
 #. Description
@@ -64,16 +64,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Le domaine est la partie de l'adresse internet qui est à la droite du nom de "
+"Le domaine est la partie de l'adresse internet qui est Ã  la droite du nom de "
 "machine. Il se termine souvent par .com, .net, .edu, ou .org. Si vous "
-"paramétrez votre propre réseau, vous pouvez mettre ce que vous voulez mais "
-"assurez-vous d'employer le même nom sur toutes vos machines."
+"paramÃ©trez votre propre rÃ©seau, vous pouvez mettre ce que vous voulez mais "
+"assurez-vous d'employer le mÃªme nom sur toutes vos machines."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Adresses des serveurs de noms :"
+msgstr "Adresses des serveurs de nomsÂ :"
 
 #. Type: string
 #. Description
@@ -85,17 +85,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Les serveurs de noms servent à la recherche des noms d'hôtes sur le réseau. "
-"Veuillez donner leurs adresses IP (pas les noms des machines) ; vous pouvez "
-"inscrire au plus trois adresses, séparées par des espaces. N'utilisez pas de "
-"virgule. Le premier serveur indiqué sera interrogé en premier. Si vous ne "
+"Les serveurs de noms servent Ã  la recherche des noms d'hÃ´tes sur le rÃ©seau. "
+"Veuillez donner leurs adresses IP (pas les noms des machines)Â ; vous pouvez "
+"inscrire au plus trois adresses, sÃ©parÃ©es par des espaces. N'utilisez pas de "
+"virgule. Le premier serveur indiquÃ© sera interrogÃ© en premier. Si vous ne "
 "voulez pas utiliser de serveur de noms, laissez ce champ vide."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Interface réseau principale :"
+msgstr "Interface rÃ©seau principaleÂ :"
 
 #. Type: select
 #. Description
@@ -105,15 +105,15 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Votre système possède plusieurs interfaces réseau. Choisissez celle que vous "
+"Votre systÃ¨me possÃ¨de plusieurs interfaces rÃ©seau. Choisissez celle que vous "
 "voulez utiliser comme interface principale pour l'installation. Si possible, "
-"la première interface réseau connectée a déjà été choisie."
+"la premiÃ¨re interface rÃ©seau connectÃ©e a dÃ©jÃ  Ã©tÃ© choisie."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Nom (ESSID) du réseau sans fil pour ${iface} :"
+msgstr "Nom (ESSID) du rÃ©seau sans fil pour ${iface}Â :"
 
 #. Type: string
 #. Description
@@ -123,15 +123,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} est l'interface d'un réseau sans fil. Veuillez indiquer le nom "
-"(ESSID) de ce réseau sans fil pour pouvoir utiliser ${iface}. Si vous voulez "
-"utiliser un autre réseau, laissez ce champ vide."
+"${iface} est l'interface d'un rÃ©seau sans fil. Veuillez indiquer le nom "
+"(ESSID) de ce rÃ©seau sans fil pour pouvoir utiliser ${iface}. Si vous voulez "
+"utiliser un autre rÃ©seau, laissez ce champ vide."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Clé WEP pour le périphérique sans fil ${iface} :"
+msgstr "ClÃ© WEP pour le pÃ©riphÃ©rique sans fil ${iface}Â :"
 
 #. Type: string
 #. Description
@@ -140,8 +140,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Si nécessaire, veuillez indiquer la clé de sécurité WEP pour le périphérique "
-"sans fil ${iface}. Il y a deux façons de le faire :"
+"Si nÃ©cessaire, veuillez indiquer la clÃ© de sÃ©curitÃ© WEP pour le pÃ©riphÃ©rique "
+"sans fil ${iface}. Il y a deux faÃ§ons de le faireÂ :"
 
 #. Type: string
 #. Description
@@ -150,8 +150,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Si le format de la clé WEP est « nnnn-nnnn-nn », « nn:nn:nn:nn:nn:nn:nn:nn » "
-"ou « nnnnnnnn », avec n égal à un nombre, il suffit de l'indiquer tel quel "
+"Si le format de la clÃ© WEP est Â«Â nnnn-nnnn-nnÂ Â», Â«Â nn:nn:nn:nn:nn:nn:nn:nnÂ Â» "
+"ou Â«Â nnnnnnnnÂ Â», avec n Ã©gal Ã  un nombre, il suffit de l'indiquer tel quel "
 "dans le champ."
 
 #. Type: string
@@ -160,7 +160,7 @@ msgstr ""
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
-msgstr "Si le format de la clé est une phrase, préfixez-la avec « s: »."
+msgstr "Si le format de la clÃ© est une phrase, prÃ©fixez-la avec Â«Â s:Â Â»."
 
 #. Type: string
 #. Description
@@ -169,14 +169,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Bien sûr, si le réseau sans fil ne possède pas de clé WEP, laissez ce champ "
+"Bien sÃ»r, si le rÃ©seau sans fil ne possÃ¨de pas de clÃ© WEP, laissez ce champ "
 "vide."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Clé WEP non valable"
+msgstr "ClÃ© WEP non valable"
 
 #. Type: error
 #. Description
@@ -185,9 +185,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La clé WEP ${wepkey} n'est pas valable. Veuillez consulter attentivement les "
-"instructions contenues dans le prochain écran sur la manière d'indiquer "
-"correctement une clé WEP et réessayez."
+"La clÃ© WEP ${wepkey} n'est pas valable. Veuillez consulter attentivement les "
+"instructions contenues dans le prochain Ã©cran sur la maniÃ¨re d'indiquer "
+"correctement une clÃ© WEP et rÃ©essayez."
 
 #. Type: error
 #. Description
@@ -202,20 +202,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Le nom « ${essid} » n'est pas valable. Les ESSID ne doivent pas dépasser 32 "
-"caractères, mais ils peuvent contenir toutes sortes de caractères."
+"Le nom Â«Â ${essid}Â Â» n'est pas valable. Les ESSID ne doivent pas dÃ©passer 32 "
+"caractÃ¨res, mais ils peuvent contenir toutes sortes de caractÃ¨res."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Nom de machine :"
+msgstr "Nom de machineÂ :"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Veuillez indiquer le nom de ce système."
+msgstr "Veuillez indiquer le nom de ce systÃ¨me."
 
 #. Type: string
 #. Description
@@ -226,9 +226,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Le nom de machine est un mot unique qui identifie le système sur le réseau. "
-"Si vous ne connaissez pas ce nom, demandez-le à votre administrateur réseau. "
-"Si vous installez votre propre réseau, vous pouvez mettre ce que vous voulez."
+"Le nom de machine est un mot unique qui identifie le systÃ¨me sur le rÃ©seau. "
+"Si vous ne connaissez pas ce nom, demandez-le Ã  votre administrateur rÃ©seau. "
+"Si vous installez votre propre rÃ©seau, vous pouvez mettre ce que vous voulez."
 
 #. Type: error
 #. Description
@@ -240,7 +240,7 @@ msgstr "Nom de machine non valable"
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Le nom « ${hostname} » n'est pas valable."
+msgstr "Le nom Â«Â ${hostname}Â Â» n'est pas valable."
 
 #. Type: error
 #. Description
@@ -251,8 +251,8 @@ msgid ""
 "not begin or end with a minus sign."
 msgstr ""
 "Un nom valable ne peut contenir que les chiffres 0-9, les lettres minuscules "
-"a-z et le signe moins ; sa longueur doit être comprise entre 2 et 63 "
-"caractères et il ne peut ni commencer ni finir par un signe moins."
+"a-z et le signe moinsÂ ; sa longueur doit Ãªtre comprise entre 2 et 63 "
+"caractÃ¨res et il ne peut ni commencer ni finir par un signe moins."
 
 #. Type: error
 #. Description
@@ -267,15 +267,15 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Une erreur s'est produite et le processus de configuration du réseau a été "
-"abandonné. Vous pouvez le reprendre à partir du menu principal du programme "
+"Une erreur s'est produite et le processus de configuration du rÃ©seau a Ã©tÃ© "
+"abandonnÃ©. Vous pouvez le reprendre Ã  partir du menu principal du programme "
 "d'installation."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Aucune interface réseau n'a été détectée"
+msgstr "Aucune interface rÃ©seau n'a Ã©tÃ© dÃ©tectÃ©e"
 
 #. Type: error
 #. Description
@@ -284,8 +284,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Aucune interface réseau n'a été détectée. Le système d'installation n'a pu "
-"trouver aucun périphérique réseau."
+"Aucune interface rÃ©seau n'a Ã©tÃ© dÃ©tectÃ©e. Le systÃ¨me d'installation n'a pu "
+"trouver aucun pÃ©riphÃ©rique rÃ©seau."
 
 #. Type: error
 #. Description
@@ -294,9 +294,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Vous devez sans doute charger un module spécifique à votre carte réseau - si "
-"vous en avez une. Pour cela, revenez à l'étape de détection du matériel "
-"réseau."
+"Vous devez sans doute charger un module spÃ©cifique Ã  votre carte rÃ©seau - si "
+"vous en avez une. Pour cela, revenez Ã  l'Ã©tape de dÃ©tection du matÃ©riel "
+"rÃ©seau."
 
 #. Type: note
 #. Description
@@ -304,7 +304,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "« kill switch » activé sur ${iface}"
+msgstr "Â«Â kill switchÂ Â» activÃ© sur ${iface}"
 
 #. Type: note
 #. Description
@@ -314,9 +314,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} semble avoir été désactivée par un paramètre matériel « kill "
-"switch ». Si vous voulez utiliser cette interface, veuillez changer ce "
-"paramètre avant de continuer."
+"${iface} semble avoir Ã©tÃ© dÃ©sactivÃ©e par un paramÃ¨tre matÃ©riel Â«Â kill "
+"switchÂ Â». Si vous voulez utiliser cette interface, veuillez changer ce "
+"paramÃ¨tre avant de continuer."
 
 #. Type: select
 #. Choices
@@ -324,13 +324,13 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Réseau en mode Infrastructure, Réseau en mode Ad-Hoc (d'égal à égal)"
+msgstr "RÃ©seau en mode Infrastructure, RÃ©seau en mode Ad-Hoc (d'Ã©gal Ã  Ã©gal)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "Type de réseau sans fil :"
+msgstr "Type de rÃ©seau sans filÂ :"
 
 #. Type: select
 #. Description
@@ -340,22 +340,22 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Les réseaux sans fil fonctionnent en mode « infrastructure » (« managed ») "
-"ou en mode « ad-hoc ». Si vous utilisez un point d'accès matériel, votre "
-"réseau est de type « infrastructure ». Si un autre ordinateur fait office de "
-"point d'accès, le réseau est de type « ad-hoc »."
+"Les rÃ©seaux sans fil fonctionnent en mode Â«Â infrastructureÂ Â» (Â«Â managedÂ Â») "
+"ou en mode Â«Â ad-hocÂ Â». Si vous utilisez un point d'accÃ¨s matÃ©riel, votre "
+"rÃ©seau est de type Â«Â infrastructureÂ Â». Si un autre ordinateur fait office de "
+"point d'accÃ¨s, le rÃ©seau est de type Â«Â ad-hocÂ Â»."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:129
 msgid "Wireless network configuration"
-msgstr "Configuration du réseau sans fil"
+msgstr "Configuration du rÃ©seau sans fil"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "Recherche de points d'accès..."
+msgstr "Recherche de points d'accÃ¨s..."
 
 #. Type: text
 #. Description
@@ -391,25 +391,25 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr "Réseau USB"
+msgstr "RÃ©seau USB"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Serial-line IP"
-msgstr "IP sur ligne série"
+msgstr "IP sur ligne sÃ©rie"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Parallel-port IP"
-msgstr "IP sur port parallèle"
+msgstr "IP sur port parallÃ¨le"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Point-to-Point Protocol"
-msgstr "Protocole point à point"
+msgstr "Protocole point Ã  point"
 
 #. Type: text
 #. Description
@@ -421,7 +421,7 @@ msgstr "IPv6 dans IPv4"
 #. Description
 #: ../netcfg-common.templates:188
 msgid "ISDN Point-to-Point Protocol"
-msgstr "Protocole point à point RNIS"
+msgstr "Protocole point Ã  point RNIS"
 
 #. Type: text
 #. Description
@@ -433,13 +433,13 @@ msgstr "Canal vers canal"
 #. Description
 #: ../netcfg-common.templates:196
 msgid "Real channel-to-channel"
-msgstr "Canal vers canal réel"
+msgstr "Canal vers canal rÃ©el"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Inter-user communication vehicle"
-msgstr "Moyen de communication d'usager à usager"
+msgstr "Moyen de communication d'usager Ã  usager"
 
 #. Type: text
 #. Description
@@ -452,20 +452,20 @@ msgstr "Interface inconnue"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
 msgid "Storing network settings ..."
-msgstr "Stockage des paramètres du réseau..."
+msgstr "Stockage des paramÃ¨tres du rÃ©seau..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "Configurer le réseau"
+msgstr "Configurer le rÃ©seau"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Nom de machine DHCP :"
+msgstr "Nom de machine DHCPÂ :"
 
 #. Type: string
 #. Description
@@ -475,7 +475,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "Parfois, vous devez donner un nom de machine DHCP. Si vous utilisez un modem "
-"câble, vous avez peut-être besoin d'indiquer un numéro de compte."
+"cÃ¢ble, vous avez peut-Ãªtre besoin d'indiquer un numÃ©ro de compte."
 
 #. Type: string
 #. Description
@@ -487,37 +487,37 @@ msgstr "La plupart des autres utilisateurs peuvent laisser ce champ vide."
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Configuration du réseau avec DHCP"
+msgstr "Configuration du rÃ©seau avec DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Cette opération peut prendre du temps."
+msgstr "Cette opÃ©ration peut prendre du temps."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "La configuration automatique a réussi."
+msgstr "La configuration automatique a rÃ©ussi."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "Aucun client DHCP trouvé"
+msgstr "Aucun client DHCP trouvÃ©"
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "Aucun client DHCP trouvé. Ce paquet demande pump ou dhcp-client."
+msgstr "Aucun client DHCP trouvÃ©. Ce paquet demande pump ou dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Le processus de configuration DHCP va être interrompu."
+msgstr "Le processus de configuration DHCP va Ãªtre interrompu."
 
 #. Type: select
 #. Choices
@@ -526,19 +526,19 @@ msgstr "Le processus de configuration DHCP va être interrompu."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Réessayer la configuration automatique du réseau"
+msgstr "RÃ©essayer la configuration automatique du rÃ©seau"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Réessayer la configuration automatique avec un nom d'hôte DHCP"
+msgstr "RÃ©essayer la configuration automatique avec un nom d'hÃ´te DHCP"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Configurer vous-même le réseau"
+msgstr "Configurer vous-mÃªme le rÃ©seau"
 
 #. Type: select
 #. Choices
@@ -550,13 +550,13 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "Ne pas configurer le réseau maintenant"
+msgstr "Ne pas configurer le rÃ©seau maintenant"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "Méthode pour la configuration du réseau :"
+msgstr "MÃ©thode pour la configuration du rÃ©seauÂ :"
 
 #. Type: select
 #. Description
@@ -568,17 +568,17 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Vous pouvez maintenant réessayer la configuration automatique du réseau, - "
-"cela peut réussir si le serveur DHCP met du temps à répondre -, ou bien vous "
-"pouvez configurer vous-même le réseau. Certains serveurs DHCP demandent "
-"qu'un hôte DHCP soit donné par le client, vous pouvez l'indiquer avant de "
-"réessayer la configuration automatique."
+"Vous pouvez maintenant rÃ©essayer la configuration automatique du rÃ©seau, - "
+"cela peut rÃ©ussir si le serveur DHCP met du temps Ã  rÃ©pondre -, ou bien vous "
+"pouvez configurer vous-mÃªme le rÃ©seau. Certains serveurs DHCP demandent "
+"qu'un hÃ´te DHCP soit donnÃ© par le client, vous pouvez l'indiquer avant de "
+"rÃ©essayer la configuration automatique."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "La configuration automatique a échoué"
+msgstr "La configuration automatique a Ã©chouÃ©"
 
 #. Type: note
 #. Description
@@ -587,15 +587,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Le protocole DHCP n'est probablement pas utilisé sur votre réseau. Il est "
-"également possible que le serveur DHCP soit lent ou que certains équipements "
-"réseau ne fonctionnent pas correctement."
+"Le protocole DHCP n'est probablement pas utilisÃ© sur votre rÃ©seau. Il est "
+"Ã©galement possible que le serveur DHCP soit lent ou que certains Ã©quipements "
+"rÃ©seau ne fonctionnent pas correctement."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "Faut-il continuer sans route par défaut ?"
+msgstr "Faut-il continuer sans route par dÃ©fautÂ ?"
 
 #. Type: boolean
 #. Description
@@ -607,11 +607,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"La configuration automatique du réseau a réussi. Cependant aucune route par "
-"défaut n'a été déclarée : le système ne sait pas comment communiquer avec "
+"La configuration automatique du rÃ©seau a rÃ©ussi. Cependant aucune route par "
+"dÃ©faut n'a Ã©tÃ© dÃ©clarÃ©eÂ : le systÃ¨me ne sait pas comment communiquer avec "
 "des machines sur internet. Cela rendra l'installation impossible, sauf si "
-"vous utilisez le premier cédérom d'installation, un cédérom « netinst » ou "
-"des paquets disponibles sur le réseau local."
+"vous utilisez le premier cÃ©dÃ©rom d'installation, un cÃ©dÃ©rom Â«Â netinstÂ Â» ou "
+"des paquets disponibles sur le rÃ©seau local."
 
 #. Type: boolean
 #. Description
@@ -620,20 +620,20 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Dans le doute, vous devriez éviter de continuer l'installation sans route "
-"par défaut et contacter votre administrateur réseau à propos de ce problème."
+"Dans le doute, vous devriez Ã©viter de continuer l'installation sans route "
+"par dÃ©faut et contacter votre administrateur rÃ©seau Ã  propos de ce problÃ¨me."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "Reconfigurer le réseau sans fil"
+msgstr "Reconfigurer le rÃ©seau sans fil"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:3
 msgid "IP address:"
-msgstr "Adresse IP :"
+msgstr "Adresse IPÂ :"
 
 #. Type: string
 #. Description
@@ -643,15 +643,15 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"L'adresse IP est spécifique à votre machine ; elle consiste en quatre "
-"nombres, séparés par des points. Si vous ne savez pas quoi mettre ici, "
-"consultez votre administrateur système."
+"L'adresse IP est spÃ©cifique Ã  votre machineÂ ; elle consiste en quatre "
+"nombres, sÃ©parÃ©s par des points. Si vous ne savez pas quoi mettre ici, "
+"consultez votre administrateur systÃ¨me."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Adresse IP mal formée"
+msgstr "Adresse IP mal formÃ©e"
 
 #. Type: error
 #. Description
@@ -660,14 +660,14 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"L'adresse IP que vous avez donnée est mal formée. Son format doit être x.x.x."
-"x où chaque x est inférieur ou égal à 255. Veuillez réessayer."
+"L'adresse IP que vous avez donnÃ©e est mal formÃ©e. Son format doit Ãªtre x.x.x."
+"x oÃ¹ chaque x est infÃ©rieur ou Ã©gal Ã  255. Veuillez rÃ©essayer."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr "Adresse point-à-point :"
+msgstr "Adresse point-Ã -pointÂ :"
 
 #. Type: string
 #. Description
@@ -678,16 +678,16 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"L'adresse point-à-point sert à déterminer le point terminal d'un réseau "
-"point-à-point. Si vous ne connaissez pas cette valeur, consultez votre "
-"administrateur. L'adresse point-à-point est une série de quatre nombres "
-"séparés par des points."
+"L'adresse point-Ã -point sert Ã  dÃ©terminer le point terminal d'un rÃ©seau "
+"point-Ã -point. Si vous ne connaissez pas cette valeur, consultez votre "
+"administrateur. L'adresse point-Ã -point est une sÃ©rie de quatre nombres "
+"sÃ©parÃ©s par des points."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Valeur du masque-réseau :"
+msgstr "Valeur du masque-rÃ©seauÂ :"
 
 #. Type: string
 #. Description
@@ -697,15 +697,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Le masque-réseau sert à déterminer les machines locales de votre réseau. Si "
+"Le masque-rÃ©seau sert Ã  dÃ©terminer les machines locales de votre rÃ©seau. Si "
 "vous ne connaissez pas cette valeur, consultez votre administrateur. Le "
-"masque-réseau est une série de quatre nombres séparés par des points."
+"masque-rÃ©seau est une sÃ©rie de quatre nombres sÃ©parÃ©s par des points."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Passerelle :"
+msgstr "PasserelleÂ :"
 
 #. Type: string
 #. Description
@@ -718,13 +718,13 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"La passerelle est une adresse IP (quatre nombres séparés par des points) qui "
-"indique la machine qui joue le rôle de routeur ; cette machine est aussi "
-"appelée le routeur par défaut. Tout le trafic qui sort de votre réseau (p. "
+"La passerelle est une adresse IP (quatre nombres sÃ©parÃ©s par des points) qui "
+"indique la machine qui joue le rÃ´le de routeurÂ ; cette machine est aussi "
+"appelÃ©e le routeur par dÃ©faut. Tout le trafic qui sort de votre rÃ©seau (p. "
 "ex. vers internet) passe par ce routeur. Dans quelques rares circonstances, "
 "vous n'avez pas besoin de routeur. Si c'est le cas, vous pouvez laisser ce "
 "champ vide. Consultez votre administrateur si vous ne connaissez pas la "
-"réponse correcte à cette question."
+"rÃ©ponse correcte Ã  cette question."
 
 #. Type: error
 #. Description
@@ -736,7 +736,7 @@ msgstr "Passerelle inaccessible"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "La passerelle indiquée n'est pas accessible."
+msgstr "La passerelle indiquÃ©e n'est pas accessible."
 
 #. Type: error
 #. Description
@@ -744,20 +744,20 @@ msgstr "La passerelle indiquée n'est pas accessible."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Il se peut que vous ayez mal indiqué l'adresse IP, le masque-réseau ou la "
+"Il se peut que vous ayez mal indiquÃ© l'adresse IP, le masque-rÃ©seau ou la "
 "passerelle."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Les informations suivantes sont-elles correctes ?"
+msgstr "Les informations suivantes sont-elles correctesÂ ?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Paramètres réseau actuels :"
+msgstr "ParamÃ¨tres rÃ©seau actuelsÂ :"
 
 #. Type: boolean
 #. Description
@@ -772,9 +772,9 @@ msgid ""
 msgstr ""
 "  interface         = ${interface}\n"
 "  adresse IP        = ${ipaddress}\n"
-"  masque-réseau     = ${netmask}\n"
+"  masque-rÃ©seau     = ${netmask}\n"
 "  passerelle        = ${gateway}\n"
-"  point-à-point     = ${pointopoint}\n"
+"  point-Ã -point     = ${pointopoint}\n"
 "  serveurs de noms  = ${nameservers}"
 
 #. Type: text
@@ -782,4 +782,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Configurer manuellement le réseau"
+msgstr "Configurer manuellement le rÃ©seau"
