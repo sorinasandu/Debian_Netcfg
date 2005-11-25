@@ -9,22 +9,20 @@
 # This file is distributed under the same licence as debian-installer.
 # Jaonary Rabarisoa  <jaonary@ifrance.com>, 2004.
 # Jaonary Rabarisoa <mpandikateny@linuxmg.org>, 2005.
+# Jaonary Rabarisoa <jaonary@free.fr>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mg\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-03-30 17:30+0200\n"
-"Last-Translator: Jaonary Rabarisoa <mpandikateny@linuxmg.org>\n"
-"Language-Team: Malagasy <mpandikateny@linuxmg.org>\n"
+"PO-Revision-Date: 2005-11-24 22:28+0100\n"
+"Last-Translator: Jaonary Rabarisoa <jaonary@free.fr>\n"
+"Language-Team: Malagasy <jaonary@free.fr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Poedit-Language: Malagasy\n"
-"X-Poedit-Country: Madagasca\n"
+"Plural-Forms: nplurals=2; plural=n>1;X-Generator: KBabel 1.10.2\n"
 
 #. Type: boolean
 #. Description
@@ -100,14 +98,11 @@ msgstr "Mpanera rezo primaire"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Manana mpanera rezo maro ny milina nao. Fidio izay ho atao mpanera rezo "
-"primaire. mandritra ny fametrahana an'i Debian. "
 
 #. Type: string
 #. Description
@@ -265,12 +260,10 @@ msgstr "Fahadisoana"
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
-#, fuzzy
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Nisy fahadisoana nitranga ka dia najanona ny lahatr'asa fanefena ny rezo. "
 
 #. Type: error
 #. Description
@@ -305,7 +298,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Kill switch mandeha ao amin'ny ${iface}"
 
 #. Type: note
 #. Description
@@ -388,7 +381,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB net"
 
 #. Type: text
 #. Description
@@ -448,9 +441,8 @@ msgstr "Mpanera tsy fantatra"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Manefy ny rezo ..."
+msgstr ""
 
 #. Type: text
 #. Description
@@ -561,14 +553,13 @@ msgstr "Fomba fanefy ny rezo:"
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
-#, fuzzy
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
 "the network manually. Some DHCP servers require a DHCP hostname to be sent "
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
-msgstr "Afaka mamerina ny fanefena otomatika ny rezo DHCP ianao eto"
+msgstr ""
 
 #. Type: note
 #. Description
@@ -663,13 +654,12 @@ msgstr "Adiresy teboka an-teboka:"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
-msgstr "hafa."
+msgstr ""
 
 #. Type: string
 #. Description
