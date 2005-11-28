@@ -191,6 +191,8 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
         fprintf(fp, "\n# The primary network interface\n");
         if (!iface_is_hotpluggable(interface) && !find_in_stab(interface))
             fprintf(fp, "auto %s\n", interface);
+	else
+            fprintf(fp, "allow-hotplug %s\n", interface);
         fprintf(fp, "iface %s inet static\n", interface);
         fprintf(fp, "\taddress %s\n", inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
         fprintf(fp, "\tnetmask %s\n", inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));

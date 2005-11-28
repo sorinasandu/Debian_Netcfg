@@ -710,7 +710,7 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
             fprintf(fp, "# This is a list of hotpluggable network interfaces.\n");
             fprintf(fp, "# They will be activated automatically by the "
                     "hotplug subsystem.\n");
-            fprintf(fp, "mapping hotplug\n");
+            fprintf(fp, "mapping eth0\n");
             fprintf(fp, "\tscript grep\n");
             fprintf(fp, "\tmap %s\n", interface);
         }

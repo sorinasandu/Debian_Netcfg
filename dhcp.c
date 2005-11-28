@@ -37,6 +37,8 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
         fprintf(fp, "\n# The primary network interface\n");
         if (!iface_is_hotpluggable(iface) && !find_in_stab(iface))
             fprintf(fp, "auto %s\n", iface);
+	else
+            fprintf(fp, "allow-hotplug %s\n", iface);
         fprintf(fp, "iface %s inet dhcp\n", iface);
         if (dhostname)
         {

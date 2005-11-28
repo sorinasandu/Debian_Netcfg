@@ -1,9 +1,15 @@
 netcfg (1.18) UNRELEASED; urgency=low
 
+  [ Joey Hess ]
   * Make netcfg-static use the same menu item number as netcfg, no reason for
     it to differ.
 
- -- Joey Hess <joeyh@debian.org>  Fri, 18 Nov 2005 15:18:52 -0500
+  [ Frans Pop ]
+  * Change hotplug configuration as written to interface file. This new
+    syntax is supported by both udev and hotplug (from 0.0.20040329-25).
+    Closes: #340935.
+
+ -- Frans Pop <fjp@debian.org>  Mon, 28 Nov 2005 15:38:25 +0100
 
 netcfg (1.17) unstable; urgency=low
 
