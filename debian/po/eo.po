@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Memakomodu reto kun DHCP ?"
+msgstr "Memakomodu reto kun 'DHCP'-o ?"
 
 #. Type: boolean
 #. Description
@@ -40,9 +40,9 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Oni uzeblas DHCP por akomodi la reton aŭ mem eldoni ĉiujn la informojn. Se "
-"vi elektus akomodon per DHCP kaj se la instalilo misakomodas la reton per "
-"DHCP servilo, vi memakomodus la reton post la DHCP klopodo."
+"Oni uzeblas 'DHCP'-o por akomodi la reton aŭ mem eldoni ĉiujn la informojn. "
+"Se vi elektus akomodon per 'DHCP'-o kaj se la instalilo misakomodas la reton "
+"per 'DHCP'-servilo, vi memakomodus la reton post la 'DHCP'-a klopodo."
 
 #. Type: string
 #. Description
@@ -107,7 +107,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Sendrata ESSID por ${iface} :"
+msgstr "Sendrata 'ESSID'-o por '${iface}'-o :"
 
 #. Type: string
 #. Description
@@ -117,8 +117,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
-"retan nomon (ESSID), kiun vi volu ${iface} uzas. Se vi volus uzi alian "
+"'${iface}'-o estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
+"retan nomon ('ESSID'), kiun vi volu '${iface}'-a uzas. Se vi volus uzi alian "
 "reton, malplenu la registrokampon."
 
 #. Type: string
@@ -134,8 +134,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Se eble, bonvolu tajpi la WEP sekuran ĉifroŝlosilon por sendrata aparato "
-"${iface}. Estas du manieroj de fari tio :"
+"Se eble, bonvolu tajpi la 'WEP'-o sekuran ĉifroŝlosilon por sendrata "
+"'${iface}'-aparato. Estas du manieroj de fari tio :"
 
 #. Type: string
 #. Description
@@ -144,9 +144,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Se via WEP ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', nn:nn:nn:nn:nn:"
-"nn:nn:nn', aŭ 'nnnnnnnn', kiu n estas nombro. Tajpu ĝin en la registrokampo "
-"nur tia ĝi estas."
+"Se via 'WEP'-ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', nn:nn:nn:nn:"
+"nn:nn:nn:nn', aŭ 'nnnnnnnn', kiu n estas nombro. Tajpu ĝin en la "
+"registrokampo nur tia ĝi estas."
 
 #. Type: string
 #. Description
@@ -155,7 +155,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se via WEP ĉifroŝlosilo estas en pasofraza strukturo, tajpu ĝin kun "
+"Se via 'WEP'-ĉifroŝlosilo estas en pasofraza strukturo, tajpu ĝin kun "
 "autaŭmeta 's:' (sen la citiloj)."
 
 #. Type: string
@@ -165,14 +165,14 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Kompreneble, se WEP ne estas por via sendrata reto, malplenu la "
+"Kompreneble, se 'WEP'-o ne estas por via sendrata reto, malplenu la "
 "registrokampon."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Malvalida WEP ĉifroŝlosilo"
+msgstr "Malvalida 'WEP'-ĉifroŝlosilo"
 
 #. Type: error
 #. Description
@@ -181,14 +181,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La WEP ĉifroŝlosilo '${wepkey}' estas malvalida. Bonvolu atente konsulti la "
-"sekvantan ekranon pri la maniero de registri ĉifroŝlosila WEP, kaj reprovu."
+"La 'WEP'-ĉifroŝlosilo '${wepkey}' estas malvalida. Bonvolu atente konsulti "
+"la sekvantan ekranon pri la maniero de registri 'WEP'-ĉifroŝlosilo, kaj "
+"reprovu."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "Malvalida ESSID"
+msgstr "Malvalida 'ESSID'-o"
 
 #. Type: error
 #. Description
@@ -197,8 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Malvalida ESSID \"${essid}\". ESSIDj uzendiĝas kun pli malgranda 32 signoj, "
-"sed ĝi inkludeblas ĉiajn signojn."
+"Malvalida 'ESSID'-a \"${essid}\". 'ESSID'-oj uzendiĝas kun pli malgranda 32 "
+"signoj, sed ĝi inkludeblas ĉiajn signojn."
 
 #. Type: string
 #. Description
@@ -431,7 +432,7 @@ msgstr "Real channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Inter-user communication vehicle"
-msgstr "Inter uzantoj komunika veturilo"
+msgstr "Interuzantoj komunika veturilo"
 
 #. Type: text
 #. Description
@@ -505,13 +506,14 @@ msgstr "Ne travas DHCP klienton"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Ne DHCP kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ 'dhcp'."
+"Ne 'DHCP'-kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ "
+"'dhcp'."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "La DHCP akomodado estos ĉesigita."
+msgstr "La 'DHCP'-akomodado estos ĉesigita."
 
 #. Type: select
 #. Choices
@@ -532,7 +534,7 @@ msgstr "Reprovu la retan aŭtomatakomodadon kun DHCP gastnomo"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Memakomodu la reton"
+msgstr "Meme akomodu la reton"
 
 #. Type: select
 #. Choices
