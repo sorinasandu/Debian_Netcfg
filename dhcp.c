@@ -164,7 +164,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
         if ((dc = file_open(DHCLIENT3_CONF, "w")))
         {
-          fprintf(dc, "send dhcp-class-identifier \"NetcfgDHClient\";\n" );
+          fprintf(dc, "send vendor-class-identifier \"NetcfgDHClient\";\n" );
           if (dhostname)
           {
             fprintf(dc, "send host-name \"%s\";\n", dhostname);
