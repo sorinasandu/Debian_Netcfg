@@ -80,7 +80,7 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"La nomserviloj estas uzata por trovi aliaj sistemnomoj en la reto. Bonvolu "
+"La nomserviloj estas uzataj por trovi aliaj sistemnomoj en la reto. Bonvolu "
 "tajpi ĝiajn IP adresojn (ne ĝiajn sistemnomojn) ; vi povas enskirbi ĝis tri "
 "interpacajn adresojn, ne uzas la komaj literoj. La unua servilo estos unue "
 "pridemandita."
@@ -145,7 +145,7 @@ msgid ""
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
 "Se via 'WEP'-ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', nn:nn:nn:nn:"
-"nn:nn:nn:nn', aŭ 'nnnnnnnn', kiu n estas nombro. Tajpu ĝin en la "
+"nn:nn:nn:nn', aŭ 'nnnnnnnn', kiu 'n' estas nombro. Tajpu ĝin en la "
 "registrokampo nur tia ĝi estas."
 
 #. Type: string
@@ -270,7 +270,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Neniu reta aparatadaptilo estas trovita"
+msgstr "Neniu trovita reta aparatadaptilo"
 
 #. Type: error
 #. Description
@@ -279,8 +279,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Neniu retaj aparatadaptiloj estas trovita. La instalilo ne troveblas la "
-"retan aparatadaptilon."
+"Neniu reta aparatadaptilo estas trovita. La instalilo ne troveblas la retan "
+"aparatadaptilon."
 
 #. Type: error
 #. Description
@@ -506,7 +506,7 @@ msgstr "Neniu travita 'DHCP'-kliento"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Ne 'DHCP'-kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ "
+"Neniu 'DHCP'-kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ "
 "'dhcp'."
 
 #. Type: error
@@ -564,9 +564,9 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Vi tuj reprovus la DHCP aŭtomatakomodadon (ĝi sukceseblos se via DHCP "
-"servilo malfrue respondas) aŭ por memakomodi la retan. Kelkaj DHCP servilo "
-"bezonas DHCP gastnomon nomitan de la kliento. Vi provizeblos ĝin antaŭe "
+"Vi tuj reprovus la 'DHCP'-aŭtomatakomodadon (ĝi sukceseblos se via 'DHCP'-"
+"servilo malfrue respondas) aŭ por memakomodi la retan. Kelkaj 'DHCP'-servilo "
+"bezonas 'DHCP'-gastnomon nomitan de la kliento. Vi provizeblos ĝin antaŭe "
 "reprovi la aŭtomatakomodadon."
 
 #. Type: note
@@ -582,8 +582,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Via reto neuzus la DHCP protokolon. Alternative, la DHCP servilo malrapidus "
-"aŭ iom aparatoj malfunkcius."
+"Via reto neuzus la 'DHCP'-protokolon. Alternative, la 'DHCP'-servilo "
+"malrapidus aŭ iom aparatoj malfunkcius."
 
 #. Type: boolean
 #. Description
@@ -594,7 +594,6 @@ msgstr "Daŭrigu sen implicita kurso ?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -605,7 +604,7 @@ msgstr ""
 "La reta aŭtomatakomodado sukcesis. Tamen, ne implicita itinero estis "
 "deklarita : la sistemo ne scias kiel komuniki kun aliaj retaj aparatoj. Tio "
 "maluzigas la instalaĵon, krom se vi uzas la aficialan unuan Debianan "
-"lumdiskon, 'netinst' lumdiskon, aŭ disponeblajn pakaĵojn en loka reto."
+"lumdiskon, 'netinst'-lumdiskon, aŭ disponeblajn pakaĵojn en loka reto."
 
 #. Type: boolean
 #. Description
