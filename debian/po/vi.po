@@ -10,19 +10,20 @@
 # Vũ Quang Trung <vu.quang.trung@auf.org>
 # Trịnh Minh Thành <tmthanh@yahoo.com>
 # Clytie Siddall <clytie@riverland.net.au>, 2005.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer Level 1\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-08-21 14:21+0930\n"
+"PO-Revision-Date: 2005-12-30 22:22+1030\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: LocFactoryEditor 1.5.1b\n"
 
 # Type: boolean
 # Description
@@ -30,7 +31,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Tự động định cấu hình mạng bằng DHCP không?"
+msgstr "Tự động cấu hình mạng bằng DHCP không?"
 
 # Type: boolean
 # Description
@@ -44,10 +45,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Có thể định cấu hình mạng hoặc qua DHCP hoặc bằng cách tự gõ tất cả thông "
-"tin cần thiết. Nếu bạn chọn sử dụng DHCP còn trình cài đặt không thể gọi cấu "
-"hình hoạt động từ máy chủ DHCP trên mạng bạn, bạn sẽ có dịp tự định cấu hình "
-"mạng bạn sau một lần thử làm như thế qua DHCP."
+"Cách chạy mạng có thể được cấu hình hoặc bằng DHCP hoặc bằng cách tự gõ tất "
+"cả các thông tin cần thiết. Nếu bạn chọn sử dụng DHCP còn trình cài đặt "
+"không thể lấy một cấu hình hoạt động từ máy chủ DHCP trê nàon mạng bạn, bạn "
+"sẽ có dịp tự địn hình mạn bạn mình một việc cố cấu hình bằngP."
 
 # Type: string
 # Description
@@ -68,11 +69,11 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Tên miền (domain name) là phần địa chỉ Mạng ở bên phải tên máy chủ (host "
-"name). Nó thường có phần cuối .com (công ty), .net (Mạng), .edu (học) hay ."
-"org (tổ chức). Nếu bạn đang thiết lập một mạng ở nhà thì có thể tạo tên miền "
-"(không phải là phần Mạng bên ngoại), nhưng hãy bảo đảm sử dụng cùng một tên "
-"miền trên mọi máy vi tính."
+"Tên miền (domain name) là phần của địa chỉ Mạng ở bên phải tên máyst nam). "
+"Nó thường có phần cuối .com«  (cô » hay « .co »ng ty), .net«  (Mạ »ng), ."
+"edu«  (họ »c) hay .or« g(tổ » chức). Nếu bạn đang thiết lập một mạng ở nhà "
+"thì có thể tạo tên miền (khng phải là phần Mạng bên ngoại), nhưng hãy bảo "
+"chắc đãdụng cùng một tên miề trên mọi máy vi tính."
 
 # Type: string
 # Description
@@ -116,7 +117,7 @@ msgid ""
 msgstr ""
 "Hệ thống bạn có nhiều giao diện mạng. Hãy chọn điều nào cần sử dụng là giao "
 "diện mạng chính trong khi cài đặt. Nếu có thể, giao diện mạng được kết nối "
-"thứ nhất đã được chọn rồi."
+"thứ nhất đã được chọn."
 
 # Type: string
 # Description
@@ -124,7 +125,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID không dây cho ${iface}:"
+msgstr "ESSID vô tuyến cho ${iface}:"
 
 # Type: string
 # Description
@@ -155,8 +156,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Nếu thích hợp thì hãy gõ khóa bảo mật WEP cho thiết bị không dây ${iface}. "
-"Có hai cách làm như thế:"
+"Nếu thích hợp thì hãy gõ khóa bảo mật (security key) WEP cho thiết bị không "
+"dây ${iface}. Có hai cách làm như thế:"
 
 #. Type: string
 #. Description
@@ -165,8 +166,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"<BR>Nếu khóa WEP bạn có dạng thức 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
-"<BR>hay 'nnnnnnnn', mà 'n' là số, hãy chỉ gõ chuỗi số ấy vào trường này."
+"Nếu khóa WEP bạn có dạng thức « nnnn-nnnn-nn », « nn:nn:nn:nn:nn:nn:nn:nn », "
+"hay « nnnnnnnn », mà 'n' là số, hãy chỉ gõ chuỗi số vào trường này."
 
 #. Type: string
 #. Description
@@ -176,8 +177,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Nếu khóa WEP ban co dạng thức cụm từ mật khẩu thì hãy thêm chữ s và dấu hai "
-"chấm vào đầu khóa ấy:\n"
-"s:cụm_từ_mật_khẩu"
+"chấm vào đầu khóa đó: « s:cụm_từ_mật_khẩu »."
 
 #. Type: string
 #. Description
@@ -186,7 +186,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Vậy nếu không có khóa WEP cho mạng không dây của bạn, hãy bỏ trường này rỗng."
+"Vậy nếu không có khóa WEP cho mạng không dây của bạn,có thểy bỏ trường này "
+"rỗng."
 
 # Type: error
 # Description
@@ -203,10 +204,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Khóa WEP:\n"
-"${wepkey}không là hợp lệ.\n"
-"Trên màn hình kế tiếp, hãy tham chiếu một cách cẩn thận những hướng dẫn về "
-"cách gõ khóa WEP cho đúng, rồi thư lại."
+"Khóa WEP « ${wepkey} » không là hợp lệ. Trên màn hình kế tiếp, hãy tham "
+"chiếu một cách cẩn thận những hướng dẫn về cách gõ khóa WEP cho đúng, rồi "
+"thư lại."
 
 # Type: error
 # Description
@@ -225,8 +225,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"<BR>ESSID \"${essid}\" không là hợp lệ.<BR>ESSID có thể chứa 1-32 ký tự, bất "
-"cứ loại ký tự nào."
+"ESSID « ${essid} » không là hợp lệ. ESSID có thể chứa 1-32 ký tự, bất cứ "
+"loại ký tự nào."
 
 # Type: string
 # Description
@@ -242,7 +242,7 @@ msgstr "Tên máy:"
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Hãy nhập tên máy cho hệ thống này."
+msgstr "Hãy gõ tên máy cho hệ thống này."
 
 #. Type: string
 #. Description
@@ -271,7 +271,7 @@ msgstr "Tên máy không hợp lệ"
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Tên \"${hostname}\" không hợp lệ."
+msgstr "Tên máy « ${hostname} » không phải hợp lệ."
 
 # Type: error
 # Description
@@ -284,7 +284,7 @@ msgid ""
 "not begin or end with a minus sign."
 msgstr ""
 "Một tên máy hợp lệ có thể chứa chỉ số (0-9), chữ thường (a-z) và dấu trừ "
-"(:). Độ dài phải có 2-63 ký tự, và không cho phép bắt đầu hay kết thức với "
+"(-). Độ dài phải có 2-63 ký tự, và không cho phép bắt đầu hay kết thức với "
 "dấu trừ."
 
 # Type: error
@@ -302,8 +302,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Lỗi xảy ra nên tiến trình định cấu hình mạng bị hủy bỏ. Bạn có thể lại thử "
-"nó từ trình đơn chính của trình cài đặt."
+"Lỗi xảy ra nên tiến trình cấu hình mạng đã bị hủy bỏ. Bạn có thể lại thử nó "
+"từ trình đơn cài đặt chính."
 
 # Type: error
 # Description
@@ -311,7 +311,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Không phát hiện giao diện mạng nào."
+msgstr "Không dò tìm giao diện mạng nào"
 
 # Type: error
 # Description
@@ -322,8 +322,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Không tìm thấy giao diện mạng nào. Hệ thống cài đặt không tìm được một thiết "
-"bị mạng."
+"Không tìm thấy giao diện mạng nào. Hệ thống cài đặt không tìm được thiết bị "
+"mạng."
 
 #. Type: error
 #. Description
@@ -332,7 +332,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Có lẽ bạn sẽ cần tải một mô-đun nào đó cho thẻ mạng, nếu có. Để làm như thế, "
+"Có lẽ bạn sẽ cần tải một mô-đun dành cho thẻ mạng, nếu có. Để làm như thế, "
 "hãy trở về bước phát hiện phần cứng mạng."
 
 #. Type: note
@@ -341,7 +341,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "Cái chuyển giết trong ${iface} có bật."
+msgstr "Cái chuyển giết trong ${iface} hoạt động"
 
 #. Type: note
 #. Description
@@ -351,8 +351,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Hình như ${iface} đã bị tắt dùng một «cái chuyển giết» vật lý. Nếu bạn định "
-"sử dụng giao diện này, hãy bật nó trước khi tiếp tục."
+"Hình như ${iface} đã bị tắt bằng một « cái chuyển giết » vật lý. Nếu bạn "
+"định sử dụng giao diện này, hãy bật nó trước khi tiếp tục."
 
 #. Type: select
 #. Choices
@@ -360,7 +360,7 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "mạng hạ tầng cơ sở (được quản lý), mạng như có lúc ấy (đồng đẳng)"
+msgstr "mạng hạ tầng cơ sở (đã quản lý), mạng như có (đồng đẳng)"
 
 # Type: select
 # Description
@@ -368,7 +368,7 @@ msgstr "mạng hạ tầng cơ sở (được quản lý), mạng như có lúc
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "Loại mạng không dây:"
+msgstr "Kiểu mạng không dây:"
 
 #. Type: select
 #. Description
@@ -378,10 +378,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"mạng không dây hoặc là Được quản lý (managed) hoặc là Như có vào lúc ấy (ad "
-"hoc). Nếu bạn sử dụng một điểm truy cập thật thì mạng bạn được quản lý. Nếu "
-"máy vi tính khác thay quyền điểm truy cập thì mạng bạn có lẽ là như có vào "
-"lúc ấy."
+"mạng không dây hoặc là« Đãc quản l »ý (managed) hoặc là«  Như c »y (adhoc). "
+"Nếu bạn sử dụng một điểm truy cập thậ kiểu nàot thì mạngcủa  bạnĐãc quản lý. "
+"Nếumáy vi tính khác thay quyền điểm truy cập thì mạng bạn có lẽ làNnhư c.."
 
 # Type: text
 # Description
@@ -397,7 +396,7 @@ msgstr "Cấu hình mạng không dây"
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "Đang tìm kiếm các điểm truy cập không dây..."
+msgstr "Đang tìm kiếm điểm truy cập không dây..."
 
 # Type: text
 # Description
@@ -429,7 +428,7 @@ msgstr "không dây"
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet hoặc Fast Ethernet"
+msgstr "Ethernet hoặc Ethernet Nhanh"
 
 # Type: text
 # Description
@@ -499,7 +498,7 @@ msgstr "Kênh-đến-kênh"
 #. Description
 #: ../netcfg-common.templates:196
 msgid "Real channel-to-channel"
-msgstr "Kênh-đến-kênh thực"
+msgstr "Kênh-đến-kênh thật"
 
 # Type: text
 # Description
@@ -526,9 +525,8 @@ msgstr "Giao diện lạ"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Đang định cấu hình mạng..."
+msgstr "Đang cấu giữ thiết lập mạng..."
 
 # Type: text
 # Description
@@ -538,7 +536,7 @@ msgstr "Đang định cấu hình mạng..."
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "Định cấu hình mạng"
+msgstr "Cấu hình mạng"
 
 # Type: string
 # Description
@@ -555,8 +553,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Có lẽ bạn hãy cung cấp một tên máy loại DHCP. Nếu bạn đang sử dụng một bộ "
-"điều giải cáp thì có lẽ cũng hãy ghi rõ số tài khoản ở đây."
+"Có lẽ bạn cần phải cung cấp một tên máy kiểu DHCP. Nếu bạn đang sử dụng một "
+"bộ điều giải cáp thì có lẽ cũng cần phải ghi rõ số tài khoản ở đây."
 
 # Type: string
 # Description
@@ -572,7 +570,7 @@ msgstr "Người dùng khác có thể bỏ rỗng phần này"
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Định cấu hình mạng bằng DHCP"
+msgstr "Đang cấu hình mạng bằng DHCP"
 
 # Type: text
 # Description
@@ -588,7 +586,7 @@ msgstr "Có thể kéo dài một lát."
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Tự động định cấu hình mạng đã hoàn thành."
+msgstr "Việc tự động cấu hình mạng là thành công"
 
 # Type: error
 # Description
@@ -596,7 +594,7 @@ msgstr "Tự động định cấu hình mạng đã hoàn thành."
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client found"
-msgstr "Không tìm thấy máy khách DHCP"
+msgstr "Không tìm thấy trình khách DHCP"
 
 # Type: error
 # Description
@@ -607,8 +605,8 @@ msgstr "Không tìm thấy máy khách DHCP"
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Không tìm thấy máy khách DHCP nào. Gói này cần đến trình pump hay dhcp-"
-"client."
+"Không tìm thấy trình khách DHCP nào. Gói này cần đến trình « pump » hay « "
+"dhcp-client »."
 
 # Type: error
 # Description
@@ -629,7 +627,7 @@ msgstr "Tiến trình cấu hình DHCP sẽ bị hủy bỏ."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Thử chạy lại định cấu hình mạng tự động"
+msgstr "Thử lại chạy tiến trình tự động cấu hình mạng"
 
 # Type: select
 # Choices
@@ -637,7 +635,7 @@ msgstr "Thử chạy lại định cấu hình mạng tự động"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Thử lại định cấu hình tự động với một tên máy DHCP"
+msgstr "Thử lại tự động cấu hình với tên máy DHCP"
 
 # Type: select
 # Choices
@@ -645,7 +643,7 @@ msgstr "Thử lại định cấu hình tự động với một tên máy DHCP"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Tự định cấu hình mạng"
+msgstr "Tự cấu hình mạng"
 
 # Type: select
 # Choices
@@ -662,7 +660,7 @@ msgstr "${wifireconf}"
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "Không định cấu hình mạng vào lúc này"
+msgstr "Đừng cấu hình mạng vào lúc này"
 
 # Type: select
 # Description
@@ -670,7 +668,7 @@ msgstr "Không định cấu hình mạng vào lúc này"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "Phương thức định cấu hình mạng:"
+msgstr "Phương pháp cấu hình mạng:"
 
 # Type: select
 # Description
@@ -686,11 +684,10 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Từ điểm này thì bạn có thể chọn hoặc để thử tự động định cấu hình mạng DHCP "
-"một lần nữa (mà có lẽ thành công nếu máy chủ DHCP trả lời chậm lắm), hoặc để "
-"tự định cấu hình mạng ấy. Một số máy chủ DHCP cần đến máy khách gởi tên máy "
-"DHCP, vậy bạn cũng có thể chọn thử tự động định cấu hình mạng DHCP một lần "
-"nữa với một tên máy tự cung cấp."
+"Từ điểm này thì bạn có thể chọn hoặc để thử lại tự động cấu hình mạng DHCP "
+"(mà có lẽ thành công nếu máy chủ DHCP trả lời chậm lắmoặc để tự ịn hình mạng "
+"ấy.t số máy chủ DHCP cần đến máy kháctrìnhởi tên máy DHCP, vy bạn cũng có "
+"thể chọn thử tự động lại định cấh mạng DHCP một lần tên tự cung cấp."
 
 # Type: note
 # Description
@@ -698,7 +695,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "Lỗi tự động định cấu hình mạng."
+msgstr "Việc tự động cấu hình mạng bị lỗi."
 
 #. Type: note
 #. Description
@@ -708,7 +705,7 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "Rất có thể là mạng bạn không sử dụng giao thức DHCP. Hoặc máy chủ DHCP chậm "
-"quá, hoặc một số phần mềm mạng không hoạt động cho đúng."
+"quá hoặc một số pítn mềm mạng không hoạt động cho đúng."
 
 # Type: boolean
 # Description
@@ -731,7 +728,7 @@ msgstr ""
 "Việc tự động cấu hình mạng đã thành công. Tuy nhiên, chưa đặt đường dẫn mặc "
 "định: hệ thống chưa biết cách truyền thông với máy khác trên Mạng. Vậy không "
 "thể tiếp tục cài đặt, trừ bạn có đĩa CD-ROM cài đặt thứ nhất, đĩa CD-ROM "
-"loại Netinst (cài đặt qua Mạng) hoặc những gói sẵn sảng trên mạng địa phương."
+"loại Netinst (cài đặt qua Mạng) hoặc các gói sẵn sảng trên mạng địa phương."
 
 #. Type: boolean
 #. Description
@@ -749,7 +746,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "Định cấu hình lại mạng không dây"
+msgstr "Cấu hình lại mạng không dây"
 
 # Type: string
 # Description
@@ -790,8 +787,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Bạn đã cung cấp địa chỉ IP dạng thức sai. Nó nên có dạng x.x.x.x, mà mỗi x "
-"là số nhỏ hơn 255. Hãy thử lại."
+"Bạn đã cung cấp địa chỉ IP dạng thức sai. Nó nên có dạng « x.x.x.x », mà mỗi "
+"x là một số nhỏ hơn 255. Hãy thử lại."
 
 # Type: string
 # Description
@@ -811,7 +808,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Địa chỉ điểm-đến-điểm được sử dụng để quyết định điểm cuối khác của mạng "
-"điểm-đến-điểm. Hãy hỏi quản trị mạng nếu bạn chưa biết giá trị ấy. Cần phảỉ "
+"điểm-đến-điểm. Hãy hỏi quản trị mạng nếu bạn chưa biết giá trị này. Cần phảỉ "
 "gõ địa chỉ điểm-đến-điểm theo dạng bốn số định giới bằng dấu chấm (v.d. "
 "127.0.0.0)."
 
@@ -833,9 +830,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Mặt nạ mạng được sử dụng để quyết định những máy nào trong mạng địa phương "
-"của bạn. Hãy hỏi quản trị mạng nếu bạn chưa biết giá trị này. Cần phải gõ "
-"mặt nạ theo dạng bốn số định giới bằng dấu chấm (v.d. 127.0.0.0)."
+"Mặt nạ mạng được sử dụng để quyết định những máy nào có trong mạng địa "
+"phương của bạn. Hãy hỏi quản trị mạng nếu bạn chưa biết giá trị này. Cần "
+"phải gõ mặt nạ theo dạng bốn số định giới bằng dấu chấm (v.d. 127.0.0.0)."
 
 # Type: string
 # Description
@@ -863,12 +860,12 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "Cổng ra là địa chỉ IP (Internet Procotol: giao thức Mạng), bốn số định giới "
-"bằng dấu phẩy, mà ngụ ý máy định tuyến cổng ra (gateway router), mà cũng "
-"được biết như là máy định tuyến mặc định. Tất cả dữ liệu được truyền bên "
-"ngoại mạng địa phương (LAN) của bạn, ví dụ lên Mạng, được gởi qua máy định "
-"tuyến này. Rất ít lần bạn có lẽ không có máy định tuyến nào; trong trường "
-"hợp ấy, bạn có thể bỏ trường này rỗng. Nếu bạn chưa biết trả lời đúng cho "
-"câu hỏi này, hãy hỏi quản trị mạng."
+"bằng dấu phẩy, mà ngụ ý máy định tuyến cổng ra (gateway router), cũng được "
+"biết như là máy định tuyến mặc định. Tất cả dữ liệu được truyền bên ngoại "
+"mạng địa phương (LAN) của bạn, ví dụ lên Mạng, được gởi qua máy định tuyến "
+"này. Rất ít lần bạn có lẽ không có máy định tuyến nào; trong trường hợp ấy, "
+"bạn có thể bỏ trường này rỗng. Nếu bạn chưa biết trả lời đúng cho câu hỏi "
+"này, hãy hỏi quản trị mạng."
 
 # Type: error
 # Description
@@ -888,7 +885,7 @@ msgstr "Cổng ra không thể tới"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Không thể tới được địa chỉ cổng ra này."
+msgstr "Không thể tới địa chỉ cổng ra đã gõ."
 
 # Type: error
 # Description
@@ -913,7 +910,7 @@ msgstr "Thông tin này có đúng không ?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Các tham số cấu hình mạng hiện thời:"
+msgstr "Các tham số mạng hiện thời được cấu hình:"
 
 #. Type: boolean
 #. Description
@@ -941,4 +938,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Định cấu hình mạng bằng cách gán địạ chỉ tĩnh"
+msgstr "Cấu hình mạng bằng cách gán địạ chỉ tĩnh"
