@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-12-28 19:18+0200\n"
+"PO-Revision-Date: 2006-01-04 16:23+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -298,7 +298,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Liitännän ${iface} pääkytkin otettu käyttöön"
 
 #. Type: note
 #. Description
@@ -308,6 +308,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} näyttäisi poistetun käytöstä \"pääkytkimellä\". Jos tätä liitäntää "
+"on tarkoitus käyttää, kytke se päälle ennen kuin jatketaan."
 
 #. Type: select
 #. Choices
@@ -382,7 +384,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB verkko"
 
 #. Type: text
 #. Description
