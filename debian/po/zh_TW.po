@@ -89,13 +89,12 @@ msgstr "主要網路介面："
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"您的系統有多個網路介面。請選擇其中之一來做為安裝 Debian 時的主要網路介面。如"
+"您的系統有多個網路介面。請選擇其中之一來做為進行安裝作業時的主要網路介面。如"
 "果可以的話，已指定為第一個被找到的已連線之網路介面。"
 
 #. Type: string
@@ -365,7 +364,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB net"
 
 #. Type: text
 #. Description
@@ -425,9 +424,8 @@ msgstr "不明介面"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "正在設定網路 ..."
+msgstr "正在儲存網路設定 ..."
 
 #. Type: text
 #. Description
@@ -573,7 +571,6 @@ msgstr "是否不使用 Default Route 並繼續進行？"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -581,10 +578,10 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)：系統將會"
-"無法得知該如何和 Internet 上的主機進行連線。除非您手上有 Debian 官方的第一張"
-"光碟、或是 Netinst 光碟、或是在您區域網路中可以取得所需套件，否則將會導致安裝"
-"作業無法繼續進行。"
+"網路自動設定作業完成了。然而，卻沒有設定預設的路由 (Default Route)：系統無法"
+"得知該如何才能和網際網路上的主機進行連線。除非您手上有第一張安裝光碟、或是 "
+"Netinst 光碟、或是在您區域網路中可以取得所需套件，否則將會導致安裝作業無法繼"
+"續進行。"
 
 #. Type: boolean
 #. Description
