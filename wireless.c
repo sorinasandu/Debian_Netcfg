@@ -75,6 +75,7 @@ automatic:
     /* Wait for association.. (MAX_SECS seconds)*/
 #define MAX_SECS 3
 
+    debconf_capb(client, "backup progresscancel");
     debconf_progress_start(client, 0, MAX_SECS, "netcfg/wifi_progress_title");
     if (debconf_progress_info(client, "netcfg/wifi_progress_info") == 30)
       goto stop;
@@ -105,6 +106,7 @@ automatic:
 
 stop:
     debconf_progress_stop(client);
+    debconf_capb(client, "backup");
     netcfg_progress_displayed = 0;
 
     if (success)

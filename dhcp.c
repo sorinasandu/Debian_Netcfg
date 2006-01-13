@@ -220,6 +220,7 @@ int poll_dhcp_client (struct debconfclient *client)
   dhcp_seconds = atoi(client->value);
 
   /* show progress bar */
+  debconf_capb(client, "backup progresscancel");
   debconf_progress_start(client, 0, dhcp_seconds, "netcfg/dhcp_progress");
   if (debconf_progress_info(client, "netcfg/dhcp_progress_note") == 30)
     goto stop;
@@ -252,6 +253,7 @@ int poll_dhcp_client (struct debconfclient *client)
 stop:
   /* stop progress bar */
   debconf_progress_stop(client);
+  debconf_capb(client, "backup");
   netcfg_progress_displayed = 0;
   
   return ret;
