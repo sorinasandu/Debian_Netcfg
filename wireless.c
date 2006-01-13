@@ -76,11 +76,14 @@ automatic:
 #define MAX_SECS 3
 
     debconf_progress_start(client, 0, MAX_SECS, "netcfg/wifi_progress_title");
-    debconf_progress_info(client, "netcfg/wifi_progress_info");
+    if (debconf_progress_info(client, "netcfg/wifi_progress_info") == 30)
+      goto stop;
     netcfg_progress_displayed = 1;
 
     for (i = 0; i <= MAX_SECS; i++)
     {
+      int progress_ret;
+
       interface_up(iface);
       sleep (1);
       iw_get_basic_config (wfd, iface, &wconf);
@@ -94,10 +97,13 @@ automatic:
 	break;
       }
 
-      debconf_progress_step(client, 1);
+      progress_ret = debconf_progress_step(client, 1);
       interface_down(iface);
+      if (progress_ret == 30)
+	break;
     }
 
+stop:
     debconf_progress_stop(client);
     netcfg_progress_displayed = 0;
 

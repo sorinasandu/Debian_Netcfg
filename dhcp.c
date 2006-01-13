@@ -221,7 +221,8 @@ int poll_dhcp_client (struct debconfclient *client)
 
   /* show progress bar */
   debconf_progress_start(client, 0, dhcp_seconds, "netcfg/dhcp_progress");
-  debconf_progress_info(client, "netcfg/dhcp_progress_note");
+  if (debconf_progress_info(client, "netcfg/dhcp_progress_note") == 30)
+    goto stop;
   netcfg_progress_displayed = 1;
 
   /* wait between 2 and dhcp_seconds seconds for a DHCP lease */
@@ -231,7 +232,8 @@ int poll_dhcp_client (struct debconfclient *client)
   ) {
     sleep(1);
     seconds_slept++; /* Not exact but close enough */
-    debconf_progress_step(client, 1);
+    if (debconf_progress_step(client, 1) == 30)
+      goto stop;
   }
   /* Either the client exited or time ran out */
 
@@ -240,11 +242,14 @@ int poll_dhcp_client (struct debconfclient *client)
   {
     ret = 0;
 
-    debconf_progress_set(client, dhcp_seconds);
-    debconf_progress_info(client, "netcfg/dhcp_success_note");
+    if (debconf_progress_set(client, dhcp_seconds) == 30)
+      goto stop;
+    if (debconf_progress_info(client, "netcfg/dhcp_success_note") == 30)
+      goto stop;
     sleep(2);
   }
-  
+
+stop:
   /* stop progress bar */
   debconf_progress_stop(client);
   netcfg_progress_displayed = 0;

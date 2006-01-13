@@ -1,6 +1,12 @@
 netcfg (1.22) UNRELEASED; urgency=low
 
+  [ Joey Hess ]
   * The return of my friend liw.
+
+  [ Colin Watson ]
+  * Make progress bars for DHCP and wireless AP search cancellable. Requires
+    cdebconf 0.95, but will degrade to the old-style bars if running with
+    earlier versions.
 
  -- Joey Hess <joeyh@debian.org>  Tue, 13 Dec 2005 17:01:35 -0500
 
