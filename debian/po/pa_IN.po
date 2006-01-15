@@ -3,6 +3,7 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
+# translation of pa_IN.po to Punjabi
 # translation of template.po to Punjabi
 #
 # Debian Installer master translation file template
@@ -10,14 +11,15 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# Jaswinder Singh Phulewala <jaswinderphulewala@yahoo.com>, 2005.
+# Jaswinder Singh Phulewala <jaswinderphulewala@yahoo.com>, 2005, 2006.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pa_IN\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-03-15 12:29+0530\n"
+"PO-Revision-Date: 2006-01-14 14:06+0530\n"
 "Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -95,14 +97,13 @@ msgstr "ਪ੍ਰਾਇਮਰੀ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"ਤੁਹਾਡੇ ਸਿਸਟਮ ਕੋਲ ਬਹੁਤੇ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਹਨ। ਡੇਬੀਅਨ ਇੰਸਟਾਲ ਕਰਨ ਸਮੇਂ ਵਰਤਣ ਲਈ ਕੋਈ ਇੱਕ ਚੁਣੋ। ਜੇ ਸੰਭਵ "
-"ਹੋਵੇ, ਪਹਿਲਾ ਹੀ ਜੁੜਿਆ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਜੋ ਲੱਭਿਆ ਹੈ ਚੁਣਿਆ ਜਾਂਦਾ ਹੈ"
+"ਤੁਹਾਡੇ ਸਿਸਟਮ ਕੋਲ ਬਹੁਤੇ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਹਨ। ਇੰਸਟਾਲੇਸ਼ਨ ਦੌਰਾਨੇਂ ਵਰਤਣ ਲਈ ਕੋਈ ਇੱਕ ਚੁਣੋ। ਜੇ ਸੰਭ ਹੋਵੇ, "
+"ਪਹਿਲਾ ਹੀ ਜੁੜਿਆ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਜੋ ਲੱਭਿਆ ਹੈ ਚੁਣਿਆ ਜਾਂਦਾ ।ਹੈ"
 
 #. Type: string
 #. Description
@@ -291,7 +292,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "${iface} ਉੱਪਰ ਯੋਗ ਕੀਤੀ ਬੰਦ ਸਵਿੱਚਰ"
 
 #. Type: note
 #. Description
@@ -301,6 +302,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} ਨੂੰ ਭੌਤਿਕ \"kill switch\" ਦੁਆਰਾ ਅਯੋਗ ਕੀਤਾ ਜਾਪਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਸ ਇੰਟਰਫੇਸ ਨੂੰ "
+"ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਕਿਰਪਾ ਕਰਕੇ ਜਾਰੀ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਇਸ ਤੇ ਜਾਓ।"
 
 #. Type: select
 #. Choices
@@ -374,7 +377,7 @@ msgstr "ਟੋਕਨ ਰਿੰਗ"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB ਨੈੱਟ"
 
 #. Type: text
 #. Description
@@ -434,9 +437,8 @@ msgstr "ਅਣਪਛਾਤਾ ਇੰਟਰਫੇਸ"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਜਾਰੀ ਹੈ..."
+msgstr "ਨੈੱਟਵਰਕ ਵਿਵਸਥਾ ਸੰਭਾਲ ਰਿਹਾ ਹੈ.ੀ ਹੈ..."
 
 #. Type: text
 #. Description
@@ -582,7 +584,6 @@ msgstr "ਮੂਲ ਮਾਰਗ (root) ਤੋਂ ਬਿਨਾ ਜਾਰੀ ਰੱ
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -592,7 +593,7 @@ msgid ""
 msgstr ""
 "ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਸਫਲ ਹੋਈ ਸੀ। ਭਾਵੇਂ, ਕੋਈ ਮੂਲ ਮਾਰਗ ਨਿਰਧਾਰਿਤ ਨਹੀਂ ਸੀ: ਸਿਸਟਮ ਨਹੀਂ ਜਾਣਦਾ "
 "ਕਿ ਨੈੱਟਵਰਕ ਤੇ ਮੇਜ਼ਬਾਨਾਂ ਨਾਲ ਕਿਵੇਂ ਸੰਪਰਕ ਕਰਨਾ ਹੈ। ਇਸ ਇੰਸਟਾਲੇਸ਼ਨ ਜਾਰੀ ਕਰਨ ਨੂੰ ਅਸੰਭਵ ਕਰੇਗਾ ਜਦੋਂ ਤੱਕ "
-"ਤੁਹਾਡੇ ਕੋਲ ਪਹਿਲੀ ਦਫਤਰੀ ਡੇਬੀਅਨ CD-ROM, ਇੱਕ 'Netinst' CD-ROM, ਜਾਂ ਸਥਾਨਕ ਨੈੱਟਵਰਕ ਤੇ ਪੈਕੇਜ "
+"ਤੁਹਾਡੇ ਕੋਲ ਪਹਿਲੀ ਦਫਤਰੀ ਡੇਬੀਅਨ CD-ROM, ਇੱਕ 'Netinst' CD-ROM, ਜਾਂ ਪੈਕੇਜ ਲੋਕਲ  ਨੈੱਟਵਰਕ ਤੇੇਜ "
 "ਉਪਲੱਬਧ ਨਹੀਂ ਹੁੰਦੇ।"
 
 #. Type: boolean
