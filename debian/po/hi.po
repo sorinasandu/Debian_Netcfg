@@ -11,6 +11,15 @@
 # translation of debian-installer_packages_po.po to
 # translation of debian-installer_packages_po.po to
 # translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
+# translation of debian-installer_packages_po.po to
 # translation of debian-installer_packages_po.po to Hindi
 #
 #
@@ -19,7 +28,7 @@
 #
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
-# Nishant Sharma <me@nishants.net>, 2005.
+# Nishant Sharma <me@nishants.net>, 2005, 2006.
 #
 #
 msgid ""
@@ -27,7 +36,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_po\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-10-28 21:48+0530\n"
+"PO-Revision-Date: 2006-01-22 14:03+0530\n"
 "Last-Translator: Nishant Sharma <me@nishants.net>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -677,6 +686,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
+"पॉइंट-टु-पॉइंट पता आपके पॉइंट-टु-पॉइंट नेटवर्क के दूसरे छोर को जानने के लिए प्रयोग में आता है. "
+"यदि आपको मान नहीं पता है तो कृपया अपने नेटवर्क प्रबंधक से सलाह लें. पॉइंट-टु-पॉइंट पता चार "
+"अंकों को पूर्ण-विराम बिंदु से विभाजित करता हुआ होना चाहिए."
 
 #. Type: string
 #. Description
@@ -692,6 +704,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
+"नेटमास्क का प्रयोग यह जानने में होता है कि नेटवर्क पर कौन सी मशीनें स्थानीय हैं. यदि आप "
+"मान नहीं जानते हैं तो अपने नेटवर्क प्रबंधक से सम्पर्क करें. नेटमास्क चार अंकों को पूर्ण-विराम "
+"बिंदु द्वारा विभाजित करते हुए भरें."
 
 #. Type: string
 #. Description
@@ -710,6 +725,11 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"गेटवे पता एक आईपी पता होता है (चार अंक, पूर्ण-विराम बिन्दु से विभाजित) जोकि गेटवे रूटर "
+"का संकेतक है, जिसे डिफॉल्ट रूटर भी कहते हैं। सारा नेटवर्क यातायात जो आपके लैन से बाहर जाता "
+"है (उदाहरण के लिए, इंटरनेट को) इसी रूटर से होकर जाता है। दुर्लभ परिस्थितियों में हो सकता "
+"है कि आपका कोई रूटर न हो, ऐसे में इसे खाली छोड़ दें। यदि आपको इस प्रश्न का सही उत्तर नहीं "
+"पता है तो अपने नेटवर्क प्रबंधक से सलाह लें।"
 
 #. Type: error
 #. Description
@@ -721,7 +741,7 @@ msgstr "गेटवे पहुँच के बाहर"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "गेटवे पता जो आपने भरा है वह पहुँच है."
+msgstr "गेटवे पता जो आपने भरा है वह पहुँच के बाहर है."
 
 #. Type: error
 #. Description
