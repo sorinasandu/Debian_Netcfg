@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-01-19 18:54+0200\n"
+"PO-Revision-Date: 2006-01-23 13:45+0200\n"
 "Last-Translator: Tapio Lehtonen <tale@debian.org>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -637,7 +637,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP-osoite on yksikäsitteinen tunniste verkon tietokoneille ja sisältää neljä "
-"lukua eroteltuna pisteillä. Jos et tiedä mitä käyttää tässä, kysy verkkosi "
+"lukua eroteltuna pisteillä. Jos et tiedä osoitetta, kysy verkkosi "
 "ylläpitäjältä."
 
 #. Type: error
@@ -679,7 +679,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Verkon peite:"
+msgstr "Verkon peitto:"
 
 #. Type: string
 #. Description
@@ -689,9 +689,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Verkon peitettä käytetään määrittämään, mitkä koneet ovat "
+"Verkon peittoa käytetään määrittämään, mitkä koneet ovat "
 "paikallisverkossasi. Kysy verkkosi ylläpitäjältä, jos et tiedä tätä arvoa. "
-"Verkon peite syötetään neljänä lukuna eroteltuna pistein."
+"Verkon peitto syötetään neljänä pistein eroteltuna lukuna."
 
 #. Type: string
 #. Description
@@ -735,7 +735,7 @@ msgstr "Ei saatu yhteyttä antamaasi yhdyskäytävään."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Olet kenties syöttänyt virheellisesti IP-osoitteen, verkkopeitteen ja/tai "
+"Olet kenties syöttänyt virheellisesti IP-osoitteen, verkon peiton ja/tai "
 "yhdyskäytävän."
 
 #. Type: boolean
@@ -773,4 +773,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Tee verkkoasetukset itse"
+msgstr "Tee verkkoasetukset kiinteälle osoitteelle"
