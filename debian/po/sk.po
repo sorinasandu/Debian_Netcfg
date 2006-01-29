@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-10-12 19:05+0200\n"
+"PO-Revision-Date: 2006-01-28 12:35+0100\n"
 "Last-Translator: Peter Mann <Peter.Mann@tuke.sk>\n"
 "Language-Team:  Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -167,7 +167,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Neplatný WEP kľúč"
+msgstr "Nesprávny WEP kľúč"
 
 #. Type: error
 #. Description
@@ -176,14 +176,14 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP kľúč '${wepkey}' je neplatný. Pozorne si prečítajte pokyny na správne "
+"WEP kľúč '${wepkey}' je nesprávny. Pozorne si prečítajte pokyny na správne "
 "zadanie vášho WEP kľúča na nasledovnej obrazovke a skúste to znova."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
 msgid "Invalid ESSID"
-msgstr "Neplatné ESSID"
+msgstr "Nesprávne ESSID"
 
 #. Type: error
 #. Description
@@ -192,7 +192,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" je neplatné. ESSID môže obsahovať maximálne 32 znakov, "
+"ESSID \"${essid}\" je nesprávne. ESSID môže obsahovať maximálne 32 znakov, "
 "ktoré môžu byť ľubovoľné."
 
 #. Type: string
@@ -224,13 +224,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Neplatný názov počítača"
+msgstr "Nesprávny názov počítača"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Názov počítača \"${hostname}\" je neplatný."
+msgstr "Názov počítača \"${hostname}\" je nesprávny."
 
 #. Type: error
 #. Description
@@ -474,7 +474,7 @@ msgstr "Väčšina používateľov nemusí nič zadávať."
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Nastavujem sieť pomocou DHCP"
+msgstr "Sieť sa nastavuje pomocou DHCP"
 
 #. Type: text
 #. Description
@@ -506,7 +506,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Priebeh DHCP nastavenia bude prerušený."
+msgstr "Priebeh DHCP nastavenia sa preruší."
 
 #. Type: select
 #. Choices
@@ -515,19 +515,19 @@ msgstr "Priebeh DHCP nastavenia bude prerušený."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Zopakovať automatické nastavenie siete"
+msgstr "Zopakovanie automatického nastavenia siete"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Zopakovať automatické nastavenie siete s DHCP názvom počítača"
+msgstr "Zopakovanie automatického nastavenia siete s DHCP názvom počítača"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Nastaviť sieť manuálne"
+msgstr "Manuálne nastavenie siete"
 
 #. Type: select
 #. Choices
@@ -734,7 +734,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Sú tieto informácie správne?"
+msgstr "Sú tieto údaje správne?"
 
 #. Type: boolean
 #. Description
