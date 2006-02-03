@@ -1,0 +1,13 @@
+Template: debian-installer/netcfg-st/title
+Type: text
+#  Main menu item
+_Description: Network configuration a second time
+
+Template: netcfg-st/second_time
+Type: boolean
+Default: false
+# not translatable as it's never displayed
+Description: Run netcfg a second time?
+ Running netcfg a second time makes it possible
+ to set static network configuration while doing a netboot
+ (that gets the preseed information from the network).
