@@ -2,5 +2,5 @@
 . /usr/share/debconf/confmodule
 db_get netcfg-st/second_time
 if [ "$RET" = true ]; then
-  exec netcfg
+	exec netcfg
 fi
