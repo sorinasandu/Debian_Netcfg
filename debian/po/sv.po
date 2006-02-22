@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-02-17 20:18+0100\n"
+"PO-Revision-Date: 2006-02-21 16:13+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domännamnet är den del av din internetadress som finns på höger sida av "
+"Domännamnet är den del av din Internetadress som finns på höger sida av "
 "värdnamnet. Det är ofta något som slutar med .com, .net, .edu .org eller ."
 "se. Om du installerar ett nätverk för hemmabruk kan du hitta på någonting, "
 "men se till att du använder samma domännamn på alla dina datorer."
@@ -106,8 +106,8 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Ditt system har flera nätverksinterface. Välj det som ska användas som "
-"primärt nätverksinterface under tiden Debian installeras. Det första "
+"Ditt system har flera nätverksgränssnitt. Välj det som ska användas som "
+"primärt nätverksgränssnitt under tiden Debian installeras. Det första "
 "nätverkskortet som hittades har markerats."
 
 #. Type: string
@@ -124,7 +124,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} är ett trådlöst nätverskort. Ange namnet (ESSID) på det trådlösa "
+"${iface} är ett trådlöst nätverkskort. Ange namnet (ESSID) på det trådlösa "
 "nätverk som du vill att ${iface} ska använda. Om du vill använda alla "
 "tillgängliga nätverk ska du lämna det här fältet tomt."
 
@@ -162,8 +162,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Om din WEP-nycket är i form av en lösenordsfras ska du ange \"s:\" före den "
-"(utan citationstecken)."
+"Om din WEP-nyckel är i formen av en lösenordsfras, ska du ange \"s:\" före "
+"den (utan citationstecken)."
 
 #. Type: string
 #. Description
@@ -172,7 +172,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Om det inte finns någon WEP-nycket till ditt trådlösa nätverk ska du "
+"Om det inte finns någon WEP-nyckel till ditt trådlösa nätverk ska du "
 "givetvis lämna det här fältet tomt."
 
 #. Type: error
@@ -189,7 +189,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "WEP-nyckeln \"${wepkey}\" är ogiltig. Läs noggrant instruktionerna på nästa "
-"skärm om hur du på ett korrekt sätt anger din WEP-nycket och försök igen."
+"skärm om hur du på ett korrekt sätt anger din WEP-nyckel och försök igen."
 
 #. Type: error
 #. Description
@@ -317,7 +317,7 @@ msgid ""
 "continuing."
 msgstr ""
 "${iface} verkar inte vara aktiverad (fysisk \"kill switch\"). Om du planerar "
-"att använda detta interface, vänligen aktivera det innan du fortsätter."
+"att använda detta gränssnitt, vänligen aktivera det innan du fortsätter."
 
 #. Type: select
 #. Choices
@@ -391,7 +391,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr "USB nät"
+msgstr "USB-nät"
 
 #. Type: text
 #. Description
@@ -719,11 +719,11 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Gateway är en IP-adress (fyra nummer åtskilda av punkter) som anger "
-"gatewayroutern, även kallad standardroutern. All trafik som skall ut från "
-"ditt LAN (exempelvis till internet) sänds via denna router. I sällsynta fall "
-"har du ingen router och då lämnar du det här tomt. Om du inte vet svaret på "
-"den här frågan bör du konsultera din nätverksadministratör."
+"Gateway är en IP-adress (fyra nummer åtskilda av punkter) som anger en "
+"gatewayrouter, även kallad standardrutt. All trafik som skall ut från ditt "
+"LAN (exempelvis till Internet) sänds via denna router. I sällsynta fall har "
+"du ingen router och då lämnar du det här tomt. Om du inte vet svaret på den "
+"här frågan bör du konsultera din nätverksadministratör."
 
 #. Type: error
 #. Description
@@ -768,9 +768,9 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" nätverkskort     = ${interface}\n"
+" nätgränssnitt    = ${interface}\n"
 " IP-adress        = ${ipaddress}\n"
-" netmask          = ${netmask}\n"
+" nätmask          = ${netmask}\n"
 " gateway          = ${gateway}\n"
 " punkt till punkt = ${pointopoint}\n"
 " namnservrar      = ${nameservers}"
