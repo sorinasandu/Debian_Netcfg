@@ -3,22 +3,24 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
+# translation of bs.po to Bosnian
 # Bosnian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+# Safir Secerovic <sapphire@linux.org.ba>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2005-03-28 21:47CET\n"
-"Last-Translator: Safir Šećerović <sapphire@linux.org.ba>\n"
+"PO-Revision-Date: 2006-02-28 01:56+0100\n"
+"Last-Translator: Safir Secerovic <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #. Type: boolean
 #. Description
@@ -37,7 +39,7 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Umrežavanje može biti podešeno putem DHCP-a ili ručno unošenjem svih "
-"informacija. Ako izaberete DHCP i installer ne bude u mogućnosti da dobije "
+"informacija. Ako izaberete DHCP i instalater ne bude u mogućnosti da dobije "
 "ispravnu konfiguraciju od DHCP servera na vašoj mreži, daće vam se prilika "
 "da podesite vašu mrežu ručno nakon pokušaja podešavanja putem DHCP-a."
 
@@ -92,15 +94,14 @@ msgstr "Primarni mrežni interfejs:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
 "Vaš sistem ima višestruke mrežne interfejse. Odaberite jedan koji ćete "
-"koristiti kao primarni mrežni interfejs tokom instaliranja Debiana. Ako je "
-"bilo moguće, prvi pronađeni povezani mrežni interfejs je odabran."
+"koristiti kao primarni mrežni interfejs tokom instalacije. Ako je bilo "
+"moguće, prvi pronađeni povezani mrežni interfejs je odabran."
 
 #. Type: string
 #. Description
@@ -296,7 +297,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Prekidač za isključivanje je uključen na ${iface}"
 
 #. Type: note
 #. Description
@@ -306,6 +307,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} je isključen pomoću fizičkog \"prekidača\". Ako namjeravate "
+"koristiti ovaj interfejs, molim uključite ga prije nego nastavite."
 
 #. Type: select
 #. Choices
@@ -379,7 +382,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr ""
+msgstr "USB mreža"
 
 #. Type: text
 #. Description
@@ -439,9 +442,8 @@ msgstr "Nepoznati interfejs"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Podešavam mrežu ..."
+msgstr "Spremam mrežne postavke ..."
 
 #. Type: text
 #. Description
@@ -588,7 +590,6 @@ msgstr "Nastavite bez default route?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -598,8 +599,8 @@ msgid ""
 msgstr ""
 "Autokonfiguracija mreže je uspješna. Međutim, default route nije postavljen: "
 "sistem neće znati kako da komunicira sa drugim računarima na Internetu. Ovo "
-"će učiniti nemogućim nastavak instalacije ukoliko nemate prvi službeni "
-"Debian CD-ROM, 'Netinst' CD-ROM ili pakete dostupne na lokalnoj mreži."
+"će učiniti nemogućim nastavak instalacije ukoliko nemate prvi instalacioni "
+"CD-ROM, 'Netinst' CD-ROM ili pakete dostupne na lokalnoj mreži."
 
 #. Type: boolean
 #. Description
