@@ -1,4 +1,4 @@
-netcfg (1.24) UNRELEASED; urgency=low
+netcfg (1.24) unstable; urgency=low
 
   [ Martin Michlmayr ]
   * Add armeb to the Architecture field.
@@ -6,8 +6,29 @@ netcfg (1.24) UNRELEASED; urgency=low
   [ Joey Hess ]
   * Change class identifier of the dhcp client from "NetcfgDHClient" to just
     "d-i", which is a bit easier to remeber and type.
+  * Rebuild with current libd-i to fix udeb deps.
 
- -- Joey Hess <joeyh@debian.org>  Tue, 21 Feb 2006 15:59:33 -0500
+  [ Updated translations ]
+  * Bengali (bn.po) by Baishampayan Ghose
+  * Bosnian (bs.po) by Safir Secerovic
+  * Catalan (ca.po) by Jordi Mallach
+  * Esperanto (eo.po) by Serge Leblanc
+  * Finnish (fi.po) by Tapio Lehtonen
+  * Galician (gl.po) by Jacobo Tarrio
+  * Hindi (hi.po) by Nishant Sharma
+  * Hungarian (hu.po) by SZERVÑC Attila
+  * Khmer (km.po) by Hok Kakada
+  * Malagasy (mg.po) by Jaonary Rabarisoa
+  * Punjabi (Gurmukhi) (pa_IN.po) by Amanpreet Singh Alam
+  * Polish (pl.po) by Bartosz Fenski
+  * Romanian (ro.po) by Eddy Petrişor
+  * Slovak (sk.po) by Peter Mann
+  * Slovenian (sl.po) by Matej Kovačič
+  * Albanian (sq.po) by Elian Myftiu
+  * Swedish (sv.po) by Daniel Nylander
+  * Vietnamese (vi.po) by Clytie Siddall
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 18 Mar 2006 15:28:29 -0500
 
 netcfg (1.23) unstable; urgency=low
 
