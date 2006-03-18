@@ -19,15 +19,6 @@ Description: Configure the network
  you for static network configuration if this fails. The configured 
  network settings will be copied to your newly installed system.
 
-Package: netcfg-st
-XC-Package-Type: udeb
-Architecture: i386 sparc alpha m68k arm armeb powerpc mips mipsel hppa ia64 amd64 ppc64
-XB-Installer-Menu-Item: 22
-Description: Configure the network a second time
- Run the network configuration program a second time after preseeding
- network configuration. This makes it easier to preseed a static network
- address on netbooted systems.
-
 Package: netcfg-static
 XC-Package-Type: udeb
 Architecture: any
