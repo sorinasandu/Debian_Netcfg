@@ -3,6 +3,7 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
+# translation of km.po to khmer
 #
 # Debian Installer master translation file template
 # Don't forget to properly fill-in the header of PO files#
@@ -10,18 +11,19 @@
 # in doc/i18n/i18n.txt#
 #
 # Hok Kakada <hokkakada@khmeros.info>, 2005, 2006.
+# hok kakada <hokkakada@khmeros.info>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-01-23 11:48+0700\n"
-"Last-Translator: Hok Kakada <hokkakada@khmeros.info>\n"
-"Language-Team: Khmer <support@khmeros.info>\n"
+"PO-Revision-Date: 2006-03-18 10:34+0700\n"
+"Last-Translator: hok kakada <hokkakada@khmeros.info>\n"
+"Language-Team: khmer <support@khmeros.info>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #. Type: boolean
 #. Description
@@ -72,6 +74,7 @@ msgstr "អាសយដ្ឋាន​ម៉ាស៊ីន​បម្រើឈ
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
+#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -79,6 +82,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"ឈ្មោះ​ម៉ាស៊ីន​បម្រើត្រូវ​បាន​ប្រើ​សម្រាប់​មើល​ឈ្មោះ​ម៉ាស៊ីន​លើ​ប្រព័ន្ធ​បណ្តាញ ។​ សូម​បញ្ចូល​អាសយដ្ឋាន (មិន​មែន​ជា​"
+"ឈ្មោះ​របស់​ម៉ាស៊ីននោះ​ទេ) ឈ្មោះ​ម៉ាស៊ីន​បម្រើ​ចាប់​ពី​ ៣ឡើង​ទៅត្រូវ​បែង​ចែក​។ មិន​ត្រូវ​ប្រើពាក្យ​បញ្ជា​។​ ឈ្មោះ​"
+"ម៉ាស៊ីន​បម្រើ​ដំបូង​ក្នុង​បញ្ជី​និង​ ត្រូវ​បានសួរ​មុន​គេ​ ។​ប្រសិន​បើ​អ្នក​មិន​ចង់​ប្រើ​ឈ្មោះ​ម៉ាស៊ីន​ផ្សេង​ទៀត​ គ្រាន់​តែ​"
+"ចាកចេញ​ពី​វាទទេ​នេះ​ ។​"
 
 #. Type: select
 #. Description
@@ -123,10 +130,13 @@ msgstr "WEP key សម្រាប់​ឧបករណ៍​ឥត​ខ្ស�
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
+"ប្រសិន​បើ​អាច​អនុវត្ត​បាន​  សូម​បញ្ចូល​គន្លឺះ​សុវត្តិភាពសម្រាប់​ឧបករណ៍​ឥតខ្សែ ${iface} ។ យើង​មាន​វិធីពី​យ៉ាង​"
+"សម្រាប់​ធ្វើ​វា​ ៖"
 
 #. Type: string
 #. Description
@@ -281,17 +291,22 @@ msgstr ""
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #: ../netcfg-common.templates:111
+#, fuzzy
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​ប្តូរ​លើ ${iface}"
 
 #. Type: note
 #. Description
 #: ../netcfg-common.templates:111
+#, fuzzy
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} appears to have been disabled by means of a physical \"kill switch"
+"\". If you intend to use this interface, please switch it on before "
+"continuing."
 
 #. Type: select
 #. Choices
@@ -310,11 +325,15 @@ msgstr "ប្រភេទ​បណ្ដាញ​ខ្សែរ ៖"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
+#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
+"បណ្តាញ​ឥតខ្សែ​ត្រូវ​បាន​គ្រប់​គ្រង​ឬ​  ad-hoc ​។ ប្រសិន​បើ​អ្នក​ចង់​ចូល​ដំណើការ​ប្រភេទ​ចំណុច​មួយ​ចំនួន​  បណ្តាញ​របស់​"
+"អ្នក​ត្រូវ​បាន​គ្រប់គ្រង​ ។​ប្រសិន​បើ​កុំព្យួទ័រ​ដទៃ​ទៀត​ជា​របស់​អ្នក​'ចំណុច​ចូល​ដំណើរ​ការ​'​ បន្ទាប់​មក​បណ្តាញ​របស់​អ្នក​"
+"អាច​ជា ad-hoc ។"
 
 #. Type: text
 #. Description
@@ -325,8 +344,9 @@ msgstr "កំណត់រចនាសម្ព័ន្ធ​បណ្ដាញ
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
+#, fuzzy
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "កំពុង​ស្វែង​រក​ចំណុច​ចូល​ដំណើរការ​ឥតខ្សែ..."
 
 #. Type: text
 #. Description
@@ -368,8 +388,9 @@ msgstr "USB net"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
+#, fuzzy
 msgid "Serial-line IP"
-msgstr ""
+msgstr "ស៊េរី IP"
 
 #. Type: text
 #. Description
@@ -380,8 +401,9 @@ msgstr "IP ច្រក​ប៉ារ៉ាឡែល"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
+#, fuzzy
 msgid "Point-to-Point Protocol"
-msgstr ""
+msgstr "ចំណុត​-ទៅ​-ពិធី​ការ​ចំណុច​"
 
 #. Type: text
 #. Description
@@ -392,26 +414,30 @@ msgstr "IPv6-ក្នុង-IPv4"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
+#, fuzzy
 msgid "ISDN Point-to-Point Protocol"
-msgstr ""
+msgstr "ISDN ចំណុត​-ទៅ​-ពិធី​ការ​ចំណុច​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
+#, fuzzy
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "ឆាណែល ទៅ​ ឆាណែល​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:196
+#, fuzzy
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "ឆាណែលពិត​ ទៅ​ ឆាណែល​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
+#, fuzzy
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "ការទំនាក់​ទំនងរវាង​​អ្នក​ប្រើ​​និង​ យាន​"
 
 #. Type: text
 #. Description
@@ -629,8 +655,9 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
+#, fuzzy
 msgid "Point-to-point address:"
-msgstr ""
+msgstr "អាសយដ្ឋាន​ចំណុច​មួយ​ទៅ​ ចំណុច​មួយ ៖"
 
 #. Type: string
 #. Description
@@ -673,6 +700,7 @@ msgstr "ផ្លូវ​ចេញ​ចូល ៖"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
+#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -681,6 +709,10 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"ផ្លូវ​ចេញចូល​​ជា​អាសយដ្ឋាន​ IP (ត្រូវ​បាន​បែង​ចែក​ជា​​៤​ដោយ​ពេល​វេលា​)ដែល​ដំណាង​ឲ្យផ្លូវ​ចេញ​ចូល​រ៉ោតទ័រ​ លំនាំ​"
+"ដើម​វា​ស្គាល់​រ៉ោត​ទ័រ ។​  គ្រប់​ចរាចរណ៍​ដែល​ចេញ​ក្រៅ​ LAN របស់​អ្នក​ (សម្រាប់​ចម្ងាយទៅ​កាន់​អ៊ី​ធឺណិត) ផ្ញើចេញ​"
+"ដោយ​ឆ្លង​កាត់​រ៉ោតទ័រ​  ក្នុង​កាលៈទេសៈ​ដ៏​កំរ​នេះ​អ្នក​មាន​រ៉ោតទ័រក្នុង​ករណី​អ្នក​អាច​​ចាកចេញ​ដោយ​ទទេ ។​បើ​អ្នក​មិន​"
+"ដឹងចម្លើយ​ត្រឹមត្រូវ​​សម្រាប់​សំណួរ​នេះ រកព័ត៌មាន​អ្នក​គ្រប់​គ្រង​បណ្តាញ​របស់​អ្នក​ ។"
 
 #. Type: error
 #. Description
