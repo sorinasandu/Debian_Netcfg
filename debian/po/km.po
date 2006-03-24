@@ -3,21 +3,20 @@
 #
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
-# translation of km.po to khmer
+# translation of template.po to khmer
 #
 # Debian Installer master translation file template
 # Don't forget to properly fill-in the header of PO files#
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 #
-# Hok Kakada <hokkakada@khmeros.info>, 2005, 2006.
 # hok kakada <hokkakada@khmeros.info>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: km\n"
+"Project-Id-Version: template\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-03-18 10:34+0700\n"
+"PO-Revision-Date: 2006-03-23 17:50+0700\n"
 "Last-Translator: hok kakada <hokkakada@khmeros.info>\n"
 "Language-Team: khmer <support@khmeros.info>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +73,6 @@ msgstr "អាសយដ្ឋាន​ម៉ាស៊ីន​បម្រើឈ
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
-#, fuzzy
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -125,12 +123,11 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP key សម្រាប់​ឧបករណ៍​ឥត​ខ្សែ ${iface} ៖"
+msgstr "គ្រាប់ចុច​ WEP សម្រាប់​ឧបករណ៍​ឥត​ខ្សែ ${iface} ៖"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -155,8 +152,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"បើ​If your WEP key is in the format of a passphrase, prefix it with "
-"'s:' (without quotes)."
+"បើគ្រាប់​ចុច​របស់​ WEP ស្ថិត​ក្នុង​ទ្រង់​ទ្រាយ​នៃ​ឃ្លា​សម្ងាត់​ បុព្វបទ​ជាមួយ's ៖' (គ្មាន​អត្ថបទ​ដក​ស្រង់​) ។​"
 
 #. Type: string
 #. Description
@@ -243,7 +239,7 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"ឈ្មោះ​ម៉ាស៊ីន​ត្រឹមត្រូវ​មួយ​អាច​មាន​តែ​លេខ​​ 0-9, អក្សរ​តូច​ a-z និង​សញ្ញាដក ។ វា​ត្រូវ​ស្ថិត​នៅ​ចន្លោះ​ប្រវែង​តួ​"
+"ឈ្មោះ​ម៉ាស៊ីន​ត្រឹមត្រូវ​មួយ​អាច​មាន​តែ​លេខ​​ ០-៩, អក្សរ​តូច​ a-z និង​សញ្ញាដក ។ វា​ត្រូវ​ស្ថិត​នៅ​ចន្លោះ​ប្រវែង​តួ​"
 "អក្សរ​ ២ និង ៦៣ ហើយ​នឹង​មិន​ចាប់ផ្ដើម​ ឬ បញ្ចប់​ដោយ​សញ្ញា​ដក​ឡើយ ។"
 
 #. Type: error
@@ -291,22 +287,19 @@ msgstr ""
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #: ../netcfg-common.templates:111
-#, fuzzy
 msgid "Kill switch enabled on ${iface}"
 msgstr "មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​ប្តូរ​លើ ${iface}"
 
 #. Type: note
 #. Description
 #: ../netcfg-common.templates:111
-#, fuzzy
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} appears to have been disabled by means of a physical \"kill switch"
-"\". If you intend to use this interface, please switch it on before "
-"continuing."
+"${iface} លេច​ឡើងដែល​បាន​មិន​អនុញ្ញា​ដោយ​ physical \"ប្តូរ\" ។ ប្រសិន​បើ​អ្នកសម្រេច​ប្រើ​ចំណុច​ប្រទាក់​"
+"នេះ  សូម​ប្តូរ​វា​មុន​និង​ បន្ត​ ។​"
 
 #. Type: select
 #. Choices
@@ -314,7 +307,7 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "ហេដ្ឋារចនា​សម្ព័ន្ធ​ (បាន​គ្រប់​គ្រង​) បណ្តាញ​ Ad-hoc បណ្តាញ​ (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -325,7 +318,6 @@ msgstr "ប្រភេទ​បណ្ដាញ​ខ្សែរ ៖"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
-#, fuzzy
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -344,7 +336,6 @@ msgstr "កំណត់រចនាសម្ព័ន្ធ​បណ្ដាញ
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:133
-#, fuzzy
 msgid "Searching for wireless access points ..."
 msgstr "កំពុង​ស្វែង​រក​ចំណុច​ចូល​ដំណើរការ​ឥតខ្សែ..."
 
@@ -358,7 +349,7 @@ msgstr "<គ្មាន>"
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr "ethernet ឥត​ខ្សែ (802.11x)"
+msgstr "អ៊ីសឺរណិត​ឥត​ខ្សែ (802.11x)"
 
 #. Type: text
 #. Description
@@ -370,12 +361,11 @@ msgstr "ឥត​ខ្សែ"
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet ឬ Fast Ethernet"
+msgstr "អ៊ីសឺរណិត​ ឬ អ៊ីសឺរណិត​លឿន​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:159
-#, fuzzy
 msgid "Token Ring"
 msgstr "Token Ring"
 
@@ -383,12 +373,11 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr "USB net"
+msgstr "បណ្តាញ​ USB"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
-#, fuzzy
 msgid "Serial-line IP"
 msgstr "ស៊េរី IP"
 
@@ -401,9 +390,8 @@ msgstr "IP ច្រក​ប៉ារ៉ាឡែល"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
-#, fuzzy
 msgid "Point-to-Point Protocol"
-msgstr "ចំណុត​-ទៅ​-ពិធី​ការ​ចំណុច​"
+msgstr "ពីធីការ​​ចំណុច-ទៅ​-​ចំណុច​"
 
 #. Type: text
 #. Description
@@ -414,28 +402,24 @@ msgstr "IPv6-ក្នុង-IPv4"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:188
-#, fuzzy
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN ចំណុត​-ទៅ​-ពិធី​ការ​ចំណុច​"
+msgstr "ISDN ពីធីការ​ចំណុច​-ទៅ​-​ចំណុច​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
-#, fuzzy
 msgid "Channel-to-channel"
 msgstr "ឆាណែល ទៅ​ ឆាណែល​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:196
-#, fuzzy
 msgid "Real channel-to-channel"
 msgstr "ឆាណែលពិត​ ទៅ​ ឆាណែល​"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
-#, fuzzy
 msgid "Inter-user communication vehicle"
 msgstr "ការទំនាក់​ទំនងរវាង​​អ្នក​ប្រើ​​និង​ យាន​"
 
@@ -457,7 +441,7 @@ msgstr "កំពុង​ស្ដារ​ការ​កំណត់​បណ
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "កំណត់​រចនាសម្ព័ន្ធ​៍​បណ្ដាញ"
+msgstr "កំណត់​រចនាសម្ព័ន្ធ​​បណ្ដាញ"
 
 #. Type: string
 #. Description
@@ -566,6 +550,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
+"ទីនេះ​អ្នក​អាច​ជ្រើស​រើស​សម្រាប់​ព្យាយាម​ម្តង​ទៀត​ DHCP កំណត់​រចនា​សម្ព័ន្ធ​បណ្តាញ​ដោយ​ស្វ័​ប្រវត្ត (វា​អាច​"
+"ជោគជ័យ​បាន​ប្រសិន​បើ​ DHCP ម៉ាស៊ីន​បម្រើ​របស់​អ្នក​វា​ចំណាយ​ពេល​យូរសម្រាប់​ឆ្លើយ​តប) ឬ ដើម្បី​កំណត់​រចនា​បណ្តាញ​"
+"ដោយ​ដៃ​ ។​ ម៉ា​ស៊ីន​បម្រើ​ DHCP ខ្លះ​ត្រូវ​ការ​ឈ្មោះ​ម៉ាស៊ីន​ DHCP  ដើម្បី​បញ្ចូន​ទៅ​ឲ្យ​ម៉ាស៊ីន​ភ្ញៀវ​  ដូច្នេះ​អ្នក​"
+"អាច​ជ្រើស​រើស​ម្តង​ទៀត​ផង​ដែរ​នូវបណ្តាញ​​ DHCP ការ​កំណត់​រចនា​សម្ព័ន្ធ​ស្វ័យប្រវត្តិ​ ជាមួយ​ឈ្មោះ​ម៉ាស៊ីន​ដែល​បាន​"
+"ផ្តល់​ឲ្យ​ ។​"
 
 #. Type: note
 #. Description
@@ -655,24 +644,21 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-#, fuzzy
 msgid "Point-to-point address:"
 msgstr "អាសយដ្ឋាន​ចំណុច​មួយ​ទៅ​ ចំណុច​មួយ ៖"
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
-#, fuzzy
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"The point-to-point address is used to determine the other endpoint of the "
-"point to point network.  Consult your network administrator if you do not "
-"know the value.  The point-to-point address should be entered as four "
-"numbers separated by periods."
+"អាសយដ្ឋាន​ចំណុច ទៅ ចំណុច​​ត្រូវ​បាន​ប្រើ​កំណត់​ទៅ​ចុងចំណុចផ្សេង​ទៀត​​ នៃ​បណ្តាញ​ចំណុច​ ទៅ ចំណុច​ ។ អ្នក​គ្រប់​គ្រង​"
+"បណ្តាញ​របស់​អ្នក​ ប្រសិន​បើ​អ្នក​មិន​ស្គាល់​តម្លៃ ។​ អាស័យដ្ឋាន​ចំណុច​ ទៅ​ ចំណុច​ត្រូវ​បាន​បញ្ចូល​ សម្រាប់​លេខ​​៤​ផ្នែក​"
+"ដោយ​កំឡុងពេល​ ។​"
 
 #. Type: string
 #. Description
@@ -700,7 +686,6 @@ msgstr "ផ្លូវ​ចេញ​ចូល ៖"
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
-#, fuzzy
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
