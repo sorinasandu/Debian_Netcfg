@@ -330,18 +330,11 @@ int netcfg_activate_static(struct debconfclient *client)
 	
     if (pointopoint.s_addr)
     {
-      /* Use 'route' instead of 'ip route': temporary workaround for #322723
-       * snprintf(buf, sizeof(buf), "ip route add default dev %s", interface);
-       */
-      snprintf(buf, sizeof(buf), "route add default dev %s", interface);
+      snprintf(buf, sizeof(buf), "ip route add default dev %s", interface);
       rv |= di_exec_shell_log(buf);
     }
     else if (gateway.s_addr) {
-        /* Use 'route' instead of 'ip route': temporary workaround for #322723
-         * snprintf(buf, sizeof(buf), "ip route add default via %s",
-         *         inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
-	 */ 
-         snprintf(buf, sizeof(buf), "route add default gw %s",
+        snprintf(buf, sizeof(buf), "ip route add default via %s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
         rv |= di_exec_shell_log(buf);
     }
