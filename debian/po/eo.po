@@ -10,14 +10,14 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
 # Samuel Gimeno <sgimeno@gmail.com>, 2005.
-# Serge Leblanc <serge.leblanc@wanadoo.fr>, 2005.
+# Serge Leblanc <serge.leblanc@wanadoo.fr>, 2005-2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: eo\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-03-11 15:10+0100\n"
+"PO-Revision-Date: 2006-03-20 13:14+0100\n"
 "Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Memakomodu reto kun 'DHCP'-o ?"
+msgstr "Memakomodu reton kun 'DHCP'-o ?"
 
 #. Type: boolean
 #. Description
@@ -40,15 +40,15 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Oni uzeblas 'DHCP'-o por akomodi la reton aŭ mem eldoni ĉiujn la informojn. "
-"Se vi elektus akomodon per 'DHCP'-o kaj se la instalilo misakomodas la reton "
-"per 'DHCP'-servilo, vi memakomodus la reton post la 'DHCP'-a klopodo."
+"'DHCP'-o uzeblas por akomodi la reton aŭ mem eldoni ĉiujn informojn. Se vi "
+"elektas akomodon per 'DHCP'-o kaj se la instalilo misakomodas la reton per "
+"'DHCP'-servilo, vi memakomodos la reton post la 'DHCP'-a klopodo."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Domajnnomo:"
+msgstr "Kampnomo:"
 
 #. Type: string
 #. Description
@@ -59,7 +59,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"La domajnnomon estas la dekstra parto de la Internet adreso de via "
+"La kampnomon estas la dekstra parto de la interreta adreso de via "
 "sistemnomo. Ĝi ofte finiĝas kun .com, .net, .edu aŭ .org. Se vi agordas vian "
 "hejman reton, vi uzeblas iajn nomojn sed ĉiame uzu la samnomon sur ĉiu "
 "sistemo."
@@ -80,10 +80,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"La nomserviloj estas uzataj por trovi aliaj sistemnomoj en la reto. Bonvolu "
-"tajpi ĝiajn IP adresojn (ne ĝiajn sistemnomojn) ; vi povas enskirbi ĝis tri "
-"interpacajn adresojn, ne uzas la komaj literoj. La unua servilo estos unue "
-"pridemandita."
+"La nomserviloj estas uzataj por trovi aliajn sistemnomojn ĉeestantajn en la "
+"reto. Bonvolu tajpi ĝiajn 'IP'-adresojn (ne ĝiajn sistemnomojn) ; vi povas "
+"enskirbi ĝis tri interspacigatajn adresojn, nepre ne uzante la komojn. La "
+"unua servilo estos pridemandita unua."
 
 #. Type: select
 #. Description
@@ -99,9 +99,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Via sistemo posedas plurajn retajn aparatadaptilojn. Elektu iun, kiun vi "
-"volas ĉefe uzi dum la instalado. La instalilo aŭtomate eblelektas la unuan "
-"konektan retan aparatadaptilon."
+"Via sistemo posedas plurajn retajn aparatadaptilojn. Elektu tiun, kiun vi "
+"volas ĉefe uzi dum la instalado. La instalilo aŭtomate elektos la unuan "
+"konektitan retan aparatadaptilon."
 
 #. Type: string
 #. Description
@@ -117,15 +117,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"'${iface}'-o estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
-"retan nomon ('ESSID'), kiun vi volu '${iface}'-a uzas. Se vi volus uzi alian "
-"reton, malplenu la registrokampon."
+"'${iface}'-o estas sen drata reta aparatadaptilo. Bonvolu tajpi la sendratan "
+"retan 'ESSID'-nomon, kiun vi volas '${iface}'-a uzi. Se vi volos uzi alian "
+"reton, malplenigu la registrokampon."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP ĉifroŝlosilo por sendrata aparato ${iface}:"
+msgstr "'WEP'-ĉifroŝlosilo por sendrata '${iface}'-aparato:"
 
 #. Type: string
 #. Description
@@ -134,8 +134,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Se eble, bonvolu tajpi la 'WEP'-o sekuran ĉifroŝlosilon por sendrata "
-"'${iface}'-aparato. Estas du manieroj de fari tio:"
+"Laŭeble, bonvolu tajpi la 'WEP'-o sekuran ĉifroŝlosilon por sendrata "
+"'${iface}'-aparato. Estas du manieroj fari tio:"
 
 #. Type: string
 #. Description
@@ -144,7 +144,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Se via 'WEP'-ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', nn:nn:nn:nn:"
+"Se via 'WEP'-ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', 'nn:nn:nn:nn:"
 "nn:nn:nn:nn', aŭ 'nnnnnnnn', kiu 'n' estas nombro. Tajpu ĝin en la "
 "registrokampo nur tia ĝi estas."
 
@@ -165,7 +165,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Kompreneble, se 'WEP'-o ne estas por via sendrata reto, malplenu la "
+"Kompreneble, se 'WEP'-o ne estas por via sendrata reto, malplenigu la "
 "registrokampon."
 
 #. Type: error
@@ -182,7 +182,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "La 'WEP'-ĉifroŝlosilo '${wepkey}' estas malvalida. Bonvolu atente konsulti "
-"la sekvantan ekranon pri la maniero de registri 'WEP'-ĉifroŝlosilo, kaj "
+"la sekvantan ekranon pri la maniero registri 'WEP'-ĉifroŝlosilon, kaj "
 "reprovu."
 
 #. Type: error
@@ -191,6 +191,7 @@ msgstr ""
 msgid "Invalid ESSID"
 msgstr "Malvalida 'ESSID'-o"
 
+# serge: rekorektu ĉi tiu frazon.
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
@@ -198,7 +199,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Malvalida 'ESSID'-a \"${essid}\". 'ESSID'-oj uzendiĝas kun pli malgranda 32 "
+"Malvalida 'ESSID'-a \"${essid}\". 'ESSID'-oj uzendas kun pli malgranda 32 "
 "signoj, sed ĝi inkludeblas ĉiajn signojn."
 
 #. Type: string
@@ -354,13 +355,13 @@ msgstr "Serĉadi sendratajn enirajn punktojn..."
 #. Description
 #: ../netcfg-common.templates:143
 msgid "<none>"
-msgstr "<none>"
+msgstr "<neniu>"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr "Sendrata Ethernet (802.11x)"
+msgstr "Sendrata Ethernet ('802.11x')"
 
 #. Type: text
 #. Description
@@ -711,7 +712,7 @@ msgid ""
 msgstr ""
 "La kluzo estas 'IP'-adreso (kvar nombroj apartataj per punktoj) kiu indikas "
 "la enkursigilan sistemon ; ĝia sistemo ankaŭ nomiĝas la implicita kurso. La "
-"tuta elira rettrafiko (ekzemple, al Internet) trairas ĝin. En kelkaj "
+"tuta elira rettrafiko (ekzemple, al interreto) trairas ĝin. En kelkaj "
 "maloftaj okazo, vi malbezonas enkursigilon. Tiuokaze malplenu ĉi "
 "registrokampon. Se vi ne scias kion tajpi, konsultu vian retan "
 "administriston."
