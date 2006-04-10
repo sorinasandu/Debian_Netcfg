@@ -28,7 +28,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Memakomodu reton kun 'DHCP'-o ?"
+msgstr "Memakomodu reton kun 'DHCP'-o?"
 
 #. Type: boolean
 #. Description
@@ -40,9 +40,9 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"'DHCP'-o uzeblas por akomodi la reton aŭ mem eldoni ĉiujn informojn. Se vi "
-"elektas akomodon per 'DHCP'-o kaj se la instalilo misakomodas la reton per "
-"'DHCP'-servilo, vi memakomodos la reton post la 'DHCP'-a klopodo."
+"Oni povas uzi 'DHCP'-on por akomodi la reton aŭ mem eldoni ĉiujn informojn. "
+"Se vi elektas akomodon per 'DHCP'-o kaj se la instalado misakomodas la reton "
+"per 'DHCP'-servilo, vi mem akomodos la reton post la 'DHCP'-a klopodo."
 
 #. Type: string
 #. Description
@@ -60,8 +60,8 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "La kampnomon estas la dekstra parto de la interreta adreso de via "
-"sistemnomo. Ĝi ofte finiĝas kun .com, .net, .edu aŭ .org. Se vi agordas vian "
-"hejman reton, vi uzeblas iajn nomojn sed ĉiame uzu la samnomon sur ĉiu "
+"sistemnomo. Ĝi ofte finiĝas per .com, .net, .edu aŭ .org. Se vi agordas vian "
+"hejman reton, vi povos uzi iajn nomojn sed ĉiam uzu la samnomon por ĉiu "
 "sistemo."
 
 #. Type: string
@@ -82,7 +82,7 @@ msgid ""
 msgstr ""
 "La nomserviloj estas uzataj por trovi aliajn sistemnomojn ĉeestantajn en la "
 "reto. Bonvolu tajpi ĝiajn 'IP'-adresojn (ne ĝiajn sistemnomojn) ; vi povas "
-"enskirbi ĝis tri interspacigatajn adresojn, nepre ne uzante la komojn. La "
+"enskribi ĝis tri interspacigatajn adresojn, nepre ne uzante la komojn. La "
 "unua servilo estos pridemandita unua."
 
 #. Type: select
@@ -117,7 +117,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"'${iface}'-o estas sen drata reta aparatadaptilo. Bonvolu tajpi la sendratan "
+"'${iface}'-o estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
 "retan 'ESSID'-nomon, kiun vi volas '${iface}'-a uzi. Se vi volos uzi alian "
 "reton, malplenigu la registrokampon."
 
@@ -191,7 +191,6 @@ msgstr ""
 msgid "Invalid ESSID"
 msgstr "Malvalida 'ESSID'-o"
 
-# serge: rekorektu ĉi tiu frazon.
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:68
@@ -199,8 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"Malvalida 'ESSID'-a \"${essid}\". 'ESSID'-oj uzendas kun pli malgranda 32 "
-"signoj, sed ĝi inkludeblas ĉiajn signojn."
+"Malvalidas la '${essid}'-nomo. La 'ESSID'-nomoj ne devos superi 32 literojn, "
+"sed ili enhavos ĉiajn signojn."
 
 #. Type: string
 #. Description
@@ -223,9 +222,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"La gastnomo estas unuopa vorto kiu distingas vian sistemon en la reto. Se vi "
-"malkonas vian gastnomon, konsultu vian retan administriston. Se vi agordas "
-"vian hejman reton, vi uzeblas iajn nomojn."
+"La gastnomo estas unuopa vorto kiu identigas vian sistemon en la reto. Se vi "
+"ne konas vian gastnomon, konsultu vian retan administriston. Se vi agordas "
+"vian hejman reton, vi uzos iajn nomojn."
 
 #. Type: error
 #. Description
@@ -247,9 +246,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Valida gastnomo eblas enhavi nur la nombrojn 0-9, la literitoj a-z, kaj la "
-"minusa signo. Ĝi interendas 2 kaj 63 literoj. Ĝi ne povas komenciĝi kaj "
-"finiĝi kun la minusa signo."
+"Valida gastnomo enhavas nur la '0-9'-nombrojn, la minusklajn 'a-z'-literojn, "
+"la majusklajn 'A-Z'-literojn kaj la minusan signon. Ĝi ne povas komenciĝi "
+"kaj finiĝi per la minusa signo."
 
 #. Type: error
 #. Description
@@ -264,8 +263,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Eraro okazis. La reta akomodprocezo estas abortita. Vi povas reprovi ĝin el "
-"la instalada ĉefa menuo."
+"Eraro okazis. La reta akomodprocezo abortis. Vi povas reprovi ĝin el la "
+"instalada ĉefa menuo."
 
 #. Type: error
 #. Description
@@ -280,8 +279,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Neniu reta aparatadaptilo estas trovita. La instalilo ne troveblas la retan "
-"aparatadaptilon."
+"Neniu reta aparatadaptilo estas trovita. La instalilo ne kapablis trovi la "
+"retan aparatadaptilon."
 
 #. Type: error
 #. Description
@@ -290,8 +289,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Vi bezonus ŝargi specifan aparatadaptilon por via reta karto, se vi havas "
-"ĝin. Por tio, retroiru al la reta aparata detekta paŝo."
+"Vi bezonos ŝargi specifan aparatadaptilon por via reta karto, se vi havas "
+"ĝin. Por tio, retroiru al la retaparatdetektada paŝo."
 
 #. Type: note
 #. Description
@@ -309,8 +308,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} ŝajne estas malaktivigita per aparatara parametro 'Kill switch'. Se "
-"vi intencas uzi tiun ĉi aparatadaptilo, bonvolu ŝalti ĝin antaŭ ol pluigi."
+"${iface} ŝajne estas malaktivigita de la 'Kill switch'-parametro. Se vi "
+"intencas uzi tiun ĉi aparatadaptilon, bonvolu ŝalti ĝin antaŭ ol pluigi."
 
 #. Type: select
 #. Choices
@@ -318,13 +317,13 @@ msgstr ""
 #. below the 65 columns limit (which means 65 characters for most languages)
 #: ../netcfg-common.templates:121
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastructura ('Managed') reto, adaptita reto ('Peer to peer')"
+msgstr "Mastrumata ('Managed') reto, alcela reto ('Peer to peer')"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:122
 msgid "Wireless network kind:"
-msgstr "Sendrata reto kompleza kun:"
+msgstr "Tipo de sendrata reto:"
 
 #. Type: select
 #. Description
@@ -334,10 +333,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Sendrataj retoj funkcias laŭ la infrastructura modo ('Managed') aŭ la "
-"adaptita modo ('Peer to peer'). Se vi uzus reteniraĵon, via reto estas "
-"infrastuctura modo. Se alia komputilo oficus reteniron, via reto estas "
-"adaptita modo."
+"Sendrataj retoj funkcias laŭ la mastrumata modo ('Managed') aŭ la alcela "
+"modo ('Peer to peer'). Se vi uzas retenirejon, via reto estas mastrumata "
+"modo. Se alia komputilo servas estiel retenirejo, via reto estas alcela modo."
 
 #. Type: text
 #. Description
@@ -349,7 +347,7 @@ msgstr "Akomodado de la sendrata reto"
 #. Description
 #: ../netcfg-common.templates:133
 msgid "Searching for wireless access points ..."
-msgstr "Serĉadi sendratajn enirajn punktojn..."
+msgstr "Serĉadi sendratajn retenirejojn..."
 
 #. Type: text
 #. Description
@@ -361,7 +359,7 @@ msgstr "<neniu>"
 #. Description
 #: ../netcfg-common.templates:147
 msgid "Wireless ethernet (802.11x)"
-msgstr "Sendrata Ethernet ('802.11x')"
+msgstr "Sendrata '802.11x'-Eterreto"
 
 #. Type: text
 #. Description
@@ -373,37 +371,37 @@ msgstr "sendrata"
 #. Description
 #: ../netcfg-common.templates:155
 msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet aŭ Fast Ethernet"
+msgstr "Eterret aŭ Fast Eterret"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:159
 msgid "Token Ring"
-msgstr "Token Ring"
+msgstr "Staferingo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:163
 msgid "USB net"
-msgstr "USB net"
+msgstr "Universala Seria Busreto"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:172
 msgid "Serial-line IP"
-msgstr "Serial-line IP"
+msgstr "Interreta Protokolo tra Seria-lino"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:176
 msgid "Parallel-port IP"
-msgstr "Parallel-port IP"
+msgstr "Interreta Protokolo tra Paraleta-pordo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:180
 msgid "Point-to-Point Protocol"
-msgstr "Point-to-Point Protocol"
+msgstr "Punkto-al-Punkto Protokolo"
 
 #. Type: text
 #. Description
@@ -415,45 +413,45 @@ msgstr "IPv6-in-IPv4"
 #. Description
 #: ../netcfg-common.templates:188
 msgid "ISDN Point-to-Point Protocol"
-msgstr "ISDN Point-to-Point Protocol"
+msgstr "'ISDN'-a Punkto-al-Punkto Protokolo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:192
 msgid "Channel-to-channel"
-msgstr "Channel-to-channel"
+msgstr "Kanalo-al-Kanalo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:196
 msgid "Real channel-to-channel"
-msgstr "Real channel-to-channel"
+msgstr "Reala Kanalo-al-Kanalo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:205
 msgid "Inter-user communication vehicle"
-msgstr "Interuzantoj komunika veturilo"
+msgstr "Porinteruzanta komukik-vehiklo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:209
 msgid "Unknown interface"
-msgstr "Nekonata aparatadaptilo"
+msgstr "Nekonata aparatainterfaco"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:214
 msgid "Storing network settings ..."
-msgstr "Memorado de retaj akomodoj..."
+msgstr "Memorigado de retaj akomodoj..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:219
 msgid "Configure the network"
-msgstr "Akomodu la reto"
+msgstr "Akomodu la reton"
 
 #. Type: string
 #. Description
@@ -468,14 +466,14 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Vi eble bezonas provizi 'DHCP'-gastnomon. Se vi uzas kablomodemo, vi bezonus "
-"aldoni kontnombro."
+"Vi eble bezonas provizi 'DHCP'-gastnomon. Se vi uzas kablomodemon, vi "
+"bezonos aldoni kontnombron."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "La plejparto de aliaj uzantoj malplenus ĉi registrokampon."
+msgstr "La plejparto de aliaj uzantoj malplenigos tiun registrokampon."
 
 #. Type: text
 #. Description
@@ -513,7 +511,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "La 'DHCP'-akomodado estos fiaskigita."
+msgstr "La 'DHCP'-akomodado fiaskos."
 
 #. Type: select
 #. Choices
@@ -522,19 +520,19 @@ msgstr "La 'DHCP'-akomodado estos fiaskigita."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Reprovu la retan aŭtomatakomodadon"
+msgstr "Reprovu la retan memakomodadon"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Reprovu la retan aŭtomatakomodadon kun 'DHCP'-gastnomo"
+msgstr "Reprovu la retan memakomodadon per 'DHCP'-gastnomo"
 
 #. Type: select
 #. Choices
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Meme akomodu la reton"
+msgstr "Akomodu mem la reton"
 
 #. Type: select
 #. Choices
@@ -564,16 +562,16 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Vi povas tuj reprovi la 'DHCP'-aŭtomatakomodadon (la akomodado eble sukcesos "
-"se via 'DHCP'-servilo malfrue respondas) aŭ por memakomodi la retan. Kelkaj "
+"Vi povas tuj reprovi la 'DHCP'-memakomodadon (la akomodado eble sukcesos se "
+"via 'DHCP'-servilo malfrue respondas) aŭ por akomodi mem la retan. Kelkaj "
 "'DHCP'-servilo bezonas nomitan 'DHCP'-gastnomon de la kliento. Vi povas "
-"provizi ĝin antaŭ ol reprovi la aŭtomatakomodadon."
+"provizi ĝin antaŭ ol reprovi la memakomodadon."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "La reta aŭtomatakomodado malsukcesis"
+msgstr "La reta memakomodado malsukcesis"
 
 #. Type: note
 #. Description
@@ -582,14 +580,14 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Verŝajne via reto neuzas la 'DHCP'-protokolon. Alternative, la 'DHCP'-"
+"Verŝajne via reto ne uzas la 'DHCP'-protokolon. Alternative, la 'DHCP'-"
 "servilo malrapidas aŭ kelkaj aparatoj malfunkcias."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
 msgid "Continue without a default route?"
-msgstr "Daŭrigu sen implicita kurso ?"
+msgstr "Daŭrigu sen implicita irvojo?"
 
 #. Type: boolean
 #. Description
@@ -601,10 +599,10 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"La reta aŭtomatakomodado sukcesis. Tamen, ne implicita itinero estis "
-"deklarita: la sistemo ne scias kiel komuniki kun aliaj retaj aparatoj. Tio "
-"maluzigas la instalaĵon krom se vi uzas la aficialan unuan Debianan "
-"lumdiskon, 'netinst'-lumdiskon, aŭ disponeblajn pakaĵojn en loka reto."
+"La reta memakomodado sukcesis. Tamen, ne implicita itinero estis deklarita: "
+"la sistemo ne scias kiel komuniki kun aliaj retaj aparatoj. Tio ne ebligas "
+"la instaladon krom se vi uzas la oficialan unuan Debianan lumdiskon, "
+"'netinst'-lumdiskon, aŭ disponeblajn pakaĵojn en loka reto."
 
 #. Type: boolean
 #. Description
@@ -613,7 +611,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Se vi hezitas, ne daŭru sen implicita kurso kaj kontaktu vian lokan retan "
+"Se vi hezitas, ne daŭrigu sen implicita irvojo kaj kontaktu vian lokan retan "
 "administriston pri ĉi tiu problemo."
 
 #. Type: text
@@ -636,15 +634,15 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"La 'IP'-adreso estas unika por via kumputilo; ĝi konsistas de kvar nombroj "
-"apartigas per punktoj. Se vi ne scius kion tajpi, konsultu vian retan "
+"La 'IP'-adreso estas unika por via kumputilo; ĝi konsistas el kvar nombroj "
+"apartigitaj per punktoj. Se vi ne scias kion tajpi, konsultu vian retan "
 "administriston."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Malforma 'IP'-adreso"
+msgstr "Misformulita 'IP'-adreso"
 
 #. Type: error
 #. Description
@@ -653,8 +651,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Vi donis malforma 'IP'-adreso. Ĝia strukturo endas tia 'x.x.x.x' kiu ĉiu 'x' "
-"estas malgranda ol 255. Bonvolu reprovi."
+"Vi donis malforman 'IP'-adreson. Ĝia strukturo devas esti 'x.x.x.x' kie ĉiu "
+"'x' ne estas pli granda ol 255. Bonvolu reprovi."
 
 #. Type: string
 #. Description
@@ -740,7 +738,7 @@ msgstr "Vi eble malĝuste tajpis vian 'IP'-adreson, retmaskon kaj/aŭ kluzon."
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Ĉu sekvantaj informoj estas korektaj ?"
+msgstr "Ĉu sekvantaj informoj estas korektaj?"
 
 #. Type: boolean
 #. Description
