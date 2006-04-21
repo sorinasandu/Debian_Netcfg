@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: eo\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2005-10-19 16:14+0200\n"
-"PO-Revision-Date: 2006-03-20 13:14+0100\n"
+"PO-Revision-Date: 2006-04-18 14:46+0200\n"
 "Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "Kampnomo:"
+msgstr "Domajnnomo:"
 
 #. Type: string
 #. Description
@@ -59,7 +59,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"La kampnomon estas la dekstra parto de la interreta adreso de via "
+"La domajnnomo estas la dekstra parto de la interreta adreso de via "
 "sistemnomo. Ĝi ofte finiĝas per .com, .net, .edu aŭ .org. Se vi agordas vian "
 "hejman reton, vi povos uzi iajn nomojn sed ĉiam uzu la samnomon por ĉiu "
 "sistemo."
@@ -473,7 +473,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "La plejparto de aliaj uzantoj malplenigos tiun registrokampon."
+msgstr "La plejparto de aliaj uzantoj lasos ĉi tiun registrokampon malplena."
 
 #. Type: text
 #. Description
@@ -505,7 +505,7 @@ msgstr "Neniu trovita 'DHCP'-kliento"
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Neniu 'DHCP'-kliento estis trovita. Tiu pakaĵo bezonas klienton 'pump' aŭ "
-"'dhcp'."
+"'dhcp'-klienton."
 
 #. Type: error
 #. Description
@@ -550,8 +550,9 @@ msgstr "Ne akomodu nun la reton"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "Reta akomoda metodo:"
+msgstr "Retakomoda metodo:"
 
+# serge: revidu la tradukon.
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
@@ -563,8 +564,8 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Vi povas tuj reprovi la 'DHCP'-memakomodadon (la akomodado eble sukcesos se "
-"via 'DHCP'-servilo malfrue respondas) aŭ por akomodi mem la retan. Kelkaj "
-"'DHCP'-servilo bezonas nomitan 'DHCP'-gastnomon de la kliento. Vi povas "
+"via 'DHCP'-servilo malfrue respondas) aŭ por mem akomodi la reton. Kelkaj "
+"'DHCP'-serviloj bezonas nomitan 'DHCP'-gastnomon de la kliento. Vi povas "
 "provizi ĝin antaŭ ol reprovi la memakomodadon."
 
 #. Type: note
@@ -669,9 +670,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"La punkto-al-punkto adreso uzitas por trovi la reta punktfino. Se vi ne "
+"La punkto-al-punkto-adreso uzitas por trovi la retan punktfinon. Se vi ne "
 "scias kion tajpi, konsultu vian retan administriston. La punkto-al-punkto "
-"adreso konstruiĝas kun kvar nombroj apartataj per punktoj."
+"adreso konstruiĝu per kvar nombroj apartatigaj per punktoj."
 
 #. Type: string
 #. Description
@@ -688,8 +689,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "La retmasko uzitas por defini lokajn retsistemojn. Se vi ne scias kion "
-"tajpi, konsultu vian retan administriston. La retmasko enskribendas tiel "
-"kvar nombroj apartataj per punktoj."
+"tajpi, konsultu vian retan administriston. La retmasko enskribiĝu tiel kvar "
+"nombroj apartigitaj per punktoj."
 
 #. Type: string
 #. Description
@@ -708,10 +709,10 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"La kluzo estas 'IP'-adreso (kvar nombroj apartataj per punktoj) kiu indikas "
-"la enkursigilan sistemon ; ĝia sistemo ankaŭ nomiĝas la implicita kurso. La "
-"tuta elira rettrafiko (ekzemple, al interreto) trairas ĝin. En kelkaj "
-"maloftaj okazo, vi malbezonas enkursigilon. Tiuokaze malplenu ĉi "
+"La kluzo estas 'IP'-adreso (kvar nombroj apartigitaj per punktoj) kiu "
+"indikas la enkursigilan sistemon ; ĝia sistemo ankaŭ nomiĝas la implicita "
+"kurso. La tuta eliranta rettrafiko (ekzemple, al interreto) trairas ĝin. En "
+"kelkaj maloftaj okazoj, vi malbezonas enkursigilon. Tiuokaze malplenigu ĉi "
 "registrokampon. Se vi ne scias kion tajpi, konsultu vian retan "
 "administriston."
 
@@ -725,7 +726,7 @@ msgstr "Malalirebla kluzo"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "La indika kluzo estas malalirebla."
+msgstr "La indikita kluzo ne estas alirebla."
 
 #. Type: error
 #. Description
@@ -769,4 +770,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Memakomodu la retan per statika adresado"
+msgstr "Memakomodu la reton per statika adresado"
