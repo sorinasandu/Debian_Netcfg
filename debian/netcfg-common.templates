@@ -116,8 +116,11 @@ _Description: Kill switch enabled on ${iface}
 Template: netcfg/wireless_adhoc_managed
 Type: select
 Default: Infrastructure (Managed) network
-# Note to translators : Please keep your translations of the choices
+# Note to translators : Please keep your translations of each choice
 # below the 65 columns limit (which means 65 characters for most languages)
+# Choices MUST be separated by commas
+# You MUST use standard commas not special commas for your language
+# You MUST NOT use commas inside choices
 _Choices: Infrastructure (Managed) network, Ad-hoc network (Peer to peer)
 _Description: Wireless network kind:
  Wireless networks are either managed or ad-hoc. If you use a real access
