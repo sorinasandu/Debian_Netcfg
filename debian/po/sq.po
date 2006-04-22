@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2005-10-19 16:14+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-04-21 23:23-0600\n"
 "PO-Revision-Date: 2006-01-20 13:42+0100\n"
 "Last-Translator:  Elian Myftiu <elian.myftiu@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
@@ -301,6 +301,8 @@ msgstr "\"kill switch\" aktivizuar tek ${iface}"
 
 #. Type: note
 #. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -521,6 +523,9 @@ msgstr "Riprovo autokonfigurimin e rrjetit"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
@@ -528,18 +533,27 @@ msgstr ""
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "Konfiguroje vetë rrjetin"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translations of the choices
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "Mos e konfiguro tani rrjetin"
