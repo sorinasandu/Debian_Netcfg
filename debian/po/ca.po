@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-21 23:23-0600\n"
+"POT-Creation-Date: 2006-04-22 18:29-0600\n"
 "PO-Revision-Date: 2006-02-19 01:20+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -303,8 +303,6 @@ msgstr "El commutador d'inhabilitació està habilitat a ${iface}"
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -317,21 +315,24 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:121
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Xarxa amb infraestructura (gestionada), Xarxa «ad-hoc» (Punt a punt)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
 msgstr "Tipus de xarxa sense fil:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -344,117 +345,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
 msgstr "Configuració de xarxa sense fil"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
 msgstr "S'estan cercant els punts d'accés sense fil..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:146
 msgid "<none>"
 msgstr "<cap>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet Wireless (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:154
 msgid "wireless"
 msgstr "wireless"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:158
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet o ethernet ràpida"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:162
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:166
 msgid "USB net"
 msgstr "xarxa USB"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:175
 msgid "Serial-line IP"
 msgstr "IP per línia sèrie"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
 msgstr "IP per port paral·lel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocol Punt-a-Punt de XDSI"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:205
+#: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
 msgstr "Vehicle de comunicació entre usuaris"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:212
 msgid "Unknown interface"
 msgstr "Interfície desconeguda"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:217
 msgid "Storing network settings ..."
 msgstr "S'estan emmagatzemant els paràmetres de xarxa..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:222
 msgid "Configure the network"
 msgstr "Configura la xarxa"
 
@@ -520,7 +521,7 @@ msgstr "S'avortarà el procés de configuració per DHCP."
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
@@ -529,36 +530,24 @@ msgstr "Reintenta la configuració automàtica de la xarxa"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Reintenta la configuració automàtica amb un nom d'ordinador DHCP"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "Configura la xarxa manualment"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "No configures la xarxa ara mateix"

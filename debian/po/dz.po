@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-21 23:23-0600\n"
+"POT-Creation-Date: 2006-04-22 18:29-0600\n"
 "PO-Revision-Date: 2006-04-19 19:18+0530\n"
 "Last-Translator: \n"
 "Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -280,8 +280,6 @@ msgstr "${iface}ལུ་ལྕོགས་ཅན་བཟོ་ཡོད་ག�
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -293,22 +291,25 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:121
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr ""
 "གཞི་བརྟེན་མཁོ་ཆས་(འཛིན་སྐྱོང་འཐབ་འཐབཔ་)ཀྱི་ཡོངས་འབྲེལ་ ཨེཌ་-ཧོཀ་ཡོངས་འབྲེལ་(དོ་མཉམ་ལས་དོ་མཉམ་)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
 msgstr "རླུང་འཕྲིན་ཡོངས་འབྲེལ་གྱི་དབྱེ་ཁག་"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -317,117 +318,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
 msgstr "རླུང་འཕྲིན་ཡོངས་འབྲེལ་གྱི་རིམ་སྒྲིག་"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
 msgstr "རླུང་འཕྲིན་འཛུལ་སྤྱོད་འབད་ནིའི་ས་ཚིགས་འཚོལ་ནི།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:146
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
 msgstr "རླུང་འཕྲིན་གྱི་ཨི་ཐར་ནེཊི་(802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:154
 msgid "wireless"
 msgstr "རླུང་འཕྲིན།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:158
 msgid "Ethernet or Fast Ethernet"
 msgstr "ཨི་ཐར་ནེཊི་ཡང་ན་ཨི་ཐར་ནེཊི་མགྱོགས་དྲགས།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:162
 msgid "Token Ring"
 msgstr "ངོ་རྟགས་ཨ་ལོང་།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:166
 msgid "USB net"
 msgstr "ཡུ་ཨེས་བི་ནེཊི།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:175
 msgid "Serial-line IP"
 msgstr "ཨང་རིམ་-གྲལ་ཐིག་ ཨའི་པི།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
 msgstr "མཉམ་སྤྱོད་-འདྲེན་ལམ་ ཨའི་པི།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
 msgstr "ས་ཚིགས་ལས་ས་ཚིགས་ གནད་སྤེལ་ལམ་ལུགས།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
 msgstr "ཨའི་པི་ཝི་༦-ནང་ཨའི་པི་ཝི་༤"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ཨའི་ཨེས་ཌི་ཨེན་ས་ཚིགས་ ལས་ ས་ཚིགས་གནད་སྤེལ་ལམ་ལུགས།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
 msgstr "རྒྱུ་ལམ་-ལས་-རྒྱུ་ལམ།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
 msgstr "ངོ་མ་རྒྱུ་ལམ་-ལས-་རྒྱུ་ལམ།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:205
+#: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
 msgstr "ཕན་ཚུན་ལག་ལེན་པའི་རྒྱུ་འབྲེལ་འགྲུལ་འཁོར།"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:212
 msgid "Unknown interface"
 msgstr "མ་ཤེསཔ་ངོས་འདྲ་བ།"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:217
 msgid "Storing network settings ..."
 msgstr "གསོག་འཇོག་ཡོངས་འབྲེལ་སྒྲག་སྟངས་ཚུ།"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:222
 msgid "Configure the network"
 msgstr "ཡོངས་འབྲེལ་རིམ་སྒྲིག་འབད།"
 
@@ -491,7 +492,7 @@ msgstr "ཌི་ཨེཆ་སི་པི་རིམ་སྒྲིག་ལ
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
@@ -500,36 +501,24 @@ msgstr "ཡོངས་འབྲེལ་རང་བཞིན་རིམ་ས
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "ཌི་ཨེཆ་སི་པི་ཧོསཊི་མིང་ཅིག་ཁར་ཡོངས་འབྲེལ་རང་བཞིན་རིམ་སྒྲིག་སླར་འབད་རྩོལ་བསྐྱེད།"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "ཡོངས་འབྲེལ་ལག་ཐོག་ལས་རིམ་སྒྲིག་འབད།"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "དུས་ཚོད་འདི་ཁར་ཡོངས་འབྲེལ་འདི་རིམ་སྒྲིག་མ་འབད།"

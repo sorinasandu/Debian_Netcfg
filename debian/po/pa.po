@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa_IN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-21 23:23-0600\n"
+"POT-Creation-Date: 2006-04-22 18:29-0600\n"
 "PO-Revision-Date: 2006-01-27 16:29+0530\n"
 "Last-Translator: Amanpreet Singh Alam <apbrar@gmail.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -296,8 +296,6 @@ msgstr "${iface} ਉੱਪਰ ਯੋਗ ਕੀਤੀ ਬੰਦ ਸਵਿੱਚ�
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -309,21 +307,24 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:121
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "ਜਾਣਕਾਰੀ-ਢਾਂਚਾ (ਪ੍ਰਬੰਧਨ ਕੀਤਾ) ਨੈੱਟਵਰਕ, Ad-hoc ਨੈੱਟਵਰਕ (ਪੀਅਰ ਤੋਂ ਪੀਅਰ)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
 msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਕਿਸਮ:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -335,117 +336,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
 msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
 msgstr "ਬੇਤਾਰ ਪਹੁੰਚ ਬਿੰਦੂਆਂ ਲਈ ਖੋਜ ਜਾਰੀ ਹੈ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:146
 msgid "<none>"
 msgstr "<ਕੋਈ ਨਹੀਂ>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
 msgstr "ਬੇਤਾਰ ਈਥਰਨੈੱਟ (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:154
 msgid "wireless"
 msgstr "ਬੇਤਾਰ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:158
 msgid "Ethernet or Fast Ethernet"
 msgstr "ਈਥਰਨੈੱਟ ਜਾਂ ਤੇਜ਼ ਈਥਰਨੈੱਟ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:162
 msgid "Token Ring"
 msgstr "ਟੋਕਨ ਰਿੰਗ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:166
 msgid "USB net"
 msgstr "USB ਨੈੱਟ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:175
 msgid "Serial-line IP"
 msgstr "ਸੀਰੀਅਲ-ਲਾਈਨ IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
 msgstr "ਪੈਰਲਲ-ਪੋਰਟ IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
 msgstr "ਪੁਆਂਇਟ-ਤੋਂ-ਪੁਆਂਇਟ ਪ੍ਰੋਟੋਕਾਲ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN ਪੁਆਂਇਟ-ਤੋਂ-ਪੁਆਂਇਟ ਪ੍ਰੋਟੋਕਾਲ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
 msgstr "ਚੈਨਲ-ਤੋਂ-ਚੈਨਲ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
 msgstr "ਅਸਲੀ ਚੈਨਲ-ਤੋਂ-ਚੈਨਲ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:205
+#: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
 msgstr "ਅੰਤਰ-ਉਪਭੋਗੀ ਸੰਚਾਰ ਸਾਧਨ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:212
 msgid "Unknown interface"
 msgstr "ਅਣਪਛਾਤਾ ਇੰਟਰਫੇਸ"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:217
 msgid "Storing network settings ..."
 msgstr "ਨੈੱਟਵਰਕ ਵਿਵਸਥਾ ਸੰਭਾਲ ਰਿਹਾ ਹੈ.ੀ ਹੈ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:222
 msgid "Configure the network"
 msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਕਰੋ"
 
@@ -509,7 +510,7 @@ msgstr "DHCP ਸੰਰਚਨਾ ਕਾਰਜ ਅਧੂਰਾ ਖਤਮ ਹੋਵ
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
@@ -518,36 +519,24 @@ msgstr "ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਦੀ ਮੁੜ ਕ�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "DHCP ਮੇਜ਼ਬਾਨ ਨਾਲ ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਦੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਦਸਤੀ ਕਰੋ"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "ਇਸ ਸਮੇਂ ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਨਾ ਕਰੋ"

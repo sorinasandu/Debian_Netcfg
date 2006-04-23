@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-21 23:23-0600\n"
+"POT-Creation-Date: 2006-04-22 18:29-0600\n"
 "PO-Revision-Date: 2005-12-27 03:08+0200\n"
 "Last-Translator: quad-nrg.net <galaxico@quad-nrg.net>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
@@ -317,8 +317,6 @@ msgstr "Βίαιος τερματισμός switch που είναι ενεργ�
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -331,21 +329,24 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:121
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Δίκτυο υποδομής (Διαχειριζόμενο), Ad-hoc δίκτυο (Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
 msgstr "Τύπος ασύρματου δικτύου:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -358,117 +359,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
 msgstr "Ρύθμιση ασύρματου δικτύου"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
 msgstr "Ανίχνευση για ασύρματα σημεία πρόσβασης ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:146
 msgid "<none>"
 msgstr "<κανένα>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ασύρματο ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:154
 msgid "wireless"
 msgstr "ασύρματο"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:158
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ή Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:162
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:166
 msgid "USB net"
 msgstr "δίκτυο USB"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:175
 msgid "Serial-line IP"
 msgstr "IP σειριακής σύνδεσης"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
 msgstr "IP παράλληλης θύρας"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
 msgstr "Πρωτόκολλο σύνδεσης Point-to-Point (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Πρωτόκολλο σύνδεσης ISDN Point-to-Point (PPP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
 msgstr "δίαυλος-με-δίαυλο (Channel-to-channel)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
 msgstr "Πραγματική διασύνδεση διαύλων"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:205
+#: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
 msgstr "\"όχημα\" επικοινωνίας μεταξύ-χρηστών"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:212
 msgid "Unknown interface"
 msgstr "Άγνωστη διασύνδεση"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:217
 msgid "Storing network settings ..."
 msgstr "Αποθήκευση των ρυθμίσεων δικτύου..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:222
 msgid "Configure the network"
 msgstr "Ρύθμιση του δικτύου"
 
@@ -535,7 +536,7 @@ msgstr "Η διαδικασία ρύθμισης DHCP θα τερματιστε�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
@@ -544,36 +545,24 @@ msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δι�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Επαναπροσπάθεια αυτόματης ρύθμισης δικτύου με όνομα διακομιστή DHCP"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "Χειροκίνητη ρύθμιση του δικτύου"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "Να μη γίνει ρύθμιση του δικτύου σε αυτό το σημείο"

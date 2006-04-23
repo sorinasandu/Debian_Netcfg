@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-21 23:23-0600\n"
+"POT-Creation-Date: 2006-04-22 18:29-0600\n"
 "PO-Revision-Date: 2006-03-21 14:42-0500\n"
 "Last-Translator: Kevin Patrick Scannell <scannell@SLU.EDU>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -253,8 +253,6 @@ msgstr ""
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -264,21 +262,24 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
-#: ../netcfg-common.templates:121
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
 msgstr "Bunlíonra (Bainistithe), Líonra ad-hoc (idir comhghleacaithe)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
 msgstr "Cineál an líonra gan sreang:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:125
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -287,117 +288,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:129
+#: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
 msgstr "Cumraíocht an líonra gan sreang"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
 msgstr "Ag déanamh cuardach ar phointí rochtana gan sreang..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:143
+#: ../netcfg-common.templates:146
 msgid "<none>"
 msgstr "<neamhní>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:147
+#: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet gan sreang (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:151
+#: ../netcfg-common.templates:154
 msgid "wireless"
 msgstr "gan sreang"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#: ../netcfg-common.templates:158
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet nó Ethernet Tapa"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#: ../netcfg-common.templates:162
 msgid "Token Ring"
 msgstr "Fáinne Ceadchomharthaí"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#: ../netcfg-common.templates:166
 msgid "USB net"
 msgstr "Líonra USB"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:172
+#: ../netcfg-common.templates:175
 msgid "Serial-line IP"
 msgstr "IP líne-srathach"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:176
+#: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
 msgstr "IP poirt comhuainigh"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:180
+#: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
 msgstr "Prótacal Pointe-go-Pointe"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Prótacal Pointe-go-Pointe ISDN"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
 msgstr "Cainéal-le-cainéal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
 msgstr "Cainéal le cainéal ceart"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:205
+#: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
 msgstr "Feithicil cumarsáide idir úsáideoirí"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:212
 msgid "Unknown interface"
 msgstr "Comhéadan anaithnid"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:217
 msgid "Storing network settings ..."
 msgstr "Socruithe líonra á stóráil ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:222
 msgid "Configure the network"
 msgstr "Cumraigh an líonra"
 
@@ -461,7 +462,7 @@ msgstr ""
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
+#. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
@@ -470,36 +471,24 @@ msgstr "Atriail uathchumraíocht an líonra"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Atriail uathchumraíocht an líonra le hóstainm DHCP"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "Cumraigh an líonra de láimh"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of the choices
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "Ná cumraigh an líonra faoi láthair"
