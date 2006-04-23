@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-04-22 18:29-0600\n"
+"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
+"POT-Creation-Date: 2006-04-22 23:50-0600\n"
 "PO-Revision-Date: 2005-10-22 14:11+0200\n"
 "Last-Translator: Bart Cornelis <cobaco@linux.be>\n"
 "Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
@@ -306,6 +306,8 @@ msgstr "De aan-uit-knop van ${iface} staat op uit"
 
 #. Type: note
 #. Description
+#. A "kill switch" is a physical switch found on some network cards that
+#. disables the card.
 #: ../netcfg-common.templates:111
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -532,24 +534,36 @@ msgstr "Automatische netwerkconfiguratie opnieuw proberen"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translation
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Automatische netwerkconfiguratie proberen met DHCP-computernaam"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translation
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
 msgstr "Netwerk handmatig configureren"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translation
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "${wifireconf}"
 msgstr "${wifireconf}"
 
 #. Type: select
 #. Choices
+#. Note to translators : Please keep your translation
+#. below a 65 columns limit (which means 65 characters
+#. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
 msgstr "Netwerkconfiguratie nu niet uitvoeren"
