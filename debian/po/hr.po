@@ -11,20 +11,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2005-03-05 21:51+0100\n"
 "Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-common.templates:4
 msgid "Auto-configure network with DHCP?"
-msgstr "Automatski podesi mre¾u pomoæu DHCP?"
+msgstr "Automatski podesi mreÅ¾u pomoÄ‡u DHCP?"
 
 #. Type: boolean
 #. Description
@@ -36,10 +36,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Umre¾avanje mo¾e biti pode¹eno ili pomoæu DHCP ili ruènim uno¹enjem svih "
+"UmreÅ¾avanje moÅ¾e biti podeÅ¡eno ili pomoÄ‡u DHCP ili ruÄnim unoÅ¡enjem svih "
 "podataka. Ako izaberete DHCP, a program za instalaciju ne bude mogao dobiti "
-"valjane radne postavke s DHCP poslu¾itelja na va¹oj mre¾i, ipak æete moæi "
-"podesiti svoju mre¾u i ruèno."
+"valjane radne postavke s DHCP posluÅ¾itelja na vaÅ¡oj mreÅ¾i, ipak Ä‡ete moÄ‡i "
+"podesiti svoju mreÅ¾u i ruÄno."
 
 #. Type: string
 #. Description
@@ -56,16 +56,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Ime domene je dio va¹e Internet adrese pokraj va¹eg imena raèunala. To je "
-"obièno ne¹to ¹to zavr¹ava s .hr, .com, .net, .edu ili .org. Ako pode¹avate "
-"kuænu mre¾u, mo¾ete ga proizvoljno odrediti, ali morate koristiti isto ime "
-"domene na svim va¹im raèunalima."
+"Ime domene je dio vaÅ¡e Internet adrese pokraj vaÅ¡eg imena raÄunala. To je "
+"obiÄno neÅ¡to Å¡to zavrÅ¡ava s .hr, .com, .net, .edu ili .org. Ako podeÅ¡avate "
+"kuÄ‡nu mreÅ¾u, moÅ¾ete ga proizvoljno odrediti, ali morate koristiti isto ime "
+"domene na svim vaÅ¡im raÄunalima."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Adresa imenskog poslu¾itelja:"
+msgstr "Adresa imenskog posluÅ¾itelja:"
 
 #. Type: string
 #. Description
@@ -77,16 +77,16 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Imenski poslu¾itelji koriste se za tra¾enje imena raèunala na mre¾i. Molim "
-"unesite IP adrese (ne imena domaæina) do 3 imenska poslu¾itelja, odvojene "
-"razmacima. Ne koristite zareze. Prvi imenski poslu¾itelj na popisu æe biti "
-"prvi upitan. Ako ne ¾elite koristiti imenske poslu¾itelje, ostavite prazno."
+"Imenski posluÅ¾itelji koriste se za traÅ¾enje imena raÄunala na mreÅ¾i. Molim "
+"unesite IP adrese (ne imena domaÄ‡ina) do 3 imenska posluÅ¾itelja, odvojene "
+"razmacima. Ne koristite zareze. Prvi imenski posluÅ¾itelj na popisu Ä‡e biti "
+"prvi upitan. Ako ne Å¾elite koristiti imenske posluÅ¾itelje, ostavite prazno."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Osnovno mre¾no suèelje:"
+msgstr "Osnovno mreÅ¾no suÄelje:"
 
 #. Type: select
 #. Description
@@ -97,15 +97,15 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Va¹ sustav ima vi¹e mre¾nih suèelja. Odredite koje æete rabiti kao osnovno "
-"mre¾no suèelje tijekom instalacije Debiana. Ako je moguæe, izabrano je prvo "
-"pronağeno spojeno mre¾no suèelje."
+"VaÅ¡ sustav ima viÅ¡e mreÅ¾nih suÄelja. Odredite koje Ä‡ete rabiti kao osnovno "
+"mreÅ¾no suÄelje tijekom instalacije Debiana. Ako je moguÄ‡e, izabrano je prvo "
+"pronaÄ‘eno spojeno mreÅ¾no suÄelje."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "Be¾ièni ESSID za ${iface}:"
+msgstr "BeÅ¾iÄni ESSID za ${iface}:"
 
 #. Type: string
 #. Description
@@ -115,15 +115,15 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} je be¾ièno mre¾no suèelje. Molim unesite ime (ESSID) be¾iène mre¾e "
-"koju ¾elite da ${iface} koristi. Ako ¾elite koristiti bilo koju dostupnu "
-"mre¾u, ostavite prazno."
+"${iface} je beÅ¾iÄno mreÅ¾no suÄelje. Molim unesite ime (ESSID) beÅ¾iÄne mreÅ¾e "
+"koju Å¾elite da ${iface} koristi. Ako Å¾elite koristiti bilo koju dostupnu "
+"mreÅ¾u, ostavite prazno."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr "WEP kljuè za be¾ièni ureğaj ${iface}:"
+msgstr "WEP kljuÄ za beÅ¾iÄni ureÄ‘aj ${iface}:"
 
 #. Type: string
 #. Description
@@ -132,8 +132,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Ako je potrebno, molim unesite sigurnosni WEP kljuè za be¾ièni ureğaj "
-"${iface}. To mo¾ete na dva naèina:"
+"Ako je potrebno, molim unesite sigurnosni WEP kljuÄ za beÅ¾iÄni ureÄ‘aj "
+"${iface}. To moÅ¾ete na dva naÄina:"
 
 #. Type: string
 #. Description
@@ -142,7 +142,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Ako je va¹ WEP kljuè u formatu 'nnnn-nnnn-nn' 'nn:nn:nn:nn:nn:nn:nn:nn', ili "
+"Ako je vaÅ¡ WEP kljuÄ u formatu 'nnnn-nnnn-nn' 'nn:nn:nn:nn:nn:nn:nn:nn', ili "
 "'nnnnnnnn', gdje je n broj, samo ga unesite u ovo polje kakav jest."
 
 #. Type: string
@@ -152,7 +152,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ako je va¹ WEP kljuè u formatu zapornog izraza, dodajte mu 's:' na poèetak "
+"Ako je vaÅ¡ WEP kljuÄ u formatu zapornog izraza, dodajte mu 's:' na poÄetak "
 "(bez navodnika)."
 
 #. Type: string
@@ -161,13 +161,13 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "Naravno, ako nema WEP kljuèa za va¹u be¾iènu mre¾u, ostavite prazno."
+msgstr "Naravno, ako nema WEP kljuÄa za vaÅ¡u beÅ¾iÄnu mreÅ¾u, ostavite prazno."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:61
 msgid "Invalid WEP key"
-msgstr "Nevaljan WEP kljuè"
+msgstr "Nevaljan WEP kljuÄ"
 
 #. Type: error
 #. Description
@@ -176,8 +176,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP kljuè '${wepkey}' nije valjan. Molim, pozorno proèitajte naputak na "
-"slijedeæem zaslonu kako ispravno unijeti WEP kljuè i poku¹ajte iznova."
+"WEP kljuÄ '${wepkey}' nije valjan. Molim, pozorno proÄitajte naputak na "
+"slijedeÄ‡em zaslonu kako ispravno unijeti WEP kljuÄ i pokuÅ¡ajte iznova."
 
 #. Type: error
 #. Description
@@ -192,20 +192,20 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" nije valjan. ESSID-i mogu biti velièine do 32 znaka i "
-"mogu sadr¾avati sve vrste znakovlja."
+"ESSID \"${essid}\" nije valjan. ESSID-i mogu biti veliÄine do 32 znaka i "
+"mogu sadrÅ¾avati sve vrste znakovlja."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Hostname:"
-msgstr "Ime raèunala:"
+msgstr "Ime raÄunala:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:75
 msgid "Please enter the hostname for this system."
-msgstr "Molim unesite ime raèunala za ovaj sustav."
+msgstr "Molim unesite ime raÄunala za ovaj sustav."
 
 #. Type: string
 #. Description
@@ -216,15 +216,15 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Ime raèunala je jedna rijeè koja identificira va¹e raèunalo na mre¾i. Ako ne "
-"znate kakvo ono treba biti, pitajte svog mre¾nog administratora. Ako "
-"pode¹avate svoju kuænu mre¾u, mo¾ete ga proizvoljno odrediti."
+"Ime raÄunala je jedna rijeÄ koja identificira vaÅ¡e raÄunalo na mreÅ¾i. Ako ne "
+"znate kakvo ono treba biti, pitajte svog mreÅ¾nog administratora. Ako "
+"podeÅ¡avate svoju kuÄ‡nu mreÅ¾u, moÅ¾ete ga proizvoljno odrediti."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Nevaljano ime raèunala"
+msgstr "Nevaljano ime raÄunala"
 
 #. Type: error
 #. Description
@@ -240,15 +240,15 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Valjano ime raèunala mo¾e sadr¾avati samo brojke 0 - 9, mala slova a - z i "
-"znak minusa. Mora biti izmeğu 2 i 63 znaka dugaèko i ne smije zapoèinjati "
-"ili zavr¹avati s minusom."
+"Valjano ime raÄunala moÅ¾e sadrÅ¾avati samo brojke 0 - 9, mala slova a - z i "
+"znak minusa. Mora biti izmeÄ‘u 2 i 63 znaka dugaÄko i ne smije zapoÄinjati "
+"ili zavrÅ¡avati s minusom."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Error"
-msgstr "Pogre¹ka"
+msgstr "PogreÅ¡ka"
 
 #. Type: error
 #. Description
@@ -257,14 +257,14 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Pojavila se pogre¹ka i postupak pode¹avanja mre¾e je prekinut. Mo¾ete "
-"poku¹ati ponovo iz glavnog instalacijskog izabirnika."
+"Pojavila se pogreÅ¡ka i postupak podeÅ¡avanja mreÅ¾e je prekinut. MoÅ¾ete "
+"pokuÅ¡ati ponovo iz glavnog instalacijskog izabirnika."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:100
 msgid "No network interfaces detected"
-msgstr "Nema mre¾nih suèelja"
+msgstr "Nema mreÅ¾nih suÄelja"
 
 #. Type: error
 #. Description
@@ -273,8 +273,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Nisu pronağena mre¾na suèelja. Instalacijski sustav nije mogao pronaæi "
-"mre¾ni ureğaj."
+"Nisu pronaÄ‘ena mreÅ¾na suÄelja. Instalacijski sustav nije mogao pronaÄ‡i "
+"mreÅ¾ni ureÄ‘aj."
 
 #. Type: error
 #. Description
@@ -283,8 +283,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Mo¾da trebate uèitati poseban modul za va¹u mre¾nu karticu, ako je imate. Za "
-"to se vratite natrag na korak tra¾enja mre¾nog oèvrsja."
+"MoÅ¾da trebate uÄitati poseban modul za vaÅ¡u mreÅ¾nu karticu, ako je imate. Za "
+"to se vratite natrag na korak traÅ¾enja mreÅ¾nog oÄvrsja."
 
 #. Type: note
 #. Description
@@ -313,14 +313,25 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Upravljana (infrastrukturna) mre¾a, Ad-hoc (peer-to-peer) mre¾a"
+msgid "Infrastructure (Managed) network"
+msgstr "Upravljana (infrastrukturna) mreÅ¾a"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "Ad-hoc (peer-to-peer) mreÅ¾a"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
-msgstr "Vrsta be¾iène mre¾e:"
+msgstr "Vrsta beÅ¾iÄne mreÅ¾e:"
 
 #. Type: select
 #. Description
@@ -330,21 +341,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Be¾iène mre¾e su ili upravljane (stalne) ili ad-hoc (ptp). Ako rabite neku "
-"vrst stalne toèke pristupa, va¹a je mre¾a upravljana. Ako je va¹a 'toèka "
-"pristupa' drugo raèunalo, onda je va¹a mre¾a ad-hoc."
+"BeÅ¾iÄne mreÅ¾e su ili upravljane (stalne) ili ad-hoc (ptp). Ako rabite neku "
+"vrst stalne toÄke pristupa, vaÅ¡a je mreÅ¾a upravljana. Ako je vaÅ¡a 'toÄka "
+"pristupa' drugo raÄunalo, onda je vaÅ¡a mreÅ¾a ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
-msgstr "Pode¹avanje be¾iène mre¾e"
+msgstr "PodeÅ¡avanje beÅ¾iÄne mreÅ¾e"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
-msgstr "Tra¾im be¾iène toèke pristupa..."
+msgstr "TraÅ¾im beÅ¾iÄne toÄke pristupa..."
 
 #. Type: text
 #. Description
@@ -356,13 +367,13 @@ msgstr "<nema>"
 #. Description
 #: ../netcfg-common.templates:150
 msgid "Wireless ethernet (802.11x)"
-msgstr "Be¾ièni ethernet (802.11x)"
+msgstr "BeÅ¾iÄni ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:154
 msgid "wireless"
-msgstr "be¾ièna"
+msgstr "beÅ¾iÄna"
 
 #. Type: text
 #. Description
@@ -428,13 +439,13 @@ msgstr "Stvarni channel-to-channel"
 #. Description
 #: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
-msgstr "Meğukorisnièko komunikacijsko sredstvo"
+msgstr "MeÄ‘ukorisniÄko komunikacijsko sredstvo"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:212
 msgid "Unknown interface"
-msgstr "Nepoznato suèelje"
+msgstr "Nepoznato suÄelje"
 
 #. Type: text
 #. Description
@@ -442,20 +453,20 @@ msgstr "Nepoznato suèelje"
 #: ../netcfg-common.templates:217
 #, fuzzy
 msgid "Storing network settings ..."
-msgstr "Pode¹avam mre¾u..."
+msgstr "PodeÅ¡avam mreÅ¾u..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:222
 msgid "Configure the network"
-msgstr "Podesi mre¾u"
+msgstr "Podesi mreÅ¾u"
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Ime raèunala u DHCP-u:"
+msgstr "Ime raÄunala u DHCP-u:"
 
 #. Type: string
 #. Description
@@ -464,32 +475,32 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Mo¾da trebate unijeti ime raèunala u DHCP-u. Ako koristite kabelski modem, "
-"ovdje trebate upisati broj raèuna."
+"MoÅ¾da trebate unijeti ime raÄunala u DHCP-u. Ako koristite kabelski modem, "
+"ovdje trebate upisati broj raÄuna."
 
 #. Type: string
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "Most other users can just leave this blank."
-msgstr "Veèina ostalih korisnika mo¾e ovo ostaviti prazno."
+msgstr "VeÄina ostalih korisnika moÅ¾e ovo ostaviti prazno."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Pode¹avam mre¾u pomoæu DHCP"
+msgstr "PodeÅ¡avam mreÅ¾u pomoÄ‡u DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "To mo¾e potrajati."
+msgstr "To moÅ¾e potrajati."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:19
 msgid "Network autoconfiguration has succeeded"
-msgstr "Automatsko pode¹avanje mre¾e uspjelo"
+msgstr "Automatsko podeÅ¡avanje mreÅ¾e uspjelo"
 
 #. Type: error
 #. Description
@@ -501,13 +512,13 @@ msgstr "Nema DHCP klijenta"
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "DHCP klijent nije pronağen. Ovaj paket zahtijeva pump ili dhcp-client."
+msgstr "DHCP klijent nije pronaÄ‘en. Ovaj paket zahtijeva pump ili dhcp-client."
 
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process will be aborted."
-msgstr "Postupak DHCP pode¹avanja æe biti prekinut."
+msgstr "Postupak DHCP podeÅ¡avanja Ä‡e biti prekinut."
 
 #. Type: select
 #. Choices
@@ -516,7 +527,7 @@ msgstr "Postupak DHCP pode¹avanja æe biti prekinut."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration"
-msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e"
+msgstr "Iznova pokuÅ¡aj automatsko podeÅ¡avanje mreÅ¾e"
 
 #. Type: select
 #. Choices
@@ -525,7 +536,7 @@ msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e s imenom raèunala u DHCP-u"
+msgstr "Iznova pokuÅ¡aj automatsko podeÅ¡avanje mreÅ¾e s imenom raÄunala u DHCP-u"
 
 #. Type: select
 #. Choices
@@ -534,7 +545,7 @@ msgstr "Iznova poku¹aj automatsko pode¹avanje mre¾e s imenom raèunala u DHCP-u"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Configure network manually"
-msgstr "Ruèno podesi mre¾u"
+msgstr "RuÄno podesi mreÅ¾u"
 
 #. Type: select
 #. Choices
@@ -552,13 +563,13 @@ msgstr "${wifireconf}"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:33
 msgid "Do not configure the network at this time"
-msgstr "Zasad ne pode¹avaj mre¾u"
+msgstr "Zasad ne podeÅ¡avaj mreÅ¾u"
 
 #. Type: select
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr "Naèin pode¹avanja mre¾e:"
+msgstr "NaÄin podeÅ¡avanja mreÅ¾e:"
 
 #. Type: select
 #. Description
@@ -570,16 +581,16 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Odavde mo¾ete iznova poku¹ati automatsko DHCP pode¹avanje mre¾e (mo¾da va¹em "
-"DHCP poslu¾itelju treba vremena da odgovori), ili ruèno podesiti mre¾u. Neki "
-"DHCP poslu¾itelji tra¾e da klijent po¹alje ime raèunala DHCP-om, pa mo¾ete "
-"poku¹ati i na taj naèin."
+"Odavde moÅ¾ete iznova pokuÅ¡ati automatsko DHCP podeÅ¡avanje mreÅ¾e (moÅ¾da vaÅ¡em "
+"DHCP posluÅ¾itelju treba vremena da odgovori), ili ruÄno podesiti mreÅ¾u. Neki "
+"DHCP posluÅ¾itelji traÅ¾e da klijent poÅ¡alje ime raÄunala DHCP-om, pa moÅ¾ete "
+"pokuÅ¡ati i na taj naÄin."
 
 #. Type: note
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr "Automatsko pode¹avanje mre¾e neuspjelo"
+msgstr "Automatsko podeÅ¡avanje mreÅ¾e neuspjelo"
 
 #. Type: note
 #. Description
@@ -588,8 +599,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Va¹a mre¾a vjerojatno ne koristi DHCP protokol, ili je mo¾da DHCP "
-"poslu¾itelj spor, ili koji dio mre¾noga oèvrsja ne radi ispravno."
+"VaÅ¡a mreÅ¾a vjerojatno ne koristi DHCP protokol, ili je moÅ¾da DHCP "
+"posluÅ¾itelj spor, ili koji dio mreÅ¾noga oÄvrsja ne radi ispravno."
 
 #. Type: boolean
 #. Description
@@ -608,11 +619,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Automatsko pode¹avanje mre¾e je uspjelo. Meğutim, nije postavljen zadani put "
-"(default route): sustav ne zna kako komunicirati s raèunalima na Internetu. "
-"Zbog toga neæete moæi nastaviti instalaciju, osim ako nemate prvi slu¾beni "
+"Automatsko podeÅ¡avanje mreÅ¾e je uspjelo. MeÄ‘utim, nije postavljen zadani put "
+"(default route): sustav ne zna kako komunicirati s raÄunalima na Internetu. "
+"Zbog toga neÄ‡ete moÄ‡i nastaviti instalaciju, osim ako nemate prvi sluÅ¾beni "
 "Debianiov CD-ROM, ili 'Netinst' CD-ROM, ili pakete dostupne na lokalnoj "
-"mre¾i."
+"mreÅ¾i."
 
 #. Type: boolean
 #. Description
@@ -622,13 +633,13 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Ako ste nesigurni, ne biste trebali nastaviti bez zadanog puta: obratite se "
-"svom mre¾nom administratoru zbog tog problema."
+"svom mreÅ¾nom administratoru zbog tog problema."
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:63
 msgid "Reconfigure the wireless network"
-msgstr "Ponovo podesi be¾iènu mre¾u"
+msgstr "Ponovo podesi beÅ¾iÄnu mreÅ¾u"
 
 #. Type: string
 #. Description
@@ -644,8 +655,8 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP adresa je jedinstvena za va¹e raèunalo, a sadr¾i èetiri broja odvojena "
-"toèkama. Ako ne znate ¹to upisati ovdje, upitajte svog mre¾nog "
+"IP adresa je jedinstvena za vaÅ¡e raÄunalo, a sadrÅ¾i Äetiri broja odvojena "
+"toÄkama. Ako ne znate Å¡to upisati ovdje, upitajte svog mreÅ¾nog "
 "administratora."
 
 #. Type: error
@@ -662,7 +673,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "IP adresa koju ste upisali nije valjana. Mora biti u obliku 'x.x.x.x', a "
-"niti jedan 'x' ne mo¾e biti veæi od 255. Molim poku¹ajte iznova."
+"niti jedan 'x' ne moÅ¾e biti veÄ‡i od 255. Molim pokuÅ¡ajte iznova."
 
 #. Type: string
 #. Description
@@ -679,15 +690,15 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Point-to-point adresa se rabi za odreğivanje druge krajnje toèke 'point-to-"
-"point' mre¾e. Upitajte svog mre¾nog administratora ako je ne znate. Point-to-"
-"point adresa se sastoji od èetiri broja, odvojena toèkama."
+"Point-to-point adresa se rabi za odreÄ‘ivanje druge krajnje toÄke 'point-to-"
+"point' mreÅ¾e. Upitajte svog mreÅ¾nog administratora ako je ne znate. Point-to-"
+"point adresa se sastoji od Äetiri broja, odvojena toÄkama."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Mre¾maska:"
+msgstr "MreÅ¾maska:"
 
 #. Type: string
 #. Description
@@ -697,9 +708,9 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Mre¾maska se rabi za odreğivanje koji su strojevi lokalni na va¹oj mre¾i. "
-"Upitajte svog mre¾nog administratora ako je ne znate. Mre¾maska se sastoji "
-"od èetiri broja, odvojena toèkama."
+"MreÅ¾maska se rabi za odreÄ‘ivanje koji su strojevi lokalni na vaÅ¡oj mreÅ¾i. "
+"Upitajte svog mreÅ¾nog administratora ako je ne znate. MreÅ¾maska se sastoji "
+"od Äetiri broja, odvojena toÄkama."
 
 #. Type: string
 #. Description
@@ -718,42 +729,42 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Vrataput je IP adresa (èetiri broja odvojena toèkama) koja ukazuje na "
-"vrataputni naputnik, poznat i kao zadani naputnik. Sav mre¾ni promet koji "
-"ide izvan va¹e LAN mre¾e (npr. na Internet) ¹alje se kroz njega. U rijetkim "
-"sluèajevima, mo¾da nemate naputnik; ako je tako, ostavite prazno. Ako ne "
-"znate odgovor, upitajte svog mre¾nog administratora."
+"Vrataput je IP adresa (Äetiri broja odvojena toÄkama) koja ukazuje na "
+"vrataputni naputnik, poznat i kao zadani naputnik. Sav mreÅ¾ni promet koji "
+"ide izvan vaÅ¡e LAN mreÅ¾e (npr. na Internet) Å¡alje se kroz njega. U rijetkim "
+"sluÄajevima, moÅ¾da nemate naputnik; ako je tako, ostavite prazno. Ako ne "
+"znate odgovor, upitajte svog mreÅ¾nog administratora."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Nedose¾an vrataput"
+msgstr "NedoseÅ¾an vrataput"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Adresa vrataputa koju ste unijeli nedose¾na je."
+msgstr "Adresa vrataputa koju ste unijeli nedoseÅ¾na je."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Mo¾da ste pogrije¹ili unoseæi IP adresu, mre¾masku i/ili vrataput."
+msgstr "MoÅ¾da ste pogrijeÅ¡ili unoseÄ‡i IP adresu, mreÅ¾masku i/ili vrataput."
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Is this information correct?"
-msgstr "Jesu li ovi podaci toèni?"
+msgstr "Jesu li ovi podaci toÄni?"
 
 #. Type: boolean
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "Trenutno pode¹ene mre¾ne odrednice:"
+msgstr "Trenutno podeÅ¡ene mreÅ¾ne odrednice:"
 
 #. Type: boolean
 #. Description
@@ -766,16 +777,19 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" suèelje       = ${interface}\n"
+" suÄelje       = ${interface}\n"
 " IP adresa     = ${ipaddress}\n"
-" mre¾maska     = ${netmask}\n"
+" mreÅ¾maska     = ${netmask}\n"
 " vrataput      = ${gateway}\n"
 " pointopoint   = ${pointopoint}\n"
-" imenskiposlu¾ = ${nameservers}"
+" imenskiposluÅ¾ = ${nameservers}"
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Podesi mre¾u rabeæi statièko adresiranje"
+msgstr "Podesi mreÅ¾u rabeÄ‡i statiÄko adresiranje"
+
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr "Upravljana (infrastrukturna) mreÅ¾a, Ad-hoc (peer-to-peer) mreÅ¾a"

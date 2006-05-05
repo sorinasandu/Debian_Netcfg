@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2006-01-06 14:50+0200\n"
 "Last-Translator: Lior Kaplan <webmaster@guides.co.il>\n"
 "Language-Team: Debian l10n Hebrew <webmaster@guides.co.il>\n"
@@ -310,8 +310,19 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "רשת מנוהלת, רשת יעודית (peer to peer)"
+msgid "Infrastructure (Managed) network"
+msgstr "רשת מנוהלת"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "רשת יעודית (peer to peer)"
 
 #. Type: select
 #. Description
@@ -771,3 +782,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "הגדרת רשת בעזרת הגדרות קבועות."
+
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr "רשת מנוהלת, רשת יעודית (peer to peer)"

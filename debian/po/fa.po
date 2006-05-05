@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: fa\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2005-07-31 18:31+0430\n"
 "Last-Translator: Arash Bijanzadeh\n"
 "Language-Team:  <fa@li.org>\n"
@@ -311,8 +311,19 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+msgid "Infrastructure (Managed) network"
+msgstr "Infrastructure (Managed) network"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "Ad-hoc network (Peer to peer)"
 
 #. Type: select
 #. Description
@@ -776,3 +787,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "تنظیم شبکه با آدرسهای ثابت"
+
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"

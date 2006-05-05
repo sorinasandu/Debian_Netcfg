@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eo\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2006-04-18 14:46+0200\n"
 "Last-Translator: Serge Leblanc <serge.leblanc@wanadoo.fr>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
@@ -321,8 +321,19 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Mastrumata ('Managed') reto, alcela reto ('Peer to peer')"
+msgid "Infrastructure (Managed) network"
+msgstr "Mastrumata ('Managed') reto"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "alcela reto ('Peer to peer')"
 
 #. Type: select
 #. Description
@@ -788,3 +799,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Memakomodu la reton per statika adresado"
+
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr "Mastrumata ('Managed') reto, alcela reto ('Peer to peer')"

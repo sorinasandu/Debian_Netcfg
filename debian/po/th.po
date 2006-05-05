@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2006-04-17 17:19+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
@@ -304,8 +304,19 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "เครือข่าย infrastructure (managed), เครือข่าย ad-hoc (peer to peer)"
+msgid "Infrastructure (Managed) network"
+msgstr "เครือข่าย infrastructure (managed)"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "เครือข่าย ad-hoc (peer to peer)"
 
 #. Type: select
 #. Description
@@ -764,3 +775,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "ตั้งค่าเครือข่ายโดยระบุที่อยู่ตายตัว"
+
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr "เครือข่าย infrastructure (managed), เครือข่าย ad-hoc (peer to peer)"

@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-04-22 23:50-0600\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-05 20:36+0200\n"
 "PO-Revision-Date: 2006-02-26 04:29+0530\n"
 "Last-Translator: Baishampayan Ghose <b.ghose@gnu.org.in>\n"
 "Language-Team: Bangla <core@BengaLinux.Org>\n"
@@ -317,7 +317,6 @@ msgstr ""
 "${iface}-কে সম্ভবত একটি \"Kill সুইচ\" ব্যবহার করে নিষ্ক্রিয় করে রাখা হয়েছে।  আপনি "
 "যদি এই ইন্টারফেসটি ব্যবহার করতে চান, তবে প্রথমে একে সক্রিয় করুন ও তারপর এগিয়ে যান।"
 
-# FIXME
 #. Type: select
 #. Choices
 #. Note to translators : Please keep your translations of each choice
@@ -326,8 +325,19 @@ msgstr ""
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
-msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
-msgstr "Infrastructure (ব্যবস্থাপিত) নেটওয়ার্ক, অ্যাড-হক নেটওয়ার্ক (পিয়ার টু পিয়ার)"
+msgid "Infrastructure (Managed) network"
+msgstr "Infrastructure (ব্যবস্থাপিত) নেটওয়ার্ক"
+
+#. Type: select
+#. Choices
+#. Note to translators : Please keep your translations of each choice
+#. below the 65 columns limit (which means 65 characters for most languages)
+#. Choices MUST be separated by commas
+#. You MUST use standard commas not special commas for your language
+#. You MUST NOT use commas inside choices
+#: ../netcfg-common.templates:124
+msgid "Ad-hoc network (Peer to peer)"
+msgstr "অ্যাড-হক নেটওয়ার্ক (পিয়ার টু পিয়ার)"
 
 #. Type: select
 #. Description
@@ -800,3 +810,8 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "স্ট্যাটিক অ্যাড্রেসিং ব্যবহার করে নেটওয়ার্ক কনফিগার করো"
+
+# FIXME
+#~ msgid "Infrastructure (Managed) network, Ad-hoc network (Peer to peer)"
+#~ msgstr ""
+#~ "Infrastructure (ব্যবস্থাপিত) নেটওয়ার্ক, অ্যাড-হক নেটওয়ার্ক (পিয়ার টু পিয়ার)"
