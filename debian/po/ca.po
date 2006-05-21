@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: debian-installer 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-05 20:36+0200\n"
-"PO-Revision-Date: 2006-04-02 21:56+0200\n"
+"PO-Revision-Date: 2006-05-20 23:39+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,10 +38,10 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Es pot configurar la xarxa mitjançant DHCP o introduint manualment tota la "
-"informació. Si decidiu usar DHCP i l'instal·lador no és capaç d'obtenir una "
-"configuració funcional des d'un servidor de DHCP a la vostra xarxa, tindreu "
-"l'oportunitat de configurar la vostra xarxa manualment després de l'intent "
-"de configurar-la per DHCP."
+"informació. Si decidiu emprar DHCP i l'instal·lador no és capaç d'obtenir "
+"una configuració funcional des d'un servidor de DHCP a la vostra xarxa, "
+"tindreu l'oportunitat de configurar la vostra xarxa manualment després de "
+"l'intent de configurar-la per DHCP."
 
 #. Type: string
 #. Description
@@ -60,8 +60,8 @@ msgid ""
 msgstr ""
 "El nom de domini és la part de la vostra adreça d'internet a la dreta del "
 "vostre nom d'ordinador. Sovint, aquest acaba en .com, .net, .edu o .org. Si "
-"esteu configurant una xarxa domèstica podeu inventar-vos un, però assegureu-"
-"vos de que utilitzeu el mateix nom de domini a tots els ordinadors."
+"esteu configurant una xarxa domèstica podeu inventar-vos-en un, però "
+"assegureu-vos que utilitzeu el mateix nom de domini a tots els ordinadors."
 
 #. Type: string
 #. Description
@@ -100,7 +100,7 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "El vostre sistema té múltiples interfícies de xarxa. Seleccioneu la que s'ha "
-"d'utilitzar com interfície primària mentre s'instal·la Debian. Si ha sigut "
+"d'utilitzar com interfície primària mentre s'instal·la Debian. Si ha estat "
 "possible, s'haurà seleccionat la primera interfície de xarxa connectada."
 
 #. Type: string
@@ -164,7 +164,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Per descomptat, si no hi ha una clau WEP per a la vostra xarxa sense fil, "
+"Per descomptat, si no hi ha cap clau WEP per a la vostra xarxa sense fil, "
 "deixeu aquest camp en blanc."
 
 #. Type: error
@@ -290,7 +290,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "És possible que necessiteu carregar un mòdul específic per a la vostra "
-"targeta de xarxa, si teniu una. Per fer això, torneu enrere al pas de "
+"targeta de xarxa, si en teniu una. Per fer això, torneu enrere al pas de "
 "detecció de maquinari de xarxa."
 
 #. Type: note
@@ -351,7 +351,7 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Les xarxes sense fil són o bé gestionades o bé «ad-hoc». Si useu qualsevol "
+"Les xarxes sense fil són o bé gestionades o bé «ad-hoc». Si empreu qualsevol "
 "tipus de punt d'accés real, la vostra xarxa és gestionada. Si un altre "
 "ordinador és el vostre «punt d'accés», és possible que la vostra xarxa siga "
 "«Ad-hoc»."
@@ -426,7 +426,7 @@ msgstr "Protocol Punt-a-Punt (PPP)"
 #. Description
 #: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-en-IPv4"
+msgstr "IPv6-dins-IPv4"
 
 #. Type: text
 #. Description
@@ -486,7 +486,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "És possible que necessiteu donar un nom de l'ordinador DHCP. Si esteu "
-"utilitzant un mòdem de cable, és possible que tingueu que especificar un "
+"utilitzant un mòdem de cable, és possible que us calgui especificar un "
 "nombre de compte ací."
 
 #. Type: string
@@ -505,7 +505,7 @@ msgstr "S'està configurant la xarxa amb DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Això pot trigar un temps."
+msgstr "Això pot trigar una estona."
 
 #. Type: text
 #. Description
@@ -596,7 +596,7 @@ msgstr ""
 "Des d'ací podeu triar tornar a intentar la configuració automàtica de la "
 "xarxa amb DHCP (que és possible que funcione si el vostre servidor de DHCP "
 "triga molt en respondre) o configurar la xarxa manualment. Alguns servidors "
-"de DHCP requereixen que el client envie un nom d'ordinador DHCP, així que "
+"de DHCP requereixen que el client envie un nom d'ordinador DHCP, així doncs "
 "també podeu intentar la configuració automàtica de la xarxa amb DHCP amb el "
 "nom d'ordinador que proveïu."
 
@@ -646,8 +646,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Si no esteu segur, no hauríeu de continuar sense una ruta predeterminada: "
-"consulteu el vostre administrador de xarxa local per aquest problema."
+"Si no n'esteu segur, no hauríeu de continuar sense una ruta predeterminada: "
+"consulteu el vostre administrador de xarxa local sobre aquest problema."
 
 #. Type: text
 #. Description
@@ -746,9 +746,9 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "La passarel·la és una adreça IP (quatre números separats per punts) que "
-"indica el router passarel·la, també conegut com el router predeterminada. "
-"Tot el tràfic que va fora de la vostra LAN (per exemple, a Internet) s'envia "
-"a través d'aquest router. En algunes circumstàncies no habituals, és "
+"indica el router passarel·la, també conegut com el router predeterminat. Tot "
+"el tràfic que va cap a fora de la vostra LAN (per exemple, a Internet) "
+"s'envia a través d'aquest router. En algunes circumstàncies no habituals, és "
 "possible no tenir un router; en aquest cas, podeu deixar açò en blanc. Si no "
 "sabeu la resposta adequada per a aquesta pregunta, consulteu al vostre "
 "administrador de xarxa."
