@@ -16,13 +16,13 @@ msgstr ""
 "Project-Id-Version: se\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-05 20:36+0200\n"
-"PO-Revision-Date: 2006-04-06 15:47+0200\n"
+"PO-Revision-Date: 2006-05-24 20:20+0200\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
-"Language-Team: Northern Sami <se@li.org>\n"
+"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #. Type: boolean
 #. Description
@@ -40,6 +40,9 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
+"Lea vejolaš heivehit fierpmádaga DHCP:in dahje sáhtát ieš čállit buot "
+"dieđuid. Jus válljet DHCP ja sajáiduhtti ii gávnna gustojeaddji heivehus "
+"muhton DHCP bálvvás, de oaččut vejolašvuođa ieš heivehit fierpmádaga."
 
 #. Type: string
 #. Description
@@ -56,6 +59,9 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
+"Domenenamma lea iežat internett-čujuhusa loahpahus. Dávjá dat lea .com, ."
+"net, .edu dahje .org. Jus leat ráhkadeamen ruoktofierpmádaga, de ii leat go "
+"hutkat juoga, muhto muitte geavahit seamma domenenama buot iežat dihtoriin."
 
 #. Type: string
 #. Description
@@ -73,12 +79,17 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"Nammabálvvát addet guossoheaddjenamat fierpmádagas. Čális gitta golmma "
+"namma- bálvváid IP-čujuhusaid (ii fal guossoheaddjenamaid). Bija gaskka "
+"juohke čujuhusa gaskii. Ale geavat rihkuid. Vuosttáš nammabálvá listtus "
+"jearahuvvo vuos. Jus it hálit geavahit makkárge nammabálvváid, guođe dán "
+"guorusin."
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr ""
+msgstr "Dehálemus fierpmádatlakta:"
 
 #. Type: select
 #. Description
@@ -88,12 +99,15 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
+"Du vuogádagas leat máŋga fierpmádatlavtta. Vállje guđemuš galgá leat "
+"dehálemus lakta sajáiduhtedettiin. Jus vejolaš, vuosttaš laktašuvvon "
+"fierpmádatlakta válljejuvvui."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "${iface}:a jođaskeahtes ESSID:"
 
 #. Type: string
 #. Description
@@ -103,12 +117,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} lea jođaskeahtes fierpmádatlakta. Čális dan jođaskeahtes "
+"fierpmádaga nama (ESSID:a) maid hálidat ahte ${iface} galgá geavahit. Jus "
+"hálidat geavahit váikko makkár olamuttus fierpmádaga, guođe dán gietti "
+"guorusin."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
 msgid "WEP key for wireless device ${iface}:"
-msgstr ""
+msgstr "Jođaskeahtes ovttadaga ${iface}:a WEP-čoavdda:"
 
 #. Type: string
 #. Description
@@ -117,6 +135,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
+"Jus vejolaš, čális jođaskeahtes fierpmádat- lavtta (${iface}:a) WEP "
+"sihkkarisvuohta- čoavdaga.Leat guovtte vejolašvuođa:"
 
 #. Type: string
 #. Description
@@ -125,6 +145,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
+"Jus du WEP-čoavddagis lea okta dáin formáhtain: «nnnn-nnnn-nn», «nn:nn:nn:nn:"
+"nn:nn:nn:nn» dahje «nnnnnnnn», mas n lea siffar, čális nugo dat lea dán "
+"gieđđai."
 
 #. Type: string
 #. Description
@@ -133,6 +156,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Jus du WEP-čoavdaga formáhtta lea beassansátni, geavat «s» prefiksan "
+"(áisttonmearkkaid haga)."
 
 #. Type: string
 #. Description
@@ -141,6 +166,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Dieđusge, jus ii gávdno WEP-čoavdda iežat jođaskeahtes fierpmádahkii, guođe "
+"dán gietti guorusin."
 
 #. Type: error
 #. Description
@@ -155,6 +182,8 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"WEP-čoavdda «${wepkey} ii gusto. Loga boahtte šearpma čilgehusaid dárkilit "
+"mo čállit iežat WEP-čoavdaga, ja geahččal ođđasit."
 
 #. Type: error
 #. Description
@@ -169,6 +198,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID:a «${essid}» ii gusto. ESSID:at sáhttet dušše leat 32 mearkka guhkki, "
+"muhto das sáhtá leat váikko makkár mearkkát."
 
 #. Type: string
 #. Description
@@ -191,6 +222,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
+"Guossoheaddjenamma galgá leat okta sátni mii identifisere iežat vuogádaga "
+"fierpmá- dahkii. Jus it dieđe mii maid galggat čállit, jeara iežat "
+"fierpmádathaldda- šeaddjis. Jus leat heiveheamen ruokto- fierpmádaga de ii "
+"leat go hutkat juoga."
 
 #. Type: error
 #. Description
@@ -202,7 +237,7 @@ msgstr "Gustohis guossoheaddjenamma"
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Namma «${hostname}» ii gusto."
 
 #. Type: error
 #. Description
@@ -212,6 +247,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
+"Gustojeaddji guossoheaddjenamas sáhttá dušše leat nummirat 0-9, unnabustávat "
+"a-z ja minusmearka. Ferte leat 2 gitta 63 mearkka guhkki, ja das ii sáhte "
+"leat minusmearkka álggus dahje loahpas."
 
 #. Type: error
 #. Description
@@ -226,6 +264,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
+"Meattáhus dáhpáhuvvai ja fierpmádatheivehan proseassa gaskkalduvvui. "
+"Sajáiduhttinfalus sáhtát válljet ođđasit heivehit fierpmádaga."
 
 #. Type: error
 #. Description
@@ -240,6 +280,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
+"Ii gávdnan fierpmátlavttaid. Sajáiduhttin- vuogádaga ii gávdnan "
+"fierpmátlavtta."
 
 #. Type: error
 #. Description
@@ -248,6 +290,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
+"Don fertet várra viežžat erenoamáš moduvlla iežat fierpmádatgortii, jus dus "
+"lea dakkár obanassiige. Jus dan hálidat dahkat, mana ruovttoluotta "
+"mašiidnagálvu- áican lávkii."
 
 #. Type: note
 #. Description
@@ -255,7 +300,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Botkkon ii leat alde ${iface}:as."
 
 #. Type: note
 #. Description
@@ -267,6 +312,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"${iface} ii oro leamen alde dannego botkkon lea dan jaddadan. Jus áiggut dán "
+"lavtta geavahit, bija botkkona ala ovdalgo joatkkát."
 
 #. Type: select
 #. Choices
@@ -277,7 +324,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
 msgid "Infrastructure (Managed) network"
-msgstr ""
+msgstr "Infrastruktuvra (hálddašuvvon) fierpmádat"
 
 #. Type: select
 #. Choices
@@ -288,13 +335,13 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:124
 msgid "Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Ad-hoc-fierpmádat (dihtoriid gaskkas)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:125
 msgid "Wireless network kind:"
-msgstr ""
+msgstr "Jođaskeahtes fierpmádatšládja:"
 
 #. Type: select
 #. Description
@@ -309,13 +356,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:132
 msgid "Wireless network configuration"
-msgstr ""
+msgstr "Heivet jođaskeahtes fierpmádaga"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:136
 msgid "Searching for wireless access points ..."
-msgstr ""
+msgstr "Ohcamim jođaskeahtes beassanlavttaid …"
 
 #. Type: text
 #. Description
@@ -357,49 +404,49 @@ msgstr "USB-fierpmádat"
 #. Description
 #: ../netcfg-common.templates:175
 msgid "Serial-line IP"
-msgstr ""
+msgstr "Maŋŋálaslinnjá-up"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:179
 msgid "Parallel-port IP"
-msgstr ""
+msgstr "Bálddalaslinnjá-IP"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:183
 msgid "Point-to-Point Protocol"
-msgstr ""
+msgstr "Báikkis-báikai protokolla"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:187
 msgid "IPv6-in-IPv4"
-msgstr ""
+msgstr "IPv6 IPv4 siskkobealde"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:191
 msgid "ISDN Point-to-Point Protocol"
-msgstr ""
+msgstr "ISDN báikkis-báikái protokolla"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:195
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "Kanálas kanálii"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:199
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "Duohta kanálas kanálii"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:208
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Geavaheddjiidgaskasaš gulahallanlakta"
 
 #. Type: text
 #. Description
@@ -434,6 +481,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
+"Fertet várra čálistit DHCP-guossoheaddjenama. Jus geavahat jođasmodema, de "
+"fertet várra čálistit kontonummira dása."
 
 #. Type: string
 #. Description
@@ -496,6 +545,8 @@ msgstr "Geahččal oktii vel heivehit fierpmádaga automáhtalaččat"
 #: ../netcfg-dhcp.templates:33
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
+"Geahččal ođđasit automáhtalaččat heivehit fierpmádaga DHCP-"
+"guossoheaddjenamain"
 
 #. Type: select
 #. Choices
@@ -528,7 +579,7 @@ msgstr "Ale heivet fierpmádaga dál"
 #. Description
 #: ../netcfg-dhcp.templates:35
 msgid "Network configuration method:"
-msgstr ""
+msgstr "Fierpmádatheivehanvuohki:"
 
 #. Type: select
 #. Description
@@ -545,7 +596,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:45
 msgid "Network autoconfiguration failed"
-msgstr ""
+msgstr "Automáhtalaš fierpmádatheivehus filtii"
 
 #. Type: note
 #. Description
@@ -554,6 +605,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Du fierpmádat ii dáiide geavahit DHCP- protokolla. Sáhttá maiddái leat nu "
+"ahte DHCP-bálvá lea njoahci dahje ahte muhton fierpmádatmašiidnagálvu ii "
+"doaimma nugo galgá."
 
 #. Type: boolean
 #. Description
@@ -605,7 +659,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr ""
+msgstr "Gustohis IP-čujuhus"
 
 #. Type: error
 #. Description
@@ -614,12 +668,14 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Don čállet gustohis IP-čujuhusa. Ferte leat hámis x.x.x.x, gos «x» ii leat "
+"stuoribut go 255. Geahččal ođđasit."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:16
 msgid "Point-to-point address:"
-msgstr ""
+msgstr "Báikkis báikái čujuhus:"
 
 #. Type: string
 #. Description
@@ -635,7 +691,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr ""
+msgstr "Fierpmádatsilli:"
 
 #. Type: string
 #. Description
@@ -712,4 +768,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr "Heivet fierpmádaga mas lea statalaš čujuhusat"
