@@ -239,6 +239,8 @@ int get_all_ifs (int all, char*** ptr)
     get_name(ibuf, rbuf);
     if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
       continue;
+    if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
+      continue;
     if (all || is_interface_up(ibuf) == 1)
     {
       list = realloc(list, sizeof(char*) * (len + 1));
