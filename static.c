@@ -210,7 +210,8 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
 	  fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
 	  fprintf(fp, "\twireless-mode %s\n",
 	      (mode == MANAGED) ? "managed" : "ad-hoc");
-	  fprintf(fp, "\twireless-essid %s\n", essid ? essid : "any");
+	  fprintf(fp, "\twireless-essid %s\n",
+	      (essid && *essid) ? essid : "any");
 
 	  if (wepkey != NULL)
 	    fprintf(fp, "\twireless-key1 %s\n", wepkey);
