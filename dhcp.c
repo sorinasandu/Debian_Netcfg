@@ -244,6 +244,7 @@ int poll_dhcp_client (struct debconfclient *client)
   {
     ret = 0;
 
+    debconf_capb(client, "backup"); /* stop displaying cancel button */
     if (debconf_progress_set(client, dhcp_seconds) == 30)
       goto stop;
     if (debconf_progress_info(client, "netcfg/dhcp_success_note") == 30)
