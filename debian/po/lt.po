@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-05 20:36+0200\n"
-"PO-Revision-Date: 2006-02-12 21:18+0200\n"
+"PO-Revision-Date: 2006-06-02 09:51+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "MIME-Version: 1.0\n"
@@ -41,8 +41,7 @@ msgstr ""
 "Tinklas gali būti konfigūruojamas su DHCP arba įvedant visą informaciją "
 "rankiniu būdu. Jei pasirinksite DHCP ir debian'o įdiegiklis negalės gauti "
 "veikiančios konfigūracijos iš DHCP serverio Jūsų tinkle, po bandymo "
-"konfigūruoti su DHCP, Jums bus pasiūlyta konfigūruoti Jūsų tinklą rankiniu "
-"būdu."
+"konfigūruoti su DHCP, Jums bus pasiūlyta konfigūruoti tinklą rankiniu būdu."
 
 #. Type: string
 #. Description
@@ -59,8 +58,8 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Srities vardas - tai Jūsų internetinio adreso dalis, esanti dešiniau Jūsų "
-"kompiuterio vardo. Tankiausiai tai yra .com, .net, .edu ar ,org. Jei Jūs "
+"Srities vardas - tai Jūsų internetinio adreso dalis, esanti dešiniau "
+"kompiuterio vardo. Tankiausiai tai yra .com, .net, .edu ar ,org. Jei "
 "įrenginėjate namų tinklą, galite nurodyti kažką savo, bet įsitikinkite, kad "
 "Jūs naudojate tą patį srities vardą visuose savo kompiuteriuose."
 
@@ -222,7 +221,7 @@ msgid ""
 "something up here."
 msgstr ""
 "Kompiuterio vardas - tai žodis, identifikuojantis Jūsų kompiuterį tinkle. "
-"Jei nežinote, koks turėtų būti Jūsų kompiuterio vardas, pasitarkite su Jūsų "
+"Jei nežinote, koks turėtų būti kompiuterio vardas, pasitarkite su Jūsų "
 "tinklo administratoriumi. Jei įrengiate savo namų tinklą, įveskite ką nors "
 "pagal savo skonį."
 
@@ -288,8 +287,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Jums gali tekti įkelti specialų modulį Jūsų tinklo plokštei, jei Jūs tikrai "
-"ją turite. Šiam tikslui, grįžkite į tinklo aparatūros detektavimo žingsnį."
+"Jums gali tekti įkelti specialų modulį tinklo plokštei, jei Jūs tikrai ją "
+"turite. Šiam tikslui, grįžkite į tinklo aparatūros detektavimo žingsnį."
 
 #. Type: note
 #. Description
@@ -630,7 +629,7 @@ msgid ""
 msgstr ""
 "Tinklo konfigūravimas pavyko. Tačiau numatytasis maršrutas (default route) "
 "nėra nustatytas: sistema nežino kaip susisiekti su kompiuteriais Internete. "
-"Jei Jūs neturite įdiegiklio pirmojo kompaktinio disko, 'Netinst' disko arba "
+"Jei neturite įdiegiklio pirmojo kompaktinio disko, 'Netinst' disko arba "
 "paketų, prieinamų lokaliame tinkle, bus nebeįmanoma tęsti įdiegimą."
 
 #. Type: boolean
@@ -641,7 +640,7 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Jei abejojate, nebetęskite diegimo be numatytojo maršruto; dėl šios "
-"problemos susisiekite su Jūsų lokalaus tinklo administratoriumi."
+"problemos susisiekite su lokalaus tinklo administratoriumi."
 
 #. Type: text
 #. Description
@@ -740,10 +739,10 @@ msgid ""
 msgstr ""
 "Tinklų sąsajos IP adresas (keturi skaičiai atskirti taškais) nurodo tinklų "
 "sąsajos kelvedį, taip pat vadinamą numatytuoju kelvedžių (default router). "
-"Visa informacija išeinanti iš Jūsų lokalaus tinklo (pvz. į internetą), yra "
-"siunčiama per šį kelvedį. Kartais Jūs galite neturėti kelvedžio, tokiu "
-"atveju palikite tuščią. Jei nežinote tinkamo atsakymo, pasitarkite su savo "
-"tinklo administratoriumi."
+"Visa informacija išeinanti iš lokalaus tinklo (pvz. į internetą), yra "
+"siunčiama per šį kelvedį. Kartais galite neturėti kelvedžio, tokiu atveju "
+"palikite tuščią. Jei nežinote tinkamo atsakymo, pasitarkite su savo tinklo "
+"administratoriumi."
 
 #. Type: error
 #. Description
@@ -755,7 +754,7 @@ msgstr "Tinklų sąsaja (gateway) nepasiekiama"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
+msgstr "Nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 
 #. Type: error
 #. Description
@@ -763,7 +762,7 @@ msgstr "Jūsų nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Jūs galbūt padarėte klaidą įvesdami IP adresą, tinklo trafaretą ir/ar tinklų "
+"Galbūt padarėte klaidą įvesdami IP adresą, tinklo trafaretą ir/ar tinklų "
 "sąsają."
 
 #. Type: boolean
