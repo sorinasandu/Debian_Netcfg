@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: et\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-05 20:36+0200\n"
-"PO-Revision-Date: 2005-06-08 11:11+0300\n"
+"PO-Revision-Date: 2006-06-18 20:38+0300\n"
 "Last-Translator: Siim Põder <windo@windowlicker.dyn.ee>\n"
 "Language-Team: Eesti <linuxiabi@hot.ee>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,6 @@ msgstr "Primaarne võrguliides:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
@@ -403,7 +402,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:166
 msgid "USB net"
-msgstr ""
+msgstr "USB võrk"
 
 #. Type: text
 #. Description
@@ -463,9 +462,8 @@ msgstr "Tundmatu liides"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:217
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Võrgu seadistamine..."
+msgstr "Võrgu seadistuste salvestamine ..."
 
 #. Type: text
 #. Description
@@ -626,7 +624,6 @@ msgstr "Jätkata vaikemarsruudita?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:51
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -635,8 +632,8 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Võrgu iseseadistumine õnnestus, kuid vaikemarsruuti pole määratud: süsteem "
-"ei tea kuidas Internetis olevate arvutiteni jõuda. Seetõttu on võimatu "
-"paigaldamist jätkata, kui sul just pole esimest ametlikku Debiani "
+"ei tea kuidas Internetis olevate serveriteni jõuda. Praegusel hetkel on "
+"võimatu paigaldamist jätkata, kui sul just pole esimest ametlikku Debiani "
 "laserketast, 'Netinst' laserketast või pakette kohtvõrgus kättesaadaval."
 
 #. Type: boolean
