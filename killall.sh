@@ -1,7 +1,7 @@
 #!/bin/sh
 # Killall for dhcp clients.
 
-pids=$(ps ax | grep 'udhcpc\|dhclient\|pump' | grep -v grep | sed 's/^[ ]*\([0-9]*\).*/\1/')
+pids=$(ps ax | sed -n '/[u]dhcpc\|[d]hclient\|[p]ump/s/^[ ]*\([0-9]*\).*/\1/p')
 
 for pid in $pids; do
   if kill -0 $pid 2>/dev/null; then
