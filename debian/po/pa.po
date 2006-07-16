@@ -17,8 +17,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pa_IN\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-05 20:36+0200\n"
+"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
+"POT-Creation-Date: 2006-07-16 07:02+0000\n"
 "PO-Revision-Date: 2006-01-27 16:29+0530\n"
 "Last-Translator: Amanpreet Singh Alam <apbrar@gmail.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
@@ -526,7 +526,7 @@ msgstr "DHCP ਸੰਰਚਨਾ ਕਾਰਜ ਅਧੂਰਾ ਖਤਮ ਹੋਵ
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:33
+#: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਦੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
@@ -535,7 +535,7 @@ msgstr "ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਦੀ ਮੁੜ ਕ�
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:33
+#: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "DHCP ਮੇਜ਼ਬਾਨ ਨਾਲ ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਦੀ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
 
@@ -544,7 +544,7 @@ msgstr "DHCP ਮੇਜ਼ਬਾਨ ਨਾਲ ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰ
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:33
+#: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਦਸਤੀ ਕਰੋ"
 
@@ -553,28 +553,19 @@ msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਦਸਤੀ ਕਰੋ"
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:33
-msgid "${wifireconf}"
-msgstr "${wifireconf}"
-
-#. Type: select
-#. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
-#: ../netcfg-dhcp.templates:33
+#: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "ਇਸ ਸਮੇਂ ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਨਾ ਕਰੋ"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:36
 msgid "Network configuration method:"
 msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਢੰਗ:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:35
+#: ../netcfg-dhcp.templates:36
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -589,13 +580,13 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:45
+#: ../netcfg-dhcp.templates:46
 msgid "Network autoconfiguration failed"
 msgstr "ਨੈੱਟਵਰਕ ਸਵੈ-ਸੰਰਚਨਾ ਅਸਫਲ"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:45
+#: ../netcfg-dhcp.templates:46
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -605,13 +596,13 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:52
 msgid "Continue without a default route?"
 msgstr "ਮੂਲ ਮਾਰਗ (root) ਤੋਂ ਬਿਨਾ ਜਾਰੀ ਰੱਖੋ?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:52
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -626,7 +617,7 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:51
+#: ../netcfg-dhcp.templates:52
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -636,7 +627,7 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:63
+#: ../netcfg-dhcp.templates:64
 msgid "Reconfigure the wireless network"
 msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਦੀ ਮੁੜ-ਸੰਰਚਨਾ"
 
@@ -788,3 +779,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "ਸਥਿਰ ਸਿਰਨਾਵੇਂ ਵਰਤ ਕੇ ਨੈੱਟਵਰਕ ਸੰਰਚਿਤ ਕਰੋ"
+
+#~ msgid "${wifireconf}"
+#~ msgstr "${wifireconf}"
