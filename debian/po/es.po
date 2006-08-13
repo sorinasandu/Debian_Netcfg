@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-07-16 07:02+0000\n"
-"PO-Revision-Date: 2006-07-13 00:55+0200\n"
+"PO-Revision-Date: 2006-08-13 23:34+0200\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,9 +84,8 @@ msgid ""
 msgstr ""
 "El nombre de dominio es la parte de su dirección de Internet a la derecha "
 "del nombre de sistema. Habitualmente es algo que termina por .com, .net, ."
-"edu, o .org. Si está seleccionando una red doméstica, puede inventárselo, "
-"pero asegúrese de que utiliza el mismo nombre de dominio en todos sus "
-"ordenadores."
+"edu, o .org. Puede inventárselo si está instalando una red doméstica, pero "
+"asegúrese de utilizar el mismo nombre de dominio en todos sus ordenadores."
 
 #. Type: string
 #. Description
@@ -104,8 +103,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Los servidores de nombres se utilizan para buscar los nombres de los "
-"servidores de la red. Por favor, introduzca la dirección IP (no el nombre de "
+"Los servidores de nombres se utilizan para buscar los nombres de las "
+"máquinas de la red. Por favor, introduzca la dirección IP (no el nombre de "
 "sistema) de hasta tres servidores de nombres, separados por espacios. No "
 "utilice comas. Se consultarán los servidores en el orden en que se "
 "introduzcan. Si no quiere utilizar ningún servidor de nombres deje este "
@@ -134,7 +133,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:39
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID Wireless para ${iface}:"
+msgstr "ESSID inalámbrica para ${iface}:"
 
 #. Type: string
 #. Description
@@ -185,7 +184,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Si la clave WEP tiene el formato de una palabra de paso, introdúzcala "
-"poniendo «s:» como prefijo (sin las comillas dobles)"
+"anteponiendo «s:» como prefijo (sin las comillas dobles)"
 
 #. Type: string
 #. Description
@@ -251,21 +250,21 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"El nombre del sistema es una sola palabra que identifica el sistema en la "
-"red. Si no sabe qué nombre debería tener, consulte al administrador de red. "
-"Puede inventarse este nombre si está configurando una red doméstica."
+"El nombre de máquina es una sola palabra que identifica el sistema en la "
+"red. Consulte al administrador de red si no sabe qué nombre debería tener. "
+"Si está configurando una red doméstica puede inventarse este nombre."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "Invalid hostname"
-msgstr "Nombre de sistema inválido"
+msgstr "Nombre de máquina inválido"
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:85
 msgid "The name \"${hostname}\" is invalid."
-msgstr "El nombre de sistema «${hostname}» no es válido."
+msgstr "El nombre de máquina «${hostname}» no es válido."
 
 #. Type: error
 #. Description
@@ -275,8 +274,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nombre de host válido sólo puede contener números del 0 al 9, letras en "
-"minúsculas de la a la z y el signo menos («-»). Debe tener entre 2 y 63 "
+"Un nombre de máquina válido sólo puede contener números del 0 al 9, letras "
+"en minúsculas de la a la z y el signo menos («-»). Debe tener entre 2 y 63 "
 "caracteres, y no puede empezar o terminar con el signo menos."
 
 #. Type: error
@@ -327,7 +326,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:111
 msgid "Kill switch enabled on ${iface}"
-msgstr "Matar switch habilitado en ${iface}"
+msgstr "«Kill switch» está habilitado en ${iface}"
 
 #. Type: note
 #. Description
@@ -340,8 +339,8 @@ msgid ""
 "continuing."
 msgstr ""
 "${iface} parece haber sido deshabilitado por medio de un «kill switch» "
-"físico. Si tiene intención de usar esta interfaz, actívelo antes de "
-"continuar."
+"físico. Actíve esta interfaz antes de continuar si tiene intención de "
+"usarla ."
 
 #. Type: select
 #. Choices
@@ -379,9 +378,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Las redes inalámbricas (o «wireless») son bien gestionadas o bien «ad-hoc». "
-"La red es gestionada si utiliza algún punto de acceso de cualquier tipo. Si "
-"el punto de acceso es otro ordenador, entonces la red es «ad-hoc»."
+"Las redes inalámbricas (o «wireless») son o bien gestionadas o bien «ad-"
+"hoc». La red es gestionada si utiliza algún punto de acceso de cualquier "
+"tipo. Si el punto de acceso es otro ordenador, entonces la red es «ad-hoc»."
 
 #. Type: text
 #. Description
@@ -399,7 +398,7 @@ msgstr "Buscando puntos de acceso inalámbricos ..."
 #. Description
 #: ../netcfg-common.templates:146
 msgid "<none>"
-msgstr "<none>"
+msgstr "<ninguna>"
 
 #. Type: text
 #. Description
@@ -616,8 +615,8 @@ msgstr ""
 "Desde aquí puede intentar reintentar la configuración automática de la red a "
 "través de DHCP (lo que puede funcionar si su servidor de DHCP tarda mucho en "
 "responder) o configurar la red manualmente. Puede también reintentar la "
-"configuración automática de red introduciendo un nombre de sistema, algunos "
-"servidores exigen que el cliente de DHCP les envíe un nombre de sistema DHCP."
+"configuración automática de red introduciendo un nombre de máquina, algunos "
+"servidores exigen que el cliente de DHCP les envíe un nombre de máquina DHCP."
 
 #. Type: note
 #. Description
@@ -654,9 +653,9 @@ msgid ""
 msgstr ""
 "La configuración automática de la red tuvo éxito. Sin embargo, no se ha "
 "establecido una ruta por omisión: el sistema no sabe cómo comunicarse con "
-"equipos en Internet. Esto impedirá que sea posible continuar con la "
+"otros equipos en Internet. Esto impedirá que pueda continuarse con la "
 "instalación a no ser que tenga el primer CD-ROM de instalación, un CD-ROM "
-"'Netinst' o todos los paquetes estén disponibles en la red local."
+"«Netinst» o todos los paquetes estén disponibles en la red local."
 
 #. Type: boolean
 #. Description
@@ -767,7 +766,7 @@ msgstr ""
 "La pasarela es una dirección IP (cuatro números separados por puntos) que "
 "indica el encaminador de pasarela, también conocido como encaminador por "
 "omisión. Todo el tráfico que se envía fuera de su LAN (por ejemplo, hacia "
-"Internet) se envía a este encaminador.  En algunas circunstancias anormales, "
+"Internet) se envía a este encaminador. En algunas circunstancias anormales, "
 "puede no tener un encaminador; si es así lo puede dejar en blanco. Si no "
 "sabe la respuesta correcta a esta pregunta, consulte al administrador de red."
 
