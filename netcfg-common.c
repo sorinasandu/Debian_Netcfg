@@ -762,7 +762,7 @@ void loop_setup(void)
       
   di_exec_shell_log("ip link set lo up");
   di_exec_shell_log("ip addr flush dev lo");
-  di_exec_shell_log("ip addr add 127.0.0.1 dev lo");
+  di_exec_shell_log("ip addr add 127.0.0.1/8 dev lo");
 }
 
 void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)

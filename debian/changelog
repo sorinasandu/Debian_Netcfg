@@ -1,8 +1,13 @@
 netcfg (1.29) UNRELEASED; urgency=low
 
+  [ Christian Perrier ]
   * Unmark ${wifireconf} as translatable in templates
 
- -- Christian Perrier <bubulle@debian.org>  Thu, 13 Jul 2006 20:05:05 +0200
+  [ Frans Pop ]
+  * Set up the loopback interface with address 127.0.0.1/8.
+  * Also set up the loopback interface when doing static configuration.
+
+ -- Frans Pop <fjp@debian.org>  Sun, 20 Aug 2006 23:36:44 +0200
 
 netcfg (1.28) unstable; urgency=low
 

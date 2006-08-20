@@ -301,6 +301,7 @@ int netcfg_activate_static(struct debconfclient *client)
 #else
     deconfigure_network();
 
+    loop_setup();
     interface_up(interface);
 
     /* Flush all previous addresses, routes */
