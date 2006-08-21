@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 10:51+0000\n"
+"POT-Creation-Date: 2006-08-21 22:51+0000\n"
 "PO-Revision-Date: 2006-08-13 14:24+0000\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
@@ -104,12 +104,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:39
-msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID da rede sem fios para ${iface}:"
-
-#. Type: string
-#. Description
-#: ../netcfg-common.templates:39
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -122,12 +116,37 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
+msgid "Wireless ESSID for ${iface}:"
+msgstr "ESSID da rede sem fios para ${iface}:"
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+msgid "Attempting to find an available wireless network failed."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:46
+#, fuzzy
+msgid ""
+"${iface} is a wireless network interface. Please enter the name (the ESSID) "
+"of the wireless network you would like ${iface} to use. To skip wireless "
+"configuration and continue, leave this field blank."
+msgstr ""
+"${iface} é um interface de rede sem fios. Por favor introduza o nome (ESSID) "
+"da rede wireless que deseja usar no interface ${iface}. Se desejar usar "
+"qualquer rede disponível, deixa este campo em branco."
+
+#. Type: string
+#. Description
+#: ../netcfg-common.templates:55
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Chave WEP para o dispositivo wireless ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:55
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -137,7 +156,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:55
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -148,7 +167,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:55
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -158,7 +177,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#: ../netcfg-common.templates:55
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -168,13 +187,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:61
+#: ../netcfg-common.templates:70
 msgid "Invalid WEP key"
 msgstr "Chave WEP inválida"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:61
+#: ../netcfg-common.templates:70
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -185,13 +204,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:68
+#: ../netcfg-common.templates:77
 msgid "Invalid ESSID"
 msgstr "ESSID inválido"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:68
+#: ../netcfg-common.templates:77
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -201,20 +220,20 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:84
 msgid "Hostname:"
 msgstr "Nome do computador:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:84
 msgid "Please enter the hostname for this system."
 msgstr ""
 "Por favor, introduza o nome do computador (hostname) para este sistema."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:75
+#: ../netcfg-common.templates:84
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -228,19 +247,19 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:94
 msgid "Invalid hostname"
 msgstr "Nome do computador (hostname) inválido"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:94
 msgid "The name \"${hostname}\" is invalid."
 msgstr "O nome \"${hostname}\" é inválido."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:85
+#: ../netcfg-common.templates:94
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -252,13 +271,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:103
 msgid "Error"
 msgstr "Erro"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:103
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -268,13 +287,13 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:109
 msgid "No network interfaces detected"
 msgstr "Não foi detectado nenhum interface de rede"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:109
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -284,7 +303,7 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:100
+#: ../netcfg-common.templates:109
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -297,7 +316,7 @@ msgstr ""
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
 msgstr "Kill switch ligado em ${iface}"
 
@@ -305,7 +324,7 @@ msgstr "Kill switch ligado em ${iface}"
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:111
+#: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
@@ -322,7 +341,7 @@ msgstr ""
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Infrastructure (Managed) network"
 msgstr "Rede Infra-estrutura (Managed)"
 
@@ -333,20 +352,20 @@ msgstr "Rede Infra-estrutura (Managed)"
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:124
+#: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "rede Ad-hoc (Ponto a ponto)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:125
+#: ../netcfg-common.templates:134
 #, fuzzy
 msgid "Type of wireless network:"
 msgstr "Reconfigurar a rede wireless"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:125
+#: ../netcfg-common.templates:134
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -358,117 +377,117 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:132
+#: ../netcfg-common.templates:141
 msgid "Wireless network configuration"
 msgstr "Configuração de rede sem fios"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:136
+#: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
 msgstr "Procurando pontos de acesso da rede sem fios ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:146
+#: ../netcfg-common.templates:155
 msgid "<none>"
 msgstr "<nenhuma>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:150
+#: ../netcfg-common.templates:159
 msgid "Wireless ethernet (802.11x)"
 msgstr "Rede sem fios (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:154
+#: ../netcfg-common.templates:163
 msgid "wireless"
 msgstr "sem fios"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:158
+#: ../netcfg-common.templates:167
 msgid "Ethernet or Fast Ethernet"
 msgstr "Ethernet ou Fast Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:171
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:166
+#: ../netcfg-common.templates:175
 msgid "USB net"
 msgstr "Rede USB"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#: ../netcfg-common.templates:184
 msgid "Serial-line IP"
 msgstr "IP Linha-série"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:179
+#: ../netcfg-common.templates:188
 msgid "Parallel-port IP"
 msgstr "IP Porta-Paralela"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:192
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:187
+#: ../netcfg-common.templates:196
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-em-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:191
+#: ../netcfg-common.templates:200
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo ISDN Ponto-a-Ponto"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:195
+#: ../netcfg-common.templates:204
 msgid "Channel-to-channel"
 msgstr "Canal-a-Canal"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:199
+#: ../netcfg-common.templates:208
 msgid "Real channel-to-channel"
 msgstr "Canal-a-Canal real"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:208
+#: ../netcfg-common.templates:217
 msgid "Inter-user communication vehicle"
 msgstr "Veículo de comunicação inter-utilizador"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:212
+#: ../netcfg-common.templates:221
 msgid "Unknown interface"
 msgstr "Interface desconhecido"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:217
+#: ../netcfg-common.templates:226
 msgid "Storing network settings ..."
 msgstr "A guardar as configurações de rede ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:222
+#: ../netcfg-common.templates:231
 msgid "Configure the network"
 msgstr "Configurar a rede"
 
