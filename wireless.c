@@ -132,12 +132,10 @@ stop:
       debconf_go(client);
     }
 
-    ret = debconf_input(client,
-	couldnt_associate ? "critical" : "low",
-	"netcfg/wireless_essid");
-   
-    /* But now we'd not like to suppress any MORE errors */
-    couldnt_associate = 0;
+    if (couldnt_associate)
+      ret = debconf_input(client, "critical", "netcfg/wireless_essid_again");
+    else
+      ret = debconf_input(client, "low", "netcfg/wireless_essid");
     
     /* we asked the question once, why can't we ask it again? */
     assert (ret != 30);
@@ -145,10 +143,21 @@ stop:
     if (debconf_go(client) == 30) /* well, we did, but he wants to go back */
       return GO_BACK;
 
-    debconf_get(client, "netcfg/wireless_essid");
+    if (couldnt_associate)
+      debconf_get(client, "netcfg/wireless_essid_again");
+    else
+      debconf_get(client, "netcfg/wireless_essid");
 
-    if (empty_str(client->value))
-      goto automatic;
+    if (empty_str(client->value)) {
+      if (couldnt_associate)
+	/* we've already tried the empty string here, so give up */
+	break;
+      else
+	goto automatic;
+    }
+   
+    /* But now we'd not like to suppress any MORE errors */
+    couldnt_associate = 0;
 
     free(user_essid);
     user_essid = strdup(client->value);

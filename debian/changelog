@@ -1,6 +1,13 @@
 netcfg (1.30) UNRELEASED; urgency=low
 
+  [ Frans Pop ]
   * Improve wording of wireless network type template.
+
+  [ Colin Watson ]
+  * Avoid infinite loop on wireless configuration if no access points are
+    available, by introducing a slightly different question the second time
+    round the loop; entering an empty ESSID there breaks out of wireless
+    configuration.
 
  -- Frans Pop <fjp@debian.org>  Mon, 21 Aug 2006 01:20:46 +0200
 

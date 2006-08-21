@@ -41,6 +41,15 @@ _Description: Wireless ESSID for ${iface}:
  of the wireless network you would like ${iface} to use. If you would like
  to use any available network, leave this field blank.
 
+Template: netcfg/wireless_essid_again
+Type: string
+_Description: Wireless ESSID for ${iface}:
+ Attempting to find an available wireless network failed.
+ .
+ ${iface} is a wireless network interface. Please enter the name (the ESSID)
+ of the wireless network you would like ${iface} to use. To skip wireless
+ configuration and continue, leave this field blank.
+
 Template: netcfg/wireless_wep
 Type: string
 _Description: WEP key for wireless device ${iface}:
