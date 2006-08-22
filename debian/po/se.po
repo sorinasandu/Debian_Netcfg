@@ -16,9 +16,9 @@ msgstr ""
 "Project-Id-Version: se\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-05-24 20:20+0200\n"
+"PO-Revision-Date: 2006-08-22 11:39+0200\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
-"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
+"Language-Team: Northern Sami <se@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,7 +131,6 @@ msgstr ""
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -360,9 +359,8 @@ msgstr "Ad-hoc-fierpmádat (dihtoriid gaskkas)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Heivet jođahis fierpmádaga ođđasit"
+msgstr "Jođaskeahtes fierpmádatšládja:"
 
 #. Type: select
 #. Description
@@ -372,6 +370,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
+"Jođaskeahtes fierpmádagat leat stivrejuvvon dahje ad-hoc. Jus geavahat "
+"muhton «álbma beassan» de du fierpmádat lea stivrejuvvon. Jus eará dihtor "
+"lea du «beassan» de du fierpmádat lea ad-hoc."
 
 #. Type: text
 #. Description
@@ -603,6 +604,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
+"Dás sáhtát geahččalit heivehit iežat fierpmádaga automáhtalaččát DHCP:ain "
+"fas (dat dáidá bures mannat jus du DHCP-bálvá ádjána guhkká ovdalgo "
+"vástida), dahje ieš heivehit fierpmádaga. Muhton DHCP-bálvát gáibidit ahte "
+"DHCP-klienta sádde DHCP-bálvvá nama. Danne sáhtát maid geahččalit heivehit "
+"fierpmádaga DHCP:ain gos geavahat bálvanama maid ieš čálát."
 
 #. Type: note
 #. Description
@@ -625,7 +631,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:52
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Joatkit standárdruvttu haga?"
 
 #. Type: boolean
 #. Description
@@ -637,6 +643,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Lihkostuvvai heivehit fierpmádaga automáhtalaččat. Muhto, dannego "
+"standárdruvtu ii gávdnon, dát vuogádat ii dieđe mo galgá gulahallat eará "
+"guossoheddjiiguin interneahtas. Jus dus ii leat vuosttaš sajáiduhttin-CD, "
+"Netinst-CD dahje páhkat olamuttus báikkálaš fierpmádagas, de ii leat vejolaš "
+"joatkit sajáiduhttima."
 
 #. Type: boolean
 #. Description
@@ -645,6 +656,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Jus ii leat sihkkar, ale joaktte standárdruvttu haga. Váldde báicce "
+"oktavuođa báikkálaš fierpmádathálddašeddjiin čoavdin dihte dán váttisvuođa."
 
 #. Type: text
 #. Description
@@ -666,6 +679,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
+"IP-čujuhus lea sierra du dihtorii ja das leat njeallje nummira sirrejuvvon "
+"čuoggáin. Jus it dieđe maid galggat čállit, jeará iežat "
+"fierpmádathálddašeaddji."
 
 #. Type: error
 #. Description
@@ -698,6 +714,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
+"Čuokkis-čuoggái-čujuhus mearrida nuppi geaži čuokkis-čuoggái-fierpmádagas. "
+"Jeara iežat fierpmádathálddašeaddji maid galggat čállit jus it ieš dieđe. "
+"Čuokkis-čuoggái-čujuhusas leat njeallje nummira sirrejuvvon čuoggáin."
 
 #. Type: string
 #. Description
@@ -713,12 +732,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
+"Fierpmádatsilli mearrida guđe mašiinnat gullet báikkálaš fierpmádahkii. "
+"Jeara iežat fierpmádathálddašeaddji jus it dieđe dan árvvu. Fierpmádatsillis "
+"lea njeallje nummira sirrejuvvon čuoggáin."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr ""
+msgstr "Gateway:"
 
 #. Type: string
 #. Description
@@ -731,18 +753,24 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"Gateway lea IP-čujuhus (njeallje nummirat erohuvvon čuoggáiguin) mii muitala "
+"gateway-routera, maiddái gohččoduvvon standárdrouter. Visot johtolat mii "
+"galgá iežat LAN:a guođđit (ovdamearka dihte internehttii) sáddejuvvo dan "
+"čađa. Muhtomin dus ii leat router, ja guođát dán gietti guorusin. Jus it "
+"dieđe vástadusa dán gažaldahkii fertet váldit oktavuođa iežat "
+"fierpmádathálddašeddjiin."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Ii ožžon oktavuođa gateway:ii"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr ""
+msgstr "Ii ožžon oktavuođa gateway-čuhussii maid easka čállet."
 
 #. Type: error
 #. Description
@@ -750,6 +778,8 @@ msgstr ""
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
+"Dáiddát leat čállán boastot go čállet iežat IP-čujuhusa, fierpmádatsilli ja/"
+"dahje gateway:a."
 
 #. Type: boolean
 #. Description
@@ -761,7 +791,7 @@ msgstr "Leatgo dát rievttes dieđut?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Dálá fierpmádatparamehterat:"
 
 #. Type: boolean
 #. Description
@@ -774,6 +804,12 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
+" fierpmádatlákta   = ${interface}\n"
+" ip-čujuhus        = ${ipaddress}\n"
+" fierpmádatsilli   = ${netmask}\n"
+" gateway           = ${gateway}\n"
+" čuokkisčuoggái    = ${pointopoint}\n"
+" nammabálvvát      = ${nameservers}"
 
 #. Type: text
 #. Description
