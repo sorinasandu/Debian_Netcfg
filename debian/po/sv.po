@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-19 17:52+0100\n"
+"PO-Revision-Date: 2006-08-23 00:12+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -132,20 +132,19 @@ msgstr "Trådlös ESSID för ${iface}"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Försöket att hitta ett tillgängligt trådlöst nätverk misslyckades."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} är ett trådlöst nätverkskort. Ange namnet (ESSID) på det trådlösa "
-"nätverk som du vill att ${iface} ska använda. Om du vill använda alla "
-"tillgängliga nätverk ska du lämna det här fältet tomt."
+"nätverk som du vill att ${iface} ska använda. Lämna det här fältet tomt om "
+"du vill hoppa över konfigurationen av det trådlösa nätverket och fortsätta."
 
 #. Type: string
 #. Description
@@ -365,9 +364,8 @@ msgstr "Ad-hoc-nätverk (icke-hierarkiskt)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Konfigurera om det trådlösa nätverket"
+msgstr "Typ av trådlöst nätverk:"
 
 #. Type: select
 #. Description
