@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-07-16 17:29+0300\n"
+"PO-Revision-Date: 2006-08-25 00:54+0300\n"
 "Last-Translator: Recai Oktaş <roktas@omu.edu.tr>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -130,19 +130,20 @@ msgstr "${iface} için kablosuz ESSID:"
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
 msgstr ""
+"Kullanılabilir durumda bir kablosuz ağ bulma girişimi başarısızlıkla "
+"sonuçlandı."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} bir kablosuz ağ arayüzüdür.  Lütfen ${iface} üzerinden kullanmak "
-"istediğiniz kablosuz ağın adını (ESSID) girin.  Mevcut ağlardan birisini "
-"kullanmak istiyorsanız bu alanı boş bırakın."
+"istediğiniz kablosuz ağın adını (ESSID) girin.  Kablosuz ağ yapılandırmasını "
+"atlayarak devam etmek istiyorsanız bu alanı boş bırakın."
 
 #. Type: string
 #. Description
@@ -362,9 +363,8 @@ msgstr "Plansız ağ (Ad-hoc / Peer to peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Kablosuz ağı yapılandır"
+msgstr "Kablosuz ağ tipi:"
 
 #. Type: select
 #. Description

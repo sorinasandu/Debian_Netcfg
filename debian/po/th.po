@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-19 11:18+0700\n"
+"PO-Revision-Date: 2006-08-23 09:09+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <l10n@opentle.org>\n"
 "MIME-Version: 1.0\n"
@@ -118,19 +118,18 @@ msgstr "ESSID ของเครือข่ายไร้สายสำหร
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "ไม่สามารถหาเครือข่ายไร้สายที่มีอยู่ได้"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} เป็นอินเทอร์เฟซเครือข่ายไร้สาย กรุณาป้อนชื่อ (ESSID) ของเครือข่ายไร้สายที่จะให้ "
-"${iface} ใช้ ถ้าคุณต้องการใช้เครือข่ายใดก็ได้ที่มีอยู่ ก็ปล่อยช่องนี้ให้ว่างไว้"
+"${iface} ใช้ ถ้าคุณต้องการข้ามขั้นตอนการตั้งค่าเครือข่ายไร้สาย ก็ปล่อยช่องนี้ให้ว่างไว้"
 
 #. Type: string
 #. Description
@@ -339,9 +338,8 @@ msgstr "เครือข่าย ad-hoc (peer to peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "ตั้งค่าเครือข่ายไร้สายอีกครั้ง"
+msgstr "ชนิดของเครือข่ายไร้สาย:"
 
 #. Type: select
 #. Description

@@ -7,17 +7,17 @@
 # Russian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
+#
 # Russian L10N Team <debian-l10n-russian@lists.debian.org>, 2004.
 # Yuri Kozlov <yuray@id.ru>, 2004, 2005.
 # Dmitry Beloglazov <dm-guest@alioth.debian.org>, 2005.
 # Yuri Kozlov <kozlov.y@gmail.com>, 2005, 2006.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-13 21:50+0300\n"
+"PO-Revision-Date: 2006-08-23 21:28+0400\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #. Type: boolean
 #. Description
@@ -129,20 +129,19 @@ msgstr "ESSID для ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Не удалось найти доступную беспроводную сеть."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} -- беспроводное сетевое устройство. Введите имя (ESSID) сети, в "
-"которой будет использоваться ${iface}. Если вы хотите использовать любую "
-"доступную сеть, оставьте это поле пустым."
+"которой будет использоваться ${iface}. Чтобы пропустить настройку "
+"беспроводной сети и продолжить, оставьте это поле пустым."
 
 #. Type: string
 #. Description
@@ -361,9 +360,8 @@ msgstr "Прямое соединение (Ad hoc)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Настройка беспроводной сети"
+msgstr "Тип беспроводной сети:"
 
 #. Type: select
 #. Description
@@ -629,7 +627,7 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "Вероятно, в вашей сети не используется протокол DHCP. Также, может быть "
-"сервер DHCP слишком медленно отвечать на запросы или сетевое оборудование не "
+"сервер DHCP слишком медленно отвечает на запросы или сетевое оборудование не "
 "работает или работает неправильно."
 
 #. Type: boolean
@@ -684,9 +682,9 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IPадрес уникален для вашего компьютера и состоит из четырёх чисел, "
-"разделённых точками. Если вы не знаете, что нужно здесь указать, то "
-"проконсультируйтесь с администратором вашей сети."
+"IP адрес вашего компьютера уникален и состоит из четырёх чисел, разделённых "
+"точками. Если вы не знаете, что нужно здесь указать, то проконсультируйтесь "
+"с администратором вашей сети."
 
 #. Type: error
 #. Description

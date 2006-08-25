@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-15 11:10+0100\n"
+"PO-Revision-Date: 2006-08-23 10:54+0100\n"
 "Last-Translator: Bart Cornelis <cobaco@skolelinux.no>\n"
 "Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -127,19 +127,19 @@ msgstr "draadloos-netwerk-ESSID voor ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Er is geen beschikbaar draadloos netwerk gevonden."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} is een draadloos netwerkapparaat. Wat is de naam (de ESSID) van het "
-"draadloos netwerk waarop u ${iface} wilt gebruiken?"
+"draadloos netwerk waarop u ${iface} wilt gebruiken? Om de draadloze "
+"configuratie over te slaan dient u dit veld gewoon leeg te laten."
 
 #. Type: string
 #. Description
@@ -360,9 +360,8 @@ msgstr "Ad-hoc netwerk (Peer to peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Draadloos netwerk opnieuw configureren"
+msgstr "Type draadloos netwerk:"
 
 #. Type: select
 #. Description
