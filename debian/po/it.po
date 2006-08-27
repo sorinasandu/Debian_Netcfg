@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-12 12:56+0200\n"
+"PO-Revision-Date: 2006-08-27 12:52+0200\n"
 "Last-Translator: Giuseppe Sacco <eppesuig@debian.org>\n"
 "Language-Team:   Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -137,20 +137,19 @@ msgstr "ESSID wireless per ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Il tentativo di rilevare una rete wireless disponibile è fallito."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} è una interfaccia di rete wireless. Inserire il nome (l'ESSID) "
-"della rete wireless da fare usare a ${iface}. Se non si hanno preferenze è "
-"possibile lasciare il campo in bianco."
+"della rete wireless da fare usare a ${iface}. Per abbandonare la "
+"configurazione wireless è possibile lasciare il campo in bianco."
 
 #. Type: string
 #. Description
@@ -371,9 +370,8 @@ msgstr "Rete «Ad-hoc» (connessione uno ad uno)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Configura la rete wireless"
+msgstr "Tipo di rete wireless:"
 
 #. Type: select
 #. Description
