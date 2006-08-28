@@ -20,13 +20,15 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-04-07 11:15+0700\n"
-"Last-Translator: Parlin Imanuel Toh <pt@samip-online.com>\n"
+"PO-Revision-Date: 2006-08-28 13:00+0700\n"
+"Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
 "Language-Team: Debian Indonesia Team <debian-l10n-id@gurame.fisika.ui.ac."
 "id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
 
 #. Type: boolean
 #. Description
@@ -47,7 +49,7 @@ msgstr ""
 "Jaringan dapat dikonfigurasi dengan DHCP atau dengan memasukkan informasi "
 "secara manual. Bila Anda memilih menggunakan DHCP dan program instalasi "
 "tidak mendapatkan konfigurasi dari server DHCP, Anda akan diberi kesempatan "
-"untuk mengonfigurasikan secara manual."
+"untuk konfigurasi manual."
 
 #. Type: string
 #. Description
@@ -65,9 +67,9 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "Nama domain adalah bagian dari alamat Internet yang berada di sebelah kanan "
-"nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Misalnya jojon."
-"com. Bila ini untuk jaringan di rumah, Anda bisa mereka-reka, tapi pastikan "
-"domain tersebut sama pada semua komputer Anda."
+"nama host. Biasanya berakhiran .com, .net, .edu, atau .org. Bila ini untuk "
+"jaringan di rumah, Anda bisa mereka-reka, tapi pastikan domain tersebut sama "
+"pada semua komputer Anda."
 
 #. Type: string
 #. Description
@@ -131,20 +133,19 @@ msgstr "ESSID nirkabel untuk ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Usaha untuk menemukan jaringan nirkabel telah gagal."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
-"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika Anda ingin "
-"menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
+"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika tidak ingin "
+"melakukan konfigurasi, biarkan ruas ini kosong."
 
 #. Type: string
 #. Description
@@ -277,7 +278,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:103
 msgid "Error"
-msgstr "Kesalahan"
+msgstr "Ada Kesalahan"
 
 #. Type: error
 #. Description
@@ -363,9 +364,8 @@ msgstr "Jaringan Ad-hoc (Peer to peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Mengulangi konfigurasi jaringan nirkabel"
+msgstr "Jenis jaringan nirkabel: "
 
 #. Type: select
 #. Description
@@ -594,7 +594,7 @@ msgstr "Jangan mengonfigurasikan jaringan saat ini"
 #. Description
 #: ../netcfg-dhcp.templates:36
 msgid "Network configuration method:"
-msgstr "Metoda konfigurasi jaringan"
+msgstr "Metoda konfigurasi jaringan: "
 
 #. Type: select
 #. Description
@@ -608,8 +608,8 @@ msgid ""
 msgstr ""
 "Dari sini Anda dapat memilih mengulangi konfigurasi otomatis jaringan dengan "
 "DHCP (yang mungkin akan berhasil bila DHCP server lambat merespon "
-"permintaan) atau mengonfigurasikan jaringan secara manual. Beberapa server "
-"DHCP membutuhkan nama host DHCP dikirimkan oleh klien, jadi Anda dapat juga "
+"permintaan) atau mengonfigurasi jaringan secara manual. Beberapa server DHCP "
+"mengharuskan nama host DHCP dikirimkan oleh klien, jadi Anda dapat juga "
 "mengulangi konfigurasi otomatis jaringan dengan DHCP menggunakan nama host "
 "yang Anda berikan."
 
@@ -617,7 +617,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:46
 msgid "Network autoconfiguration failed"
-msgstr "Otokonfigurasi jaringan gagal"
+msgstr "Otokonfigurasi jaringan telah gagal"
 
 #. Type: note
 #. Description
@@ -819,4 +819,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Mengkonfigurasikan jaringan dengan alamat statis."
+msgstr "Mengkonfigurasi jaringan dengan alamat statis."
