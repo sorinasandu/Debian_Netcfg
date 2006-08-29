@@ -21,7 +21,7 @@
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
 #
-# - El proyecto de traducción de Debian al españl
+# - El proyecto de traducción de Debian al español
 #   http://www.debian.org/intl/spanish/
 #   especialmente las notas de traducción en
 #   http://www.debian.org/intl/spanish/notas
@@ -49,7 +49,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-14 12:25+0200\n"
+"PO-Revision-Date: 2006-08-30 00:04+0200\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -163,12 +163,11 @@ msgstr "ESSID inalámbrica para ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Se produjo un fallo al intentar encontrar una red inalámbrica."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -176,8 +175,8 @@ msgid ""
 msgstr ""
 "${iface} es una interfaz a una red inalámbrica («wireless»). Introduzca el "
 "nombre (el ESSID) de la red inalámbrica a la que quiere que se conecte "
-"${iface}. Deje el nombre en blanco si desea utilizar cualquier red que esté "
-"disponible."
+"${iface}. Deje el nombre en blanco si desea omitir la configuración y "
+"continuar."
 
 #. Type: string
 #. Description
@@ -398,9 +397,8 @@ msgstr "Red «ad-hoc» (entre iguales)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Reconfigurar la red inalámbrica"
+msgstr "Tipo de red inalámbrica"
 
 #. Type: select
 #. Description
