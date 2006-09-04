@@ -15,14 +15,15 @@ msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-15 01:05+0200\n"
+"PO-Revision-Date: 2006-09-03 23:55+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Content-Transfer-Encoding=UTF-8Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: (n != 1)\n"
 
 #. Type: boolean
 #. Description
@@ -128,20 +129,20 @@ msgstr "Haririk gabeko ESSID ${iface} interfazerako:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Haririk gabeko sare erabilgarri saiakerak huts egin du."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} haririk gabeko sare interfazea da. Idatzi ${iface}-(e)k erabiltzea "
-"nahi duzun haririk gabeko sarearen izena (ESSID). Erabilgarri dagoen edozein "
-"sare erabili nahi baduzu, utzi hutsik eremu hau."
+"nahi duzun haririk gabeko sarearen izena (ESSID). Hari gabeko sare "
+"konfigurazioa alde batetara utzi eta aurrera jarraitu nahi ezkero eremu hau "
+"hutsik utz ezazu."
 
 #. Type: string
 #. Description
@@ -358,9 +359,8 @@ msgstr "Ad-hoc sarea (pareko artekoa)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Berriro konfiguratu haririk gabeko sarea"
+msgstr "Haririk gabeko sare mota:"
 
 #. Type: select
 #. Description
