@@ -17,12 +17,13 @@
 # Jure Čuhalev <gandalf@owca.info>, 2005.
 # Jure Cuhalev <gandalf@owca.info>, 2006.
 # Matej Kovačič <matej.kovacic@owca.info>, 2006.
+# Jožko Škrablin <jozko.skrablni@gmail.com>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-04-26 00:10+0100\n"
+"PO-Revision-Date: 2006-09-06 23:07+0100\n"
 "Last-Translator: Jure Čuhalev <gandalf@owca.info>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
@@ -136,20 +137,19 @@ msgstr "Brezžični ESSID za ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Poskus iskanja dosegljivega brezžičnega omrežja ni uspel."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} je brezžična mrežna naprava. Prosim vnesite ime (ESSID) brezžičnega "
-"omrežja za katerega želite, da ga ${iface} uporablja. Če želite uporabiti "
-"katerokoli omrežje, ki je na voljo, pustite to polje prazno."
+"omrežja za katerega želite, da ga ${iface} uporablja. Če želite preskočiti "
+"konfiguracijo brezžičnega omrežja, pustite to polje prazno."
 
 #. Type: string
 #. Description
@@ -368,9 +368,8 @@ msgstr "neposredno omrežje (uporabnik do uporabnika)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Ponastavi brezžično omrežje"
+msgstr "Tip brezžičnega omrežja:"
 
 #. Type: select
 #. Description
