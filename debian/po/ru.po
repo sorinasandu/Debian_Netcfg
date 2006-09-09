@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-23 21:28+0400\n"
+"PO-Revision-Date: 2006-09-09 13:05+0400\n"
 "Last-Translator: Yuri Kozlov <kozlov.y@gmail.com>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Адреса серверов имён:"
+msgstr "Адреса DNS-серверов:"
 
 #. Type: string
 #. Description
@@ -84,10 +84,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Серверы имён используются для поиска соответствия имени и IP адреса. Введите "
-"IP адреса серверов имён (не более трёх), разделённые пробелами. Не "
+"DNS-cерверы используются для поиска соответствия имени и IP адреса. Введите "
+"IP адреса DNS-серверов (не более трёх), разделённые пробелами. Не "
 "используйте запятые. Серверы будут опрашиваться в порядке их указания. Если "
-"вы вообще не хотите использовать серверы имён, то оставьте поле пустым."
+"вы вообще не хотите использовать DNS-серверы, то оставьте поле пустым."
 
 #. Type: select
 #. Description
@@ -812,8 +812,8 @@ msgstr ""
 " ip адрес       = ${ipaddress}\n"
 " маска подсети  = ${netmask}\n"
 " шлюз           = ${gateway}\n"
-" PPP адрес     = ${pointopoint}\n"
-" сервера имён  = ${nameservers}"
+" PPP адрес      = ${pointopoint}\n"
+" DNS-серверы    = ${nameservers}"
 
 #. Type: text
 #. Description
