@@ -4,6 +4,7 @@
 # DO NOT MODIFY IT DIRECTLY : SUCH CHANGES WILL BE LOST
 # 
 # translation of lv.po to Latvian
+# Aigars Mahinovs <aigarius@debian.org>, 2006.
 # Latvian messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
@@ -12,12 +13,15 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-02-11 15:42+0200\n"
-"Last-Translator: Aigars Mahinovs <aigarius@laka.lv>\n"
-"Language-Team: locale@laka.lv <locale@laka.lv>\n"
+"PO-Revision-Date: 2006-09-08 19:09+0200\n"
+"Last-Translator: Aigars Mahinovs <aigarius@debian.org>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #. Type: boolean
 #. Description
@@ -36,9 +40,9 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Tīkls var tikt konfigurēts automātiski, izmantojot DHCP, vai arī manuāli "
-"ievadot visus nepieciešamos parametrus. Ja Jūs izvēlēsieties automātisko "
-"konfigurāciju un tā būs neveiksmīga, Jums būs dota iespēja ievadīt "
-"nepieciešamos parametrus manuāli."
+"ievadot visus nepieciešamos parametrus. Ja izvēlēsieties automātisko "
+"konfigurāciju un tā būs neveiksmīga, būs dota iespēja ievadīt nepieciešamos "
+"parametrus manuāli."
 
 #. Type: string
 #. Description
@@ -55,11 +59,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domēna vārds ir tā jūsu interneta DNS adreses daļa, kas atrodas pa labi no "
-"jūsu datora vārda. Bieži tas ir kaut kas, kas beidzas ar .com, .net, .edu, ."
-"org. vai .lv. Uzstādot savu mājas tīklu jūs varat izdomāt kādu patvaļīgu "
-"domēna vārdu, taču atcerieties, ka šo vārdu jums jālieto visem datoriem jūsu "
-"tīkla."
+"Domēna vārds ir tā interneta DNS adreses daļa, kas atrodas pa labi no datora "
+"vārda. Bieži tas ir kaut kas, kas beidzas ar .com, .net, .edu, .org. vai ."
+"lv. Uzstādot savu mājas tīklu varat izdomāt kādu patvaļīgu domēna vārdu, "
+"taču atcerieties, ka šo vārdu jālieto visem datoriem šajā tīkla."
 
 #. Type: string
 #. Description
@@ -97,9 +100,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Jūsu sistēmai ir vairākas tīklakartes. Izvēlieties, kuru gribat lietot kā "
-"galveno šīs instalācijas laikā. Ja tas bija iespējams, automatiski tika "
-"izvēlēta pirmā atrastā tīklakarte."
+"Sistēmai ir atrastas vairākas tīkla kartes. Izvēlieties, kuru gribat lietot "
+"kā galveno šīs instalācijas laikā. Ja tas bija iespējams, automatiski tika "
+"izvēlēta pirmā atrastā tīkla karte."
 
 #. Type: string
 #. Description
@@ -109,7 +112,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface}ir bezvadu tīkla saskarne. Lūdzu ievadiet tā tīkla nosaukumu "
+"${iface} ir bezvadu tīkla saskarne. Lūdzu ievadiet tā tīkla nosaukumu "
 "(ESSID), kuram gribat pieslēgt savu bezvadu tīklakarti. Ja gribat izmantot "
 "jebkuru no pieejamajiem tīkliem, atstājiet šo lauku tukšu."
 
@@ -123,20 +126,19 @@ msgstr "ESSID ${iface} bezvadu tīklam:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Neizdevās atrast pieejamu bezvadu tīklu."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface}ir bezvadu tīkla saskarne. Lūdzu ievadiet tā tīkla nosaukumu "
-"(ESSID), kuram gribat pieslēgt savu bezvadu tīklakarti. Ja gribat izmantot "
-"jebkuru no pieejamajiem tīkliem, atstājiet šo lauku tukšu."
+"(ESSID), kuram gribat pieslēgt savu bezvadu tīklakarti ${iface}. Lai "
+"izlaistu bezvadu tīkla konfigurēšanu, atstājiet šo lauku tukšu."
 
 #. Type: string
 #. Description
@@ -151,8 +153,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Ja jūsu tīkla gadījumā tajā tiek lietotas WEP drošības atslēga ievadiet to. "
-"Ir divi veidi kā to izdarīt:"
+"Ja jūsu tīkla (${iface}) gadījumā tajā tiek lietota WEP drošības atslēga "
+"ievadiet to. Ir divi veidi kā to izdarīt:"
 
 #. Type: string
 #. Description
@@ -161,8 +163,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Ja jūsu WEP atslēga ir kādā no siem formātiem 'nnnn-nnnn-nn', 'nn:nn:nn:nn:"
-"nn:nn:nn:nn', vai 'nnnnnnnn', kur n ir kāds cipars, vienkārši ievadiet to "
+"Ja WEP atslēga ir kādā no šiem formātiem 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:"
+"nn:nn', vai 'nnnnnnnn', kur n ir kāds cipars, vienkārši ievadiet to "
 "norādītajā laukā."
 
 #. Type: string
@@ -172,7 +174,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ja jūsu WEP atslēga ir citā formā pierakstiet tās prieksa 's:' (bez pēdiņām)."
+"Ja WEP atslēga ir citā formā pierakstiet tās prieksa 's:' (bez pēdiņām)."
 
 #. Type: string
 #. Description
@@ -181,7 +183,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Ja jūsu bezvadu tīklā netiek lietotas WEP atslēgas, atstājiet šo lauku tukšu"
+"Ja bezvadu tīklā netiek lietotas WEP atslēgas, atstājiet šo lauku tukšu"
 
 #. Type: error
 #. Description
@@ -238,8 +240,8 @@ msgid ""
 msgstr ""
 "Katram datoram kādā konkrētā tīklā ir unikāls datora vārds, kas to "
 "identificē. Ja nezināt kādu datora vārdu izvēlēties, sazinieties ar sava "
-"tīkla administratoru. Ja uzstādat savu mājas tīklu, jūs varat izvēlēties "
-"kādu patvaļīgu vārdu."
+"tīkla administratoru. Ja uzstādat savu mājas tīklu, varat izvēlēties kādu "
+"patvaļīgu vārdu."
 
 #. Type: error
 #. Description
@@ -279,14 +281,14 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Tīkla konfigurācijas procesā ir radusies kļūda, tālāka konfigurācija "
-"pārtraukta. Ja vēlaties varat vēlreiz veikt tīkla konfigurāciju, izvēloties "
-"to instalācijas izvēlnē."
+"pārtraukta. Ja vēlaties varat vēlreiz veikt tīkla konfigurāciju, izvēlieties "
+"to galvenajā izvēlnē."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:109
 msgid "No network interfaces detected"
-msgstr "Neviena tīklakare nav atrasta"
+msgstr "Neviena tīkla karte nav atrasta"
 
 #. Type: error
 #. Description
@@ -295,8 +297,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Neviena tīklakarte nav atrasta. Instalācijas sistēmai nav izdevies atrast "
-"nevienu tīklakarti."
+"Neviena tīkla karte nav atrasta. Instalācijas sistēmai nav izdevies atrast "
+"nevienu tīkla karti."
 
 #. Type: error
 #. Description
@@ -305,8 +307,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Iespējams Jums ir jāielādē kāds papildus modulis savai tīklakartei, ja Jums "
-"tāds ir. Lai to izdarītu atgriezieties uz tīkla aparatūras meklēšanas soli."
+"Iespējams šai tīkla kartei ir jāielādē kāds papildus modulis. Lai to "
+"izdarītu atgriezieties uz tīkla aparatūras meklēšanas soli."
 
 #. Type: note
 #. Description
@@ -314,7 +316,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
-msgstr "Tīklakartes ${iface} Kill slēdzis aktivizēts"
+msgstr "Tīkla kartes ${iface} aparātiskais Kill slēdzis aktivizēts"
 
 #. Type: note
 #. Description
@@ -326,8 +328,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Liekas, ka jūsu tīklakarte ${iface} ir fiziski deaktivizēta izmantojot "
-"\"kill slēdzi\". Ja gribat to turpmāk izmantot, lūdzu ieslēdziet to atpakaļ."
+"Liekas, ka jūsu tīkla karte ${iface} ir fiziski deaktivizēta izmantojot "
+"\"kill slēdzi\". Ja gribat to turpmāk izmantot, lūdzu ieslēdziet to pirms "
+"turpināt."
 
 #. Type: select
 #. Choices
@@ -354,9 +357,8 @@ msgstr "Ad-hoc tīkls (Vienādranga)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Pārkonfigurēt bezvadu tīklu"
+msgstr "Bezvadu tīkla tips:"
 
 #. Type: select
 #. Description
@@ -366,9 +368,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Bezvadu tīklu tipi parasti ir vai nu pārvaldītie vai arī ad-hoc. Ja jūs "
-"izmantojat jebkādu reālu pieejas punktu, jūsu tīkla tips ir 'pārvaldīts'. Ja "
-"kāds cits dators kalpo par jūsu pieejas punktu, tad jūsu tīkla tips ir Ad-Hoc"
+"Bezvadu tīkli parasti ir pārvaldītie vai arī ad-hoc. Ja jūs izmantojat "
+"jebkādu pieejas punktu, jūsu tīkla tips ir 'pārvaldīts'. Ja kāds cits dators "
+"kalpo par jūsu pieejas punktu, tad jūsu tīkla tips varētu būt Ad-Hoc."
 
 #. Type: text
 #. Description
@@ -386,7 +388,7 @@ msgstr "Meklēju bezvadu tīkla piekļuves punktus..."
 #. Description
 #: ../netcfg-common.templates:155
 msgid "<none>"
-msgstr "<none>"
+msgstr "<nav atrasts>"
 
 #. Type: text
 #. Description
@@ -484,7 +486,7 @@ msgstr "Saglabāju tīkla iestatījumus ..."
 #. Item in the main menu to select this package
 #: ../netcfg-common.templates:231
 msgid "Configure the network"
-msgstr "Konfigurēt tīklu"
+msgstr "Tīkla konfigurēšana"
 
 #. Type: string
 #. Description
@@ -512,13 +514,13 @@ msgstr "Lielākā daļa pārējo lietotāju var atstāt šo laiku tukšu"
 #. Description
 #: ../netcfg-dhcp.templates:11
 msgid "Configuring the network with DHCP"
-msgstr "Konfigurēt tīklu ar DHCP"
+msgstr "Konfigurēju tīklu ar DHCP"
 
 #. Type: text
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "Iespējams naksies nedaudz uzgaidīt."
+msgstr "Iespējams nāksies nedaudz uzgaidīt."
 
 #. Type: text
 #. Description
@@ -641,7 +643,7 @@ msgid ""
 msgstr ""
 "Automātiskā tīkla konfigurācija pabeigta veiksmīgi. Taču noklusetais datu "
 "maršruts nav uzstādīts: sistēma nezina kā komunicet ar citiem datoriem "
-"internetā. Tālāka instalacija nebūs iespējama, ja vien jums nav pirmā "
+"internetā. Tālāka instalācija nebūs iespējama, ja vien jums nav pirmā "
 "instalācijas diska, 'Netinst' kompaktdiska vai arī packu spoguļa lokālajā "
 "tīklā."
 
@@ -693,8 +695,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"Jūsu ievadītā IP adrese nav korekta. Tai būtu jābūt formā x.x.x.x, kur x ir "
-"pozitīvs skaitlis, kas nepārsniedz 255."
+"Jūsu ievadītā IP adrese nav korekta. Tai būtu jābūt formā x.x.x.x, kur katrs "
+"x ir pozitīvs skaitlis, kas nepārsniedz 255."
 
 #. Type: string
 #. Description
@@ -754,7 +756,7 @@ msgid ""
 msgstr ""
 "Vārteja ir IP adrese (četri skaitļi ko vienu no otra atdala punkti), kas "
 "identificē jūsu vārtejas maršrutētāju (gateway) jeb nokluseto maršrutētāju. "
-"Visa tīkla satiksme, kas iet ārpus jūsu lokālā tīkla tiek laizta caur šo "
+"Visa tīkla satiksme, kas iet ārpus jūsu lokālā tīkla tiek laista caur šo "
 "maršrutētāju. Retos gadījumos var iztikt arī bez maršrutētāja. Šādos "
 "gadījumos atstājiet šo aili tukšu. Ja nezināt ko rakstīt šajā ailē, "
 "sazinieties ar savu tīkla administratoru."
@@ -813,4 +815,4 @@ msgstr ""
 #. Item in the main menu to select this package
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
-msgstr "Konfigurēt tīklu izmantojot statisko adresāciju"
+msgstr "Tīkla konfigurēšana izmantojot statisko adresāciju"
