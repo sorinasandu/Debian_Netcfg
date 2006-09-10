@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-10 12:19+0200\n"
+"PO-Revision-Date: 2006-09-09 20:18+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@powertech.no>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -128,12 +128,11 @@ msgstr "Trådløs ESSID for ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Forsøk på å finne et tilgjengelig trådløst nettverk mislyktes."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -141,7 +140,7 @@ msgid ""
 msgstr ""
 "${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID-en) på "
 "det trådløse nettverket du vil at ${iface} skal bruke. La feltet stå tomt "
-"hvis det er det samme hvilket nettverk du bruker."
+"hvis du vil hoppe over oppsett for trådløst nettverek og fortsette."
 
 #. Type: string
 #. Description
@@ -359,9 +358,8 @@ msgstr "Ad-hoc-nettverk (mellom datamaskiner)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Sett opp det trådløse nettverket på nytt"
+msgstr "Type trådløst nettverk:"
 
 #. Type: select
 #. Description
