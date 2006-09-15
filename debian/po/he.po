@@ -9,20 +9,19 @@
 # This file is distributed under the same license as debian-installer.
 #
 #
-# <>, 2004.
-# Lior Kaplan <kaplan@debian.org>, 2006.
+# Lior Kaplan <kaplan@debian.org>, 2004-2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-09-08 19:51+0200\n"
+"PO-Revision-Date: 2006-09-15 17:06+0300\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. Type: boolean
 #. Description
@@ -41,8 +40,8 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "רשת יכולה להיות מוגדרת או על ידי DHCP או על ידי הכנסת המידע באופן ידני. אם "
-"תבחר להשתמש ב-DHCP והמתקין לא יוכל לקבל את המידע משרת ה-DHCP ברשת שלך, תקבל "
-"אפשרות להכניס את המידע ידנית אחרי הניסיון להגדרה על ידי DHCP."
+"תבחר להשתמש ב-DHCP ותוכנית ההתקנה לא תוכל לקבל את המידע משרת ה-DHCP ברשת "
+"שלך, תקבל אפשרות להכניס את המידע ידנית אחרי הניסיון להגדרה על ידי DHCP."
 
 #. Type: string
 #. Description
@@ -110,9 +109,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} הוא ממשק רשת אלחוטי. בבקשה הכנס את השם (ה-ESSID) של הרשת האלחוטית "
-"שלך שבה שאתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש בכל רשת זמינה, השאר "
-"את השדה ריק."
+"${iface} הוא ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שלך שבה "
+"שאתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש בכל רשת זמינה, השאר את השדה "
+"ריק."
 
 #. Type: string
 #. Description
@@ -134,9 +133,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"הממשק ${iface} הוא ממשק רשת אלחוטי. הכנס בבקשה את השם (ה-ESSID) של הרשת "
-"האלחוטית שבה שאתה רוצה ש-${iface} ישתמש. כדי לדלג על הגדרת רשת אלחוטית "
-"והמשיך הלאה, השאר את שדה זה ריק."
+"הממשק ${iface} הוא ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית "
+"שבה שאתה רוצה ש-${iface} ישתמש. כדי לדלג על הגדרת רשת אלחוטית והמשיך הלאה, "
+"השאר את שדה זה ריק."
 
 #. Type: string
 #. Description
@@ -161,8 +160,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"אם מפתח ה-WEP שלך הוא במבנה של  'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
-"או 'nnnnnnnn', כאשר n היא ספרה, פשוט הכנס את המפתח לתוך השדה הזה."
+"אם מפתח ה-WEP שלך הוא במבנה של 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', או "
+"'nnnnnnnn', כאשר n היא ספרה, פשוט הכנס את המפתח לתוך השדה הזה."
 
 #. Type: string
 #. Description
@@ -259,7 +258,7 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"שם שרת תקין יכול להכיל רק תווים אלפאנומריים וסימן מינוס. השם צריך להיות בין "
+"שם שרת תקין יכול להכיל רק תווים אלפא-נומריים וסימן מינוס. השם צריך להיות בין "
 "2 עד 63 תווים, התו מינוס לא יכול להיות בהתחלה או בסוף."
 
 #. Type: error
@@ -342,7 +341,7 @@ msgstr "רשת מנוהלת"
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
-msgstr "רשת יעודית (peer to peer)"
+msgstr "רשת ייעודית (peer to peer)"
 
 #. Type: select
 #. Description
@@ -358,9 +357,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"רשתות אלחוטיות יכולות להיות מנוהלות או יעודיות. אם אתה משתמש במשתמש בנקודה "
+"רשתות אלחוטיות יכולות להיות מנוהלות או ייעודיות. אם אתה משתמש במשתמש בנקודה "
 "גישה אמיתית, הרשת שלך היא מנוהלת. אם מחשב אחר הוא נקודה הגישה שלך, אז הרשת "
-"שלך היא יעודית."
+"שלך היא ייעודית."
 
 #. Type: text
 #. Description
@@ -510,7 +509,7 @@ msgstr "הגדרת הרשת עם DHCP"
 #. Description
 #: ../netcfg-dhcp.templates:15
 msgid "This may take some time."
-msgstr "פעולה זאת עלולה להיות ארוכה..."
+msgstr "פעולה זאת עלולה להיות ארוכה."
 
 #. Type: text
 #. Description
@@ -605,7 +604,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"הרשת שלך כנראה לא משתמשת בפרוטוקל DHCP. לחילופין, שרת ה-DHCP שלך יכול להיות "
+"הרשת שלך כנראה לא משתמשת בפרוטוקול DHCP. לחלופין, שרת ה-DHCP שלך יכול להיות "
 "איטי, או שחומרת רשת כלשהי אינה עובדת בצורה תקינה."
 
 #. Type: boolean
@@ -658,7 +657,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"כתובת ה-IP הוא יחודית למחשב שלך, היא מורכבת מארבעה מספרים המופרדים בנקודות. "
+"כתובת ה-IP הוא ייחודית למחשב שלך, היא מורכבת מארבעה מספרים המופרדים בנקודות. "
 "אם אינך יודע במה להשתמש כאן, התייעץ עם מנהל הרשת שלך."
 
 #. Type: error
@@ -675,7 +674,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "כתובת ה-IP שספקת אינה תקינה. היא צריכה להיות במבנה של x.x.x.x כאשר כל x הוא "
-"מספר שאינו גדול מ-255. בבקשה נסה שוב."
+"מספר שאינו גדול מ-255. נסה שוב."
 
 #. Type: string
 #. Description
@@ -692,7 +691,7 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"כתובת הנקודה לנקודה שמשתמש כדי לקבוע את הנקודה השניה ברשת הנקודה לנקודה. "
+"כתובת הנקודה לנקודה שמשתמש כדי לקבוע את הנקודה השנייה ברשת הנקודה לנקודה. "
 "התייעץ עם מנהל הרשת שלך, אם אינך יודע את הערך הנכון. מסכת הרשת שלך צריכה "
 "להיות 4 מספרים מופרדים בנקודות."
 
@@ -765,7 +764,7 @@ msgstr "האם המידע נכון?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "פרמרטים שנקבעו כרגע:"
+msgstr "פרמטרים שנקבעו כרגע:"
 
 #. Type: boolean
 #. Description
@@ -782,7 +781,7 @@ msgstr ""
 " כתובת IP      = ${ipaddress}\n"
 " מסכת רשת      = ${netmask}\n"
 " gateway       = ${gateway}\n"
-" pointopoint   = ${pointopoint}\n"
+" נקודה לנקודה   = ${pointopoint}\n"
 " שרתי שמות     = ${nameservers}"
 
 #. Type: text
