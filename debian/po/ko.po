@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-20 16:56-0400\n"
+"PO-Revision-Date: 2006-09-14 12:11-0400\n"
 "Last-Translator:  Sunjae park <darehanl@gmail.com>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -122,20 +122,19 @@ msgstr "${iface} 인터페이스의 무선 ESSID:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "사용할 수 있는 무선 네트워크를 찾는 데 실패했습니다."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} 인터페이스는 무선 네트워크 인터페이스입니다. ${iface} 인터페이스가 "
-"사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 다른 네트워크를 사용할 수 "
-"있고 그걸 사용하려면, 다음 칸을 비워 두십시오."
+"사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 무선 네트워크 설정을 건너"
+"띄고 계속 진행하려면 다음 칸을 비워 두십시오."
 
 #. Type: string
 #. Description
@@ -348,9 +347,8 @@ msgstr "자체 구성 네트워크 (일대일)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "무선 네트워크 다시 설정"
+msgstr "무선 네트워크의 종료:"
 
 #. Type: select
 #. Description
