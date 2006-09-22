@@ -67,57 +67,55 @@ int wfd = 0;
 /* convert a netmask (255.255.255.0) into the length (24) */
 int inet_ptom (const char *src, int *dst, struct in_addr *addrp)
 {
-        struct in_addr newaddr, *addr;
-        in_addr_t mask, num;
+    struct in_addr newaddr, *addr;
+    in_addr_t mask, num;
+    
+    if (src && !addrp) {
+        if (inet_pton (AF_INET, src, &newaddr) < 0)
+            return 0;
+        addr = &newaddr;
+    }
+    else
+        addr = addrp;
+    
+    mask = ntohl(addr->s_addr);
 
-	if (src && !addrp)
-	{
-          if (inet_pton (AF_INET, src, &newaddr) < 0)
-                return 0;
-	  addr = &newaddr;
-	}
-	else
-	  addr = addrp;
-
-        mask = ntohl(addr->s_addr);
-
-        for (num = mask; num & 1; num >>= 1);
-
-        if (num != 0 && mask != 0)
-        {
-                for (num = ~mask; num & 1; num >>= 1);
-                if (num)
-                        return 0;
-        }
-
-        for (num = 0; mask; mask <<= 1)
-                num++;
-
-        *dst = num;
-
-        return 1;
+    for (num = mask; num & 1; num >>= 1);
+    
+    if (num != 0 && mask != 0) {
+        for (num = ~mask; num & 1; num >>= 1);
+        if (num)
+            return 0;
+    }
+    
+    for (num = 0; mask; mask <<= 1)
+        num++;
+    
+    *dst = num;
+    
+    return 1;
 }
 
 /* convert a length (24) into the netmask (255.255.255.0) */
 const char *inet_mtop (int src, char *dst, socklen_t cnt)
 {
-        struct in_addr addr;
-        in_addr_t mask = 0;
-
-        for(; src; src--)
-                mask |= 1 << (32 - src);
-
-        addr.s_addr = htonl(mask);
-
-        return inet_ntop (AF_INET, &addr, dst, cnt);
+    struct in_addr addr;
+    in_addr_t mask = 0;
+    
+    for(; src; src--)
+        mask |= 1 << (32 - src);
+    
+    addr.s_addr = htonl(mask);
+    
+    return inet_ntop (AF_INET, &addr, dst, cnt);
 }
 
 void open_sockets (void)
 {
 #ifdef WIRELESS
-  wfd = iw_sockets_open();
+    wfd = iw_sockets_open();
 #endif
-  skfd = socket (AF_INET, SOCK_DGRAM, 0);
+    skfd = socket (AF_INET, SOCK_DGRAM, 0);
 }
 
 #define SYSCLASSNET "/sys/class/net/"
@@ -134,24 +132,24 @@ int check_kill_switch(const char *iface)
     int linklen, killlen;
     int fd = -1;
     int ret = 0;
-
+    
     /* longest string we need */
     len = strlen(SYSCLASSNET) + strlen(iface) + strlen("/device/rf_kill") + 1;
-
+    
     temp = malloc(len);
     snprintf(temp, len, SYSCLASSNET "%s/driver", iface);
     linkbuf = malloc(1024); /* probably OK ... I hate readlink() */
     linklen = readlink(temp, linkbuf, 1024);
     if (linklen < 0)
         goto out;
-
+    
     if (strncmp(linkbuf + linklen - 8, "/ipw2100", 8) == 0)
         killname = "rf_kill";
     else if (strncmp(linkbuf + linklen - 8, "/ipw2200", 8) == 0)
         killname = "rf_kill";
     else
         goto out;
-
+    
     snprintf(temp, len, SYSCLASSNET "%s/device/%s", iface, killname);
     di_info("Checking RF kill switch: %s", temp);
     fd = open(temp, O_RDONLY);
@@ -165,13 +163,13 @@ int check_kill_switch(const char *iface)
         di_warning("RF kill state file empty");
         goto out;
     }
-
+    
     if (killstate == '2') {
         di_info("RF kill switch enabled");
         ret = 1;
     }
-
-out:
+    
+ out:
     free(temp);
     free(linkbuf);
     if (fd != -1)
@@ -189,7 +187,7 @@ int is_interface_up(char *inter)
     
     if (ioctl(skfd, SIOCGIFFLAGS, &ifr) < 0)
         return -1;
-
+    
     return ((ifr.ifr_flags & IFF_UP) ? 1 : 0);
 }
 
@@ -200,12 +198,12 @@ void get_name(char *name, char *p)
     while (*p) {
         if (isspace(*p))
             break;
-        if (*p == ':') {        /* could be an alias */
+        if (*p == ':') {	/* could be an alias */
             char *dot = p, *dotname = name;
             *name++ = *p++;
             while (isdigit(*p))
                 *name++ = *p++;
-            if (*p != ':') {        /* it wasn't, backup */
+            if (*p != ':') {	/* it wasn't, backup */
                 p = dot;
                 name = dotname;
             }
@@ -222,149 +220,135 @@ void get_name(char *name, char *p)
 
 int get_all_ifs (int all, char*** ptr)
 {
-  FILE *ifs = NULL;
-  char ibuf[512], rbuf[512];
-  char** list = NULL;
-  size_t len = 0;
-
-  if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
-    fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
-    fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
-  }
-  else
-    return 0;
-
-  while (fgets(rbuf, sizeof(rbuf), ifs) != NULL)
-  {
-    get_name(ibuf, rbuf);
-    if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
-      continue;
-    if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
-      continue;
-    if (all || is_interface_up(ibuf) == 1)
-    {
-      list = realloc(list, sizeof(char*) * (len + 1));
-      list[len] = strdup(ibuf);
-      len++;
+    FILE *ifs = NULL;
+    char ibuf[512], rbuf[512];
+    char** list = NULL;
+    size_t len = 0;
+    
+    if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
+        fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
+        fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
     }
-  }
+    else
+        return 0;
 
-  /* OK, now terminate it if necessary */
-  if (list != NULL) 
-  {
-    list = realloc(list, sizeof(char*) * (len + 1));
-    list[len] = NULL;
-  }
-  fclose (ifs);
-
-  *ptr = list;
-  
-  return len;
+    while (fgets(rbuf, sizeof(rbuf), ifs) != NULL) {
+        get_name(ibuf, rbuf);
+        if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
+            continue;
+        if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
+            continue;
+        if (all || is_interface_up(ibuf) == 1) {
+            list = realloc(list, sizeof(char*) * (len + 1));
+            list[len] = strdup(ibuf);
+            len++;
+        }
+    }
+    
+    /* OK, now terminate it if necessary */
+    if (list != NULL) {
+        list = realloc(list, sizeof(char*) * (len + 1));
+        list[len] = NULL;
+    }
+    fclose (ifs);
+    
+    *ptr = list;
+    
+    return len;
 }
 
 short find_in_stab(const char* iface)
 {
-  FILE *dn = NULL;
-  char buf[128];
-  size_t len = strlen(iface);
-
-  if (access(STAB, F_OK) == -1)
-    return 0;
-
-  if (!(dn = popen("grep -v '^Socket' " STAB " | cut -f5", "r")))
-    return 0;
-
-  while (fgets (buf, 128, dn) != NULL)
-  {
-    if (!strncmp(buf, iface, len))
-    {
-      pclose(dn);
-      return 1;
+    FILE *dn = NULL;
+    char buf[128];
+    size_t len = strlen(iface);
+    
+    if (access(STAB, F_OK) == -1)
+        return 0;
+    
+    if (!(dn = popen("grep -v '^Socket' " STAB " | cut -f5", "r")))
+        return 0;
+    
+    while (fgets (buf, 128, dn) != NULL) {
+        if (!strncmp(buf, iface, len)) {
+            pclose(dn);
+            return 1;
+        }
     }
-  }
-  pclose(dn);
-  return 0;
+    pclose(dn);
+    return 0;
 }
 
 char *find_in_devnames(const char* iface)
 {
-  FILE* dn = NULL;
-  char buf[512], *result = NULL;
-  size_t len = strlen(iface);
-
-  if (!(dn = fopen(DEVNAMES, "r")))
-    return NULL;
-
-  while (fgets(buf, 512, dn) != NULL)
-  {
-    char *ptr = strchr(buf, ':'), *desc = ptr + 1;
-
-    if (!ptr)
-    {
-      result = NULL; /* corrupt */
-      break;
+    FILE* dn = NULL;
+    char buf[512], *result = NULL;
+    size_t len = strlen(iface);
+    
+    if (!(dn = fopen(DEVNAMES, "r")))
+        return NULL;
+    
+    while (fgets(buf, 512, dn) != NULL) {
+        char *ptr = strchr(buf, ':'), *desc = ptr + 1;
+        
+        if (!ptr) {
+            result = NULL; /* corrupt */
+            break;
+        }
+        else if (!strncmp(buf, iface, len)) {
+            result = strdup(desc);
+            break;
+        }
     }
-    else if (!strncmp(buf, iface, len))
-    {
-      result = strdup(desc);
-      break;
+    
+    fclose(dn);
+    
+    if (result) {
+        len = strlen(result);
+        
+        if (result[len - 1] == '\n')
+            result[len - 1] = '\0';
     }
-  }
-
-  fclose(dn);
-
-  if (result)
-  {
-    len = strlen(result);
-  
-    if (result[len - 1] == '\n')
-      result[len - 1] = '\0';
-  }
-
-  return result;
+    
+    return result;
 }
 
 char *get_ifdsc(struct debconfclient *client, const char *ifp)
 {
     char template[256], *ptr = NULL;
-
-    if ((ptr = find_in_devnames(ifp)) != NULL)
-    {
-      debconf_metaget(client, "netcfg/internal-wireless", "description");
-      
-      if (is_wireless_iface(ifp))
-      {
-        size_t len = strlen(ptr) + strlen(client->value) + 4;
-        ptr = realloc(ptr, len);
-
-        di_snprintfcat(ptr, len, " (%s)", client->value);
-      }
-      return ptr; /* already strdup'd */
+    
+    if ((ptr = find_in_devnames(ifp)) != NULL) {
+        debconf_metaget(client, "netcfg/internal-wireless", "description");
+        
+        if (is_wireless_iface(ifp)) {
+            size_t len = strlen(ptr) + strlen(client->value) + 4;
+            ptr = realloc(ptr, len);
+            
+            di_snprintfcat(ptr, len, " (%s)", client->value);
+        }
+        return ptr; /* already strdup'd */
     }
     
     if (strlen(ifp) < 100) {
-      if (!is_wireless_iface(ifp))
-      {
-        /* strip away the number from the interface (eth0 -> eth) */
-        char *new_ifp = strdup(ifp), *ptr = new_ifp;
-        while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
-            ptr++;
-        *ptr = '\0';
-
-        sprintf(template, "netcfg/internal-%s", new_ifp);
-        free(new_ifp);
-
-        if (debconf_metaget(client, template, "description") == 0 &&
-            client->value != NULL) {
-		return strdup(client->value);
-	}
-      }
-      else
-      {
-	strcpy(template, "netcfg/internal-wifi");
-	debconf_metaget(client, template, "description");
-	return strdup(client->value);
-      }
+        if (!is_wireless_iface(ifp)) {
+            /* strip away the number from the interface (eth0 -> eth) */
+            char *new_ifp = strdup(ifp), *ptr = new_ifp;
+            while ((*ptr < '0' || *ptr > '9') && *ptr != '\0')
+                ptr++;
+            *ptr = '\0';
+            
+            sprintf(template, "netcfg/internal-%s", new_ifp);
+            free(new_ifp);
+            
+            if (debconf_metaget(client, template, "description") == 0 &&
+                client->value != NULL) {
+                return strdup(client->value);
+            }
+        } else {
+            strcpy(template, "netcfg/internal-wifi");
+            debconf_metaget(client, template, "description");
+            return strdup(client->value);
+        }
     }
     debconf_metaget(client, "netcfg/internal-unknown-iface", "description");
     if (client->value != NULL)
@@ -379,20 +363,17 @@ int iface_is_hotpluggable(const char *iface)
     char buf[256];
     size_t len = strlen(iface);
     
-    if (!(f = fopen(DEVHOTPLUG, "r")))
-    {
-      di_info("No hotpluggable devices are present in the system.");
-      return 0;
+    if (!(f = fopen(DEVHOTPLUG, "r"))) {
+        di_info("No hotpluggable devices are present in the system.");
+        return 0;
     }
     
-    while (fgets(buf, 256, f) != NULL)
-    {
-        if (!strncmp(buf, iface, len))
-	{
-	  di_info("Detected %s as a hotpluggable device", iface);
-          fclose(f);
-	  return 1;
-	}
+    while (fgets(buf, 256, f) != NULL) {
+        if (!strncmp(buf, iface, len)) {
+            di_info("Detected %s as a hotpluggable device", iface);
+            fclose(f);
+            return 1;
+        }
     }
     
     fclose(f);
@@ -440,125 +421,121 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     char *ptr = NULL;
     char *ifdsc = NULL;
     char *old_selection = NULL;
-
+    
     if (*interface) {
         free(*interface);
         *interface = NULL;
     }
-
+    
     if (!(ptr = malloc(128)))
-	goto error;
-
+        goto error;
+    
     len = 128;
     *ptr = '\0';
-
+    
     num_interfaces = get_all_ifs(1, &ifs);
-
+    
     /* If no default was provided, use the first in the list of interfaces. */
     if (! defif && num_interfaces > 0) {
         defif=ifs[0];
     }
-
+    
     /* Remember old interface selection, in case it's preseeded. */
     debconf_get(client, "netcfg/choose_interface");
     old_selection = strdup(client->value);
     
-    for (i = 0; i < num_interfaces; i++)
-    {
-	size_t newchars;
-	char *temp = NULL;
-
-	inter = ifs[i];
-
-	interface_down(inter);
-	ifdsc = get_ifdsc(client, inter);
+    for (i = 0; i < num_interfaces; i++) {
+        size_t newchars;
+        char *temp = NULL;
+        
+        inter = ifs[i];
+        
+        interface_down(inter);
+        ifdsc = get_ifdsc(client, inter);
         newchars = strlen(inter) + strlen(ifdsc) + 5; /* ": , " + NUL */
         if (len < (strlen(ptr) + newchars)) {
             if (!(ptr = realloc(ptr, len + newchars + 128)))
                 goto error;
             len += newchars + 128;
         }
-	
-	temp = malloc(newchars);
-	
+        
+        temp = malloc(newchars);
+        
         snprintf(temp, newchars, "%s: %s", inter, ifdsc);
-
-	if (num_interfaces > 1 &&
-	    ((strcmp(defif, inter) == 0) || (strcmp(defif, temp) == 0)))
-		debconf_set(client, "netcfg/choose_interface", temp);
-
-	di_snprintfcat(ptr, len, "%s, ", temp);
-
-	free(temp);
+        
+        if (num_interfaces > 1 &&
+            ((strcmp(defif, inter) == 0) || (strcmp(defif, temp) == 0)))
+            debconf_set(client, "netcfg/choose_interface", temp);
+        
+        di_snprintfcat(ptr, len, "%s, ", temp);
+        
+        free(temp);
         free(ifdsc);
     }
-
-    if (num_interfaces == 0)
-    {
+    
+    if (num_interfaces == 0) {
         debconf_input(client, "high", "netcfg/no_interfaces");
         debconf_go(client);
         free(ptr);
-	free(old_selection);
+        free(old_selection);
         *numif = 0;
         return 0;
     }
-    else if (num_interfaces == 1)
-    {
+    else if (num_interfaces == 1) {
         inter = ptr;
         *numif = 1;
-	free(old_selection);
+        free(old_selection);
     }
-    else if (num_interfaces > 1)
-    {
+    else if (num_interfaces > 1) {
         *numif = num_interfaces;
         /* remove the trailing ", ", which confuses cdebconf */
         ptr[strlen(ptr) - 2] = '\0';
-
+        
         debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
         free(ptr);
-
- 	asked = (debconf_input(client, "critical", "netcfg/choose_interface") == 0);
-        ret = debconf_go(client);
-
-        /* If the question is not asked, honor preseeded interface name.
-	 * However, if it was preseeded to "auto", or there was no old value,
-	 * leave it set to defif. */
-        if (!asked && strlen(old_selection) && strcmp(old_selection, "auto") != 0) {
-	    debconf_set(client, "netcfg/choose_interface", old_selection);
-	}
         
-	free(old_selection);
-	
-	if (ret)
-          return ret;
-	
+        asked = (debconf_input(client, "critical", "netcfg/choose_interface") == 0);
+        ret = debconf_go(client);
+        
+        /* If the question is not asked, honor preseeded interface name.
+         * However, if it was preseeded to "auto", or there was no old value,
+         * leave it set to defif. */
+        if (!asked && strlen(old_selection) && strcmp(old_selection, "auto") != 0) {
+            debconf_set(client, "netcfg/choose_interface", old_selection);
+        }
+        
+        free(old_selection);
+        
+        if (ret)
+            return ret;
+        
         debconf_get(client, "netcfg/choose_interface");
         inter = client->value;
-
+        
         if (!inter)
             netcfg_die(client);
     }
-
+    
     /* grab just the interface name, not the description too */
     *interface = inter;
     /* Note that the question may be preseeded to just the interface name,
      * with no colon after it. Allow for this case. */
     ptr = strchr(inter, ':');
     if (ptr != NULL) {
-    	*ptr = '\0';
+        *ptr = '\0';
     }
     *interface = strdup(*interface);
-
+    
     /* Free allocated memory */
     while (ifs && *ifs)
-      free(*ifs++);
+        free(*ifs++);
     
     return 0;
 
  error:
     if (ptr)
         free(ptr);
-
+    
     netcfg_die(client);
     return 10; /* unreachable */
 }
@@ -569,23 +546,23 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
  */
 short verify_hostname (char *hname)
 {
-  static const char *valid_chars =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
-  size_t len;
-  assert(hname != NULL);
-
-  len = strlen(hname);
-
-  /* Check the hostname for RFC 1123 compliance.  */
-  if ((len < 2) ||
-      (len > 63) ||
-      (strspn(hname, valid_chars) != len) ||
-      (hname[len - 1] == '-') ||
-      (hname[0] == '-')) {
-    return 1;
-  }
-  else
-    return 0;
+    static const char *valid_chars =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
+    size_t len;
+    assert(hname != NULL);
+    
+    len = strlen(hname);
+    
+    /* Check the hostname for RFC 1123 compliance.  */
+    if ((len < 2) ||
+        (len > 63) ||
+        (strspn(hname, valid_chars) != len) ||
+        (hname[len - 1] == '-') ||
+        (hname[0] == '-')) {
+        return 1;
+    }
+    else
+        return 0;
 }
 
 /*
@@ -596,50 +573,44 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 {
     int ret;
     char *s;
-
-    for(;;)
-    {
+    
+    for(;;) {
         if (hdset)
-          have_domain = 0;
+            have_domain = 0;
         debconf_input(client, "high", template);
         ret = debconf_go(client);
-
+        
         if (ret == 30) /* backup */
-          return ret;
-
+            return ret;
+        
         debconf_get(client, template);
         
-        if (verify_hostname(client->value) != 0)
-        {
-          debconf_subst(client, "netcfg/invalid_hostname",
-              "hostname", client->value);
-          debconf_input(client, "high", "netcfg/invalid_hostname");
-          debconf_go(client);
-          debconf_set(client, template, "debian");
-        }
-        else
-        {
-          /* I've considered the fact that client->value could be mangled by
-           * showing the error message. But if it goes through the error was not
-           * shown. </careful-thinking> */
-          *hostname = strdup(client->value);
-          break;
+        if (verify_hostname(client->value) != 0) {
+            debconf_subst(client, "netcfg/invalid_hostname",
+                          "hostname", client->value);
+            debconf_input(client, "high", "netcfg/invalid_hostname");
+            debconf_go(client);
+            debconf_set(client, template, "debian");
+        } else {
+            /* I've considered the fact that client->value could be mangled by
+             * showing the error message. But if it goes through the error was not
+             * shown. </careful-thinking> */
+            *hostname = strdup(client->value);
+            break;
         }
     }
-
+    
     /* don't strip DHCP hostnames */
-    if (hdset && (s = strchr(*hostname, '.')))
-    {
-      if (s[1] == '\0') /* "somehostname." <- . should be ignored */
-	*s = '\0';
-      else /* assume we have a valid domain name here */
-      {
-	if (domain)
-	  free(domain);
-	domain = strdup(s + 1);
-	debconf_set(client, "netcfg/get_domain", domain);
-        have_domain = 1;
-      }
+    if (hdset && (s = strchr(*hostname, '.'))) {
+        if (s[1] == '\0') { /* "somehostname." <- . should be ignored */
+            *s = '\0';
+        } else { /* assume we have a valid domain name here */
+            if (domain)
+                free(domain);
+            domain = strdup(s + 1);
+            debconf_set(client, "netcfg/get_domain", domain);
+            have_domain = 1;
+        }
     }
     return 0;
 }
@@ -650,23 +621,23 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 int netcfg_get_domain(struct debconfclient *client,  char **domain)
 {
     int ret;
-       
+    
     if (have_domain == 1)
     {
-      debconf_get(client, "netcfg/get_domain");
-      assert (!empty_str(client->value));
-      if (*domain)
-	free(*domain);
-      *domain = strdup(client->value);
-      return 0;
+        debconf_get(client, "netcfg/get_domain");
+        assert (!empty_str(client->value));
+        if (*domain)
+            free(*domain);
+        *domain = strdup(client->value);
+        return 0;
     }
 
     debconf_input (client, "high", "netcfg/get_domain");
     ret = debconf_go(client);
-
+    
     if (ret)
-      return ret;
-   
+        return ret;
+    
     debconf_get (client, "netcfg/get_domain");
     
     if (*domain)
@@ -679,15 +650,15 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
 
 void netcfg_write_loopback (void)
 {
-  FILE *fp;
-
-  if ((fp = file_open(INTERFACES_FILE, "w"))) {
-    fprintf(fp, HELPFUL_COMMENT);
-    fprintf(fp, "\n# The loopback network interface\n");
-    fprintf(fp, "auto lo\n");
-    fprintf(fp, "iface lo inet loopback\n");
-    fclose(fp);
-  }
+    FILE *fp;
+    
+    if ((fp = file_open(INTERFACES_FILE, "w"))) {
+        fprintf(fp, HELPFUL_COMMENT);
+        fprintf(fp, "\n# The loopback network interface\n");
+        fprintf(fp, "auto lo\n");
+        fprintf(fp, "iface lo inet loopback\n");
+        fclose(fp);
+    }
 }
 
 /*
@@ -699,47 +670,46 @@ void netcfg_write_loopback (void)
 void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 {
     FILE *fp;
-
+    
     if (!hostname)
-      return;
-
+        return;
+    
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
         fprintf(fp, HELPFUL_COMMENT);
         fprintf(fp, "\n# The loopback network interface\n");
         fprintf(fp, "auto lo\n");
         fprintf(fp, "iface lo inet loopback\n");
-	fclose(fp);
+        fclose(fp);
     }
-
+    
     /* Currently busybox, hostname is not available. */
     sethostname (hostname, strlen(hostname) + 1);
-
+    
     if ((fp = file_open(HOSTNAME_FILE, "w"))) {
-       fprintf(fp, "%s\n", hostname);
-       fclose(fp);
+        fprintf(fp, "%s\n", hostname);
+        fclose(fp);
     }
-
+    
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         char ptr1[INET_ADDRSTRLEN];
         
         fprintf(fp, "127.0.0.1\tlocalhost\n");
         
-        if (ipaddress.s_addr)
-        {
-          inet_ntop (AF_INET, &ipaddress, ptr1, sizeof(ptr1));
-          if (domain && !empty_str(domain))
-            fprintf(fp, "%s\t%s.%s\t%s\n", ptr1, hostname, domain, hostname);
-          else
-            fprintf(fp, "%s\t%s\n", ptr1, hostname);
+        if (ipaddress.s_addr) {
+            inet_ntop (AF_INET, &ipaddress, ptr1, sizeof(ptr1));
+            if (domain && !empty_str(domain))
+                fprintf(fp, "%s\t%s.%s\t%s\n", ptr1, hostname, domain, hostname);
+            else
+                fprintf(fp, "%s\t%s\n", ptr1, hostname);
         } else {
-          if (domain && !empty_str(domain))
-            fprintf(fp, "127.0.1.1\t%s.%s\t%s\n", hostname, domain, hostname);
-	  else
-            fprintf(fp, "127.0.1.1\t%s\n", hostname);
+            if (domain && !empty_str(domain))
+                fprintf(fp, "127.0.1.1\t%s.%s\t%s\n", hostname, domain, hostname);
+            else
+                fprintf(fp, "127.0.1.1\t%s\n", hostname);
         }
-
-	fprintf(fp, "\n" IPV6_HOSTS);
-	
+        
+        fprintf(fp, "\n" IPV6_HOSTS);
+        
         fclose(fp);
     }
 }
@@ -754,129 +724,122 @@ void deconfigure_network(void)
 
 void loop_setup(void)
 {
-  static int afpacket_notloaded = 1;
-
-  deconfigure_network();
-  
-  if (afpacket_notloaded)
-    afpacket_notloaded = di_exec_shell("modprobe af_packet"); /* should become 0 */
-      
-  di_exec_shell_log("ip link set lo up");
-  di_exec_shell_log("ip addr flush dev lo");
-  di_exec_shell_log("ip addr add 127.0.0.1/8 dev lo");
+    static int afpacket_notloaded = 1;
+    
+    deconfigure_network();
+    
+    if (afpacket_notloaded)
+        afpacket_notloaded = di_exec_shell("modprobe af_packet"); /* should become 0 */
+    
+    di_exec_shell_log("ip link set lo up");
+    di_exec_shell_log("ip addr flush dev lo");
+    di_exec_shell_log("ip addr add 127.0.0.1/8 dev lo");
 }
 
 void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)
 {
-  struct sockaddr_in sin;
-  char *host;
-  int err;
-
-  host = malloc(NI_MAXHOST);
-  if (!host)
-    netcfg_die(client);
-
-  /* copy IP address into required format */
-  sin.sin_family = AF_INET;
-  sin.sin_port = 0;
-  memcpy(&sin.sin_addr, ipaddr, sizeof(*ipaddr));
-
-  /* attempt resolution */
-  err = getnameinfo((struct sockaddr *) &sin, sizeof(sin),
-                    host, NI_MAXHOST, NULL, 0, NI_NAMEREQD);
-
-  /* got it? */
-  if (err == 0 && !empty_str(host))
-  {
-    /* remove domain part */
-    char* ptr = strchr(host, '.');
-
-    if (ptr)
-      *ptr = '\0';
-
-    debconf_set(client, "netcfg/get_hostname", host);
-
-    if (!have_domain && (ptr && ptr[1] != '\0'))
-      debconf_set(client, "netcfg/get_domain", ptr + 1);
-  }
-
-  free(host);
+    struct sockaddr_in sin;
+    char *host;
+    int err;
+    
+    host = malloc(NI_MAXHOST);
+    if (!host)
+        netcfg_die(client);
+    
+    /* copy IP address into required format */
+    sin.sin_family = AF_INET;
+    sin.sin_port = 0;
+    memcpy(&sin.sin_addr, ipaddr, sizeof(*ipaddr));
+    
+    /* attempt resolution */
+    err = getnameinfo((struct sockaddr *) &sin, sizeof(sin),
+                      host, NI_MAXHOST, NULL, 0, NI_NAMEREQD);
+    
+    /* got it? */
+    if (err == 0 && !empty_str(host)) {
+        /* remove domain part */
+        char* ptr = strchr(host, '.');
+        
+        if (ptr)
+            *ptr = '\0';
+        
+        debconf_set(client, "netcfg/get_hostname", host);
+        
+        if (!have_domain && (ptr && ptr[1] != '\0'))
+            debconf_set(client, "netcfg/get_domain", ptr + 1);
+    }
+    
+    free(host);
 }
 
 void interface_up (char* iface)
 {
-  struct ifreq ifr;
-
-  strncpy(ifr.ifr_name, iface, IFNAMSIZ);
-
-  if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0)
-  {
+    struct ifreq ifr;
+    
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
-    ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
-    ioctl(skfd, SIOCSIFFLAGS, &ifr);
-  }
+    
+    if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0) {
+        strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+        ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
+        ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    }
 }
 
 void interface_down (char* iface)
 {
-  struct ifreq ifr;
-
-  strncpy(ifr.ifr_name, iface, IFNAMSIZ);
-
-  if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0)
-  {
+    struct ifreq ifr;
+    
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
-    ifr.ifr_flags &= ~IFF_UP;
-    ioctl(skfd, SIOCSIFFLAGS, &ifr);
-  }
+    
+    if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0) {
+        strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+        ifr.ifr_flags &= ~IFF_UP;
+        ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    }
 }
 
 void parse_args (int argc, char ** argv)
 {
-  if (argc == 2)
-  {
-    if (!strcmp(basename(argv[0]), "ptom"))
-    {
-      int ret;
-      if (inet_ptom(argv[1], &ret, NULL) > 0)
-      {
-        printf("%d\n", ret);
-        exit(EXIT_SUCCESS);
-      }
+    if (argc == 2) {
+        if (!strcmp(basename(argv[0]), "ptom")) {
+            int ret;
+            if (inet_ptom(argv[1], &ret, NULL) > 0) {
+                printf("%d\n", ret);
+                exit(EXIT_SUCCESS);
+            }
+        }
+        
+        exit(EXIT_FAILURE);
     }
-    
-    exit(EXIT_FAILURE);
-  }
 }
 
 void reap_old_files (void)
 {
-  static char* remove[] =
-    { INTERFACES_FILE, HOSTS_FILE, HOSTNAME_FILE, NETWORKS_FILE,
-      RESOLV_FILE, DHCLIENT_CONF, DHCLIENT3_CONF, DOMAIN_FILE, 0 };
-  char **ptr = remove;
-
-  while (*ptr)
-    unlink(*ptr++);
+    static char* remove[] =
+        { INTERFACES_FILE, HOSTS_FILE, HOSTNAME_FILE, NETWORKS_FILE,
+          RESOLV_FILE, DHCLIENT_CONF, DHCLIENT3_CONF, DOMAIN_FILE, 0 };
+    char **ptr = remove;
+    
+    while (*ptr)
+        unlink(*ptr++);
 }
 
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[])
 {
     char *save, *ptr, *ns;
     int i;
-
+    
     if (nameservers) {
         save = ptr = strdup(nameservers);
-
-        for (i = 0; i < 3; i++)
-        {
-          ns = strtok_r(ptr, " \n\t", &ptr);
-          if (ns)
-            inet_pton (AF_INET, ns, &array[i]);
-          else
-            array[i].s_addr = 0;
+        
+        for (i = 0; i < 3; i++) {
+            ns = strtok_r(ptr, " \n\t", &ptr);
+            if (ns)
+                inet_pton (AF_INET, ns, &array[i]);
+            else
+                array[i].s_addr = 0;
         }
-
+        
         array[3].s_addr = 0;
         free(save);
     } else
@@ -892,25 +855,24 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
     if (*nameservers)
         ptr = *nameservers;
     else if (strlen(client->value))
-	ptr = client->value;
-    else if (gateway.s_addr)
-    {
+        ptr = client->value;
+    else if (gateway.s_addr) {
         inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1));
-	ptr = ptr1;
+        ptr = ptr1;
     }
     else
-	ptr = "";
+        ptr = "";
     debconf_set(client, "netcfg/get_nameservers", ptr);
     
     debconf_input(client, "critical", "netcfg/get_nameservers");
     ret = debconf_go(client);
-
+    
     if (ret)
-      return ret;
-
+        return ret;
+    
     debconf_get(client, "netcfg/get_nameservers");
     ptr = client->value;
-
+    
     if (*nameservers)
         free(*nameservers);
     *nameservers = NULL;

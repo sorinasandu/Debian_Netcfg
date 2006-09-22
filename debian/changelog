@@ -12,8 +12,10 @@ netcfg (1.30) UNRELEASED; urgency=low
   [ Philip Hands ]
   * free(old_selection) wasn't being called in netcfg_get_interface if only
     one interface was found
+  * fix random C coding styles (except for ethtool-lite.c, which is internally
+    consistent, even if not consistent with the rest of the package)
 
- -- Philip Hands <phil@hands.com>  Fri, 22 Sep 2006 00:30:21 +0000
+ -- Philip Hands <phil@hands.com>  Fri, 22 Sep 2006 03:00:07 +0000
 
 netcfg (1.29) unstable; urgency=low
 
