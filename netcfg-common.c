@@ -506,6 +506,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     {
         inter = ptr;
         *numif = 1;
+	free(old_selection);
     }
     else if (num_interfaces > 1)
     {
