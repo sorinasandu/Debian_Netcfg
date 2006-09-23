@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-08-23 00:12+0100\n"
+"PO-Revision-Date: 2006-09-23 09:48+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-boot@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:32
 msgid "Primary network interface:"
-msgstr "Primärt nätverkskort:"
+msgstr "Primärt nätverksgränssnitt:"
 
 #. Type: select
 #. Description
@@ -108,7 +108,7 @@ msgid ""
 msgstr ""
 "Ditt system har flera nätverksgränssnitt. Välj det som ska användas som "
 "primärt nätverksgränssnitt under tiden Debian installeras. Det första "
-"nätverkskortet som hittades har markerats."
+"nätverksgränssnittet som hittades har markerats."
 
 #. Type: string
 #. Description
@@ -118,9 +118,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} är ett trådlöst nätverkskort. Ange namnet (ESSID) på det trådlösa "
-"nätverk som du vill att ${iface} ska använda. Om du vill använda alla "
-"tillgängliga nätverk ska du lämna det här fältet tomt."
+"${iface} är ett trådlöst nätverksgränssnitt. Ange namnet (ESSID) på det "
+"trådlösa nätverk som du vill att ${iface} ska använda. Om du vill använda "
+"alla tillgängliga nätverk ska du lämna det här fältet tomt."
 
 #. Type: string
 #. Description
@@ -142,9 +142,10 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} är ett trådlöst nätverkskort. Ange namnet (ESSID) på det trådlösa "
-"nätverk som du vill att ${iface} ska använda. Lämna det här fältet tomt om "
-"du vill hoppa över konfigurationen av det trådlösa nätverket och fortsätta."
+"${iface} är ett trådlöst nätverksgränssnitt. Ange namnet (ESSID) på det "
+"trådlösa nätverk som du vill att ${iface} ska använda. Lämna det här fältet "
+"tomt om du vill hoppa över konfigurationen av det trådlösa nätverket och "
+"fortsätta."
 
 #. Type: string
 #. Description
@@ -295,7 +296,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:109
 msgid "No network interfaces detected"
-msgstr "Inga nätverkskort identifierades."
+msgstr "Inga nätverksgränssnitt identifierades."
 
 #. Type: error
 #. Description
@@ -304,7 +305,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Inga nätverkskort identifierades. Installationssystemet kunde inte "
+"Inga nätverksgränssnitt identifierades. Installationssystemet kunde inte "
 "identifiera en nätverksenhet."
 
 #. Type: error
@@ -314,9 +315,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Du kan behöva läsa in en specifik modul för ditt nätverkskort, om du har "
-"ett. För att göra det ska du gå tillbaka till steget för identifiering av "
-"nätverksmaskinvaran."
+"Du kan behöva läsa in en specifik modul för ditt nätverksgränssnitt, om du "
+"har ett. För att göra det ska du gå tillbaka till steget för identifiering "
+"av nätverksmaskinvaran."
 
 #. Type: note
 #. Description
@@ -479,7 +480,7 @@ msgstr "Inter-user communication vehicle"
 #. Description
 #: ../netcfg-common.templates:221
 msgid "Unknown interface"
-msgstr "Okänt nätverkskort"
+msgstr "Okänt gränssnitt"
 
 #. Type: text
 #. Description
