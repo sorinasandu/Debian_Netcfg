@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2005-03-05 21:51+0100\n"
-"Last-Translator: Krunoslav Gernhard <kruno@linux.hr>\n"
+"PO-Revision-Date: 2006-09-25 23:55+0200\n"
+"Last-Translator: Josip Rodin <joy+ditrans@linux.hr>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Adresa imenskog poslužitelja:"
+msgstr "Adresa imenskih poslužitelja:"
 
 #. Type: string
 #. Description
@@ -77,10 +77,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Imenski poslužitelji koriste se za traženje imena računala na mreži. Molim "
-"unesite IP adrese (ne imena domaćina) do 3 imenska poslužitelja, odvojene "
-"razmacima. Ne koristite zareze. Prvi imenski poslužitelj na popisu će biti "
-"prvi upitan. Ako ne želite koristiti imenske poslužitelje, ostavite prazno."
+"Imenski poslužitelji (name servers) koriste se za traženje imena računala na "
+"mreži. Molim unesite IP adrese (ne imena) do 3 imenska poslužitelja, "
+"odvojene razmacima. Ne koristite zareze. Prvi imenski poslužitelj na popisu "
+"će biti prvi ispitivan. Ako ne želite koristiti imenske poslužitelje, "
+"ostavite prazno."
 
 #. Type: select
 #. Description
@@ -91,7 +92,6 @@ msgstr "Osnovno mrežno sučelje:"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:32
-#, fuzzy
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
@@ -123,20 +123,19 @@ msgstr "Bežični ESSID za ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Pokušaj pronalaska dostupne bežične mreže nije uspio."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} je bežično mrežno sučelje. Molim unesite ime (ESSID) bežične mreže "
-"koju želite da ${iface} koristi. Ako želite koristiti bilo koju dostupnu "
-"mrežu, ostavite prazno."
+"koju želite da ${iface} koristi. Ako želite preskočiti podešavanje bežične "
+"mreže i nastaviti, ostavite prazno."
 
 #. Type: string
 #. Description
@@ -171,8 +170,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ako je vaš WEP ključ u formatu zapornog izraza, dodajte mu 's:' na početak "
-"(bez navodnika)."
+"Ako je vaš WEP ključ u formatu lozinke, dodajte mu 's:' na početak (bez "
+"navodnika)."
 
 #. Type: string
 #. Description
@@ -196,7 +195,7 @@ msgid ""
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
 "WEP ključ '${wepkey}' nije valjan. Molim, pozorno pročitajte naputak na "
-"slijedećem zaslonu kako ispravno unijeti WEP ključ i pokušajte iznova."
+"sljedećem zaslonu kako ispravno unijeti WEP ključ i pokušajte iznova."
 
 #. Type: error
 #. Description
@@ -277,7 +276,7 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Pojavila se pogreška i postupak podešavanja mreže je prekinut. Možete "
-"pokušati ponovo iz glavnog instalacijskog izabirnika."
+"pokušati ponovo iz glavnog instalacijskog izbornika."
 
 #. Type: error
 #. Description
@@ -303,7 +302,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Možda trebate učitati poseban modul za vašu mrežnu karticu, ako je imate. Za "
-"to se vratite natrag na korak traženja mrežnog očvrsja."
+"to se vratite natrag na korak traženja mrežnog sklopovlja."
 
 #. Type: note
 #. Description
@@ -311,7 +310,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Kill prekidač upaljen na ${iface}"
 
 #. Type: note
 #. Description
@@ -323,6 +322,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"Čini se da je ${iface} onemogućena koristeći fizički \"kill\" prekidač. Ako "
+"namjeravate koristiti ovo sučelje, molimo upalite ga prije nego li nastavite."
 
 #. Type: select
 #. Choices
@@ -349,9 +350,8 @@ msgstr "Ad-hoc (peer-to-peer) mreža"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Ponovo podesi bežičnu mrežu"
+msgstr "Vrsta bežične mreže:"
 
 #. Type: select
 #. Description
@@ -411,7 +411,7 @@ msgstr "Token Ring"
 #. Description
 #: ../netcfg-common.templates:175
 msgid "USB net"
-msgstr ""
+msgstr "USB mreža"
 
 #. Type: text
 #. Description
@@ -471,9 +471,8 @@ msgstr "Nepoznato sučelje"
 #. Description
 #. base-installer progress bar item
 #: ../netcfg-common.templates:226
-#, fuzzy
 msgid "Storing network settings ..."
-msgstr "Podešavam mrežu..."
+msgstr "Spremam mrežne postavke..."
 
 #. Type: text
 #. Description
@@ -601,7 +600,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:46
 msgid "Network autoconfiguration failed"
-msgstr "Automatsko podešavanje mreže neuspjelo"
+msgstr "Automatsko podešavanje mreže nije uspjelo"
 
 #. Type: note
 #. Description
@@ -611,7 +610,7 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "Vaša mreža vjerojatno ne koristi DHCP protokol, ili je možda DHCP "
-"poslužitelj spor, ili koji dio mrežnoga očvrsja ne radi ispravno."
+"poslužitelj spor, ili koji dio mrežnoga sklopovlja ne radi ispravno."
 
 #. Type: boolean
 #. Description
@@ -622,7 +621,6 @@ msgstr "Nastavi bez zadanog puta?"
 #. Type: boolean
 #. Description
 #: ../netcfg-dhcp.templates:52
-#, fuzzy
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -633,8 +631,8 @@ msgstr ""
 "Automatsko podešavanje mreže je uspjelo. Međutim, nije postavljen zadani put "
 "(default route): sustav ne zna kako komunicirati s računalima na Internetu. "
 "Zbog toga nećete moći nastaviti instalaciju, osim ako nemate prvi službeni "
-"Debianiov CD-ROM, ili 'Netinst' CD-ROM, ili pakete dostupne na lokalnoj "
-"mreži."
+"Debianov instalacijski CD-ROM, ili 'Netinst' CD-ROM, ili pakete dostupne na "
+"lokalnoj mreži."
 
 #. Type: boolean
 #. Description
@@ -709,7 +707,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Mrežmaska:"
+msgstr "Mrežna maska:"
 
 #. Type: string
 #. Description
@@ -719,15 +717,15 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Mrežmaska se rabi za određivanje koji su strojevi lokalni na vašoj mreži. "
-"Upitajte svog mrežnog administratora ako je ne znate. Mrežmaska se sastoji "
-"od četiri broja, odvojena točkama."
+"Mrežna maska (netmask) se rabi za određivanje koji su strojevi lokalni na "
+"vašoj mreži. Upitajte svog mrežnog administratora ako je ne znate. Mrežna "
+"maska se upisuje kao četiri broja odvojena točkama."
 
 #. Type: string
 #. Description
 #: ../netcfg-static.templates:33
 msgid "Gateway:"
-msgstr "Vrataput:"
+msgstr "Gateway (izlazna adresa):"
 
 #. Type: string
 #. Description
@@ -740,30 +738,31 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Vrataput je IP adresa (četiri broja odvojena točkama) koja ukazuje na "
-"vrataputni naputnik, poznat i kao zadani naputnik. Sav mrežni promet koji "
-"ide izvan vaše LAN mreže (npr. na Internet) šalje se kroz njega. U rijetkim "
-"slučajevima, možda nemate naputnik; ako je tako, ostavite prazno. Ako ne "
-"znate odgovor, upitajte svog mrežnog administratora."
+"Tzv. gateway (poveznik, pristupnik, ulaz) je IP adresa (četiri broja "
+"odvojena točkama) koja ukazuje na mrežni usmjerivač koji je pretpostavljeni "
+"usmjerivač prometa. Sav mrežni promet koji ide izvan vaše LAN mreže (npr. na "
+"Internet) šalje se kroz njega. U rijetkim slučajevima, možda nemate "
+"usmjerivač; ako je tako, ostavite prazno. Ako ne znate odgovor, upitajte "
+"svog mrežnog administratora."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "Unreachable gateway"
-msgstr "Nedosežan vrataput"
+msgstr "Nedostupan gateway"
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Adresa vrataputa koju ste unijeli nedosežna je."
+msgstr "Adresa gatewaya koju ste unijeli nije dostupna."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Možda ste pogriješili unoseći IP adresu, mrežmasku i/ili vrataput."
+msgstr "Možda ste pogriješili unoseći IP adresu, mrežnu masku i/ili gateway."
 
 #. Type: boolean
 #. Description
@@ -788,12 +787,12 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
-" sučelje       = ${interface}\n"
-" IP adresa     = ${ipaddress}\n"
-" mrežmaska     = ${netmask}\n"
-" vrataput      = ${gateway}\n"
-" pointopoint   = ${pointopoint}\n"
-" imenskiposluž = ${nameservers}"
+" sučelje              = ${interface}\n"
+" IP adresa            = ${ipaddress}\n"
+" mrežna maska         = ${netmask}\n"
+" gateway              = ${gateway}\n"
+" pointopoint          = ${pointopoint}\n"
+" imenski poslužitelji = ${nameservers}"
 
 #. Type: text
 #. Description

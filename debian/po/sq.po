@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-04-22 13:15+0200\n"
+"PO-Revision-Date: 2006-09-25 10:17+0200\n"
 "Last-Translator:  Elian Myftiu <elian.myftiu@gmail.com>\n"
 "Language-Team: Debian L10n Albanian <debian-l10n-albanian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -111,8 +111,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} është një ndërfaqe rrjeti wireless. Të lutem fut emrin (ESSID) e "
-"rrjetit wireless që do të përdorë ${iface}. Nëse dëshiron të përdorësh një "
+"${iface} është një ndërfaqe rrjeti me valë. Të lutem fut emrin (ESSID) e "
+"rrjetit me valë që do të përdorë ${iface}. Nëse dëshiron të përdorësh një "
 "rrjet tjetër në dispozicion, lëre bosh këtë fushë."
 
 #. Type: string
@@ -125,20 +125,19 @@ msgstr "Wireless ESSID për ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Përpjekja për të gjetur një rrjet me valë dështoi."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} është një ndërfaqe rrjeti wireless. Të lutem fut emrin (ESSID) e "
-"rrjetit wireless që do të përdorë ${iface}. Nëse dëshiron të përdorësh një "
-"rrjet tjetër në dispozicion, lëre bosh këtë fushë."
+"${iface} është një ndërfaqe rrjeti me valë. Të lutem fut emrin (ESSID) e "
+"rrjetit me valë që do të përdorë ${iface}. Për të anashkaluar konfigurimin e "
+"rrjetit me valë dhe të vazhuar, lëre bosh këtë fushë."
 
 #. Type: string
 #. Description
@@ -181,7 +180,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Sigurisht, nëse nuk ke asnjë kod WEP për rrjetin tënd wireless, lëre bosh "
+"Sigurisht, nëse nuk ke asnjë kod WEP për rrjetin tënd me valë, lëre bosh "
 "këtë fushë."
 
 #. Type: error
@@ -356,9 +355,8 @@ msgstr "rrjet Ad-hoc (Peer to peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Konfiguro rrjetin wireless(me valë)"
+msgstr "Konfiguro rrjetin me valë"
 
 #. Type: select
 #. Description
@@ -368,21 +366,21 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Rrjetet me valë(wireless) janë ose të drejtuara ose ad-hoc. Nëse përdor një "
-"pikë lidhjeje reale, atëhere rrjeti është i Drejtuar. Nëse një kompjuter "
-"tjetër është 'pika e lidhjes' për ty, atëhere rrjeti mund të jetë Ad-hoc."
+"Rrjetet me valë janë ose të drejtuara ose ad-hoc. Nëse përdor një pikë "
+"lidhjeje reale, atëhere rrjeti është i Drejtuar. Nëse një kompjuter tjetër "
+"është 'pika e lidhjes' për ty, atëhere rrjeti mund të jetë Ad-hoc."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:141
 msgid "Wireless network configuration"
-msgstr "Konfigurimi i rrjetit me valë(wireless)"
+msgstr "Konfigurimi i rrjetit me valë"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
-msgstr "Duke kërkuar për pika hyrjeje me valë(wireless) ..."
+msgstr "Duke kërkuar për pika hyrjeje me valë ..."
 
 #. Type: text
 #. Description
@@ -394,13 +392,13 @@ msgstr "<asnjë>"
 #. Description
 #: ../netcfg-common.templates:159
 msgid "Wireless ethernet (802.11x)"
-msgstr "Ethernet me valë(wireless 802.11x)"
+msgstr "Ethernet me valë (802.11x)"
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:163
 msgid "wireless"
-msgstr "me valë(wireless)"
+msgstr "me valë"
 
 #. Type: text
 #. Description
@@ -658,7 +656,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:64
 msgid "Reconfigure the wireless network"
-msgstr "Konfiguro rrjetin wireless(me valë)"
+msgstr "Konfiguro rrjetin me valë"
 
 #. Type: string
 #. Description
