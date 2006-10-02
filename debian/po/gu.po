@@ -88,6 +88,8 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
+"તમારી સિસ્ટમમાં એક કરતાં વધુ નેટવર્ક ઇન્ટરફેસ છે. સ્થાપન દરમિયાન એકને પ્રાથમિક નેટવર્ક "
+"ઇન્ટરફેસ તરીકે પસંદ કરો. જો શક્ય હોય તો, પ્રથમ જોડાયેલ નેટવર્ક ઇન્ટરફેસ પસંદ કરવામાં આવશે."
 
 #. Type: string
 #. Description
@@ -97,6 +99,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} એ વાયરલેસ નેટવર્ક ઇન્ટરફેસ છે. મહેરબાની કરી તમે ઉપયોગ કરવા માંગતા વાયરલેસ "
+"નેટવર્ક ${iface} નું નામ (ESSID) દાખલ કરો. જો તમે કોઇપણ પ્રાપ્ત નેટવર્ક ઉપયોગ કરવા "
+"માંગતા હોવ તો, આ ક્ષેત્ર ખાલી રાખો."
 
 #. Type: string
 #. Description
@@ -118,6 +123,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
+"${iface} એ વાયરલેસ નેટવર્ક ઇન્ટરફેસ છે. મહેરબાની કરી તમે ઉપયોગ કરવા માંગતા વાયરલેસ "
+"નેટવર્ક ${iface} નું નામ (ESSID) દાખલ કરો. વાયરલેસ રૂપરેખાંકન છોડી દેવા અને આગળ વધવા "
+"માટે, આ ક્ષેત્ર ખાલી રાખો."
 
 #. Type: string
 #. Description
@@ -133,7 +141,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "જો લાગુ પડતું હોય તો, મહેરબાની કરીને વાયરલેસ ઉપકરણ ${iface} માટે WEP સુરક્ષા કી દાખલ "
-"કરો.આમ કરવાનાં બે રસ્તા છે:"
+"કરો. આમ કરવાનાં બે રસ્તા છે:"
 
 #. Type: string
 #. Description
@@ -216,6 +224,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
+"યજમાનનામ એ એક શબ્દ છે જે નેટવર્ક સાથે તમારી સિસ્ટમનો પરિચય કરાવે છે. જો તમે ન જાણતા "
+"હોવ કે યજમાનનામ શું હોવું જોઇએ તો, તમારા નેટવર્ક સંચાલકની મદદ લો. જો તમે તમારુ ઘર "
+"નેટવર્ક ગોઠવતાં હોવ તો, તમે કંઇપણ નામ આપી શકો છો. "
 
 #. Type: error
 #. Description
@@ -237,6 +248,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
+"યોગ્ય યજમાનનામ ફક્ત ૦ થી ૯ સુધીનાં અાંકડાઓ, નાનાં અંગ્રજી અક્ષરો a થી z અને ઋણ નિશાની "
+"ધરાવી શકે છે.તે ૨ થી માંડીને ૬૩ અક્ષરો સુધી લાંબું હોઇ શકે છે, અને ઋણ નિશાની સાથે શરૂ અથવા "
+"અંત ન પામવું જોઇએ."
 
 #. Type: error
 #. Description
@@ -640,7 +654,7 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"તમે આપેલ IP સરનામું ખરાબ છે. તે x.x.x.x બંધારણમાં હોવું જોઇએ જ્યાંદરેક 'x' 255 કરતાં વધુ ન "
+"તમે આપેલ IP સરનામું ખરાબ છે. તે x.x.x.x બંધારણમાં હોવું જોઇએ જ્યાં દરેક 'x' 255 કરતાં વધુ ન "
 "હોવો જોઇએ. મહેરબાની કરી ફરી પ્રયત્ન કરો."
 
 #. Type: string
@@ -721,7 +735,7 @@ msgstr "શું આ માહિતી સાચી છે?"
 #. Description
 #: ../netcfg-static.templates:53
 msgid "Currently configured network parameters:"
-msgstr "હાલમાં રૂપરેખાંકિત થયેલ નેટવર્ક પેરામીટરો:"
+msgstr "હાલમાં રૂપરેખાંકિત થયેલ નેટવર્ક વિકલ્પો:"
 
 #. Type: boolean
 #. Description

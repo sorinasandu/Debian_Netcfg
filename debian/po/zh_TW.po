@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-07-30 01:30+0800\n"
+"PO-Revision-Date: 2006-10-01 22:24+0800\n"
 "Last-Translator: Tetralet <tetralet@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
@@ -118,19 +118,18 @@ msgstr "${iface} 的無線 ESSID："
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "在試圖去搜尋是否有任何可用的無線網路時失敗了。"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} 是一個無線網路的介面。請輸入 ${iface} 所要使用的無線網路的名稱 "
-"(ESSID)。如果您想使用任何可用的網路，直接在欄位中留白即可。"
+"(ESSID)。請直接在欄位中留白來跳過無線網路的設定並繼續進行。"
 
 #. Type: string
 #. Description
@@ -337,9 +336,8 @@ msgstr "Ad-hoc 網路 (點對點)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "重新設定無線網路"
+msgstr "無線網路的類型："
 
 #. Type: select
 #. Description
