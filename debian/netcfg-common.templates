@@ -147,8 +147,8 @@ _Description: Searching for wireless access points ...
 Template: netcfg/disable_dhcp
 Type: boolean
 Default: false
-Description: internal use only
- This template is never shown to the user and does not require translation.
+Description: for internal use; can be preseeded
+ Set to true to force static network configuration
 
 Template: netcfg/internal-none
 Type: text
