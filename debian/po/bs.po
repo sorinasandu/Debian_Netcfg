@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-04-11 11:42+0100\n"
+"PO-Revision-Date: 2006-10-31 02:55+0100\n"
 "Last-Translator: Safir Secerovic <sapphire@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: 3\n"
-"X-Poedit-Language: Bosnian\n"
 "X-Poedit-Country: BOSNIA AND HERZEGOVINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -129,20 +128,19 @@ msgstr "Bežični ESSID za ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Neuspio pokušaj pronalaženja bežične mreže."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:46
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} je bežični mrežni interfejs. Molim unesite naziv (ESSID) bežične "
-"mreže koju želite da ${iface} koristi. Ako želite koristiti bilo koju "
-"dostupnu mrežu, ostavite ovo polje prazno."
+"mreže koju želite da ${iface} koristi. Da preskočite konfigurisanje bežične "
+"mreže i nastavite, ostavite ovo polje prazno."
 
 #. Type: string
 #. Description
@@ -360,9 +358,8 @@ msgstr "Ad-hoc mreža (Peer to Peer)"
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:134
-#, fuzzy
 msgid "Type of wireless network:"
-msgstr "Ponovo podesi bežičnu mrežu"
+msgstr "Tip bežične mreže:"
 
 #. Type: select
 #. Description

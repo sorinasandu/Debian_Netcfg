@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-10-30 17:36+0200\n"
+"PO-Revision-Date: 2006-10-31 10:29+0200\n"
 "Last-Translator:  Damyan Ivaniv <dam@modsoftsys.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -163,9 +163,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Ако Вашият ключ WEP е във формата \"nnnn-nnnn-nn\" или \"nn:nn:nn:nn:nn:nn:"
-"nn:nn\", където n е цифра, просто го въведете в полето, като използвате "
-"същия формат."
+"Ако Вашият ключ WEP е във формата „nnnn-nnnn-nn“ или „nn:nn:nn:nn:nn:nn:nn:"
+"nn“, където n е цифра, просто го въведете в полето, като използвате същия "
+"формат."
 
 #. Type: string
 #. Description
@@ -174,7 +174,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Ако вашият ключ WEP е във формата на парола, сложете представка \"s:\" (без "
+"Ако вашият ключ WEP е във формата на парола, сложете представка „s:“ (без "
 "кавичките)."
 
 #. Type: string
@@ -200,7 +200,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Ключът WEP \"${wepkey}\" е невалиден. Моля, обърнете се към инструкциите от "
+"Ключът WEP „${wepkey}“ е невалиден. Моля, обърнете се към инструкциите от "
 "следващия екран, за да въведете правилно Вашия ключ WEP, и опитайте отново."
 
 #. Type: error
@@ -216,7 +216,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" е невалиден. ESSID може да бъде до 32 знака, но са "
+"ESSID „${essid}“ е невалиден. ESSID може да бъде до 32 знака, но са "
 "позволени всякакви знаци."
 
 #. Type: string
@@ -255,7 +255,7 @@ msgstr "Невалидно име на хост"
 #. Description
 #: ../netcfg-common.templates:94
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Името \"${hostname}\" е невалидно."
+msgstr "Името „${hostname}“ е невалидно."
 
 #. Type: error
 #. Description
@@ -318,7 +318,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
-msgstr "Активиран е \"kill switch\" на ${iface}"
+msgstr "Активиран е „kill switch“ на ${iface}"
 
 #. Type: note
 #. Description
@@ -330,9 +330,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Изглежда ${iface} е изключен чрез физически \"kill switch\". Ако "
-"възнамерявате да използвате този интерфейс, моля, превключете го преди да "
-"продължите."
+"Изглежда ${iface} е изключен чрез физически „kill switch“. Ако възнамерявате "
+"да използвате този интерфейс, моля, превключете го преди да продължите."
 
 #. Type: select
 #. Choices
@@ -643,8 +642,8 @@ msgstr ""
 "Автоматичното настройване на мрежа е успешно. Обаче не е зададен подразбиращ "
 "се маршрут (default route): системата не знае как да общува с други машини в "
 "Интернет. Това ще направи невъзможно продължаването на инсталацията, освен "
-"ако имате на разположение първия инсталационен компактдиск, компактдискът "
-"\"Netinst\" или пакети, налични в локалната мрежа."
+"ако имате на разположение първия инсталационен компактдиск, компактдискът за "
+"инсталация от мрежа („Netinst“) или пакети, налични в локалната мрежа."
 
 #. Type: boolean
 #. Description
