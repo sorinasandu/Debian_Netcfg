@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-10-07 20:49+0200\n"
+"PO-Revision-Date: 2006-11-18 16:27+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@powertech.no>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr ""
 "skrive inn all informasjon manuelt. Hvis du bruker DHCP og "
 "installasjonsprogrammet ikke klarer å hente et oppsett som fungerer fra DHCP-"
 "tjeneren på nettverket ditt, vil du få anledning til å sette opp nettverket "
-"manueltetter forsøket på å sette det opp med DHCP."
+"etter forsøket på å sette det opp med DHCP."
 
 #. Type: string
 #. Description
@@ -140,7 +140,7 @@ msgid ""
 msgstr ""
 "${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID-en) på "
 "det trådløse nettverket du vil at ${iface} skal bruke. La feltet stå tomt "
-"hvis du vil hoppe over oppsett for trådløst nettverk og fortsette."
+"hvis du vil hoppe over oppsett for trådløst nettverek og fortsette."
 
 #. Type: string
 #. Description
@@ -265,9 +265,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Et gyldig vertsnavn kan bare inneholde tallene 0-9, små bokstaver fra a til "
-"z og minus-tegn. Det må ha mellom 2 og 63 tegn, og kan ikke begynne eller "
-"slutte med et minustegn."
+"Et gyldig vertsnavn kan bare inneholde tallene 0-9, små bokstaver og minus-"
+"tegn. Det må ha mellom 2 og 63 tegn, og kan ikke begynne eller slutte med et "
+"minustegn."
 
 #. Type: error
 #. Description
@@ -318,7 +318,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
-msgstr "Kill-switch slått på på ${iface}"
+msgstr "Drep switch på ${iface}"
 
 #. Type: note
 #. Description
@@ -330,8 +330,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Det ser ut til at ${iface} er blitt deaktivert med en fysisk «kill switch». "
-"Skru den på før du fortsetter hvis du vil bruke denne nettverkstilkoblingen."
+"${iface} har tilsynelatende blitt deaktivert med en fysisk \"kill switch\". "
+"Skru den på før du fortsetter hvis du vil bruke denne nettversktilbkoblingen."
 
 #. Type: select
 #. Choices
@@ -619,8 +619,8 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Nettverket bruker sannsynligvis ikke DHCP-protokollen. Det kan også være at "
-"DHCP-tjeneren er treg, eller nettverkskortet ikke virker skikkelig."
+"Nettverket bruker sannsynligvis ikke DHCP-protokollen. Alternativt kan DHCP-"
+"tjeneren være treg, eller nettverkskortet er i dårlig form."
 
 #. Type: boolean
 #. Description
@@ -799,7 +799,7 @@ msgid ""
 msgstr ""
 " grensesnitt   = ${interface}\n"
 " ip-adresse    = ${ipaddress}\n"
-" nettmaske     = ${netmask}\n"
+" netmaske      = ${netmask}\n"
 " portner       = ${gateway}\n"
 " punktilpunkt  = ${pointopoint}\n"
 " navnetjenere  = ${nameservers}"
