@@ -37,6 +37,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface, char*
     iw_get_basic_config (wfd, iface, &wconf);
     
     debconf_subst(client, "netcfg/wireless_essid", "iface", iface);
+    debconf_subst(client, "netcfg/wireless_essid_again", "iface", iface);
     debconf_subst(client, "netcfg/wireless_adhoc_managed", "iface", iface);
     
     debconf_input(client, priority ? priority : "low", "netcfg/wireless_adhoc_managed");
