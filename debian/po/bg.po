@@ -16,13 +16,12 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-11-20 10:50+0200\n"
+"PO-Revision-Date: 2006-11-24 11:03+0200\n"
 "Last-Translator: Damyan Ivanov <dam@modsoftsys.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #. Type: boolean
 #. Description
@@ -69,7 +68,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "Адреси на DNS сървъри:"
+msgstr "Адреси на DNS-сървъри:"
 
 #. Type: string
 #. Description
@@ -81,11 +80,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"DNS сървърите се използват за търсене на имена на хостове в мрежата. Моля, "
-"въведете IP адреси (не имена на хостове) на не повече от 3 DNS сървъра, "
+"DNS-сървърите се използват за търсене на имена на хостове в мрежата. Моля, "
+"въведете IP адреси (не имена на хостове) на не повече от 3 DNS-сървъра, "
 "разделени с интервали. Не използвайте запетайки. Първият сървър в списъка ще "
 "бъде първият, който ще получава запитванията. Ако не искате да използвате "
-"DNS сървър, просто оставете полето празно."
+"DNS-сървър, просто оставете полето празно."
 
 #. Type: select
 #. Description
@@ -114,8 +113,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} е безжичен мрежов интерфейс. Моля, въведете името (ESSID) на "
-"безжичната мрежа, която желаете ${iface} да използва. Ако искате коя да е "
-"налична мрежа, оставете полето празно."
+"безжичната мрежа, която желаете да се използва от ${iface}. Ако искате коя "
+"да е налична мрежа, оставете полето празно."
 
 #. Type: string
 #. Description
@@ -127,7 +126,7 @@ msgstr "Безжичен ESSID за ${iface}:"
 #. Description
 #: ../netcfg-common.templates:46
 msgid "Attempting to find an available wireless network failed."
-msgstr "Неуспех при опит да бъде намерена безжична мрежа."
+msgstr "Неуспех при опит за намиране на безжична мрежа."
 
 #. Type: string
 #. Description
@@ -139,7 +138,7 @@ msgid ""
 msgstr ""
 "${iface} е безжичен мрежов интерфейс. Въведете името (ESSID) на безжичната "
 "мрежа, която желаете да се използва от ${iface}. Ако не въведете нищо, "
-"инсталацията ще продължи без да се конфигурира ${iface}."
+"инсталацията ще продължи без настройка на интерфейса."
 
 #. Type: string
 #. Description
@@ -444,7 +443,7 @@ msgstr "Point-to-Point Protocol (PPP)"
 #. Description
 #: ../netcfg-common.templates:196
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-в-IPv4"
+msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
@@ -494,7 +493,7 @@ msgstr "Настройване на мрежата"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP сървър:"
+msgstr "DHCP име на хост:"
 
 #. Type: string
 #. Description
@@ -503,8 +502,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Може да е нужно да доставите име на DHCP сървър. Ако използвате кабелен "
-"модем, може да се наложи да предоставите номер на акаунт."
+"Може да е нужно да предоставите име на DHCP сървър. Ако използвате кабелен "
+"модем, може да се наложи да укажете абонатен номер или потребителско име."
 
 #. Type: string
 #. Description
@@ -564,7 +563,7 @@ msgstr "Нов опит за автоматично настройване на 
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Нов опит за автоматично настройване на мрежа чрез DHCP hostname"
+msgstr "Нов опит за автоматично настройване на мрежа чрез DHCP и име на хост"
 
 #. Type: select
 #. Choices
@@ -603,9 +602,9 @@ msgstr ""
 "От тук може да изберете да опитате пак автоматично настройване на мрежа чрез "
 "DHCP (което може да сработи, ако на Вашия DHCP сървър му отнема повече "
 "време, за да отговори) или да настроите ръчно мрежата. Някои DHCP сървъри "
-"изискват DHCP име на хост да бъде изпратено от клиента, така че може да "
-"изберете да опитате пак автоматично настройване на мрежа чрез DHCP и с име "
-"на хост, което Вие зададете."
+"изискват клиентът да изпрати име на хост, така че може да изберете да "
+"опитате пак автоматично настройване на мрежа чрез DHCP с име на хост, което "
+"Вие зададете."
 
 #. Type: note
 #. Description
@@ -620,7 +619,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Вашата мрежа вероятно не използва протокола DHCP. Възможно е DHCP сървърът "
+"Вашата мрежа вероятно не използва протокола DHCP. Възможно е DHCP-сървърът "
 "да е бавен или някой мрежов хардуер да не работи правилно."
 
 #. Type: boolean
@@ -660,7 +659,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:64
 msgid "Reconfigure the wireless network"
-msgstr "Пренастройване на безжичната мрежа"
+msgstr "Ново настройване на безжичната мрежа"
 
 #. Type: string
 #. Description
@@ -676,7 +675,7 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"IP адресът е уникален за Вашия компютър и се състои от 4 числа, разделени с "
+"IP-адресът е уникален за Вашия компютър и се състои от 4 числа, разделени с "
 "точка. Ако не знаете какво точно да сложите тук, обърнете се към Вашия "
 "мрежов администратор."
 
@@ -684,7 +683,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:10
 msgid "Malformed IP address"
-msgstr "Некоректен IP адрес"
+msgstr "Некоректен IP-адрес"
 
 #. Type: error
 #. Description
@@ -751,9 +750,9 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Шлюзът (gateway) е IP адрес (4 числа, разделени с точка); това е "
+"Шлюзът (gateway) е IP-адрес (4 числа, разделени с точка); това е "
 "маршрутизаторът, наричан още подразбиращ се маршрутизатор. Целият трафик, "
-"който излиза извън локалната мрежа (напр. към Интернет), се изпраща през "
+"който излиза извън локалната мрежа (например към Интернет), се изпраща през "
 "този маршрутизатор. В редки случаи може да нямате маршрутизатор; тогава може "
 "да оставите полето празно. Ако не знаете правилния отговор на този въпрос, "
 "обърнете се към Вашия мрежов администратор."
@@ -803,11 +802,11 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " интерфейс     = ${interface}\n"
-" IP адрес      = ${ipaddress}\n"
+" IP-адрес      = ${ipaddress}\n"
 " мрежова маска = ${netmask}\n"
 " шлюз          = ${gateway}\n"
 " Точка-Точка   = ${pointopoint}\n"
-" DNS сървъри   = ${nameservers}"
+" DNS-сървъри   = ${nameservers}"
 
 #. Type: text
 #. Description
