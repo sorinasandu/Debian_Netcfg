@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2006-08-21 22:51+0000\n"
-"PO-Revision-Date: 2006-10-17 20:51-0500\n"
+"PO-Revision-Date: 2006-10-20 20:53-0500\n"
 "Last-Translator: Ming Hua <minghua@rice.edu>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -78,9 +78,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"域名服务器将被用来在网络中查询主机名称。请输入至多三个域名服务器的 IP 地址(不"
-"是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查询。如果您"
-"不想用任何域名服务器，请将此栏置空。"
+"域名服务器将被用来在网络中查询主机名称。请输入至多三个域名服务器的 IP 地址 "
+"(不是主机名)，以空格分隔，不要使用逗号。列表中的第一个服务器将首先被查询。如"
+"果您不想用任何域名服务器，请将此栏置空。"
 
 #. Type: select
 #. Description
@@ -107,7 +107,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称"
+"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称 "
 "(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: string
@@ -130,7 +130,7 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称"
+"${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称 "
 "(ESSID)。如果您要跳过无线网络配置并继续下一步，请将此处置空。"
 
 #. Type: string
@@ -364,7 +364,7 @@ msgstr "无线网络设置"
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
-msgstr "正在搜索无线网络接入点(AP) ..."
+msgstr "正在搜索无线网络接入点 (AP) ..."
 
 #. Type: text
 #. Description
@@ -376,7 +376,7 @@ msgstr "<无>"
 #. Description
 #: ../netcfg-common.templates:159
 msgid "Wireless ethernet (802.11x)"
-msgstr "无线局域网(802.11x)"
+msgstr "无线局域网 (802.11x)"
 
 #. Type: text
 #. Description
@@ -579,9 +579,10 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"在这里，您可以选择重新尝试 DHCP 网络自动配置(如果您的 DHCP 服务器响应延时很"
-"长，重新设置一遍可能就会成功)或者手动配置网络。另外，某些 DHCP 服务器要求客户"
-"端发送 DHCP 主机名，因此您可以在重试 DHCP 网络自动配置时提供这样一个主机名。"
+"在这里，您可以选择重新尝试 DHCP 网络自动配置 (如果您的 DHCP 服务器响应延时很"
+"长，重新设置一遍可能就会成功) 或者手动配置网络。另外，某些 DHCP 服务器要求客"
+"户端发送 DHCP 主机名，因此您可以在重试 DHCP 网络自动配置时提供这样一个主机"
+"名。"
 
 #. Type: note
 #. Description
@@ -720,10 +721,10 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"网关是用以指示网关路由服务器的 IP 地址(四个用句点分隔的数字)，也叫做默认路"
-"由。所有与局域网外的通信(例如，对互联网的访问)都要经过它。在某些罕见情况下，"
-"您可能并不使用路由；这时，置空就可以了。如果不知道应该回答什么，请咨询网络管"
-"理员。"
+"网关是用以指示网关路由服务器的 IP 地址 (四个用句点分隔的数字)，也叫做默认路"
+"由。所有与局域网外的通信 (例如，对互联网的访问) 都要经过它。在某些罕见情况"
+"下，您可能并不使用路由；这时，置空就可以了。如果不知道应该回答什么，请咨询网"
+"络管理员。"
 
 #. Type: error
 #. Description
