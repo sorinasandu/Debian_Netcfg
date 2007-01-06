@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mk\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-09-26 12:56+0200\n"
 "Last-Translator: Georgi Stanojevski <glisha@gmail.com>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -320,8 +320,6 @@ msgstr "Копчето за гасење е овозможено на ${iface}"
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -345,11 +343,6 @@ msgstr "Инфраструктурна(менаџирана) мрежа"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ад-хок мрежа (Peer to Peer)"
@@ -405,8 +398,8 @@ msgstr "безжично"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet или брз Ethernet"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -551,33 +544,31 @@ msgstr "Конфигурација со DHCP ќе биде прекината."
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "Пробај повторно автоматски да ја конфигурираш мрежата"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Повтори ја автоматската конфигурација на мрежата со DHCP име"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "Конфигурарај ја мрежата рачно"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "Не конфигурирај мрежа во моментов"
@@ -809,3 +800,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Конфигурирај мрежа користејќи статични адреси"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "Ethernet или брз Ethernet"

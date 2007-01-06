@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-10-20 20:53-0500\n"
 "Last-Translator: Ming Hua <minghua@rice.edu>\n"
 "Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
@@ -303,8 +303,6 @@ msgstr "${iface} 上的 kill switch 开关已开启"
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -327,11 +325,6 @@ msgstr "共用 (Managed) 网络"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc 网络 (点对点)"
@@ -387,8 +380,8 @@ msgstr "无线网络"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "以太网或高速以太网"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -532,33 +525,31 @@ msgstr "DHCP 配置过程被中止。"
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "重新尝试网络自动设置"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "使用 DHCP 主机名重试网络自动设置"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "手动进行网络设置"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "现在不进行网络设置"
@@ -781,3 +772,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "使用静态地址配置网络"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "以太网或高速以太网"

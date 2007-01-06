@@ -15,8 +15,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-10-04 09:11+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team:  <en@li.org>\n"
@@ -311,8 +311,6 @@ msgstr "​កុងតាក់​ពិឃាត​បាន​អនុញ្
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -335,11 +333,6 @@ msgstr "បណ្ដាញ​មាន​រចនាសម្ព័ន្ធ (�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "បណ្ដាញ Ad-hoc (ចំណុច​ទៅ​ចំណុច)"
@@ -395,8 +388,8 @@ msgstr "ឥត​ខ្សែ"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "អ៊ីសឺរណិត​ ឬ អ៊ីសឺរណិត​លឿន​"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -541,33 +534,31 @@ msgstr "ដំណើរការ​កំណត់​រចនាសម្ព័
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "ព្យាយាម​កំណត់​រចនាសម្ព័ន្ធ​បណ្ដាញ​ស្វ័យប្រវត្តិ​ឡើងវិញ"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "ព្យាយាម​កំណត់​រចនាសម្ព័ន្ធ​បណ្ដាញ​ស្វ័យប្រវត្តិ​ឡើងវិញ ដោយ​ប្រើ​ឈ្មោះ​ម៉ាស៊ីន DHCP"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​បណ្ដាញ​ដោយ​ដៃ"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "កុំ​កំណត់រចនាសម្ព័ន្ធ​បណ្ដាញ នៅ​ពេល​នេះ"
@@ -793,3 +784,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "​កំណត់​រចនាសម្ព័ន្ធ​បណ្ដាញ​ដោយ​ប្រើ​អាសយដ្ឋាន​ថេរ"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "អ៊ីសឺរណិត​ ឬ អ៊ីសឺរណិត​លឿន​"

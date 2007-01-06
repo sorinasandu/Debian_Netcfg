@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: wo\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-09-05 19:50+0000\n"
 "Last-Translator: Mouhamadou Mamoune Mbacke <mouhamadoumamoune@gmail.com>\n"
 "Language-Team: Wolof <debian-boot@lists.debian.org>\n"
@@ -318,8 +318,6 @@ msgstr "'Kill switch' bi doxaleesna ko ci ${iface}"
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -342,11 +340,6 @@ msgstr "Resóo buy doxe infrastruktuur "
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Resóo buy doxe Ad-hoc (Diggënte nawle-ak-nawle)"
@@ -403,8 +396,8 @@ msgstr "sãa fiil"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet walla Fast Ethernet"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -551,33 +544,31 @@ msgstr "Komfiguraasioŋ u DHCP bi deesna ko taxawal."
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "Jéemaat komfiguraasioŋ otomatik bu resóo bi"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Jéemaat komfiguraasioŋ otomatik bi ak turumasin DHCP"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "Komfigure resóo bi ak loxo"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "Bul komfigure resóo bi leegi"
@@ -812,3 +803,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Komfigure ab resóo bi ak loxo"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "Ethernet walla Fast Ethernet"

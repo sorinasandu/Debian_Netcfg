@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-10-12 01:25+0530\n"
 "Last-Translator: Damodharan Rajalingam <rdamodharan@gmail.com>\n"
 "Language-Team: Tamil <tamil-DI@yahoogroups.com>\n"
@@ -317,8 +317,6 @@ msgstr "${iface} இல் முடிவு கட்டு மாற்றி
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -341,11 +339,6 @@ msgstr "கட்டமைப்பு (நிர்வகிக்கப்ப�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "தற்காலிக வலையமைப்பு (பியர்-டு-பியர்)"
@@ -402,8 +395,8 @@ msgstr "கம்பியில்லா"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "ஈத்தெர்நெட் அல்லது அதிவேக ஈத்தெர்நெட்"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -550,33 +543,31 @@ msgstr "(டிஹெச்சிபி) DHCP வடிவமைப்பு ச
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "வலையமைப்பை சுயவடிவமைக்க மீண்டும் முயற்சி செய்க"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "வலை சுயவடிவமைப்பை (டிஹெச்சிபி) கணிணிப்பெயர் கொண்டு மீண்டும் முயல்க"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "தாங்களே வலையமைப்பை வடிவமைக்க"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "வலையமைப்பை தற்போது வடிவமைக்காதே"
@@ -807,3 +798,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "வலையமைப்பை நிலையான முகவரி கொண்டு வடிவமை"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "ஈத்தெர்நெட் அல்லது அதிவேக ஈத்தெர்நெட்"

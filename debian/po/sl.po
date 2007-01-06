@@ -21,8 +21,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2007-01-04 14:08+0100\n"
 "Last-Translator: Matej Kovačič <matej.kovacic@owca.info>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -332,8 +332,6 @@ msgstr "Izklopitveno stikalo je omogočeno na ${iface}"
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -356,11 +354,6 @@ msgstr "Omrežje z infrastrukturo (upravljano)"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Neposredno omrežje (uporabnik do uporabnika)"
@@ -416,8 +409,8 @@ msgstr "brezžično"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "Ethernet ali Fast Ethernet"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -563,33 +556,31 @@ msgstr "Proces DHCP nastavitve bo prekinjen."
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "Ponovno poskusi s samodejno nastavitvijo mreže"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Ponovno poskusi s samodejno nastavitvijo omrežja z DHCP gostiteljem"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "Ročno nastavi omrežje"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "Ne nastavi omrežja sedaj"
@@ -820,3 +811,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "Nastavi omrežje z uporabo statičnega naslavljanja"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "Ethernet ali Fast Ethernet"

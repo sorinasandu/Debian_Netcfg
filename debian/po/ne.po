@@ -11,8 +11,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ne\n"
-"Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2006-08-21 22:51+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-06 19:07+0100\n"
 "PO-Revision-Date: 2006-10-18 11:05+0545\n"
 "Last-Translator: Shiva Prasad Pokharel <pokharelshiva@hotmail.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -316,8 +316,6 @@ msgstr "${iface} मा किल स्विच सक्षम पारि�
 
 #. Type: note
 #. Description
-#. A "kill switch" is a physical switch found on some network cards that
-#. disables the card.
 #: ../netcfg-common.templates:120
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
@@ -340,11 +338,6 @@ msgstr "अवसरंचना (व्यवस्थित) सञ्जा�
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translations of each choice
-#. below the 65 columns limit (which means 65 characters for most languages)
-#. Choices MUST be separated by commas
-#. You MUST use standard commas not special commas for your language
-#. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "एड-हक सञ्जाल (समान)"
@@ -400,8 +393,8 @@ msgstr "तारविहिन"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-msgid "Ethernet or Fast Ethernet"
-msgstr "इथरनेट वा द्रुत इथरनेट"
+msgid "Ethernet or FireWire (IEEE 1394)"
+msgstr ""
 
 #. Type: text
 #. Description
@@ -548,33 +541,31 @@ msgstr "डि एच सी पी कन्फिगरेसन प्रक�
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
+#. flag:translate!:4
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
 msgstr "सञ्जाल स्वत:कन्फिगरेसन फेरि प्रयास गर्नुहोस्"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "डि एच सी पी होस्टनाम सँग सञ्जाल स्वत:कन्फिगरेसन फेरि प्रयास गर्नुहोस्"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Configure network manually"
 msgstr "सञ्जाल म्यानुअल तरिकाले कन्फिगर गर्नुहोस्"
 
 #. Type: select
 #. Choices
-#. Note to translators : Please keep your translation
-#. below a 65 columns limit (which means 65 characters
-#. in single-byte languages)
+#: ../netcfg-dhcp.templates:34
+msgid "${wifireconf}"
+msgstr ""
+
+#. Type: select
+#. Choices
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
 msgstr "यो समयमा सञ्जाल कन्फिगर नगर्नुहोस्"
@@ -802,3 +793,6 @@ msgstr ""
 #: ../netcfg-static.templates:66
 msgid "Configure a network using static addressing"
 msgstr "स्थिर ठेगाना प्रयोग गरेर एउटा सञ्जाल कन्फिगर गर्नुहोस्"
+
+#~ msgid "Ethernet or Fast Ethernet"
+#~ msgstr "इथरनेट वा द्रुत इथरनेट"
