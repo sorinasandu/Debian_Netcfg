@@ -1,6 +1,4 @@
 #!/usr/bin/make -f
-# Sample debian/rules that uses debhelper.
-# GNU copyright 1997 to 1999 by Joey Hess.
 
 PACKAGES	= $(shell dh_listpackages -s)
 DHCP_PACKAGES	= netcfg 
@@ -31,9 +29,9 @@ install: build
 	dh_installdirs -A usr/lib/base-installer.d etc/network bin
 	# Install files that are the same in all packages
 	$(foreach PACKAGE, $(PACKAGES), \
-	  install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
-	  install -m 755 base-installer debian/$(PACKAGE)/usr/lib/base-installer.d/40netcfg ; \
-	  ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )
+		install -m 755 $(PACKAGE) debian/$(PACKAGE)/bin/netcfg; \
+		install -m 755 base-installer debian/$(PACKAGE)/usr/lib/base-installer.d/40netcfg; \
+		ln -sf netcfg debian/$(PACKAGE)/bin/ptom; )
 	# Install files that are in all DHCP packages
 	$(foreach PACKAGE, $(DHCP_PACKAGES), \
 		mkdir -p debian/$(PACKAGE)/etc/dhcp debian/$(PACKAGE)/etc/dhcp3; \
