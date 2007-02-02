@@ -171,7 +171,10 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
     FILE *fp;
     
     if ((fp = file_open(NETWORKS_FILE, "w"))) {
-        fprintf(fp, "localnet %s\n", inet_ntop (AF_INET, &network, ptr1, sizeof (ptr1)));
+        fprintf(fp, "default\t0.0.0.0\n");
+        fprintf(fp, "loopback\t127.0.0.0\n");
+        fprintf(fp, "link-local\t169.254.0.0\n");
+        fprintf(fp, "localnet\t%s\n", inet_ntop (AF_INET, &network, ptr1, sizeof (ptr1)));
         fclose(fp);
     } else
         goto error;
