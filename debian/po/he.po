@@ -9,13 +9,14 @@
 # This file is distributed under the same license as debian-installer.
 #
 #
-# Lior Kaplan <kaplan@debian.org>, 2004-2006, 2007.
+# Lior Kaplan <kaplan@debian.org>, 2004-2007.
+# Amit Dovev <debian.translator@gmail.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-01-06 22:47+0100\n"
-"PO-Revision-Date: 2007-01-27 23:54+0200\n"
+"PO-Revision-Date: 2007-02-07 01:04+0200\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -39,15 +40,15 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"רשת יכולה להיות מוגדרת או על ידי DHCP או על ידי הכנסת המידע באופן ידני. אם "
-"תבחר להשתמש ב-DHCP ותוכנית ההתקנה לא תוכל לקבל את המידע משרת ה-DHCP ברשת "
-"שלך, תקבל אפשרות להכניס את המידע ידנית אחרי הניסיון להגדרה על ידי DHCP."
+"רשת יכולה להיות מוגדרת על ידי DHCP או על ידי הכנסת המידע באופן ידני. אם תבחר "
+"להשתמש ב-DHCP ותוכנית ההתקנה לא תוכל לקבל את המידע משרת ה-DHCP ברשת שלך, "
+"תקבל אפשרות להכניס את המידע ידנית אחרי הניסיון להגדרה על ידי DHCP."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:14
 msgid "Domain name:"
-msgstr "שם דומיין:"
+msgstr "שם מתחם:"
 
 #. Type: string
 #. Description
@@ -58,16 +59,16 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"כתובת הדומיין, היא חלק מכתובת האינטרנט שלך, מימין לשם השרת. הדומיין הוא משהו "
-"שבדרך כלל מסתיים בסיומות כגון .com, .co.il, .org.il או .net.il ועוד. אם אתה "
-"מגדיר רשת ביתית, תוכל להמציא משהו, אבל שים לב שאתה משתמש באותו שם דומיין בכל "
-"המחשבים."
+"שם המתחם הוא חלק מכתובת האינטרנט שלך מימין לשם השרת שלך. לשם זה יש לעיתים "
+"קרובות סיומת כגון .com, .co.il, .org, .org.il,  .net, .net.il, .edu, .ac.il "
+"ועוד. אם אתה מגדיר רשת ביתית, תוכל להמציא שם כלשהו, אבל שים לב שאתה משתמש "
+"באותו שם מתחם בכל המחשבים ברשת שלך."
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:22
 msgid "Name server addresses:"
-msgstr "כתובת שרת שמות:"
+msgstr "כתובות שרת שמות:"
 
 #. Type: string
 #. Description
@@ -79,10 +80,9 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"שרתי שמות משתמשים לחיפוש שמות שרתים ברשת. הכנס כתובות IP (לא שם שרת) של עד "
-"שלושה שרתי שמות, מופרדות ברווחים. אל תשתמש בפסיקים. השרת הראשון ברשימה הוא "
-"הראשון שאליו תבוצע השאילתה. אם אתה לא רוצה להשתמש בשרת שמות, השאר את השדה "
-"ריק."
+"שרתי שמות משמשים לחיפוש שמות שרתים ברשת. הכנס כתובות IP (לא שם שרת) של עד "
+"שלושה שרתי שמות, מופרדים ברווחים. אל תשתמש בפסיקים. השרת הראשון ברשימה יהיה "
+"הראשון שתישלח אליו שאילתה. אם אתה לא רוצה להשתמש בשרת שמות, השאר את השדה ריק."
 
 #. Type: select
 #. Description
@@ -98,8 +98,8 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"למערכת שלך יש מספר ממשקי רשת. בחר אחד כממשק הראשי בזמן ההתקנה. אם ניתן, ממשק "
-"הרשת הראשון שמחובר נבחר."
+"למערכת שלך יש מספר ממשקי רשת. בחר אחד מהם כממשק הראשי בזמן ההתקנה. אם הדבר "
+"אפשרי, ממשק הרשת המחובר הראשון שזוהה נבחר."
 
 #. Type: string
 #. Description
@@ -110,7 +110,7 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} הוא ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שלך שבה "
-"שאתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש בכל רשת זמינה, השאר את השדה "
+"אתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש בכל רשת זמינה, השאר את השדה "
 "ריק."
 
 #. Type: string
@@ -133,8 +133,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"הממשק ${iface} הוא ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית "
-"שבה שאתה רוצה ש-${iface} ישתמש. כדי לדלג על הגדרת רשת אלחוטית והמשיך הלאה, "
+"${iface} הוא ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שבה אתה "
+"רוצה ש-${iface} ישתמש. כדי לדלג על הגדרת רשת אלחוטית ולהמשיך הלאה בהתקנה, "
 "השאר את שדה זה ריק."
 
 #. Type: string
@@ -150,7 +150,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"אם מתאים, הכנס את מפתח האבטחה WEP בשביל ההתקן האלחוטי ${iface}. יש שתי דרכים "
+"אם אפשרי, הכנס את מפתח האבטחה WEP של ההתקן האלחוטי ${iface}. יש שתי דרכים "
 "לעשות זאת:"
 
 #. Type: string
@@ -170,8 +170,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"אם מפתח ה-WEP שלך הוא בפורמט ביטוי סיסמה (passphrase), הוסף את התחילית ,"
-"s:' (בלי הגרשים)."
+"אם מפתח ה-WEP שלך הוא בפורמט ביטוי סיסמה (passphrase), הוסף אליו את התחילית "
+"'s:' (ללא המרכאות)."
 
 #. Type: string
 #. Description
@@ -179,7 +179,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "כמובן, שאם אין לך מפתח WEP לרשת האלחוטית שלך, השאר את השדה ריק."
+msgstr "כמובן שאם אין מפתח WEP לרשת האלחוטית שלך, השאר את השדה ריק."
 
 #. Type: error
 #. Description
@@ -210,8 +210,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ה-ESSID \"${essid}\" אינו תקין.ESSID-ים יכולים להיות עד ל-32 תווים, אבל "
-"יכולים להכיל תווים מסוגים רבים."
+"ה-ESSID \"${essid}\" אינו תקין. ESSID-ים מוגבלים לעד 32 תווים, אבל הם יכולים "
+"להכיל תווים מסוגים רבים."
 
 #. Type: string
 #. Description
@@ -223,7 +223,7 @@ msgstr "שם מחשב:"
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Please enter the hostname for this system."
-msgstr "נא להכניס את שם מחשב למערכת הנוכחית."
+msgstr "נא להכניס את שם המחשב למערכת הנוכחית."
 
 #. Type: string
 #. Description
@@ -234,9 +234,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"שם המחשב היא מילה אחת שמאפיינת את המערכת שלך ברשת. אם אינך יודע מה צריך "
-"להיות שם המחשב שלך, התייעץ עם מנהל הרשת שלך. אם אתה מגדיר רשת ביתית, אתה "
-"יכול להמציא משהו."
+"שם המחשב הוא מילה אחת שמשמשת לזיהוי המערכת שלך ברשת. אם אינך יודע מה צריך "
+"להיות שם המחשב שלך, התייעץ עם מנהל הרשת שלך. אם אתה מגדיר לעצמך רשת ביתית, "
+"אתה יכול להמציא שם כלשהו."
 
 #. Type: error
 #. Description
@@ -258,8 +258,8 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"שם שרת תקין יכול להכיל רק תווים אלפא-נומריים וסימן מינוס. השם צריך להיות בין "
-"2 עד 63 תווים, התו מינוס לא יכול להיות בהתחלה או בסוף."
+"שם מחשב תקין יכול להכיל רק תווים אלפא-נומריים וסימן מינוס. השם חייב להיות "
+"באורך שבין 2 ל-63 תווים, והוא אינו יכול להתחיל או להסתיים בתו מינוס."
 
 #. Type: error
 #. Description
@@ -274,7 +274,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"התרחשה שגיאה ותהליך הגדרת הרשת בוטל. תוכל לעשותו מחדש בתפריט ההתקנה הראשי."
+"התרחשה שגיאה ותהליך הגדרת הרשת בוטל. תוכל לנסות ולבצעו מחדש מתוך תפריט "
+"ההתקנה הראשי."
 
 #. Type: error
 #. Description
@@ -297,8 +298,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"אולי תצטרך לטעון מודול ספציפי לכרטיס הרשת שלך, אם יש לך כזה. בשביל זה, חזור "
-"אחורה לשלב זיהוי חומרת הרשת."
+"ייתכן שתצטרך לטעון מודול ספציפי לכרטיס הרשת שלך, אם יש לך כזה. על מנת לעשות "
+"זאת עליך לחזור אחורה לשלב זיהוי חומרת הרשת."
 
 #. Type: note
 #. Description
@@ -306,7 +307,7 @@ msgstr ""
 #. disables the card.
 #: ../netcfg-common.templates:120
 msgid "Kill switch enabled on ${iface}"
-msgstr "מפסק kill הופעל על ${iface}"
+msgstr "Kill switch הופעל על ${iface}"
 
 #. Type: note
 #. Description
@@ -318,8 +319,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"נראה כי ממשק הרשת ${iface}, הופסק על ידי אמצעים של \" הורדת המתג\". אם יש "
-"כוונה להשתמש בממשק זה, כדאי להדליק אותו לפני המשכה בתהליך."
+"נראה כי ממשק הרשת ${iface} נותק באמצעות \"מתג כיבוי\". אם יש  לך כוונה "
+"להשתמש בממשק זה, כדאי להדליק אותו לפני שתמשיך בתהליך ההתקנה."
 
 #. Type: select
 #. Choices
@@ -347,7 +348,7 @@ msgstr "רשת ייעודית (peer to peer)"
 #. Description
 #: ../netcfg-common.templates:134
 msgid "Type of wireless network:"
-msgstr "סוג של רשת אלחוטית:"
+msgstr "סוג הרשת האלחוטית:"
 
 #. Type: select
 #. Description
@@ -357,8 +358,8 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"רשתות אלחוטיות יכולות להיות מנוהלות או ייעודיות. אם אתה משתמש במשתמש בנקודה "
-"גישה אמיתית, הרשת שלך היא מנוהלת. אם מחשב אחר הוא נקודה הגישה שלך, אז הרשת "
+"רשתות אלחוטיות יכולות להיות מנוהלות או ייעודיות. אם אתה משתמש בנקודת גישה "
+"אמיתית, הרשת שלך היא מנוהלת. אם מחשב אחר מהווה את נקודת הגישה שלך, אז הרשת "
 "שלך היא ייעודית."
 
 #. Type: text
@@ -371,7 +372,7 @@ msgstr "הגדרת רשת אלחוטית"
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
-msgstr "מחפש נקודות גישה לרשת האלחוטית..."
+msgstr "מחפש נקודות גישה אלחוטיות..."
 
 #. Type: text
 #. Description
@@ -468,7 +469,7 @@ msgstr "ממשק לא מוכר"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:226
 msgid "Storing network settings ..."
-msgstr "מאחסן הגדרות רשת..."
+msgstr "שומר הגדרות רשת..."
 
 #. Type: text
 #. Description
@@ -490,8 +491,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"אולי תצטרך לספק שם שרת DHCP. אם אתה משתמש במודם כבלים, תצטרך לפרט שם משתמש "
-"כאן."
+"ייתכן שעליך להכניס שם שרת DHCP. אם אתה משתמש במודם כבלים, כנראה שעליך להכניס "
+"כאן שם משתמש."
 
 #. Type: string
 #. Description
@@ -542,7 +543,7 @@ msgstr "תהליך הגדרת DHCP יבוטל"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration"
-msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי"
+msgstr "נסה להגדיר מחדש רשת באופן אוטומטי"
 
 #. Type: select
 #. Choices
@@ -551,7 +552,7 @@ msgstr "לנסות שוב להגדיר רשת מחדש באופן אוטומטי
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "לנסות להגדיר מחדש את הרשת באופן אוטומטי עם שם שרת DHCP"
+msgstr "נסה להגדיר מחדש את הרשת באופן אוטומטי עם שם שרת DHCP"
 
 #. Type: select
 #. Choices
@@ -569,7 +570,7 @@ msgstr "הגדר את הרשת באופן ידני"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:34
 msgid "Do not configure the network at this time"
-msgstr "אל תגדיר רשת בשלב זה."
+msgstr "אל תגדיר רשת בשלב זה"
 
 #. Type: select
 #. Description
@@ -623,9 +624,10 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: כלומר המערכת "
-"לא יודעת כיצד לתקשר עם מחשבים באינטרנט. לא ניתן להמשיך בהתקנה אלא אם יש את "
-"הדיסק הרשמי הראשון, דיסק התקנת רשת, או חבילות על הרשת המקומית שלך."
+"הגדרת רשת אוטומטית הצליחה. למרות זאת לא נקבע ניתוב ברירת מחדל: המערכת לא "
+"יודעת כיצד לתקשר עם מחשבים באינטרנט. ולפיכך, לא ניתן להמשיך בהתקנה אלא אם יש "
+"לך את תקליטור ההתקנה הראשון, תקליטור התקנת רשת (Netinst CD), או מאגר חבילות "
+"שזמין ברשת המקומית שלך."
 
 #. Type: boolean
 #. Description
@@ -657,8 +659,8 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
-"כתובת ה-IP הוא ייחודית למחשב שלך, היא מורכבת מארבעה מספרים המופרדים בנקודות. "
-"אם אינך יודע במה להשתמש כאן, התייעץ עם מנהל הרשת שלך."
+"כתובת ה-IP היא ייחודית למחשב שלך. היא מורכבת מארבעה מספרים המופרדים בנקודות. "
+"אם אינך יודע מה להכניס כאן, התייעץ עם מנהל הרשת שלך."
 
 #. Type: error
 #. Description
@@ -752,7 +754,7 @@ msgstr "כתובת ה-gateway שהכנסת אינה ניתנת להשגה"
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "אולי עשית שגיאה בכנסת כתובת ה-IP, מסכת הרשת, או ה-gateway."
+msgstr "ייתכן שעשית שגיאה בהכנסת כתובת ה-IP, מסכת הרשת, או ה-gateway."
 
 #. Type: boolean
 #. Description
