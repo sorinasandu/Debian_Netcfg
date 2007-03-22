@@ -2,6 +2,8 @@ netcfg (1.37) UNRELEASED; urgency=low
 
   * Merge from Ubuntu:
     - Fix backup from netcfg/no_interfaces to behave more usefully.
+    - Give up gracefully if netcfg/wireless_essid was preseeded but
+      association failed.
 
  -- Colin Watson <cjwatson@debian.org>  Thu, 22 Mar 2007 00:14:58 +0000
 

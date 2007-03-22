@@ -135,7 +135,9 @@ automatic:
             ret = debconf_input(client, "low", "netcfg/wireless_essid");
         
         /* we asked the question once, why can't we ask it again? */
-        assert (ret != 30);
+        if (ret == 30)
+            /* maybe netcfg/wireless_essid was preseeded; if so, give up */
+            break;
         
         if (debconf_go(client) == 30) /* well, we did, but he wants to go back */
             return GO_BACK;
