@@ -475,11 +475,11 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     
     if (num_interfaces == 0) {
         debconf_input(client, "high", "netcfg/no_interfaces");
-        debconf_go(client);
+        ret = debconf_go(client);
         free(ptr);
         free(old_selection);
         *numif = 0;
-        return 0;
+        return ret;
     }
     else if (num_interfaces == 1) {
         inter = ptr;
