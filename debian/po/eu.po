@@ -9,13 +9,13 @@
 # This file is distributed under the same license as debian-installer.
 # Inaki Larranaga Murgoitio 2005
 #
-# Piarres Beobide <pi@beobide.net>, 2004, 2005, 2006.
+# Piarres Beobide <pi@beobide.net>, 2004, 2005, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-01-06 22:47+0100\n"
-"PO-Revision-Date: 2006-11-29 15:35+0100\n"
+"PO-Revision-Date: 2007-04-13 13:12+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: librezale <librezale@librezale.org>\n"
 "MIME-Version: 1.0\n"
@@ -226,13 +226,13 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Hostname:"
-msgstr "Ostalari-izena:"
+msgstr "Ostalari izena:"
 
 #. Type: string
 #. Description
 #: ../netcfg-common.templates:84
 msgid "Please enter the hostname for this system."
-msgstr "Sartu sistema honen ostalari-izena."
+msgstr "Sartu sistema honen ostalari izena."
 
 #. Type: string
 #. Description
@@ -243,7 +243,7 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Ostalari-izena sistema sarean identifikatzen duen izena da. Zure ostalari-"
+"Ostalari izena sistema sarean identifikatzen duen izena da. Zure ostalari "
 "izenak zein izan behar duen ez badakizu, galdetu sareko administratzaileari. "
 "Etxeko sarea konfiguratzen ari bazara, zerbait asma dezakezu."
 
@@ -251,7 +251,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Invalid hostname"
-msgstr "Ostalari-izen baliogabea"
+msgstr "Ostalari izen baliogabea"
 
 #. Type: error
 #. Description
@@ -267,7 +267,7 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Baliozko ostalari-izen batek bakarrik izan ditzake 0-9 zenbakiak, a-z letra "
+"Baliozko ostalari izen batek bakarrik izan ditzake 0-9 zenbakiak, a-z letra "
 "minuskulak eta minus ikurra. 2 eta 63 karaktere arteko luzera izan dezake "
 "eta ez du minus ikurrarekin hasi edo bukatu behar."
 
@@ -291,7 +291,7 @@ msgstr ""
 #. Description
 #: ../netcfg-common.templates:109
 msgid "No network interfaces detected"
-msgstr "Ez da sare-interfazerik atzeman"
+msgstr "Ez da sare interfazerik atzeman"
 
 #. Type: error
 #. Description
@@ -300,7 +300,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Ez da sare-interfazerik aurkitu. Instalazio-sistemak ezin izan du sareko "
+"Ez da sare interfazerik aurkitu. Instalazio sistemak ezin izan du sareko "
 "gailurik aurkitu."
 
 #. Type: error
@@ -310,7 +310,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Beharbada modulu jakin bat kargatu behar duzu sare-txartelerako, baldin "
+"Beharbada modulu jakin bat kargatu behar duzu sare txartelerako, baldin "
 "badaukazu. Horretarako, itzuli sareko hardwarea atzemate urratsera."
 
 #. Type: note
@@ -343,7 +343,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:133
 msgid "Infrastructure (Managed) network"
-msgstr "Azpiegitura-sarea (kudeatua)"
+msgstr "Azpiegitura sarea (kudeatua)"
 
 #. Type: select
 #. Choices
@@ -370,8 +370,8 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Haririk gabeko sareak kudeatuak edo ad hoc dira. Nolabaiteko sarbide-puntu "
-"erreala erabiltzen baduzu, zure sarea kudeatua da. Zure 'sarbide-puntua' "
+"Haririk gabeko sareak kudeatuak edo ad hoc dira. Nolabaiteko sarbide puntu "
+"erreala erabiltzen baduzu, zure sarea kudeatua da. Zure 'sarbide puntua' "
 "beste ordenagailu bat bada, orduan zure sarea Ad-hoc izango da."
 
 #. Type: text
@@ -384,7 +384,7 @@ msgstr "Haririk gabeko sarearen konfigurazioa"
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
-msgstr "Haririk gabeko sarbide-puntuak bilatzen..."
+msgstr "Haririk gabeko sarbide puntuak bilatzen..."
 
 #. Type: text
 #. Description
@@ -444,7 +444,7 @@ msgstr "Puntutik punturako protokoloa"
 #. Description
 #: ../netcfg-common.templates:196
 msgid "IPv6-in-IPv4"
-msgstr "IPv6-in-IPv4"
+msgstr "IPv6-IPv4-ean"
 
 #. Type: text
 #. Description
@@ -468,7 +468,7 @@ msgstr "Benetako kanaletik kanalera"
 #. Description
 #: ../netcfg-common.templates:217
 msgid "Inter-user communication vehicle"
-msgstr "Erabiltzaileen arteko komunikazio-ibilgailua"
+msgstr "Erabiltzaileen arteko komunikazio ibilgailua"
 
 #. Type: text
 #. Description
@@ -494,7 +494,7 @@ msgstr "Sarea konfiguratu"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "DHCP ostalari-izena:"
+msgstr "DHCP ostalari izena:"
 
 #. Type: string
 #. Description
@@ -503,8 +503,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Agian DHCP ostalari-izena eman beharko duzu. Kable-modema erabiltzen ari "
-"bazara, baliteke hemen kontu-zenbakia adierazi behar izatea."
+"Agian DHCP ostalari izena eman beharko duzu. Kable-modema erabiltzen ari "
+"bazara, baliteke hemen kontu zenbakia adierazi behar izatea."
 
 #. Type: string
 #. Description
@@ -566,7 +566,7 @@ msgstr "Saiatu berriro sarea automatikoki konfiguratzen"
 #: ../netcfg-dhcp.templates:34
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
-"Saiatu berriro sarea DHCP ostalari-izenarekin automatikoki konfiguratzen"
+"Saiatu berriro sarea DHCP ostalari izenarekin automatikoki konfiguratzen"
 
 #. Type: select
 #. Choices
@@ -605,8 +605,8 @@ msgstr ""
 "Hemen aukera dezakezu berriro saiatu nahi duzun DHCP sarea automatikoki "
 "konfiguratzen (ongi egingo da DHCP zerbitzariak luzaroan erantzuten ez "
 "badu), ala sarea eskuz konfiguratu nahi duzun. DHCP zerbitzari batzuek DHCP "
-"ostalari-izena behar dute bezeroak bidal ditzan; beraz, DHCP sarea zuk "
-"emandako ostalari-izenarekin automatikoki konfiguratzen saia zaitezke "
+"ostalari izena behar dute bezeroak bidal ditzan; beraz, DHCP sarea zuk "
+"emandako ostalari izenarekin automatikoki konfiguratzen saia zaitezke "
 "berriro."
 
 #. Type: note
@@ -656,7 +656,7 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Ziur ez bazaude, ez zenuke bide lehenetsirik gabe jarraitu beharko: eman "
-"arazo honen berri sare-administratzaile lokalari."
+"arazo honen berri sare administratzaile lokalari."
 
 #. Type: text
 #. Description
@@ -679,7 +679,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP helbidea zure ordenagailurako esklusiboa da eta puntuz bereizitako lau "
-"zenbakik osatzen dute. Hemen zer erabili ez badakizu, galdetu sare-"
+"zenbakik osatzen dute. Hemen zer erabili ez badakizu, galdetu sare "
 "administratzaileari."
 
 #. Type: error
@@ -714,7 +714,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Puntutik punturako helbidea puntutik punturako sarearen amaiera-puntua "
-"finkatzeko erabiltzen da. Balioa ez badakizu, galdetu sare-"
+"finkatzeko erabiltzen da. Balioa ez badakizu, galdetu sare "
 "administratzaileari. Puntutik punturako helbideak puntuz bereizitako lau "
 "zenbakiren itxura izan behar du."
 
@@ -722,7 +722,7 @@ msgstr ""
 #. Description
 #: ../netcfg-static.templates:25
 msgid "Netmask:"
-msgstr "Sare-maskara:"
+msgstr "Sare maskara:"
 
 #. Type: string
 #. Description
@@ -732,8 +732,8 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"Sare-maskara zure sareko zein makina diren lokalak zehazteko erabiltzen da. "
-"Balioa ez badakizu, galdetu sare-administratzaileari. Sare-maskarak puntuz "
+"Sare maskara zure sareko zein makina diren lokalak zehazteko erabiltzen da. "
+"Balioa ez badakizu, galdetu sare administratzaileari. Sare maskarak puntuz "
 "bereizitako lau zenbakiren itxura izan beharko luke."
 
 #. Type: string
@@ -758,7 +758,7 @@ msgstr ""
 "du. Sare lokaletik kanpora (adibidez, Internetera) bidaltzen den trafiko "
 "guztia bideratzaile honen bidez bidaltzen da. Zenbait egoeratan, baliteke "
 "bideratzailerik ez izatea; kasu horretan, hau hutsik utz dezakezu. Galdera "
-"honen erantzun zuzena ez badakizu, galdetu sare-administratzaileari."
+"honen erantzun zuzena ez badakizu, galdetu sare administratzaileari."
 
 #. Type: error
 #. Description
@@ -770,14 +770,14 @@ msgstr "Atebide atziezina"
 #. Description
 #: ../netcfg-static.templates:44
 msgid "The gateway address you entered is unreachable."
-msgstr "Sartutako atebide-helbidea atziezina da."
+msgstr "Sartutako atebide helbidea atziezina da."
 
 #. Type: error
 #. Description
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Gaizki sartu duzu IP helbidea, sare-maskara eta/edo atebidea."
+msgstr "Gaizki sartu duzu IP helbidea, sare maskara eta/edo atebidea."
 
 #. Type: boolean
 #. Description
@@ -804,10 +804,10 @@ msgid ""
 msgstr ""
 " interfazea     = ${interface}\n"
 " IP_helbidea     = ${ipaddress}\n"
-" sare-maskara       = ${netmask}\n"
+" sare maskara       = ${netmask}\n"
 " atebidea       = ${gateway}\n"
 " puntutik_puntura   = ${pointopoint}\n"
-" izen-zerbitzariak   = ${nameservers}"
+" izen zerbitzariak   = ${nameservers}"
 
 #. Type: text
 #. Description
