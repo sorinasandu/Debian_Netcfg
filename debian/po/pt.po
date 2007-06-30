@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-06-30 12:27+0000\n"
-"PO-Revision-Date: 2007-01-06 23:59+0000\n"
+"PO-Revision-Date: 2007-06-30 15:46+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,10 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "A rede pode ser configurada via DHCP ou introduzindo manualmente todas as "
-"informações necessárias. Caso você opte por usar DHCP e o instalador não for "
-"capaz de obter uma configuração de um servidor DHCP na sua rede, ser-lhe-à "
-"dada a oportunidade de configurar a sua rede manualmente após a tentativa de "
-"configurá-la por DHCP."
+"informações necessárias. Caso você opte por utilizar DHCP e o instalador não "
+"for capaz de obter uma configuração de um servidor DHCP na sua rede, ser-lhe-"
+"à dada a oportunidade de configurar a sua rede manualmente após a tentativa "
+"de configurá-la por DHCP."
 
 #. Type: string
 #. Description
@@ -57,9 +57,10 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "O nome do domínio é a parte do seu endereço Internet à direita do nome do "
-"seu computador. Geralmente algo que finaliza com .com, .pt, .net, .edu ou ."
-"org. Caso esteja a configurar uma rede doméstica, pode usar qualquer nome, "
-"mas certifique-se que usa o mesmo nome de domínio em todos os computadores."
+"seu computador. Geralmente algo que termina em .com, .pt, .net, .edu ou ."
+"org. Caso esteja a configurar uma rede doméstica, pode utilizar qualquer "
+"nome, mas certifique-se que utiliza o mesmo nome de domínio em todos os "
+"computadores."
 
 #. Type: string
 #. Description
@@ -81,7 +82,7 @@ msgstr ""
 "rede. Por favor insira até 3 endereços IP (e não os nomes dos computadores) "
 "de servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
 "servidor na lista será o primeiro a ser consultado. Caso você não queira "
-"usar nenhum servidor de nomes, deixe este campo vazio."
+"utilizar nenhum servidor de nomes, deixe este campo vazio."
 
 #. Type: select
 #. Description
@@ -110,8 +111,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} é um interface de rede sem fios. Por favor introduza o nome (ESSID) "
-"da rede wireless que deseja usar no interface ${iface}. Se desejar usar "
-"qualquer rede disponível, deixa este campo em branco."
+"da rede wireless que deseja utilizar no interface ${iface}. Se desejar "
+"utilizar qualquer rede disponível, deixa este campo em branco."
 
 #. Type: string
 #. Description
@@ -239,16 +240,16 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"O nome do computador (hostname) é uma palavra única que identifica o seu "
-"sistema na rede. Caso não saiba qual o nome do computador a utilizar, "
-"consulte o administrador da rede. Caso esteja a configurar a sua própria "
-"rede doméstica, pode usar qualquer nome neste campo."
+"O nome do computador é uma palavra única que identifica o seu sistema na "
+"rede. Caso não saiba qual o nome do computador a utilizar, consulte o "
+"administrador da rede. Caso esteja a configurar a sua própria rede "
+"doméstica, pode utilizar qualquer nome neste campo."
 
 #. Type: error
 #. Description
 #: ../netcfg-common.templates:94
 msgid "Invalid hostname"
-msgstr "Nome do computador (hostname) inválido"
+msgstr "Nome do computador inválido"
 
 #. Type: error
 #. Description
@@ -369,8 +370,8 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"As redes sem fios ou são managed ou ad-hoc. Se usar um verdadeiro ponto de "
-"acesso de algum tipo, a sua rede é Managed. Se outro computador é o seu "
+"As redes sem fios ou são managed ou ad-hoc. Se utilizar um verdadeiro ponto "
+"de acesso de algum tipo, a sua rede é Managed. Se outro computador é o seu "
 "'ponto de acesso', então a sua rede pode ser Ad-hoc."
 
 #. Type: text
@@ -493,7 +494,7 @@ msgstr "Configurar a rede"
 #. Description
 #: ../netcfg-dhcp.templates:3
 msgid "DHCP hostname:"
-msgstr "Nome do computador DHCP :"
+msgstr "Nome do computador DHCP:"
 
 #. Type: string
 #. Description
@@ -679,7 +680,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "O endereço IP é único para o seu computador e consiste em quatro números "
-"separados por pontos. Caso não saiba o que usar aqui, consulte o "
+"separados por pontos. Caso não saiba o que utilizar aqui, consulte o "
 "administrador da rede."
 
 #. Type: error
@@ -715,7 +716,7 @@ msgid ""
 msgstr ""
 "O endereço ponto-a-ponto é usado para determinar a outra ponta da rede ponto-"
 "a-ponto. Consulte o administrador da sua rede no caso de não saber que valor "
-"usar. O endereço ponto-a-ponto deve ser informado como quatro números "
+"utilizar. O endereço ponto-a-ponto deve ser informado como quatro números "
 "separados por pontos."
 
 #. Type: string
@@ -734,7 +735,7 @@ msgid ""
 msgstr ""
 "A máscara de rede é utilizada para determinar quais os computadores que são "
 "locais na sua rede. Consulte o administrador da rede no caso de não saber o "
-"que usar. A máscara de rede deve ser introduzida como quatro números "
+"que utilizar. A máscara de rede deve ser introduzida como quatro números "
 "separados por pontos."
 
 #. Type: string
