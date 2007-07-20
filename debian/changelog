@@ -1,6 +1,11 @@
 netcfg (1.40) UNRELEASED; urgency=low
 
+  [ Frans Pop ]
   * Remove alternative dependencies for DHCP clients (not supported by udpkg).
+
+  [ Colin Watson ]
+  * Revert change to copy udev's persistent-net rules to the target system,
+    as udev-udeb already does this.
 
  -- Frans Pop <fjp@debian.org>  Thu, 19 Jul 2007 23:16:32 +0200
 
