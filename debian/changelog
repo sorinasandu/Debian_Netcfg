@@ -7,7 +7,16 @@ netcfg (1.40) UNRELEASED; urgency=low
   * Revert change to copy udev's persistent-net rules to the target system,
     as udev-udeb already does this. Closes: #433936.
 
- -- Frans Pop <fjp@debian.org>  Thu, 19 Jul 2007 23:16:32 +0200
+  [ Joey Hess ]
+  * Stop mentioning FireWire in generic description for ethX devices, to avoid
+    confusing users. ;-)
+    I think this is ok to drop as since hw-detect 1.47, devnames should have
+    descriptions for firewire devices. When #405421 was filed,
+    sysfs-update-devnames had not been fixed to look in
+    /sys/class/net/<foo>/device/bus and so firewire interfaces lacked special
+    descriptions.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 26 Aug 2007 15:54:04 -0400
 
 netcfg (1.39) unstable; urgency=low
 
