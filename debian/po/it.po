@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-08-26 22:47+0000\n"
-"PO-Revision-Date: 2007-01-27 14:39+0100\n"
+"PO-Revision-Date: 2007-08-27 17:49+0200\n"
 "Last-Translator: Stefano Canepa <sc@linux.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,8 +53,8 @@ msgstr ""
 "tutte le informazioni. Se si scegliesse il DHCP e il programma di "
 "installazione non fosse capace di ottenere una configurazione funzionante "
 "dal server DHCP della propria rete, sarà offerta la possibilità di "
-"configurare la rete manualmente in seguito al tentativo di configurare il "
-"DHCP."
+"configurare la rete manualmente in seguito al tentativo di configurazione "
+"tramite il DHCP."
 
 #. Type: string
 #. Description
@@ -112,7 +112,7 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Il sistema ha più di una interfaccia di rete. Selezionare quella da usare "
+"Il sistema ha più di un'interfaccia di rete. Selezionare quella da usare "
 "come interfaccia di rete principale durante l'installazione. Se possibile, "
 "la prima interfaccia di rete connessa sarà selezionata."
 
@@ -124,8 +124,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} è una interfaccia di rete wireless. Inserire il nome (l'ESSID) "
-"della rete wireless da fare usare a ${iface}. Se non si hanno preferenze è "
+"${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
+"rete wireless da fare usare a ${iface}. Se non si hanno preferenze è "
 "possibile lasciare il campo in bianco."
 
 #. Type: string
@@ -148,9 +148,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} è una interfaccia di rete wireless. Inserire il nome (l'ESSID) "
-"della rete wireless da fare usare a ${iface}. Per abbandonare la "
-"configurazione wireless è possibile lasciare il campo in bianco."
+"${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
+"rete wireless da fare usare a ${iface}. Per abbandonare la configurazione "
+"wireless è possibile lasciare il campo in bianco."
 
 #. Type: string
 #. Description
@@ -196,7 +196,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Ovviamente se non c'è una chiave WEP per questa rete, si lasci il campo in "
+"Ovviamente se non c'è una chiave WEP per questa rete, lasciare il campo in "
 "bianco."
 
 #. Type: error
@@ -212,7 +212,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La chiave WEP «${wepkey}» non è valida. Si faccia molta attenzione alle "
+"La chiave WEP «${wepkey}» non è valida. Prestare molta attenzione alle "
 "istruzioni nella prossima schermata per inserire correttamente la chiave WEP "
 "e provare nuovamente."
 
@@ -342,8 +342,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} sembra essere stata disabilitata usando per metto di un "
-"microinterruttore.Se si desidera usare questa interfaccia, abilitarla prima "
+"${iface} sembra essere stata disabilitata usando per mezzo di un "
+"microinterruttore. Se si desidera usare questa interfaccia, abilitarla prima "
 "di continuare."
 
 #. Type: select
@@ -396,7 +396,7 @@ msgstr "Configurazione della rete wireless"
 #. Description
 #: ../netcfg-common.templates:145
 msgid "Searching for wireless access points ..."
-msgstr "Ricerca degli «access point» wireless in corso."
+msgstr "Ricerca degli «access point» wireless in corso"
 
 #. Type: text
 #. Description
@@ -419,9 +419,8 @@ msgstr "wireless"
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:167
-#, fuzzy
 msgid "Ethernet"
-msgstr "altro"
+msgstr "Ethernet"
 
 #. Type: text
 #. Description
@@ -494,7 +493,7 @@ msgstr "Interfaccia sconosciuta"
 #. base-installer progress bar item
 #: ../netcfg-common.templates:226
 msgid "Storing network settings ..."
-msgstr "Memorizzazione delle impostazioni della rete in corso."
+msgstr "Memorizzazione delle impostazioni della rete in corso"
 
 #. Type: text
 #. Description
@@ -561,7 +560,6 @@ msgstr ""
 #. Type: error
 #. Description
 #: ../netcfg-dhcp.templates:23
-#, fuzzy
 msgid "The DHCP configuration process has been aborted."
 msgstr "La configurazione con DHCP verrà terminata."
 
@@ -628,7 +626,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:46
 msgid "Network autoconfiguration failed"
-msgstr "La configurazione automatica della rete non ha funzionato"
+msgstr "Configurazione automatica della rete fallita"
 
 #. Type: note
 #. Description
@@ -770,7 +768,7 @@ msgid ""
 msgstr ""
 "Questo è un indirizzo IP (quattro numeri separati da punti) che indica il "
 "router gateway, chiamato anche default router, al quale viene inviato tutto "
-"il traffico per l'esterno della rete LAN (ad esempio, Internet). In alcuni "
+"il traffico per l'esterno della rete LAN (per esempio, Internet). In alcuni "
 "rari casi un router non è presente; in questi casi è possibile lasciare "
 "questo campo vuoto. Se non si conosce la risposta consultare "
 "l'amministratore della rete."
@@ -792,9 +790,7 @@ msgstr "Il gateway inserito non è raggiungibile."
 #: ../netcfg-static.templates:44
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr ""
-"Si può aver commesso un errore inserendo l'indirizzo IP, la maschera di rete "
-"o il gateway."
+msgstr "Errore inserendo l'indirizzo IP, la maschera di rete e/o il gateway."
 
 #. Type: boolean
 #. Description
