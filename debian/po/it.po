@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-08-26 22:47+0000\n"
-"PO-Revision-Date: 2007-08-31 00:42+0200\n"
+"PO-Revision-Date: 2007-08-31 15:19+0200\n"
 "Last-Translator: Stefano Canepa <sc@linux.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"I DNS sono utilizzati per ritrovare un host nella rete a partire dal suo "
+"I DNS sono utilizzati per identificare un host nella rete a partire dal suo "
 "nome. Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre "
 "DNS separati da spazi, senza usare virgole. I server verranno interrogati "
 "nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è "
@@ -125,8 +125,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
-"rete wireless da fare usare a ${iface}. Se non si hanno preferenze è "
-"possibile lasciare il campo in bianco."
+"rete wireless da fare usare a ${iface}. Lasciare il campo vuoto per usare "
+"una qualsiasi rete wireless tra quelle disponibili."
 
 #. Type: string
 #. Description
@@ -149,8 +149,8 @@ msgid ""
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
-"rete wireless da fare usare a ${iface}. Per abbandonare la configurazione "
-"wireless è possibile lasciare il campo in bianco."
+"rete wireless da fare usare a ${iface}. Per saltare la configurazione "
+"wireless è possibile lasciare il campo vuoto."
 
 #. Type: string
 #. Description
@@ -229,8 +229,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"L'ESSID «${essid}» non è valido. ESSID può essere composto al massimo da 32 "
-"caratteri qualsiasi."
+"L'ESSID «${essid}» non è valido. Un ESSID può essere composto al massimo da "
+"32 caratteri di qualsiasi tipo."
 
 #. Type: string
 #. Description
@@ -254,8 +254,9 @@ msgid ""
 "something up here."
 msgstr ""
 "Il nome dell'host è una singola parola che identifica il sistema nella rete. "
-"Se non lo si conosce è possibile consultare l'amministratore della rete "
-"oppure inserire un nome arbitrario se si sta utilizzando una rete domestica."
+"Se non lo si conosce è possibile consultare l'amministratore della rete, "
+"oppure inserire un nome arbitrario nel caso si stesse utilizzando una rete "
+"domestica."
 
 #. Type: error
 #. Description
@@ -277,9 +278,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nome valido contiene solo i numeri da 0 a 9, le lettere minuscole da a a "
-"z e il segno meno, la sua lunghezza è compresa tra 2 e 63 caratteri e non "
-"può iniziare o finire con il segno meno."
+"Un nome valido può contenere solo numeri da 0 a 9, lettere minuscole da a a "
+"z e il segno meno. La sua lunghezza deve essere compresa tra 2 e 63 "
+"caratteri, ma non si può iniziare o finire con il segno meno.\n"
 
 #. Type: error
 #. Description
@@ -342,9 +343,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} sembra essere stata disabilitata usando per mezzo di un "
-"microinterruttore. Se si desidera usare questa interfaccia, abilitarla prima "
-"di continuare."
+"${iface} sembra essere stata disabilitata usando un microinterruttore. Se si "
+"desidera usare questa interfaccia occorre abilitarla prima di continuare."
 
 #. Type: select
 #. Choices
@@ -561,7 +561,7 @@ msgstr ""
 #. Description
 #: ../netcfg-dhcp.templates:23
 msgid "The DHCP configuration process has been aborted."
-msgstr "La configurazione con DHCP verrà terminata."
+msgstr "La configurazione con DHCP verrà annullata."
 
 #. Type: select
 #. Choices
@@ -616,7 +616,7 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Adesso è possibile ritentare la configurazione automatica della rete (che "
+"Adesso è possibile riprovare la configurazione automatica della rete (che "
 "potrebbe funzionare se il server DHCP impiegasse molto tempo a rispondere) o "
 "proseguire con la configurazione manuale. Alcuni server DHCP richiedono che "
 "uno hostname sia inviato dal client, quindi è anche possibile ritentare la "
@@ -709,7 +709,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "L'indirizzo IP che è stato fornito non è corretto. Deve essere nella forma x."
-"x.x.x dove ogni «x» non è maggiore a 255. Riprovare."
+"x.x.x dove ogni «x» non è maggiore di 255. Riprovare."
 
 #. Type: string
 #. Description
