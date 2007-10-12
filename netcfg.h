@@ -91,8 +91,6 @@ extern int netcfg_get_nameservers (struct debconfclient *client, char **nameserv
 
 extern int netcfg_get_domain(struct debconfclient *client,  char **domain);
 
-extern int netcfg_get_dhcp(struct debconfclient *client);
-
 extern int netcfg_get_static(struct debconfclient *client);
 
 extern int netcfg_activate_dhcp(struct debconfclient *client);

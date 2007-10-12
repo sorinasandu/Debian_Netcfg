@@ -16,7 +16,11 @@ netcfg (1.40) UNRELEASED; urgency=low
     /sys/class/net/<foo>/device/bus and so firewire interfaces lacked special
     descriptions.
 
- -- Joey Hess <joeyh@debian.org>  Sun, 26 Aug 2007 15:54:04 -0400
+  [ dann frazier ]
+  * Remove unused extern declaration for netcfg_get_dhcp() function in
+    netcfg.h. This function was removed in r15113.
+
+ -- dann frazier <dannf@debian.org>  Fri, 12 Oct 2007 10:55:09 -0600
 
 netcfg (1.39) unstable; urgency=low
 
