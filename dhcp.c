@@ -21,6 +21,12 @@
 #include <time.h>
 #include <netdb.h>
 
+#define DHCP_OPTION_LEN 1236 /* pump 0.8.24 defines a max option size of 57,
+                                dhcp 2.0pl5 uses 1222, dhcp3 3.0.6 uses 1236 */
+#define DHCLIENT_REQUEST_DEFAULTS \
+  "subnet-mask, broadcast-address, time-offset, routers, domain-name, \
+   domain-name-servers, host-name"
+#define DHCLIENT_REQUEST_EXTRAS "ntp-servers"
 
 static int dhcp_exit_status = 1;
 static pid_t dhcp_pid = -1;
@@ -142,6 +148,8 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             
             if ((dc = file_open(DHCLIENT_CONF, "w"))) {
                 fprintf(dc, "send dhcp-class-identifier \"d-i\";\n" );
+                fprintf(dc, "request " DHCLIENT_REQUEST_DEFAULTS", " \
+                                       DHCLIENT_REQUEST_EXTRAS";\n" );
                 if (dhostname) {
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
@@ -156,6 +164,8 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             
             if ((dc = file_open(DHCLIENT3_CONF, "w"))) {
                 fprintf(dc, "send vendor-class-identifier \"d-i\";\n" );
+                fprintf(dc, "request " DHCLIENT_REQUEST_DEFAULTS", " \
+                                       DHCLIENT_REQUEST_EXTRAS";\n" );
                 if (dhostname) {
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
@@ -361,6 +371,22 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                     if (!empty_str(domain) && verify_hostname(domain) == 0) {
                         debconf_set(client, "netcfg/get_domain", domain);
                         have_domain = 1;
+                    }
+                }
+
+                /*
+                 * Record any ntp server information from DHCP for later
+                 * verification and use by clock-setup
+                 */
+                if ((d = fopen(NTP_SERVER_FILE, "r")) != NULL) {
+                    char ntpservers[DHCP_OPTION_LEN + 1] = { 0 };
+                    fgets(ntpservers, DHCP_OPTION_LEN, d);
+                    fclose(d);
+                    unlink(NTP_SERVER_FILE);
+                    
+                    if (!empty_str(ntpservers)) {
+                        debconf_set(client, "netcfg/dhcp_ntp_servers", 
+                                    ntpservers);
                     }
                 }
 

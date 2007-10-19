@@ -9,6 +9,7 @@
 #define DHCLIENT_CONF	"/etc/dhclient.conf"
 #define DHCLIENT3_CONF	"/etc/dhcp3/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
+#define NTP_SERVER_FILE "/tmp/dhcp-ntp-servers"
 
 #define DEVNAMES	"/etc/network/devnames"
 #define DEVHOTPLUG	"/etc/network/devhotplug"
