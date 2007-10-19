@@ -22,8 +22,9 @@ netcfg (1.40) UNRELEASED; urgency=low
   * Request ntp-servers option from dhcp server and store in
     netcfg/dhcp_ntp_servers for later processing by clock-setup.
     See #447071
+  * Use POSIX-compliant 'printf' instead of 'echo -n' in dhclient-script
 
- -- dann frazier <dannf@debian.org>  Fri, 19 Oct 2007 16:24:28 -0600
+ -- dann frazier <dannf@debian.org>  Fri, 19 Oct 2007 16:58:22 -0600
 
 netcfg (1.39) unstable; urgency=low
 
