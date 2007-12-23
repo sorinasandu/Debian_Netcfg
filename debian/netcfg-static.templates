@@ -1,5 +1,6 @@
 Template: netcfg/get_ipaddress
 Type: string
+# :sl1:
 _Description: IP address:
  The IP address is unique to your computer and consists of four numbers
  separated by periods.  If you don't know what to use here, consult your
@@ -7,12 +8,14 @@ _Description: IP address:
 
 Template: netcfg/bad_ipaddress
 Type: error
+# :sl2:
 _Description: Malformed IP address
  The IP address you provided is malformed. It should be in the form
  x.x.x.x where each 'x' is no larger than 255. Please try again.
 
 Template: netcfg/get_pointopoint
 Type: string
+# :sl2:
 _Description: Point-to-point address:
  The point-to-point address is used to determine the other endpoint of the
  point to point network.  Consult your network administrator if you do not
@@ -22,6 +25,7 @@ _Description: Point-to-point address:
 Template: netcfg/get_netmask
 Type: string
 Default: 255.255.255.0
+# :sl1:
 _Description: Netmask:
  The netmask is used to determine which machines are local to your
  network.  Consult your network administrator if you do not know the
@@ -30,6 +34,7 @@ _Description: Netmask:
 
 Template: netcfg/get_gateway
 Type: string
+# :sl1:
 _Description: Gateway:
  The gateway is an IP address (four numbers separated by periods) that
  indicates the gateway router, also known as the default router.  All
@@ -41,6 +46,7 @@ _Description: Gateway:
 
 Template: netcfg/gateway_unreachable
 Type: error
+# :sl2:
 _Description: Unreachable gateway
  The gateway address you entered is unreachable.
  .
@@ -50,6 +56,7 @@ _Description: Unreachable gateway
 Template: netcfg/confirm_static
 Type: boolean
 Default: true
+# :sl1:
 _Description: Is this information correct?
  Currently configured network parameters:
  .
@@ -63,4 +70,5 @@ _Description: Is this information correct?
 Template: debian-installer/netcfg-static/title
 Type: text
 #  Item in the main menu to select this package
+# :sl1:
 _Description: Configure a network using static addressing
