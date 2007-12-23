@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2007-08-26 22:47+0000\n"
+"POT-Creation-Date: 2007-12-23 22:48+0000\n"
 "PO-Revision-Date: 2007-08-28 12:39+0300\n"
 "Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -24,13 +24,15 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-common.templates:4
+#. :sl1:
+#: ../netcfg-common.templates:5
 msgid "Auto-configure network with DHCP?"
 msgstr "Ar atlikti automatinį tinklo konfigūravimas su DHCP?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-common.templates:4
+#. :sl1:
+#: ../netcfg-common.templates:5
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -45,13 +47,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:14
+#. :sl1:
+#: ../netcfg-common.templates:16
 msgid "Domain name:"
 msgstr "Srities (domain) vardas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:14
+#. :sl1:
+#: ../netcfg-common.templates:16
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
@@ -65,13 +69,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:22
+#. :sl1:
+#: ../netcfg-common.templates:25
 msgid "Name server addresses:"
 msgstr "Vardų serverio adresai:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:22
+#. :sl1:
+#: ../netcfg-common.templates:25
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -86,13 +92,15 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#. :sl1:
+#: ../netcfg-common.templates:36
 msgid "Primary network interface:"
 msgstr "Pagrindinė tinklo sąsaja:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#. :sl1:
+#: ../netcfg-common.templates:36
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
@@ -104,7 +112,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:39
+#. :sl1:
+#: ../netcfg-common.templates:44
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -116,19 +125,22 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Bevielis (wireless) ESSID sąsajai ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid "Attempting to find an available wireless network failed."
 msgstr "Mėginimas rasti prieinamą bevielį tinklą nepavyko."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -140,13 +152,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP raktas bevielio tinklo įrenginiui ${iface}:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -156,7 +170,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -167,7 +182,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -177,7 +193,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -186,13 +203,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:70
+#. :sl2:
+#: ../netcfg-common.templates:78
 msgid "Invalid WEP key"
 msgstr "Netinkamas WEP raktas"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:70
+#. :sl2:
+#: ../netcfg-common.templates:78
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -203,13 +222,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:77
+#. :sl2:
+#: ../netcfg-common.templates:86
 msgid "Invalid ESSID"
 msgstr "Netinkamas ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:77
+#. :sl2:
+#: ../netcfg-common.templates:86
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -219,19 +240,22 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid "Hostname:"
 msgstr "Kompiuterio vardas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid "Please enter the hostname for this system."
 msgstr "Prašau įvesti šio kompiuterio vardą."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -245,19 +269,22 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid "Invalid hostname"
 msgstr "Netinkamas kompiuterio vardas"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Vardas \"${hostname}\" netinkamas."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -269,13 +296,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:103
+#. :sl2:
+#: ../netcfg-common.templates:115
 msgid "Error"
 msgstr "Klaida"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:103
+#. :sl2:
+#: ../netcfg-common.templates:115
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -285,13 +314,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid "No network interfaces detected"
 msgstr "Tinklo sąsajų neaptikta"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -300,7 +331,8 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -312,7 +344,8 @@ msgstr ""
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:120
+#. :sl2:
+#: ../netcfg-common.templates:134
 msgid "Kill switch enabled on ${iface}"
 msgstr "Sąsajoje ${iface} įjungtas 'kill switch'"
 
@@ -320,7 +353,8 @@ msgstr "Sąsajoje ${iface} įjungtas 'kill switch'"
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:120
+#. :sl2:
+#: ../netcfg-common.templates:134
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
@@ -331,35 +365,37 @@ msgstr ""
 
 #. Type: select
 #. Choices
+#. :sl2:
 #. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:148
 msgid "Infrastructure (Managed) network"
 msgstr "Infrastruktūrinis (Managed) tinklas"
 
 #. Type: select
 #. Choices
+#. :sl2:
 #. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:148
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "Ad-hoc tinklas (Peer to peer)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:149
 msgid "Type of wireless network:"
 msgstr "Bevielio tinklo tipas:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:149
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -371,129 +407,150 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#. :sl1:
+#: ../netcfg-common.templates:157
 msgid "Wireless network configuration"
 msgstr "Bevielio tinklo konfigūravimas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#. :sl1:
+#: ../netcfg-common.templates:162
 msgid "Searching for wireless access points ..."
 msgstr "Ieškoma belaidžio tinklo pasiekimo taškų (access points) ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#. :sl2:
+#: ../netcfg-common.templates:173
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#. :sl2:
+#: ../netcfg-common.templates:178
 msgid "Wireless ethernet (802.11x)"
 msgstr "Wireless ethernet (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#. :sl2:
+#: ../netcfg-common.templates:183
 msgid "wireless"
 msgstr "bevielis"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#. :sl2:
+#: ../netcfg-common.templates:188
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#. :sl2:
+#: ../netcfg-common.templates:193
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#. :sl2:
+#: ../netcfg-common.templates:198
 msgid "USB net"
 msgstr "USB tinklas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#. :sl2:
+#: ../netcfg-common.templates:209
 msgid "Serial-line IP"
 msgstr "IP per nuoseklią liniją"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#. :sl2:
+#: ../netcfg-common.templates:214
 msgid "Parallel-port IP"
 msgstr "IP per lygiagrečią liniją (PLIP)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#. :sl2:
+#: ../netcfg-common.templates:219
 msgid "Point-to-Point Protocol"
 msgstr "Point-to-Point (PPP) protokolas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#. :sl2:
+#: ../netcfg-common.templates:224
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:200
+#. :sl2:
+#: ../netcfg-common.templates:229
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Point-to-Point protokolas"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:204
+#. :sl2:
+#: ../netcfg-common.templates:234
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:208
+#. :sl2:
+#: ../netcfg-common.templates:239
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:217
+#. :sl2:
+#: ../netcfg-common.templates:249
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:221
+#. :sl2:
+#: ../netcfg-common.templates:254
 msgid "Unknown interface"
 msgstr "Nežinoma sąsaja"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:226
+#. :sl1:
+#: ../netcfg-common.templates:260
 msgid "Storing network settings ..."
 msgstr "Tinklo nustatymų išsaugojimas ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:231
+#. :sl1:
+#: ../netcfg-common.templates:266
 msgid "Configure the network"
 msgstr "Tinklo konfigūravimas"
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid "DHCP hostname:"
 msgstr "DHCP kompiuterio vardas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
@@ -503,37 +560,43 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid "Most other users can just leave this blank."
 msgstr "Dauguma kitų naudotojų čia gali palikti tuščią."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:11
+#. :sl1:
+#: ../netcfg-dhcp.templates:13
 msgid "Configuring the network with DHCP"
 msgstr "Tinklo konfigūravimas su DHCP"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#. :sl1:
+#: ../netcfg-dhcp.templates:18
 msgid "This may take some time."
 msgstr "Tai gali šiek tiek užtrukti."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#. :sl1:
+#: ../netcfg-dhcp.templates:23
 msgid "Network autoconfiguration has succeeded"
 msgstr "Automatinis tinklo konfigūravimas pavyko"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "No DHCP client found"
 msgstr "Nerastas DHCP klientas"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "Nerastas DHCP klientas. Šiam paketui reikia, kad būtų įdiegtas paketas pump "
@@ -541,55 +604,62 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "The DHCP configuration process has been aborted."
 msgstr "DHCP konfigūravimo procesas nutrauktas."
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration"
 msgstr "Kartoti tinklo automatinį konfigūravimą"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "Kartoti automatinį tinklo konfigūravimą su DHCP kompiuterio vardu"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Configure network manually"
 msgstr "Rankinis tinklo konfigūravimas"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Do not configure the network at this time"
 msgstr "Dabar nekonfigūruoti tinklo"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:36
+#. :sl1:
+#: ../netcfg-dhcp.templates:43
 msgid "Network configuration method:"
 msgstr "Tinklo konfigūravimo metodas:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:36
+#. :sl1:
+#: ../netcfg-dhcp.templates:43
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -606,13 +676,15 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:46
+#. :sl1:
+#: ../netcfg-dhcp.templates:54
 msgid "Network autoconfiguration failed"
 msgstr "Automatinis tinklo konfigūravimas nepavyko"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:46
+#. :sl1:
+#: ../netcfg-dhcp.templates:54
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -622,13 +694,15 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid "Continue without a default route?"
 msgstr "Ar tęsti be numatytojo maršruto?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -643,7 +717,8 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -653,19 +728,22 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:64
+#. :sl1:
+#: ../netcfg-dhcp.templates:74
 msgid "Reconfigure the wireless network"
 msgstr "Perkonfigūruoti bevielį tinklą"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:3
+#. :sl1:
+#: ../netcfg-static.templates:4
 msgid "IP address:"
 msgstr "IP adresas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:3
+#. :sl1:
+#: ../netcfg-static.templates:4
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
@@ -677,13 +755,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:10
+#. :sl2:
+#: ../netcfg-static.templates:12
 msgid "Malformed IP address"
 msgstr "Išsigimęs IP adresas"
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:10
+#. :sl2:
+#: ../netcfg-static.templates:12
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
@@ -693,13 +773,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:16
+#. :sl2:
+#: ../netcfg-static.templates:19
 msgid "Point-to-point address:"
 msgstr "Ryšio (point-to-point) adresas:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:16
+#. :sl2:
+#: ../netcfg-static.templates:19
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -713,13 +795,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:25
+#. :sl1:
+#: ../netcfg-static.templates:29
 msgid "Netmask:"
 msgstr "Tinklo trafaretas (netmask):"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:25
+#. :sl1:
+#: ../netcfg-static.templates:29
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -731,13 +815,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:33
+#. :sl1:
+#: ../netcfg-static.templates:38
 msgid "Gateway:"
 msgstr "Tinklų sąsaja (gateway):"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:33
+#. :sl1:
+#: ../netcfg-static.templates:38
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -755,19 +841,22 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid "Unreachable gateway"
 msgstr "Tinklų sąsaja (gateway) nepasiekiama"
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid "The gateway address you entered is unreachable."
 msgstr "Nurodytas tinklų sąsajos (gateway) adresas nepasiekiamas."
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
@@ -776,19 +865,22 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid "Is this information correct?"
 msgstr "Ar ši informacija teisinga?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid "Currently configured network parameters:"
 msgstr "Dabartiniai tinklo konfigūravimo parametrai:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -807,6 +899,7 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:66
+#. :sl1:
+#: ../netcfg-static.templates:74
 msgid "Configure a network using static addressing"
 msgstr "Tinklo konfigūravimas naudojant statinį adresavimą"

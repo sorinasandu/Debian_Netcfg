@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2007-08-26 22:47+0000\n"
+"POT-Creation-Date: 2007-12-23 22:48+0000\n"
 "PO-Revision-Date: 2006-07-10 15:53+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
@@ -27,13 +27,15 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-common.templates:4
+#. :sl1:
+#: ../netcfg-common.templates:5
 msgid "Auto-configure network with DHCP?"
 msgstr "નેટવર્કને DHCP વડે આપમેળે-રૂપરેખાંકિત કરશો?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-common.templates:4
+#. :sl1:
+#: ../netcfg-common.templates:5
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -48,13 +50,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:14
+#. :sl1:
+#: ../netcfg-common.templates:16
 msgid "Domain name:"
 msgstr "ડોમેઇન નામ:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:14
+#. :sl1:
+#: ../netcfg-common.templates:16
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
@@ -68,13 +72,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:22
+#. :sl1:
+#: ../netcfg-common.templates:25
 msgid "Name server addresses:"
 msgstr "નામ સર્વર સરનામું:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:22
+#. :sl1:
+#: ../netcfg-common.templates:25
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -89,13 +95,15 @@ msgstr ""
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#. :sl1:
+#: ../netcfg-common.templates:36
 msgid "Primary network interface:"
 msgstr "પ્રાથમિક નેટવર્ક ઇન્ટરફેસ:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:32
+#. :sl1:
+#: ../netcfg-common.templates:36
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
@@ -106,7 +114,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:39
+#. :sl1:
+#: ../netcfg-common.templates:44
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -118,19 +127,22 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} માટે વાયરલેસ ESSID:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid "Attempting to find an available wireless network failed."
 msgstr "પ્રાપ્ત વાયરલેસ નેટવર્ક ક્ષેત્ર શોધવાના પ્રયત્નો નિષ્ફળ."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:46
+#. :sl1:
+#: ../netcfg-common.templates:52
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -142,13 +154,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid "WEP key for wireless device ${iface}:"
 msgstr "વાયરલેસ ઉપકરણ ${iface} માટે WEP કી:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -158,7 +172,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -168,7 +183,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -178,7 +194,8 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:55
+#. :sl1:
+#: ../netcfg-common.templates:62
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -186,13 +203,15 @@ msgstr "ચોક્કસ, જો તમારા વાયરલેસ ને�
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:70
+#. :sl2:
+#: ../netcfg-common.templates:78
 msgid "Invalid WEP key"
 msgstr "અયોગ્ય WEP કી"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:70
+#. :sl2:
+#: ../netcfg-common.templates:78
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -202,13 +221,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:77
+#. :sl2:
+#: ../netcfg-common.templates:86
 msgid "Invalid ESSID"
 msgstr "અયોગ્ય ESSID"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:77
+#. :sl2:
+#: ../netcfg-common.templates:86
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -218,19 +239,22 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid "Hostname:"
 msgstr "યજમાનનામ:"
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid "Please enter the hostname for this system."
 msgstr "આ સિસ્ટમ માટે યજમાનનામ દાખલ કરો."
 
 #. Type: string
 #. Description
-#: ../netcfg-common.templates:84
+#. :sl1:
+#: ../netcfg-common.templates:94
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -243,19 +267,22 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid "Invalid hostname"
 msgstr "અયોગ્ય યજમાનનામ"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid "The name \"${hostname}\" is invalid."
 msgstr "નામ \"${hostname}\" અયોગ્ય છે."
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:94
+#. :sl2:
+#: ../netcfg-common.templates:105
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -267,13 +294,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:103
+#. :sl2:
+#: ../netcfg-common.templates:115
 msgid "Error"
 msgstr "ક્ષતિ"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:103
+#. :sl2:
+#: ../netcfg-common.templates:115
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -283,13 +312,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid "No network interfaces detected"
 msgstr "કોઇ નેટવર્ક ઇન્ટરફેસ મળ્યું નહી"
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -297,7 +328,8 @@ msgstr "કોઇ નેટવર્ક ઇન્ટરફેસ મળ્યુ
 
 #. Type: error
 #. Description
-#: ../netcfg-common.templates:109
+#. :sl2:
+#: ../netcfg-common.templates:122
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -309,7 +341,8 @@ msgstr ""
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:120
+#. :sl2:
+#: ../netcfg-common.templates:134
 msgid "Kill switch enabled on ${iface}"
 msgstr "${iface} પર સક્રિય સ્વીચ બંધ કરો"
 
@@ -317,7 +350,8 @@ msgstr "${iface} પર સક્રિય સ્વીચ બંધ કરો"
 #. Description
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
-#: ../netcfg-common.templates:120
+#. :sl2:
+#: ../netcfg-common.templates:134
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
@@ -328,35 +362,37 @@ msgstr ""
 
 #. Type: select
 #. Choices
+#. :sl2:
 #. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:148
 msgid "Infrastructure (Managed) network"
 msgstr "માળખાગત (વ્યવસ્થિત) નેટવર્ક"
 
 #. Type: select
 #. Choices
+#. :sl2:
 #. Note to translators : Please keep your translations of each choice
 #. below the 65 columns limit (which means 65 characters for most languages)
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:133
+#: ../netcfg-common.templates:148
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "એડ-હોક નેટવર્ક (પીઅર ટુ પીઅર)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:149
 msgid "Type of wireless network:"
 msgstr "વાયરલેસ નેટર્વકનો પ્રકાર:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:149
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -368,129 +404,150 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:141
+#. :sl1:
+#: ../netcfg-common.templates:157
 msgid "Wireless network configuration"
 msgstr "વાયરલેસ નેટવર્ક રૂપરેખાંકન"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:145
+#. :sl1:
+#: ../netcfg-common.templates:162
 msgid "Searching for wireless access points ..."
 msgstr "વાયરલેસ એક્સેસ બિંદુઓ શોધી રહ્યા છીએ ..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:155
+#. :sl2:
+#: ../netcfg-common.templates:173
 msgid "<none>"
 msgstr "<કંઇ નહી>"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:159
+#. :sl2:
+#: ../netcfg-common.templates:178
 msgid "Wireless ethernet (802.11x)"
 msgstr "વાયરલેસ ઇથરનેટ (802.11x)"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:163
+#. :sl2:
+#: ../netcfg-common.templates:183
 msgid "wireless"
 msgstr "વાયરલેસ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:167
+#. :sl2:
+#: ../netcfg-common.templates:188
 msgid "Ethernet"
 msgstr "ઇથરનેટ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:171
+#. :sl2:
+#: ../netcfg-common.templates:193
 msgid "Token Ring"
 msgstr "ટોકન રિંગ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:175
+#. :sl2:
+#: ../netcfg-common.templates:198
 msgid "USB net"
 msgstr "યુએસબી નેટ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:184
+#. :sl2:
+#: ../netcfg-common.templates:209
 msgid "Serial-line IP"
 msgstr "રેખીય-લાઇન IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:188
+#. :sl2:
+#: ../netcfg-common.templates:214
 msgid "Parallel-port IP"
 msgstr "સમાંતર-પોર્ટ IP"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:192
+#. :sl2:
+#: ../netcfg-common.templates:219
 msgid "Point-to-Point Protocol"
 msgstr "પોઈન્ટ-ટુ-પોઈન્ટ પ્રોટોકોલ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:196
+#. :sl2:
+#: ../netcfg-common.templates:224
 msgid "IPv6-in-IPv4"
 msgstr "IPv4-માં-IPv6"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:200
+#. :sl2:
+#: ../netcfg-common.templates:229
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN પોઈન્ટ-ટુ-પોઈન્ટ પ્રોટોકોલ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:204
+#. :sl2:
+#: ../netcfg-common.templates:234
 msgid "Channel-to-channel"
 msgstr "ચેનલ-ટુ-ચેનલ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:208
+#. :sl2:
+#: ../netcfg-common.templates:239
 msgid "Real channel-to-channel"
 msgstr "ખરૂં ચેનલ-ટુ-ચેનલ"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:217
+#. :sl2:
+#: ../netcfg-common.templates:249
 msgid "Inter-user communication vehicle"
 msgstr "આંતરિક-વપરાશકર્તા વાતચીત વાહન"
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:221
+#. :sl2:
+#: ../netcfg-common.templates:254
 msgid "Unknown interface"
 msgstr "અજ્ઞાત ઇન્ટરફેસ"
 
 #. Type: text
 #. Description
 #. base-installer progress bar item
-#: ../netcfg-common.templates:226
+#. :sl1:
+#: ../netcfg-common.templates:260
 msgid "Storing network settings ..."
 msgstr "નેટવર્ક ગોઠવણીઓ સંગ્રહી રહ્યા છીએ ..."
 
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-common.templates:231
+#. :sl1:
+#: ../netcfg-common.templates:266
 msgid "Configure the network"
 msgstr "નેટવર્ક રૂપરેખાંકિત કરો"
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid "DHCP hostname:"
 msgstr "DHCP યજમાનનામ:"
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
@@ -500,91 +557,104 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-dhcp.templates:3
+#. :sl1:
+#: ../netcfg-dhcp.templates:4
 msgid "Most other users can just leave this blank."
 msgstr "બીજા મોટાભાગનાં વપરાશકર્તાઓ આ ક્ષેત્ર ખાલી રાખે છે."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:11
+#. :sl1:
+#: ../netcfg-dhcp.templates:13
 msgid "Configuring the network with DHCP"
 msgstr "નેટવર્ક DHCP સાથે રૂપરેખાંકિત કરો"
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:15
+#. :sl1:
+#: ../netcfg-dhcp.templates:18
 msgid "This may take some time."
 msgstr "આ થોડો સમય લેશે."
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:19
+#. :sl1:
+#: ../netcfg-dhcp.templates:23
 msgid "Network autoconfiguration has succeeded"
 msgstr "આપમેળે નેટવર્ક સફળ રીતે ગોઠવાઇ ગયું છે"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "No DHCP client found"
 msgstr "કોઇ DHCP ક્લાયન્ટ મળ્યું નહી"
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr "કોઇ DHCP ક્લાયન્ટ મળ્યું નહી. આ પેકેજ માટે પમ્પ અથવા DHCP-ક્લાયન્ટ જરૂરી છે."
 
 #. Type: error
 #. Description
-#: ../netcfg-dhcp.templates:23
+#. :sl2:
+#: ../netcfg-dhcp.templates:28
 msgid "The DHCP configuration process has been aborted."
 msgstr "DHCP રૂપરેખાંકન પ્રક્રિયા બંધ કરવામાં આવી છે."
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration"
 msgstr "આપમેળે નેટવર્ક ગોઠવવાનો ફરી પ્રયત્ન કરો"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr "નેટવર્ક આપમેળે ગોઠવવા DHCP યજમાનનામ સાથે ફરી પ્રયત્ન કરો"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Configure network manually"
 msgstr "નેટવર્ક જાતે રૂપરેખાંકિત કરો"
 
 #. Type: select
 #. Choices
+#. :sl1:
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:34
+#: ../netcfg-dhcp.templates:40
 msgid "Do not configure the network at this time"
 msgstr "નેટવર્ક આ સમયે રૂપરેખાંકિત ન કરો"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:36
+#. :sl1:
+#: ../netcfg-dhcp.templates:43
 msgid "Network configuration method:"
 msgstr "નેટવર્ક રૂપરેખાંકન પધ્ધતિ:"
 
 #. Type: select
 #. Description
-#: ../netcfg-dhcp.templates:36
+#. :sl1:
+#: ../netcfg-dhcp.templates:43
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -599,13 +669,15 @@ msgstr ""
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:46
+#. :sl1:
+#: ../netcfg-dhcp.templates:54
 msgid "Network autoconfiguration failed"
 msgstr "આપમેળે નેટવર્ક ગોઠવવામાં નિષ્ફળ"
 
 #. Type: note
 #. Description
-#: ../netcfg-dhcp.templates:46
+#. :sl1:
+#: ../netcfg-dhcp.templates:54
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -615,13 +687,15 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid "Continue without a default route?"
 msgstr "મૂળભુત રૂટ વગર આગળ વધશો?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -636,7 +710,8 @@ msgstr ""
 
 #. Type: boolean
 #. Description
-#: ../netcfg-dhcp.templates:52
+#. :sl2:
+#: ../netcfg-dhcp.templates:61
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -646,19 +721,22 @@ msgstr ""
 
 #. Type: text
 #. Description
-#: ../netcfg-dhcp.templates:64
+#. :sl1:
+#: ../netcfg-dhcp.templates:74
 msgid "Reconfigure the wireless network"
 msgstr "વાયરલેસ નેટર્વકને ફરી રૂપરેખાંકિત કરો"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:3
+#. :sl1:
+#: ../netcfg-static.templates:4
 msgid "IP address:"
 msgstr "IP સરનામું:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:3
+#. :sl1:
+#: ../netcfg-static.templates:4
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
@@ -669,13 +747,15 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:10
+#. :sl2:
+#: ../netcfg-static.templates:12
 msgid "Malformed IP address"
 msgstr "ખરાબ IP સરનામું"
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:10
+#. :sl2:
+#: ../netcfg-static.templates:12
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
@@ -685,13 +765,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:16
+#. :sl2:
+#: ../netcfg-static.templates:19
 msgid "Point-to-point address:"
 msgstr "પોઇન્ટ-ટુ-પોઇન્ટ સરનામું:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:16
+#. :sl2:
+#: ../netcfg-static.templates:19
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -704,13 +786,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:25
+#. :sl1:
+#: ../netcfg-static.templates:29
 msgid "Netmask:"
 msgstr "નેટમાસ્ક:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:25
+#. :sl1:
+#: ../netcfg-static.templates:29
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -722,13 +806,15 @@ msgstr ""
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:33
+#. :sl1:
+#: ../netcfg-static.templates:38
 msgid "Gateway:"
 msgstr "ગેટવે:"
 
 #. Type: string
 #. Description
-#: ../netcfg-static.templates:33
+#. :sl1:
+#: ../netcfg-static.templates:38
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -745,38 +831,44 @@ msgstr ""
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid "Unreachable gateway"
 msgstr "પહોંચ બહારનો ગેટવે"
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid "The gateway address you entered is unreachable."
 msgstr "તમે દાખલ કરેલ ગેટવે સરનામું પહોંચ બહાર છે."
 
 #. Type: error
 #. Description
-#: ../netcfg-static.templates:44
+#. :sl2:
+#: ../netcfg-static.templates:50
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr "તમે તમારૂં આઇપી સરનામું, નેટમાસ્ક અને/અથવા ગેટવે દાખલ કરવામાં કદાચ ભૂલ કરી છે."
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid "Is this information correct?"
 msgstr "શું આ માહિતી સાચી છે?"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid "Currently configured network parameters:"
 msgstr "હાલમાં રૂપરેખાંકિત થયેલ નેટવર્ક વિકલ્પો:"
 
 #. Type: boolean
 #. Description
-#: ../netcfg-static.templates:53
+#. :sl1:
+#: ../netcfg-static.templates:60
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -795,6 +887,7 @@ msgstr ""
 #. Type: text
 #. Description
 #. Item in the main menu to select this package
-#: ../netcfg-static.templates:66
+#. :sl1:
+#: ../netcfg-static.templates:74
 msgid "Configure a network using static addressing"
 msgstr "સ્થિત સરનામું ઉપયોગ કરી નેટવર્ક રૂપરેખાંકિત કરો"
