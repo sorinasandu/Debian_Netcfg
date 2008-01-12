@@ -7,6 +7,7 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+# Holger Wansing <linux@wansing-online.de>, 2007.
 # Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007.
 # Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
 # Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
@@ -602,7 +603,7 @@ msgstr "Dies kann einige Zeit dauern."
 #. :sl1:
 #: ../netcfg-dhcp.templates:23
 msgid "Network autoconfiguration has succeeded"
-msgstr "Die Netzwerk-Autokonfiguration war erfolgreich."
+msgstr "Die automatische Netzwerkkonfiguration war erfolgreich."
 
 #. Type: error
 #. Description
@@ -617,7 +618,7 @@ msgstr "Kein DHCP-Client gefunden"
 #: ../netcfg-dhcp.templates:28
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Kein DHCP-Client gefunden. Dieses Paket benötigt den pump oder dhcp-client."
+"Kein DHCP-Client gefunden. Dieses Paket benötigt pump oder dhcp-client."
 
 #. Type: error
 #. Description
@@ -634,7 +635,7 @@ msgstr "Der DHCP-Konfigurationsprozess wurde abgebrochen."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration"
-msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
+msgstr "Automatische Netzwerkkonfiguration nochmals versuchen"
 
 #. Type: select
 #. Choices
@@ -645,7 +646,7 @@ msgstr "Netzwerk-Autokonfiguration nochmals versuchen"
 #: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
-"Netzwerk-Autokonfiguration nochmals versuchen mit Eingabe eines DHCP-"
+"Automatische Netzwerkkonfiguration nochmals versuchen mit Eingabe eines DHCP-"
 "Rechnernamens"
 
 #. Type: select
@@ -686,19 +687,19 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Hier können Sie wählen, die DHCP-Netzwerk-Autokonfiguration nochmals zu "
-"versuchen (was funktionieren könnte, wenn Ihr DHCP-Server sehr langsam "
+"Hier können Sie wählen, die automatische DHCP-Netzwerkkonfiguration nochmals "
+"zu versuchen (was funktionieren könnte, wenn Ihr DHCP-Server sehr langsam "
 "reagiert) oder das Netzwerk manuell zu konfigurieren. Manche DHCP-Server "
 "erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher "
-"können Sie auch wählen, die DHCP-Netzwerk-Autokonfiguration nochmals mit "
-"einem von Ihnen angegebenen Rechnernamen zu versuchen."
+"können Sie auch wählen, die automatische DHCP-Netzwerkkonfiguration nochmals "
+"mit einem von Ihnen angegebenen Rechnernamen zu versuchen."
 
 #. Type: note
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:54
 msgid "Network autoconfiguration failed"
-msgstr "Die Netzwerk-Autokonfiguration schlug fehl"
+msgstr "Die automatische Netzwerkkonfiguration schlug fehl"
 
 #. Type: note
 #. Description
@@ -730,8 +731,8 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"Die Netzwerk-Autokonfiguration war erfolgreich. Es wurde allerdings keine "
-"Default-Route gesetzt: Das System weiß nicht, wie es mit Rechnern im "
+"Die automatische Netzwerkkonfiguration war erfolgreich. Es wurde allerdings "
+"keine Default-Route gesetzt: Das System weiß nicht, wie es mit Rechnern im "
 "Internet kommunizieren kann. Dies macht ein Fortsetzen der Installation "
 "unmöglich, falls Sie nicht die erste Installations-CD-ROM, eine »Netinst«-CD-"
 "ROM oder Pakete im lokalen Netzwerk haben."
