@@ -1,4 +1,4 @@
-netcfg (1.41) UNRELEASED; urgency=low
+netcfg (1.41) unstable; urgency=low
 
   * No longer copy the dhclient.conf script to the target system. The reason
     this was originally done looks to be obsolete and we should not overwrite
@@ -6,7 +6,20 @@ netcfg (1.41) UNRELEASED; urgency=low
   * Don't link against libm; according to dpkg-shlibdeps it's not used.
   * Don't ignore errors in clean target.
 
- -- Frans Pop <fjp@debian.org>  Mon, 14 Jan 2008 02:52:17 +0100
+  [ Updated translations ]
+  * Amharic (am.po) by tegegne tefera
+  * German (de.po) by Jens Seidel
+  * Dzongkha (dz.po) by Jurmey Rabgay
+  * Spanish (es.po) by Javier Fernández-Sanguino Peña
+  * Korean (ko.po) by Changwoo Ryu
+  * Kurdish (ku.po) by Erdal Ronahi
+  * Malayalam (ml.po) by Praveen|പ്രവീണ്‍ A|എ
+  * Norwegian Bokmål (nb.po) by Hans Fredrik Nordhaug
+  * Panjabi (pa.po) by A S Alam
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Slovak (sk.po) by Ivan Masár
+
+ -- Frans Pop <fjp@debian.org>  Mon, 14 Jan 2008 02:58:40 +0100
 
 netcfg (1.40) unstable; urgency=low
 
