@@ -1,9 +1,10 @@
 netcfg (1.41) UNRELEASED; urgency=low
 
-  * Also request the domain-search option from the DHCP server, as requested
-    by Andrew Pollock.
+  * No longer copy the dhclient.conf script to the target system. The reason
+    this was originally done looks to be obsolete and we should not overwrite
+    conffiles from other packages.
 
- -- Frans Pop <fjp@debian.org>  Mon, 14 Jan 2008 01:15:04 +0100
+ -- Frans Pop <fjp@debian.org>  Mon, 14 Jan 2008 02:36:03 +0100
 
 netcfg (1.40) unstable; urgency=low
 

@@ -7,12 +7,3 @@ for file in /etc/network/interfaces /etc/networks /etc/hostname /etc/resolv.conf
 		cp $file /target/$file
 	fi
 done
-
-for file in /etc/dhclient.conf /etc/dhcp3/dhclient.conf; do
-	if [ -f "$file" ]; then
-		mkdir /target/$(dirname $file) -p
-		sed '/^send \(dhcp\|vendor\)-class-identifier "d-i";$/d' \
-			< $file > /target/$file
-		[ -s "/target/$file" ] || rm -f /target/$file
-	fi
-done
