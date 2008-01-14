@@ -1,7 +1,7 @@
 CC		= gcc
 TARGETS		?= netcfg-static netcfg
 
-LDOPTS		= -ldebconfclient -ldebian-installer -lm -liw
+LDOPTS		= -ldebconfclient -ldebian-installer -liw
 CFLAGS		= -W -Wall -DNDEBUG 
 COMMON_OBJS	= netcfg-common.o wireless.o
 
