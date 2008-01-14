@@ -24,8 +24,8 @@
 #define DHCP_OPTION_LEN 1236 /* pump 0.8.24 defines a max option size of 57,
                                 dhcp 2.0pl5 uses 1222, dhcp3 3.0.6 uses 1236 */
 #define DHCLIENT_REQUEST_DEFAULTS \
-  "subnet-mask, broadcast-address, time-offset, routers, domain-name, \
-   domain-name-servers, host-name"
+  "subnet-mask, broadcast-address, time-offset, routers, host-name, \
+   domain-name, domain-name-servers, domain-search"
 #define DHCLIENT_REQUEST_EXTRAS "ntp-servers"
 
 static int dhcp_exit_status = 1;
