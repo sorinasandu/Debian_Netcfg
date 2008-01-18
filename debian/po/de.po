@@ -7,8 +7,8 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Holger Wansing <linux@wansing-online.de>, 2007.
-# Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007.
+# Holger Wansing <linux@wansing-online.de>, 2008.
+# Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007, 2008.
 # Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
 # Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
 # Bastian Blank <waldi@debian.org>, 2003.
@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2007-12-23 22:48+0000\n"
-"PO-Revision-Date: 2007-11-10 00:23+0100\n"
+"PO-Revision-Date: 2008-01-13 04:27+0100\n"
 "Last-Translator: Jens Seidel <jensseidel@users.sf.net>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -635,7 +635,7 @@ msgstr "Der DHCP-Konfigurationsprozess wurde abgebrochen."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration"
-msgstr "Automatische Netzwerkkonfiguration nochmals versuchen"
+msgstr "Autom. Konfiguration erneut versuchen"
 
 #. Type: select
 #. Choices
@@ -645,9 +645,7 @@ msgstr "Automatische Netzwerkkonfiguration nochmals versuchen"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:40
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr ""
-"Automatische Netzwerkkonfiguration nochmals versuchen mit Eingabe eines DHCP-"
-"Rechnernamens"
+msgstr "Autom. Konfiguration erneut versuchen mit einem DHCP-Rechnername"
 
 #. Type: select
 #. Choices
@@ -687,12 +685,12 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Hier können Sie wählen, die automatische DHCP-Netzwerkkonfiguration nochmals "
+"Hier können Sie wählen, die automatische DHCP-Netzwerkkonfiguration erneut "
 "zu versuchen (was funktionieren könnte, wenn Ihr DHCP-Server sehr langsam "
 "reagiert) oder das Netzwerk manuell zu konfigurieren. Manche DHCP-Server "
 "erfordern, dass der Client einen speziellen DHCP-Rechnernamen sendet, daher "
-"können Sie auch wählen, die automatische DHCP-Netzwerkkonfiguration nochmals "
-"mit einem von Ihnen angegebenen Rechnernamen zu versuchen."
+"können Sie auch wählen, die automatische DHCP-Netzwerkkonfiguration mit "
+"Angabe eines Rechnernamens erneut zu versuchen."
 
 #. Type: note
 #. Description
