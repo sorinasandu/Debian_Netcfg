@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
-"POT-Creation-Date: 2007-12-23 22:48+0000\n"
+"POT-Creation-Date: 2008-01-26 07:32+0000\n"
 "PO-Revision-Date: 2007-12-15 06:25-0800\n"
 "Last-Translator: Praveen|പ്രവീണ്‍ A|എ <pravi.a@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -30,14 +30,14 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:5
+#: ../netcfg-common.templates:1001
 msgid "Auto-configure network with DHCP?"
 msgstr "ഡിഎച്ച്സിപി ഉപയോഗിച്ചു് ശൃംഖല ഇടപെടലില്ലാതെ ക്രമീകരിയ്ക്കണോ?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:5
+#: ../netcfg-common.templates:1001
 msgid ""
 "Networking can either be configured by DHCP or by manually entering all the "
 "information. If you choose to use DHCP and the installer is unable to get a "
@@ -54,14 +54,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:16
+#: ../netcfg-common.templates:2001
 msgid "Domain name:"
 msgstr "ഡൊമെയിന്‍ നാമം:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:16
+#: ../netcfg-common.templates:2001
 msgid ""
 "The domain name is the part of your Internet address to the right of your "
 "host name.  It is often something that ends in .com, .net, .edu, or .org.  "
@@ -77,14 +77,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:25
+#: ../netcfg-common.templates:3001
 msgid "Name server addresses:"
 msgstr "നാമ സേവക വിലാസങ്ങള്‍:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:25
+#: ../netcfg-common.templates:3001
 msgid ""
 "The name servers are used to look up host names on the network. Please enter "
 "the IP addresses (not host names) of up to 3 name servers, separated by "
@@ -100,14 +100,14 @@ msgstr ""
 #. Type: select
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:36
+#: ../netcfg-common.templates:4001
 msgid "Primary network interface:"
 msgstr "പ്രാഥമിക ശൃഖലയുമായുള്ള വിനിമയതലം:"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:36
+#: ../netcfg-common.templates:4001
 msgid ""
 "Your system has multiple network interfaces. Choose the one to use as the "
 "primary network interface during the installation. If possible, the first "
@@ -120,7 +120,17 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:44
+#. Type: string
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:5001 ../netcfg-common.templates:6001
+msgid "Wireless ESSID for ${iface}:"
+msgstr "${iface}-ന്റെ വയര്‍ലെസ്സ് ESSID:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:5001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. If you would like to "
@@ -133,21 +143,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:52
-msgid "Wireless ESSID for ${iface}:"
-msgstr "${iface}-ന്റെ വയര്‍ലെസ്സ് ESSID:"
-
-#. Type: string
-#. Description
-#. :sl1:
-#: ../netcfg-common.templates:52
+#: ../netcfg-common.templates:6001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ലഭ്യമായ ഒരു വയര്‍ലെസ്സ് ശൃംഖല കണ്ടെത്താനുള്ള ശ്രമങ്ങള്‍ പരാജയപ്പെട്ടു."
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:52
+#: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To skip wireless "
@@ -160,14 +163,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:7001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "${iface} എന്ന വയര്‍ലെസ്സ് ഉപകരണത്തിനു വേണ്ട ഡബ്ലിയുഇപി താക്കോല്‍:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:7001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -178,7 +181,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:7001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -189,7 +192,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:7001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -200,7 +203,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:62
+#: ../netcfg-common.templates:7001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -210,14 +213,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:8001
 msgid "Invalid WEP key"
 msgstr "അസാധുവായ ഡബ്ലിയുഇപി താക്കോല്‍"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:78
+#: ../netcfg-common.templates:8001
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -228,14 +231,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:9001
 msgid "Invalid ESSID"
 msgstr "അസാധുവായ ഇഎസ്എസ്ഐഡി"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:86
+#: ../netcfg-common.templates:9001
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -246,21 +249,21 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:10001
 msgid "Hostname:"
 msgstr "ഹോസ്റ്റ്നാമം:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:10001
 msgid "Please enter the hostname for this system."
 msgstr "ദയവായി ഈ സിസ്റ്റത്തിനു വേണ്ട ഹോസ്റ്റ്നാമം നല്‍കുക."
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:94
+#: ../netcfg-common.templates:10001
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -274,21 +277,21 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:105
+#: ../netcfg-common.templates:11001
 msgid "Invalid hostname"
 msgstr "അസാധുവായ ഹോസ്റ്റ്നാമം"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:105
+#: ../netcfg-common.templates:11001
 msgid "The name \"${hostname}\" is invalid."
 msgstr "\"${hostname}\" എന്ന ഹോസ്റ്റ്നാമം അസാധുവാണു്."
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:105
+#: ../netcfg-common.templates:11001
 msgid ""
 "A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
@@ -301,14 +304,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:115
+#: ../netcfg-common.templates:12001
 msgid "Error"
 msgstr "തെറ്റ്"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:115
+#: ../netcfg-common.templates:12001
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -319,14 +322,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:13001
 msgid "No network interfaces detected"
 msgstr "ശൃഖലയുമായുള്ള വിനിമയതലങ്ങളൊന്നും കണ്ടു പിടിക്കപ്പെട്ടിട്ടില്ല"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:13001
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -337,7 +340,7 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:122
+#: ../netcfg-common.templates:13001
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -351,7 +354,7 @@ msgstr ""
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #. :sl2:
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:14001
 msgid "Kill switch enabled on ${iface}"
 msgstr "${iface} ല്‍ കില്‍ സ്വിച്ച് പ്രാവര്‍ത്തികമാക്കി"
 
@@ -360,7 +363,7 @@ msgstr "${iface} ല്‍ കില്‍ സ്വിച്ച് പ്രാ
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #. :sl2:
-#: ../netcfg-common.templates:134
+#: ../netcfg-common.templates:14001
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
@@ -377,7 +380,7 @@ msgstr ""
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:15001
 msgid "Infrastructure (Managed) network"
 msgstr "ഇന്‍ഫ്രാസ്ട്രക്ചര്‍ (മാനേജ്ഡ്) ശൃംഖല"
 
@@ -389,19 +392,19 @@ msgstr "ഇന്‍ഫ്രാസ്ട്രക്ചര്‍ (മാനേ�
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:148
+#: ../netcfg-common.templates:15001
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "അഡ്ഹോക്ക് ശൃംഖല (പിയര്‍-ടു-പിയര്‍)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:15002
 msgid "Type of wireless network:"
 msgstr "വയര്‍ലെസ്സ് ശൃഖലയുടെ തരം:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:149
+#: ../netcfg-common.templates:15002
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -414,119 +417,119 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:157
+#: ../netcfg-common.templates:16001
 msgid "Wireless network configuration"
 msgstr "വയര്‍ലെസ്സ് ശൃംഖലാ ക്രമീകരണം"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:162
+#: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points ..."
 msgstr "വയര്‍ലെസ്സ് സമീപന സ്ഥാനങ്ങള്‍ക്കായി തെരഞ്ഞുകൊണ്ടിരിയ്ക്കുന്നു ..."
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:173
+#: ../netcfg-common.templates:19001
 msgid "<none>"
 msgstr "<ഒന്നുമില്ല>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:178
+#: ../netcfg-common.templates:20001
 msgid "Wireless ethernet (802.11x)"
 msgstr "വയര്‍ലെസ്സ് ഈഥര്‍നെറ്റ് (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:183
+#: ../netcfg-common.templates:21001
 msgid "wireless"
 msgstr "വയര്‍ലെസ്സ്"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:188
+#: ../netcfg-common.templates:22001
 msgid "Ethernet"
 msgstr "ഈഥര്‍നെറ്റ്"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:193
+#: ../netcfg-common.templates:23001
 msgid "Token Ring"
 msgstr "ടോക്കണ്‍ റിങ്ങ്"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:198
+#: ../netcfg-common.templates:24001
 msgid "USB net"
 msgstr "യുഎസ്ബി നെറ്റ്"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:209
+#: ../netcfg-common.templates:26001
 msgid "Serial-line IP"
 msgstr "സീരിയല്‍-ലൈന്‍ ഐപി"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:214
+#: ../netcfg-common.templates:27001
 msgid "Parallel-port IP"
 msgstr "പാരലല്‍-പോര്‍ട്ട് ഐപി"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:219
+#: ../netcfg-common.templates:28001
 msgid "Point-to-Point Protocol"
 msgstr "പോയിന്റ്-ടു-പോയിന്റ് പ്രോട്ടോകാള്‍"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:224
+#: ../netcfg-common.templates:29001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-ഇന്‍-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:229
+#: ../netcfg-common.templates:30001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ഐഎസ്ഡിഎന്‍ പോയിന്റ്-ടു-പോയിന്റ് പ്രോട്ടോകാള്‍"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:234
+#: ../netcfg-common.templates:31001
 msgid "Channel-to-channel"
 msgstr "ചാനല്‍-ടു-ചാനല്‍"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:239
+#: ../netcfg-common.templates:32001
 msgid "Real channel-to-channel"
 msgstr "യഥാര്‍ത്ഥ ചാനല്‍-ടു-ചാനല്‍"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:249
+#: ../netcfg-common.templates:34001
 msgid "Inter-user communication vehicle"
 msgstr "അന്തര്‍-ഉപയോക്താ ആശയവിനിമയ വാഹനം"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:254
+#: ../netcfg-common.templates:35001
 msgid "Unknown interface"
 msgstr "തിരിച്ചറിയപ്പെടാത്ത വിനിമയതലം"
 
@@ -534,7 +537,7 @@ msgstr "തിരിച്ചറിയപ്പെടാത്ത വിനി�
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:260
+#: ../netcfg-common.templates:36001
 msgid "Storing network settings ..."
 msgstr "ശൃംഖലാ സജ്ജീകരണങ്ങള്‍ സൂക്ഷിച്ചു് കൊണ്ടിരിയ്ക്കുന്നു ..."
 
@@ -542,21 +545,21 @@ msgstr "ശൃംഖലാ സജ്ജീകരണങ്ങള്‍ സൂക�
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:266
+#: ../netcfg-common.templates:37001
 msgid "Configure the network"
 msgstr "ശൃംഖല ക്രമീകരിയ്ക്കുക"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:4
+#: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
 msgstr "ഡിഎച്ച്സിപി ഹോസ്റ്റ്നാമം:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:4
+#: ../netcfg-dhcp.templates:1001
 msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
@@ -567,42 +570,42 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:4
+#: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
 msgstr "മറ്റു കൂടുതല്‍ ഉപയോക്താക്കള്‍ക്കും ഈ കളം വെറുതെ ഇടാവുന്നതാണ്."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:13
+#: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
 msgstr "ഡിഎച്ച്സിപി ഉപയോഗിച്ചു് ശൃംഖല ക്രമീകരിച്ചു കൊണ്ടിരിയ്ക്കുന്നു"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:18
+#: ../netcfg-dhcp.templates:3001
 msgid "This may take some time."
 msgstr "ഇതു് കുറച്ചു് സമയമെടുത്തേക്കാം."
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:23
+#: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
 msgstr "ശൃംഖലയുടെ ഇടപെടലില്ലാത്ത ക്രമീകരണം വിജയിച്ചു"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:28
+#: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client found"
 msgstr "ഡിഎച്ച്സിപി ക്ലയന്റൊന്നും കണ്ടില്ല"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:28
+#: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
 "ഡിഎച്ച്സിപി ക്ലയന്റൊന്നും കണ്ടില്ല. ഈ പാക്കേജിന് പമ്പ് (pump) അല്ലെങ്കില്‍ ഡിഎച്ച്സിപി-ക്ലയന്റ് "
@@ -611,7 +614,7 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:28
+#: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
 msgstr "ഡിഎച്ച്സിപി ക്രമീകരണ പ്രക്രിയയില്‍ നിന്നും പിന്തിരിഞ്ഞിരിയ്ക്കുന്നു."
 
@@ -621,7 +624,7 @@ msgstr "ഡിഎച്ച്സിപി ക്രമീകരണ പ്രക�
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
 msgstr "ശൃഖലയുടെ ഇടപെടലില്ലാത്ത ക്രമീകരണം വീണ്ടും ശ്രമിയ്ക്കുക"
 
@@ -631,7 +634,7 @@ msgstr "ശൃഖലയുടെ ഇടപെടലില്ലാത്ത ക�
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
 "ഡിഎച്ച്സിപി ഹോസ്റ്റുനാമം ഉപയോഗിച്ചു് ശൃഖലയുടെ ഇടപെടലില്ലാത്ത ക്രമീകരണം വീണ്ടും ശ്രമിയ്ക്കുക"
@@ -642,7 +645,7 @@ msgstr ""
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
 msgstr "തന്നത്താന്‍ ശൃംഖല ക്രമീകരിയ്ക്കുക"
 
@@ -652,21 +655,21 @@ msgstr "തന്നത്താന്‍ ശൃംഖല ക്രമീകര�
 #. Note to translators : Please keep your translation
 #. below a 65 columns limit (which means 65 characters
 #. in single-byte languages)
-#: ../netcfg-dhcp.templates:40
+#: ../netcfg-dhcp.templates:6001
 msgid "Do not configure the network at this time"
 msgstr "ഇപ്പോള്‍ ശൃംഖല ക്രമീകരിയ്ക്കേണ്ടതില്ല"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:6002
 msgid "Network configuration method:"
 msgstr "ശൃംഖല ക്രമീകരിയ്ക്കേണ്ട രീതി:"
 
 #. Type: select
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:43
+#: ../netcfg-dhcp.templates:6002
 msgid ""
 "From here you can choose to retry DHCP network autoconfiguration (which may "
 "succeed if your DHCP server takes a long time to respond) or to configure "
@@ -684,14 +687,14 @@ msgstr ""
 #. Type: note
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
 msgstr "ശൃഖലയുടെ ഇടപെടലില്ലാത്ത ക്രമീകരണം പരാജയപ്പെട്ടു"
 
 #. Type: note
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:54
+#: ../netcfg-dhcp.templates:7001
 msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
@@ -703,14 +706,14 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:61
+#: ../netcfg-dhcp.templates:8001
 msgid "Continue without a default route?"
 msgstr "ഒരു സഹജമായ വഴിയില്ലാതെ തുടരണോ?"
 
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:61
+#: ../netcfg-dhcp.templates:8001
 msgid ""
 "The network autoconfiguration was successful. However, no default route was "
 "set: the system does not know how to communicate with hosts on the Internet. "
@@ -726,7 +729,7 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl2:
-#: ../netcfg-dhcp.templates:61
+#: ../netcfg-dhcp.templates:8001
 msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
@@ -737,21 +740,21 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-dhcp.templates:74
+#: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
 msgstr "വയര്‍ലെസ്സ് ശൃംഖല പുനക്രമീകരിയ്ക്കുക"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:4
+#: ../netcfg-static.templates:1001
 msgid "IP address:"
 msgstr "ഐപി വിലാസം:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:4
+#: ../netcfg-static.templates:1001
 msgid ""
 "The IP address is unique to your computer and consists of four numbers "
 "separated by periods.  If you don't know what to use here, consult your "
@@ -764,14 +767,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:12
+#: ../netcfg-static.templates:2001
 msgid "Malformed IP address"
 msgstr "തെറ്റായ രൂപത്തിലുള്ള ഐപി വിലാസം"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:12
+#: ../netcfg-static.templates:2001
 msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
@@ -782,14 +785,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:19
+#: ../netcfg-static.templates:3001
 msgid "Point-to-point address:"
 msgstr "പോയിന്റ്-ടു-പോയിന്റ് വിലാസം:"
 
 #. Type: string
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:19
+#: ../netcfg-static.templates:3001
 msgid ""
 "The point-to-point address is used to determine the other endpoint of the "
 "point to point network.  Consult your network administrator if you do not "
@@ -804,14 +807,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:29
+#: ../netcfg-static.templates:4001
 msgid "Netmask:"
 msgstr "നെറ്റ്മാസ്ക്:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:29
+#: ../netcfg-static.templates:4001
 msgid ""
 "The netmask is used to determine which machines are local to your network.  "
 "Consult your network administrator if you do not know the value.  The "
@@ -824,14 +827,14 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:38
+#: ../netcfg-static.templates:5001
 msgid "Gateway:"
 msgstr "ഗേയ്റ്റ്‌വേ:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:38
+#: ../netcfg-static.templates:5001
 msgid ""
 "The gateway is an IP address (four numbers separated by periods) that "
 "indicates the gateway router, also known as the default router.  All traffic "
@@ -850,21 +853,21 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:50
+#: ../netcfg-static.templates:6001
 msgid "Unreachable gateway"
 msgstr "ഗേയ്റ്റ്‌വേ എത്തിച്ചേരാവുന്നതല്ല"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:50
+#: ../netcfg-static.templates:6001
 msgid "The gateway address you entered is unreachable."
 msgstr "നിങ്ങള്‍ നല്‍കിയ ഗേയ്റ്റ്‌വേ വിലാസം എത്തിച്ചേരാവുന്നതല്ല."
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-static.templates:50
+#: ../netcfg-static.templates:6001
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
@@ -874,21 +877,21 @@ msgstr ""
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:60
+#: ../netcfg-static.templates:7001
 msgid "Is this information correct?"
 msgstr "ഈ വിവരം ശരിയാണോ?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:60
+#: ../netcfg-static.templates:7001
 msgid "Currently configured network parameters:"
 msgstr "ഇപ്പോള്‍ ക്രമീകരിച്ചിട്ടുള്ള ശൃഖല പരാമീറ്ററുകള്‍:"
 
 #. Type: boolean
 #. Description
 #. :sl1:
-#: ../netcfg-static.templates:60
+#: ../netcfg-static.templates:7001
 msgid ""
 " interface     = ${interface}\n"
 " ipaddress     = ${ipaddress}\n"
@@ -908,6 +911,6 @@ msgstr ""
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-static.templates:74
+#: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
 msgstr "സ്ഥിര വിലാസമുപയോഗിച്ച് ഒരു ശൃഖല ക്രമീകരിയ്ക്കുക"
