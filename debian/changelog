@@ -1,3 +1,10 @@
+netcfg (1.42) UNRELEASED; urgency=low
+
+  * No longer include the dhclient-script as it is now provided by the
+    dhcp3-client-udeb (>= 3.1.0-2).
+
+ -- Frans Pop <fjp@debian.org>  Sat, 09 Feb 2008 14:13:33 +0100
+
 netcfg (1.41) unstable; urgency=low
 
   * No longer copy the dhclient.conf script to the target system. The reason
