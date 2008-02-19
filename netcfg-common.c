@@ -554,7 +554,7 @@ short verify_hostname (char *hname)
     len = strlen(hname);
     
     /* Check the hostname for RFC 1123 compliance.  */
-    if ((len < 2) ||
+    if ((len < 1) ||
         (len > 63) ||
         (strspn(hname, valid_chars) != len) ||
         (hname[len - 1] == '-') ||
