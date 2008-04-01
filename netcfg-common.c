@@ -27,6 +27,7 @@
 #elif defined(__linux__)
 #include <linux/if.h>
 #endif
+#include <net/if_arp.h>
 #include <errno.h>
 #include <assert.h>
 #include <ctype.h>
@@ -179,6 +180,30 @@ int check_kill_switch(const char *iface)
 
 #undef SYSCLASSNET
 
+int is_raw_80211(const char *iface)
+{
+    struct ifreq ifr;
+    struct sockaddr sa;
+    
+    strncpy(ifr.ifr_name, iface, IFNAMSIZ);
+    
+    if (skfd && ioctl(skfd, SIOCGIFHWADDR, &ifr) < 0) {
+        di_warning("Unable to retrieve interface type.");
+        return 0;
+    }
+
+    sa = * (struct sockaddr *) &ifr.ifr_hwaddr;
+    switch (sa.sa_family) {
+    case ARPHRD_IEEE80211:
+    case ARPHRD_IEEE80211_PRISM:
+    case ARPHRD_IEEE80211_RADIOTAP:
+        return 1;
+
+    default:
+        return 0;
+    }
+}
+
 int is_interface_up(char *inter)
 {
     struct ifreq ifr;
@@ -237,6 +262,8 @@ int get_all_ifs (int all, char*** ptr)
         if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
             continue;
         if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
+            continue;
+        if (is_raw_80211(ibuf))
             continue;
         if (all || is_interface_up(ibuf) == 1) {
             list = realloc(list, sizeof(char*) * (len + 1));
