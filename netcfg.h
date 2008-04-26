@@ -34,7 +34,7 @@
 
 #define IPV6_HOSTS \
 "# The following lines are desirable for IPv6 capable hosts\n" \
-"::1     ip6-localhost ip6-loopback\n" \
+"::1     localhost ip6-localhost ip6-loopback\n" \
 "fe00::0 ip6-localnet\n" \
 "ff00::0 ip6-mcastprefix\n" \
 "ff02::1 ip6-allnodes\n" \
