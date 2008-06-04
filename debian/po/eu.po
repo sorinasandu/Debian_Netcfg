@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: di_sublevel1_eu\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-05-28 16:15+0200\n"
+"PO-Revision-Date: 2008-06-03 16:43+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -277,7 +277,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid "Invalid hostname"
-msgstr "Ostalari izen baliogabea"
+msgstr "Ostalari-izen baliogabea"
 
 #. Type: error
 #. Description
@@ -295,9 +295,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Baliozko ostalari izen batek bakarrik izan ditzake 0-9 zenbakiak, a-z letra "
-"minuskulak eta minus ikurra. 2 eta 63 karaktere arteko luzera izan dezake "
-"eta ez du minus ikurrarekin hasi edo bukatu behar."
+"Baliozko ostalari-izenak honako karaktereak izan ditzake: 0-9 zenbakiak, a-z "
+"letra minuskulak eta minus ikurra. 2 eta 63 karaktere arteko luzera izan "
+"dezake eta ez du minus ikurrarekin hasi edo bukatu behar."
 
 #. Type: error
 #. Description
@@ -322,7 +322,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:13001
 msgid "No network interfaces detected"
-msgstr "Ez da sare interfazerik atzeman"
+msgstr "Ez da sareko interfazerik detektatu"
 
 #. Type: error
 #. Description
@@ -332,7 +332,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Ez da sare interfazerik aurkitu. Instalazio sistemak ezin izan du sareko "
+"Ez da sareko interfazerik aurkitu. Instalazioko sistemak ezin izan du sareko "
 "gailurik aurkitu."
 
 #. Type: error
@@ -343,8 +343,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Beharbada modulu jakin bat kargatu behar duzu sare txartelerako, baldin "
-"badaukazu. Horretarako, itzuli sareko hardwarea atzemate urratsera."
+"Beharbada modulu jakin bat kargatu behar duzu sareko txartelerako, baldin "
+"badaukazu. Horretarako, itzuli sareko hardwarea detektatzeko urratsera."
 
 #. Type: note
 #. Description
@@ -353,7 +353,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Kill switch enabled on ${iface}"
-msgstr "Kill switch  ${iface}-en aktibatuta"
+msgstr "'Kill switch' ${iface}(e)n aktibatuta"
 
 #. Type: note
 #. Description
@@ -366,8 +366,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Dirudienez ${iface} ezgaiturik izan da  \"kill switch\" fisiko baten bidez. "
-"Interfaze hau erabiltzeko asmoa baduzu mesedez gaitu ezazu erabili aurretik."
+"Badirudi ${iface} desgaitu egin dela \"kill switch\" fisiko baten bidez. "
+"Interfaze hau erabiltzeko asmoa baduzu,  gaitu ezazu jarraitu aurretik."
 
 #. Type: select
 #. Choices
@@ -479,7 +479,7 @@ msgstr "Serieko lineako IP"
 #. :sl2:
 #: ../netcfg-common.templates:27001
 msgid "Parallel-port IP"
-msgstr "Ataka paraleloko IP"
+msgstr "Ataka paraleloko IPa"
 
 #. Type: text
 #. Description
@@ -605,7 +605,8 @@ msgstr "Ez da DHCP bezerorik aurkitu"
 #: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
-"Ez da DHCP bezerorik aurkitu. Pakete honek ponpa edo dhcp bezeroa behar du."
+"Ez da DHCP bezerorik aurkitu. Pakete honek 'pump' edo 'dhcp' bezeroa behar "
+"du."
 
 #. Type: error
 #. Description
@@ -731,7 +732,7 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Ziur ez bazaude, ez zenuke bide lehenetsirik gabe jarraitu beharko: eman "
-"arazo honen berri sare administratzaile lokalari."
+"arazo honen berri sare lokaleko administratzaileari."
 
 #. Type: text
 #. Description
@@ -796,7 +797,7 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "Puntutik punturako helbidea puntutik punturako sarearen amaiera-puntua "
-"finkatzeko erabiltzen da. Balioa ez badakizu, galdetu sare "
+"finkatzeko erabiltzen da. Balioa ez badakizu, galdetu sareko "
 "administratzaileari. Puntutik punturako helbideak puntuz bereizitako lau "
 "zenbakiren itxura izan behar du."
 
@@ -866,7 +867,7 @@ msgstr "Sartutako atebide helbidea atziezina da."
 #: ../netcfg-static.templates:6001
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Gaizki sartu duzu IP helbidea, sare maskara eta/edo atebidea."
+msgstr "Gaizki sartu duzu IP helbidea, sare-maskara eta/edo atebidea."
 
 #. Type: boolean
 #. Description
