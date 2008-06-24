@@ -19,15 +19,15 @@
 # Samuele Giovanni Tonon <samu@linuxasylum.net>
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
-#
+# Milo Casagrande <milo_casagrande@yahoo.it>, 2008
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-01-19 16:56+0100\n"
-"Last-Translator: Stefano Canepa <sc@linux.it>\n"
+"PO-Revision-Date: 2008-06-16 18:21+0200\n"
+"Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -194,8 +194,8 @@ msgid ""
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
 "Se la propria chiave WEP è nel formato «nnnn-nnnn-nn», «nn:nn:nn:nn:nn:nn:nn:"
-"nn» oppure «nnnnnnnn», dove «n» è un numero, allora copiarla così com'è nel "
-"campo."
+"nn» oppure «nnnnnnnn», dove «n» è un numero, allora inserirla così com'è in "
+"questo campo."
 
 #. Type: string
 #. Description
@@ -205,8 +205,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se la chiave WEP è sotto forma di parola chiave, le si apponga davanti "
-"«s:» (senza le virgolette)."
+"Se la propria chiave WEP è nel formato di passphrase (frase d'accesso), "
+"anteporre alla passphrase «s:» (senza le virgolette)."
 
 #. Type: string
 #. Description
@@ -216,8 +216,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Ovviamente se non c'è una chiave WEP per questa rete, lasciare il campo in "
-"bianco."
+"Se non c'è una chiave WEP per questa rete, lasciare il campo in bianco."
 
 #. Type: error
 #. Description
@@ -422,8 +421,8 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero "
-"«access point» di qualsiasi tipo allora la rete è «Managed». Se invece "
-"l'«access point» è fatto da un altro computer allora la rete è «Ad-hoc»."
+"access point di qualsiasi tipo allora la rete è «managed». Se invece "
+"l'access point è costituito da un altro computer, allora la rete è «ad-hoc»."
 
 #. Type: text
 #. Description
@@ -437,7 +436,7 @@ msgstr "Configurazione della rete wireless"
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points..."
-msgstr "Ricerca degli «access point» wireless in corso."
+msgstr "Ricerca degli access point wireless..."
 
 #. Type: text
 #. Description
@@ -550,7 +549,7 @@ msgstr "Interfaccia sconosciuta"
 #. :sl1:
 #: ../netcfg-common.templates:36001
 msgid "Storing network settings..."
-msgstr "Memorizzazione delle impostazioni della rete in corso."
+msgstr "Memorizzazione delle impostazioni di rete..."
 
 #. Type: text
 #. Description
@@ -565,7 +564,7 @@ msgstr "Configurare la rete"
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
-msgstr "Hostname DHCP:"
+msgstr "Nome host DHCP:"
 
 #. Type: string
 #. Description
@@ -575,16 +574,16 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"In alcune situazioni è necessario specificare un hostname DHCP. Se si usa un "
-"cable modem potrebbe essere necessario specificare qui il numero "
-"dell'account."
+"Potrebbe essere necessario specificare un nome host DHCP. Se si sta usando "
+"un cable modem, potrebbe essere necessario specificare qui un numero di "
+"account."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
-msgstr "La maggior parte degli altri utenti può lasciare il campo vuoto."
+msgstr "La maggior parte degli utenti può lasciare il campo vuoto."
 
 #. Type: text
 #. Description
@@ -638,7 +637,7 @@ msgstr "La configurazione con DHCP verrà annullata."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "Riprova la configurazione automatica della rete"
+msgstr "Riprovare configurazione automatica della rete"
 
 #. Type: select
 #. Choices
@@ -648,8 +647,7 @@ msgstr "Riprova la configurazione automatica della rete"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr ""
-"Riprovare la configurazione automatica della rete con un nome host DHCP"
+msgstr "Riprovare configurazione automatica della rete con nome host DHCP"
 
 #. Type: select
 #. Choices
@@ -659,7 +657,7 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
-msgstr "Configura la rete manualmente"
+msgstr "Configurare la rete manualmente"
 
 #. Type: select
 #. Choices
@@ -689,18 +687,18 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Adesso è possibile riprovare la configurazione automatica della rete (che "
-"potrebbe funzionare se il server DHCP impiegasse molto tempo a rispondere) o "
-"proseguire con la configurazione manuale. Alcuni server DHCP richiedono che "
-"uno hostname sia inviato dal client, quindi è anche possibile ritentare la "
-"configurazione automatica tramite DHCP specificando questo nome."
+"Da qui è possibile scegliere di ritentare la configurazione automatica della "
+"rete DHCP (che potrebbe funzionare se il server DHCP impiegasse molto tempo "
+"a rispondere) o di configurare la rete manualmente. Alcuni server DHCP "
+"richiedono che uno hostname sia inviato dal client, quindi è anche possibile "
+"ritentare la configurazione automatica tramite DHCP specificando questo nome."
 
 #. Type: note
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr "Configurazione automatica della rete fallita"
+msgstr "Configurazione automatica della rete non riuscita"
 
 #. Type: note
 #. Description
@@ -754,7 +752,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Configura la rete wireless"
+msgstr "Riconfigurare la rete wireless"
 
 #. Type: string
 #. Description
@@ -855,11 +853,11 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"Questo è un indirizzo IP (quattro numeri separati da punti) che indica il "
-"router gateway, chiamato anche default router, al quale viene inviato tutto "
-"il traffico per l'esterno della rete LAN (per esempio, Internet). In alcuni "
-"rari casi un router non è presente; in questi casi è possibile lasciare "
-"questo campo vuoto. Se non si conosce la risposta consultare "
+"Il gateway è un indirizzo IP (quattro numeri separati da punti) che indica "
+"il router gateway, chiamato anche default router, al quale viene inviato "
+"tutto il traffico per l'esterno della rete LAN (per esempio, Internet). In "
+"alcuni rari casi un router non è presente; in questi casi è possibile "
+"lasciare questo campo vuoto. Se non si conosce la risposta consultare "
 "l'amministratore della rete."
 
 #. Type: error
@@ -923,4 +921,4 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
-msgstr "Configura la rete usando indirizzi statici"
+msgstr "Configurare la rete usando indirizzi statici"
