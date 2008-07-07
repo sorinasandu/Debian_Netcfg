@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-06-29 01:00+0200\n"
+"PO-Revision-Date: 2008-07-07 20:31+0200\n"
 "Last-Translator: Mert Dirik <mertdirik@gmail.com>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -301,9 +301,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Geçerli bir makine adı; sadece 0-9 arasında rakamlar, a-z arasında Türkçe "
-"olmayan küçük harfler ve eksi ('-') işareti içermeli; 2 ilâ 63 karakter "
-"uzunluğunda olmalı, sonunda ve başında eksi işareti bulunmamalıdır."
+"Geçerli bir makine adı; sadece 0-9 arasında rakamlar, a-z arasında Türkçeye "
+"özel olmayan küçük harfler ve eksi ('-') işareti içermeli; 2 ilâ 63 karakter "
+"uzunluğunda olmalı, bu adın sonunda ve başında eksi işareti bulunmamalıdır."
 
 #. Type: error
 #. Description
@@ -404,7 +404,7 @@ msgstr "Plansız ağ (Ad-hoc / Peer to peer)"
 #. Description
 #: ../netcfg-common.templates:15002
 msgid "Type of wireless network:"
-msgstr "Kablosuz ağ tipi:"
+msgstr "Kablosuz ağ türü:"
 
 #. Type: select
 #. Description
@@ -854,7 +854,7 @@ msgstr ""
 "belirtir. Yerel ağdan dışarı çıkan bütün trafik (İnternet gibi) bu "
 "yönlendiriciye gönderilir. Herhangi bir yönlendiriciye sahip olmadığınız "
 "nadir durumlar için bu alanı boş bırakabilirsiniz. Eğer bu yapılandırma "
-"sorusunun uygun cevabını bilmiyorsanız sistem yöneticinize başvurun."
+"sorusunun uygun yanıtını bilmiyorsanız sistem yöneticinize başvurun."
 
 #. Type: error
 #. Description
@@ -911,7 +911,7 @@ msgstr ""
 " ağ maskesi      = ${netmask}\n"
 " ağ geçidi       = ${gateway}\n"
 " noktadannoktaya = ${pointopoint}\n"
-" isim sunucuları = ${nameservers}"
+" ad sunucuları = ${nameservers}"
 
 #. Type: text
 #. Description
