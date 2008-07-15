@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-02-04 03:46-0200\n"
+"PO-Revision-Date: 2008-07-14 18:13-0300\n"
 "Last-Translator: Felipe Augusto van de Wiel (faw) <faw@debian.org>\n"
 "Language-Team: l10n portuguese <debian-l10n-portuguese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,10 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "A rede pode ser configurada via DHCP ou informando manualmente todos os "
-"dados necessários. Caso você opte por usar a configuração via DHCP e o "
-"instalador não consiga obter uma configuração funcional de um servidor DHCP "
-"em sua rede, você terá a oportunidade de configurar sua rede manualmente "
-"após a tentativa de configurá-la via DHCP."
+"dados necessários. Se você optar por usar a configuração via DHCP e o "
+"instalador não conseguir obter uma configuração funcional de um servidor "
+"DHCP em sua rede, você terá a oportunidade de configurar sua rede "
+"manualmente após a tentativa de configurá-la via DHCP."
 
 #. Type: string
 #. Description
@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 "${iface} é uma interface de rede sem fio. Por favor, informe o nome (o "
 "ESSID) da rede sem fio que você gostaria que a ${iface} usasse. Se você "
-"deseje usar qualquer rede disponível, deixe este campo em branco."
+"deseja usar qualquer rede disponível, deixe este campo em branco."
 
 #. Type: string
 #. Description
@@ -188,8 +188,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se sua chave WEP está no formato de uma \"passphrase\", prefixe a mesma com "
-"'s:' (sem as aspas)."
+"Se sua chave WEP está no formato de uma frase-senha (\"passphrase\"), "
+"prefixe a mesma com 's:' (sem as aspas)."
 
 #. Type: string
 #. Description
@@ -199,8 +199,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"É claro, caso não exista uma chave WEP para sua rede sem fio, deixe este "
-"campo em branco."
+"É claro, se não há uma chave WEP para sua rede sem fio, deixe este campo em "
+"branco."
 
 #. Type: error
 #. Description
@@ -407,7 +407,7 @@ msgid ""
 msgstr ""
 "Redes sem fio podem ser gerenciadas ou ad-hoc. Se você usa um ponto de "
 "acesso real de algum tipo, sua rede é Gerenciada. Se outro computador é seu "
-"'ponto de acesso', sua rede é do tipo Ad-hoc."
+"'ponto de acesso', então sua rede é do tipo Ad-hoc."
 
 #. Type: text
 #. Description
@@ -421,7 +421,7 @@ msgstr "Configuração de rede sem fio"
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points..."
-msgstr "Procurando por pontos de acesso sem fio ..."
+msgstr "Procurando por pontos de acesso sem fio..."
 
 #. Type: text
 #. Description
@@ -534,7 +534,7 @@ msgstr "Interface desconhecida"
 #. :sl1:
 #: ../netcfg-common.templates:36001
 msgid "Storing network settings..."
-msgstr "Armazenando configurações de rede ..."
+msgstr "Armazenando configurações de rede..."
 
 #. Type: text
 #. Description
@@ -560,7 +560,8 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "Você pode precisar fornecer um nome de máquina DHCP. Se você está usando um "
-"modem a cabo, você pode precisar especificar um número de conta aqui."
+"modem a cabo (\"cable modem\"), você pode ter que especificar um número de "
+"conta aqui."
 
 #. Type: string
 #. Description
@@ -568,15 +569,15 @@ msgstr ""
 #: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
 msgstr ""
-"A maioria dos outros tipos de usuários pode somente deixar esse campo em "
-"branco."
+"A maioria dos outros tipos de usuários pode simplesmente deixar esse campo "
+"em branco."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr "Configurando a rede via DHCP"
+msgstr "Configurando a rede com DHCP"
 
 #. Type: text
 #. Description
@@ -760,8 +761,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "O endereço IP é único para seu computador e consiste de quatro números "
-"separados por pontos. Caso você não saiba o que usar aqui, consulte o "
-"administrador de sua rede."
+"separados por pontos. Se você não sabe o que usar aqui, consulte o seu "
+"administrador de redes."
 
 #. Type: error
 #. Description
@@ -820,7 +821,7 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "A máscara de rede é usada para determinar quais máquinas são locais para sua "
-"rede. Consulte o administrador de sua rede se você não sabe o que usar. A "
+"rede. Consulte o seu administrador de redes se você não sabe o que usar. A "
 "máscara de rede deve ser informada como quatro números separados por pontos."
 
 #. Type: string
@@ -847,8 +848,8 @@ msgstr ""
 "que vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
 "através desse roteador. Em raras circunstâncias, você pode não possuir um "
 "roteador. Nesse caso, este campo pode ser deixado em branco. Caso você não "
-"saiba a resposta correta para essa pergunta, consulte o administrador de sua "
-"rede."
+"saiba a resposta correta para essa pergunta, consulte o seu administrador de "
+"redes."
 
 #. Type: error
 #. Description
