@@ -19,15 +19,15 @@
 # Samuele Giovanni Tonon <samu@linuxasylum.net>
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
-# Milo Casagrande <milo_casagrande@yahoo.it>, 2008
+# Milo Casagrande <milo@ubuntu.com>, 2008
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-06-16 18:21+0200\n"
-"Last-Translator: Milo Casagrande <milo_casagrande@yahoo.it>\n"
+"PO-Revision-Date: 2008-07-05 18:33+0200\n"
+"Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -152,7 +152,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:6001
 msgid "Attempting to find an available wireless network failed."
-msgstr "Il tentativo di rilevare una rete wireless disponibile è fallito."
+msgstr "Il tentativo di rilevare una rete wireless disponibile non è riuscito."
 
 #. Type: string
 #. Description
@@ -309,7 +309,7 @@ msgid ""
 msgstr ""
 "Un nome valido può contenere solo numeri da 0 a 9, lettere minuscole da a a "
 "z e il segno meno. La sua lunghezza deve essere compresa tra 2 e 63 "
-"caratteri, ma non si può iniziare o finire con il segno meno."
+"caratteri, ma non può iniziare o finire con il segno meno."
 
 #. Type: error
 #. Description
@@ -327,7 +327,7 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Si è verificato un errore e la configurazione della rete è stata interrotta. "
-"È possibile riprovare usando il menu principale."
+"È possibile riprovare la configurazione dal menù principale."
 
 #. Type: error
 #. Description
@@ -379,8 +379,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} sembra essere stata disabilitata usando un microinterruttore. Se si "
-"desidera usare questa interfaccia occorre abilitarla prima di continuare."
+"${iface} sembra essere stata disabilitata usando un microinterruttore. Per "
+"usare questa interfaccia è necessario abilitarla prima di continuare."
 
 #. Type: select
 #. Choices
@@ -392,7 +392,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:15001
 msgid "Infrastructure (Managed) network"
-msgstr "Rete «Infrastructure» (Managed)"
+msgstr "Rete «infrastructure» (managed)"
 
 #. Type: select
 #. Choices
@@ -404,7 +404,7 @@ msgstr "Rete «Infrastructure» (Managed)"
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:15001
 msgid "Ad-hoc network (Peer to peer)"
-msgstr "Rete «Ad-hoc» (connessione uno ad uno)"
+msgstr "Rete «ad-hoc» (connessione uno ad uno)"
 
 #. Type: select
 #. Description
@@ -611,7 +611,7 @@ msgstr "La configurazione automatica della rete ha funzionato"
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client found"
-msgstr "Client DHCP non trovato"
+msgstr "Nessun client DHCP trovato"
 
 #. Type: error
 #. Description
@@ -627,7 +627,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
-msgstr "La configurazione con DHCP verrà annullata."
+msgstr "Il processo di configurazione DHCP è stato terminato."
 
 #. Type: select
 #. Choices
@@ -717,7 +717,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
 msgid "Continue without a default route?"
-msgstr "Proseguire senza specificare una «route» predefinita?"
+msgstr "Continuare senza una «route» predefinita?"
 
 #. Type: boolean
 #. Description
@@ -732,9 +732,9 @@ msgid ""
 msgstr ""
 "La configurazione automatica della rete ha funzionato, ma non è stata "
 "specificata una «route» predefinita: il sistema non sa come comunicare con "
-"host in Internet. Questo rende impossibile proseguire l'installazione a meno "
-"che non si abbia il primo CD-ROM di installazione, un CD-ROM netinst o i "
-"pacchetti disponibili sulla rete locale."
+"gli host in Internet. Questo rende impossibile proseguire l'installazione a "
+"meno che non si abbia il primo CD-ROM di installazione, un CD-ROM «netinst» "
+"o i pacchetti disponibili sulla rete locale."
 
 #. Type: boolean
 #. Description
@@ -789,8 +789,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"L'indirizzo IP che è stato fornito non è corretto. Deve essere nella forma x."
-"x.x.x dove ogni «x» non è maggiore di 255. Riprovare."
+"L'indirizzo IP fornito non è corretto. Dovrebbe essere nella forma x.x.x.x "
+"dove ogni «x» non è maggiore di 255. Riprovare."
 
 #. Type: string
 #. Description
@@ -880,7 +880,9 @@ msgstr "Il gateway inserito non è raggiungibile."
 #: ../netcfg-static.templates:6001
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
-msgstr "Errore inserendo l'indirizzo IP, la maschera di rete e/o il gateway."
+msgstr ""
+"È possibile che ci siano degli errori nel proprio indirizzo IP inserito, "
+"nella maschera di rete o in quello del gateway."
 
 #. Type: boolean
 #. Description
