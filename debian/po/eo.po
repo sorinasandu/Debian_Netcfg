@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: eo\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-06-28 22:49+0200\n"
-"Last-Translator: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
+"PO-Revision-Date: 2008-08-03 08:57-0300\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:1001
 msgid "Auto-configure network with DHCP?"
-msgstr "Memakomodu reton kun 'DHCP'-o?"
+msgstr "Ĉu oni mem akomodi reton kun 'DHCP'-o?"
 
 #. Type: boolean
 #. Description
@@ -40,16 +40,16 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Oni povas uzi 'DHCP'-on por akomodi la reton aŭ mem eldoni ĉiujn informojn. "
-"Se vi elektas akomodon per 'DHCP'-o kaj se la instalado misakomodas la reton "
-"per 'DHCP'-servilo, vi mem akomodos la reton post la 'DHCP'-a klopodo."
+"Oni povas uzi 'DHCP'-on por akomodi la reton aŭ mem redakti ĉiujn informojn. "
+"Se vi elektos agordon per 'DHCP'-o kaj se la instalilo ne sukcesos funkciigi "
+"la  reton per 'DHCP'-servilo, vi mem agordos ĝin post la 'DHCP'-a klopodo."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Domain name:"
-msgstr "Domajnnomo:"
+msgstr "Domajna nomo:"
 
 #. Type: string
 #. Description
@@ -61,17 +61,17 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"La domajnnomo estas la dekstra parto de la interreta adreso de via "
-"sistemnomo. Ĝi ofte finiĝas per .com, .net, .edu aŭ .org. Se vi agordas vian "
-"hejman reton, vi povos uzi iajn nomojn sed ĉiam uzu la samanomon por ĉiu "
-"sistemo."
+"La domajna nomo estas la dekstra parto de la interreta adreso de via sistemo-"
+"nomo. Ĝi ofte finiĝas per .com, .net, .edu aŭ .org. Se vi agordas vian "
+"hejman reton, vi povos uzi ian ajn nomon sed ĉiam uzu la saman nomon por "
+"ĉiuj komputiloj."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:3001
 msgid "Name server addresses:"
-msgstr "Nomserviladresoj:"
+msgstr "Nomservilaj adresoj:"
 
 #. Type: string
 #. Description
@@ -84,17 +84,18 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"La nomserviloj estas uzataj por trovi aliajn sistemnomojn ĉeestantajn en la "
-"reto. Bonvolu tajpi ĝiajn 'IP'-adresojn (ne ĝiajn sistemnomojn); vi povas "
-"enskribi ĝis tri interspacigatajn adresojn, nepre ne uzante la komojn. La "
-"unua servilo estos unua pridemandita."
+"La nomserviloj estas uzataj por trovi aliajn sistemo-nomojn ĉeestantajn en "
+"la reto. Bonvolu tajpi iliajn 'IP'-adresojn (ne iliajn sistemo-nomojn); vi "
+"povas enskribi ĝis tri adresojn apartitajn per spacoj, nepre ne uzante "
+"komojn. La unua servilo de la listo, la unua provita. Se vi ne deziras uzi "
+"iun ajn nom-servilon, simple lasu tiun kampon malplena."
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:4001
 msgid "Primary network interface:"
-msgstr "Unuagrada reta aparato:"
+msgstr "Unuagrada ret-interfaco:"
 
 #. Type: select
 #. Description
@@ -105,9 +106,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Via sistemo posedas plurajn retajn aparatadaptilojn. Elektu tiun, kiun vi "
-"volas ĉefe uzi dum la instalado. Laŭ eble, la instalilo antaŭe elektis la "
-"unuan trovitan kaj konektitan retan aparatadaptilon."
+"Via sistemo posedas multoblajn ret-interfacojn. Elektu tiun, kiun vi volas "
+"ĉefe uzi dum la instalado. Laŭ eble, la instalilo antaŭe elektis la unuan "
+"trovitan kaj konektitan ret-interfacon."
 
 #. Type: string
 #. Description
@@ -128,9 +129,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"'${iface}'-o estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
-"retan 'ESSID'-nomon, kiu estos uzita de '${iface}'-o. Se vi volos uzi alian "
-"reton, malplenigu la registrokampon."
+"'${iface}' estas sendrata ret-interfaco. Bonvolu tajpi la nomon (ESSID) de "
+"la sendratan ret-interfacon, kiu estos uzita de '${iface}'-o. Se vi volos "
+"uzi  iun ajn disponigotan reton, lasu la kampon malplena."
 
 #. Type: string
 #. Description
@@ -148,16 +149,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"'${iface}'-o estas sendrata reta aparatadaptilo. Bonvolu tajpi la sendratan "
-"retan 'ESSID'-nomon, kiu estos uzita de '${iface}'-o. Se vi volos uzi alian "
-"reton, malplenigu la registrokampon."
+"'${iface}' estas sendrata ret-interfaco. Bonvolu tajpi la nomon (ESSID) de "
+"la sendratan ret-interfacon, kiu estos uzita de '${iface}'-o. Por preterpasi "
+"la  sendratan agordadon kaj daŭrigi, lasu tiun ĉi kampon malplena."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:7001
 msgid "WEP key for wireless device ${iface}:"
-msgstr "'WEP'-ĉifroŝlosilo por sendrata '${iface}'-aparato:"
+msgstr "Ĉifro-ŝlosilo 'WEP' por la sendrata aparato '${iface}':"
 
 #. Type: string
 #. Description
@@ -167,7 +168,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Laŭeble, bonvolu tajpi la 'WEP'-sekuran ĉifroŝlosilon por sendrata "
+"Laŭnecese, bonvolu tajpi la 'WEP'-sekuran ĉifroŝlosilon por la sendrata "
 "'${iface}'-aparato. Estas du manieroj fari tion:"
 
 #. Type: string
@@ -178,9 +179,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Se via 'WEP'-ĉifroŝlosilo estas en la strukturo 'nnnn-nnnn-nn', 'nn:nn:nn:nn:"
-"nn:nn:nn:nn', aŭ 'nnnnnnnn', kie 'n' estas nombro, tajpu ĝin en la "
-"registrokampo nur tia, kia ĝi estas."
+"Se via 'WEP'-ĉifroŝlosilo sekvas la strukturon 'nnnn-nnnn-nn', 'nn:nn:nn:nn:"
+"nn:nn:nn:nn', aŭ 'nnnnnnnn', kie 'n' estas numero, tajpu ĝin en la kampo "
+"simple tiel, kiel ĝi aperas."
 
 #. Type: string
 #. Description
@@ -190,8 +191,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se via 'WEP'-ĉifroŝlosilo estas en pasfraza strukturo, tajpu ĝin kun la 's:'-"
-"prefikso (sen la citiloj)."
+"Se via 'WEP'-ĉifroŝlosilo sekvas pasfrazan reĝimon, tajpu ĝin kun la "
+"prefikso's:' (sen la citiloj)."
 
 #. Type: string
 #. Description
@@ -201,8 +202,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Kompreneble, se 'WEP'-o ne estas por via sendrata reto, malplenigu la "
-"registrokampon."
+"Kompreneble, se estas neniu ĉifro-ŝlosilo 'WEP' por via sendrata reto,  lasu "
+"la kampon malplena."
 
 #. Type: error
 #. Description
@@ -253,7 +254,7 @@ msgstr "Gastnomo:"
 #. :sl1:
 #: ../netcfg-common.templates:10001
 msgid "Please enter the hostname for this system."
-msgstr "Bonvolu tajpi vian sisteman gastnomon."
+msgstr "Bonvolu tajpi la gastnomon por tiu ĉi sistemo."
 
 #. Type: string
 #. Description
@@ -266,8 +267,8 @@ msgid ""
 "something up here."
 msgstr ""
 "La gastnomo estas unuopa vorto kiu identigas vian sistemon en la reto. Se vi "
-"ne konas vian gastnomon, konsultu vian retan administriston. Se vi agordas "
-"vian hejman reton, vi povos uzi iajn unikajn nomojn."
+"ne konas vian gastnomon, konsultu vian retan administranton. Se vi agordas "
+"vian hejman reton, vi povos uzi iajn ajn unikajn nomojn."
 
 #. Type: error
 #. Description
@@ -394,7 +395,7 @@ msgstr "alcela reto ('Peer to peer')"
 #. Description
 #: ../netcfg-common.templates:15002
 msgid "Type of wireless network:"
-msgstr "Sendrata reta tipo:"
+msgstr "Tipo de sendrata reto:"
 
 #. Type: select
 #. Description
@@ -404,9 +405,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Sendrataj retoj funkcias laŭ la mastrumata modo ('Managed') aŭ la alcela "
-"modo ('Peer to peer'). Se vi uzas retenirejon, via reto estas mastrumata "
-"modo. Se alia komputilo servas estiel retenirejo, via reto estas alcela modo."
+"Sendrataj retoj funkcias laŭ la mastrumata reĝimon ('Managed') aŭ alcela "
+"reĝimo ('Peer to peer'). Se vi uzas retenirejon, via reto iras laŭ "
+"mastrumatan reĝimon. Se alia komputilo servas kiel retenirejon, via reto "
+"iras laŭ alcela modo."
 
 #. Type: text
 #. Description
@@ -420,7 +422,7 @@ msgstr "Akomodado de la sendrata reto"
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points..."
-msgstr "Serĉadi sendratajn retenirejojn..."
+msgstr "Serĉado de sendratajn retalir-punktojn..."
 
 #. Type: text
 #. Description
@@ -533,7 +535,7 @@ msgstr "Nekonata aparatainterfaco"
 #. :sl1:
 #: ../netcfg-common.templates:36001
 msgid "Storing network settings..."
-msgstr "Memorigado de retaj akomodoj..."
+msgstr "Registrado de retaj agordoj..."
 
 #. Type: text
 #. Description
@@ -541,7 +543,7 @@ msgstr "Memorigado de retaj akomodoj..."
 #. :sl1:
 #: ../netcfg-common.templates:37001
 msgid "Configure the network"
-msgstr "Akomodi la reton"
+msgstr "Agordi la reton"
 
 #. Type: string
 #. Description
