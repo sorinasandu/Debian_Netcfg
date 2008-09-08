@@ -146,7 +146,8 @@ int netcfg_get_gateway(struct debconfclient *client)
         debconf_get(client, "netcfg/get_gateway");
         ptr = client->value;
         
-        if (empty_str(ptr)) {           /* No gateway, that's fine */
+        if (empty_str(ptr) || /* No gateway, that's fine */
+            (strcmp(ptr, "none") == 0)) /* special case for preseeding */ {
             /* clear existing gateway setting */
             memset(&gateway, 0, sizeof(struct in_addr));
             return 0;
