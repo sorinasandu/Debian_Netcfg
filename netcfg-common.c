@@ -637,6 +637,7 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
             domain = strdup(s + 1);
             debconf_set(client, "netcfg/get_domain", domain);
             have_domain = 1;
+            *s = '\0';
         }
     }
     return 0;
