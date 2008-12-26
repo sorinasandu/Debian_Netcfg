@@ -2,6 +2,8 @@ netcfg (1.47) UNRELEASED; urgency=low
 
   * Merge from Ubuntu:
     - Build for lpia.
+    - Add an /etc/network/interfaces stanza for lo even if the netcfg menu
+      item wasn't run (LP: #9532).
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 26 Dec 2008 14:42:04 +0000
 
