@@ -671,8 +671,12 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
     if (*domain)
         free(*domain);
     *domain = NULL;
-    if (!empty_str(client->value))
-        *domain = strdup(client->value);
+    if (!empty_str(client->value)) {
+        const char *start = client->value;
+        while (*start == '.')
+            ++start; /* trim leading dots */
+        *domain = strdup(start);
+    }
     return 0;
 }
 

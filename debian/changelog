@@ -8,6 +8,7 @@ netcfg (1.47) UNRELEASED; urgency=low
       the hostname, then remove the domain part from the hostname as well as
       copying it to netcfg/get_domain (thanks, Alain Knaff; closes: #401220,
       LP: #11019).
+  * Trim leading dots from netcfg/get_domain (closes: #459321).
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 26 Dec 2008 14:42:04 +0000
 
