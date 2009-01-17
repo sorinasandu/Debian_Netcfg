@@ -3,28 +3,31 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
+# translation of gl.po to galician
 # Galician messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+# Marce Villarino <mvillarino@users.sourceforge.net>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer\n"
+"Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2008-03-02 23:48+0000\n"
-"Last-Translator: Jacobo Tarrio <jtarrio@debian.org>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
+"PO-Revision-Date: 2009-01-17 22:47+0100\n"
+"Last-Translator: Marce Villarino <mvillarino@users.sourceforge.net>\n"
+"Language-Team: galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:1001
 msgid "Auto-configure network with DHCP?"
-msgstr "¿Autoconfigurar a rede con DHCP?"
+msgstr "Desexa configurar automaticamente a rede con DHCP?"
 
 #. Type: boolean
 #. Description
@@ -47,7 +50,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Domain name:"
-msgstr "Nome de dominio"
+msgstr "Nome de dominio:"
 
 #. Type: string
 #. Description
@@ -59,17 +62,17 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"O nome de dominio é a parte do seu enderezo de Internet que está á dereita "
-"do seu nome de servidor. Adoita ser algo que remata en .com, .net, .edu ou ."
-"org. Se está a configurar unha rede doméstica pode inventar algo, pero "
-"asegúrese de empregar o mesmo nome de dominio en tódolos seus ordenadores."
+"O nome de dominio é a parte do enderezo de Internet que está á dereita do "
+"nome do servidor. Adoita ser algo que remata en .com, .net, .edu ou .org. Se "
+"está a configurar unha rede doméstica pode inventar algo, pero asegúrese de "
+"empregar o mesmo nome de dominio en todos os seus ordenadores."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:3001
 msgid "Name server addresses:"
-msgstr "Enderezos de servidores de nomes"
+msgstr "Enderezos dos servidores de nomes:"
 
 #. Type: string
 #. Description
@@ -82,10 +85,10 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Os servidores de nomes empréganse para buscar nomes de máquinas na rede. "
-"Introduza os enderezos IP (non os nomes) de ata 3 servidores de nomes, "
-"separados por espazos. Non empregue comas. O primeiro servidor de nomes da "
-"lista ha ser o primeiro en ser consultado. Se non quere empregar ningún "
+"Os servidores de nomes empréganse para procurar nomes de máquinas na rede. "
+"Introduza os enderezos IP (non os nomes) de até 3 servidores de nomes, "
+"separados por espazos. Non empregue vírgulas. O primeiro servidor de nomes "
+"da lista ha ser o primeiro en ser consultado. Se non quere empregar ningún "
 "servidor de nomes, deixe este campo en branco."
 
 #. Type: select
@@ -105,8 +108,8 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "O seu sistema ten varias interfaces de rede. Escolla a interface a empregar "
-"coma interface principal durante a instalación. Xa se seleccionou, se foi "
-"posible, a primeira interface de rede conectada que se atopou."
+"como interface principal durante a instalación. Xa se escolleu, se foi "
+"posíbel, a primeira interface de rede conectada que se achou."
 
 #. Type: string
 #. Description
@@ -127,16 +130,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} é unha interface de rede sen fíos. Introduza o nome (o ESSID) da "
-"rede sen fíos que quere que empregue ${iface}. Se quere empregar calquera "
-"rede dispoñible, deixe este campo en branco."
+"${iface} é unha interface de rede sen fíos. Escriba o nome (o ESSID) da rede "
+"sen fíos que quere que empregue ${iface}. Se quere empregar calquera rede "
+"dispoñíbel, deixe este campo en branco."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:6001
 msgid "Attempting to find an available wireless network failed."
-msgstr "A tentativa de atopar unha rede sen fíos dispoñible fallou."
+msgstr "Fallou a tentativa de achar unha rede sen fíos dispoñíbel."
 
 #. Type: string
 #. Description
@@ -156,7 +159,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:7001
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Clave WEP para o dispositivo sen fíos ${iface}:"
+msgstr "Chave WEP para o dispositivo sen fíos ${iface}:"
 
 #. Type: string
 #. Description
@@ -166,7 +169,7 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Se procede, introduza a clave de seguridade WEP para o dispositivo sen fíos "
+"Se procede, introduza a chave de seguridade WEP para o dispositivo sen fíos "
 "${iface}. Hai dous xeitos de o facer:"
 
 #. Type: string
@@ -177,8 +180,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Se a súa clave WEP é da forma 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn' ou "
-"'nnnnnnnn', onde n é un número, escríbao neste campo tal como aparece."
+"Se a chave WEP é da forma \"nnnn-nnnn-nn\", \"nn:nn:nn:nn:nn:nn:nn:nn\" ou "
+"\"nnnnnnnn\", onde n é un número, escríbao neste campo tal como aparece."
 
 #. Type: string
 #. Description
@@ -188,8 +191,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se a súa clave WEP ten forma de contrasinal, escríbaa poñéndolle diante "
-"'s:' (sen as comiñas)."
+"Se a chave WEP ten forma de contrasinal, escríbaa poñéndolle diante \"s:"
+"\" (sen as comiñas)."
 
 #. Type: string
 #. Description
@@ -199,8 +202,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Por suposto, se non hai unha chave WEP para a súa rede sen fíos, deixe este "
-"campo en branco."
+"Por suposto, se a súa rede sen fíos non ten unha chave WEP, deixe este campo "
+"en branco."
 
 #. Type: error
 #. Description
@@ -264,8 +267,8 @@ msgid ""
 "something up here."
 msgstr ""
 "O nome da máquina é unha soa palabra que identifica o seu sistema na rede. "
-"Se non sabe o nome que debe poñer, consulte ao seu administrador de rede. Se "
-"está a configurar unha rede doméstica, pode inventar o nome."
+"Se non sabe o nome que debe poñer, consulte o administrador da rede. Se está "
+"a configurar unha rede doméstica, pode inventar o nome."
 
 #. Type: error
 #. Description
@@ -403,8 +406,8 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "As redes sen fíos poden ser xestionadas ou ad-hoc. Se emprega un punto de "
-"acceso de calquera tipo, a súa rede é Xestionada. Se outro ordenador é o seu "
-"'punto de acceso', entón a súa rede pode ser Ad-hoc."
+"acceso de calquera tipo, a rede é Xestionada. Se outro ordenador é o «punto "
+"de acceso», entón a rede pode ser Ad-hoc."
 
 #. Type: text
 #. Description
@@ -418,7 +421,7 @@ msgstr "Configuración da rede sen fíos"
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points..."
-msgstr "A buscar puntos de acceso sen fíos..."
+msgstr "A procurar puntos de acceso sen fíos..."
 
 #. Type: text
 #. Description
@@ -531,7 +534,7 @@ msgstr "Interface descoñecida"
 #. :sl1:
 #: ../netcfg-common.templates:36001
 msgid "Storing network settings..."
-msgstr "A gravar a configuración da rede..."
+msgstr "A gardar a configuración da rede..."
 
 #. Type: text
 #. Description
@@ -585,7 +588,7 @@ msgstr "Isto pode levar algún tempo."
 #. :sl1:
 #: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
-msgstr "Completouse a autoconfiguración da rede"
+msgstr "Completouse a configuración automática da rede"
 
 #. Type: error
 #. Description
@@ -618,7 +621,7 @@ msgstr "Abortouse o proceso de configuración por DHCP."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "Volver tentar a autoconfiguración da rede"
+msgstr "Volver tentar configurar automaticamente a rede"
 
 #. Type: select
 #. Choices
@@ -628,7 +631,7 @@ msgstr "Volver tentar a autoconfiguración da rede"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Volver tentar a autoconfiguración da rede cun nome de máquina DHCP"
+msgstr "Volver tentar autoconfigurar a rede cun nome de máquina DHCP"
 
 #. Type: select
 #. Choices
@@ -655,7 +658,7 @@ msgstr "Non configurar a rede agora"
 #. :sl1:
 #: ../netcfg-dhcp.templates:6002
 msgid "Network configuration method:"
-msgstr "Método para a configuración da rede"
+msgstr "Método para a configuración da rede:"
 
 #. Type: select
 #. Description
@@ -668,8 +671,8 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Aquí pode volver tentar a autoconfiguración da rede mediante DHCP (o que "
-"pode ter éxito se o servidor DHCP tarda moito tempo en respostar) ou "
+"Aquí pode volver tentar configurar da rede automaticamente mediante DHCP (o "
+"que pode ter éxito se o servidor DHCP tarda moito tempo en responder) ou "
 "configurar a rede manualmente. Algúns servidores DHCP necesitan que se envíe "
 "un nome de máquina DHCP, así que tamén pode volver tentar a "
 "autoconfiguración da rede mediante DHCP empregando un nome fornecido por "
@@ -680,7 +683,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr "Non se puido autoconfigurar a da rede"
+msgstr "Fallou a configuración automática da rede"
 
 #. Type: note
 #. Description
@@ -690,8 +693,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"A súa rede non está a usar o protocolo DHCP. Tamén pode ser que o servidor "
-"DHCP sexa lento ou algún hardware de rede non funcione correctamente."
+"Posibelmente a súa rede non estea a usar o protocolo DHCP. Tamén pode ser "
+"que o servidor DHCP sexa lento ou algún hardware de rede non funcione "
+"correctamente."
 
 #. Type: boolean
 #. Description
@@ -753,7 +757,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "O enderezo IP é único para o seu ordenador e consiste en catro números "
-"separados por puntos. Se non sabe que escribir aquí, consulte ao seu "
+"separados por puntos. Se non sabe que escribir aquí, consulte o seu "
 "administrador de redes."
 
 #. Type: error
@@ -813,8 +817,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "A máscara de rede emprégase para determinar as máquinas que pertencen á súa "
-"propia rede. Consulte co seu administrador de redes se non coñece o seu "
-"valor. A máscara de rede introdúcese coma catro números separados por puntos."
+"rede. Consulte co administrador de redes se non coñece o seu valor. A "
+"máscara de rede introdúcese coma catro números separados por puntos."
 
 #. Type: string
 #. Description
@@ -836,11 +840,11 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "A pasarela é un enderezo IP (catro números separados por puntos) que indica "
-"o encamiñador pasarela, tamén coñecido coma encamiñador por defecto. Todo o "
-"tráfico dirixido ao exterior da súa rede local (por exemplo, a Internet), "
+"o encamiñador pasarela, tamén coñecido coma encamiñador predeterminado. Todo "
+"o tráfico dirixido ao exterior da rede local (por exemplo, a Internet), "
 "envíase a través deste encamiñador. Nalgunhas circunstancias, pode non ter "
 "un encamiñador; neste caso, pode deixalo en branco. Se non coñece a resposta "
-"correcta, consulte ao seu administrador de redes."
+"correcta, consulte o seu administrador de redes."
 
 #. Type: error
 #. Description
@@ -871,7 +875,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:7001
 msgid "Is this information correct?"
-msgstr "¿Son estes datos correctos?"
+msgstr "Son correctos estes datos?"
 
 #. Type: boolean
 #. Description
