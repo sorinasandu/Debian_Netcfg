@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2009-01-17 22:47+0100\n"
+"PO-Revision-Date: 2009-01-31 19:10+0100\n"
 "Last-Translator: Marce Villarino <mvillarino@users.sourceforge.net>\n"
 "Language-Team: galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -210,7 +210,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:8001
 msgid "Invalid WEP key"
-msgstr "Clave WEP non válida"
+msgstr "Chave WEP non válida"
 
 #. Type: error
 #. Description
@@ -220,9 +220,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"A clave WEP '${wepkey}' non é válida. Por favor, lea as instruccións da "
-"seguinte páxina amodiño para saber como introducir correctamente a súa clave "
-"WEP, e volva tentalo."
+"A chave WEP «${wepkey}» non é válida. Por favor, lea amodo as instruccións "
+"da seguinte páxina para saber como introducir correctamente a chave WEP, e "
+"volva tentalo."
 
 #. Type: error
 #. Description
@@ -239,7 +239,7 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"O ESSID \"${essid}\" non é válido. Os ESSIDs só poden ter ata 32 caracteres, "
+"O ESSID «${essid}» non é válido. Os ESSID só poden ter até 32 caracteres, "
 "pero poden ter todo tipo de caracteres."
 
 #. Type: string
@@ -282,7 +282,7 @@ msgstr "Nome da máquina non válido"
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid "The name \"${hostname}\" is invalid."
-msgstr "O nome \"${hostname}\" non é válido."
+msgstr "O nome «${hostname}» non é válido."
 
 #. Type: error
 #. Description
@@ -312,15 +312,15 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Houbo un erro e abortouse o proceso de configuración da rede. Pode volvelo "
-"tentar dende o menú principal da instalación."
+"Aconteceu un erro e abortouse o proceso de configuración da rede. Pode "
+"volvelo tentar desde o menú principal da instalación."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
 msgid "No network interfaces detected"
-msgstr "Non se detectaron interfaces de rede"
+msgstr "Non se detectou ningunha interface de rede"
 
 #. Type: error
 #. Description
@@ -330,8 +330,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Non se atoparon interfaces de rede. O sistema de instalación non foi capaz "
-"de atopar un dispositivo de rede."
+"Non se atopou ningunha interface de rede. O sistema de instalación non foi "
+"que de achar ningún dispositivo de rede."
 
 #. Type: error
 #. Description
@@ -341,8 +341,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Pode ter que cargar un módulo específico para a súa tarxeta de rede, se ten "
-"unha. Para facelo, volte ao paso de detección do hardware de rede."
+"Poida que teña que cargar un módulo específico para a tarxeta de rede, se "
+"ten unha. Para facelo, volte ao paso de detección do hardware de rede."
 
 #. Type: note
 #. Description
@@ -364,7 +364,7 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"Semella que ${iface} está desactivado por un \"interruptor de corte de rede"
+"Semella que ${iface} está desactivada por un \"interruptor de corte de rede"
 "\". Se pretende empregar esta interface, acéndaa antes de continuar."
 
 #. Type: select
@@ -389,7 +389,7 @@ msgstr "Rede de infraestructura (xestionada)"
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:15001
 msgid "Ad-hoc network (Peer to peer)"
-msgstr "Rede Ad-hoc (entre iguais)"
+msgstr "Rede ad-hoc (entre parceiros)"
 
 #. Type: select
 #. Description
@@ -470,14 +470,14 @@ msgstr "Rede USB"
 #. :sl2:
 #: ../netcfg-common.templates:26001
 msgid "Serial-line IP"
-msgstr "IP por porto serie (SLIP)"
+msgstr "IP polo porto serie (SLIP)"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:27001
 msgid "Parallel-port IP"
-msgstr "IP por porto paralelo (PLIP)"
+msgstr "IP polo porto paralelo (PLIP)"
 
 #. Type: text
 #. Description
@@ -702,7 +702,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
 msgid "Continue without a default route?"
-msgstr "¿Continuar sen unha ruta por defecto?"
+msgstr "Desexa continuar sin unha rota predeterminada?"
 
 #. Type: boolean
 #. Description
@@ -715,11 +715,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"A autoconfiguración da rede rematou con éxito. Nembargantes, non se "
-"estableceu unha ruta por defecto, xa que o sistema non sabe como se "
-"comunicar con Internet. Isto ha facer imposible continuar a instalación a "
-"menos que teña o primeiro CD-ROM de instalación, un CD-ROM 'Netinst' ou os "
-"paquetes dispoñibles na rede local."
+"A configuración automática da rede rematou con éxito. Porén, non se "
+"estabeleceu unha rota predeterminada, xa que o sistema non sabe como se "
+"comunicar con Internet. Isto ha facer imposíbel continuar a instalación a "
+"menos que teña o primeiro CD-ROM de instalación, un CD-ROM «Netinst» ou os "
+"paquetes dispoñíbeis na rede local."
 
 #. Type: boolean
 #. Description
@@ -729,8 +729,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Se non está seguro, non debería continuar sen unha ruta por defecto: póñase "
-"en contacto co seu administrador de redes local para solucionar este "
+"Se non está seguro, non debería continuar sen unha rota predeterminada: "
+"póñase en contacto co administrador da rede local para solucionar este "
 "problema."
 
 #. Type: text
@@ -776,7 +776,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "O enderezo IP que forneceu está mal formado. Debería ter a forma x.x.x.x, "
-"onde cada 'x' non é superior a 255. Volva tentalo."
+"onde cada «x» non é superior a 255. Volva tentalo."
 
 #. Type: string
 #. Description
@@ -796,9 +796,9 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "O enderezo punto a punto emprégase para determinar o outro extremo da rede "
-"punto a punto. Consulte ao seu administrador de redes se non coñece o valor. "
-"O enderezo punto a punto debería se introducir coma catro números separados "
-"por puntos."
+"punto a punto. Consulte co administrador da rede se non coñece o valor. O "
+"enderezo punto a punto deberíase introducir como catro números separados por "
+"puntos."
 
 #. Type: string
 #. Description
@@ -867,8 +867,8 @@ msgstr "Non se pode chegar ao enderezo da pasarela introducido"
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Puido ter cometido un erro ao escribir o seu enderezo IP, máscara de rede e/"
-"ou pasarela."
+"Puido ter cometido un erro ao escribir o seu enderezo IP, máscara de rede "
+"ou  pasarela."
 
 #. Type: boolean
 #. Description
