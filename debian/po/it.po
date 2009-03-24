@@ -19,14 +19,14 @@
 # Samuele Giovanni Tonon <samu@linuxasylum.net>
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
-# Milo Casagrande <milo@ubuntu.com>, 2008-2009
+# Milo Casagrande <milo@ubuntu.com>, 2008, 2009
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: debian-boot@lists.debian.org\n"
 "POT-Creation-Date: 2008-03-07 22:51+0000\n"
-"PO-Revision-Date: 2009-02-15 19:36+0100\n"
+"PO-Revision-Date: 2009-03-24 22:48+0100\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -75,17 +75,17 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Il nome del dominio è la parte dell'indirizzo a destra del nome del computer "
-"e che, di solito, finisce in .com, .net, .edu o .org. Se si sta usando una "
-"rete domestica è possibile usare un nome qualsiasi purché sia eguale in "
-"tutti i computer."
+"Il nome del dominio è la parte dell'indirizzo Internet a destra del nome del "
+"proprio host. Di solito termina in .com, .net, .edu o .org. Se si sta "
+"configurando una rete domestica, è possibile usare un nome qualsiasi purché "
+"sia eguale in tutti i computer."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:3001
 msgid "Name server addresses:"
-msgstr "Indirizzi dei server DNS:"
+msgstr "Indirizzi server dei nomi:"
 
 #. Type: string
 #. Description
@@ -98,11 +98,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"I DNS sono utilizzati per identificare un host nella rete a partire dal suo "
-"nome. Inserire gli indirizzi IP (non i nomi di host) per un massimo di tre "
-"DNS separati da spazi, senza usare virgole. I server verranno interrogati "
-"nell'ordine nel quale sono inseriti, mentre se non si vogliono usare DNS è "
-"sufficiente lasciare vuoto questo campo."
+"I server dei nomi (DNS) sono utilizzati per identificare un host all'interno "
+"della rete. Inserire gli indirizzi IP (non i nomi di host) per un massimo di "
+"tre server dei nomi, separati da spazi senza usare virgole. I server "
+"verranno interrogati nell'ordine nel quale sono inseriti, mentre se non si "
+"vogliono usare server dei nomi è sufficiente lasciare vuoto questo campo."
 
 #. Type: select
 #. Description
@@ -120,9 +120,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"Il sistema ha più di un'interfaccia di rete. Selezionare quella da usare "
-"come interfaccia di rete principale durante l'installazione. Se possibile, "
-"la prima interfaccia di rete connessa sarà selezionata."
+"Il sistema ha più di un'interfaccia di rete. Scegliere quella da usare come "
+"interfaccia di rete principale durante l'installazione. Se possibile, la "
+"prima interfaccia di rete connessa sarà selezionata."
 
 #. Type: string
 #. Description
@@ -132,7 +132,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:5001 ../netcfg-common.templates:6001
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID wireless per ${iface}:"
+msgstr "ESSID rete senza fili per ${iface}:"
 
 #. Type: string
 #. Description
@@ -143,16 +143,17 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
-"rete wireless da fare usare a ${iface}. Lasciare il campo vuoto per usare "
-"una qualsiasi rete wireless tra quelle disponibili."
+"${iface} è un'interfaccia di rete senza fili. Inserire il nome (l'ESSID) "
+"della rete senza fili da usare con ${iface}. Lasciare il campo vuoto per "
+"usare una qualsiasi rete senza fili tra quelle disponibili."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:6001
 msgid "Attempting to find an available wireless network failed."
-msgstr "Il tentativo di rilevare una rete wireless disponibile non è riuscito."
+msgstr ""
+"Il tentativo di rilevare una rete senza fili disponibile non è riuscito."
 
 #. Type: string
 #. Description
@@ -163,16 +164,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} è un'interfaccia di rete wireless. Inserire il nome (l'ESSID) della "
-"rete wireless da fare usare a ${iface}. Per saltare la configurazione "
-"wireless è possibile lasciare il campo vuoto."
+"${iface} è un'interfaccia di rete senza fili. Inserire il nome (l'ESSID) "
+"della rete senza fili da usare con ${iface}. Per saltare la configurazione "
+"della rete senza fili è possibile lasciare vuoto questo campo."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:7001
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Chiave WEP per il dispositivo wireless ${iface}:"
+msgstr "Chiave WEP per l'interfaccia senza fili ${iface}:"
 
 #. Type: string
 #. Description
@@ -182,8 +183,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"Se applicabile, inserire la chiave di sicurezza WEP per il dispositivo "
-"wireless ${iface}. Ci sono due modi per farlo:"
+"Se applicabile, inserire la chiave di sicurezza WEP per l'interfaccia senza "
+"fili ${iface}. Ci sono due modi per farlo:"
 
 #. Type: string
 #. Description
@@ -205,7 +206,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se la propria chiave WEP è nel formato di passphrase (frase d'accesso), "
+"Se la propria chiave WEP è nel formato di una passphrase (frase d'accesso), "
 "anteporre alla passphrase «s:» (senza le virgolette)."
 
 #. Type: string
@@ -216,7 +217,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Se non c'è una chiave WEP per questa rete, lasciare il campo in bianco."
+"Se non c'è una chiave WEP per la rete senza fili, lasciare vuoto questo "
+"campo."
 
 #. Type: error
 #. Description
@@ -252,22 +254,22 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"L'ESSID «${essid}» non è valido. Un ESSID può essere composto al massimo da "
-"32 caratteri di qualsiasi tipo."
+"L'ESSID «${essid}» non è valido. Gli ESSID possono essere composti al "
+"massimo da 32 caratteri, ma di qualsiasi tipo."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:10001
 msgid "Hostname:"
-msgstr "Nome del computer:"
+msgstr "Nome host:"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:10001
 msgid "Please enter the hostname for this system."
-msgstr "Inserire il nome di questo sistema."
+msgstr "Inserire il nome host per questo sistema."
 
 #. Type: string
 #. Description
@@ -279,17 +281,16 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Il nome dell'host è una singola parola che identifica il sistema nella rete. "
-"Se non lo si conosce è possibile consultare l'amministratore della rete, "
-"oppure inserire un nome arbitrario nel caso si stesse utilizzando una rete "
-"domestica."
+"Il nome host è una singola parola che identifica il sistema nella rete. Se "
+"non lo si conosce, consultare l'amministratore della rete oppure, se si sta "
+"configurando una rete domestica, inserire un nome arbitrario."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid "Invalid hostname"
-msgstr "Nome del computer non valido"
+msgstr "Nome host non valido"
 
 #. Type: error
 #. Description
@@ -344,8 +345,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Non sono state rilevate interfacce di rete. Il sistema di installazione non "
-"è stato in grado di trovare un dispositivo di rete."
+"Non è stata trovata alcuna interfaccia di rete. Il sistema di installazione "
+"non è stato in grado di trovare un dispositivo di rete."
 
 #. Type: error
 #. Description
@@ -355,7 +356,7 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"Se è realmente presente una scheda di rete potrebbe essere necessario "
+"Se è realmente presente una scheda di rete, potrebbe essere necessario "
 "caricare un modulo specifico. Per farlo, tornare indietro alla rilevazione "
 "automatica dell'hardware."
 
@@ -366,7 +367,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Kill switch enabled on ${iface}"
-msgstr "Interruttore fisico abilitato su ${iface}"
+msgstr "Microinterruttore abilitato su ${iface}"
 
 #. Type: note
 #. Description
@@ -379,8 +380,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} sembra essere stata disabilitata usando un microinterruttore. Per "
-"usare questa interfaccia è necessario abilitarla prima di continuare."
+"Sembra che ${iface} sia stata disabilitata per mezzo di un "
+"microinterruttore. Per usare questa interfaccia è necessario abilitarla "
+"prima di continuare."
 
 #. Type: select
 #. Choices
@@ -410,7 +412,7 @@ msgstr "Rete «ad-hoc» (connessione uno a uno)"
 #. Description
 #: ../netcfg-common.templates:15002
 msgid "Type of wireless network:"
-msgstr "Tipo di rete wireless:"
+msgstr "Tipo di rete senza fili:"
 
 #. Type: select
 #. Description
@@ -420,8 +422,8 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Le reti wireless sono «managed» oppure «ad-hoc». Se si sta usando un vero "
-"access point di qualsiasi tipo allora la rete è «managed». Se invece "
+"Le reti senza fili sono «managed» oppure «ad-hoc». Se si sta usando un vero "
+"access point di qualsiasi tipo allora la rete è «managed», se invece "
 "l'access point è costituito da un altro computer, allora la rete è «ad-hoc»."
 
 #. Type: text
@@ -429,14 +431,14 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:16001
 msgid "Wireless network configuration"
-msgstr "Configurazione rete wireless"
+msgstr "Configurazione rete senza fili"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Searching for wireless access points..."
-msgstr "Ricerca degli access point wireless..."
+msgstr "Ricerca degli access point senza fili..."
 
 #. Type: text
 #. Description
@@ -450,14 +452,14 @@ msgstr "<nessuno>"
 #. :sl2:
 #: ../netcfg-common.templates:20001
 msgid "Wireless ethernet (802.11x)"
-msgstr "Ethernet wireless (802.11x)"
+msgstr "Ethernet senza fili (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:21001
 msgid "wireless"
-msgstr "wireless"
+msgstr "senza fili"
 
 #. Type: text
 #. Description
@@ -583,7 +585,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
-msgstr "La maggior parte degli utenti può lasciare il campo vuoto."
+msgstr "La maggior parte degli utenti può lasciare vuoto questo campo."
 
 #. Type: text
 #. Description
@@ -597,7 +599,7 @@ msgstr "Configurazione rete con DHCP"
 #. :sl1:
 #: ../netcfg-dhcp.templates:3001
 msgid "This may take some time."
-msgstr "L'operazione potrebbe richiedere un po' di tempo."
+msgstr "Questa operazione potrebbe richiedere un po' di tempo."
 
 #. Type: text
 #. Description
@@ -690,7 +692,7 @@ msgstr ""
 "Da qui è possibile scegliere di ritentare la configurazione automatica della "
 "rete DHCP (che potrebbe funzionare se il server DHCP impiegasse molto tempo "
 "a rispondere) o di configurare la rete manualmente. Alcuni server DHCP "
-"richiedono che uno hostname sia inviato dal client, quindi è anche possibile "
+"richiedono che un nome host sia inviato dal client, quindi è anche possibile "
 "ritentare la configurazione automatica tramite DHCP specificando questo nome."
 
 #. Type: note
@@ -745,14 +747,14 @@ msgid ""
 "your local network administrator about this problem."
 msgstr ""
 "Nel dubbio è meglio non continuare senza una «route» predefinita: contattare "
-"l'amministratore locale della rete per chiarire il problema."
+"l'amministratore della rete per chiarire il problema."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Riconfigurare la rete wireless"
+msgstr "Riconfigurare la rete senza fili"
 
 #. Type: string
 #. Description
@@ -872,7 +874,7 @@ msgstr "Gateway non raggiungibile"
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "The gateway address you entered is unreachable."
-msgstr "Il gateway inserito non è raggiungibile."
+msgstr "L'indirizzo del gateway inserito non è raggiungibile."
 
 #. Type: error
 #. Description
@@ -923,4 +925,4 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
-msgstr "Configurare la rete usando indirizzi statici"
+msgstr "Configura la rete con indirizzamento statico"
