@@ -263,6 +263,8 @@ int poll_dhcp_client (struct debconfclient *client)
 #define REPLY_DONT_CONFIGURE         3
 #define REPLY_RECONFIGURE_WIFI       4
 #define REPLY_LOOP_BACK              5
+#define REPLY_CHECK_DHCP             6
+#define REPLY_ASK_OPTIONS            7
 
 int ask_dhcp_options (struct debconfclient *client)
 {
@@ -302,8 +304,30 @@ int ask_dhcp_options (struct debconfclient *client)
         return REPLY_DONT_CONFIGURE;
 }
 
+int ask_wifi_configuration (struct debconfclient *client)
+{
+    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
+    for (;;) {
+        switch (wifistate) {
+        case ESSID:
+            wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
+                ABORT : WEP;
+            break;
+        case WEP:
+            wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
+                ESSID : DONE;
+            break;
+        case ABORT:
+            return REPLY_ASK_OPTIONS;
+            break;
+        case DONE:
+            return REPLY_CHECK_DHCP;
+            break;
+        }
+    }
+}
 
-/* Here comes another Satan machine. */
+
 int netcfg_activate_dhcp (struct debconfclient *client)
 {
     char* dhostname = NULL;
@@ -472,35 +496,16 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 }
                 break;
             case REPLY_RECONFIGURE_WIFI:
-                {
-                    /* oh god - a NESTED satan machine */
-                    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
-                    for (;;) {
-                        switch (wifistate) {
-                        case ESSID:
-                            wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK ) ?
-                                ABORT : WEP;
-                            break;
-                        case WEP:
-                            wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK ) ?
-                                ESSID : DONE;
-                            break;
-                        case ABORT:
-                            state = ASK_OPTIONS;
-                            break;
-                        case DONE:
-                            if (dhcp_pid > 0)
-                                state = POLL;
-                            else {
-                                kill_dhcp_client();
-                                state = START;
-                            }
-                            break;
-                        }
-                        if (wifistate == DONE || wifistate == ABORT)
-                            break;
+                if (ask_wifi_configuration(client) == REPLY_CHECK_DHCP) {
+                    if (dhcp_pid > 0)
+                        state = POLL;
+                    else {
+                        kill_dhcp_client();
+                        state = START;
                     }
                 }
+                else
+                    state = ASK_OPTIONS;
                 break;
             }
             break;
