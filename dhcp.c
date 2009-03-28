@@ -478,11 +478,11 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                     for (;;) {
                         switch (wifistate) {
                         case ESSID:
-                            wifistate = ( netcfg_wireless_set_essid(client, interface, "high") == GO_BACK ) ?
+                            wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK ) ?
                                 ABORT : WEP;
                             break;
                         case WEP:
-                            wifistate = ( netcfg_wireless_set_wep (client, interface) == GO_BACK ) ?
+                            wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK ) ?
                                 ESSID : DONE;
                             break;
                         case ABORT:

@@ -61,7 +61,17 @@ response_t netcfg_get_method(struct debconfclient *client)
 int main(int argc, char *argv[])
 {
     int num_interfaces = 0;
-    enum { BACKUP, GET_INTERFACE, GET_HOSTNAME_ONLY, GET_METHOD, GET_DHCP, GET_STATIC, WCONFIG, WCONFIG_ESSID, WCONFIG_WEP, QUIT } state = GET_INTERFACE;
+    enum { BACKUP,
+           GET_INTERFACE,
+           GET_HOSTNAME_ONLY,
+           GET_METHOD,
+           GET_DHCP,
+           GET_STATIC,
+           WCONFIG,
+           WCONFIG_ESSID,
+           WCONFIG_WEP,
+           QUIT } state = GET_INTERFACE;
+    
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
     char **ifaces;
@@ -239,14 +249,14 @@ int main(int argc, char *argv[])
             break;
             
         case WCONFIG_ESSID:
-            if (netcfg_wireless_set_essid (client, interface, NULL) == GO_BACK)
+            if (netcfg_wireless_set_essid(client, interface, NULL) == GO_BACK)
                 state = BACKUP;
             else
                 state = WCONFIG_WEP;
             break;
             
         case WCONFIG_WEP:
-            if (netcfg_wireless_set_wep (client, interface) == GO_BACK)
+            if (netcfg_wireless_set_wep(client, interface) == GO_BACK)
                 state = WCONFIG_ESSID;
             else
                 state = GET_METHOD;
