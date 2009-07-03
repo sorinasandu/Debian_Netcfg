@@ -4,6 +4,11 @@ netcfg (1.50) UNRELEASED; urgency=low
     Thanks to Marco d'Itri for the proposed change
     Closes: #533384
 
+  [ Luca Favatella ]
+  * If wireless is disabled, don't build and link wireless related stuff.
+  * Disable by default wireless on non-linux architectures.
+  * Inverse the logic about building without wireless support (WIRELESS=0).
+
  -- Christian Perrier <bubulle@debian.org>  Thu, 18 Jun 2009 06:11:33 +0200
 
 netcfg (1.49) unstable; urgency=low
