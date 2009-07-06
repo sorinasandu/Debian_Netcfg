@@ -9,6 +9,10 @@ netcfg (1.50) UNRELEASED; urgency=low
   * Disable by default wireless on non-linux architectures.
   * Inverse the logic about building without wireless support (WIRELESS=0).
 
+  [ Colin Watson ]
+  * check_kill_switch is Linux-specific; provide a stub implementation for
+    non-Linux systems.
+
  -- Christian Perrier <bubulle@debian.org>  Thu, 18 Jun 2009 06:11:33 +0200
 
 netcfg (1.49) unstable; urgency=low

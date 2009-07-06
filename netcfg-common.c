@@ -119,6 +119,8 @@ void open_sockets (void)
     skfd = socket (AF_INET, SOCK_DGRAM, 0);
 }
 
+#ifdef __linux__
+
 #define SYSCLASSNET "/sys/class/net/"
 
 /* Returns non-zero if this interface has an enabled kill switch, otherwise
@@ -179,6 +181,13 @@ int check_kill_switch(const char *iface)
 }
 
 #undef SYSCLASSNET
+
+#else /* !__linux__ */
+int check_kill_switch(const char *iface)
+{
+    return 0;
+}
+#endif /* __linux__ */
 
 #if defined(WIRELESS)
 int is_raw_80211(const char *iface)
