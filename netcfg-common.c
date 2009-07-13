@@ -45,6 +45,8 @@
 #include <time.h>
 #include <netdb.h>
 
+#include <ifaddrs.h>
+
 /* Set if there is currently a progress bar displayed. */
 int netcfg_progress_displayed = 0;
 
@@ -227,53 +229,24 @@ int is_interface_up(char *inter)
     return ((ifr.ifr_flags & IFF_UP) ? 1 : 0);
 }
 
-void get_name(char *name, char *p)
-{
-    while (isspace(*p))
-        p++;
-    while (*p) {
-        if (isspace(*p))
-            break;
-        if (*p == ':') {	/* could be an alias */
-            char *dot = p, *dotname = name;
-            *name++ = *p++;
-            while (isdigit(*p))
-                *name++ = *p++;
-            if (*p != ':') {	/* it wasn't, backup */
-                p = dot;
-                name = dotname;
-            }
-            if (*p == '\0')
-                return;
-            p++;
-            break;
-        }
-        *name++ = *p++;
-    }
-    *name++ = '\0';
-    return;
-}
-
 int get_all_ifs (int all, char*** ptr)
 {
-    FILE *ifs = NULL;
-    char ibuf[512], rbuf[512];
+    struct ifaddrs *ifap, *ifa;
+    char ibuf[512];
     char** list = NULL;
     size_t len = 0;
     
-    if ((ifs = fopen("/proc/net/dev", "r")) != NULL) {
-        fgets(ibuf, sizeof(ibuf), ifs); /* eat header */
-        fgets(ibuf, sizeof(ibuf), ifs); /* ditto */
-    }
-    else
+    if (getifaddrs(&ifap) == -1)
         return 0;
 
-    while (fgets(rbuf, sizeof(rbuf), ifs) != NULL) {
-        get_name(ibuf, rbuf);
+    for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
+        strncpy(ibuf, ifa->ifa_name, sizeof(ibuf));
         if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
             continue;
+#if defined(__linux__)
         if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
             continue;
+#endif
 #if defined(WIRELESS)
         if (is_raw_80211(ibuf))
             continue;
@@ -290,7 +263,7 @@ int get_all_ifs (int all, char*** ptr)
         list = realloc(list, sizeof(char*) * (len + 1));
         list[len] = NULL;
     }
-    fclose (ifs);
+    freeifaddrs(ifap);
     
     *ptr = list;
     

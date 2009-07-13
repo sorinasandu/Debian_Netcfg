@@ -8,6 +8,7 @@ netcfg (1.50) UNRELEASED; urgency=low
   * If wireless is disabled, don't build and link wireless related stuff.
   * Disable by default wireless on non-linux architectures.
   * Inverse the logic about building without wireless support (WIRELESS=0).
+  * Substitute Linux-specific code in get_all_ifs() using getifaddrs().
 
   [ Colin Watson ]
   * check_kill_switch is Linux-specific; provide a stub implementation for
