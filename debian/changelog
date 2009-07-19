@@ -1,5 +1,6 @@
 netcfg (1.50) UNRELEASED; urgency=low
 
+  [ Christian Perrier ]
   * No longer add ff02::3 to /etc/hosts
     Thanks to Marco d'Itri for the proposed change
     Closes: #533384
@@ -13,6 +14,9 @@ netcfg (1.50) UNRELEASED; urgency=low
   [ Colin Watson ]
   * check_kill_switch is Linux-specific; provide a stub implementation for
     non-Linux systems.
+
+  [ Otavio Salvador ]
+  * Refactor dhcp.c code to use an argument list instead of an string.
 
  -- Christian Perrier <bubulle@debian.org>  Thu, 18 Jun 2009 06:11:33 +0200
 
