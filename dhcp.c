@@ -24,15 +24,24 @@
 #define DHCP_OPTION_LEN 1236 /* pump 0.8.24 defines a max option size of 57,
                                 dhcp 2.0pl5 uses 1222, dhcp3 3.0.6 uses 1236 */
 
-const char* dhclient_request_options[] = { "subnet-mask",
-                                           "broadcast-address",
-                                           "time-offset",
-                                           "routers",
-                                           "domain-name",
-                                           "domain-name-servers",
-                                           "host-name",
-                                           "ntp-servers", /* extra */
-                                           NULL };
+const char* dhclient_request_options_dhclient[] = { "subnet-mask",
+                                                    "broadcast-address",
+                                                    "time-offset",
+                                                    "routers",
+                                                    "domain-name",
+                                                    "domain-name-servers",
+                                                    "host-name",
+                                                    "ntp-servers", /* extra */
+                                                    NULL };
+
+const char* dhclient_request_options_udhcpc[] = { "subnet",
+                                                  "broadcast",
+                                                  "router",
+                                                  "domain",
+                                                  "namesrv",
+                                                  "hostname",
+                                                  "ntpsrv", /* extra */
+                                                  NULL };
 
 static int dhcp_exit_status = 1;
 static pid_t dhcp_pid = -1;
@@ -122,7 +131,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 {
     FILE *dc = NULL;
     const char **ptr;
-    enum { DHCLIENT, DHCLIENT3, PUMP } dhcp_client;
+    char **arguments;
+    int options_count;
+    enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhcp_client;
     
     if (access("/var/lib/dhcp3", F_OK) == 0)
         dhcp_client = DHCLIENT3;
@@ -130,6 +141,8 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
         dhcp_client = DHCLIENT;
     else if (access("/sbin/pump", F_OK) == 0)
         dhcp_client = PUMP;
+    else if (access("/sbin/udhcpc", F_OK) == 0)
+        dhcp_client = UDHCPC;
     else {
         debconf_input(client, "critical", "netcfg/no_dhcp_client");
         debconf_go(client);
@@ -156,7 +169,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 fprintf(dc, "send dhcp-class-identifier \"d-i\";\n");
                 fprintf(dc, "request ");
 
-                for (ptr = dhclient_request_options; *ptr; ptr++) {
+                for (ptr = dhclient_request_options_dhclient; *ptr; ptr++) {
                     fprintf(dc, *ptr);
 
                     /* look ahead to see if it is the last entry */
@@ -182,7 +195,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 fprintf(dc, "send vendor-class-identifier \"d-i\";\n" );
                 fprintf(dc, "request ");
 
-                for (ptr = dhclient_request_options; *ptr; ptr++) {
+                for (ptr = dhclient_request_options_dhclient; *ptr; ptr++) {
                     fprintf(dc, *ptr);
 
                     /* look ahead to see if it is the last entry */
@@ -199,6 +212,41 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             }
             
             execlp("dhclient", "dhclient", "-1", interface, NULL);
+            break;
+
+        case UDHCPC:
+            /* figure how many options we have */
+            options_count = 0;
+            for (ptr = dhclient_request_options_udhcpc; *ptr; ptr++)
+                options_count++;
+
+            /* alloc the required memory for arguments:
+               double of number of options since we need -O for each
+               one plus 5 fixed ones plus 2 that are optional
+               depending on hostname being set or not. */
+            arguments = malloc((options_count * 2 + 8) * sizeof(char **));
+
+            /* set the command options */
+            options_count = 0;
+            arguments[options_count++] = "udhcpc";
+            arguments[options_count++] = "-i";
+            arguments[options_count++] = interface;
+            arguments[options_count++] = "-V";
+            arguments[options_count++] = "d-i";
+            for (ptr = dhclient_request_options_udhcpc; *ptr; ptr++) {
+                arguments[options_count++] = "-O";
+                arguments[options_count++] = *ptr;
+            }
+
+            if (dhostname) {
+                arguments[options_count++] = "-H";
+                arguments[options_count++] = dhostname;
+            }
+
+            arguments[options_count] = NULL;
+
+            execvp("udhcpc", arguments);
+            free(arguments);
             break;
         }
         if (errno != 0)

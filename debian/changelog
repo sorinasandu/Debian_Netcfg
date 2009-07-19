@@ -17,6 +17,8 @@ netcfg (1.50) UNRELEASED; urgency=low
 
   [ Otavio Salvador ]
   * Refactor dhcp.c code to use an argument list instead of an string.
+  * Add support for udhcpc. This was based on Luk Claes but changed to
+    avoid dropping support for dhclient, dhclient3 and pump for now.
 
  -- Christian Perrier <bubulle@debian.org>  Thu, 18 Jun 2009 06:11:33 +0200
 
