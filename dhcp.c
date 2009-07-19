@@ -75,12 +75,6 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
         }
         fclose(fp);
     }
-    
-#if 0
-    if ((fp = file_open(RESOLV_FILE, "a"))) {
-        fclose(fp);
-    }
-#endif
 }
 
 /* Returns 1 if no default route is available */
