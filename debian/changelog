@@ -1,3 +1,10 @@
+netcfg (1.51) UNRELEASED; urgency=low
+
+  * /var/run/stab is Linux PCMCIA specific; provide a stub implementation of
+    find_in_stab for non-Linux systems.
+
+ -- Luca Favatella <slackydeb@gmail.com>  Mon, 20 Jul 2009 20:26:09 +0200
+
 netcfg (1.50) unstable; urgency=low
 
   [ Christian Perrier ]
