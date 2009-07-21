@@ -216,18 +216,6 @@ int is_raw_80211(const char *iface)
 }
 #endif
 
-int is_interface_up(char *inter)
-{
-    struct ifreq ifr;
-    
-    strncpy(ifr.ifr_name, inter, sizeof(ifr.ifr_name));
-    
-    if (ioctl(skfd, SIOCGIFFLAGS, &ifr) < 0)
-        return -1;
-    
-    return ((ifr.ifr_flags & IFF_UP) ? 1 : 0);
-}
-
 int get_all_ifs (int all, char*** ptr)
 {
     struct ifaddrs *ifap, *ifa;
@@ -249,7 +237,7 @@ int get_all_ifs (int all, char*** ptr)
         if (is_raw_80211(ibuf))
             continue;
 #endif
-        if (all || is_interface_up(ibuf) == 1) {
+        if (all || ifa->ifa_flags & IFF_UP) {
             list = realloc(list, sizeof(char*) * (len + 1));
             list[len] = strdup(ibuf);
             len++;
