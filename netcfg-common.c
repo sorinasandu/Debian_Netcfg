@@ -229,6 +229,7 @@ int get_all_ifs (int all, char*** ptr)
     for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
         strncpy(ibuf, ifa->ifa_name, sizeof(ibuf));
         if (ifa->ifa_flags & IFF_LOOPBACK)   /* ignore loopback devices */
+            continue;
 #if defined(__linux__)
         if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
             continue;
@@ -238,9 +239,19 @@ int get_all_ifs (int all, char*** ptr)
             continue;
 #endif
         if (all || ifa->ifa_flags & IFF_UP) {
-            list = realloc(list, sizeof(char*) * (len + 1));
-            list[len] = strdup(ibuf);
-            len++;
+            int found = 0;
+            size_t i;
+
+            for (i = 0 ; i < len ; i++) {
+                if (!strcmp(ibuf, list[i])) {
+                    found = 1;
+                }
+            }
+            if (!found) {
+                list = realloc(list, sizeof(char*) * (len + 1));
+                list[len] = strdup(ibuf);
+                len++;
+            }
         }
     }
     
