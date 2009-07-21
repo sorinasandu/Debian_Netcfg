@@ -1,9 +1,13 @@
 netcfg (1.51) UNRELEASED; urgency=low
 
+  [ Luca Favatella ]
   * /var/run/stab is Linux PCMCIA specific; provide a stub implementation of
     find_in_stab for non-Linux systems.
   * Don't build-dep on libiw-dev on kfreebsd-{i386,amd64}.
   * Add kfreebsd-{i386,amd64} architectures.
+
+  [ Aurelien Jarno ]
+  * Use kernel independent code to determine loopback interfaces.
 
  -- Luca Favatella <slackydeb@gmail.com>  Mon, 20 Jul 2009 20:26:09 +0200
 

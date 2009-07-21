@@ -24,10 +24,9 @@
 #include "netcfg.h"
 #if defined(WIRELESS)
 #include <iwlib.h>
-#elif defined(__linux__)
-#include <linux/if.h>
 #endif
 #include <net/if_arp.h>
+#include <net/if.h>
 #include <errno.h>
 #include <assert.h>
 #include <ctype.h>
@@ -241,8 +240,7 @@ int get_all_ifs (int all, char*** ptr)
 
     for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
         strncpy(ibuf, ifa->ifa_name, sizeof(ibuf));
-        if (!strcmp(ibuf, "lo"))        /* ignore the loopback */
-            continue;
+        if (ifa->ifa_flags & IFF_LOOPBACK)   /* ignore loopback devices */
 #if defined(__linux__)
         if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
             continue;
