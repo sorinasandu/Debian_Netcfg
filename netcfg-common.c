@@ -216,6 +216,13 @@ int is_raw_80211(const char *iface)
 }
 #endif
 
+int qsort_strcmp(const void *a, const void *b)
+{
+    const char **ia = (const char **)a;
+    const char **ib = (const char **)b;
+    return strcmp(*ia, *ib);
+}
+
 int get_all_ifs (int all, char*** ptr)
 {
     struct ifaddrs *ifap, *ifa;
@@ -248,16 +255,16 @@ int get_all_ifs (int all, char*** ptr)
                 }
             }
             if (!found) {
-                list = realloc(list, sizeof(char*) * (len + 1));
+                list = realloc(list, sizeof(char*) * (len + 2));
                 list[len] = strdup(ibuf);
                 len++;
             }
         }
     }
     
-    /* OK, now terminate it if necessary */
+    /* OK, now sort the list and terminate it if necessary */
     if (list != NULL) {
-        list = realloc(list, sizeof(char*) * (len + 1));
+        qsort(list, len, sizeof(char *), qsort_strcmp);
         list[len] = NULL;
     }
     freeifaddrs(ifap);
