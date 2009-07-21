@@ -11,6 +11,8 @@ netcfg (1.51) UNRELEASED; urgency=low
   * Simplify detection of up interfaces.
   * Don't detect interfaces twice or more.
   * Sort interfaces by name.
+  * Port ethtool-lite to GNU/kFreeBSD, and default to unkwown status if
+    not on GNU/Linux or GNU/kFreeBSD.
 
  -- Luca Favatella <slackydeb@gmail.com>  Mon, 20 Jul 2009 20:26:09 +0200
 
