@@ -46,6 +46,12 @@
 
 #include <ifaddrs.h>
 
+#ifdef __FreeBSD_kernel__
+#define LO_IF	"lo0"
+#else
+#define LO_IF	"lo"
+#endif
+
 /* Set if there is currently a progress bar displayed. */
 int netcfg_progress_displayed = 0;
 
@@ -685,8 +691,8 @@ void netcfg_write_loopback (void)
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
         fprintf(fp, HELPFUL_COMMENT);
         fprintf(fp, "\n# The loopback network interface\n");
-        fprintf(fp, "auto lo\n");
-        fprintf(fp, "iface lo inet loopback\n");
+        fprintf(fp, "auto "LO_IF"\n");
+        fprintf(fp, "iface "LO_IF" inet loopback\n");
         fclose(fp);
     }
 }
@@ -707,8 +713,8 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
         fprintf(fp, HELPFUL_COMMENT);
         fprintf(fp, "\n# The loopback network interface\n");
-        fprintf(fp, "auto lo\n");
-        fprintf(fp, "iface lo inet loopback\n");
+        fprintf(fp, "auto "LO_IF"\n");
+        fprintf(fp, "iface "LO_IF" inet loopback\n");
         fclose(fp);
     }
     
