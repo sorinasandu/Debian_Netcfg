@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
         char *hostname = NULL;
 
         null_ipaddress.s_addr = 0;
-        netcfg_get_hostname(client, "netcfg/dhcp_hostname", &hostname, 0);
+        netcfg_get_hostname(client, "netcfg/get_hostname", &hostname, 0);
 
         netcfg_write_common(null_ipaddress, hostname, NULL);
         return 0;
