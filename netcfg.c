@@ -88,6 +88,19 @@ int main(int argc, char *argv[])
     /* initialize debconf */
     client = debconfclient_new();
     debconf_capb(client, "backup");
+
+    /* Check to see if netcfg should be run at all */
+    debconf_get(client, "netcfg/enable");
+    if (!strcmp(client->value, "false")) {
+        struct in_addr null_ipaddress;
+        char *hostname = NULL;
+
+        null_ipaddress.s_addr = 0;
+        netcfg_get_hostname(client, "netcfg/dhcp_hostname", &hostname, 0);
+
+        netcfg_write_common(null_ipaddress, hostname, NULL);
+        return 0;
+    }
     
     /* always always always default back to DHCP, unless you've specified
      * disable_dhcp on the command line. */

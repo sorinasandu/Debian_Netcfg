@@ -1,3 +1,9 @@
+Template: netcfg/enable
+Type: boolean
+Default: true
+Description: for internal use; can be preseeded
+ Set to false to disable netcfg entirely via preseed.
+
 Template: netcfg/use_dhcp
 Type: boolean
 Default: true
