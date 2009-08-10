@@ -9,6 +9,11 @@ netcfg (1.52) UNRELEASED; urgency=low
     netcfg/enable template. Thanks to Anthony L. Awtrey
     <tony@awtrey.com> for the patch. Closes: #538265
 
+  [ Colin Watson ]
+  * On Linux, feed the output of 'ip addr show' into /dev/random after the
+    network is up to improve entropy. Idea picked up from Theodore Y. Ts'o,
+    http://lkml.org/lkml/2007/12/8/108.
+
  -- Luca Favatella <slackydeb@gmail.com>  Thu, 23 Jul 2009 00:44:44 +0200
 
 netcfg (1.51) unstable; urgency=low

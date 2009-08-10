@@ -130,6 +130,8 @@ extern void parse_args (int argc, char** argv);
 extern void open_sockets (void);
 extern void reap_old_files (void);
 
+extern void netcfg_update_entropy (void);
+
 extern int netcfg_write_resolv (char*, struct in_addr *);
 
 extern int ethtool_lite (char*);

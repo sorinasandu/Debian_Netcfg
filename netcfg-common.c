@@ -921,3 +921,10 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
         *nameservers = strdup(ptr);
     return ret;
 }
+
+void netcfg_update_entropy (void)
+{
+#ifdef __linux__
+    di_exec_shell("ip addr show >/dev/random");
+#endif
+}

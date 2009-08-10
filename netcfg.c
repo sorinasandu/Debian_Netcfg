@@ -276,6 +276,7 @@ int main(int argc, char *argv[])
             break;
             
         case QUIT:
+            netcfg_update_entropy();
             return 0;
         }
     }
