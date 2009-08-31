@@ -754,7 +754,7 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 void deconfigure_network(void)
 {
     /* deconfiguring network interfaces */
-    interface_down("lo");
+    interface_down(LO_IF);
     interface_down(interface);
 }
 
