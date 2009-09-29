@@ -15,7 +15,11 @@ netcfg (1.52) UNRELEASED; urgency=low
     http://lkml.org/lkml/2007/12/8/108.
   * Upgrade to debhelper v7.
 
- -- Luca Favatella <slackydeb@gmail.com>  Thu, 23 Jul 2009 00:44:44 +0200
+  [ Otavio Salvador ]
+  * Use busybox' udhcpc by default but kfreebsd-amd64 and kfreebsd-i386
+    since they lack support in busybox at this moment.
+
+ -- Otavio Salvador <otavio@ossystems.com.br>  Tue, 29 Sep 2009 20:17:44 -0300
 
 netcfg (1.51) unstable; urgency=low
 
