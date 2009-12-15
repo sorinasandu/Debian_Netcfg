@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-09-19 19:45+0200\n"
+"PO-Revision-Date: 2009-12-12 14:01+0100\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -40,6 +40,7 @@ msgstr ""
 msgid "Auto-configure network with DHCP?"
 msgstr "Configurazione automatica della rete con DHCP?"
 
+# (ndt) accorciata, penso si capisca lo stesso.
 #. Type: boolean
 #. Description
 #. :sl1:
@@ -51,12 +52,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"La rete può essere configurata con il DHCP oppure manualmente inserendo "
-"tutte le informazioni. Se si scegliesse il DHCP e il programma di "
-"installazione non fosse capace di ottenere una configurazione funzionante "
-"dal server DHCP della propria rete, sarà offerta la possibilità di "
-"configurare la rete manualmente in seguito al tentativo di configurazione "
-"tramite il DHCP."
+"La rete può essere configurata utilizzando DHCP oppure manualmente inserendo "
+"tutte le informazioni. Se viene scelto il metodo DHCP e il programma "
+"d'installazione non riesce a ottenere una configurazione funzionante dal "
+"server DHCP della propria rete, viene offerta la possibilità di configurare "
+"la rete manualmente."
 
 #. Type: string
 #. Description
@@ -345,7 +345,7 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"Non è stata trovata alcuna interfaccia di rete. Il sistema di installazione "
+"Non è stata trovata alcuna interfaccia di rete. Il sistema d'installazione "
 "non è stato in grado di trovare un dispositivo di rete."
 
 #. Type: error
@@ -735,7 +735,7 @@ msgstr ""
 "La configurazione automatica della rete ha funzionato, ma non è stata "
 "specificata una «route» predefinita: il sistema non sa come comunicare con "
 "gli host in Internet. Questo rende impossibile proseguire l'installazione a "
-"meno che non si abbia il primo CD-ROM di installazione, un CD-ROM «netinst» o "
+"meno che non si abbia il primo CD-ROM d'installazione, un CD-ROM «netinst» o "
 "i pacchetti disponibili sulla rete locale."
 
 #. Type: boolean
