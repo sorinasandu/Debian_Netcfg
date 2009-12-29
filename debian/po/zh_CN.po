@@ -8,17 +8,18 @@
 # Copyright (C) 2003-2008 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006) and
-# Ming Hua (2005,2006,2007,2008).
+# Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006),
+# Ming Hua (2005,2006,2007,2008), Xiyue Deng (2008), Kov Chai (2008),
+# Kenlen Lai (2008), WCM (2008), Ren Xiaolei (2008).
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-01-18 01:46-0600\n"
-"Last-Translator: Ming Hua <minghua-guest@users.alioth.debian.org>\n"
-"Language-Team: Debian Chinese [GB] <debian-chinese-gb@lists.debian.org>\n"
+"PO-Revision-Date: 2009-12-25 18:46+0800\n"
+"Last-Translator: 苏运强 <wzssyqa@gmail.com>\n"
+"Language-Team: Simplified Chinese <debian-chinese-gb@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -229,8 +230,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"此 ESSID“${essid}”是无效的。ESSID 最长仅为 32 个字符，但可以包含所有字符种"
-"类。"
+"此 ESSID“${essid}”是无效的。ESSID 最长仅为 32 个字符，但可以包含所有类型的字"
+"符。"
 
 #. Type: string
 #. Description
@@ -271,7 +272,7 @@ msgstr "无效的主机名"
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "The name \"${hostname}\" is invalid."
-msgstr "“${hostname}”是无效名称。"
+msgstr "名称“${hostname}”无效。"
 
 #. Type: error
 #. Description
@@ -315,7 +316,7 @@ msgstr "未探测到网络接口"
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
-msgstr "没有检测到网络接口。安装系统无法找到网络设备。"
+msgstr "没有检测到网络接口。安装程序无法找到网络设备。"
 
 #. Type: error
 #. Description
@@ -348,8 +349,8 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"${iface} 应该已经被“kill switch”开关所禁用。如果您想要使用此接口，请在继续安"
-"装前开启之。"
+"${iface} 应该已经被物理的“kill switch”开关所禁用。如果您想要使用此接口，请在"
+"继续安装前开启之。"
 
 #. Type: select
 #. Choices
@@ -447,7 +448,7 @@ msgstr "令牌环"
 #. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "USB net"
-msgstr "USB net"
+msgstr "USB 网络"
 
 #. Type: text
 #. Description
@@ -461,7 +462,7 @@ msgstr "串行 IP"
 #. :sl2:
 #: ../netcfg-common.templates:28001
 msgid "Parallel-port IP"
-msgstr "并行口 IP"
+msgstr "并口 IP"
 
 #. Type: text
 #. Description
@@ -496,7 +497,7 @@ msgstr "Channel-to-channel"
 #. :sl2:
 #: ../netcfg-common.templates:33001
 msgid "Real channel-to-channel"
-msgstr "真实的 channel-to-channel"
+msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
@@ -585,14 +586,14 @@ msgstr "没有找到 DHCP 客户程序"
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
-msgstr "没有找到 DHCP 客户程序。需要安装 pump 或者 dhcp-client。"
+msgstr "没有找到 DHCP 客户程序。此软件包需要 pump 或者 dhcp-client。"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
-msgstr "配置 DHCP 过程已被中止。"
+msgstr "DHCP 配置过程已被中止。"
 
 #. Type: select
 #. Choices
@@ -769,8 +770,8 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"点对点地址用来确定网络的另一端。如果您不知道地址，请咨询网络管理员。点对点地"
-"址应该是以四个用句点分隔的数字组成。"
+"点对点地址用来确定点对点网络的另一端。如果您不知道地址，请咨询网络管理员。点"
+"对点地址应该是以用句点分隔的四个数字组成。"
 
 #. Type: string
 #. Description
