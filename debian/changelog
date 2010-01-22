@@ -14,6 +14,8 @@ netcfg (1.52) UNRELEASED; urgency=low
     network is up to improve entropy. Idea picked up from Theodore Y. Ts'o,
     http://lkml.org/lkml/2007/12/8/108.
   * Upgrade to debhelper v7.
+  * Tell dhclient to wait for netcfg/dhcp_timeout seconds before exiting
+    (closes: #566006).
 
   [ Otavio Salvador ]
   * Use busybox' udhcpc by default but kfreebsd-amd64 and kfreebsd-i386

@@ -128,6 +128,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     char **arguments;
     int options_count;
     enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhcp_client;
+    int dhcp_seconds;
     
     if (access("/var/lib/dhcp3", F_OK) == 0)
         dhcp_client = DHCLIENT3;
@@ -142,6 +143,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
         debconf_go(client);
         exit(1);
     }
+
+    debconf_get(client, "netcfg/dhcp_timeout");
+    dhcp_seconds = atoi(client->value);
     
     if ((dhcp_pid = fork()) == 0) { /* child */
         /* disassociate from debconf */
@@ -176,6 +180,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 if (dhostname) {
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
+                fprintf(dc, "timeout %d;\n", dhcp_seconds);
                 fclose(dc);
             }
             
@@ -202,6 +207,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 if (dhostname) {
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
+                fprintf(dc, "timeout %d;\n", dhcp_seconds);
                 fclose(dc);
             }
             
