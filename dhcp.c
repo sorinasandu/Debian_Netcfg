@@ -220,11 +220,12 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             for (ptr = dhclient_request_options_udhcpc; *ptr; ptr++)
                 options_count++;
 
-            /* alloc the required memory for arguments:
-               double of number of options since we need -O for each
-               one plus 5 fixed ones plus 2 that are optional
-               depending on hostname being set or not. */
-            arguments = malloc((options_count * 2 + 8) * sizeof(char **));
+            /* Allow space for:
+                options: options_count * 2
+                 params: 5
+               hostname: 2
+                   NULL: 1 */
+            arguments = malloc((options_count * 2 + 5 + 2 + 1) * sizeof(char **));
 
             /* set the command options */
             options_count = 0;
