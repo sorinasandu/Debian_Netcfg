@@ -130,10 +130,11 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhcp_client;
     int dhcp_seconds;
     
-    if (access("/var/lib/dhcp3", F_OK) == 0)
-        dhcp_client = DHCLIENT3;
-    else if (access("/sbin/dhclient", F_OK) == 0)
-        dhcp_client = DHCLIENT;
+    if (access("/sbin/dhclient", F_OK) == 0)
+        if (access("/var/lib/dhcp3", F_OK) == 0)
+            dhcp_client = DHCLIENT3;
+        else
+            dhcp_client = DHCLIENT;
     else if (access("/sbin/pump", F_OK) == 0)
         dhcp_client = PUMP;
     else if (access("/sbin/udhcpc", F_OK) == 0)
