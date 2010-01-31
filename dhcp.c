@@ -38,6 +38,7 @@ const char* dhclient_request_options_udhcpc[] = { "subnet",
                                                   "broadcast",
                                                   "router",
                                                   "domain",
+                                                  "hostname",
                                                   "namesrv",
                                                   "hostname",
                                                   "ntpsrv", /* extra */
