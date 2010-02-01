@@ -40,7 +40,6 @@ const char* dhclient_request_options_udhcpc[] = { "subnet",
                                                   "domain",
                                                   "hostname",
                                                   "namesrv",
-                                                  "hostname",
                                                   "ntpsrv", /* extra */
                                                   NULL };
 
