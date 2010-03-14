@@ -65,7 +65,7 @@ int ethtool_lite (char * iface)
 	}
 	iface = argv[1];
 #endif
-	
+
 #if defined(__linux__)
 	struct ethtool_value edata;
 	struct ifreq ifr;
@@ -74,10 +74,10 @@ int ethtool_lite (char * iface)
 	edata.cmd = ETHTOOL_GLINK;
 	ifr.ifr_data = (char *)&edata;
 	strncpy (ifr.ifr_name, iface, IFNAMSIZ);
-	
+
 	if (ioctl (fd, SIOCETHTOOL, &ifr) < 0)
 		di_info("ethtool ioctl on %s failed\n", iface);
-	
+
 	if (edata.data)
 	{
 		di_info("%s is connected.\n", iface);
