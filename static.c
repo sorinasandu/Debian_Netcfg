@@ -274,12 +274,10 @@ int netcfg_activate_static(struct debconfclient *client)
     char ptr1[INET_ADDRSTRLEN];
     
 #ifdef __GNU__
-    /* I had to do something like this ? */
-    /*  di_exec_shell_log ("settrans /servers/socket/2 -fg");  */
-    di_exec_shell_log("settrans /servers/socket/2 --goaway");
+    di_exec_shell_log("settrans /servers/socket/2 --fg");
     snprintf(buf, sizeof(buf),
-             "settrans -fg /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
-             interface, inet_ntop (AF_INET, &ipaddress));
+             "settrans -fgap /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
+             interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
     di_snprintfcat(buf, sizeof(buf), " --netmask=%s",
                    inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
     buf[sizeof(buf) - 1] = '\0';
