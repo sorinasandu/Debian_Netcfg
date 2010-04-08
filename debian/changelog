@@ -3,6 +3,10 @@ netcfg (1.53) UNRELEASED; urgency=low
   [ Samuel Thibault ]
   * Fixes for Hurd support. Closes: #573878.
 
+  [ Joey Hess ]
+  * Do not assume that debhelper acts on packages not relevant to build arch.
+    (See #576885)
+
  -- Frans Pop <fjp@debian.org>  Sun, 14 Mar 2010 18:59:09 +0100
 
 netcfg (1.52) unstable; urgency=low

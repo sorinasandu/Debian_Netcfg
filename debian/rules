@@ -10,12 +10,14 @@ override_dh_installdebconf:
 	dh_installdebconf
 	(echo ; po2debconf debian/netcfg-common.templates ) \
 	   >> debian/netcfg-static/DEBIAN/templates	
+ifneq (,$(shell dh_listpackages | grep '^netcfg$$'))
 	(echo ; po2debconf debian/netcfg-common.templates )\
 	   >> debian/netcfg/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-dhcp.templates )\
 	   >> debian/netcfg/DEBIAN/templates	
 	(echo ; po2debconf debian/netcfg-static.templates )\
 	   >> debian/netcfg/DEBIAN/templates	
+endif
 
 ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
 
