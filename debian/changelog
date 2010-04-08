@@ -7,7 +7,11 @@ netcfg (1.53) UNRELEASED; urgency=low
   * Do not assume that debhelper acts on packages not relevant to build arch.
     (See #576885)
 
- -- Frans Pop <fjp@debian.org>  Sun, 14 Mar 2010 18:59:09 +0100
+  [ Frans Pop ]
+  * Revert workaround for FTBFS on s390 which is no longer needed as of
+    debhelper version 7.4.17.
+
+ -- Frans Pop <fjp@debian.org>  Thu, 08 Apr 2010 00:32:48 +0200
 
 netcfg (1.52) unstable; urgency=low
 
