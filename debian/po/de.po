@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2010-01-10 13:41+0100\n"
+"PO-Revision-Date: 2010-04-12 17:01+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -217,7 +217,7 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Wenn es für Ihr drahtloses Netzwerk keinen WEP-Schlüssel gibt, lassen Sie "
+"Falls es für Ihr drahtloses Netzwerk keinen WEP-Schlüssel gibt, lassen Sie "
 "dieses Feld leer."
 
 #. Type: error
@@ -360,7 +360,7 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "Es ist möglich, dass zunächst ein Kernel-Modul für Ihre Netzwerkkarte "
-"geladen werden muss. Gehen Sie dazu zum Schritt »Netzwerk-Hardwareerkennung« "
+"geladen werden muss. Gehen Sie dazu zum Schritt »Netzwerk-Hardware erkennen« "
 "zurück."
 
 #. Type: note
@@ -498,7 +498,7 @@ msgstr "IP über serielle Schnittstelle"
 #. :sl2:
 #: ../netcfg-common.templates:28001
 msgid "Parallel-port IP"
-msgstr "IP über parallele Schnittstelle."
+msgstr "IP über parallele Schnittstelle"
 
 #. Type: text
 #. Description
@@ -555,7 +555,7 @@ msgstr "Unbekannte Schnittstelle"
 #. :sl1:
 #: ../netcfg-common.templates:37001
 msgid "Storing network settings..."
-msgstr "Netzwerkeinstellungen werden gespeichert ..."
+msgstr "Speichern der Netzwerkeinstellungen ..."
 
 #. Type: text
 #. Description
@@ -595,7 +595,7 @@ msgstr "Die meisten Benutzer können dieses Feld einfach leer lassen."
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr "Konfiguration des Netzwerks mit DHCP"
+msgstr "Konfigurieren des Netzwerks mit DHCP"
 
 #. Type: text
 #. Description
@@ -737,10 +737,10 @@ msgid ""
 "available on the local network."
 msgstr ""
 "Die automatische Netzwerkkonfiguration war erfolgreich. Es wurde allerdings "
-"keine Default-Route gesetzt: Das System weiß nicht, wie es mit Rechnern im "
-"Internet kommunizieren kann. Dies macht ein Fortsetzen der Installation "
-"unmöglich, falls Sie nicht die erste Installations-CD-ROM, eine »Netinst«-CD-"
-"ROM oder Pakete im lokalen Netzwerk haben."
+"keine Default-Route gesetzt: Das System hat keine Informationen darüber, wie "
+"es mit Rechnern im Internet kommunizieren kann. Dies macht ein Fortsetzen "
+"der Installation unmöglich, falls Sie nicht die erste Installations-CD-ROM, "
+"eine »Netinst«-CD-ROM oder Pakete im lokalen Netzwerk haben."
 
 #. Type: boolean
 #. Description
@@ -759,7 +759,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Das drahtlose Netzwerk neu konfigurieren"
+msgstr "Das drahtlose Netzwerk erneut konfigurieren"
 
 #. Type: string
 #. Description
@@ -817,10 +817,10 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Die Punkt-zu-Punk-Adresse dient zur Feststellung des anderen Endpunkts des "
-"Punkt-zu-Punk-Netzwerks. Wenn Sie die Adresse nicht kennen, fragen Sie Ihren "
-"Netzwerkadministrator. Die Punkt-zu-Punk-Adresse sollte als Gruppe aus vier "
-"Zahlen, getrennt durch Punkte, eingegeben werden."
+"Die Punkt-zu-Punkt-Adresse dient zur Feststellung des anderen Endpunkts des "
+"Punkt-zu-Punkt-Netzwerks. Wenn Sie die Adresse nicht kennen, fragen Sie "
+"Ihren Netzwerkadministrator. Die Punkt-zu-Punkt-Adresse sollte als Gruppe "
+"aus vier Zahlen, getrennt durch Punkte, eingegeben werden."
 
 #. Type: string
 #. Description
@@ -932,4 +932,4 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
-msgstr "Das Netzwerk unter Verwendung statischer Adressierung konfigurieren"
+msgstr "Netzwerk unter Verwendung statischer Adressierung konfigurieren"
