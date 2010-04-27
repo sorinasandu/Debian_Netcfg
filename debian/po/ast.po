@@ -3,26 +3,23 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-#
-#
 # Debian Installer master translation file template
 # Don't forget to properly fill-in the header of PO files
-#
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
-#
-#
+# astur <malditoastur@gmail.com>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-11-24 20:43+0100\n"
+"PO-Revision-Date: 2010-04-26 19:57+0200\n"
 "Last-Translator: astur <malditoastur@gmail.com>\n"
-"Language-Team: Asturian <ubuntu-l10n-ast@lists.ubuntu.com>\n"
+"Language-Team: ast <alministradores@softastur.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ast <alministradores@softastur.org>\n"
 
 #. Type: boolean
 #. Description
@@ -42,10 +39,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"La rede puede configurase o por DHCP o escribiendo manualmente toa la "
+"La rede puede configurase o por DHCP o escribiendo manualmente tola "
 "información. Si escueyes usar DHCP y l'instalador nun puede algamar una "
 "configuración que funcione dende un sirvidor DHCP na to rede, va date la "
-"oportunidá de configurar la rede manualmente lluéu de prebar a configurala "
+"oportunidá de configurar la rede manualmente llueu de prebar a configurala "
 "por DHCP."
 
 #. Type: string
@@ -66,16 +63,16 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "El nome de dominiu ye la parte de les señes d'Internet a la derecha del nome "
-"de la to máquina.  Suele ser daqué termináo en .com, .net, .edu, o .org.  Si "
-"tas afitando una rede casera, puedes inventalo; pero atalanta n'usar el "
-"mesmu nome de dominiu en toos los ordenadores."
+"de la to máquina. Aveza a ser daqué terminao en .com, .net, .edu, o .org.  "
+"Si tas afitando una rede casera, puedes inventalu; pero atalanta n'usar el "
+"mesmu nome de dominiu en tolos ordenadores."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:4001
 msgid "Name server addresses:"
-msgstr "Direiciones de servidores de nomes:"
+msgstr "Direiciones de sirvidores de nomes:"
 
 #. Type: string
 #. Description
@@ -88,11 +85,11 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Los sirvidores de nome usense pa restolar nomes de máquines na rede. Enxerta "
+"Los sirvidores de nome úsense pa restolar nomes de máquines na rede. Enxerta "
 "les direiciones IP (non los nomes de host) de hasta 3 sirvidores de nome, "
 "separtaos por espacios. Nun uses comes. El primer sirvidor de nome na llista "
-"será el primeru en consultase. Si nun quiés usar sirvidor de nome dalu, dexa "
-"esti campu en blancu."
+"va ser el primeru en consultase. Si nun quies usar sirvidor de nome dalu, "
+"dexa esti campu en blancu."
 
 #. Type: select
 #. Description
@@ -110,7 +107,7 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"El to sistema tien múltiples interfaces de rede. Escueye la que vayas a usar "
+"El to sistema tien múltiples interfaces de rede. Escueyi la que vayas a usar "
 "como interface primaria de rede durante la instalación. Si ye posible, la "
 "primera interface de rede coneutada que s'atopó tará seleicionada."
 
@@ -133,9 +130,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} ye una interface de rede inalámbrica. Escribe el nome (la ESSID) de "
-"la rede inalámbrica que quieras que use ${iface}. Si prefieres usar "
-"cualquier rede disponible, dexa en blancu esti campu."
+"${iface} ye una interface de rede inalámbrica. Escribi'l nome (la ESSID) de "
+"la rede inalámbrica que quieras qu'use ${iface}. Si prefieres usar "
+"cualesquier rede disponible, dexa en blancu esti campu."
 
 #. Type: string
 #. Description
@@ -153,8 +150,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} ye una interface de rede inalámbrica. Escribe el nome (la ESSID) de "
-"la rede inalámbrica que quieras que use ${iface}. Pa saltar la configuración "
+"${iface} ye una interface de rede inalámbrica. Escribi'l nome (la ESSID) de "
+"la rede inalámbrica que quieras qu'use ${iface}. Pa saltar la configuración "
 "inalámbrica y continuar, dexa en blancu esti campu."
 
 #. Type: string
@@ -184,7 +181,7 @@ msgid ""
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
 "Si la clave WEP ta nel formatu «nnnn-nnnn-nn», «nn:nn:nn:nn:nn:nn:nn:nn» o "
-"«nnnnnnnn», onde n ye un númberu, cenciellamente introduza'l valor tal cual "
+"«nnnnnnnn», onde n ye un númberu, cenciellamente introduz el valor tal cual "
 "nesti campu."
 
 #. Type: string
@@ -196,7 +193,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Si la to clave WEP ye nel formatu de frase de pasu, prefíxala con "
-"'s:' (ensín comilles)."
+"'s:' (ensin comines)."
 
 #. Type: string
 #. Description
@@ -258,7 +255,7 @@ msgstr "Nome del equipu:"
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, introduza el nome del equipu."
+msgstr "Por favor, introduz el nome del equipu."
 
 #. Type: string
 #. Description
@@ -270,9 +267,9 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"El nombre del equipu ye una sola pallabra qu'identifica el sistema na rede. "
-"Consulte al alministrador de rede si nun sabe qué nome tendría de tener. Si "
-"ta configurando una rede doméstica pue inventase esti nome."
+"El nome del equipu ye una sola pallabra qu'identifica el sistema na rede. "
+"Consulta al alministrador de rede si nun sabes qué nome tendríes de tener. "
+"Si tas configurando una rede doméstica pues inventar esti nome."
 
 #. Type: error
 #. Description
@@ -316,7 +313,7 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Hebo un fallu y torgóse'l procesu de configuración de la rede Pue intentarlo "
+"Hebo un fallu y torgóse'l procesu de configuración de la rede. Pue intentalo "
 "de nuevu dende'l menú principal de la instalación."
 
 #. Type: error
@@ -369,7 +366,7 @@ msgid ""
 "continuing."
 msgstr ""
 "${iface} parez tar desactiváu, lo que significa un \"interruptor\" físicu. "
-"Si intentes usar esta interface, por favor, prendelu anantes de siguir."
+"Si intentes usar esta interface, por favor, préndelu enantes de siguir."
 
 #. Type: select
 #. Choices
@@ -432,7 +429,7 @@ msgstr "Restolando puntos d'accesu inalámbricos..."
 #. :sl2:
 #: ../netcfg-common.templates:20001
 msgid "<none>"
-msgstr "<nengún>"
+msgstr "<dengún>"
 
 #. Type: text
 #. Description
@@ -675,10 +672,10 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Equí puede escoyer retentar la autoconfiguración DHCP de la rede (que puede "
+"Equí puede escoyer retentar l'autoconfiguración DHCP de la rede (que puede "
 "necesitase si'l so sirvidor DHCP tarda munchu tiempu en responder) o "
 "configurar la rede manualmente. Dellos sirvidores DHCP requieren que'l "
-"veceru unvíe un nome de host DHCP, poro tamién puede escoyer retentar la "
+"veceru unvie un nome de host DHCP, poro tamién puede escoyer retentar la "
 "autoconfiguración DHCP de la rede amestando un nome de host."
 
 #. Type: note
@@ -686,7 +683,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr "Falló la autoconfiguración de la rede"
+msgstr "Falló l'autoconfiguración de la rede"
 
 #. Type: note
 #. Description
@@ -697,7 +694,7 @@ msgid ""
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
 "Ye probable que la so rede nun use'l protocolu DHCP. Ye dable, que'l "
-"sirvidor DHCP vaya daqué sele o que  dalgún preséu de rede nun furrule "
+"sirvidor DHCP vaya daqué sele o que dalgún preséu de rede nun furrule "
 "correcho."
 
 #. Type: boolean
@@ -718,7 +715,7 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"La autoconfiguración de la rede tuvo ésitu. Sicasí, nun s'afitó la ruta por "
+"L'autoconfiguración de la rede tuvo ésitu. Sicasí, nun s'afitó la ruta por "
 "omisión: el sistema nun sabe cómo comunicar con hosts d'Internet. Esto fadrá "
 "imposible continuar cola instalación nun siendo que tenga el primer CD-ROM "
 "d'instalación, un CD-ROM 'Netinst', o paquetes disponibles na rede local."
@@ -842,11 +839,11 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "La pasera ye una direición IP (cuatro númberos separtaos por puntos) que "
-"indica el router pasera, tamién nomáu router por omisión.  Tou el traficu "
-"que sal de la so rede llocal (per exemplu, a Internet) mándase al traviés "
-"d'esti router.  En rares circunstancies, puede nun tener router; nesi casu, "
-"puede dexar esto en blancu.  Si nun sabe la respuesta correuta a esta "
-"cuestión, consulte col alministrador de la so rede."
+"indica el router pasera, tamién nomáu router por omisión.  Tol traficu que "
+"sal de la so rede llocal (per exemplu, a Internet) mándase al traviés d'esti "
+"router.  En rares circunstancies, puede nun tener router; nesi casu, puede "
+"dexar esto en blancu.  Si nun sabe la respuesta correuta a esta cuestión, "
+"consulte col alministrador de la so rede."
 
 #. Type: error
 #. Description
@@ -869,7 +866,7 @@ msgstr "La direición de pasera que conseñó nun ye algamable."
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
-"Puede haber un error d'escritura na so direición IP, mázcara de rede y/o "
+"Puede haber un fallu d'escritura na so direición IP, mázcara de rede y/o "
 "pasera."
 
 #. Type: boolean
