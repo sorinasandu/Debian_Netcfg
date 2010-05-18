@@ -7,13 +7,14 @@
 # Copyright (C) 2003,2004,2005,2008 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+# Changwoo Ryu <cwryu@debian.org>, 2010
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-08-28 00:56+0900\n"
+"PO-Revision-Date: 2010-05-15 23:23+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,9 +62,9 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "도메인 이름은 인터넷 주소에서 호스트 이름 바로 오른쪽에 있는 부분을 말합니"
-"다.  보통 .com, .net, .org, .kr과 같이 끝납니다.  홈 네트워크를 설정하는 경우"
-"라면, 직접 도메인 이름을 만들 수 있습니다.  하지만 모든 컴퓨터가 같은 도메인 "
-"이름을 사용하도록 하십시오."
+"다. 보통 .com, .net, .org, .kr과 같이 끝납니다. 홈 네트워크를 설정하는 경우라"
+"면, 직접 도메인 이름을 만들 수 있습니다. 하지만 모든 컴퓨터가 같은 도메인 이"
+"름을 사용하도록 하십시오."
 
 #. Type: string
 #. Description
@@ -136,7 +137,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
-msgstr "사용할 수 있는 무선 네트워크를 찾는 데 실패했습니다."
+msgstr "사용할 수 있는 무선 네트워크를 찾는데 실패했습니다."
 
 #. Type: string
 #. Description
@@ -665,9 +666,9 @@ msgid ""
 msgstr ""
 "여기에서 DHCP 네트워크 자동 설정을 다시 시도할 수도 있고 (DHCP 서버 응답이 너"
 "무 느린 경우에 다시 디소하면 성공할 수도 있습니다) 아니면 네트워크를 수동으"
-"로 직접 설정할 수도 있습니다.  또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 "
-"클라이언트에서 보내야 하는 경우가 있으므로, 호스트 이름을 입력한 다음에 DHCP "
-"네트워크 자동 설정을 다시 시도할 수도 있습니다."
+"로 직접 설정할 수도 있습니다. 또, 일부 DHCP 서버는 특정 DHCP 호스트 이름을 클"
+"라이언트에서 보내야 하는 경우가 있으므로, 호스트 이름을 입력한 다음에 DHCP 네"
+"트워크 자동 설정을 다시 시도할 수도 있습니다."
 
 #. Type: note
 #. Description
@@ -762,8 +763,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"입력한 IP 주소의 형식이 틀렸습니다.  x.x.x.x의 형태여야 하며, 여기서 x는 255"
-"보다 크지 않아야 합니다. 다시 시도하십시오."
+"입력한 IP 주소의 형식이 틀렸습니다. x.x.x.x의 형태여야 하며, 여기서 x는 255보"
+"다 크지 않아야 합니다. 다시 시도하십시오."
 
 #. Type: string
 #. Description
@@ -783,8 +784,8 @@ msgid ""
 "numbers separated by periods."
 msgstr ""
 "포인트 투 포인트 주소는 포인트 투 포인트 네트워크에서 반대편의 주소를 말합니"
-"다.  무슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오.  포인트 투 "
-"포인트 주소는 점으로 구분한 숫자 4개로 되어 있습니다."
+"다. 무슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오. 포인트 투 포"
+"인트 주소는 점으로 구분한 숫자 4개로 되어 있습니다."
 
 #. Type: string
 #. Description
@@ -802,8 +803,8 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
-"네트마스크는 어떤 기계가 네트워크에서 로컬 기계인지 판별하는 데 쓰입니다.  무"
-"슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오.  네트마스크는 점으"
+"네트마스크는 어떤 기계가 네트워크에서 로컬 기계인지 판별하는데 쓰입니다. 무"
+"슨 값을 쓸 지 모르겠다면 네트워크 관리자에게 문의하십시오. 네트마스크는 점으"
 "로 구분한 숫자 4개입니다."
 
 #. Type: string
@@ -826,8 +827,8 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "게이트웨이는 게이트웨이 라우터를 가리키는 IP 주소입니다. (IP주소는 숫자 4개"
-"로 점으로 구분합니다.) 게이트웨이는 기본 라우터라고도 합니다.  이 라우터를 통"
-"해 LAN 바깥과의 통신을 (예를 들어 인터넷) 합니다.  드물게는 라우터가 없을 수"
+"로 점으로 구분합니다.) 게이트웨이는 기본 라우터라고도 합니다. 이 라우터를 통"
+"해 LAN 바깥과의 통신을 (예를 들어 인터넷) 합니다. 드물게는 라우터가 없을 수"
 "도 있습니다. 그 경우에 이 칸을 비워 두십시오. 게이트웨이의 IP주소를 모르면 네"
 "트워크 관리자에게 문의하십시오."
 
