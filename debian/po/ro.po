@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2010-05-21 16:59+0300\n"
+"PO-Revision-Date: 2010-05-24 22:54+0300\n"
 "Last-Translator: ioan-eugen stan <stan.ieugen@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -51,11 +51,11 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Rețelistica poate fi configurată fie prin DHCP, fie manual prin introducerea "
+"Rețeaua poate fi configurată fie prin DHCP, fie manual prin introducerea "
 "tuturor informațiilor. Dacă alegeți să utilizați DHCP și programul de "
 "instalare nu reușește să obțină o configurație funcțională de la un server "
-"de DHCP din rețeaua dumneavoastră, vi se va oferi posibilitatea să "
-"configurați rețeaua manual, după încercarea de configurare prin DHCP."
+"de DHCP din rețea, vi se va oferi posibilitatea să configurați rețeaua "
+"manual, după încercarea de configurare prin DHCP."
 
 #. Type: string
 #. Description
@@ -120,8 +120,8 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "Sistemul dumneavoastră are mai multe interfețe de rețea. Alegeți-o pe aceea "
-"care va fi interfața primară în timpul instalării. Dacă a fost posibil,a "
-"fost aleasă prima interfață de rețea conectată și găsită."
+"care va fi interfața primară în timpul instalării. Dacă a fost posibil, a "
+"fost aleasă prima interfață de rețea conectată."
 
 #. Type: string
 #. Description
@@ -142,16 +142,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
-"${iface} este o interfață de rețea radio. Vă rugăm să introduceți numele "
-"(ESSID-ul) rețelei radio pe care doriți ca ${iface} să o folosească. Pentru "
-"a omite configurarea rețelei radio și a continua, lăsați acest câmp liber."
+"${iface} este o interfață de rețea fără fir. Vă rugăm să introduceți numele "
+"(ESSID-ul) rețelei fără fir pe care doriți ca ${iface} să o folosească. "
+"Lăsați acest câmp liber pentru a folosi orice rețea disponibilă."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
-msgstr "Încercarea de a găsi o rețea radio disponibilă a eșuat."
+msgstr "Încercarea de a găsi o rețea fără fir disponibilă a eșuat."
 
 #. Type: string
 #. Description
@@ -162,9 +162,9 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} este o interfață de rețea radio. Introduceți numele (ESSID-ul) "
-"rețelei radio pe care doriți ca ${iface} să o folosească. Pentru a omite "
-"configurarea rețelei radio și a continua, lăsați acest câmp liber."
+"${iface} este o interfață de rețea fără fir. Introduceți numele (ESSID-ul) "
+"rețelei radio pe care doriți ca ${iface} să o folosească. Lăsați acest câmp "
+"liber pentru a continua fără a configura rețeaua fără fir."
 
 #. Type: string
 #. Description
@@ -204,8 +204,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Dacă cheia dumneavoastră WEP este sub formă de parolă, introduceți-o "
-"precedată de 's:' (fără apostrofuri)."
+"Dacă cheia dumneavoastră WEP este sub formă de frază-parolă, introduceți-o "
+"precedată de „s:” (fără ghilimele)."
 
 #. Type: string
 #. Description
@@ -215,8 +215,8 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
-"Desigur, dacă nu există cheie WEP pentru rețeaua dumneavoastră radio, lăsați "
-"acest câmp liber."
+"Desigur, dacă nu există cheie WEP pentru rețeaua dumneavoastră fără fir, "
+"lăsați acest câmp liber."
 
 #. Type: error
 #. Description
@@ -233,7 +233,7 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Cheia WEP '${wepkey}' este invalidă. Vă rugăm să citiți cu atenție "
+"Cheia WEP '${wepkey}' este invalidă. Vă rugăm citiți cu atenție "
 "instrucțiunile din următoarea pagină, referitoare la modul de introducere "
 "corect al cheii WEP, și încercați din nou."
 
@@ -267,7 +267,7 @@ msgstr "Numele calculatorului:"
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Please enter the hostname for this system."
-msgstr "Vă rugăm să dați un nume calculatorului."
+msgstr "Vă rugăm să introduceți numele calculatorului."
 
 #. Type: string
 #. Description
@@ -279,10 +279,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Numele calculatorului este un cuvânt care vă identifică sistemul în rețea. "
-"Consultați-vă administratorul de rețea, dacă nu știți care ar trebui să fie "
-"acesta. Dacă vă configurați propria rețea acasă, atunci puteți să inventați "
-"ceva."
+"Numele calculatorului este un singur cuvânt care vă identifică sistemul în "
+"rețea. Consultați-vă administratorul de rețea, dacă nu știți care ar trebui "
+"să fie acesta. Dacă vă configurați propria rețea acasă, atunci puteți să "
+"inventați ceva."
 
 #. Type: error
 #. Description
@@ -307,9 +307,9 @@ msgid ""
 "z, and the minus sign. It must be between 2 and 63 characters long, and may "
 "not begin or end with a minus sign."
 msgstr ""
-"Un nume de calculator valid poate conține doar cifrele 0-9, litere mici a-z "
-"și caracterul minus. Trebuie să aibă între 2 și 63 de caractere, și nu poate "
-"să înceapă sau să se termine cu un semn minus."
+"Un nume de calculator valid poate conține doar cifrele 0-9, literele mici de "
+"la „a” la „z” și caracterul minus. Trebuie să aibă între 2 și 63 de "
+"caractere, și nu poate să înceapă sau să se termine cu un semn minus."
 
 #. Type: error
 #. Description
@@ -356,8 +356,8 @@ msgid ""
 "one. For this, go back to the network hardware detection step."
 msgstr ""
 "S-ar putea să trebuiască să încărcați modulul specific pentru placa "
-"dumneavoastră de rețea, dacă aveți una. Pentru acesta, întoarceți-vă la "
-"pasul de detecție al dispozitivelor de rețea."
+"dumneavoastră de rețea, dacă aveți una. Pentru acesta reveniți la pasul de "
+"detecție al dispozitivelor de rețea."
 
 #. Type: note
 #. Description
@@ -411,7 +411,7 @@ msgstr "Rețea ad-hoc (Peer to peer)"
 #. Description
 #: ../netcfg-common.templates:16002
 msgid "Type of wireless network:"
-msgstr "Tipul rețelei radio:"
+msgstr "Tipul rețelei fără fir:"
 
 #. Type: select
 #. Description
@@ -421,24 +421,23 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Rețelele radio sunt fie cu management, fie ad-hoc. Dacă folosiți vreun "
-"„access point” real, rețeaua este Cu management. Dacă un alt calculator este "
-"„access point-ul” dumneavoastră, atunci rețeaua dumneavoastră ar putea fi de "
-"tip ad-hoc."
+"Rețelele fără fir sunt fie cu management, fie ad-hoc. Dacă folosiți un punct "
+"de acces real, rețeaua este cu management. Dacă un alt calculator este "
+"punctul de acces, atunci rețeaua ar putea fi de tip ad-hoc."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:17001
 msgid "Wireless network configuration"
-msgstr "Configurație de rețea radio"
+msgstr "Configurație de rețea fără fir"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Searching for wireless access points..."
-msgstr "Se caută puncte de acces radio ..."
+msgstr "Se caută puncte de acces fără fir ..."
 
 #. Type: text
 #. Description
@@ -452,7 +451,7 @@ msgstr "<nici una>"
 #. :sl2:
 #: ../netcfg-common.templates:21001
 msgid "Wireless ethernet (802.11x)"
-msgstr "Ethernet prin radio (802.11x)"
+msgstr "Ethernet fără fir (802.11x)"
 
 #. Type: text
 #. Description
@@ -501,7 +500,7 @@ msgstr "IP prin port paralel"
 #. :sl2:
 #: ../netcfg-common.templates:29001
 msgid "Point-to-Point Protocol"
-msgstr "Protocol Punct-la-punct"
+msgstr "Protocol punct-la-punct"
 
 #. Type: text
 #. Description
@@ -515,7 +514,7 @@ msgstr "IPv6-în-IPv4"
 #. :sl2:
 #: ../netcfg-common.templates:31001
 msgid "ISDN Point-to-Point Protocol"
-msgstr "Protocol ISDN Punct-la-punct"
+msgstr "Protocol ISDN punct-la-punct"
 
 #. Type: text
 #. Description
@@ -690,11 +689,10 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Aici puteți să alegeți să reîncercați auto-configurarea rețelei prin DHCP"
-"(care s-ar putea să reușească dacă serverul dumneavoastră DHCP are nevoie de "
-"mult timp pentru a răspunde) sau să configurați rețeaua manual. Unele "
-"servere DHCP necesită să li se precizeze un nume DHCP de către client, deci "
-"puteți să alegeți să introduceți un asemenea nume înainte de a reîncerca "
-"auto-configurarea prin DHCP."
+"(care s-ar putea să reușească dacă serverul DHCP are nevoie de mult timp "
+"pentru a răspunde) sau să configurați rețeaua manual. Unele servere DHCP "
+"necesită precizarea unui nume DHCP de către client, deci puteți reîncerca "
+"auto-configurarea prin DHCP cu un nume de sistem."
 
 #. Type: note
 #. Description
@@ -747,7 +745,7 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Dacă nu sunteți sigur(ă), ar trebui să nu continuați fără o rută implicită: "
+"Dacă nu știți sigur, nu ar trebui să continuați fără o rută implicită: "
 "contactați administratorul rețelei locale în legătură cu această problemă."
 
 #. Type: text
@@ -755,7 +753,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Reconfigurează rețeaua radio"
+msgstr "Reconfigurează rețeaua fără fir"
 
 #. Type: string
 #. Description
@@ -774,8 +772,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "Adresa IP este unică pentru calculatorul dumneavoastră și constă în patru "
-"numere separate prin puncte. Dacă nu știți ce să folosiți aici, consultați-"
-"vă administratorul de rețea."
+"numere separate prin puncte. Dacă nu știți ce să folosiți aici, "
+"consultațiadministratorul de rețea."
 
 #. Type: error
 #. Description
@@ -793,7 +791,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Adresa IP introdusă de dumneavoastră este greșită. Ar trebui să fie sub "
-"forma x.x.x.x, unde fiecare 'x' nu este mai mare decât 255. Vă rugăm să "
+"forma x.x.x.x, unde fiecare „x” nu este mai mare decât 255. Vă rugăm să "
 "încercați din nou."
 
 #. Type: string
@@ -813,9 +811,9 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Adresa IP este unică pentru calculatorul dumneavoastră și constă în patru "
-"numere separate prin puncte. Consultați-vă administratorul de rețea dacă nu "
-"cunoașteți valoarea acesteia. Adresa punct-la-punct: ar trebui să fie "
+"Adresa IP este unică pentru calculatorul dumneavoastră și constă din patru "
+"numere separate prin puncte. Consultați administratorul de rețea dacă nu "
+"cunoașteți valoarea acesteia. Adresa punct-la-punct ar trebui să fie "
 "introdusă ca patru numere separate prin puncte."
 
 #. Type: string
@@ -835,9 +833,9 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Masca de rețea este folosită pentru a determina care mașini sunt în rețeaua "
-"dumneavoastră locală. Consultați-vă administratorul de rețea dacă nu "
-"cunoașteți valoarea acesteia. Masca de rețea ar trebui să fie introdusă ca "
-"patru numere separate prin puncte."
+"dumneavoastră locală. Consultați administratorul de rețea dacă nu cunoașteți "
+"valoarea acesteia. Masca de rețea ar trebui să fie introdusă ca patru numere "
+"separate prin puncte."
 
 #. Type: string
 #. Description
@@ -861,9 +859,9 @@ msgstr ""
 "Gateway-ul este o adresă IP (patru numere separate prin puncte) care indică "
 "spre poarta de rutare, cunoscut și sub numele de ruter implicit. Tot "
 "traficul în afara rețelei dumneavoastră (de exemplu, către internet) este "
-"trimis prin acest ruter. În puține circumstanțe, este posibil să nu aveți "
-"ruter; în acest caz, puteți lăsa acest câmp liber. Dacă nu cunoașteți "
-"răspunsul corect la întrebare, consultați-vă administratorul de rețea."
+"trimis prin acest ruter. În anumite sitații este posibil să nu aveți ruter. "
+"În acest caz, puteți lăsa câmpul liber. Dacă nu cunoașteți răspunsul corect "
+"la întrebare, consultați administratorul de rețea."
 
 #. Type: error
 #. Description
@@ -916,7 +914,7 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " interfața       = ${interface}\n"
-" adresă de IP    = ${ipaddress}\n"
+" adresă IP       = ${ipaddress}\n"
 " masca de rețea  = ${netmask}\n"
 " gateway         = ${gateway}\n"
 " punct-la-punct  = ${pointopoint}\n"
