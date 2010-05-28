@@ -3,14 +3,16 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
+# translation of Debian Installer templates to Brazilian Portuguese.
 # This file is distributed under the same license as debian-installer.
 #
+# Felipe Augusto van de Wiel (faw) <faw@debian.org>, 2008-2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-08-07 19:53-0300\n"
+"PO-Revision-Date: 2010-05-27 02:36-0300\n"
 "Last-Translator: Felipe Augusto van de Wiel (faw) <faw@debian.org>\n"
 "Language-Team: Brazilian Portuguese <debian-l10n-portuguese@lists.debian."
 "org>\n"
@@ -107,7 +109,7 @@ msgid ""
 msgstr ""
 "Seu sistema possui múltiplas interfaces de rede. Escolha aquela que será "
 "usada como a interface primária de rede durante a instalação. Se possível, a "
-"primeira interface de rede conectada encontrada será selecionada."
+"primeira interface de rede conectada a ser encontrada estará selecionada."
 
 #. Type: string
 #. Description
@@ -117,7 +119,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
-msgstr "ESSID sem fio para ${iface}:"
+msgstr "ESSID da rede sem fio para ${iface}:"
 
 #. Type: string
 #. Description
@@ -157,7 +159,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:8001
 msgid "WEP key for wireless device ${iface}:"
-msgstr "Chave WEP para o dispositivo sem fio ${iface}:"
+msgstr "Chave WEP para o dispositivo de rede sem fio ${iface}:"
 
 #. Type: string
 #. Description
@@ -168,7 +170,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "Se aplicável, por favor, informe a chave de segurança WEP para o dispositivo "
-"sem fio ${iface}. Existem duas formas de fazê-lo:"
+"de rede sem fio ${iface}. Existem duas formas de fazê-lo:"
 
 #. Type: string
 #. Description
@@ -252,7 +254,7 @@ msgstr "Nome de máquina:"
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Please enter the hostname for this system."
-msgstr "Por favor, informe o nome de máquina (hostname) para este sistema."
+msgstr "Por favor, informe o nome de máquina (\"hostname\") para este sistema."
 
 #. Type: string
 #. Description
@@ -264,10 +266,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"O nome de máquina (hostname) é uma palavra única que identifica seu sistema "
-"na rede. Se você não sabe qual deve ser o nome de sua máquina, consulte o "
-"administrador da rede. Se você está configurando sua própria rede doméstica, "
-"você pode usar qualquer nome aqui."
+"O nome de máquina (\"hostname\") é uma palavra única que identifica seu "
+"sistema na rede. Se você não sabe qual deve ser o nome de sua máquina, "
+"consulte o seu administrador de redes. Se você está configurando sua própria "
+"rede doméstica, você pode usar qualquer nome aqui."
 
 #. Type: error
 #. Description
@@ -406,9 +408,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Redes sem fio podem ser gerenciadas ou ad-hoc. Se você usa um ponto de "
-"acesso real de algum tipo, sua rede é Gerenciada. Se outro computador é seu "
-"'ponto de acesso', então sua rede é do tipo Ad-hoc."
+"Redes sem fio podem ser de dois tipos: gerenciadas (\"managed\") ou ad-hoc. "
+"Se você usa um ponto de acesso real de algum tipo, sua rede é Gerenciada. Se "
+"outro computador é seu 'ponto de acesso', então sua rede é do tipo Ad-hoc."
 
 #. Type: text
 #. Description
@@ -422,7 +424,7 @@ msgstr "Configuração de rede sem fio"
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Searching for wireless access points..."
-msgstr "Procurando por pontos de acesso sem fio..."
+msgstr "Procurando por pontos de acesso a redes sem fio..."
 
 #. Type: text
 #. Description
@@ -561,8 +563,7 @@ msgid ""
 "might need to specify an account number here."
 msgstr ""
 "Você pode precisar fornecer um nome de máquina DHCP. Se você está usando um "
-"modem a cabo (\"cable modem\"), você pode ter que especificar um número de "
-"conta aqui."
+"\"cable modem\", você pode ter que especificar um número de conta aqui."
 
 #. Type: string
 #. Description
@@ -570,7 +571,7 @@ msgstr ""
 #: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
 msgstr ""
-"A maioria dos outros tipos de usuários pode simplesmente deixar esse campo "
+"A maioria dos outros tipos de usuários pode simplesmente deixar este campo "
 "em branco."
 
 #. Type: text
@@ -625,7 +626,7 @@ msgstr "O processo de configuração do DHCP foi abortado."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "Tentar novamente configuração automática de rede"
+msgstr "Tentar novamente a configuração automática de rede"
 
 #. Type: select
 #. Choices
@@ -635,7 +636,7 @@ msgstr "Tentar novamente configuração automática de rede"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Tentar configuração automática de rede com \"hostname\" DHCP"
+msgstr "Tentar configuração automática de rede com um \"hostname\" DHCP"
 
 #. Type: select
 #. Choices
@@ -675,13 +676,12 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Aqui você pode optar por tentar a configuração automática de rede via DHCP "
-"novamente (a qual pode funcionar caso seu servidor DHCP leve muito tempo "
-"para responder) ou configurar a rede manualmente. Alguns servidores DHCP "
-"requerem que um nome de máquina (\"hostname\") DHCP seja enviado pelo "
-"cliente e portanto você pode também optar por tentar a configuração "
-"automática de rede via DHCP novamente com um nome de máquina que você "
-"fornecer."
+"Aqui você pode optar por tentar novamente a configuração automática de rede "
+"via DHCP (a qual pode funcionar caso seu servidor DHCP leve muito tempo para "
+"responder) ou configurar a rede manualmente. Alguns servidores DHCP requerem "
+"que um nome de máquina (\"hostname\") DHCP seja enviado pelo cliente e "
+"portanto você também pode optar por tentar novamente a configuração "
+"automática de rede via DHCP com um nome de máquina que você fornecer."
 
 #. Type: note
 #. Description
@@ -698,9 +698,9 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Sua rede provavelmente não está utilizando o protocolo DHCP. "
-"Alternativamente, o servidor DHCP pode ser lento ou algum hardware de rede "
-"pode não estar funcionando corretamente."
+"Sua rede provavelmente não está usando o protocolo DHCP. Alternativamente, o "
+"servidor DHCP pode ser lento ou algum hardware de rede pode não estar "
+"funcionando corretamente."
 
 #. Type: boolean
 #. Description
@@ -847,7 +847,7 @@ msgstr ""
 "O gateway é um endereço IP (quatro números separados por pontos) que indica "
 "o roteador gateway, também conhecido como o roteador padrão. Todo tráfego "
 "que vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
-"através desse roteador. Em raras circunstâncias, você pode não possuir um "
+"através desse roteador. Em raras circunstâncias, você pode ficar sem um "
 "roteador. Nesse caso, este campo pode ser deixado em branco. Caso você não "
 "saiba a resposta correta para essa pergunta, consulte o seu administrador de "
 "redes."
