@@ -3,8 +3,8 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-# translation of debian-installer_packages_po_sublevel1_lv.po to Latvian
-# Aigars Mahinovs <aigarius@debian.org>, 2006.
+# translation of lv.po to Latvian
+# Aigars Mahinovs <aigarius@debian.org>, 2006, 2008.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Peteris Krisjanis <pecisk@gmail.com>, 2008.
 # Latvian messages for debian-installer.
@@ -12,16 +12,16 @@
 # This file is distributed under the same license as debian-installer.
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer_packages_po_sublevel1_lv\n"
+"Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-09-19 00:00+0300\n"
-"Last-Translator: Peteris Krisjanis <pecisk@gmail.com>\n"
+"PO-Revision-Date: 2010-06-19 21:53+0300\n"
+"Last-Translator: Aigars Mahinovs <aigarius@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #. Type: boolean
@@ -527,7 +527,7 @@ msgstr "Starplietotāju komunikācijas līdzeklis (IUCV)"
 #. :sl2:
 #: ../netcfg-common.templates:36001
 msgid "Unknown interface"
-msgstr "Nezināms interfeiss"
+msgstr "Nezināma saskarne"
 
 #. Type: text
 #. Description
@@ -550,7 +550,7 @@ msgstr "Konfigurēt tīklu"
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
-msgstr "DHCP saimniekdatora nosaukums:"
+msgstr "DHCP servera nosaukums:"
 
 #. Type: string
 #. Description
@@ -560,8 +560,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Varētu būt vajadzīgs DHCP saimniekdatora nosaukums. Ja lietojat kabeļmodemu, "
-"jums, iespējams, šeit jānorāda sava konta numurs."
+"Varētu būt vajadzīgs DHCP servera nosaukums. Ja lietojat kabeļmodemu, jums, "
+"iespējams, šeit jānorāda sava konta numurs."
 
 #. Type: string
 #. Description
@@ -632,7 +632,7 @@ msgstr "Atkārtot automātisko tīkla konfigurēšanu"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Atkārtot konfigurēšanu ar DHCP saimniekdatora nosaukumu"
+msgstr "Atkārtot konfigurēšanu ar DHCP servera nosaukumu"
 
 #. Type: select
 #. Choices
@@ -675,9 +675,8 @@ msgstr ""
 "No šīs izvēlnes jūs varat izvēlēties atkārtot automātisko DHCP konfigurēšanu "
 "(kas šoreiz var būt sekmīga, ja DHCP serverim ir vajadzīgs ilgs laiks, lai "
 "atbildētu), vai arī konfigurēt tīklu manuāli. Daži DHCP serveri prasa, lai "
-"klienti vispirms nosūta DHCP saimniekdatora nosaukumu, tāpēc jūs varat arī "
-"atkārtot automātisko tīkla konfigurēšanu ar īpaši norādītu saimniekdatora "
-"nosaukumu."
+"klienti vispirms nosūta DHCP servera nosaukumu, tāpēc jūs varat arī atkārtot "
+"automātisko tīkla konfigurēšanu ar īpaši norādītu servera nosaukumu."
 
 #. Type: note
 #. Description
@@ -775,7 +774,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Jūsu ievadītā IP adrese nav korekta. Tai jābūt formā x.x.x.x, kur katrs x ir "
-"skaitlis no 0 līdz 255."
+"skaitlis no 0 līdz 255. Lūdzu, mēģiniet vēlreiz."
 
 #. Type: string
 #. Description
