@@ -25,10 +25,10 @@ ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
 
 NETCFG_DEPENDS =
 ifeq ($(ARCH), kfreebsd-i386)
-NETCFG_DEPENDS = dhcp3-client-udeb
+NETCFG_DEPENDS = isc-client-udeb
 endif
 ifeq ($(ARCH), kfreebsd-amd64)
-NETCFG_DEPENDS = dhcp3-client-udeb
+NETCFG_DEPENDS = isc-client-udeb
 endif
 
 override_dh_gencontrol:
