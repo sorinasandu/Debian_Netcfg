@@ -858,7 +858,7 @@ void reap_old_files (void)
 {
     static char* remove[] =
         { INTERFACES_FILE, HOSTS_FILE, HOSTNAME_FILE, NETWORKS_FILE,
-          RESOLV_FILE, DHCLIENT_CONF, DHCLIENT3_CONF, DOMAIN_FILE, 0 };
+          RESOLV_FILE, DHCLIENT_CONF, DOMAIN_FILE, 0 };
     char **ptr = remove;
 
     while (*ptr)

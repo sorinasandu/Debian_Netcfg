@@ -127,14 +127,11 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     const char **ptr;
     char **arguments;
     int options_count;
-    enum { DHCLIENT, DHCLIENT3, PUMP, UDHCPC } dhcp_client;
+    enum { DHCLIENT, PUMP, UDHCPC } dhcp_client;
     int dhcp_seconds;
 
     if (access("/sbin/dhclient", F_OK) == 0)
-        if (access("/var/lib/dhcp3", F_OK) == 0)
-            dhcp_client = DHCLIENT3;
-        else
-            dhcp_client = DHCLIENT;
+		dhcp_client = DHCLIENT;
     else if (access("/sbin/pump", F_OK) == 0)
         dhcp_client = PUMP;
     else if (access("/sbin/udhcpc", F_OK) == 0)
@@ -165,33 +162,6 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
         case DHCLIENT:
             /* First, set up dhclient.conf */
             if ((dc = file_open(DHCLIENT_CONF, "w"))) {
-                fprintf(dc, "send dhcp-class-identifier \"d-i\";\n");
-                fprintf(dc, "request ");
-
-                for (ptr = dhclient_request_options_dhclient; *ptr; ptr++) {
-                    fprintf(dc, *ptr);
-
-                    /* look ahead to see if it is the last entry */
-                    if (*(ptr + 1))
-                        fprintf(dc, ", ");
-                    else
-                        fprintf(dc, ";\n");
-                }
-
-                if (dhostname) {
-                    fprintf(dc, "send host-name \"%s\";\n", dhostname);
-                }
-                fprintf(dc, "timeout %d;\n", dhcp_seconds);
-                fclose(dc);
-            }
-
-            execlp("dhclient", "dhclient", "-e", interface, NULL);
-            break;
-
-        case DHCLIENT3:
-            /* Different place.. */
-
-            if ((dc = file_open(DHCLIENT3_CONF, "w"))) {
                 fprintf(dc, "send vendor-class-identifier \"d-i\";\n" );
                 fprintf(dc, "request ");
 

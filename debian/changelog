@@ -14,6 +14,8 @@ netcfg (1.53) UNRELEASED; urgency=low
   [ Otavio Salvador ]
   * kfreebsd-{amd64,i386}: depends on isc-client-udeb (as it replaces
     the dhcp3-client-udeb).
+  * dhcp: drop dhcp3 compatibility since isc-dhcp looks exactly as
+    regular dhclient.
 
  -- Frans Pop <fjp@debian.org>  Thu, 08 Apr 2010 00:32:48 +0200
 
