@@ -12,10 +12,14 @@ netcfg (1.53) UNRELEASED; urgency=low
     debhelper version 7.4.17.
 
   [ Otavio Salvador ]
-  * kfreebsd-{amd64,i386}: depends on isc-dhcp-client-udebœ (as it replaces
+  * kfreebsd-{amd64,i386}: depends on isc-dhcp-client-udeb (as it replaces
     the dhcp3-client-udeb).
   * dhcp: drop dhcp3 compatibility since isc-dhcp looks exactly as
     regular dhclient.
+
+  [ Aurelien Jarno ]
+  * simplify kfreebsd dependencies.
+  * depends on freebsd-net-tools-udeb on kfreebsd.
 
  -- Frans Pop <fjp@debian.org>  Thu, 08 Apr 2010 00:32:48 +0200
 

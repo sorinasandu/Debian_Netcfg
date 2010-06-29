@@ -9,7 +9,7 @@ Vcs-Svn: svn://svn.debian.org/d-i/trunk/packages/netcfg
 Package: netcfg
 XC-Package-Type: udeb
 Architecture: i386 amd64 alpha arm armel armeb hppa ia64 m68k mips mipsel powerpc sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386 sh4
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${netcfg:Depends}, ethernet-card-detection
+Depends: ${shlibs:Depends}, ${misc:Depends}, ethernet-card-detection, isc-dhcp-client-udeb [kfreebsd-any], freebsd-net-tools-udeb [kfreebsd-any]
 Provides: configured-network
 XB-Installer-Menu-Item: 1800
 Description: Configure the network
@@ -22,7 +22,7 @@ Description: Configure the network
 Package: netcfg-static
 XC-Package-Type: udeb
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ethernet-card-detection
+Depends: ${shlibs:Depends}, ${misc:Depends}, ethernet-card-detection, freebsd-net-tools-udeb [kfreebsd-any]
 Provides: configured-network
 XB-Installer-Menu-Item: 1800
 Description: Configure a static network

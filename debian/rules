@@ -20,16 +20,3 @@ ifneq (,$(shell dh_listpackages | grep '^netcfg$$'))
 	(echo ; po2debconf debian/netcfg-static.templates) \
 	   >> debian/netcfg/DEBIAN/templates
 endif
-
-ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
-
-NETCFG_DEPENDS =
-ifeq ($(ARCH), kfreebsd-i386)
-NETCFG_DEPENDS = isc-dhcp-client-udeb
-endif
-ifeq ($(ARCH), kfreebsd-amd64)
-NETCFG_DEPENDS = isc-dhcp-client-udeb
-endif
-
-override_dh_gencontrol:
-	dh_gencontrol -- -Vnetcfg:Depends="$(NETCFG_DEPENDS)"
