@@ -16,6 +16,7 @@
 #include <sys/stat.h>
 #include <sys/ioctl.h>
 #include <sys/utsname.h>
+#include <sys/wait.h>
 #include <arpa/inet.h>
 #include <net/if.h>
 #include <time.h>
@@ -80,6 +81,13 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
 /* Returns 1 if no default route is available */
 static short no_default_route (void)
 {
+#if defined(__FreeBSD_kernel__)
+    int status;
+
+    status = system("exec /lib/freebsd/route show default >/dev/null 2>&1");
+
+    return WEXITSTATUS(status) != 0;
+#else
     FILE* iproute = NULL;
     char buf[256] = { 0 };
 
@@ -94,6 +102,7 @@ static short no_default_route (void)
     }
 
     return 1;
+#endif
 }
 
 /*

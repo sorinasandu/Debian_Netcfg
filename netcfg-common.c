@@ -764,12 +764,18 @@ void loop_setup(void)
 
     deconfigure_network();
 
+#if defined(__FreeBSD_kernel__)
+    /* GNU/kFreeBSD currently uses the ifconfig command */
+    di_exec_shell_log("ifconfig "LO_IF" up");
+    di_exec_shell_log("ifconfig "LO_IF" 127.0.0.1 netmask 255.0.0.0");
+#else
     if (afpacket_notloaded)
         afpacket_notloaded = di_exec_shell("modprobe af_packet"); /* should become 0 */
 
     di_exec_shell_log("ip link set "LO_IF" up");
     di_exec_shell_log("ip addr flush dev "LO_IF);
     di_exec_shell_log("ip addr add 127.0.0.1/8 dev "LO_IF);
+#endif
 }
 
 void seed_hostname_from_dns (struct debconfclient * client, struct in_addr *ipaddr)
