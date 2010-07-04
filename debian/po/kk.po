@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-02-10 09:39+0600\n"
-"Last-Translator: Sarsenov D. <daur88@inbox.ru>\n"
+"PO-Revision-Date: 2010-07-03 12:10+0600\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,7 +87,7 @@ msgid ""
 msgstr ""
 "DNS серверлері желіден компьютерлерді аттары бойынша іздеу үшін қолданылады. "
 "Үш сервердің IP адресін көрсетуге болады. Ажырату үшін үтір емес бос орын "
-"қолданылады. Серверлар көрсетілген рет бойынша сұралады. Егер сіз DNS "
+"қолданылады. Серверлер көрсетілген рет бойынша сұралады. Егер сіз DNS "
 "қолданғыңыз келмесе орынды бос қалдырыңыз."
 
 #. Type: select
@@ -118,7 +118,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
-msgstr "${iface} ESSID:"
+msgstr "${iface} үшін сымсыз ESSID:"
 
 #. Type: string
 #. Description
@@ -150,7 +150,7 @@ msgid ""
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} сымсыз желі интерфейсі болып табылады. ${iface} қолданғыңыз келетін "
-"желінің атын (ESSID) енгізіңіз. Сымсыз желіні баптауды аттап кетуді "
+"сымсыз желі атын (ESSID) енгізіңіз. Сымсыз желіні баптауды аттап кетуді "
 "қаласаңыз, бұл жолды бос қалдырыңыз."
 
 #. Type: string
@@ -168,8 +168,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"${iface} сымсыз құрылғысының WEP қауіпсіздік кілтін енгізіңіз. Мұны істеу "
-"үшін екі тәсіл бар:"
+"Керек болса, ${iface} сымсыз құрылғысының WEP қауіпсіздік кілтін енгізіңіз. "
+"Мұны істеу үшін екі тәсіл бар:"
 
 #. Type: string
 #. Description
@@ -190,7 +190,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Егер WEP-кілтіңіз фраза кілті секілді көрінсе, алдына 's:' қосыңыз"
+"Егер WEP-кілтіңіз фраза кілті секілді көрінсе, алдына 's:' қосыңыз "
 "(тырнақшасыз)."
 
 #. Type: string
@@ -420,7 +420,7 @@ msgstr "Сымсыз желіні баптау"
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Searching for wireless access points..."
-msgstr "Сымсыз желінің қатынаcу нүктелерін (access point) іздеу..."
+msgstr "Сымсыз желінің қатынаcу нүктелерін іздеу..."
 
 #. Type: text
 #. Description
@@ -548,7 +548,7 @@ msgstr "Желіні баптау"
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
-msgstr "DHCP аты:"
+msgstr "DHCP хост аты:"
 
 #. Type: string
 #. Description
@@ -558,8 +558,8 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"DHCP атын көрсету керек болуы мүмкін. Егер сіз кәбілдік модем пайдалансаңыз, "
-"тіркелгі нөмірін осында көрсетуіңізге болады."
+"DHCP хост атын көрсету керек болуы мүмкін. Егер сіз кәбілдік модем "
+"пайдалансаңыз, тіркелгі нөмірін осында көрсетуіңізге болады."
 
 #. Type: string
 #. Description
@@ -640,7 +640,7 @@ msgstr "Желіні DHCP көмегімен баптауды қайталау"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
-msgstr "Желіні қолдан баптау"
+msgstr "Желіні қолмен баптау"
 
 #. Type: select
 #. Choices
@@ -670,8 +670,8 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Осы жерден DHCP автобаптауды қайталап көруге болады (DHCP вервер баяу жұмыс "
-"істесе, қайталап көріңіз) немесе желіні қолдан баптап көруге болады. Кейбір "
+"Осы жерден DHCP автобаптауды қайталап көруге болады (DHCP сервері баяу жұмыс "
+"істесе, қайталап көріңіз) немесе желіні қолмен баптап көруге болады. Кейбір "
 "DHCP серверлер қайталанбайтын DHCP атын клиентке жіберіп барып, автобаптауды "
 "орындайды."
 
@@ -690,7 +690,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Сіздің желі DHCP протоколын пайдаланбайтын сияқты. Немесе DHCP сервер баяу "
+"Сіздің желі DHCP хаттамасын пайдаланбайтын сияқты. Немесе DHCP сервер баяу "
 "жұмыс істейді не/және жабдығы тозған."
 
 #. Type: boolean
@@ -751,8 +751,8 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP адрес желідегі әрбір компьютерде қайталанбауы керек. Адрес төрт саннан "
-"тұрады. Егер сіз мұнда нені нұсқау керек екендігін білмесеңіз онда сіз "
-"администраторымен ақылдасыңыз."
+"тұрады. Егер сіз мұнда нені нұсқау керек екендігін білмесеңіз, желілік "
+"администраторыңызбен ақылдасыңыз."
 
 #. Type: error
 #. Description
@@ -810,8 +810,8 @@ msgid ""
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
 "Желі маскасы бір желіні бір желіден ажырату үшін қажет. Оның мәнін "
-"білмесеңіз, желілік администратормен ақылдасыңыз. Маска нүктемен ажыратылған "
-"төрт саннан тұрады."
+"білмесеңіз, желілік администраторыңызбен ақылдасыңыз. Маска нүктемен "
+"ажыратылған төрт саннан тұрады."
 
 #. Type: string
 #. Description
@@ -836,7 +836,7 @@ msgstr ""
 "Сіздің жергілікті желіңізден тыс шығатын барлық трафик (мысалы, интернет) "
 "осы роутер арқылы өтеді. Кей жағдайда сізде мұндай роутер болмауы да мүмкін; "
 "бұл жағдайда жолды бос қалдыру керек. Не жазарын білмесеңіз, желілік "
-"администратормен ақылдасыңыз."
+"администраторыңызбен ақылдасыңыз."
 
 #. Type: error
 #. Description
@@ -892,8 +892,8 @@ msgstr ""
 " ip-адрес             = ${ipaddress}\n"
 " желі маскасы     = ${netmask}\n"
 " шлюз                 = ${gateway}\n"
-" PPP адрес          = ${pointopoint}\n"
-" сервер аттары  = ${nameservers}"
+" PPP адресі         = ${pointopoint}\n"
+" DNS серверлері = ${nameservers}"
 
 #. Type: text
 #. Description
