@@ -274,7 +274,7 @@ int netcfg_activate_static(struct debconfclient *client)
     char ptr1[INET_ADDRSTRLEN];
 
 #ifdef __GNU__
-    di_exec_shell_log("settrans /servers/socket/2 --fg");
+    di_exec_shell_log("settrans /servers/socket/2 -fg");
     snprintf(buf, sizeof(buf),
              "settrans -fgap /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
              interface, inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
@@ -282,7 +282,7 @@ int netcfg_activate_static(struct debconfclient *client)
                    inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
     buf[sizeof(buf) - 1] = '\0';
 
-    if (gateway)
+    if (gateway.s_addr)
         snprintf(buf, sizeof(buf), " --gateway=%s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
 
