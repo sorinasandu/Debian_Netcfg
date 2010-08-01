@@ -229,6 +229,51 @@ int qsort_strcmp(const void *a, const void *b)
     return strcmp(*ia, *ib);
 }
 
+#ifdef __GNU__
+#include <mach.h>
+#include <device/device.h>
+#include <hurd.h>
+/* On Hurd, the IP stack (pfinet) does not know the list of network interfaces
+ * before we configure them, so we cannot use getifaddrs(). Instead we try
+ * possible names for network interfaces and check whether they exists by
+ * attempting to open the kernel device. */
+int get_all_ifs (int all, char*** ptr)
+{
+    static const char *const fmt[] = { "eth%d", "wl%d", NULL };
+
+    mach_port_t device_master;
+    device_t device;
+    int err;
+    char **list;
+    int num, i, j;
+    char name[3 + 3 * sizeof (int) + 1];
+
+    err = get_privileged_ports (0, &device_master);
+    if (err)
+	return 0;
+
+    num = 0;
+    list = malloc(sizeof *list);
+    for (i = 0; fmt[i]; i++)
+	for (j = 0;; j++) {
+	    sprintf (name, fmt[i], j);
+	    err = device_open (device_master, D_READ, name, &device);
+	    if (err != 0)
+		break;
+
+	    device_close (device);
+	    mach_port_deallocate (mach_task_self (), device);
+
+	    list = realloc (list, (num + 2) * sizeof *list);
+	    list[num++] = strdup(name);
+	}
+    list[num] = NULL;
+
+    mach_port_deallocate (mach_task_self (), device_master);
+    *ptr = list;
+    return num;
+}
+#else
 int get_all_ifs (int all, char*** ptr)
 {
     struct ifaddrs *ifap, *ifa;
@@ -279,6 +324,7 @@ int get_all_ifs (int all, char*** ptr)
 
     return len;
 }
+#endif
 
 #ifdef __linux__
 short find_in_stab(const char* iface)
