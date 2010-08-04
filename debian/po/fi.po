@@ -6,23 +6,24 @@
 # Finnish messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Tommi Vainikainen <thv+debian@iki.fi>, 2003 - 2004
-# Tapio Lehtonen <tale@debian.org>, 2004 - 2006
-# Esko Arajärvi <edu@iki.fi>, 2007 - 2008
 # Thanks to laatu@lokalisointi.org.
 #
 #
+# Tommi Vainikainen <thv+debian@iki.fi>, 2003 - 2004.
+# Tapio Lehtonen <tale@debian.org>, 2004 - 2006.
+# Esko Arajärvi <edu@iki.fi>, 2007 - 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-08-02 11:47+0200\n"
+"PO-Revision-Date: 2010-08-02 23:00+0300\n"
 "Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
@@ -212,7 +213,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "Invalid WEP key"
-msgstr "WEP-avain ei kelpaa"
+msgstr "Virheellinen WEP-avain"
 
 #. Type: error
 #. Description
@@ -222,15 +223,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-avain ${wepkey} ei kelpaa. Noudata tarkasti seuraavan ruudun ohjeita WEP-"
-"avaimen oikeasta kirjoittamisesta ja yritä uudestaan."
+"WEP-avain ”${wepkey}” on virheellinen. Noudata tarkasti seuraavan ruudun "
+"ohjeita WEP-avaimen oikeasta kirjoitusasusta ja yritä uudestaan."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:10001
 msgid "Invalid ESSID"
-msgstr "ESSID ei kelpaa"
+msgstr "Virheellinen ESSID"
 
 #. Type: error
 #. Description
@@ -240,8 +241,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID ”${essid}” ei kelpaa. ESSID:ssä voi olla enintään 32 merkkiä, mutta se "
-"voi sisältää kaikenlaisia merkkejä. "
+"ESSID ”${essid}” on virheellinen. ESSID:ssä voi olla enintään 32 merkkiä, "
+"mutta se voi sisältää kaikenlaisia merkkejä. "
 
 #. Type: string
 #. Description
@@ -276,14 +277,14 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "Invalid hostname"
-msgstr "Konenimi ei kelpaa"
+msgstr "Virheellinen konenimi"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Konenimi ”${hostname}” ei kelpaa."
+msgstr "Konenimi ”${hostname}” on virheellinen."
 
 #. Type: error
 #. Description
