@@ -4,7 +4,10 @@ netcfg (1.55) UNRELEASED; urgency=low
   * More fixes for Hurd support, including network device detection
     (closes: 588761).
 
- -- Samuel Thibault <sthibault@debian.org>  Sun, 01 Aug 2010 16:21:50 +0200
+  [ Aurelien Jarno ]
+  * dhcp: ask udhcpc for dns and not namesrv.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 06 Aug 2010 17:51:08 +0200
 
 netcfg (1.54) unstable; urgency=low
 
