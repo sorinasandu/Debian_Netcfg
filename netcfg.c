@@ -138,14 +138,16 @@ int main(int argc, char *argv[])
                     usleep(250);
 
                     if (ethtool_lite (*ifaces) == 1) /* CONNECTED */ {
+                        di_info("found link on interface %s, making it the default.", *ifaces);
                         defiface = strdup(*ifaces);
                         interface_down(*ifaces);
                         break;
-                    }
+                    } else {
 #ifdef WIRELESS
-                    else {
                         struct wireless_config wc;
-
+#endif /* WIRELESS */
+                        di_info("found no link on interface %s.", *ifaces);
+#ifdef WIRELESS
                         if (iw_get_basic_config(wfd, *ifaces, &wc) == 0) {
                             wc.essid[0] = '\0';
                             wc.essid_on = 0;
@@ -172,8 +174,8 @@ int main(int argc, char *argv[])
                             di_info("%s is not a wireless interface. Continuing.", *ifaces);
 
                         interface_down(*ifaces);
-                    }
 #endif
+                    }
 
                     interface_down(*ifaces);
 
