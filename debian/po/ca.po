@@ -4,17 +4,17 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Catalan messages for debian-installer.
-# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008 Software in the Public Interest, Inc.
+# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008.
+# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010.
 # Guillem Jover <guillem@debian.org>, 2005, 2007.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer lenny\n"
+"Project-Id-Version: debian-installer squeeze\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-09-17 16:55+0200\n"
+"PO-Revision-Date: 2010-10-18 21:17+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgid ""
 "configure it by DHCP."
 msgstr ""
 "Es pot configurar la xarxa mitjançant DHCP o introduint manualment tota la "
-"informació. Si decidiu emprar DHCP i l'instal·lador no és capaç d'obtindre "
+"informació. Si decidiu emprar DHCP i l'instaŀlador no és capaç d'obtindre "
 "una configuració funcional des d'un servidor de DHCP a la vostra xarxa, "
 "tindreu l'oportunitat de configurar la vostra xarxa manualment després de "
 "l'intent de configurar-la per DHCP."
@@ -107,8 +107,8 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
-"El vostre sistema té múltiples interfícies de xarxa. Seleccioneu la que s'ha "
-"d'utilitzar com a interfície primària mentre s'instal·la Debian. Si ha estat "
+"El sistema té múltiples interfícies de xarxa. Seleccioneu la que s'ha "
+"d'utilitzar com a interfície primària mentre s'instaŀla Debian. Si ha estat "
 "possible, s'haurà seleccionat la primera interfície de xarxa connectada."
 
 #. Type: string
@@ -267,9 +267,9 @@ msgid ""
 "something up here."
 msgstr ""
 "El nom del sistema és una única paraula que identifica el sistema a la "
-"xarxa. Si no sabeu quin hauria de ser el nom del vostre ordinador, consulteu "
-"amb l'administrador de la xarxa. Si esteu configurant la vostra xarxa "
-"domèstica, podeu inventar-vos qualsevol cosa ací."
+"xarxa. Si no sabeu quin hauria de ser el nom de l'ordinador, consulteu amb "
+"l'administrador de la xarxa. Si esteu configurant la vostra xarxa domèstica, "
+"podeu inventar-vos qualsevol cosa ací."
 
 #. Type: error
 #. Description
@@ -314,7 +314,7 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "S'ha produït un error i s'ha avortat el procés de configuració de la xarxa. "
-"Podeu tornar a intentar-ho des del menú principal de la instal·lació."
+"Podeu tornar a intentar-ho des del menú principal de la instaŀlació."
 
 #. Type: error
 #. Description
@@ -331,8 +331,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
-"No s'ha trobat cap interfície de xarxa. El sistema d'instal·lació no ha "
-"pogut trobar un dispositiu de xarxa."
+"No s'ha trobat cap interfície de xarxa. El sistema d'instaŀlació no ha pogut "
+"trobar un dispositiu de xarxa."
 
 #. Type: error
 #. Description
@@ -342,9 +342,9 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
-"És possible que necessiteu carregar un mòdul específic per a la vostra "
-"targeta de xarxa, si en teniu una. Per fer això, torneu enrere al pas de "
-"detecció de maquinari de xarxa."
+"És possible que necessiteu carregar un mòdul específic per a la targeta de "
+"xarxa, si en teniu una. Per fer això, torneu enrere al pas de detecció de "
+"maquinari de xarxa."
 
 #. Type: note
 #. Description
@@ -481,7 +481,7 @@ msgstr "IP per línia sèrie"
 #. :sl2:
 #: ../netcfg-common.templates:28001
 msgid "Parallel-port IP"
-msgstr "IP per port paral·lel"
+msgstr "IP per port paraŀlel"
 
 #. Type: text
 #. Description
@@ -676,9 +676,9 @@ msgid ""
 "autoconfiguration with a hostname that you provide."
 msgstr ""
 "Des d'ací podeu triar tornar a intentar la configuració automàtica de la "
-"xarxa amb DHCP (que és possible que funcione si el vostre servidor de DHCP "
-"triga molt en respondre) o configurar la xarxa manualment. Alguns servidors "
-"de DHCP requereixen que el client envie un nom d'ordinador DHCP, així doncs "
+"xarxa amb DHCP (que és possible que funcione si el servidor de DHCP triga "
+"molt en respondre) o configurar la xarxa manualment. Alguns servidors de "
+"DHCP requereixen que el client envie un nom d'ordinador DHCP, així doncs "
 "també podeu intentar la configuració automàtica de la xarxa amb DHCP amb el "
 "nom d'ordinador que proveïu."
 
@@ -722,7 +722,7 @@ msgstr ""
 "La configuració automàtica de la xarxa ha tingut èxit. Tot i així, no s'ha "
 "establert cap ruta predeterminada: el sistema no sap com comunicar-se amb "
 "els ordinadors a Internet. Això farà que siga impossible continuar amb la "
-"instal·lació si no teniu el primer CD-ROM oficial, un CD-ROM «Netinst», o els "
+"instaŀlació si no teniu el primer CD-ROM oficial, un CD-ROM «Netinst», o els "
 "paquets disponibles a la xarxa local."
 
 #. Type: boolean
@@ -829,7 +829,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:5001
 msgid "Gateway:"
-msgstr "Passarel·la:"
+msgstr "Passareŀla:"
 
 #. Type: string
 #. Description
@@ -843,12 +843,12 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
-"La passarel·la és una adreça IP (quatre números separats per punts) que "
-"indica el router passarel·la, també conegut com el router predeterminat. Tot "
+"La passareŀla és una adreça IP (quatre números separats per punts) que "
+"indica el router passareŀla, també conegut com el router predeterminat. Tot "
 "el tràfic que va cap a fora de la vostra LAN (per exemple, a Internet) "
 "s'envia a través d'aquest router. En algunes circumstàncies no habituals, és "
 "possible no tindre un router; en aquest cas, podeu deixar açò en blanc. Si "
-"no sabeu la resposta adequada per a aquesta pregunta, consulteu al vostre "
+"no sabeu la resposta adequada per a aquesta pregunta, consulteu el vostre "
 "administrador de xarxa."
 
 #. Type: error
@@ -856,14 +856,14 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "Unreachable gateway"
-msgstr "Passarel·la inaccessible"
+msgstr "Passareŀla inaccessible"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "The gateway address you entered is unreachable."
-msgstr "L'adreça de passarel·la que heu introduït és inaccessible."
+msgstr "L'adreça de passareŀla que heu introduït és inaccessible."
 
 #. Type: error
 #. Description
@@ -873,7 +873,7 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Pot ser heu comés un error en introduir la vostra adreça IP, màscara de "
-"xarxa i/o passarel·la."
+"xarxa i/o passareŀla."
 
 #. Type: boolean
 #. Description
@@ -904,7 +904,7 @@ msgstr ""
 " interfície         = ${interface}\n"
 " adreça IP          = ${ipaddress}\n"
 " màscara de xarxa   = ${netmask}\n"
-" passarel·la        = ${gateway}\n"
+" passareŀla        = ${gateway}\n"
 " punt a punt        = ${pointopoint}\n"
 " servidors de noms  = ${nameservers}"
 
