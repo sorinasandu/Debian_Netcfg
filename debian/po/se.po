@@ -10,25 +10,26 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt#
 #
-# Børre Gaup <boerre@skolelinux.no>, 2006.
+# Børre Gaup <boerre@skolelinux.no>, 2006, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: se\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2006-11-25 21:21+0100\n"
+"PO-Revision-Date: 2010-12-05 01:15+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
-"Language-Team: Northern Saami <i18n-sme@lister.ping.uio.no>\n"
+"Language-Team: Northern Sami <i18n-sme@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Auto-configure network with DHCP?"
-msgstr "Galgágo heivehit fierpmádaga automáhtalaččat DHCP:ain?"
+msgstr "Galgágo heivehit fierpmádaga automáhtalaččat DHCP:n?"
 
 #. Type: boolean
 #. Description
@@ -41,7 +42,7 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Lea vejolaš heivehit fierpmádaga DHCP:in dahje sáhtát ieš čállit buot "
+"Lea vejolaš heivehit fierpmádaga DHCP:n dahje sáhtát ieš čállit buot "
 "dieđuid. Jus válljet DHCP ja sajáiduhtti ii gávnna gustojeaddji heivehus "
 "muhton DHCP bálvvás, de oaččut vejolašvuođa ieš heivehit fierpmádaga."
 
@@ -50,7 +51,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:3001
 msgid "Domain name:"
-msgstr "Domenenamma:"
+msgstr "Domeananamma:"
 
 #. Type: string
 #. Description
@@ -62,9 +63,9 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Domenenamma lea iežat internett-čujuhusa loahpahus. Dávjá dat lea .com, ."
-"net, .edu dahje .org. Jus leat ráhkadeamen ruoktofierpmádaga, de ii leat go "
-"hutkat juoga, muhto muitte geavahit seamma domenenama buot iežat dihtoriin."
+"Domeananamma lea iežat internett-čujuhusa loahpahus. Dávjá dat lea .com, ."
+"net, .edu dahje .org. Jus leat ráhkadeamen ruovttofierpmádaga, de ii leat go "
+"hutkat juoga, muhto muitte geavahit seamma domeananama buot iežat dihtoriin."
 
 #. Type: string
 #. Description
@@ -84,8 +85,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Nammabálvvát addet guossoheaddjenamat fierpmádagas. Čális gitta golmma "
-"namma- bálvváid IP-čujuhusaid (ii fal guossoheaddjenamaid). Bija gaskka "
+"Nammabálvvát addet guossoheaddjinamat fierpmádagas. Čális gitta golmma "
+"namma- bálvváid IP-čujuhusaid (ii fal guossoheaddjinamaid). Bija gaskka "
 "juohke čujuhusa gaskii. Ale geavat rihkuid. Vuosttáš nammabálvá listtus "
 "jearahuvvo vuos. Jus it hálit geavahit makkárge nammabálvváid, guođe dán "
 "guorusin."
@@ -95,7 +96,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:5001
 msgid "Primary network interface:"
-msgstr "Dehálemus fierpmádatlakta:"
+msgstr "Dehálaččamus fierpmádatlakta:"
 
 #. Type: select
 #. Description
@@ -107,7 +108,7 @@ msgid ""
 "connected network interface found has been selected."
 msgstr ""
 "Du vuogádagas leat máŋga fierpmádatlavtta. Vállje guđemuš galgá leat "
-"dehálemus lakta sajáiduhtedettiin. Jus vejolaš, vuosttaš laktašuvvon "
+"dehálaččamus lakta sajáiduhtedettiin. Jus vejolaš, vuosttaš laktašuvvon "
 "fierpmádatlakta válljejuvvui."
 
 #. Type: string
@@ -130,8 +131,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} lea jođaskeahtes fierpmádatlakta. Čális dan jođaskeahtes "
-"fierpmádaga nama (ESSID:a) maid hálidat ahte ${iface} galgá geavahit. Jus "
-"hálidat geavahit váikko makkár olamuttus fierpmádaga, guođe dán gietti "
+"fierpmádaga nama (ESSID) maid háliidat ahte ${iface} galgá geavahit. Jus "
+"háliidat geavahit váikko makkár olámuttus fierpmádaga, guođe dán gietti "
 "guorusin."
 
 #. Type: string
@@ -151,8 +152,8 @@ msgid ""
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} lea jođaskeahtes fierpmádatlakta. Čális dan jođaskeahtes "
-"fierpmádaga nama (ESSID:a) maid hálidat ahte ${iface} galgá geavahit. Jus "
-"hálidat geavahit váikko makkár olamuttus fierpmádaga, guođe dán gietti "
+"fierpmádaga nama (ESSID) maid háliidat ahte ${iface} galgá geavahit. Jus "
+"háliidat geavahit váikko makkár olámuttus fierpmádaga, guođe dán gietti "
 "guorusin."
 
 #. Type: string
@@ -171,7 +172,7 @@ msgid ""
 "${iface}. There are two ways to do this:"
 msgstr ""
 "Jus vejolaš, čális jođaskeahtes fierpmádat- lavtta (${iface}:a) WEP "
-"sihkkarisvuohta- čoavdaga.Leat guovtte vejolašvuođa:"
+"sihkkarisvuohta- čoavdaga.Leat guokte vejolašvuođa:"
 
 #. Type: string
 #. Description
@@ -181,9 +182,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Jus du WEP-čoavddagis lea okta dáin formáhtain: «nnnn-nnnn-nn», «nn:nn:nn:nn:"
-"nn:nn:nn:nn» dahje «nnnnnnnn», mas n lea siffar, čális nugo dat lea dán "
-"gieđđai."
+"Jus du WEP-čoavdagis lea okta dáin formáhtain: «nnnn-nnnn-nn», «nn:nn:nn:nn:nn:"
+"nn:nn:nn» dahje «nnnnnnnn», mas n lea siffar, čális nugo dat lea dán gieddái."
 
 #. Type: string
 #. Description
@@ -194,7 +194,7 @@ msgid ""
 "'s:' (without quotes)."
 msgstr ""
 "Jus du WEP-čoavdaga formáhtta lea beassansátni, geavat «s» prefiksan "
-"(áisttonmearkkaid haga)."
+"(aisttonmearkkaid haga)."
 
 #. Type: string
 #. Description
@@ -246,14 +246,14 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Hostname:"
-msgstr "Guossoheaddjenamma:"
+msgstr "Guossoheaddjinamma:"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Please enter the hostname for this system."
-msgstr "Čális dán vuogádaga guossoheaddjenama."
+msgstr "Čális dán vuogádaga guossoheaddjinama."
 
 #. Type: string
 #. Description
@@ -265,10 +265,10 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Guossoheaddjenamma galgá leat okta sátni mii identifisere iežat vuogádaga "
-"fierpmá- dahkii. Jus it dieđe mii maid galggat čállit, jeara iežat "
-"fierpmádathaldda- šeaddjis. Jus leat heiveheamen ruokto- fierpmádaga de ii "
-"leat go hutkat juoga."
+"Guossoheaddjinamma galgá leat okta sátni mii identifisere iežat vuogádaga "
+"fierpmádahkii. Jus it dieđe mii maid galggat čállit, jeara iežat "
+"fierpmádathálddašeaddjis. Jus leat heiveheamen ruovttofierpmádaga de ii leat "
+"go hutkat juoga."
 
 #. Type: error
 #. Description
@@ -398,7 +398,7 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "Jođaskeahtes fierpmádagat leat stivrejuvvon dahje ad-hoc. Jus geavahat "
-"muhton «álbma beassan» de du fierpmádat lea stivrejuvvon. Jus eará dihtor lea "
+"muhton «albma beassan» de du fierpmádat lea stivrejuvvon. Jus eará dihtor lea "
 "du «beassan» de du fierpmádat lea ad-hoc."
 
 #. Type: text
@@ -413,7 +413,7 @@ msgstr "Heivet jođaskeahtes fierpmádaga"
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Searching for wireless access points..."
-msgstr "Ohcamim jođaskeahtes beassanlavttaid …"
+msgstr "Ohcamin jođaskeahtes beassanlavttaid …"
 
 #. Type: text
 #. Description
@@ -527,7 +527,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:37001
 msgid "Storing network settings..."
-msgstr "Vurkemin fierpmádatheivehusaid ..."
+msgstr "Vurkemin fierpmádatheivehusaid …"
 
 #. Type: text
 #. Description
@@ -542,7 +542,7 @@ msgstr "Heivet fierpmádaga"
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
-msgstr "DHCP-guossoheaddjenamma:"
+msgstr "DHCP-guossoheaddjinamma:"
 
 #. Type: string
 #. Description
@@ -552,7 +552,7 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
-"Fertet várra čálistit DHCP-guossoheaddjenama. Jus geavahat jođasmodema, de "
+"Fertet várra čálistit DHCP-guossoheaddjinama. Jus geavahat jođasmodema, de "
 "fertet várra čálistit kontonummira dása."
 
 #. Type: string
@@ -567,7 +567,7 @@ msgstr "Eanáš eará geavaheaddjit sáhttet dušše guođđit dan guorusin."
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr "Heiveheamen fierpmádaga DHCP:ain"
+msgstr "Heiveheamen fierpmádaga DHCP:n"
 
 #. Type: text
 #. Description
@@ -581,7 +581,7 @@ msgstr "Dát dáidá ádjánit."
 #. :sl1:
 #: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
-msgstr "Lihkostuvvai automáhtalaččat heivehit fierpmádaga"
+msgstr "Lihkostuvai automáhtalaččat heivehit fierpmádaga"
 
 #. Type: error
 #. Description
@@ -626,7 +626,7 @@ msgstr "Geahččal oktii vel heivehit fierpmádaga automáhtalaččat"
 msgid "Retry network autoconfiguration with a DHCP hostname"
 msgstr ""
 "Geahččal ođđasit automáhtalaččat heivehit fierpmádaga DHCP-"
-"guossoheaddjenamain"
+"guossoheaddjinamain"
 
 #. Type: select
 #. Choices
@@ -666,11 +666,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Dás sáhtát geahččalit heivehit iežat fierpmádaga automáhtalaččát DHCP:ain "
-"fas (dat dáidá bures mannat jus du DHCP-bálvá ádjána guhkká ovdalgo "
-"vástida), dahje ieš heivehit fierpmádaga. Muhton DHCP-bálvát gáibidit ahte "
-"DHCP-klienta sádde DHCP-bálvvá nama. Danne sáhtát maid geahččalit heivehit "
-"fierpmádaga DHCP:ain gos geavahat bálvanama maid ieš čálát."
+"Dás sáhtát geahččalit heivehit iežat fierpmádaga automáhtalaččat DHCP:n fas "
+"(dat dáidá bures mannat jus du DHCP-bálvá ádjána guhkká ovdalgo vástida), "
+"dahje ieš heivehit fierpmádaga. Muhton DHCP-bálvát gáibidit ahte DHCP-"
+"klieanta sádde DHCP-bálvvá nama. Danne sáhtát maid geahččalit heivehit "
+"fierpmádaga DHCP:n gos geavahat bálvánama maid ieš čálát."
 
 #. Type: note
 #. Description
@@ -687,7 +687,7 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
-"Du fierpmádat ii dáiide geavahit DHCP- protokolla. Sáhttá maiddái leat nu "
+"Du fierpmádat ii dáidde geavahit DHCP- protokolla. Sáhttá maiddái leat nu "
 "ahte DHCP-bálvá lea njoahci dahje ahte muhton fierpmádatmašiidnagálvu ii "
 "doaimma nugo galgá."
 
@@ -725,7 +725,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Heivet jođahis fierpmádaga ođđasit"
+msgstr "Heivet jođaskeahtes fierpmádaga ođđasit"
 
 #. Type: string
 #. Description
@@ -744,7 +744,7 @@ msgid ""
 "network administrator."
 msgstr ""
 "IP-čujuhus lea sierra du dihtorii ja das leat njeallje nummira sirrejuvvon "
-"čuoggáin. Jus it dieđe maid galggat čállit, jeará iežat "
+"čuoggáin. Jus it dieđe maid galggat čállit, jeara iežat "
 "fierpmádathálddašeaddji."
 
 #. Type: error
@@ -827,9 +827,9 @@ msgid ""
 msgstr ""
 "Gateway lea IP-čujuhus (njeallje nummirat erohuvvon čuoggáiguin) mii muitala "
 "gateway-routera, maiddái gohččoduvvon standárdrouter. Visot johtolat mii "
-"galgá iežat LAN:a guođđit (ovdamearka dihte internehttii) sáddejuvvo dan "
-"čađa. Muhtomin dus ii leat router, ja guođát dán gietti guorusin. Jus it "
-"dieđe vástadusa dán gažaldahkii fertet váldit oktavuođa iežat "
+"galgá iežat LAN guođđit (ovdamearka dihte internehttii) sáddejuvvo dan čađa. "
+"Muhtumin dus ii leat router, ja guođát dán gietti guorusin. Jus it dieđe "
+"vástádusa dán gažaldahkii fertet váldit oktavuođa iežat "
 "fierpmádathálddašeddjiin."
 
 #. Type: error
@@ -867,7 +867,7 @@ msgstr "Leatgo dát rievttes dieđut?"
 #. :sl1:
 #: ../netcfg-static.templates:7001
 msgid "Currently configured network parameters:"
-msgstr "Dálá fierpmádatparamehterat:"
+msgstr "Dálá fierpmádatpáramehterat:"
 
 #. Type: boolean
 #. Description
@@ -885,7 +885,7 @@ msgstr ""
 " ip-čujuhus        = ${ipaddress}\n"
 " fierpmádatsilli   = ${netmask}\n"
 " gateway           = ${gateway}\n"
-" čuokkisčuoggái    = ${pointopoint}\n"
+" čuokkis čuoggái    = ${pointopoint}\n"
 " nammabálvvát      = ${nameservers}"
 
 #. Type: text
