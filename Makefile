@@ -29,6 +29,12 @@ all: $(TARGETS)
 netcfg-static: netcfg-static.o static.o
 netcfg: netcfg.o dhcp.o static.o ethtool-lite.o
 
+ethtool-lite: ethtool-lite-test.o
+	$(CC) -o $@ $<
+	
+ethtool-lite-test.o: ethtool-lite.c
+	$(CC) -c $(CFLAGS) -DTEST $(DEFS) $(INCS) -o $@ $<
+
 $(TARGETS): $(COMMON_OBJS)
 	$(CC) -o $@ $^ $(LDOPTS)
 
@@ -36,7 +42,7 @@ $(TARGETS): $(COMMON_OBJS)
 	$(CC) -c $(CFLAGS) $(DEFS) $(INCS) -o $@ $<
 
 clean:
-	rm -f $(TARGETS) *.o
+	rm -f $(TARGETS) ethtool-lite *.o
 
 .PHONY: all clean
 
