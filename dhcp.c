@@ -521,6 +521,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                     }
 
                     netcfg_nameservers_to_array (nameservers, nameserver_array);
+                    netcfg_write_resolv (domain, nameserver_array);
                 }
 
                 state = HOSTNAME;
@@ -602,6 +603,16 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             else {
                 netcfg_write_common(ipaddress, hostname, domain);
                 netcfg_write_dhcp(interface, dhostname);
+                /* If the resolv.conf was written by udhcpc, then nameserver_array
+                 * will be empty and we'll need to populate it.  If we asked for
+                 * the nameservers, then it'll be full, but nobody will care if we
+                 * refill it.
+                 */
+                if (read_resolv_conf_nameservers(nameserver_array))
+                    netcfg_write_resolv(domain, nameserver_array);
+                else
+                    printf("Error reading resolv.conf for nameservers\n");
+
                 return 0;
             }
             break;
@@ -645,4 +656,42 @@ int resolv_conf_entries (void)
         count = -1;
 
     return count;
+}
+
+/* Read the nameserver entries out of resolv.conf and stick them into
+ * nameservers_array, so we can write out a newer, shinier resolv.conf
+ */
+int read_resolv_conf_nameservers(struct in_addr array[])
+{
+    FILE *f;
+    int i = 0;
+    
+    if ((f = fopen(RESOLV_FILE, "r")) != NULL) {
+        char buf[256];
+
+        while (fgets(buf, 256, f) != NULL) {
+            char *ptr;
+
+            if (strncmp(buf, "nameserver ", strlen("nameserver ")) == 0) {
+                /* Chop off trailing \n */
+                if (buf[strlen(buf)-1] == '\n')
+                    buf[strlen(buf)-1] = '\0';
+
+                ptr = buf + strlen("nameserver ");
+                inet_pton(AF_INET, ptr, &array[i++]);
+                if (i == 3) {
+                    /* We can only hold so many nameservers, and we've reached
+                     * our limit.  Sorry.
+                     */
+                    break;
+                }
+            }
+        }
+
+        fclose(f);
+        array[i].s_addr = 0;
+        return 1;
+    }
+    else
+        return 0;
 }

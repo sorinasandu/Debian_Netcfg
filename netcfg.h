@@ -98,6 +98,8 @@ extern int netcfg_activate_dhcp(struct debconfclient *client);
 
 extern int resolv_conf_entries (void);
 
+extern int read_resolv_conf_nameservers (struct in_addr array[]);
+
 extern int ask_dhcp_options (struct debconfclient *client);
 extern int netcfg_activate_static(struct debconfclient *client);
 

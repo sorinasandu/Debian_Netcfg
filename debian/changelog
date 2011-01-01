@@ -1,3 +1,11 @@
+netcfg (1.59) UNRELEASED; urgency=low
+
+  * Modify the DHCP configuration process to write out elements of
+    resolv.conf that the user has entered manually, because the DHCP server
+    didn't supply them.  Closes: #362029.
+
+ -- Matt Palmer <mpalmer@debian.org>  Sat, 01 Jan 2011 19:35:01 +1100
+
 netcfg (1.58) unstable; urgency=low
 
   [ Updated translations ]
