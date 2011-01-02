@@ -1,12 +1,16 @@
-netcfg (1.59) UNRELEASED; urgency=low
+netcfg (1.59) unstable; urgency=low
 
+  [ Matt Palmer ]
   * Modify the DHCP configuration process to write out elements of
     resolv.conf that the user has entered manually, because the DHCP server
     didn't supply them.  Closes: #362029.
   * Add an ethtool-lite Makefile target, to assist people in building a
     standalone ethtool-lite for debugging purposes.  Closes: #608452.
 
- -- Matt Palmer <mpalmer@debian.org>  Sat, 01 Jan 2011 20:50:22 +1100
+  [ Updated translations ]
+  * Northern Sami (se.po) by Børre Gaup
+
+ -- Otavio Salvador <otavio@ossystems.com.br>  Sun, 02 Jan 2011 14:29:22 -0200
 
 netcfg (1.58) unstable; urgency=low
 
