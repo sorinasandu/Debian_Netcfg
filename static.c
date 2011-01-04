@@ -56,19 +56,19 @@ int netcfg_get_pointopoint(struct debconfclient *client)
 
         debconf_get(client, "netcfg/get_pointopoint");
 
-      if (empty_str(client->value)) {           /* No P-P is ok */
-          memset(&pointopoint, 0, sizeof(struct in_addr));
-          return 0;
-      }
+        if (empty_str(client->value)) {           /* No P-P is ok */
+            memset(&pointopoint, 0, sizeof(struct in_addr));
+            return 0;
+        }
 
-      ok = inet_pton (AF_INET, client->value, &pointopoint);
+        ok = inet_pton (AF_INET, client->value, &pointopoint);
 
-      if (!ok) {
-          debconf_capb(client);
-          debconf_input (client, "critical", "netcfg/bad_ipaddress");
-          debconf_go (client);
-          debconf_capb(client, "backup");
-      }
+        if (!ok) {
+            debconf_capb(client);
+            debconf_input (client, "critical", "netcfg/bad_ipaddress");
+            debconf_go (client);
+            debconf_capb(client, "backup");
+        }
     }
 
     inet_pton (AF_INET, "255.255.255.255", &netmask);
