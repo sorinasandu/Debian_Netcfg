@@ -222,7 +222,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             arguments[options_count++] = dhcp_seconds_str;
             for (ptr = dhclient_request_options_udhcpc; *ptr; ptr++) {
                 arguments[options_count++] = "-O";
-                arguments[options_count++] = *ptr;
+                arguments[options_count++] = (char *)*ptr;
             }
 
             if (dhostname) {

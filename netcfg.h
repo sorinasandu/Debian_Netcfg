@@ -27,7 +27,7 @@
 # define ARRAY_SIZE(x) (sizeof(x) / sizeof(x[0]))
 #endif
 
-#define empty_str(s) (s && *s == '\0')
+#define empty_str(s) (s != NULL && *s == '\0')
 
 #define HELPFUL_COMMENT \
 "# This file describes the network interfaces available on your system\n" \
