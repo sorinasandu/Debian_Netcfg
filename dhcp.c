@@ -138,6 +138,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     int options_count;
     enum { DHCLIENT, PUMP, UDHCPC } dhcp_client;
     int dhcp_seconds;
+    char dhcp_seconds_str[16];
 
     if (access("/sbin/dhclient", F_OK) == 0)
 		dhcp_client = DHCLIENT;
@@ -153,6 +154,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
     debconf_get(client, "netcfg/dhcp_timeout");
     dhcp_seconds = atoi(client->value);
+    snprintf(dhcp_seconds_str, sizeof dhcp_seconds_str, "%d", dhcp_seconds-1);
 
     if ((dhcp_pid = fork()) == 0) { /* child */
         /* disassociate from debconf */
@@ -202,10 +204,10 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
             /* Allow space for:
                 options: options_count * 2
-                 params: 5
+                 params: 9
                hostname: 2
                    NULL: 1 */
-            arguments = malloc((options_count * 2 + 5 + 2 + 1) * sizeof(char **));
+            arguments = malloc((options_count * 2 + 9 + 2 + 1) * sizeof(char **));
 
             /* set the command options */
             options_count = 0;
@@ -214,6 +216,10 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
             arguments[options_count++] = interface;
             arguments[options_count++] = "-V";
             arguments[options_count++] = "d-i";
+            arguments[options_count++] = "-T";
+            arguments[options_count++] = "1";
+            arguments[options_count++] = "-t";
+            arguments[options_count++] = dhcp_seconds_str;
             for (ptr = dhclient_request_options_udhcpc; *ptr; ptr++) {
                 arguments[options_count++] = "-O";
                 arguments[options_count++] = *ptr;
