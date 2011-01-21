@@ -75,16 +75,15 @@ int ethtool_lite (char * iface)
 	ifr.ifr_data = (char *)&edata;
 	strncpy (ifr.ifr_name, iface, IFNAMSIZ);
 
-	if (ioctl (fd, SIOCETHTOOL, &ifr) < 0)
-		di_info("ethtool ioctl on %s failed\n", iface);
-
-	if (edata.data)
+	if (ioctl (fd, SIOCETHTOOL, &ifr) >= 0)
 	{
-		di_info("%s is connected.\n", iface);
-		return CONNECTED;
+		di_info("%s is %sconnected.\n", iface,
+		        (edata.data) ? "" : "dis");
+		return (edata.data) ? CONNECTED : DISCONNECTED;
 	}
 	else
 	{
+		di_info("ethtool ioctl on %s failed\n", iface);
 		u_int16_t *data = (u_int16_t *)&ifr.ifr_data;
 		int ctl;
 		data[0] = 0;
