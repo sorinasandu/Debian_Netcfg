@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
         case BACKUP:
             return 10;
         case GET_INTERFACE:
-            /* Choose a default from ethtool-lite */
+            /* Choose a default by looking for link */
             if (get_all_ifs(1, &ifaces) > 1) {
                 while (*ifaces) {
                     if (check_kill_switch(*ifaces)) {
@@ -133,14 +133,9 @@ int main(int argc, char *argv[])
                         }
                     }
 
-                    interface_up(*ifaces);
-
-                    usleep(250);
-
-                    if (ethtool_lite (*ifaces) == 1) /* CONNECTED */ {
+                    if (netcfg_detect_link (client, *ifaces) == 1) /* CONNECTED */ {
                         di_info("found link on interface %s, making it the default.", *ifaces);
                         defiface = strdup(*ifaces);
-                        interface_down(*ifaces);
                         break;
                     } else {
 #ifdef WIRELESS

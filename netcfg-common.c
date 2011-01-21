@@ -980,3 +980,37 @@ void netcfg_update_entropy (void)
     di_exec_shell("ip addr show >/dev/random");
 #endif
 }
+
+/* Bring up an interface and attempt to find out whether we've got link.
+ * Use a progress bar so the user knows what's going on.  Return true
+ * if we got link, and false otherwise.
+ */
+int netcfg_detect_link(struct debconfclient *client, const char *if_name)
+{
+    int wait_count, rv = 0;
+    
+    interface_up(if_name);
+    
+    debconf_capb(client, "progresscancel");
+    debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
+    debconf_progress_start(client, 0, NETCFG_LINK_WAIT_TIME * 4, "netcfg/link_detect_progress");
+    for (wait_count = 0; wait_count < NETCFG_LINK_WAIT_TIME * 4; wait_count++) {
+        usleep(250000);
+        if (debconf_progress_step(client, 1) == 30) {
+            /* User cancelled on us... bugger */
+            rv = 0;
+            break;
+        }
+        if (ethtool_lite (if_name) == 1) /* ethtool-lite's CONNECTED */ {
+            debconf_progress_set(client, NETCFG_LINK_WAIT_TIME * 4);
+            rv = 1;
+            break;
+        }
+    }
+
+    interface_down(if_name);
+    debconf_progress_stop(client);
+    debconf_capb(client, "");
+    
+    return rv;
+}

@@ -173,6 +173,10 @@ Default: false
 Description: for internal use; can be preseeded
  Set to true to force static network configuration
 
+Template: netcfg/link_detect_progress
+Type: text
+_Description: Detecting link on ${interface}; please wait...
+
 Template: netcfg/internal-none
 Type: text
 # :sl2:

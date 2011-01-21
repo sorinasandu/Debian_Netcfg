@@ -41,6 +41,12 @@
 "ff02::1 ip6-allnodes\n" \
 "ff02::2 ip6-allrouters\n"
 
+/* The time, in seconds, that we will wait for a link to be established
+ * via link autonegotiation.  Sometime in the future this may become a
+ * preseed option.
+ */
+#define NETCFG_LINK_WAIT_TIME 3
+
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
@@ -135,6 +141,7 @@ extern void netcfg_update_entropy (void);
 
 extern int netcfg_write_resolv (char*, struct in_addr *);
 
-extern int ethtool_lite (char*);
+extern int ethtool_lite (const char *if_name);
+extern int netcfg_detect_link(struct debconfclient *client, const char *if_name);
 
 #endif /* _NETCFG_H_ */
