@@ -632,7 +632,7 @@ short verify_hostname (char *hname)
 
     /* Check the hostname for RFC 1123 compliance.  */
     if ((len < 1) ||
-        (len > 63) ||
+        (len > MAXHOSTNAMELEN) ||
         (strspn(hname, valid_chars) != len) ||
         (hname[len - 1] == '-') ||
         (hname[0] == '-')) {
@@ -649,7 +649,7 @@ short verify_hostname (char *hname)
 int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short hdset)
 {
     int ret;
-    char *s;
+    char *s, buf[1024];
 
     for(;;) {
         if (hdset)
@@ -665,6 +665,9 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
         if (verify_hostname(client->value) != 0) {
             debconf_subst(client, "netcfg/invalid_hostname",
                           "hostname", client->value);
+            snprintf(buf, sizeof(buf), "%i", MAXHOSTNAMELEN);
+            debconf_subst(client, "netcfg/invalid_hostname",
+                      "maxhostnamelen", buf);
             debconf_input(client, "high", "netcfg/invalid_hostname");
             debconf_go(client);
             debconf_set(client, template, "debian");

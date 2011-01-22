@@ -437,10 +437,6 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 /*
                  * Set defaults for domain name and hostname
                  */
-
-#ifndef MAXHOSTNAMELEN
-#define MAXHOSTNAMELEN 63
-#endif
                 char buf[MAXHOSTNAMELEN + 1] = { 0 };
                 char *ptr = NULL;
                 FILE *d = NULL;

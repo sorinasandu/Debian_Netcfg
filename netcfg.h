@@ -47,6 +47,10 @@
  */
 #define NETCFG_LINK_WAIT_TIME 3
 
+#ifndef MAXHOSTNAMELEN
+#define MAXHOSTNAMELEN 63
+#endif
+
 typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
