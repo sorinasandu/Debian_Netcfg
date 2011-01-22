@@ -94,7 +94,8 @@ extern void netcfg_die (struct debconfclient *client);
 
 extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces, char* defif);
 
-extern short verify_hostname (char *hname);
+extern short valid_hostname (const char *hname);
+extern short valid_domain (const char *dname);
 
 extern int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short hdset);
 

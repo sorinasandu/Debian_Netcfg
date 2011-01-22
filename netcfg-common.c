@@ -618,41 +618,69 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 }
 
 /*
- * Verify that the hostname conforms to RFC 1123.
- * @return 0 on success, 1 on failure.
+ * Verify that the hostname conforms to RFC 1123 s2.1,
+ * and RFC 1034 s3.5.
+ * @return 1 on success, 0 on failure.
  */
-short verify_hostname (char *hname)
+short valid_hostname (const char *hname)
 {
     static const char *valid_chars =
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-";
     size_t len;
     assert(hname != NULL);
 
     len = strlen(hname);
 
-    /* Check the hostname for RFC 1123 compliance.  */
     if ((len < 1) ||
         (len > MAXHOSTNAMELEN) ||
         (strspn(hname, valid_chars) != len) ||
         (hname[len - 1] == '-') ||
         (hname[0] == '-')) {
-        return 1;
+        return 0;
     }
     else
+        return 1;
+}
+
+/*
+ * Verify that the domain name (or FQDN) conforms to RFC 1123 s2.1, and
+ * RFC1034 s3.5.
+ * @return 1 on success, 0 on failure.
+ */
+short valid_domain (const char *dname)
+{
+    static const char *valid_chars =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.";
+    size_t len;
+    assert(dname != NULL);
+
+    len = strlen(dname);
+
+    if ((len < 1) ||
+        (len > MAXHOSTNAMELEN) ||
+        (strspn(dname, valid_chars) != len) ||
+        (dname[len - 1] == '-') ||
+        (dname[0] == '-') ||
+        (dname[len - 1] == '.') ||
+        (dname[0] == '.') ||
+        strstr(dname, "..")) {
         return 0;
+    }
+    else
+        return 1;
 }
 
 /*
  * Set the hostname.
  * @return 0 on success, 30 on BACKUP being selected.
  */
-int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short hdset)
+int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short accept_domain)
 {
     int ret;
     char *s, buf[1024];
 
     for(;;) {
-        if (hdset)
+        if (accept_domain)
             have_domain = 0;
         debconf_input(client, "high", template);
         ret = debconf_go(client);
@@ -662,7 +690,10 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 
         debconf_get(client, template);
 
-        if (verify_hostname(client->value) != 0) {
+        *hostname = strdup(client->value);
+
+        if (!valid_domain(*hostname)) {
+            di_info("%s is an invalid domain", *hostname);
             debconf_subst(client, "netcfg/invalid_hostname",
                           "hostname", client->value);
             snprintf(buf, sizeof(buf), "%i", MAXHOSTNAMELEN);
@@ -671,28 +702,41 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
             debconf_input(client, "high", "netcfg/invalid_hostname");
             debconf_go(client);
             debconf_set(client, template, "debian");
+            free(*hostname);
+            *hostname = NULL;
+        }
+
+        if (accept_domain && (s = strchr(*hostname, '.'))) {
+            di_info("Detected we have an FQDN; splitting and setting domain");
+            if (s[1] == '\0') { /* "somehostname." <- . should be ignored */
+                *s = '\0';
+            } else { /* assume we have a valid domain name given */
+                if (domain)
+                    free(domain);
+                domain = strdup(s + 1);
+                debconf_set(client, "netcfg/get_domain", domain);
+                have_domain = 1;
+                *s = '\0';
+            }
+        }
+        
+        if (!valid_hostname(*hostname)) {
+            di_info("%s is an invalid hostname", *hostname);
+            debconf_subst(client, "netcfg/invalid_hostname",
+                          "hostname", client->value);
+            snprintf(buf, sizeof(buf), "%i", MAXHOSTNAMELEN);
+            debconf_subst(client, "netcfg/invalid_hostname",
+                      "maxhostnamelen", buf);
+            debconf_input(client, "high", "netcfg/invalid_hostname");
+            debconf_go(client);
+            debconf_set(client, template, "debian");
+            free(*hostname);
+            *hostname = NULL;
         } else {
-            /* I've considered the fact that client->value could be mangled by
-             * showing the error message. But if it goes through the error was not
-             * shown. </careful-thinking> */
-            *hostname = strdup(client->value);
             break;
         }
     }
 
-    /* don't strip DHCP hostnames */
-    if (hdset && (s = strchr(*hostname, '.'))) {
-        if (s[1] == '\0') { /* "somehostname." <- . should be ignored */
-            *s = '\0';
-        } else { /* assume we have a valid domain name here */
-            if (domain)
-                free(domain);
-            domain = strdup(s + 1);
-            debconf_set(client, "netcfg/get_domain", domain);
-            have_domain = 1;
-            *s = '\0';
-        }
-    }
     return 0;
 }
 
