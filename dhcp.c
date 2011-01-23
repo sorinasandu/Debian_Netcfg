@@ -114,13 +114,19 @@ static short no_default_route (void)
  */
 static void dhcp_client_sigchld(int sig __attribute__ ((unused)))
 {
+    di_debug("dhcp_client_sigchld() called");
     if (dhcp_pid <= 0)
+        /* Already cleaned up */
         return;
+
     /*
      * I hope it's OK to call waitpid() from the SIGCHLD signal handler
      */
-    waitpid(dhcp_pid,&dhcp_exit_status,0);
-    dhcp_pid = -1;
+    di_debug("Waiting for dhcp_pid = %i", dhcp_pid);
+    waitpid(dhcp_pid, &dhcp_exit_status, WNOHANG);
+    if (WIFEXITED(dhcp_exit_status)) {
+        dhcp_pid = -1;
+    }
 }
 
 
@@ -240,10 +246,12 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
         return 1; /* should NEVER EVER get here */
     }
-    else if (dhcp_pid == -1)
+    else if (dhcp_pid == -1) {
+        di_warning("DHCP fork failed; this is unlikely to end well");
         return 1;
-    else {
+    } else {
         /* dhcp_pid contains the child's PID */
+        di_warning("Started DHCP client; PID is %i", dhcp_pid);
         signal(SIGCHLD, &dhcp_client_sigchld);
         return 0;
     }
