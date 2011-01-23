@@ -11,8 +11,10 @@ netcfg (1.60) UNRELEASED; urgency=low
   * Wait for up to 3 seconds (in 0.25s increments) looking for the link on
     an interface.  Add a progress bar to show the progress of this
     operation.  Closes: #414117.
+  * Wait for link detection on static interface configuration.
+    Closes: #606515.
 
- -- Matt Palmer <mpalmer@debian.org>  Sat, 22 Jan 2011 10:34:25 +1100
+ -- Matt Palmer <mpalmer@debian.org>  Sun, 23 Jan 2011 12:59:03 +1100
 
 netcfg (1.59) unstable; urgency=low
 
