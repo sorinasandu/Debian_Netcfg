@@ -1,8 +1,11 @@
+NETCFG_VERSION = $(shell dpkg-parsechangelog | grep ^Version: |sed 's/Version: //')
+NETCFG_BUILD_DATE = $(shell date '+%Y%m%d-%H%M')
+
 CC		= gcc
 TARGETS		?= netcfg-static netcfg
 
 LDOPTS		= -ldebconfclient -ldebian-installer
-CFLAGS		= -W -Wall -DNDEBUG 
+CFLAGS		= -W -Wall -DNDEBUG -DNETCFG_VERSION="\"$(NETCFG_VERSION)\"" -DNETCFG_BUILD_DATE="\"$(NETCFG_BUILD_DATE)\""
 COMMON_OBJS	= netcfg-common.o wireless.o
 
 WIRELESS	= 1
