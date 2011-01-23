@@ -135,6 +135,7 @@ int main(int argc, char *argv[])
                         }
                     }
 
+                    interface_up(*ifaces);
                     if (netcfg_detect_link (client, *ifaces) == 1) /* CONNECTED */ {
                         di_info("found link on interface %s, making it the default.", *ifaces);
                         defiface = strdup(*ifaces);

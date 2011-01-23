@@ -382,6 +382,11 @@ int netcfg_activate_static(struct debconfclient *client)
         return -1;
     }
 
+    /* Wait to detect link.  Don't error out if we fail, though; link detection
+     * may not work on this NIC or something.
+     */
+    netcfg_detect_link(client, interface);
+
     return 0;
 }
 
