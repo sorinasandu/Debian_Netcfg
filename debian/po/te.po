@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-07-27 14:46+0530\n"
+"PO-Revision-Date: 2011-01-19 21:00+0530\n"
 "Last-Translator: Arjuna Rao Chavala <arjunaraoc@gmail.com>\n"
 "Language-Team: Telugu <debian-in-workers@lists.alioth.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -62,8 +62,8 @@ msgid ""
 "sure you use the same domain name on all your computers."
 msgstr ""
 "డొమైన్ పేరు మీ అంతర్జాల చిరునామాలో మీ హోస్ట్ పేరుకి కుడివైపున వున్నది.సాధారణంగా .com, .net .edu  "
-"లేక  .org తో అంతమయ్యేది. మీరు హోం నెట్వర్క్ అమర్చుతుంటే, మీరు ఉత్తిగా ఏదైనా చేర్చవచ్చు,కానిఅదే పేరు మీ "
-"నెట్వర్క్లో అన్ని కంప్యూటర్లకి వాడాలి."
+"లేక  .org తో అంతమయ్యేది. మీరు హోం నెట్వర్క్ అమర్చుతుంటే, మీరు ఉత్తిగా ఏదైనా చేర్చవచ్చు,కాని అదే పేరు మీ "
+"నెట్వర్క్ లో అన్ని కంప్యూటర్లకి వాడాలి."
 
 #. Type: string
 #. Description
@@ -275,10 +275,6 @@ msgstr "\"${hostname}\" హోస్ట్ పేరు సరిపోలేద
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -413,8 +409,9 @@ msgstr "వైర్లెస్ సంపర్క కేంద్రాల క
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "హార్డ్వేర్ ను  కనుగొనుట, దయచేసి వేచి వుండండి..."
 
 #. Type: text
 #. Description
