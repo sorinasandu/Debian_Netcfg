@@ -5,6 +5,9 @@
 #
 # Portuguese messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
+# Console-setup strings translations:
+# (identified by "./console-setup.templates")
+# Copyright (C) 2003-2010 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as debian-installer.
 #
 msgid ""
@@ -12,7 +15,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2008-02-22 22:47+0000\n"
+"PO-Revision-Date: 2010-08-21 11:38+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -290,10 +293,6 @@ msgstr "O nome \"${hostname}\" é inválido."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -435,8 +434,9 @@ msgstr "A procurar pontos de acesso da rede sem fios ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "A detectar hardware, por favor espere..."
 
 #. Type: text
 #. Description
