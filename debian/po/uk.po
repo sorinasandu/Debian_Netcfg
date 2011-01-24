@@ -9,15 +9,17 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
-# Eugeniy Meshcheryakov <eugen@debian.org>, 2005, 2006, 2007.
+# Eugeniy Meshcheryakov <eugen@debian.org>, 2005, 2006, 2007, 2010.
+# Євгеній Мещеряков <eugen@debian.org>, 2008.
+# Borys Yanovych <borys@yanovy.ch>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2008-02-12 22:40+0100\n"
-"Last-Translator: \n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"PO-Revision-Date: 2010-11-01 01:29+0200\n"
+"Last-Translator: Borys Yanovych <borys@yanovy.ch>\n"
+"Language-Team: Ukrainian <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -291,10 +293,6 @@ msgstr "Назва комп'ютера „${hostname}“ не припустим
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -436,8 +434,9 @@ msgstr "Пошук точок доступу бездротової мережі
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "Пошук обладнання, зачекайте..."
 
 #. Type: text
 #. Description
