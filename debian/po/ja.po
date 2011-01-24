@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2008-01-22 14:43+0900\n"
+"PO-Revision-Date: 2010-09-02 10:33+0900\n"
 "Last-Translator:  Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian L10n Japanese <debian-l10n-japanese@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -285,10 +285,6 @@ msgstr "名前 \"${hostname}\" は無効です。"
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -430,8 +426,9 @@ msgstr "無線アクセスポイントを探しています ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "ハードウェアの検出中です。しばらくお待ちください..."
 
 #. Type: text
 #. Description
