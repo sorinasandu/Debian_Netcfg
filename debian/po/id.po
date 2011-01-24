@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-06-21 23:15+0700\n"
+"PO-Revision-Date: 2010-10-21 02:05+0700\n"
 "Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
 "Language-Team: Bahasa Indonesia <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
 "MIME-Version: 1.0\n"
@@ -296,10 +296,6 @@ msgstr "Nama \"${hostname}\" tidak sah."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -441,8 +437,9 @@ msgstr "Sedang mencari titik akses nirkabel ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "Mencari perangkat keras, silahkan tunggu..."
 
 #. Type: text
 #. Description
