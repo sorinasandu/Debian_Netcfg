@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2008-04-29 23:36+0100\n"
+"PO-Revision-Date: 2010-11-08 09:16+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
@@ -284,10 +284,6 @@ msgstr "A \"${hostname}\" név érvénytelen."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
-#| msgid ""
-#| "A valid hostname may contain only the numbers 0-9, the lowercase letters "
-#| "a-z, and the minus sign. It must be between 2 and 63 characters long, and "
-#| "may not begin or end with a minus sign."
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -428,8 +424,9 @@ msgstr "Drótnélküli elérési pontok felderítése..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
+#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "Hardver felderítése, türelem..."
 
 #. Type: text
 #. Description
