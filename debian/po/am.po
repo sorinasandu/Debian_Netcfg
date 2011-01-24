@@ -5,15 +5,16 @@
 #
 # Amharic translation for debian-installer
 # This file is distributed under the same license as the debian-installer package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+# tegegne tefera <tefera@mekuria.com>, 2006.
+#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-03-02 15:57+0100\n"
-"Last-Translator: Tegegne Tefera <tefera@mekuria.com>\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2010-08-19 16:50+0800\n"
+"Last-Translator: ተገኝ ተፈራ <tefera@mekuria.com>\n"
 "Language-Team: Amharic\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -272,10 +273,12 @@ msgstr "\"${hostname}\" የሚለው ስም የለም።"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
 "ትክክለኛ የተጠሪ ስም፣ ከ0-9፣ ከa-z ያሉ የሮማን ትንሹ ፊደሎችንና የመቀነስ ምልክትን የያዘ ይሆናል። ርዝመቱም ከ2 "
 "እስከ 63 ፊደላት ሊረዝም ሲችል የመቀነስ ምልክት በመጀመሪያ ወይም በመጨረሻ ላይ መሆን አኖርበትም።"
@@ -403,106 +406,113 @@ msgstr "የሽቦአልባ ማግቢያ ጣቢያ በመፈለግ ላይ..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+#, fuzzy
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "ጥር አካልን በማግኘት ላይ፣ እባክዎን ይጠብቁ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<ምንም>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "ሽቦአልባ ኤተርኔት (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "ሽቦአልባ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "ኤተርኔት"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "ቶክን ክብ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "የUSB አውታር"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "ተከታታይ-መስመር ኢፕ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "ጎንለጎን-በር ኢፕ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "ከነጥብ-ነጥብ ፕሮቶኮል"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-በ-IPv4 (ኢፕ_ዝ6-በ-ኢፕ_ዝ4)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN ከነጠብ-ነጥብ ፕሮቶኮል"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "ከቦይ-ቦይ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Real ከቦይ-ቦይ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "የተጠቃሚዎች መገናኛ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "የማይታወቅ በይነገጽ"
 
@@ -510,7 +520,7 @@ msgstr "የማይታወቅ በይነገጽ"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "የአውታር ምርጫዎችን በማስቀመጥ ላይ"
 
@@ -518,7 +528,7 @@ msgstr "የአውታር ምርጫዎችን በማስቀመጥ ላይ"
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "አውታር አዘጋጅ"
 
