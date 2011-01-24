@@ -66,13 +66,18 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
             fprintf(fp, "\thostname %s\n", dhostname);
         }
         if (is_wireless_iface(iface)) {
-            fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
-            fprintf(fp, "\twireless-mode %s\n",
-                    (mode == MANAGED) ? "managed" : "ad-hoc");
-            fprintf(fp, "\twireless-essid %s\n",
-                    (essid && *essid) ? essid : "any");
-            if (wepkey != NULL)
-                fprintf(fp, "\twireless-key1 %s\n", wepkey);
+            if (wpa_supplicant_status == WPA_QUEUED) {
+                fprintf(fp, "\twpa-ssid %s\n", essid);
+                fprintf(fp, "\twpa-psk  %s\n", passphrase);
+            } else {
+                fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
+                fprintf(fp, "\twireless-mode %s\n",
+                       (mode == MANAGED) ? "managed" : "ad-hoc");
+                fprintf(fp, "\twireless-essid %s\n",
+                        (essid && *essid) ? essid : "any");
+                if (wepkey != NULL)
+                    fprintf(fp, "\twireless-key1 %s\n", wepkey);
+	    }
         }
         fclose(fp);
     }
@@ -289,8 +294,10 @@ int poll_dhcp_client (struct debconfclient *client)
     /* show progress bar */
     debconf_capb(client, "backup progresscancel");
     debconf_progress_start(client, 0, dhcp_seconds, "netcfg/dhcp_progress");
-    if (debconf_progress_info(client, "netcfg/dhcp_progress_note") == 30)
+    if (debconf_progress_info(client, "netcfg/dhcp_progress_note") == 30) {
+        kill_dhcp_client();
         goto stop;
+    }
     netcfg_progress_displayed = 1;
 
     /* wait between 2 and dhcp_seconds seconds for a DHCP lease */
@@ -374,20 +381,59 @@ int ask_dhcp_options (struct debconfclient *client)
 
 int ask_wifi_configuration (struct debconfclient *client)
 {
-    enum { ABORT, DONE, ESSID, WEP } wifistate = ESSID;
+    enum { ABORT, ESSID, SECURITY_TYPE, WEP, WPA, START, DONE } wifistate = ESSID;
+
+    extern enum wpa_t wpa_supplicant_status;
+    if (wpa_supplicant_status != WPA_UNAVAIL)
+        kill_wpa_supplicant();
+
     for (;;) {
         switch (wifistate) {
         case ESSID:
-            wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
-                ABORT : WEP;
+            if (wpa_supplicant_status == WPA_UNAVAIL)
+                wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
+                    ABORT : WEP;
+            else
+                wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
+                    ABORT : SECURITY_TYPE;
             break;
+        
+        case SECURITY_TYPE:
+            {
+                int ret;
+                ret = wireless_security_type(client, interface);
+                if (ret == GO_BACK)
+                    wifistate = ESSID;
+                else if (ret == REPLY_WPA)
+                    wifistate = WPA;
+                else
+                    wifistate = WEP;
+                break;
+            }
+        
         case WEP:
-            wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
+            if (wpa_supplicant_status == WPA_UNAVAIL)
+                wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
+                    ESSID : DONE;
+            else
+                wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
+                    SECURITY_TYPE : DONE;
+            break;
+        
+        case WPA:
+            wifistate = (netcfg_set_passphrase(client, interface) == GO_BACK) ?
+                SECURITY_TYPE : START;
+            break;
+        
+        case START:
+            wifistate = (wpa_supplicant_start(client, interface, essid, passphrase) == GO_BACK) ?
                 ESSID : DONE;
             break;
+            
         case ABORT:
             return REPLY_ASK_OPTIONS;
             break;
+        
         case DONE:
             return REPLY_CHECK_DHCP;
             break;
@@ -565,12 +611,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 break;
             case REPLY_RECONFIGURE_WIFI:
                 if (ask_wifi_configuration(client) == REPLY_CHECK_DHCP) {
-                    if (dhcp_pid > 0)
-                        state = POLL;
-                    else {
-                        kill_dhcp_client();
-                        state = START;
-                    }
+                    kill_dhcp_client();
+                    state = START;
                 }
                 else
                     state = ASK_OPTIONS;

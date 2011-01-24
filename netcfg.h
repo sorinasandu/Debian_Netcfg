@@ -9,12 +9,17 @@
 #define DHCLIENT_CONF	"/etc/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
 #define NTP_SERVER_FILE "/tmp/dhcp-ntp-servers"
+#define WPASUPP_CTRL    "/var/run/wpa_supplicant"
+#define WPAPID          "/var/run/wpa_supplicant.pid"
 
 #define DEVNAMES	"/etc/network/devnames"
 #define DEVHOTPLUG	"/etc/network/devhotplug"
 #ifdef __linux__
 #define STAB		"/var/run/stab"
 #endif
+
+#define WPA_MIN         8    /* minimum passphrase length */
+#define WPA_MAX         64   /* maximum passphrase length */
 
 #define _GNU_SOURCE
 
@@ -51,9 +56,10 @@
 #define MAXHOSTNAMELEN 63
 #endif
 
-typedef enum { NOT_ASKED = 30, GO_BACK } response_t;
+typedef enum { NOT_ASKED = 30, GO_BACK, REPLY_WEP, REPLY_WPA } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;
+extern enum wpa_t { WPA_OK, WPA_QUEUED, WPA_UNAVAIL } wpa_supplicant_status;
 
 extern int netcfg_progress_displayed;
 extern int wfd, skfd;
@@ -74,7 +80,7 @@ extern struct in_addr gateway;
 extern struct in_addr pointopoint;
 
 /* wireless */
-extern char *essid, *wepkey;
+extern char *essid, *wepkey, *passphrase;
 extern wifimode_t mode;
 
 /* common functions */
@@ -121,10 +127,14 @@ extern void netcfg_write_common (struct in_addr ipaddress, char *hostname,
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 
 extern int is_wireless_iface (const char* iface);
-
 extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface, char* priority);
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
+extern int wireless_security_type (struct debconfclient *client, char* iface);
+extern int netcfg_set_passphrase (struct debconfclient *client, char* iface);
+extern int init_wpa_supplicant_support (void);
+extern int kill_wpa_supplicant (void);
 
+extern int wpa_supplicant_start (struct debconfclient *client, char *iface, char *ssid, char *passphrase);
 extern int iface_is_hotpluggable(const char *iface);
 extern short find_in_stab (const char *iface);
 extern void deconfigure_network(void);

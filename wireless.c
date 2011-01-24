@@ -53,7 +53,7 @@ int netcfg_wireless_set_essid (struct debconfclient * client, char *iface, char*
     wconf.has_mode = 1;
     wconf.mode = mode;
 
-    debconf_input(client, priority ? priority : "low", "netcfg/wireless_essid");
+    debconf_input(client, priority ? priority : "high", "netcfg/wireless_essid");
 
     if (debconf_go(client) == 30)
         return GO_BACK;

@@ -33,6 +33,7 @@
 #endif
 #include "netcfg.h"
 
+enum wpa_t wpa_supplicant_status;
 static method_t netcfg_method = DHCP;
 
 response_t netcfg_get_method(struct debconfclient *client)
@@ -69,11 +70,15 @@ int main(int argc, char *argv[])
            GET_STATIC,
            WCONFIG,
            WCONFIG_ESSID,
+           WCONFIG_SECURITY_TYPE,
            WCONFIG_WEP,
+           WCONFIG_WPA,
+           START_WPA,
            QUIT } state = GET_INTERFACE;
 
     static struct debconfclient *client;
     static int requested_wireless_tools = 0;
+    extern enum wpa_t wpa_supplicant_status;
     char **ifaces;
     char *defiface = NULL, *defwireless = NULL;
     response_t res;
@@ -118,6 +123,13 @@ int main(int argc, char *argv[])
         case BACKUP:
             return 10;
         case GET_INTERFACE:
+            /* If we have returned from outside of netcfg and want to
+             * reconfigure networking, check to see if wpasupplicant is
+             * running, and kill it if it is. If left running when
+             * the interfaces are taken up and down, it appears to
+             * leave it in an inconsistant state */
+            kill_wpa_supplicant();
+
             /* Choose a default by looking for link */
             if (get_all_ifs(1, &ifaces) > 1) {
                 while (*ifaces) {
@@ -264,16 +276,56 @@ int main(int argc, char *argv[])
         case WCONFIG_ESSID:
             if (netcfg_wireless_set_essid(client, interface, NULL) == GO_BACK)
                 state = BACKUP;
-            else
-                state = WCONFIG_WEP;
+            else {
+                init_wpa_supplicant_support();
+                if (wpa_supplicant_status == WPA_UNAVAIL)
+                    state = WCONFIG_WEP;
+                else
+                    state = WCONFIG_SECURITY_TYPE;
+            }
             break;
 
+        case WCONFIG_SECURITY_TYPE:
+            {
+                int ret;
+                ret = wireless_security_type(client, interface);
+                if (ret == GO_BACK)
+                    state = WCONFIG_ESSID;
+                else if (ret == REPLY_WPA)
+                    state = WCONFIG_WPA;
+                else
+                    state = WCONFIG_WEP;
+                break;
+            }
+
         case WCONFIG_WEP:
-            if (netcfg_wireless_set_wep(client, interface) == GO_BACK)
-                state = WCONFIG_ESSID;
+            if (netcfg_wireless_set_wep(client, interface) == GO_BACK) 
+                if (wpa_supplicant_status == WPA_UNAVAIL)
+                    state = WCONFIG_ESSID;
+                else
+                    state = WCONFIG_SECURITY_TYPE;
             else
                 state = GET_METHOD;
             break;
+
+        case WCONFIG_WPA:
+            if (wpa_supplicant_status == WPA_OK) {
+                di_exec_shell_log("apt-install wpasupplicant");
+                wpa_supplicant_status = WPA_QUEUED;
+            }
+
+            if (netcfg_set_passphrase(client, interface) == GO_BACK)
+                state = WCONFIG_SECURITY_TYPE;
+            else
+                state = START_WPA;
+            break;
+
+        case START_WPA:
+            if (wpa_supplicant_start(client, interface, essid, passphrase) == GO_BACK)
+                state = WCONFIG_ESSID;
+            else
+                state = GET_METHOD;
+            break; 
 
         case QUIT:
             netcfg_update_entropy();
