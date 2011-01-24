@@ -12,13 +12,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <debian-installer.h>
+
+#ifdef WIRELESS
 #include "wpa_ctrl.h"
 #include <iwlib.h>
 
 pid_t wpa_supplicant_pid = -1;
 enum wpa_t wpa_supplicant_status;
 struct wpa_ctrl *ctrl;
-char *passphrase = NULL;
+#endif  /* WIRELESS */
+char *passphrase = NULL;  /* This is referenced in other places directly */
+#ifdef WIRELESS
 static int wpa_is_running = 0;
 
 int init_wpa_supplicant_support(void)
@@ -55,10 +59,10 @@ int kill_wpa_supplicant(void)
       }
 }
 
-int wireless_security_type (struct debconfclient *client, char *iface)
+int wireless_security_type (struct debconfclient *client, char *if_name)
 {
     int ret = 0 ;
-    debconf_subst(client, "netcfg/wireless_security_type", "iface", iface);
+    debconf_subst(client, "netcfg/wireless_security_type", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_security_type");
     ret = debconf_go(client);
 
@@ -74,11 +78,11 @@ int wireless_security_type (struct debconfclient *client, char *iface)
 
 }
 
-int netcfg_set_passphrase (struct debconfclient *client, char *iface)
+int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
 {
     int ret;
     
-    debconf_subst(client, "netcfg/wireless_wpa", "iface", iface);
+    debconf_subst(client, "netcfg/wireless_wpa", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_wpa");
     ret = debconf_go(client);
 
@@ -138,20 +142,20 @@ void wpa_daemon_running(void)
     }
 }
 
-static int wpa_connect(char *iface)
+static int wpa_connect(char *if_name)
 {
     char *cfile;
     int flen, res;
     
-    flen = (strlen(WPASUPP_CTRL) + strlen(iface) + 2);
+    flen = (strlen(WPASUPP_CTRL) + strlen(if_name) + 2);
     
     cfile = malloc(flen);
     if (cfile == NULL) {
-        di_info("Can't allocate memory for WPA control iface.");
+        di_info("Can't allocate memory for WPA control interface.");
         return 1;
     }    
         
-    res = snprintf(cfile, flen, "%s/%s", WPASUPP_CTRL, iface);
+    res = snprintf(cfile, flen, "%s/%s", WPASUPP_CTRL, if_name);
     if ((res < 0) || (res >= flen)) {
         free(cfile);
         return 1;
@@ -296,7 +300,7 @@ int poll_wpa_supplicant(struct debconfclient *client)
 
 }
 
-int wpa_supplicant_start(struct debconfclient *client, char *iface, char *ssid, char *passphrase)
+int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid, char *passphrase)
 {
     int retry = 0;
     
@@ -332,7 +336,7 @@ int wpa_supplicant_start(struct debconfclient *client, char *iface, char *ssid, 
             break;
         
         case CONNECT:
-            if (wpa_connect(iface) == 0)
+            if (wpa_connect(if_name) == 0)
                 state = PING;
             else
                 state = ABORT;
@@ -421,3 +425,43 @@ int wpa_supplicant_start(struct debconfclient *client, char *iface, char *ssid, 
         }
     }
 }
+
+#else  /* Non-WIRELESS stubs of public API */
+
+int init_wpa_supplicant_support(void)
+{
+	return 0;
+}
+
+int kill_wpa_supplicant(void)
+{
+	return 0;
+}
+
+int wireless_security_type(struct debconfclient *client, char *if_name)
+{
+	(void)client;
+	(void)if_name;
+
+	return 0;
+}
+
+int netcfg_set_passphrase(struct debconfclient *client, char *if_name)
+{
+	(void)client;
+	(void)if_name;
+	
+	return 0;
+}
+
+int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid, char *passphrase)
+{
+	(void)client;
+	(void)if_name;
+	(void)ssid;
+	(void)passphrase;
+	
+	return 0;
+}
+
+#endif  /* WIRELESS */

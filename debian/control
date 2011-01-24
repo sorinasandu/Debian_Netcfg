@@ -10,7 +10,7 @@ Vcs-Git: git://git.debian.org/d-i/netcfg.git
 Package: netcfg
 XC-Package-Type: udeb
 Architecture: i386 amd64 alpha arm armel armeb hppa ia64 m68k mips mipsel powerpc sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386 sh4 sparc64
-Depends: ${shlibs:Depends}, ${misc:Depends}, ethernet-card-detection, isc-dhcp-client-udeb [kfreebsd-any], freebsd-net-tools-udeb [kfreebsd-any]
+Depends: ${shlibs:Depends}, ${misc:Depends}, ethernet-card-detection, isc-dhcp-client-udeb [kfreebsd-any], freebsd-net-tools-udeb [kfreebsd-any], wpasupplicant-udeb [!s390 !kfreebsd-any !hurd-any]
 Provides: configured-network
 XB-Installer-Menu-Item: 1800
 Description: Configure the network

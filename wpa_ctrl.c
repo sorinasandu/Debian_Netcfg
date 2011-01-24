@@ -15,6 +15,8 @@
  * license.
  */
 
+#ifdef WIRELESS
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -254,3 +256,5 @@ int wpa_ctrl_get_fd(struct wpa_ctrl *ctrl)
 {
 	return ctrl->s;
 }
+
+#endif  /* Wireless */
