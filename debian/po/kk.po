@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-11-26 16:42+0600\n"
+"PO-Revision-Date: 2011-01-26 17:26+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -286,16 +286,15 @@ msgstr "\"${hostname}\" компьютер аты жарамсыз."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Компьютер аты 0-9 сандары, a-z әріптері және минус белгісінен тұруы мүмкін. "
-"Ұзындығы 2 және 63 таңба аралығында болуы керек. Компьютер аты минус "
-"белгісінен басталмауы және аяқталмауы керек."
+"Компьютер аты 0-9 сандары, латын (A-Z мен a-z) әріптері және минус "
+"белгісінен тұруы мүмкін. Компьютер атының ұзындығы ${maxhostnamelen} "
+"таңбадан аспауы тиіс, минус белгісінен басталмауы және аяқталмауы керек."
 
 #. Type: error
 #. Description
@@ -427,9 +426,8 @@ msgstr "Сымсыз желінің қатынаcу нүктелерін ізд�
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Құрылғылар анықталуда, күте тұрыңыз..."
+msgstr "${interface} үшін желінің бар-жоғын тексеру; күтіңіз..."
 
 #. Type: text
 #. Description

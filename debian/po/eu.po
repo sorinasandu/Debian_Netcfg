@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-11-04 09:23+0200\n"
+"PO-Revision-Date: 2011-01-25 07:19+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -291,7 +291,6 @@ msgstr "\"${hostname}\" izena baliogabea da."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -299,8 +298,8 @@ msgid ""
 "sign."
 msgstr ""
 "Baliozko ostalari-izenak honako karaktereak izan ditzake: 0-9 zenbakiak, a-z "
-"letra minuskulak eta minus ikurra. 2 eta 63 karaktere arteko luzera izan "
-"dezake eta ez du minus ikurrarekin hasi edo bukatu behar."
+"letra minuskulak eta minus ikurra.  Gehienez ${maxhostnamelen} karaktere "
+"arteko luzera izan dezake eta ez du minus ikurrarekin hasi edo bukatu behar."
 
 #. Type: error
 #. Description
@@ -431,9 +430,8 @@ msgstr "Haririk gabeko sarbide-puntuak bilatzen..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Hardwarea antzematen, itxaron..."
+msgstr "${interface}-ko lotura antzematen; itxoin mesedez..."
 
 #. Type: text
 #. Description

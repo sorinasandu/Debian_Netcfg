@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2011-01-07 20:59+0700\n"
+"PO-Revision-Date: 2011-01-26 16:05+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -276,15 +276,15 @@ msgstr "ชื่อ \"${hostname}\" ไม่ถูกต้อง"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"ชื่อโฮสต์ที่ใช้ได้ ควรมีแต่ตัวเลข 0-9, อักษรตัวพิมพ์เล็ก a-z, และเครื่องหมายลบเท่านั้น "
-"ต้องมีความยาว 2 ถึง 63 อักขระ และห้ามขึ้นต้นหรือลงท้ายด้วยเครื่องหมายลบ"
+"ชื่อโฮสต์ที่ใช้ได้ ควรใช้เฉพาะตัวเลข 0-9, อักษรตัวพิมพ์ใหญ่และตัวพิมพ์เล็ก (A-Z และ a-z), "
+"และเครื่องหมายลบเท่านั้น ยาวได้ไม่เกิน ${maxhostnamelen} อักขระ "
+"และห้ามขึ้นต้นหรือลงท้ายด้วยเครื่องหมายลบ"
 
 #. Type: error
 #. Description
@@ -412,9 +412,8 @@ msgstr "กำลังค้นหา access point ไร้สาย..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "กำลังตรวจหาฮาร์ดแวร์ต่างๆ กรุณารอสักครู่..."
+msgstr "กำลังตรวจหาการเชื่อมต่อที่ ${interface} กรุณารอสักครู่..."
 
 #. Type: text
 #. Description

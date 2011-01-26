@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-08-25 09:36+0100\n"
+"PO-Revision-Date: 2011-01-25 06:51+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -297,16 +297,16 @@ msgstr "\"${hostname}\" är ett ogiltigt namn."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Ett giltigt värdnamn får endast innehålla siffrorna 0-9, de små bokstäverna "
-"a-z och minustecknet. Det måste vara mellan 2 och 63 tecken långt och får "
-"inte börja eller sluta med ett minustecken."
+"Ett giltigt värdnamn får endast innehålla siffrorna 0-9, de små och stora "
+"bokstäverna (a-z och A-Z) samt minustecknet. Det får som mest vara "
+"${maxhostnamelen} tecken långt och får inte börja eller sluta med ett "
+"minustecken."
 
 #. Type: error
 #. Description
@@ -438,9 +438,8 @@ msgstr "Söker efter trådlösa åtkomstpunkter ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Identifierar maskinvara, vänta..."
+msgstr "Identifierar länk på ${interface};, vänta..."
 
 #. Type: text
 #. Description
