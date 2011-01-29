@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-09-18 10:03+0200\n"
+"PO-Revision-Date: 2011-01-29 09:25+0100\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "MIME-Version: 1.0\n"
@@ -279,7 +279,6 @@ msgstr "Jméno počítače „${hostname}“ je neplatné."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -287,8 +286,8 @@ msgid ""
 "sign."
 msgstr ""
 "Název počítače smí obsahovat pouze číslice 0-9, písmena a-z, A-Z a znaménko "
-"mínus, musí být v rozmezí 2 a 63 znaků a nesmí začínat nebo končit znaménkem "
-"mínus."
+"mínus, může mít nejvýše ${maxhostnamelen} znaků a nesmí začínat nebo končit "
+"znaménkem mínus."
 
 #. Type: error
 #. Description
@@ -420,9 +419,8 @@ msgstr "Hledají se bezdrátové přístupové body ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Rozpoznává se hardware, prosím čekejte..."
+msgstr "Rozpoznává se spojení na ${interface}, prosím čekejte..."
 
 #. Type: text
 #. Description
