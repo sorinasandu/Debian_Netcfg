@@ -1,5 +1,6 @@
-netcfg (1.60) UNRELEASED; urgency=low
+netcfg (1.60) unstable; urgency=low
 
+  [ Matt Palmer ]
   * Increase the frequency of DHCP discover packets sent during DHCP
     configuration using udhcpc.  This should ameliorate some problems with
     DHCP configuration when a link is slow to become available.
@@ -15,7 +16,19 @@ netcfg (1.60) UNRELEASED; urgency=low
     Closes: #606515.
   * Release DHCP lease at the completion of the install.  Closes: #610553.
 
- -- Matt Palmer <mpalmer@debian.org>  Mon, 24 Jan 2011 19:54:29 +1100
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
+  * Basque (eu.po) by Piarres Beobide
+  * French (fr.po) by Christian Perrier
+  * Kazakh (kk.po) by Baurzhan Muftakhidinov
+  * Nepali (ne.po)
+  * Russian (ru.po) by Yuri Kozlov
+  * Slovak (sk.po) by Ivan Masár
+  * Swedish (sv.po) by Daniel Nylander
+  * Telugu (te.po) by Arjuna Rao Chavala
+  * Thai (th.po) by Theppitak Karoonboonyanan
+
+ -- Matt Palmer <mpalmer@debian.org>  Sun, 06 Feb 2011 12:59:07 +1100
 
 netcfg (1.59) unstable; urgency=low
 
