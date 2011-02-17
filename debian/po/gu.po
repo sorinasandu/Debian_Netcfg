@@ -285,16 +285,15 @@ msgstr "નામ \"${hostname}\" અયોગ્ય છે."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"યોગ્ય યજમાનનામ ફક્ત ૦ થી ૯ સુધીનાં આંકડાઓ, નાનાં અંગ્રજી અક્ષરો a થી z અને ઋણ નિશાની "
-"ધરાવી શકે છે. તે ૨ થી માંડીને ૬૩ અક્ષરો સુધી લાંબું હોઇ શકે છે, અને ઋણ નિશાની સાથે શરૂ અથવા "
-"અંત ન પામવું જોઇએ."
+"યોગ્ય યજમાનનામ ફક્ત ૦ થી ૯ સુધીનાં આંકડાઓ, નાનાં અથવા મોટાં અંગ્રજી અક્ષરો (A-Z અને a-"
+"z) અને ઋણ નિશાની ધરાવી શકે છે. તે ${maxhostnamelen} અક્ષરો સુધી લાંબું હોઇ શકે છે, અને "
+"ઋણ નિશાની સાથે શરૂ અથવા અંત ન પામવું જોઇએ."
 
 #. Type: error
 #. Description
@@ -423,9 +422,8 @@ msgstr "વાયરલેસ એક્સેસ બિંદુઓ શોધી
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "હાર્ડવેર ચકાસે છે, મહેરબાની કરી રાહ જુઓ..."
+msgstr "${interface} પરનું જોડાણ ચકાસે છે, મહેરબાની કરી રાહ જુઓ..."
 
 #. Type: text
 #. Description

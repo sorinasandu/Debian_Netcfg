@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-11-07 17:52+0600\n"
+"PO-Revision-Date: 2011-02-06 17:52+0600\n"
 "Last-Translator: Israt Jahan <israt@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -299,16 +299,15 @@ msgstr "হোস্টনাম হিসেবে \"${hostname}\" অবৈধ
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"একটি বৈধ হোস্টনামে শুধুমাত্র ০-৯ পর্যন্ত সংখ্যা, a-z পর্যন্ত ছোট ছাঁদের অক্ষর, এবং "
-"বিয়োগ চিহ্ন থাকতে পারে। হোস্টনামের দৈর্ঘ্য ২ থেকে ৬৩ অক্ষরের মধ্যে হতে হবে, এবং এর "
-"প্রথমে বা শেষ কোন বিয়োগ চিহ্ন থাকতে পারবে না।"
+"একটি বৈধ হোস্টনামে শুধুমাত্র ০-৯ পর্যন্ত সংখ্যা, (a-z  এবং A-Z) পর্যন্ত ছোট এবং বড় "
+"ছাঁদের অক্ষর, এবং বিয়োগ চিহ্ন থাকতে পারে। হোস্টনামের দৈর্ঘ্য ${maxhostnamelen} "
+"অক্ষরের মধ্যে হতে হবে, এবং এর প্রথমে বা শেষ কোন বিয়োগ চিহ্ন থাকতে পারবে না।"
 
 #. Type: error
 #. Description
@@ -442,9 +441,8 @@ msgstr "ওয়্যারলেস এক্সেস পয়েন্ট খো
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "হার্ডওয়্যার সনাক্ত করছি, অনুগ্রহপূর্বক অপেক্ষা করুন..."
+msgstr "লিংক ${interface} সনাক্ত করা হচ্ছে; অনুগ্রহপূর্বক অপেক্ষা করুন..."
 
 #. Type: text
 #. Description

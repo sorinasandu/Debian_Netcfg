@@ -7,7 +7,7 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # Console-setup strings translations:
 # (identified by "./console-setup.templates")
-# Copyright (C) 2003-2010 Miguel Figueiredo <elmig@debianpt.org>
+# Copyright (C) 2003-2011 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as debian-installer.
 #
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-08-21 11:38+0100\n"
+"PO-Revision-Date: 2011-01-29 18:36+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -292,7 +292,6 @@ msgstr "O nome \"${hostname}\" é inválido."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -300,8 +299,9 @@ msgid ""
 "sign."
 msgstr ""
 "Um nome do computador válido só pode conter os números 0-9, as letras "
-"minúsculas de a-z, e o sinal menos. Tem de ter entre 2 e 63 caracteres de "
-"comprimento, e não pode iniciar ou terminar com um sinal de menos."
+"minúsculas e maiúsculas (A-Z e a-z), e o sinal menos. Tem de ter no máximo "
+"${maxhostnamelen} caracteres de comprimento, e não pode começar ou terminar "
+"com um sinal de menos."
 
 #. Type: error
 #. Description
@@ -434,9 +434,8 @@ msgstr "A procurar pontos de acesso da rede sem fios ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "A detectar hardware, por favor espere..."
+msgstr "A detectar ligação em ${interface}; por favor aguarde..."
 
 #. Type: text
 #. Description
