@@ -1035,23 +1035,40 @@ void netcfg_update_entropy (void)
  */
 int netcfg_detect_link(struct debconfclient *client, const char *if_name)
 {
-    int wait_count, rv = 0;
+    char arping[256];
+    char s_gateway[INET_ADDRSTRLEN];
+    int count, rv = 0;
+    int link_waits = NETCFG_LINK_WAIT_TIME * 4;
+    int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
+
+    if (gateway.s_addr) {
+        inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
+        sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);
+    }
     
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
-    debconf_progress_start(client, 0, NETCFG_LINK_WAIT_TIME * 4, "netcfg/link_detect_progress");
-    for (wait_count = 0; wait_count < NETCFG_LINK_WAIT_TIME * 4; wait_count++) {
+    debconf_progress_start(client, 0, 100, "netcfg/link_detect_progress");
+    for (count = 0; count < link_waits; count++) {
         usleep(250000);
-        if (debconf_progress_step(client, 1) == 30) {
+        if (debconf_progress_set(client, 50 * count / link_waits) == 30) {
             /* User cancelled on us... bugger */
             rv = 0;
             break;
         }
-        if (ethtool_lite (if_name) == 1) /* ethtool-lite's CONNECTED */ {
-            debconf_progress_set(client, NETCFG_LINK_WAIT_TIME * 4);
+        if (ethtool_lite(if_name) == 1) /* ethtool-lite's CONNECTED */ {
+            if (gateway.s_addr && !is_wireless_iface(if_name)) {
+                for (count = 0; count < gw_tries; count++) {
+                    if (di_exec_shell_log(arping) == 0)
+                        break;
+                    if (debconf_progress_set(client, 50 + 50 * count / gw_tries) == 30)
+                        break;
+                }
+            }
             rv = 1;
             break;
         }
+        debconf_progress_set(client, 100);
     }
 
     debconf_progress_stop(client);

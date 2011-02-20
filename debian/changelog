@@ -3,6 +3,13 @@ netcfg (1.61) UNRELEASED; urgency=low
   [ Konstantinos Margaritis]
   * Added armhf in arch field. Closes: #605013.
 
+  [ Robert Edmonds ]
+  * Wait for the network to be usable before trying to use it
+    (in the case of STP-enabled switch for instance
+    Use busybox's arping with the '-f' flag (quit on first ARP reply).  
+    Wait up to 45 seconds for an ARP reply from the default gateway
+    Closes: #537271
+
  -- Konstantinos <markos@debian.org>  Tue, 08 Feb 2011 13:52:34 +0200
 
 netcfg (1.60) unstable; urgency=low

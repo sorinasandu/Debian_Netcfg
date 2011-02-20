@@ -47,6 +47,11 @@
  */
 #define NETCFG_LINK_WAIT_TIME 3
 
+/* The number of times to attempt to verify gateway reachability.
+ * Each try invokes arping with a one second timeout.
+ */
+#define NETCFG_GATEWAY_REACHABILITY_TRIES 50
+
 #ifndef MAXHOSTNAMELEN
 #define MAXHOSTNAMELEN 63
 #endif
