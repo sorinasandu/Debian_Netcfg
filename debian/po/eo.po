@@ -4,18 +4,18 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # translation of Debian Installer templates to Esperanto.
-# Copyright (C) 2005-2008 Software in the Public Interest, Inc.
+# Copyright (C) 2005-2011 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
 # Samuel Gimeno <sgimeno@gmail.com>, 2005.
 # Serge Leblanc <serge.leblanc@wanadoo.fr>, 2005, 2006, 2007.
-# Felipe Castro <fefcas@gmail.com>, 2008, 2009.
+# Felipe Castro <fefcas@gmail.com>, 2008, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-09-02 21:11-0300\n"
+"PO-Revision-Date: 2011-02-26 17:50-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -288,16 +288,16 @@ msgstr "La nomo \"${hostname}\" estas malvalida."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Valida gastnomo enhavas nur la ciferojn '0-9', la minusklajn literojn 'a-z', "
-"la majusklajn literojn 'A-Z' kaj la minusan signon. Ĝi ne povas komenciĝi "
-"kaj finiĝi per la minusa signo."
+"Valida gastnomo povas enhavi nur la ciferojn 0-9, la majusklajn kaj "
+"minusklajn literojn (a-z kaj A-Z), kaj la minusan signon. Ĝi devas enhavi "
+"maksimume ${maxhostnamelen} signojn, kaj ĝi ne povas komenciĝi aŭ finiĝi per "
+"la minusa signo."
 
 #. Type: error
 #. Description
@@ -429,9 +429,8 @@ msgstr "Serĉado de sendratajn retalir-punktojn..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Detektado de aparataroj, bonvolu atendi..."
+msgstr "Detektado de ligo en ${interface}, bonvolu atendi..."
 
 #. Type: text
 #. Description
