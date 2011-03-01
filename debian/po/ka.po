@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-07-08 22:36+0400\n"
+"PO-Revision-Date: 2011-03-01 12:49+0400\n"
 "Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
 "Language-Team: Georgian\n"
 "MIME-Version: 1.0\n"
@@ -296,16 +296,16 @@ msgstr "სახელი \"${hostname}\" მიუღებელია."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"ვართებული „hostname” შეიძლება მხოლოდ შედგებოდეს ციფრებისაგან (0-9), ქვედა "
-"რეესტრის ლათინური ასოებისაგან (a-z) და მინუსის სიმბოლოსაგან. მისი დაშვებული "
-"სიგრძეა 2-დან 63 სიმბოლომდე და არ შეიძლება დასრულდეს მინუსის სიმბოლოთი."
+"მართებული „hostname” შეიძლება მხოლოდ შედგებოდეს ციფრებისაგან (0-9), ზედა და "
+"ქვედა რეესტრის ლათინური ასოებისაგან (a-z და A-Z) და მინუსის სიმბოლოსაგან. "
+"მისი დაშვებული სიგრძეა ${maxhostnamelen} სიმბოლო და არ შეიძლება დაიწყოს ან "
+"დასრულდეს მინუსის სიმბოლოთი."
 
 #. Type: error
 #. Description
@@ -437,9 +437,8 @@ msgstr "მიმდინარეობს უკაბელო ქსელ�
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "მიმდინარეობს მოწყობილობების ამოცნობა გთხოვთ, დაელოდოთ..."
+msgstr "მიმდინარეობს ${interface}-ზე ბმულის ამოცნობა; გთხოვთ, დაელოდოთ..."
 
 #. Type: text
 #. Description
