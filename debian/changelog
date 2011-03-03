@@ -10,6 +10,10 @@ netcfg (1.61) UNRELEASED; urgency=low
     Wait up to 45 seconds for an ARP reply from the default gateway
     Closes: #537271
 
+  [ Samuel Thibault ]
+  * Make netcfg depend on isc-dhcp-client-udeb on hurd-any too, for the same
+    reason as kfreebsd: no support for udhcp in busybox.
+
  -- Konstantinos <markos@debian.org>  Tue, 08 Feb 2011 13:52:34 +0200
 
 netcfg (1.60) unstable; urgency=low
