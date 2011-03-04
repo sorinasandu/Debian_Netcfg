@@ -13,6 +13,7 @@ netcfg (1.61) UNRELEASED; urgency=low
   [ Samuel Thibault ]
   * Make netcfg depend on isc-dhcp-client-udeb on hurd-any too, for the same
     reason as kfreebsd: no support for udhcp in busybox.
+  * dhcp.c: Implement no_default_route on Hurd.
 
  -- Konstantinos <markos@debian.org>  Tue, 08 Feb 2011 13:52:34 +0200
 

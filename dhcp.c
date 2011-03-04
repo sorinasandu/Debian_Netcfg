@@ -87,6 +87,18 @@ static short no_default_route (void)
     status = system("exec /lib/freebsd/route show default >/dev/null 2>&1");
 
     return WEXITSTATUS(status) != 0;
+#elif defined(__GNU__)
+    FILE* pfinet = NULL;
+    char buf[1024] = { 0 };
+
+    pfinet = popen("fsysopts /servers/socket/2", "r");
+    if (!pfinet)
+        return 1;
+
+    if (fgets (buf, 1024, pfinet) == NULL)
+        return 1;
+
+    return !strstr (buf, "--gateway=");
 #else
     FILE* iproute = NULL;
     char buf[256] = { 0 };
