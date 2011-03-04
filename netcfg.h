@@ -6,7 +6,7 @@
 #define HOSTNAME_FILE   "/etc/hostname"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
-#define DHCLIENT_CONF	"/etc/dhcp/dhclient.conf"
+#define DHCLIENT_CONF   "/etc/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
 #define NTP_SERVER_FILE "/tmp/dhcp-ntp-servers"
 

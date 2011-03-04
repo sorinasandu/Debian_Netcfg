@@ -212,7 +212,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 fclose(dc);
             }
 
-            execlp("dhclient", "dhclient", "-1", interface, NULL);
+            execlp("dhclient", "dhclient", "-1", interface, "-cf", DHCLIENT_CONF, NULL);
             break;
 
         case UDHCPC:
