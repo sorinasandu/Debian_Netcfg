@@ -208,6 +208,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
                 fprintf(dc, "timeout %d;\n", dhcp_seconds);
+                fprintf(dc, "initial-interval 1;\n");
                 fclose(dc);
             }
 
