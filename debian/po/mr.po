@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-09-02 10:36+0530\n"
-"Last-Translator: Sampada <sampadanakhare@gmail.com>\n"
+"PO-Revision-Date: 2011-03-05 22:52+0530\n"
+"Last-Translator: sampada <sampadanakhare@gmail.com>\n"
 "Language-Team: Marathi, janabhaaratii, C-DAC, Mumbai, India "
 "<janabhaaratii@cdacmumbai.in>\n"
 "MIME-Version: 1.0\n"
@@ -286,16 +286,15 @@ msgstr "\"${hostname}\" हे नाव अवैध आहे."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"वैध यजमाननामामधे फक्त ०-९ अंक, इंग्रजी लोअरकेस (छोटी) अक्षरे, आणि वजा चिन्ह यांचा समावेश "
-"असू शकतो. एकूण चिन्हे किमान २ ते कमाल ६३ पर्यंतव असावी, व सुरुवातीला वा शेवटी वजा चिन्ह "
-"नसावे."
+"वैध यजमाननामामधे फक्त ०-९ अंक, इंग्रजी अपर व लोअरकेस (A-Z व a-z) अक्षरे, आणि वजा चिन्ह "
+"यांचा समावेश असू शकतो. एकूण चिन्हे कमाल ${maxhostnamelen} पर्यंतव असावी, व सुरुवातीला "
+"वा शेवटी वजा चिन्ह नसावे."
 
 #. Type: error
 #. Description
@@ -426,9 +425,8 @@ msgstr "बिनतारी प्रवेश बिंदूंचा शो
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "हार्डवेअर शोधत आहे, कृपया थांबा..."
+msgstr "${interface} वर दुवा शोधत आहे, कृपया थांबा..."
 
 #. Type: text
 #. Description
