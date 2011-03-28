@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2011-01-22 09:07+0300\n"
+"PO-Revision-Date: 2011-03-27 18:06+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -293,16 +293,16 @@ msgstr "Имя \"${hostname}\" не допустимо."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Допустимое имя может содержать только цифры 0-9, строчные латинские буквы a-"
-"z и знак \"минус\". Длина имени должна быть в пределах от 2 до 63 символов. "
-"Имя также не может начинаться или заканчиваться на знак \"минус\"."
+"Допустимое имя может содержать только цифры 0-9, строчные и прописные "
+"латинские буквы (A-Z и a-z) и знак «минус». Длина имени должна быть в не "
+"более ${maxhostnamelen} и не может начинаться или заканчиваться знаком "
+"«минус»."
 
 #. Type: error
 #. Description
@@ -436,9 +436,8 @@ msgstr "Поиск точек доступа (access point) беспроводн
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Выполняется поиск оборудования, подождите..."
+msgstr "Выполняется поиск ссылки на ${interface}, подождите..."
 
 #. Type: text
 #. Description
