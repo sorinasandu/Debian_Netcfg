@@ -11,13 +11,13 @@
 # Klaus Ade Johnstad <klaus@skolelinux.no>, 2004.
 # Axel Bojer <axelb@skolelinux.no>, 2004.
 # Bjørn Steensrud <bjornst@powertech.no>, 2004-2007.
-# Hans Fredrik Nordhaug <hans@nordhaug.priv.no>, 2005, 2007-2010.
+# Hans Fredrik Nordhaug <hans@nordhaug.priv.no>, 2005, 2007-2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-08-25 17:46+0200\n"
+"PO-Revision-Date: 2011-04-15 20:02+0200\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -289,16 +289,15 @@ msgstr "Vertsnavnet  «${hostname}» er ugyldig."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Et gyldig vertsnavn kan bare inneholde tallene 0-9, små bokstaver og minus-"
-"tegn. Det må ha mellom 2 og 63 tegn, og kan ikke begynne eller slutte med et "
-"minustegn."
+"Et gyldig vertsnavn kan bare inneholde tallene 0-9, store og små bokstaver "
+"(A-Z og a-z) og minus-tegnet. Det kan være maks ${maxhostnamelen} tegn "
+"langt, og kan ikke begynne eller slutte med et minustegn."
 
 #. Type: error
 #. Description
@@ -431,9 +430,8 @@ msgstr "Søker etter trådløse tilgangspunkt ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Finner maskinvare, vent litt ..."
+msgstr "Finner link på ${interface}, vent litt ..."
 
 #. Type: text
 #. Description
