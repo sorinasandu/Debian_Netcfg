@@ -11,14 +11,14 @@
 # Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006),
 # Ming Hua (2005,2006,2007,2008), Xiyue Deng (2008), Kov Chai (2008),
 # Kenlen Lai (2008), WCM (2008), Ren Xiaolei (2008).
-# YunQiang Su <wzssyqa@gmail.com>, 2010.
+# YunQiang Su <wzssyqa@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-10-04 03:35+0800\n"
+"PO-Revision-Date: 2011-04-15 11:58+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -281,15 +281,14 @@ msgstr "名称“${hostname}”无效。"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"正确的主机名应当只包含数字0-9、小写字母a-z和减号。它的长度必须在 2 到 63 个字"
-"符之间，且不能以减号开始或结束。"
+"正确的主机名应当只包含数字 0-9、大小写字母(A-Z 和 a-z)和减号，最长不能超过 "
+"${maxhostnamelen}，且不能以减号开始或结束。"
 
 #. Type: error
 #. Description
@@ -416,9 +415,8 @@ msgstr "正在搜索无线网络接入点 (AP) ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "正在探测硬件，请稍候..."
+msgstr "正在 ${interface} 上探测连接，请稍候..."
 
 #. Type: text
 #. Description
