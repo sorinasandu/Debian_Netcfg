@@ -46,6 +46,10 @@
 
 #include <ifaddrs.h>
 
+#ifdef __linux__
+#define SYSCLASSNET "/sys/class/net/"
+#endif /* __linux__ */
+
 #ifdef __FreeBSD_kernel__
 #define LO_IF	"lo0"
 #else
@@ -128,8 +132,6 @@ void open_sockets (void)
 
 #ifdef __linux__
 
-#define SYSCLASSNET "/sys/class/net/"
-
 /* Returns non-zero if this interface has an enabled kill switch, otherwise
  * zero.
  */
@@ -186,8 +188,6 @@ int check_kill_switch(const char *iface)
         close(fd);
     return ret;
 }
-
-#undef SYSCLASSNET
 
 #else /* !__linux__ */
 int check_kill_switch(const char *iface)
@@ -471,6 +471,102 @@ FILE *file_open(char *path, const char *opentype)
     }
 }
 
+const char *find_bootif_iface(int num_interfaces, char **ifs)
+{
+#ifdef __linux__
+#define PROC_CMDLINE "/proc/cmdline"
+#define ADDRESS_LEN 17 /* aa:bb:cc:dd:ee:ff */
+
+    int i;
+    FILE *cmdline_file;
+    char *cmdline = NULL;
+    size_t dummy;
+    const char *s;
+    char *bootif = NULL;
+
+    /* Look for BOOTIF= entry in kernel command line. */
+
+    cmdline_file = file_open(PROC_CMDLINE, "r");
+    if (!cmdline_file) {
+        di_error("Failed to open " PROC_CMDLINE ": %s", strerror(errno));
+        return NULL;
+    }
+    if (getline(&cmdline, &dummy, cmdline_file) < 0) {
+        di_error("Failed to read line from " PROC_CMDLINE ": %s",
+                 strerror(errno));
+        fclose(cmdline_file);
+        return NULL;
+    }
+
+    s = cmdline;
+    while ((s = strstr(s, "BOOTIF=")) != NULL) {
+        if (s == cmdline || s[-1] == ' ') {
+            size_t bootif_len;
+            char *subst;
+
+            s += sizeof("BOOTIF=") - 1;
+            bootif_len = strcspn(s, " ");
+            if (bootif_len != ADDRESS_LEN + 3)
+                continue;
+            bootif = strndup(s + 3, bootif_len - 3); /* skip hardware type */
+            for (subst = bootif; *subst; subst++)
+                if (*subst == '-')
+                    *subst = ':';
+            break;
+        }
+        s++;
+    }
+
+    if (!bootif) {
+        di_info("Could not find valid BOOTIF= entry in " PROC_CMDLINE);
+        free(cmdline);
+        fclose(cmdline_file);
+        return NULL;
+    }
+
+    free(cmdline);
+    fclose(cmdline_file);
+
+    /* Look for an interface matching BOOTIF. */
+
+    for (i = 0; i < num_interfaces; i++) {
+        size_t len;
+        char *kobj;
+        FILE *kobj_file;
+        char address[ADDRESS_LEN + 1];
+
+        len = strlen(SYSCLASSNET) + strlen(ifs[i]) + strlen("/address") + 1;
+        kobj = malloc(len);
+        snprintf(kobj, len, SYSCLASSNET "%s/address", ifs[i]);
+        kobj_file = file_open(kobj, "r");
+        if (!kobj_file)
+            goto next;
+        if (!fgets(address, ADDRESS_LEN + 1, kobj_file))
+            goto next;
+        if (strncmp(address, bootif, ADDRESS_LEN) == 0) {
+            di_info("Found interface %s with BOOTIF address %s",
+                    ifs[i], bootif);
+            fclose(kobj_file);
+            free(kobj);
+            free(bootif);
+            return ifs[i];
+        }
+
+next:
+        fclose(kobj_file);
+        free(kobj);
+    }
+
+    di_error("Could not find any interface with address %s", bootif);
+    free(bootif);
+
+#undef ADDRESS_LEN
+#undef PROC_CMDLINE
+#endif /* __linux__ */
+
+    return NULL;
+}
+
 void netcfg_die(struct debconfclient *client)
 {
     if (netcfg_progress_displayed)
@@ -486,15 +582,17 @@ void netcfg_die(struct debconfclient *client)
  * @param client - client
  * @param interface      - set to the answer
  * @param numif - number of interfaces found.
+ * @param defif - default interface from link detection.
  */
 
 int netcfg_get_interface(struct debconfclient *client, char **interface,
-                         int *numif, char* defif)
+                         int *numif, const char *defif)
 {
     char *inter = NULL, **ifs;
     size_t len;
     int ret, i, asked;
     int num_interfaces = 0;
+    const char *bootif;
     char *ptr = NULL;
     char *ifdsc = NULL;
     char *old_selection = NULL;
@@ -511,6 +609,12 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
     *ptr = '\0';
 
     num_interfaces = get_all_ifs(1, &ifs);
+
+    /* If BOOTIF is set and matches an interface, override any provided
+     * default from link detection. */
+    bootif = find_bootif_iface(num_interfaces, ifs);
+    if (bootif)
+        defif = bootif;
 
     /* If no default was provided, use the first in the list of interfaces. */
     if (! defif && num_interfaces > 0) {
