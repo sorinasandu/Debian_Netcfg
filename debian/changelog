@@ -6,7 +6,12 @@ netcfg (1.64) UNRELEASED; urgency=low
   [ Colin Watson ]
   * Appease -Wunused-but-set-variable warning.
 
- -- Christian Perrier <bubulle@debian.org>  Sat, 18 Jun 2011 08:57:55 +0200
+  [ Wouter Verhelst ]
+  * Move 50release-dhcp-lease to 97release-dhcp-lease, so that the
+    network isn't brought down before the target is unmounted, which
+    breaks installing to a network target such as NBD.
+
+ -- Wouter Verhelst <wouter@debian.org>  Thu, 30 Jun 2011 17:25:58 +0200
 
 netcfg (1.63) unstable; urgency=low
 
