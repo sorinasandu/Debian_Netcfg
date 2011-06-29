@@ -177,7 +177,6 @@ automatic:
 static void unset_wep_key (char* iface)
 {
     wireless_config wconf;
-    int ret;
 
     iw_get_basic_config(wfd, iface, &wconf);
 
@@ -186,7 +185,7 @@ static void unset_wep_key (char* iface)
     wconf.key_flags = IW_ENCODE_DISABLED | IW_ENCODE_NOKEY;
     wconf.key_size = 0;
 
-    ret = iw_set_basic_config (wfd, iface, &wconf);
+    iw_set_basic_config (wfd, iface, &wconf);
 }
 
 int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
