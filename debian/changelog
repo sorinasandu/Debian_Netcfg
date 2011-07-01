@@ -5,6 +5,7 @@ netcfg (1.64) UNRELEASED; urgency=low
 
   [ Colin Watson ]
   * Appease -Wunused-but-set-variable warning.
+  * Fix fd leak in ethtool-lite.
 
   [ Wouter Verhelst ]
   * Move 50release-dhcp-lease to 97release-dhcp-lease, so that the
