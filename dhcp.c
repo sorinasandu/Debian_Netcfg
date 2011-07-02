@@ -95,8 +95,11 @@ static short no_default_route (void)
     if (!pfinet)
         return 1;
 
-    if (fgets (buf, 1024, pfinet) == NULL)
+    if (fgets (buf, 1024, pfinet) == NULL) {
+        pclose (pfinet);
         return 1;
+    }
+    pclose (pfinet);
 
     return !strstr (buf, "--gateway=");
 #else
