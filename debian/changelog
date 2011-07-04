@@ -7,6 +7,9 @@ netcfg (1.64) UNRELEASED; urgency=low
   * Appease -Wunused-but-set-variable warning.
   * Fix fd leak in ethtool-lite.
   * Fix file handle leak in no_default_route's Hurd case.
+  * Assign NETCFG_VERSION and NETCFG_BUILD_DATE using := rather than =; this
+    is more efficient, and also avoids inconsistent build times being
+    reported in the case where the build crossed a minute boundary.
 
   [ Wouter Verhelst ]
   * Move 50release-dhcp-lease to 97release-dhcp-lease, so that the
