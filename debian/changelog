@@ -14,6 +14,11 @@ netcfg (1.64) UNRELEASED; urgency=low
     netcfg/choose_interface is preseeded with an Ethernet hardware address
     (LP: #708908).  The latter case should work on kFreeBSD as well.
   * Also release lease at end of install when using isc-dhcp-client.
+  * Merge from Ubuntu:
+    - Call /usr/lib/NetworkManager/ifblacklist_migrate.sh from
+      finish-install if present, so that 'auto dhcp' interfaces are disabled
+      if network-manager is in use.  May be preseeded away with
+      netcfg/network-manager.  (Thanks, Matt Palmer; closes: #614884.)
 
   [ Wouter Verhelst ]
   * Move 50release-dhcp-lease to 97release-dhcp-lease, so that the
