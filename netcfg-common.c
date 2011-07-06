@@ -26,6 +26,7 @@
 #include <iwlib.h>
 #endif
 #include <net/if_arp.h>
+#include <net/ethernet.h>
 #include <net/if.h>
 #include <errno.h>
 #include <assert.h>
@@ -52,6 +53,7 @@
 #endif /* __linux__ */
 
 #ifdef __FreeBSD_kernel__
+#include <net/if_dl.h>
 #define LO_IF	"lo0"
 #else
 #define LO_IF	"lo"
