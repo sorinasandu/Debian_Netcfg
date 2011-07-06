@@ -11,8 +11,8 @@ netcfg (1.64) UNRELEASED; urgency=low
     is more efficient, and also avoids inconsistent build times being
     reported in the case where the build crossed a minute boundary.
   * Rearrange BOOTIF handling to allow us to handle the case where
-    netcfg/choose_interface is preseeded with an Ethernet hardware address.
-    The latter case should work on kFreeBSD as well.
+    netcfg/choose_interface is preseeded with an Ethernet hardware address
+    (LP: #708908).  The latter case should work on kFreeBSD as well.
 
   [ Wouter Verhelst ]
   * Move 50release-dhcp-lease to 97release-dhcp-lease, so that the
