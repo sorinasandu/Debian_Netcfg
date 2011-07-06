@@ -4,3 +4,7 @@ set -e
 
 pid=$(pidof udhcpc) || true
 [ -n "$pid" ] && kill -USR2 $pid
+
+if [ "$(pidof dhclient || true)" ]; then
+	dhclient -r || true
+fi
