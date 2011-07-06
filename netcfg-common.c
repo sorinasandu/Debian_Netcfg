@@ -566,6 +566,7 @@ static char *find_bootif_iface(const char *bootif,
                                const unsigned char *bootif_addr)
 {
 #ifdef __GNU__
+    /* TODO: Use device_get_status(NET_ADDRESS), see pfinet/ethernet.c */
     return NULL;
 #else
     struct ifaddrs *ifap, *ifa;
