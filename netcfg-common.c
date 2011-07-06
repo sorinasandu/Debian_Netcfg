@@ -565,6 +565,9 @@ static unsigned char *parse_bootif(const char *bootif, int quiet)
 static char *find_bootif_iface(const char *bootif,
                                const unsigned char *bootif_addr)
 {
+#ifdef __GNU__
+    return NULL;
+#else
     struct ifaddrs *ifap, *ifa;
     char *ret = NULL;
 
@@ -629,6 +632,7 @@ static char *find_bootif_iface(const char *bootif,
         di_error("Could not find any interface with address %s", bootif);
 
     return ret;
+#endif
 }
 
 void netcfg_die(struct debconfclient *client)
