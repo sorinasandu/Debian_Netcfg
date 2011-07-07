@@ -1053,6 +1053,8 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 
         fclose(fp);
     }
+
+    free(domain_nodot);
 }
 
 
