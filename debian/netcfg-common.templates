@@ -319,3 +319,11 @@ Type: text
 #  Item in the main menu to select this package
 # :sl1:
 _Description: Configure the network
+
+Template: netcfg/network-manager
+Type: boolean
+Default: true
+Description: for internal use; can be preseeded
+ Set to false to prevent /etc/network/interfaces being adjusted for use by
+ network-manager. If you do this, network-manager will probably not work
+ correctly.

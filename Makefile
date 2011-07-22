@@ -1,5 +1,5 @@
-NETCFG_VERSION = $(shell dpkg-parsechangelog | grep ^Version: |sed 's/Version: //')
-NETCFG_BUILD_DATE = $(shell date '+%Y%m%d-%H%M')
+NETCFG_VERSION := $(shell dpkg-parsechangelog | grep ^Version: |sed 's/Version: //')
+NETCFG_BUILD_DATE := $(shell date '+%Y%m%d-%H%M')
 
 CC		= gcc
 TARGETS		?= netcfg-static netcfg

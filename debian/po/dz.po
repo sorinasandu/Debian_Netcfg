@@ -13,10 +13,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dDz.po\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-02-12 17:22+0530\n"
-"Last-Translator: Jurmey Rabgay <jur_gay@yahoo.com>\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2010-11-16 23:22-0500\n"
+"Last-Translator: Jurmey Rabgay <jrabgay@dit.gov.bt>\n"
 "Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
+"Language: dz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -287,10 +288,12 @@ msgstr "མིང་ \"${hostname}\" འདི་ནུས་མེད་སོ�
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
 "ཧོསིཊི་གི་མིང་ནུས་མེད་འདི་ལུ་ཨང་གྲངས་ ༠-༩ ཚུན་རྐྱངམ་ཅིག་འོང་ནི་མས་ ཡིག་ཆུང་ཡི་གེ་ཚུ་ ཨེ-ཛེཊ་ཚུན་དང་"
 "ཕབ་རྟགས་མིང་རྟགས་བཀོད་ ཡིག་འབྲུ་ཚུ་ ༢-༦༣ ཚུན་ངེས་པར་དུ་རིངམ་འོང་དགོཔ་དང་ དེ་གིས་ཕབ་རྟགས་མིང་"
@@ -424,106 +427,113 @@ msgstr "རླུང་འཕྲིན་འཛུལ་སྤྱོད་འབ
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+#, fuzzy
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "སྲ་ཆས་འདི་སྐྱོན་འཛིན་འབད་ནི་  བསྒུག་གནང་།"
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<none>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "རླུང་འཕྲིན་གྱི་ཨི་ཐར་ནེཊི་(802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "རླུང་འཕྲིན།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "ཨི་ཐར་ནེཊི་"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "ངོ་རྟགས་ཨ་ལོང་།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "ཡུ་ཨེས་བི་ནེཊི།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "ཨང་རིམ་-གྲལ་ཐིག་ ཨའི་པི།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "མཉམ་སྤྱོད་-འདྲེན་ལམ་ ཨའི་པི།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "ས་ཚིགས་ལས་ས་ཚིགས་ གནད་སྤེལ་ལམ་ལུགས།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "ཨའི་པི་ཝི་༦-ནང་ཨའི་པི་ཝི་༤"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ཨའི་ཨེས་ཌི་ཨེན་ས་ཚིགས་ ལས་ ས་ཚིགས་གནད་སྤེལ་ལམ་ལུགས།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "རྒྱུ་ལམ་-ལས་-རྒྱུ་ལམ།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "ངོ་མ་རྒྱུ་ལམ་-ལས-་རྒྱུ་ལམ།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "ཕན་ཚུན་ལག་ལེན་པའི་རྒྱུ་འབྲེལ་འགྲུལ་འཁོར།"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "མ་ཤེསཔ་ངོས་འདྲ་བ།"
 
@@ -531,7 +541,7 @@ msgstr "མ་ཤེསཔ་ངོས་འདྲ་བ།"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "གསོག་འཇོག་ཡོངས་འབྲེལ་སྒྲག་སྟངས་ཚུ..."
 
@@ -539,7 +549,7 @@ msgstr "གསོག་འཇོག་ཡོངས་འབྲེལ་སྒྲ
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "ཡོངས་འབྲེལ་རིམ་སྒྲིག་འབད།"
 

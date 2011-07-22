@@ -11,18 +11,21 @@
 # Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006),
 # Ming Hua (2005,2006,2007,2008), Xiyue Deng (2008), Kov Chai (2008),
 # Kenlen Lai (2008), WCM (2008), Ren Xiaolei (2008).
+# YunQiang Su <wzssyqa@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-12-25 18:46+0800\n"
-"Last-Translator: 苏运强 <wzssyqa@gmail.com>\n"
-"Language-Team: Simplified Chinese <debian-chinese-gb@lists.debian.org>\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2011-04-15 11:58+0800\n"
+"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Type: boolean
 #. Description
@@ -279,12 +282,13 @@ msgstr "名称“${hostname}”无效。"
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
-"正确的主机名应当只包含数字0-9、小写字母a-z和减号。它的长度必须在 2 到 63 个字"
-"符之间，且不能以减号开始或结束。"
+"正确的主机名应当只包含数字 0-9、大小写字母(A-Z 和 a-z)和减号，最长不能超过 "
+"${maxhostnamelen}，且不能以减号开始或结束。"
 
 #. Type: error
 #. Description
@@ -410,106 +414,112 @@ msgstr "正在搜索无线网络接入点 (AP) ..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "正在 ${interface} 上探测连接，请稍候..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<无>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "无线局域网 (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "无线网络"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "以太网"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "令牌环"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "USB 网络"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "串行 IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "并口 IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "点对点协议"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN 点对点协议"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "未知接口"
 
@@ -517,7 +527,7 @@ msgstr "未知接口"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "正在存储网络设置..."
 
@@ -525,7 +535,7 @@ msgstr "正在存储网络设置..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "配置网络"
 

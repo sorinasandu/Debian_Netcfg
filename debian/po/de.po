@@ -11,7 +11,7 @@
 # Copyright (C) 2006, Matthias Julius
 # Copyright (C) 2007-2009 Helge Kreutzmann
 # This file is distributed under the same license as debian-installer.
-# Holger Wansing <linux@wansing-online.de>, 2008, 2009, 2010.
+# Holger Wansing <linux@wansing-online.de>, 2008, 2009, 2010, 2011.
 # Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007, 2008.
 # Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
 # Alwin Meschede <ameschede@gmx.de>, 2003, 2004.
@@ -24,10 +24,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2010-10-02 22:33+0200\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2011-05-03 20:44+0100\n"
 "Last-Translator: Holger Wansing <linux@wansing-online.de>\n"
 "Language-Team: Debian German <debian-l10n-german@lists.debian.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -206,8 +207,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein »s:« (ohne "
-"die Anführungszeichen) voran."
+"Wenn Ihr WEP-Schlüssel eine Passphrase ist, stellen Sie dieser ein "
+"»s:« (ohne die Anführungszeichen) voran."
 
 #. Type: string
 #. Description
@@ -306,13 +307,15 @@ msgstr "Der Rechnername »${hostname}« ist ungültig."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
-"Ein gültiger Rechnername darf nur Kleinbuchstaben von a - z, 0-9 sowie "
-"Minuszeichen enthalten. Er darf nur 2 bis 63 Zeichen lang sein und nicht mit "
-"einem Minus beginnen oder enden."
+"Ein gültiger Rechnername darf nur Groß- oder Kleinbuchstaben (A - Z, a - z), "
+"Zahlen (0 - 9) sowie Minuszeichen enthalten. Er darf maximal "
+"${maxhostnamelen} Zeichen lang sein und nicht mit einem Minus beginnen oder "
+"enden."
 
 #. Type: error
 #. Description
@@ -415,7 +418,7 @@ msgstr "Ad-hoc-Netzwerk (Peer-to-Peer)"
 #. Description
 #: ../netcfg-common.templates:16002
 msgid "Type of wireless network:"
-msgstr "Typ des drahtlosen Netzwerks:"
+msgstr "Typ des drahtlosen Netzwerks (WLAN):"
 
 #. Type: select
 #. Description
@@ -425,10 +428,10 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Drahtlose Netzwerke sind entweder vom Typ »managed« oder »ad-hoc«. Wenn Sie "
-"einen echten Access Point benutzen, ist Ihr Netzwerk »managed«. Wenn ein "
-"anderer Computer Ihren Access Point bildet, ist Ihr Netzwerk wahrscheinlich "
-"»ad-hoc«."
+"Drahtlose Netzwerke (WLAN) sind entweder vom Typ »managed« oder »ad-hoc«. "
+"Wenn Sie in irgendeiner Form einen echten Access Point benutzen (z.B. einen "
+"WLAN-Router), ist Ihr Netzwerk »managed«. Wenn bei Ihnen ein anderer "
+"Computer als Access Point fungiert, ist Ihr Netzwerk wahrscheinlich »ad-hoc«."
 
 #. Type: text
 #. Description
@@ -446,106 +449,112 @@ msgstr "Suchen nach drahtlosen Access Points ..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Erkennen der Verbindung an ${interface}; bitte warten ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<nichts>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "Drahtloses Ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "drahtlos"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "USB-Netzwerk"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "IP über serielle Schnittstelle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "IP über parallele Schnittstelle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "Punkt-zu-Punkt-Protokoll"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN Punkt-zu-Punkt-Protokoll"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "Unbekannte Schnittstelle"
 
@@ -553,7 +562,7 @@ msgstr "Unbekannte Schnittstelle"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "Speichern der Netzwerkeinstellungen ..."
 
@@ -561,7 +570,7 @@ msgstr "Speichern der Netzwerkeinstellungen ..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "Netzwerk einrichten"
 

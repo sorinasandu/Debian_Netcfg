@@ -3,7 +3,7 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-# translation of gl.po to galician
+# translation of gl.po to Galician
 # Galician messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
@@ -16,10 +16,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2010-06-23 01:11+0200\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2010-10-21 00:51+0200\n"
 "Last-Translator: Jorge Barreiro <yortx.barry@gmail.com>\n"
-"Language-Team: galician <proxecto@trasno.net>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -194,8 +195,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se a chave WEP ten forma de contrasinal, escríbaa poñéndolle diante «s:» (sen "
-"as comiñas)."
+"Se a chave WEP ten forma de contrasinal, escríbaa poñéndolle diante "
+"«s:» (sen as comiñas)."
 
 #. Type: string
 #. Description
@@ -291,10 +292,12 @@ msgstr "O nome «${hostname}» non é válido."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
 "Un nome de máquina válido só pode conter os números entre 0 e 9, as letras "
 "minúsculas a-z e o guión (-). Debe ter entre 2 e 63 caracteres e non pode "
@@ -428,106 +431,113 @@ msgstr "Estanse a procurar puntos de acceso sen fíos..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+#, fuzzy
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Estase a detectar o hardware, agarde..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<ningunha>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet sen fíos (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "sen fíos"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "Rede USB"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "IP polo porto serie (SLIP)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "IP polo porto paralelo (PLIP)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo punto a punto (PPP)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo punto a punto RDSI"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "Canle a canle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Canle a canle real"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "Vehículo de comunicación entre usuarios"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "Interface descoñecida"
 
@@ -535,7 +545,7 @@ msgstr "Interface descoñecida"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "Estase a gardar a configuración da rede..."
 
@@ -543,7 +553,7 @@ msgstr "Estase a gardar a configuración da rede..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "Configurar a rede"
 

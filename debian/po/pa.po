@@ -13,17 +13,19 @@
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Alam <apreet.alam@gmail.com>, 2006.
 # A S Alam <apreet.alam@gmail.com>, 2006, 2007.
-# A S Alam <aalam@users.sf.net>, 2007.
+# A S Alam <aalam@users.sf.net>, 2007, 2010.
 # Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
 # Amanpreet Singh Brar <aalam@users.sf.net>, 2008.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2008-05-02 22:01+0530\n"
-"Last-Translator: Amanpreet Singh Alam <aalam@users.sf.net>\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2010-09-01 06:58+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -284,10 +286,12 @@ msgstr "ਨਾਂ \"${hostname}\" ਗਲਤ ਹੈ।"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
 "ਠੀਕ ਹੋਸਟ ਨਾਂ ਵਿੱਚ ਸਿਰਫ 0-9 ਅੰਕ, ਛੋਟੇ ਅੱਖਰ a-z, ਅਤੇ ਘਟਾਓ ਚਿੰਨ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ। ਇਹ 2 ਤੋਂ 63 "
 "ਅੱਖਰ ਲੰਬਾ ਹੋਣਾ ਜਰੂਰੀ ਹੈ, ਅਤੇ ਘਟਾਓ ਦੇ ਚਿੰਨ ਨਾਲ ਸ਼ੁਰੂ ਜਾਂ ਖਤਮ ਨਹੀਂ ਹੋ ਸਕਦਾ।"
@@ -418,106 +422,113 @@ msgstr "ਬੇਤਾਰ ਅਸੈੱਸ ਪੁਆਇੰਟਾਂ ਲਈ ਖੋ�
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+#, fuzzy
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "ਜੰਤਰ ਖੋਜੇ ਜਾ ਰਹੇ ਹਨ, ਉਡੀਕੋ ਜੀ..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<ਕੋਈ ਨਹੀਂ>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "ਬੇਤਾਰ ਈਥਰਨੈੱਟ (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "ਬੇਤਾਰ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "ਈਥਰਨੈੱਟ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "ਟੋਕਨ ਰਿੰਗ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "USB ਨੈੱਟ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "ਸੀਰੀਅਲ-ਲਾਈਨ IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "ਪੈਰਲਲ-ਪੋਰਟ IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "ਪੁਆਂਇਟ-ਤੋਂ-ਪੁਆਂਇਟ ਪਰੋਟੋਕਾਲ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN ਪੁਆਂਇਟ-ਤੋਂ-ਪੁਆਂਇਟ ਪਰੋਟੋਕਾਲ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "ਚੈਨਲ-ਤੋਂ-ਚੈਨਲ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "ਰੀਅਲ ਚੈਨਲ-ਤੋਂ-ਚੈਨਲ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "ਇੰਟਰ-ਯੂਜ਼ਰ ਕੰਮਿਊਨਿਕੇਸ਼ਨ ਵਹੀਕਲ"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "ਅਣਜਾਣ ਇੰਟਰਫੇਸ"
 
@@ -525,7 +536,7 @@ msgstr "ਅਣਜਾਣ ਇੰਟਰਫੇਸ"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "ਨੈੱਟਵਰਕ ਸੈਟਿੰਗ ਸਟੋਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ..."
 
@@ -533,7 +544,7 @@ msgstr "ਨੈੱਟਵਰਕ ਸੈਟਿੰਗ ਸਟੋਰ ਕੀਤੀ ਜ�
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "ਨੈੱਟਵਰਕ ਸੰਰਚਨਾ ਕਰੋ"
 

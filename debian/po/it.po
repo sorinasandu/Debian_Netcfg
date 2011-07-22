@@ -4,7 +4,7 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Italian messages for debian-installer.
-# Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009 Software in the Public Interest, Inc.
+# Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 # The translation team (for all four levels):
 # Cristian Rigamonti <cri@linux.it>
@@ -20,15 +20,16 @@
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
 #
-# Milo Casagrande <milo@ubuntu.com>, 2008, 2009.
+# Milo Casagrande <milo@ubuntu.com>, 2008, 2009, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-12-12 14:01+0100\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2011-05-15 15:18+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -254,8 +255,8 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"L'ESSID «${essid}» non è valido. Gli ESSID possono essere composti al massimo "
-"da 32 caratteri, ma di qualsiasi tipo."
+"L'ESSID «${essid}» non è valido. Gli ESSID possono essere composti al "
+"massimo da 32 caratteri, ma di qualsiasi tipo."
 
 #. Type: string
 #. Description
@@ -304,13 +305,15 @@ msgstr "Il nome «${hostname}» non è valido."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
-"Un nome valido può contenere solo numeri da 0 a 9, lettere minuscole da a a "
-"z e il segno meno. La sua lunghezza deve essere compresa tra 2 e 63 "
-"caratteri, ma non può iniziare o finire con il segno meno."
+"Un nome host valido può contenere solo numeri da 0 a 9, lettere maiuscole e "
+"minuscole (A-Z e a-z) e il segno meno. La sua lunghezza deve essere al "
+"massimo di ${maxhostnamelen} caratteri e non può iniziare o finire con il "
+"segno meno."
 
 #. Type: error
 #. Description
@@ -423,8 +426,8 @@ msgid ""
 "'access point', then your network may be Ad-hoc."
 msgstr ""
 "Le reti senza fili sono «managed» oppure «ad-hoc». Se si sta usando un vero "
-"access point di qualsiasi tipo allora la rete è «managed», se invece l'access "
-"point è costituito da un altro computer, allora la rete è «ad-hoc»."
+"access point di qualsiasi tipo allora la rete è «managed», se invece "
+"l'access point è costituito da un altro computer, allora la rete è «ad-hoc»."
 
 #. Type: text
 #. Description
@@ -442,106 +445,112 @@ msgstr "Ricerca degli access point senza fili..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Rilevamento collegamento su ${interface}, attendere..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<nessuno>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "Ethernet senza fili (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "senza fili"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "USB net"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "Serial-line IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "Parallel-port IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocollo Point-to-Point ISDN"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "Interfaccia sconosciuta"
 
@@ -549,7 +558,7 @@ msgstr "Interfaccia sconosciuta"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "Memorizzazione delle impostazioni di rete..."
 
@@ -557,7 +566,7 @@ msgstr "Memorizzazione delle impostazioni di rete..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "Configurare la rete"
 
@@ -746,8 +755,8 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
-"Nel dubbio, è meglio non continuare senza una «route» predefinita: contattare "
-"l'amministratore della rete per chiarire il problema."
+"Nel dubbio, è meglio non continuare senza una «route» predefinita: "
+"contattare l'amministratore della rete per chiarire il problema."
 
 #. Type: text
 #. Description

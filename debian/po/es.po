@@ -16,7 +16,8 @@
 # Steve Langasek <vorlon@debian.org>, 2004
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005
 # Rubén Porras Campo <nahoo@inicia.es>, 2005
-# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2007
+# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2010
+# Omar Campagne <ocampagne@gmail.com>, 2010
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -48,10 +49,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2009-07-24 22:47+0000\n"
-"PO-Revision-Date: 2009-02-09 22:07+0100\n"
-"Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
+"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"PO-Revision-Date: 2011-02-04 03:13+0100\n"
+"Last-Translator: Javier Fernández-Sanguino <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -220,9 +222,9 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"Si la clave WEP está en el formato «nnnn-nnnn-nn», «nn:nn:nn:nn:nn:nn:nn:nn» o "
-"«nnnnnnnn», donde n es un número, simplemente introduzca el valor tal cual en "
-"este campo."
+"Si la clave WEP está en el formato «nnnn-nnnn-nn», «nn:nn:nn:nn:nn:nn:nn:nn» "
+"o «nnnnnnnn», donde n es un número, simplemente introduzca el valor tal cual "
+"en este campo."
 
 #. Type: string
 #. Description
@@ -261,9 +263,9 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"La clave WEP «${wepkey}» no es válida. Por favor, lea las instrucciones de la "
-"próxima pantalla cuidadosamente para saber cómo introducir correctamente la "
-"clave WEP e intente de nuevo."
+"La clave WEP «${wepkey}» no es válida. Por favor, lea las instrucciones de "
+"la próxima pantalla cuidadosamente para saber cómo introducir correctamente "
+"la clave WEP e intente de nuevo."
 
 #. Type: error
 #. Description
@@ -330,13 +332,15 @@ msgstr "El nombre de máquina «${hostname}» no es válido."
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid ""
-"A valid hostname may contain only the numbers 0-9, the lowercase letters a-"
-"z, and the minus sign. It must be between 2 and 63 characters long, and may "
-"not begin or end with a minus sign."
+"A valid hostname may contain only the numbers 0-9, upper and lowercase "
+"letters (A-Z and a-z), and the minus sign. It must be at most "
+"${maxhostnamelen} characters long, and may not begin or end with a minus "
+"sign."
 msgstr ""
 "Un nombre de máquina válido sólo puede contener números del 0 al 9, letras "
-"en minúsculas de la a la z y el signo menos («-»). Debe tener entre 2 y 63 "
-"caracteres, y no puede empezar o terminar con el signo menos."
+"en mayúsculas o minúsculas (de la «A» a la «Z» y de la «a» la «z») y el "
+"signo menos («-»). Debe tener como mucho ${maxhostnamelen} caracteres, y no "
+"puede empezar o terminar con el signo menos."
 
 #. Type: error
 #. Description
@@ -447,9 +451,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Las redes inalámbricas (o «wireless») son o bien gestionadas o bien «ad-hoc». "
-"La red es gestionada si utiliza algún punto de acceso de cualquier tipo. Si "
-"el punto de acceso es otro ordenador, entonces la red es «ad-hoc»."
+"Las redes inalámbricas (o «wireless») son o bien gestionadas o bien «ad-"
+"hoc». La red es gestionada si utiliza algún punto de acceso de cualquier "
+"tipo. Si el punto de acceso es otro ordenador, entonces la red es «ad-hoc»."
 
 #. Type: text
 #. Description
@@ -467,106 +471,112 @@ msgstr "Buscando puntos de acceso inalámbricos ..."
 
 #. Type: text
 #. Description
-#. :sl2:
 #: ../netcfg-common.templates:20001
+msgid "Detecting link on ${interface}; please wait..."
+msgstr "Detectando enlace en ${interface}. Espere, por favor..."
+
+#. Type: text
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:21001
 msgid "<none>"
 msgstr "<ninguna>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:22001
 msgid "Wireless ethernet (802.11x)"
 msgstr "Red inalámbrica (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:23001
 msgid "wireless"
 msgstr "inalámbrica"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:24001
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:25001
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:26001
 msgid "USB net"
 msgstr "red USB"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:27001
+#: ../netcfg-common.templates:28001
 msgid "Serial-line IP"
 msgstr "IP en línea serie"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:29001
 msgid "Parallel-port IP"
 msgstr "IP en puerto paralelo"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:30001
 msgid "Point-to-Point Protocol"
 msgstr "Protocolo punto a punto"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:31001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-en-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:32001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "Protocolo punto a punto RDSI"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:33001
 msgid "Channel-to-channel"
 msgstr "Canal-a-canal"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:34001
 msgid "Real channel-to-channel"
 msgstr "Canal-a-canal real"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:35001
+#: ../netcfg-common.templates:36001
 msgid "Inter-user communication vehicle"
 msgstr "Comunicación vehículo entre-usuarios"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:37001
 msgid "Unknown interface"
 msgstr "Interfaz desconocida"
 
@@ -574,7 +584,7 @@ msgstr "Interfaz desconocida"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
 msgstr "Guardando la configuración de la red ..."
 
@@ -582,7 +592,7 @@ msgstr "Guardando la configuración de la red ..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:39001
 msgid "Configure the network"
 msgstr "Configurar la red"
 

@@ -6,7 +6,7 @@
 #define HOSTNAME_FILE   "/etc/hostname"
 #define NETWORKS_FILE   "/etc/networks"
 #define RESOLV_FILE     "/etc/resolv.conf"
-#define DHCLIENT_CONF	"/etc/dhclient.conf"
+#define DHCLIENT_CONF   "/etc/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
 #define NTP_SERVER_FILE "/tmp/dhcp-ntp-servers"
 #define WPASUPP_CTRL    "/var/run/wpa_supplicant"
@@ -51,6 +51,11 @@
  * preseed option.
  */
 #define NETCFG_LINK_WAIT_TIME 3
+
+/* The number of times to attempt to verify gateway reachability.
+ * Each try invokes arping with a one second timeout.
+ */
+#define NETCFG_GATEWAY_REACHABILITY_TRIES 50
 
 #ifndef MAXHOSTNAMELEN
 #define MAXHOSTNAMELEN 63
@@ -98,7 +103,7 @@ extern FILE *file_open (char *path, const char *opentype);
 
 extern void netcfg_die (struct debconfclient *client);
 
-extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces, char* defif);
+extern int netcfg_get_interface(struct debconfclient *client, char **interface, int *num_interfaces, const char *defif);
 
 extern short valid_hostname (const char *hname);
 extern short valid_domain (const char *dname);

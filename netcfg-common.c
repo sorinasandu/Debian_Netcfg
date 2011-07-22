@@ -26,6 +26,7 @@
 #include <iwlib.h>
 #endif
 #include <net/if_arp.h>
+#include <net/ethernet.h>
 #include <net/if.h>
 #include <errno.h>
 #include <assert.h>
@@ -46,7 +47,13 @@
 
 #include <ifaddrs.h>
 
+#ifdef __linux__
+#include <netpacket/packet.h>
+#define SYSCLASSNET "/sys/class/net/"
+#endif /* __linux__ */
+
 #ifdef __FreeBSD_kernel__
+#include <net/if_dl.h>
 #define LO_IF	"lo0"
 #else
 #define LO_IF	"lo"
@@ -128,8 +135,6 @@ void open_sockets (void)
 
 #ifdef __linux__
 
-#define SYSCLASSNET "/sys/class/net/"
-
 /* Returns non-zero if this interface has an enabled kill switch, otherwise
  * zero.
  */
@@ -186,8 +191,6 @@ int check_kill_switch(const char *iface)
         close(fd);
     return ret;
 }
-
-#undef SYSCLASSNET
 
 #else /* !__linux__ */
 int check_kill_switch(const char *iface)
@@ -471,6 +474,168 @@ FILE *file_open(char *path, const char *opentype)
     }
 }
 
+static char *get_bootif(void)
+{
+#ifdef __linux__
+#define PROC_CMDLINE "/proc/cmdline"
+
+    FILE *cmdline_file;
+    char *cmdline = NULL;
+    size_t dummy;
+    const char *s;
+    char *bootif = NULL;
+
+    /* Look for BOOTIF= entry in kernel command line. */
+
+    cmdline_file = file_open(PROC_CMDLINE, "r");
+    if (!cmdline_file) {
+        di_error("Failed to open " PROC_CMDLINE ": %s", strerror(errno));
+        return NULL;
+    }
+    if (getline(&cmdline, &dummy, cmdline_file) < 0) {
+        di_error("Failed to read line from " PROC_CMDLINE ": %s",
+                 strerror(errno));
+        fclose(cmdline_file);
+        return NULL;
+    }
+
+    s = cmdline;
+    while ((s = strstr(s, "BOOTIF=")) != NULL) {
+        if (s == cmdline || s[-1] == ' ') {
+            size_t bootif_len;
+            char *subst;
+
+            s += sizeof("BOOTIF=") - 1;
+            bootif_len = strcspn(s, " ");
+            if (bootif_len != (ETH_ALEN * 3 - 1) + 3)
+                continue;
+            bootif = strndup(s + 3, bootif_len - 3); /* skip hardware type */
+            for (subst = bootif; *subst; subst++)
+                if (*subst == '-')
+                    *subst = ':';
+            break;
+        }
+        s++;
+    }
+
+    free(cmdline);
+    fclose(cmdline_file);
+
+    if (!bootif)
+        di_info("Could not find valid BOOTIF= entry in " PROC_CMDLINE);
+
+    return bootif;
+
+#undef PROC_CMDLINE
+#else /* !__linux__ */
+    return NULL;
+#endif /* __linux__ */
+}
+
+static unsigned char *parse_bootif(const char *bootif, int quiet)
+{
+    int i;
+    const char *s;
+    unsigned char *bootif_addr = malloc(ETH_ALEN);
+
+    /* Parse supplied address. */
+    for (i = 0, s = bootif; i < ETH_ALEN && s; i++) {
+        unsigned long bootif_byte;
+
+        errno = 0;
+        bootif_byte = strtol(s, (char **) &s, 16);
+        if (errno || bootif_byte >= 256) {
+            if (!quiet)
+                di_error("couldn't parse link-layer address '%s'", bootif);
+            free(bootif_addr);
+            return NULL;
+        }
+        bootif_addr[i] = (unsigned char) bootif_byte;
+        if (i < ETH_ALEN - 1 && *s++ != ':') {
+            if (!quiet)
+                di_error("couldn't parse link-layer address '%s'", bootif);
+            free(bootif_addr);
+            return NULL;
+        }
+    }
+
+    return bootif_addr;
+}
+
+static char *find_bootif_iface(const char *bootif,
+                               const unsigned char *bootif_addr)
+{
+#ifdef __GNU__
+    /* TODO: Use device_get_status(NET_ADDRESS), see pfinet/ethernet.c */
+    return NULL;
+#else
+    struct ifaddrs *ifap, *ifa;
+    char *ret = NULL;
+
+    /* TODO: this won't work on the Hurd as getifaddrs doesn't return
+     * unconfigured interfaces.  See comment to get_all_ifs.
+     */
+    if (getifaddrs(&ifap) < 0) {
+        di_error("getifaddrs failed: %s", strerror(errno));
+        return NULL;
+    }
+
+    for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
+#if defined(__FreeBSD_kernel__)
+        struct sockaddr_dl *sdl;
+#else
+        struct sockaddr_ll *sll;
+#endif
+
+        if (ifa->ifa_flags & IFF_LOOPBACK)
+            continue;
+#if defined(__linux__)
+        if (!strncmp(ifa->ifa_name, "sit", 3))  /* ignore tunnel devices */
+            continue;
+#endif
+#if defined(WIRELESS)
+        if (is_raw_80211(ifa->ifa_name))
+            continue;
+#endif
+#if defined(__FreeBSD_kernel__)
+        if (ifa->ifa_addr->sa_family != AF_LINK)
+            continue;
+        sdl = (struct sockaddr_dl *) ifa->ifa_addr;
+        if (!sdl)                               /* no link-layer address */
+            continue;
+        if (sdl->sdl_alen != ETH_ALEN)          /* not Ethernet */
+            continue;
+        if (memcmp(bootif_addr, LLADDR(sdl), ETH_ALEN) != 0)
+            continue;
+#else
+        if (ifa->ifa_addr->sa_family != AF_PACKET)
+            continue;
+        sll = (struct sockaddr_ll *) ifa->ifa_addr;
+        if (!sll)                               /* no link-layer address */
+            continue;
+        if ((sll->sll_hatype != ARPHRD_ETHER &&
+             sll->sll_hatype != ARPHRD_IEEE802) ||
+            sll->sll_halen != ETH_ALEN)         /* not Ethernet */
+            continue;
+        if (memcmp(bootif_addr, sll->sll_addr, ETH_ALEN) != 0)
+            continue;
+#endif
+
+        di_info("Found interface %s with link-layer address %s",
+                ifa->ifa_name, bootif);
+        ret = strdup(ifa->ifa_name);
+        break;
+    }
+
+    freeifaddrs(ifap);
+
+    if (!ret)
+        di_error("Could not find any interface with address %s", bootif);
+
+    return ret;
+#endif
+}
+
 void netcfg_die(struct debconfclient *client)
 {
     if (netcfg_progress_displayed)
@@ -486,15 +651,18 @@ void netcfg_die(struct debconfclient *client)
  * @param client - client
  * @param interface      - set to the answer
  * @param numif - number of interfaces found.
+ * @param defif - default interface from link detection.
  */
 
 int netcfg_get_interface(struct debconfclient *client, char **interface,
-                         int *numif, char* defif)
+                         int *numif, const char *defif)
 {
     char *inter = NULL, **ifs;
     size_t len;
     int ret, i, asked;
     int num_interfaces = 0;
+    unsigned char *bootif_addr;
+    char *bootif_iface = NULL;
     char *ptr = NULL;
     char *ifdsc = NULL;
     char *old_selection = NULL;
@@ -512,14 +680,47 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
 
     num_interfaces = get_all_ifs(1, &ifs);
 
+    /* Remember old interface selection, in case it's preseeded. */
+    debconf_get(client, "netcfg/choose_interface");
+    old_selection = strdup(client->value);
+
+    /* If netcfg/choose_interface is preseeded to a link-layer address in
+     * the form aa:bb:cc:dd:ee:ff, or if BOOTIF is set and matches an
+     * interface, override any provided default from link detection. */
+    bootif_addr = parse_bootif(old_selection, 1);
+    if (bootif_addr) {
+        bootif_iface = find_bootif_iface(old_selection, bootif_addr);
+        if (bootif_iface) {
+            free(old_selection);
+            old_selection = strdup(bootif_iface);
+        }
+        free(bootif_addr);
+    } else {
+        char *bootif = get_bootif();
+        if (bootif) {
+            bootif_addr = parse_bootif(bootif, 0);
+            if (bootif_addr) {
+                bootif_iface = find_bootif_iface(bootif, bootif_addr);
+                free(bootif_addr);
+            }
+            free(bootif);
+        }
+    }
+    if (bootif_iface) {
+        /* Did we actually get back an interface we know about? */
+        for (i = 0; i < num_interfaces; i++) {
+            if (strcmp(ifs[i], bootif_iface) == 0) {
+                defif = ifs[i];
+                break;
+            }
+        }
+        free (bootif_iface);
+    }
+
     /* If no default was provided, use the first in the list of interfaces. */
     if (! defif && num_interfaces > 0) {
         defif=ifs[0];
     }
-
-    /* Remember old interface selection, in case it's preseeded. */
-    debconf_get(client, "netcfg/choose_interface");
-    old_selection = strdup(client->value);
 
     for (i = 0; i < num_interfaces; i++) {
         size_t newchars;
@@ -1035,23 +1236,40 @@ void netcfg_update_entropy (void)
  */
 int netcfg_detect_link(struct debconfclient *client, const char *if_name)
 {
-    int wait_count, rv = 0;
+    char arping[256];
+    char s_gateway[INET_ADDRSTRLEN];
+    int count, rv = 0;
+    int link_waits = NETCFG_LINK_WAIT_TIME * 4;
+    int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
+
+    if (gateway.s_addr) {
+        inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
+        sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);
+    }
     
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
-    debconf_progress_start(client, 0, NETCFG_LINK_WAIT_TIME * 4, "netcfg/link_detect_progress");
-    for (wait_count = 0; wait_count < NETCFG_LINK_WAIT_TIME * 4; wait_count++) {
+    debconf_progress_start(client, 0, 100, "netcfg/link_detect_progress");
+    for (count = 0; count < link_waits; count++) {
         usleep(250000);
-        if (debconf_progress_step(client, 1) == 30) {
+        if (debconf_progress_set(client, 50 * count / link_waits) == 30) {
             /* User cancelled on us... bugger */
             rv = 0;
             break;
         }
-        if (ethtool_lite (if_name) == 1) /* ethtool-lite's CONNECTED */ {
-            debconf_progress_set(client, NETCFG_LINK_WAIT_TIME * 4);
+        if (ethtool_lite(if_name) == 1) /* ethtool-lite's CONNECTED */ {
+            if (gateway.s_addr && !is_wireless_iface(if_name)) {
+                for (count = 0; count < gw_tries; count++) {
+                    if (di_exec_shell_log(arping) == 0)
+                        break;
+                    if (debconf_progress_set(client, 50 + 50 * count / gw_tries) == 30)
+                        break;
+                }
+            }
             rv = 1;
             break;
         }
+        debconf_progress_set(client, 100);
     }
 
     debconf_progress_stop(client);

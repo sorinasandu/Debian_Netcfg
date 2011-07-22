@@ -92,6 +92,21 @@ static short no_default_route (void)
     status = system("exec /lib/freebsd/route show default >/dev/null 2>&1");
 
     return WEXITSTATUS(status) != 0;
+#elif defined(__GNU__)
+    FILE* pfinet = NULL;
+    char buf[1024] = { 0 };
+
+    pfinet = popen("fsysopts /servers/socket/2", "r");
+    if (!pfinet)
+        return 1;
+
+    if (fgets (buf, 1024, pfinet) == NULL) {
+        pclose (pfinet);
+        return 1;
+    }
+    pclose (pfinet);
+
+    return !strstr (buf, "--gateway=");
 #else
     FILE* iproute = NULL;
     char buf[256] = { 0 };
@@ -201,10 +216,11 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                     fprintf(dc, "send host-name \"%s\";\n", dhostname);
                 }
                 fprintf(dc, "timeout %d;\n", dhcp_seconds);
+                fprintf(dc, "initial-interval 1;\n");
                 fclose(dc);
             }
 
-            execlp("dhclient", "dhclient", "-1", interface, NULL);
+            execlp("dhclient", "dhclient", "-1", interface, "-cf", DHCLIENT_CONF, NULL);
             break;
 
         case UDHCPC:
