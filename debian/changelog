@@ -1,11 +1,14 @@
-netcfg (1.66~wpa1) UNRELEASED; urgency=low
+netcfg (1.66) UNRELEASED; urgency=low
 
-  * A separate branch build, for WPA support.
-  * Include WPA support.  Closes: #327309.
+  [ Colin Watson ]
   * Strip trailing dots from domain when writing to /etc/hosts
     (LP: #255117).
 
- -- Colin Watson <cjwatson@debian.org>  Sun, 24 Jul 2011 13:51:13 +0100
+  [ Gaudenz Steinlin ]
+  * Include WPA support.  Thanks to Glen Saberton and Darren Salt
+    for the patch. (Closes: #327309)
+
+ -- Gaudenz Steinlin <gaudenz@debian.org>  Sat, 30 Jul 2011 14:42:24 +0200
 
 netcfg (1.65) unstable; urgency=low
 
