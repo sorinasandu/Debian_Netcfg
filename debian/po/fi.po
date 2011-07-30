@@ -12,11 +12,18 @@
 # Tommi Vainikainen <thv+debian@iki.fi>, 2003 - 2004.
 # Tapio Lehtonen <tale@debian.org>, 2004 - 2006.
 # Esko Arajärvi <edu@iki.fi>, 2007 - 2008, 2009, 2010.
+#
+# Translations from iso-codes:
+# Copyright (C) 2007 Tobias Toedter <t.toedter@gmx.net>.
+#     Translations taken from ICU SVN on 2007-09-09
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2005-2010.
+# Copyright (C) 2005-2006, 2008-2010 Free Software Foundation, Inc.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-01-24 19:32+0000\n"
+"POT-Creation-Date: 2011-07-30 22:47+0000\n"
 "PO-Revision-Date: 2010-08-22 12:24+0300\n"
 "Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
@@ -158,17 +165,46 @@ msgstr ""
 "nimi (ESSID), jota haluat liitännän ${iface} käyttävän. Ohita langattoman "
 "verkon asetukset jättämällä tämä kenttä tyhjäksi."
 
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:8001
+msgid "WEP/Open Network"
+msgstr ""
+
+#. Type: select
+#. Choices
+#: ../netcfg-common.templates:8001
+msgid "WPA PSK"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:8002
+#, fuzzy
+msgid "Wireless Network Type for ${iface}:"
+msgstr "Langattoman verkon ESSID liitännälle ${iface}:"
+
+#. Type: select
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:8002
+msgid ""
+"Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
+"the network is a WPA PSK protected network."
+msgstr ""
+
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:8001
+#: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Langattoman laitteen ${iface} WEP-avain:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:8001
+#: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
@@ -179,7 +215,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:8001
+#: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
@@ -190,7 +226,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:8001
+#: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
@@ -201,7 +237,7 @@ msgstr ""
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:8001
+#: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
@@ -212,14 +248,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:9001
+#: ../netcfg-common.templates:10001
 msgid "Invalid WEP key"
 msgstr "Virheellinen WEP-avain"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:9001
+#: ../netcfg-common.templates:10001
 msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
@@ -230,14 +266,46 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:10001
+#: ../netcfg-common.templates:11001
+#, fuzzy
+msgid "Invalid passphrase"
+msgstr "Virheellinen käyttäjätunnus"
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:11001
+msgid ""
+"The WPA PSK passphrase was either too long (more than 64 characters) or too "
+"short (less than 8 characters)."
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:12001
+#, fuzzy
+msgid "WPA passphrase for wireless device ${iface}:"
+msgstr "Langattoman laitteen ${iface} WEP-avain:"
+
+#. Type: string
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:12001
+msgid "Enter a passphrase for WPA PSK authentication."
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl2:
+#: ../netcfg-common.templates:13001
 msgid "Invalid ESSID"
 msgstr "Virheellinen ESSID"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:10001
+#: ../netcfg-common.templates:13001
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
@@ -245,24 +313,61 @@ msgstr ""
 "ESSID ”${essid}” on virheellinen. ESSID:ssä voi olla enintään 32 merkkiä, "
 "mutta se voi sisältää kaikenlaisia merkkejä. "
 
+#. Type: text
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:14001
+msgid "Attempting to exchange keys with the access point..."
+msgstr ""
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:15001 ../netcfg-dhcp.templates:3001
+msgid "This may take some time."
+msgstr "Tämä voi kestää hetken."
+
+#. Type: text
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:16001
+msgid "WPA connection succeeded"
+msgstr ""
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:17001
+msgid "Failure of key exchange and association"
+msgstr ""
+
+#. Type: note
+#. Description
+#. :sl1:
+#: ../netcfg-common.templates:17001
+msgid ""
+"The exchange of keys and association with the access point failed. Please "
+"check the WPA parameters you provided."
+msgstr ""
+
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:11001
+#: ../netcfg-common.templates:18001
 msgid "Hostname:"
 msgstr "Konenimi:"
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:11001
+#: ../netcfg-common.templates:18001
 msgid "Please enter the hostname for this system."
 msgstr "Kirjoita tämän järjestelmän konenimi."
 
 #. Type: string
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:11001
+#: ../netcfg-common.templates:18001
 msgid ""
 "The hostname is a single word that identifies your system to the network. If "
 "you don't know what your hostname should be, consult your network "
@@ -276,21 +381,21 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:12001
+#: ../netcfg-common.templates:19001
 msgid "Invalid hostname"
 msgstr "Virheellinen konenimi"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:12001
+#: ../netcfg-common.templates:19001
 msgid "The name \"${hostname}\" is invalid."
 msgstr "Konenimi ”${hostname}” on virheellinen."
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:12001
+#: ../netcfg-common.templates:19001
 #, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
@@ -305,14 +410,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:13001
+#: ../netcfg-common.templates:20001
 msgid "Error"
 msgstr "Virhe"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:13001
+#: ../netcfg-common.templates:20001
 msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
@@ -323,14 +428,14 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:14001
+#: ../netcfg-common.templates:21001
 msgid "No network interfaces detected"
 msgstr "Verkkoliitäntöjä ei löydetty"
 
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:14001
+#: ../netcfg-common.templates:21001
 msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
@@ -341,7 +446,7 @@ msgstr ""
 #. Type: error
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:14001
+#: ../netcfg-common.templates:21001
 msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
@@ -355,7 +460,7 @@ msgstr ""
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #. :sl2:
-#: ../netcfg-common.templates:15001
+#: ../netcfg-common.templates:22001
 msgid "Kill switch enabled on ${iface}"
 msgstr "Liitännän ${iface} pääkytkin otettu käyttöön"
 
@@ -364,7 +469,7 @@ msgstr "Liitännän ${iface} pääkytkin otettu käyttöön"
 #. A "kill switch" is a physical switch found on some network cards that
 #. disables the card.
 #. :sl2:
-#: ../netcfg-common.templates:15001
+#: ../netcfg-common.templates:22001
 msgid ""
 "${iface} appears to have been disabled by means of a physical \"kill switch"
 "\". If you intend to use this interface, please switch it on before "
@@ -381,7 +486,7 @@ msgstr ""
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:16001
+#: ../netcfg-common.templates:23001
 msgid "Infrastructure (Managed) network"
 msgstr "Runkoverkko (hallinnoitu)"
 
@@ -393,19 +498,19 @@ msgstr "Runkoverkko (hallinnoitu)"
 #. Choices MUST be separated by commas
 #. You MUST use standard commas not special commas for your language
 #. You MUST NOT use commas inside choices
-#: ../netcfg-common.templates:16001
+#: ../netcfg-common.templates:23001
 msgid "Ad-hoc network (Peer to peer)"
 msgstr "solmujen omin päin luoma (vertaisverkko)"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:16002
+#: ../netcfg-common.templates:23002
 msgid "Type of wireless network:"
 msgstr "Langattoman verkon tyyppi:"
 
 #. Type: select
 #. Description
-#: ../netcfg-common.templates:16002
+#: ../netcfg-common.templates:23002
 msgid ""
 "Wireless networks are either managed or ad-hoc. If you use a real access "
 "point of some sort, your network is Managed. If another computer is your "
@@ -418,20 +523,20 @@ msgstr ""
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:17001
+#: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Langattoman verkon asetukset"
 
 #. Type: text
 #. Description
 #. :sl1:
-#: ../netcfg-common.templates:18001
+#: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Etsitään langattomia tukiasemia..."
 
 #. Type: text
 #. Description
-#: ../netcfg-common.templates:20001
+#: ../netcfg-common.templates:27001
 #, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
 msgstr "Tunnistetaan laitteistoa, odota..."
@@ -439,105 +544,105 @@ msgstr "Tunnistetaan laitteistoa, odota..."
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:21001
+#: ../netcfg-common.templates:28001
 msgid "<none>"
 msgstr "<ei mitään>"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:22001
+#: ../netcfg-common.templates:29001
 msgid "Wireless ethernet (802.11x)"
 msgstr "Langaton ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:23001
+#: ../netcfg-common.templates:30001
 msgid "wireless"
 msgstr "langaton"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:24001
+#: ../netcfg-common.templates:31001
 msgid "Ethernet"
 msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:25001
+#: ../netcfg-common.templates:32001
 msgid "Token Ring"
 msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:26001
+#: ../netcfg-common.templates:33001
 msgid "USB net"
 msgstr "USB-verkko"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:28001
+#: ../netcfg-common.templates:35001
 msgid "Serial-line IP"
 msgstr "Sarjalinja-IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:29001
+#: ../netcfg-common.templates:36001
 msgid "Parallel-port IP"
 msgstr "Rinnakkaisportti-IP"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:30001
+#: ../netcfg-common.templates:37001
 msgid "Point-to-Point Protocol"
 msgstr "Kaksipisteyhteyskäytäntö (point-to-point)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:31001
+#: ../netcfg-common.templates:38001
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:32001
+#: ../netcfg-common.templates:39001
 msgid "ISDN Point-to-Point Protocol"
 msgstr "ISDN-kaksipisteyhteyskäytäntö (point-to-point)"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:33001
+#: ../netcfg-common.templates:40001
 msgid "Channel-to-channel"
 msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:34001
+#: ../netcfg-common.templates:41001
 msgid "Real channel-to-channel"
 msgstr "Oikea channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:36001
+#: ../netcfg-common.templates:43001
 msgid "Inter-user communication vehicle"
 msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #. :sl2:
-#: ../netcfg-common.templates:37001
+#: ../netcfg-common.templates:44001
 msgid "Unknown interface"
 msgstr "Tuntematon liitäntä"
 
@@ -545,7 +650,7 @@ msgstr "Tuntematon liitäntä"
 #. Description
 #. base-installer progress bar item
 #. :sl1:
-#: ../netcfg-common.templates:38001
+#: ../netcfg-common.templates:45001
 msgid "Storing network settings..."
 msgstr "Talletetaan verkkoasetukset..."
 
@@ -553,7 +658,7 @@ msgstr "Talletetaan verkkoasetukset..."
 #. Description
 #. Item in the main menu to select this package
 #. :sl1:
-#: ../netcfg-common.templates:39001
+#: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Tee verkkoasetukset"
 
@@ -588,13 +693,6 @@ msgstr "Useimmiten tämän voi jättää tyhjäksi."
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
 msgstr "Tehdään verkkoasetukset DHCP:llä"
-
-#. Type: text
-#. Description
-#. :sl1:
-#: ../netcfg-dhcp.templates:3001
-msgid "This may take some time."
-msgstr "Tämä voi kestää hetken."
 
 #. Type: text
 #. Description
