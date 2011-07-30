@@ -9,19 +9,29 @@
 #
 # Georgi Stanojevski, <glisha@gmail.com>, 2004, 2005, 2006.
 # Georgi Stanojevski <georgis@unet.com.mk>, 2005, 2006.
-# Arangel Angov <ufo@linux.net.mk>, 2008.
+#
+# Translations from iso-codes:
+#   Alastair McKinstry <mckinstry@computer.org>, 2002
+#   Arangel Angov <ufo@linux.net.mk>, 2008.
+#   Free Software Foundation, Inc., 2002,2004
+#   Georgi Stanojevski <glisha@gmail.com>, 2004, 2006.
+# Translations from KDE:
+#   Danko Ilik <danko@mindless.com>
+# Arangel Angov <arangel@linux.net.mk>, 2008, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_mk\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-01-24 19:32+0000\n"
-"PO-Revision-Date: 2010-11-15 14:49+0100\n"
+"PO-Revision-Date: 2011-07-24 18:23+0200\n"
 "Last-Translator: Arangel Angov <arangel@linux.net.mk>\n"
-"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"Language-Team: Macedonian <>\n"
 "Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=3; plural=(n!=1);\n"
 
 #. Type: boolean
 #. Description
@@ -63,10 +73,10 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"Домен името е дел од твојата интернет адреса десно од твојето име на "
-"домаќинот. Најчесто е нешто што завршува на .com, .net, .edu или .org. Ако "
-"конфигураш домашна мрежа, можеш да измислиш нешто тука, но биди сигурен дека "
-"домејн името на сите компјутер е исто."
+"Домен името е дел од твојата интернет адреса десно од твојето име на хостот. "
+"Најчесто е нешто што завршува на .com, .net, .edu или .org. Ако конфигураш "
+"домашна мрежа, можеш да измислиш нешто тука, но биди сигурен дека домејн "
+"името на сите компјутер е исто."
 
 #. Type: string
 #. Description
@@ -255,7 +265,7 @@ msgstr "Име на компјутерот:"
 #. :sl1:
 #: ../netcfg-common.templates:11001
 msgid "Please enter the hostname for this system."
-msgstr "Внеси го името на домаќинот за овој систем."
+msgstr "Внеси го името на хостот за овој систем."
 
 #. Type: string
 #. Description
@@ -267,8 +277,8 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
-"Хостнејм(име) е еден збор кој го идентификува твојот систем на мрежата. Ако "
-"не знаеш кое ќе биде твоето име на домаќинот, консултирај се со мрежниот "
+"Името на хостот е еден збор кој го идентификува твојот систем на мрежата. "
+"Ако не знаеш кое ќе биде твоето име на хостот, консултирај се со мрежниот "
 "администратор. Ако поставуваш твоја домашна мрежа можеш да измислиш нешто "
 "тука."
 
@@ -431,9 +441,8 @@ msgstr "Пребарување на безжични пристапни точк
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:20001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Детектирање на хардвер, почекај..."
+msgstr "Ја датектирам врската на ${interface}; те молам почекај..."
 
 #. Type: text
 #. Description
@@ -546,7 +555,7 @@ msgstr "Непознат интерфејс"
 #. :sl1:
 #: ../netcfg-common.templates:38001
 msgid "Storing network settings..."
-msgstr "Зачувување на мрежните поставувања..."
+msgstr "Ги зачувувам мрежните поставувања..."
 
 #. Type: text
 #. Description
@@ -902,7 +911,7 @@ msgid ""
 " nameservers   = ${nameservers}"
 msgstr ""
 " интерфејс             = ${interface}\n"
-" ИП адреса             = ${ipaddress}\n"
+" IP адреса             = ${ipaddress}\n"
 " мрежна маска       = ${netmask}\n"
 " премин                 = ${gateway}\n"
 " pointopoint            = ${pointopoint}\n"

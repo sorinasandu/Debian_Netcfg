@@ -1000,9 +1000,20 @@ void netcfg_write_loopback (void)
 void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 {
     FILE *fp;
+    char *domain_nodot = NULL;
 
     if (!hostname)
         return;
+
+    if (domain) {
+        char *end;
+
+        /* strip trailing dots */
+        domain_nodot = strdup(domain);
+        end = domain_nodot + strlen(domain_nodot) - 1;
+        while (end >= domain_nodot && *end == '.')
+            *end-- = '\0';
+    }
 
     if ((fp = file_open(INTERFACES_FILE, "w"))) {
         fprintf(fp, HELPFUL_COMMENT);
@@ -1027,13 +1038,13 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 
         if (ipaddress.s_addr) {
             inet_ntop (AF_INET, &ipaddress, ptr1, sizeof(ptr1));
-            if (domain && !empty_str(domain))
-                fprintf(fp, "%s\t%s.%s\t%s\n", ptr1, hostname, domain, hostname);
+            if (domain_nodot && !empty_str(domain_nodot))
+                fprintf(fp, "%s\t%s.%s\t%s\n", ptr1, hostname, domain_nodot, hostname);
             else
                 fprintf(fp, "%s\t%s\n", ptr1, hostname);
         } else {
-            if (domain && !empty_str(domain))
-                fprintf(fp, "127.0.1.1\t%s.%s\t%s\n", hostname, domain, hostname);
+            if (domain_nodot && !empty_str(domain_nodot))
+                fprintf(fp, "127.0.1.1\t%s.%s\t%s\n", hostname, domain_nodot, hostname);
             else
                 fprintf(fp, "127.0.1.1\t%s\n", hostname);
         }
@@ -1042,6 +1053,8 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
 
         fclose(fp);
     }
+
+    free(domain_nodot);
 }
 
 
