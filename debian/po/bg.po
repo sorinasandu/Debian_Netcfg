@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
 "PO-Revision-Date: 2011-07-22 08:05+0200\n"
 "Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -135,17 +135,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Безжичен ESSID за ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -158,14 +158,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Неуспех при опит за намиране на безжична мрежа."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -193,7 +193,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:8002
 #, fuzzy
-msgid "Wireless Network Type for ${iface}:"
+msgid "Wireless network type for ${iface}:"
 msgstr "Безжичен ESSID за ${iface}:"
 
 #. Type: select
@@ -207,14 +207,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Ключ WEP за безжично устройство ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -225,7 +225,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -237,7 +237,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -248,7 +248,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -294,7 +294,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
@@ -302,9 +302,11 @@ msgstr "Ключ WEP за безжично устройство ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
 msgstr ""
 
 #. Type: error
@@ -327,11 +329,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
 msgstr ""
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -341,21 +346,21 @@ msgstr "Това може да отнеме известно време."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
@@ -534,14 +539,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Настройване на безжична мрежа"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Търсене на безжични точки на достъп..."

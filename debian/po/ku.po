@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ku\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
 "PO-Revision-Date: 2010-08-16 00:19+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@gmail.com>\n"
 "Language-Team: Kurdish Team http://pckurd.net\n"
@@ -121,17 +121,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID bêtel (wireless) ji bo ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -144,14 +144,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Hewldana dîtina toreke bêqablo ya guncav bi ser neket."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -179,7 +179,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:8002
 #, fuzzy
-msgid "Wireless Network Type for ${iface}:"
+msgid "Wireless network type for ${iface}:"
 msgstr "ESSID bêtel (wireless) ji bo ${iface}:"
 
 #. Type: select
@@ -193,14 +193,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Mifteya WEP ji bo amûra bêtel (wireless) ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -211,7 +211,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -222,7 +222,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -233,7 +233,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -279,7 +279,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
@@ -287,9 +287,11 @@ msgstr "Mifteya WEP ji bo amûra bêtel (wireless) ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
 msgstr ""
 
 #. Type: error
@@ -312,11 +314,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
 msgstr ""
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -326,21 +331,21 @@ msgstr "Dibe ku ev hinekî dem dixwaze."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
@@ -521,14 +526,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Sazkirina tora wireless (bêtel)"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Li xalên gihiştinê yên bêqablo digere..."

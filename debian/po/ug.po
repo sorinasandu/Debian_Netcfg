@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
 "PO-Revision-Date: 2011-03-24 09:40+0600\n"
 "Last-Translator: Sahran <sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -119,17 +119,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} نىڭ سىمسىز ESSID"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -142,14 +142,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ئىشلەتكىلى بولىدىغان سىمسىز تورنى ئىزدەش مەغلۇپ بولدى."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -176,7 +176,8 @@ msgstr "WPA PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-msgid "Wireless Network Type for ${iface}:"
+#, fuzzy
+msgid "Wireless network type for ${iface}:"
 msgstr "${iface} نىڭ سىمسىز تور تىپى"
 
 #. Type: select
@@ -192,14 +193,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "سىمسىز تور ئۈسكۈنىسى ${iface} نىڭ WEP ئاچقۇچى:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -210,7 +211,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -222,7 +223,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -233,7 +234,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -279,17 +280,19 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "WPA passphrase for wireless device ${iface}:"
 msgstr "سىمسىز ئۈسكىنە ${iface} نىڭ WPA ئىمى"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
-msgstr "WPA PSK نىڭ سالاھىيەت دەلىللىشى ئۈچۈن ئىمنى كىرگۈزۈڭ."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
+msgstr ""
 
 #. Type: error
 #. Description
@@ -311,11 +314,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
 msgstr "زىيارەت نۇقتىسى بىلەن ئاچقۇچلارنى ئالماشتۇرۇۋاتىدۇ."
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -325,21 +331,21 @@ msgstr "بۇنىڭغا بىر ئاز ۋاقىت كېتىشى مۇمكىن."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
 msgstr "WPA باغلىنىشى مۇۋەپپەقىيەتلىك بولدى"
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
 msgstr "ئاچقۇچ ئالماشتۇرۇش ۋە  كېڭىشىش مەغلۇپ بولدى"
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
@@ -517,14 +523,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "سىمسىز تور سەپلىمىسى"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "سىمسىز تور زىيارەت نۇقتىسىنى ئىزدەۋاتىدۇ…"

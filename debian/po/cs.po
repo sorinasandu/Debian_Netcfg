@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
-"PO-Revision-Date: 2011-07-05 18:07+0200\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
+"PO-Revision-Date: 2011-07-31 18:37+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "Language: cs\n"
@@ -115,17 +115,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID pro bezdrátové ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -138,14 +138,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Nalezení bezdrátové sítě selhalo."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -160,21 +160,21 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/otevřená síť"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA PSK"
-msgstr ""
+msgstr "WPA PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
 #, fuzzy
-msgid "Wireless Network Type for ${iface}:"
-msgstr "ESSID pro bezdrátové ${iface}:"
+msgid "Wireless network type for ${iface}:"
+msgstr "Typ bezdrátové sítě pro ${iface}:"
 
 #. Type: select
 #. Description
@@ -184,17 +184,19 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
+"Pokud je síť otevřená nebo je zabezpečená pomocí WEP, zvolte WEP/otevřená. "
+"Jestliže je síť zabezpečená pomocí WPA PSK, zvolte WPA PSK."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "WEP klíč pro bezdrátové zařízení ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -205,7 +207,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -216,7 +218,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -226,7 +228,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -256,9 +258,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Neplatné uživatelské jméno"
+msgstr "Neplatná přístupová fráze"
 
 #. Type: error
 #. Description
@@ -268,20 +269,23 @@ msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
+"Přístupová fráze WPA PSK byla buď příliš dlouhá (více než 64 znaků), nebo "
+"naopak příliš krátká (méně než 8 znaků)."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "WEP klíč pro bezdrátové zařízení ${iface}:"
+msgstr "Přístupová WPA fráze pro bezdrátové zařízení ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
 msgstr ""
 
 #. Type: error
@@ -304,11 +308,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Probíhá pokus o výměnu klíčů s přístupovým bodem..."
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -318,26 +325,28 @@ msgstr "Může to chvíli trvat."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
-msgstr ""
+msgstr "WPA připojení bylo úspěšně navázáno"
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Chyba při výměně klíčů a připojení"
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
+"Výměna klíčů a připojení k přístupovému bodu selhaly. Zkontrolujte prosím "
+"zadané WPA parametry."
 
 #. Type: string
 #. Description
@@ -510,14 +519,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Nastavení bezdrátové sítě"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Hledají se bezdrátové přístupové body ..."
