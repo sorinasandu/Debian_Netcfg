@@ -67,7 +67,7 @@ Type: select
 Choices-C: wep/open, wpa 
 __Choices: WEP/Open Network, WPA PSK
 # :sl2:
-_Description: Wireless Network Type for ${iface}:
+_Description: Wireless network type for ${iface}:
  Choose WEP/Open if the network is open or secured with WEP.
  Choose WPA if the network is a WPA PSK protected network.
 
@@ -106,7 +106,8 @@ Template: netcfg/wireless_wpa
 Type: string
 # :sl1:
 _Description: WPA passphrase for wireless device ${iface}:
- Enter a passphrase for WPA PSK authentication.
+ Enter the passphrase for WPA PSK authentication. This should be the
+ passphrase defined for the wireless network you are trying to use.
 
 Template: netcfg/invalid_essid
 Type: error
