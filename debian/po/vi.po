@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer Level 1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
 "PO-Revision-Date: 2010-09-28 18:01+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -128,17 +128,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID vô tuyến cho ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -151,14 +151,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Việc thử tìm mạng vô tuyến sẵn sàng bị lỗi."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -186,7 +186,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:8002
 #, fuzzy
-msgid "Wireless Network Type for ${iface}:"
+msgid "Wireless network type for ${iface}:"
 msgstr "ESSID vô tuyến cho ${iface}:"
 
 #. Type: select
@@ -200,14 +200,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Khoá WEP cho thiết bị vô tuyến ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -218,7 +218,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -230,7 +230,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -241,7 +241,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -287,7 +287,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
@@ -295,9 +295,11 @@ msgstr "Khoá WEP cho thiết bị vô tuyến ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
 msgstr ""
 
 #. Type: error
@@ -320,11 +322,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
 msgstr ""
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -334,21 +339,21 @@ msgstr "Có thể kéo dài một lát."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
@@ -529,14 +534,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Cấu hình mạng vô tuyến"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Đang tìm kiếm các điểm truy cập vô tuyến..."

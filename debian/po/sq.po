@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-30 22:47+0000\n"
+"POT-Creation-Date: 2011-07-31 22:47+0000\n"
 "PO-Revision-Date: 2010-02-21 18:30+0100\n"
 "Last-Translator:  Elian Myftiu <elian.myftiu@gmail.com>\n"
 "Language-Team: Albanian <Albanian>\n"
@@ -118,17 +118,17 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Wireless ESSID për ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:6001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -141,14 +141,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Përpjekja për të gjetur një rrjet me valë dështoi."
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:7001
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
@@ -176,7 +176,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:8002
 #, fuzzy
-msgid "Wireless Network Type for ${iface}:"
+msgid "Wireless network type for ${iface}:"
 msgstr "Wireless ESSID për ${iface}:"
 
 #. Type: select
@@ -190,14 +190,14 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
 msgstr "Kodi WEP për dispozitivin me valë ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
@@ -208,7 +208,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
@@ -219,7 +219,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
@@ -228,7 +228,7 @@ msgstr "Nëse kodi WEP është një fjalëkalim, parashtoji një 's:' (pa thonj�
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:9001
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
@@ -275,7 +275,7 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
 #, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
@@ -283,9 +283,11 @@ msgstr "Kodi WEP për dispozitivin me valë ${iface}:"
 
 #. Type: string
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:12001
-msgid "Enter a passphrase for WPA PSK authentication."
+msgid ""
+"Enter the passphrase for WPA PSK authentication. This should be the "
+"passphrase defined for the wireless network you are trying to use."
 msgstr ""
 
 #. Type: error
@@ -308,11 +310,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
 msgstr ""
 
+#. Type: text
+#. Description
+#. :sl2:
 #. Type: text
 #. Description
 #. :sl1:
@@ -322,21 +327,21 @@ msgstr "Kjo mund të kërkojë pak kohë."
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
 msgstr ""
 
 #. Type: note
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
@@ -516,14 +521,14 @@ msgstr ""
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
 msgstr "Konfigurimi i rrjetit me valë"
 
 #. Type: text
 #. Description
-#. :sl1:
+#. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
 msgstr "Duke kërkuar për pika hyrjeje me valë ..."
