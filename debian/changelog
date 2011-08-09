@@ -2,6 +2,7 @@ netcfg (1.69) UNRELEASED; urgency=low
 
   * armhf was accidentally removed from the Architecture field while merging
     the WPA branch.  Restore it.
+  * Explicitly ignore some errors to placate -Wunused-result.
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 08 Aug 2011 19:31:41 +0100
 

@@ -281,7 +281,9 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
 static int kill_dhcp_client(void)
 {
-    system("killall.sh");
+    if (system("killall.sh")) {
+        /* We can't do much about errors anyway, so ignore them. */
+    }
     return 0;
 }
 
@@ -517,7 +519,9 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                  */
                 if ((d = fopen(DOMAIN_FILE, "r")) != NULL) {
                     char domain[_UTSNAME_LENGTH + 1] = { 0 };
-                    fgets(domain, _UTSNAME_LENGTH, d);
+                    if (fgets(domain, _UTSNAME_LENGTH, d) == NULL) {
+                        /* ignore errors; we check for empty strings later */
+                    }
                     fclose(d);
                     unlink(DOMAIN_FILE);
 
@@ -533,7 +537,9 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                  */
                 if ((d = fopen(NTP_SERVER_FILE, "r")) != NULL) {
                     char ntpservers[DHCP_OPTION_LEN + 1] = { 0 };
-                    fgets(ntpservers, DHCP_OPTION_LEN, d);
+                    if (fgets(ntpservers, DHCP_OPTION_LEN, d) == NULL) {
+                        /* ignore errors; we check for empty strings later */
+                    }
                     fclose(d);
                     unlink(NTP_SERVER_FILE);
 

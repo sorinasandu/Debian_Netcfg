@@ -1024,7 +1024,9 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     }
 
     /* Currently busybox, hostname is not available. */
-    sethostname (hostname, strlen(hostname) + 1);
+    if (sethostname (hostname, strlen(hostname) + 1) < 0) {
+        /* ignore errors */
+    }
 
     if ((fp = file_open(HOSTNAME_FILE, "w"))) {
         fprintf(fp, "%s\n", hostname);
