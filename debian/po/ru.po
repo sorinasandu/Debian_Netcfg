@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2011-07-20 22:22+0400\n"
+"PO-Revision-Date: 2011-08-08 21:31+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -171,21 +171,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Открытая сеть"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA PSK"
-msgstr ""
+msgstr "WPA PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID для ${iface}:"
+msgstr "Тип беспроводной сети для ${iface}:"
 
 #. Type: select
 #. Description
@@ -195,6 +194,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
+"Выберите WEP/Открытая, если сеть открытая или защищена WEP. Выберите WPA, "
+"если сеть защищена с помощью WPA PSK."
 
 #. Type: string
 #. Description
@@ -262,16 +263,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"WEP-ключ '${wepkey}' неправилен. Инструкция на следующем экране объяснит, "
+"WEP-ключ «${wepkey}» неправилен. Инструкция на следующем экране объяснит, "
 "как правильно ввести WEP-ключ, прочтите её и попробуйте ещё раз."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Введено некорректное имя."
+msgstr "Некорректная ключевая фраза"
 
 #. Type: error
 #. Description
@@ -281,14 +281,15 @@ msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
+"Ключевая фраза WPA PSK или слишком длинна (более 64 символов), или слишком "
+"коротка (менее 8 символов)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "WEP-ключ для беспроводного устройства ${iface}:"
+msgstr "Ключевая фраза WPA для беспроводного устройства ${iface}:"
 
 #. Type: string
 #. Description
@@ -298,6 +299,8 @@ msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Введите ключевую фразу для аутентификации через WPA PSK. Эта фраза должна "
+"корректна для беспроводной сети, которую вы хотите использовать."
 
 #. Type: error
 #. Description
@@ -314,15 +317,15 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" неверен. ESSID не может содержать более чем 32 "
-"произвольных символа."
+"ESSID «${essid}» неверен. ESSID не может содержать более чем 32 произвольных "
+"символа."
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Производится попытка обмена ключами с точкой доступа…"
 
 #. Type: text
 #. Description
@@ -339,14 +342,14 @@ msgstr "Это может занять несколько минут."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
-msgstr ""
+msgstr "Соединение WPA установлено"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Не удалось провести обмен ключами и установить связь"
 
 #. Type: note
 #. Description
@@ -356,6 +359,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
+"Не удалось провести обмен ключами и установить связь с точкой доступа. "
+"Проверьте введённые параметры WPA."
 
 #. Type: string
 #. Description
@@ -398,7 +403,7 @@ msgstr "Недопустимое имя компьютера"
 #. :sl2:
 #: ../netcfg-common.templates:19001
 msgid "The name \"${hostname}\" is invalid."
-msgstr "Имя \"${hostname}\" не допустимо."
+msgstr "Имя «${hostname}» не допустимо."
 
 #. Type: error
 #. Description
