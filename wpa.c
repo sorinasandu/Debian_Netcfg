@@ -47,7 +47,10 @@ int kill_wpa_supplicant(void)
         return 0;
     }
     else {
-        fscanf(fp, "%d", &wpa_pid);
+        if (fscanf(fp, "%d", &wpa_pid) != 1) {
+            di_warning("Couldn't read pid from Wpasupplicant pid file, not trying to kill.");
+            return 0;
+        }
         fclose(fp);
     }
       if ((kill(wpa_pid, SIGTERM)) == 0)

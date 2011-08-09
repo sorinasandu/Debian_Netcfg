@@ -4,6 +4,7 @@ netcfg (1.69) UNRELEASED; urgency=low
     the WPA branch.  Restore it.
   * Explicitly ignore some errors to placate -Wunused-result.
   * Adjust start_dhcp_client to placate -Wformat-security.
+  * Handle failure to read a pid from the wpasupplicant pid file.
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 08 Aug 2011 19:31:41 +0100
 
