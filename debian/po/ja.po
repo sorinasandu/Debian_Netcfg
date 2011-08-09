@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2010-09-02 10:33+0900\n"
+"PO-Revision-Date: 2011-08-09 19:55+0900\n"
 "Last-Translator:  Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian L10n Japanese <debian-l10n-japanese@lists.debian.org>\n"
 "Language: \n"
@@ -172,21 +172,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Open Network"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA PSK"
-msgstr ""
+msgstr "WPA PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "${iface} の無線 ESSID:"
+msgstr "${iface} の無線ネットワークの種類:"
 
 #. Type: select
 #. Description
@@ -196,6 +195,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
+"ネットワークがオープンまたは WEP で保護されたものであるなら、WEP/Open を選ん"
+"でください。WPA PSK で保護されたネットワークであれば、WPA を選んでください。"
 
 #. Type: string
 #. Description
@@ -268,9 +269,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "無効なユーザ名"
+msgstr "無効なパスフレーズ"
 
 #. Type: error
 #. Description
@@ -280,14 +280,15 @@ msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
+"WPA PSK パスフレーズが長すぎる (64 文字以上) か、短すぎ (8 文字以下) のいずれ"
+"かでした。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "${iface} 無線デバイスのWEP キー:"
+msgstr "${iface} 無線デバイス の WPA パスフレーズ:"
 
 #. Type: string
 #. Description
@@ -297,6 +298,8 @@ msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"WPA PSK 認証のためのパスフレーズを入力してください。これは使おうとしている無"
+"線ネットワークに定義されたパスフレーズであるべきです。"
 
 #. Type: error
 #. Description
@@ -321,7 +324,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "アクセスポイントとの鍵交換を試行中..."
 
 #. Type: text
 #. Description
@@ -338,14 +341,14 @@ msgstr "これはしばらくかかります。"
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
-msgstr ""
+msgstr "WPA 接続に成功しました"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "鍵交換と接続に失敗"
 
 #. Type: note
 #. Description
@@ -355,6 +358,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
+"鍵交換およびアクセスポイントとの接続に失敗しました。指定した WPA パラメータを"
+"確認してください。"
 
 #. Type: string
 #. Description
@@ -403,16 +408,15 @@ msgstr "名前 \"${hostname}\" は無効です。"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"有効なホスト名は 0-9、小文字のa-z、マイナス記号だけから構成されます。ホスト名"
-"は 2 文字から最長 63 文字までで、マイナス記号で開始または終了することはできま"
-"せん。"
+"有効なホスト名は 0-9、小文字および大文字 (A-Z と a-z)、マイナス記号だけから構"
+"成されます。ホスト名は最長 ${maxhostnamelen} 文字までで、マイナス記号で開始ま"
+"たは終了することはできません。"
 
 #. Type: error
 #. Description
@@ -540,14 +544,13 @@ msgstr "無線ネットワークの設定"
 #. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
-msgstr "無線アクセスポイントを探しています ..."
+msgstr "無線アクセスポイントを探しています..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "ハードウェアの検出中です。しばらくお待ちください..."
+msgstr "${interface} のリンクの検出中です。しばらくお待ちください..."
 
 #. Type: text
 #. Description
@@ -660,7 +663,7 @@ msgstr "未知のインターフェイス"
 #. :sl1:
 #: ../netcfg-common.templates:45001
 msgid "Storing network settings..."
-msgstr "ネットワーク設定を格納しています ..."
+msgstr "ネットワーク設定を格納しています..."
 
 #. Type: text
 #. Description
