@@ -203,7 +203,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
                 fprintf(dc, "request ");
 
                 for (ptr = dhclient_request_options_dhclient; *ptr; ptr++) {
-                    fprintf(dc, *ptr);
+                    fprintf(dc, "%s", *ptr);
 
                     /* look ahead to see if it is the last entry */
                     if (*(ptr + 1))
