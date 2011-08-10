@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2011-07-24 08:28+0100\n"
+"PO-Revision-Date: 2011-08-10 15:38+0100\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -170,21 +170,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Rede Aberta"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA PSK"
-msgstr ""
+msgstr "WPA PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID da rede sem fios para ${iface}:"
+msgstr "Tipo de rede sem fios para ${iface}:"
 
 #. Type: select
 #. Description
@@ -194,6 +193,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
+"Escolha WEP/Aberta se a rede for aberta ou com segurança WEP. Escolha WPA se "
+"for uma rede protegida com WPA PSK."
 
 #. Type: string
 #. Description
@@ -270,9 +271,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Nome de utilizador inválido"
+msgstr "Frase-passe inválida"
 
 #. Type: error
 #. Description
@@ -282,14 +282,15 @@ msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
+"A frase-passe WPA PSK é demasiado longa (mais de 64 caracteres) ou curta "
+"(menos de 8 caracteres)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "Chave WEP para o dispositivo wireless ${iface}:"
+msgstr "Palavra-passe WPA para o dispositivo wireless ${iface}:"
 
 #. Type: string
 #. Description
@@ -299,6 +300,8 @@ msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Introduza a palavra-passe para a autenticação WPA PSK. Deve ser a palavra-"
+"passe definida para a rede sem fios que está a tentar utilizar."
 
 #. Type: error
 #. Description
@@ -323,7 +326,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "A tentar trocar chaves com o ponto de acesso..."
 
 #. Type: text
 #. Description
@@ -340,14 +343,14 @@ msgstr "Este processo pode demorar algum tempo."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
-msgstr ""
+msgstr "Ligação WPA com sucesso"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Falha na troca de chaves e associação"
 
 #. Type: note
 #. Description
@@ -357,6 +360,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
+"Falhou a troca de chaves e associação com o ponto de acesso.Por favor "
+"verifique os parâmetros WPA que indicou."
 
 #. Type: string
 #. Description
