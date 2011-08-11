@@ -11,7 +11,6 @@
 # Translated by Yijun Yuan (2004), Carlos Z.F. Liu (2004,2005,2006),
 # Ming Hua (2005,2006,2007,2008), Xiyue Deng (2008), Kov Chai (2008),
 # Kenlen Lai (2008), WCM (2008), Ren Xiaolei (2008).
-# YunQiang Su <wzssyqa@gmail.com>, 2010, 2011.
 #
 #
 # Translations from iso-codes:
@@ -27,19 +26,20 @@
 #   YunQiang Su <wzssyqa@gmail.com>, 2011.
 #
 #   Mai Hao Hui <mhh@126.com>, 2001 (translations from galeon)
+# YunQiang Su <wzssyqa@gmail.com>, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2011-05-06 21:29+0800\n"
+"PO-Revision-Date: 2011-08-11 11:13+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Type: boolean
@@ -171,21 +171,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/开放网络"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA PSK"
-msgstr ""
+msgstr "WPA PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "${iface} 的无线 ESSID："
+msgstr "${iface} 的无线网络类型："
 
 #. Type: select
 #. Description
@@ -194,7 +193,7 @@ msgstr "${iface} 的无线 ESSID："
 msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
-msgstr ""
+msgstr "如果网络是开放的或者使用 WEP 加密。如果是由 WPA PSK 保护，选择 WPA。"
 
 #. Type: string
 #. Description
@@ -266,9 +265,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "无效的用户名"
+msgstr "无效的密码"
 
 #. Type: error
 #. Description
@@ -277,15 +275,14 @@ msgstr "无效的用户名"
 msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
-msgstr ""
+msgstr "WPA PSK 密码过长(多于 64 个字符)或过短(少于 8 个字符)。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "无线网络设备 ${iface} 的 WEP 密钥："
+msgstr "无线网络设备 ${iface} 的 WPA 密码："
 
 #. Type: string
 #. Description
@@ -295,6 +292,7 @@ msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"输入用于 WPA PSK 认证的密码。这应该是尝试连接到的无线网络中设置的密码。"
 
 #. Type: error
 #. Description
@@ -319,7 +317,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "正在尝试和接入点交换密钥..."
 
 #. Type: text
 #. Description
@@ -336,14 +334,14 @@ msgstr "这将花费一些时间。"
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA connection succeeded"
-msgstr ""
+msgstr "WPA 连接成功"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "密钥交换和协商失败"
 
 #. Type: note
 #. Description
@@ -352,7 +350,7 @@ msgstr ""
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
-msgstr ""
+msgstr "和接入点交换密钥和协商失败。请检查 WPA 参数。"
 
 #. Type: string
 #. Description
