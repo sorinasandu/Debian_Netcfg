@@ -177,8 +177,9 @@ msgstr "WEP/Open Network"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
+#, fuzzy
 msgid "WPA PSK"
-msgstr "WPA PSK"
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
@@ -191,12 +192,14 @@ msgstr "${iface} の無線ネットワークの種類:"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
+#, fuzzy
 msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
 "ネットワークがオープンまたは WEP で保護されたものであるなら、WEP/Open を選ん"
-"でください。WPA PSK で保護されたネットワークであれば、WPA を選んでください。"
+"でください。WPA/WPA2 PSK で保護されたネットワークであれば、WPA/WPA2 を選んで"
+"ください。"
 
 #. Type: string
 #. Description
@@ -276,30 +279,33 @@ msgstr "無効なパスフレーズ"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
+#, fuzzy
 msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
-"WPA PSK パスフレーズが長すぎる (64 文字以上) か、短すぎ (8 文字以下) のいずれ"
-"かでした。"
+"WPA/WPA2 PSK パスフレーズが長すぎる (64 文字以上) か、短すぎ (8 文字以下) の"
+"いずれかでした。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "${iface} 無線デバイス の WPA パスフレーズ:"
+msgstr "${iface} 無線デバイス の WPA/WPA2 パスフレーズ:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"WPA PSK 認証のためのパスフレーズを入力してください。これは使おうとしている無"
-"線ネットワークに定義されたパスフレーズであるべきです。"
+"WPA/WPA2 PSK 認証のためのパスフレーズを入力してください。これは使おうとしてい"
+"る無線ネットワークに定義されたパスフレーズであるべきです。"
 
 #. Type: error
 #. Description
@@ -340,8 +346,9 @@ msgstr "これはしばらくかかります。"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
+#, fuzzy
 msgid "WPA connection succeeded"
-msgstr "WPA 接続に成功しました"
+msgstr "WPA/WPA2 接続に成功しました"
 
 #. Type: note
 #. Description
@@ -354,12 +361,13 @@ msgstr "鍵交換と接続に失敗"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
+#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
-"鍵交換およびアクセスポイントとの接続に失敗しました。指定した WPA パラメータを"
-"確認してください。"
+"鍵交換およびアクセスポイントとの接続に失敗しました。指定した WPA/WPA2 パラ"
+"メータを確認してください。"
 
 #. Type: string
 #. Description

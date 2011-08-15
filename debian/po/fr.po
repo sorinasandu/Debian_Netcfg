@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2011-08-01 09:36+0200\n"
+"PO-Revision-Date: 2011-08-09 07:28+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -179,8 +179,9 @@ msgstr "Réseau ouvert ou WEP"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
+#, fuzzy
 msgid "WPA PSK"
-msgstr "WPA PSK"
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
@@ -193,14 +194,15 @@ msgstr "Type du réseau sans fil pour ${iface} :"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
+#, fuzzy
 msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
 "Veuillez choisir « Réseau ouvert ou WEP » si le réseau n'est pas protégé par "
 "une clé de chiffrement ou s'il est chiffré avec la méthode WEP. Choisissez "
-"« WPA » s'il est chiffré avec la méthode « WPA PSK » (« Pre-Shared Key » ou "
-"clé partagée)."
+"« WPA » s'il est chiffré avec la méthode « WPA/WPA2 PSK » (« Pre-Shared "
+"Key » ou clé partagée)."
 
 #. Type: string
 #. Description
@@ -283,30 +285,33 @@ msgstr "Phrase secrète non valable"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
+#, fuzzy
 msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
-"La phrase secrète WPA PSK est soit trop longue (plus de 64 caractères), soit "
-"trop courte (moins de 8 caractères)."
+"La phrase secrète WPA/WPA2 PSK est soit trop longue (plus de 64 caractères), "
+"soit trop courte (moins de 8 caractères)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "Phrase secrète WPA pour le périphérique sans fil ${iface} :"
+msgstr "Phrase secrète WPA/WPA2 pour le périphérique sans fil ${iface} :"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"Veuillez indiquer la phrase secrète pour l'authentification WPA PSK. Cela "
-"doit être la phrase secrète établie pour le réseau sans fil que vous "
+"Veuillez indiquer la phrase secrète pour l'authentification WPA/WPA2 PSK. "
+"Cela doit être la phrase secrète établie pour le réseau sans fil que vous "
 "souhaitez utiliser."
 
 #. Type: error
@@ -348,8 +353,9 @@ msgstr "Cette opération peut prendre du temps."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
+#, fuzzy
 msgid "WPA connection succeeded"
-msgstr "Connexion WPA réussie"
+msgstr "Connexion WPA/WPA2 réussie"
 
 #. Type: note
 #. Description
@@ -362,12 +368,13 @@ msgstr "Échec de l'échange des clés et de l'association"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
+#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
 "L'échange de clés et l'association avec le point d'accès sans fil ont "
-"échoué. Veuillez vérifier les paramètres WPA que vous avez fournis."
+"échoué. Veuillez vérifier les paramètres WPA/WPA2 que vous avez fournis."
 
 #. Type: string
 #. Description

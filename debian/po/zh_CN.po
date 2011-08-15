@@ -176,8 +176,9 @@ msgstr "WEP/开放网络"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
+#, fuzzy
 msgid "WPA PSK"
-msgstr "WPA PSK"
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
@@ -190,10 +191,12 @@ msgstr "${iface} 的无线网络类型："
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
+#, fuzzy
 msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
-msgstr "如果网络是开放的或者使用 WEP 加密。如果是由 WPA PSK 保护，选择 WPA。"
+msgstr ""
+"如果网络是开放的或者使用 WEP 加密。如果是由 WPA/WPA2 PSK 保护，选择 WPA。"
 
 #. Type: string
 #. Description
@@ -272,27 +275,30 @@ msgstr "无效的密码"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
+#, fuzzy
 msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
-msgstr "WPA PSK 密码过长(多于 64 个字符)或过短(少于 8 个字符)。"
+msgstr "WPA/WPA2 PSK 密码过长(多于 64 个字符)或过短(少于 8 个字符)。"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "无线网络设备 ${iface} 的 WPA 密码："
+msgstr "无线网络设备 ${iface} 的 WPA/WPA2 密码："
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"输入用于 WPA PSK 认证的密码。这应该是尝试连接到的无线网络中设置的密码。"
+"输入用于 WPA/WPA2 PSK 认证的密码。这应该是尝试连接到的无线网络中设置的密码。"
 
 #. Type: error
 #. Description
@@ -333,8 +339,9 @@ msgstr "这将花费一些时间。"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
+#, fuzzy
 msgid "WPA connection succeeded"
-msgstr "WPA 连接成功"
+msgstr "WPA/WPA2 连接成功"
 
 #. Type: note
 #. Description
@@ -347,10 +354,11 @@ msgstr "密钥交换和协商失败"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
+#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
-msgstr "和接入点交换密钥和协商失败。请检查 WPA 参数。"
+msgstr "和接入点交换密钥和协商失败。请检查 WPA/WPA2 参数。"
 
 #. Type: string
 #. Description

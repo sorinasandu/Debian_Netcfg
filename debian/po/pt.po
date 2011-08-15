@@ -175,8 +175,9 @@ msgstr "WEP/Rede Aberta"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
+#, fuzzy
 msgid "WPA PSK"
-msgstr "WPA PSK"
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
@@ -189,12 +190,13 @@ msgstr "Tipo de rede sem fios para ${iface}:"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
+#, fuzzy
 msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
 "the network is a WPA PSK protected network."
 msgstr ""
-"Escolha WEP/Aberta se a rede for aberta ou com segurança WEP. Escolha WPA se "
-"for uma rede protegida com WPA PSK."
+"Escolha WEP/Aberta se a rede for aberta ou com segurança WEP. Escolha WPA/"
+"WPA2 se for uma rede protegida com WPA/WPA2 PSK."
 
 #. Type: string
 #. Description
@@ -278,30 +280,33 @@ msgstr "Frase-passe inválida"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
+#, fuzzy
 msgid ""
 "The WPA PSK passphrase was either too long (more than 64 characters) or too "
 "short (less than 8 characters)."
 msgstr ""
-"A frase-passe WPA PSK é demasiado longa (mais de 64 caracteres) ou curta "
-"(menos de 8 caracteres)."
+"A frase-passe WPA/WPA2 PSK é demasiado longa (mais de 64 caracteres) ou "
+"curta (menos de 8 caracteres)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "Palavra-passe WPA para o dispositivo wireless ${iface}:"
+msgstr "Palavra-passe WPA/WPA2 para o dispositivo wireless ${iface}:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
+#, fuzzy
 msgid ""
 "Enter the passphrase for WPA PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"Introduza a palavra-passe para a autenticação WPA PSK. Deve ser a palavra-"
-"passe definida para a rede sem fios que está a tentar utilizar."
+"Introduza a palavra-passe para a autenticação WPA/WPA2 PSK. Deve ser a "
+"palavra-passe definida para a rede sem fios que está a tentar utilizar."
 
 #. Type: error
 #. Description
@@ -342,8 +347,9 @@ msgstr "Este processo pode demorar algum tempo."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
+#, fuzzy
 msgid "WPA connection succeeded"
-msgstr "Ligação WPA com sucesso"
+msgstr "Ligação WPA/WPA2 com sucesso"
 
 #. Type: note
 #. Description
@@ -356,12 +362,13 @@ msgstr "Falha na troca de chaves e associação"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
+#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA parameters you provided."
 msgstr ""
 "Falhou a troca de chaves e associação com o ponto de acesso.Por favor "
-"verifique os parâmetros WPA que indicou."
+"verifique os parâmetros WPA/WPA2 que indicou."
 
 #. Type: string
 #. Description
