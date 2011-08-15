@@ -65,11 +65,12 @@ _Description: Wireless ESSID for ${iface}:
 Template: netcfg/wireless_security_type
 Type: select
 Choices-C: wep/open, wpa 
-__Choices: WEP/Open Network, WPA PSK
+__Choices: WEP/Open Network, WPA/WPA2 PSK
 # :sl2:
 _Description: Wireless network type for ${iface}:
  Choose WEP/Open if the network is open or secured with WEP.
- Choose WPA if the network is a WPA PSK protected network.
+ Choose WPA/WPA2 if the network is protected with WPA/WPA2 PSK
+ (Pre-Shared Key).
 
 Template: netcfg/wireless_wep
 Type: string
@@ -99,14 +100,14 @@ Template: netcfg/invalid_pass
 Type: error
 # :sl2:
 _Description: Invalid passphrase
- The WPA PSK passphrase was either too long (more than 64 characters)
+ The WPA/WPA2 PSK passphrase was either too long (more than 64 characters)
  or too short (less than 8 characters).
 
 Template: netcfg/wireless_wpa
 Type: string
 # :sl2:
-_Description: WPA passphrase for wireless device ${iface}:
- Enter the passphrase for WPA PSK authentication. This should be the
+_Description: WPA/WPA2 passphrase for wireless device ${iface}:
+ Enter the passphrase for WPA/WPA2 PSK authentication. This should be the
  passphrase defined for the wireless network you are trying to use.
 
 Template: netcfg/invalid_essid
@@ -129,14 +130,14 @@ _Description: This may take some time.
 Template: netcfg/wpa_success_note
 Type: text
 # :sl2:
-_Description: WPA connection succeeded
+_Description: WPA/WPA2 connection succeeded
 
 Template: netcfg/wpa_supplicant_failed
 Type: note
 # :sl2:
 _Description: Failure of key exchange and association
  The exchange of keys and association with the access point failed.
- Please check the WPA parameters you provided.
+ Please check the WPA/WPA2 parameters you provided.
 
 Template: netcfg/get_hostname
 Type: string
