@@ -23,8 +23,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-31 22:47+0000\n"
-"PO-Revision-Date: 2011-04-18 17:31+0700\n"
+"POT-Creation-Date: 2011-08-16 04:31+0000\n"
+"PO-Revision-Date: 2011-08-17 22:42+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -163,37 +163,38 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/เครือข่ายเปิด"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
-msgid "WPA PSK"
-msgstr ""
+msgid "WPA/WPA2 PSK"
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID ของเครือข่ายไร้สายสำหรับ ${iface}:"
+msgstr "ชนิดของเครือข่ายไร้สายสำหรับ ${iface}:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
 msgid ""
-"Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
-"the network is a WPA PSK protected network."
+"Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
+"if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"เลือก WEP/เครือข่ายเปิด ถ้าเครือข่ายเป็นแบบเปิดหรือมีการรักษาความปลอดภัยด้วย WEP เลือก WPA/"
+"WPA2 ถ้าเครือข่ายรักษาความปลอดภัยด้วย WPA/WPA2 PSK (กุญแจที่แบ่งปันล่วงหน้า)"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
-msgstr "คีย์ WEP สำหรับอุปกรณ์ไร้สาย ${iface}:"
+msgstr "กุญแจ WEP สำหรับอุปกรณ์ไร้สาย ${iface}:"
 
 #. Type: string
 #. Description
@@ -203,7 +204,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
-"หากจำเป็นต้องใช้ กรุณาป้อนคีย์นิรภัยแบบ WEP สำหรับอุปกรณ์ไร้สาย ${iface} มีวิธีป้อนคีย์นี้ได้สองวิธี:"
+"หากจำเป็นต้องใช้ กรุณาป้อนกุญแจนิรภัยแบบ WEP สำหรับอุปกรณ์ไร้สาย ${iface} "
+"มีวิธีป้อนกุญแจนี้ได้สองวิธี:"
 
 #. Type: string
 #. Description
@@ -213,7 +215,7 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
-"ถ้าคีย์ WEP ของคุณอยู่ในรูป 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn' หรือ "
+"ถ้ากุญแจ WEP ของคุณอยู่ในรูป 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn' หรือ "
 "'nnnnnnnn' โดยที่ n เป็นตัวเลข ก็ป้อนเข้ามาในรูปแบบดังกล่าวได้เลย"
 
 #. Type: string
@@ -224,7 +226,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"ถ้าคีย์ WEP ของคุณอยู่ในรูปวลีรหัสผ่าน ก็นำหน้าวลีรหัสผ่านด้วย 's:' (โดยไม่ต้องมีอัญประกาศ)"
+"ถ้ากุญแจ WEP ของคุณอยู่ในรูปวลีรหัสผ่าน ก็นำหน้าวลีรหัสผ่านด้วย 's:' (โดยไม่ต้องมีอัญประกาศ)"
 
 #. Type: string
 #. Description
@@ -233,7 +235,7 @@ msgstr ""
 msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
-msgstr "และแน่นอน ถ้าเครือข่ายของคุณไม่มีคีย์ WEP ก็ปล่อยช่องนี้ให้ว่างไว้"
+msgstr "และแน่นอน ถ้าเครือข่ายของคุณไม่ต้องใช้กุญแจ WEP ก็ปล่อยช่องนี้ให้ว่างไว้"
 
 #. Type: error
 #. Description
@@ -257,35 +259,36 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "ชื่อผู้ใช้ผิดพลาด"
+msgstr "วลีรหัสผ่านผิดพลาด"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid ""
-"The WPA PSK passphrase was either too long (more than 64 characters) or too "
-"short (less than 8 characters)."
+"The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
+"too short (less than 8 characters)."
 msgstr ""
+"วลีรหัสผ่าน WPA/WPA2 PSK ยาวเกินไป (เกิน 64 ตัวอักษร) หรือสั้นเกินไป (ต่ำกว่า 8 ตัวอักษร)"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
-msgid "WPA passphrase for wireless device ${iface}:"
-msgstr "คีย์ WEP สำหรับอุปกรณ์ไร้สาย ${iface}:"
+msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
+msgstr "วลีรหัสผ่าน WPA/WPA2 สำหรับอุปกรณ์ไร้สาย ${iface}:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid ""
-"Enter the passphrase for WPA PSK authentication. This should be the "
+"Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"ป้อนวลีรหัสผ่านสำหรับยืนยันตัวบุคคลแบบ WPA/WPA2 PSK "
+"ซึ่งเป็นวลีรหัสผ่านที่กำหนดไว้สำหรับเครือข่ายไร้สายที่คุณกำลังพยายามจะใช้"
 
 #. Type: error
 #. Description
@@ -310,7 +313,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "กำลังพยายามแลกเปลี่ยนกุญแจกับ access point..."
 
 #. Type: text
 #. Description
@@ -326,15 +329,15 @@ msgstr "อาจใช้เวลาสักครู่"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
-msgid "WPA connection succeeded"
-msgstr ""
+msgid "WPA/WPA2 connection succeeded"
+msgstr "เชื่อมต่อ WPA/WPA2 สำเร็จแล้ว"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "แลกเปลี่ยนกุญแจและเชื่อมโยงไม่สำเร็จ"
 
 #. Type: note
 #. Description
@@ -342,8 +345,10 @@ msgstr ""
 #: ../netcfg-common.templates:17001
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
-"check the WPA parameters you provided."
+"check the WPA/WPA2 parameters you provided."
 msgstr ""
+"แลกเปลี่ยนกุญแจและเชื่อมโยงกับ access point ไม่สำเร็จ กรุณาตรวจสอบพารามิเตอร์ WPA/WPA2 "
+"ที่คุณป้อน"
 
 #. Type: string
 #. Description

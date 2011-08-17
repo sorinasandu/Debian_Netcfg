@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-31 22:47+0000\n"
+"POT-Creation-Date: 2011-08-16 04:31+0000\n"
 "PO-Revision-Date: 2011-08-03 23:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: Basque <debian-l10n-basque@lists.debian.org>\n"
@@ -180,8 +180,7 @@ msgstr "WEP/Sare irekia"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
-#, fuzzy
-msgid "WPA PSK"
+msgid "WPA/WPA2 PSK"
 msgstr "WPA/WPA2 PSK"
 
 #. Type: select
@@ -197,8 +196,8 @@ msgstr "Haririk gabeko mota ${iface} interfazerako:"
 #: ../netcfg-common.templates:8002
 #, fuzzy
 msgid ""
-"Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
-"the network is a WPA PSK protected network."
+"Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
+"if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
 "Wep/Irekia hautatu sarea irekia  edo WEP bidez basbestutakoa bada. WPA/WPA2 "
 "hautatu sarea WPA/WPA2 PSK basbestutako sare bat bada."
@@ -281,10 +280,9 @@ msgstr "Pasa-esaldi baliogabea"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid ""
-"The WPA PSK passphrase was either too long (more than 64 characters) or too "
-"short (less than 8 characters)."
+"The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
+"too short (less than 8 characters)."
 msgstr ""
 "WPA/WPA2 PSK pasaesaldia edo luzeegia (64 karaktere baino gehiago) edo "
 "laburregia (8 karaktere baino gutxiago) da."
@@ -293,17 +291,15 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
-msgid "WPA passphrase for wireless device ${iface}:"
+msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
 msgstr "Haririk gabeko ${iface} gailurako WPA/WPA2 pasa-esaldia:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
-"Enter the passphrase for WPA PSK authentication. This should be the "
+"Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
 "Sar ezazu WPA/WPA2 PSK autentifikazio pasa-esaldia. Erabiltzen saiatzen ari "
@@ -348,8 +344,7 @@ msgstr "Baliteke denbora pixka bat behar izatea."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
-#, fuzzy
-msgid "WPA connection succeeded"
+msgid "WPA/WPA2 connection succeeded"
 msgstr "WPA/WPA2 konexioa osaturik"
 
 #. Type: note
@@ -363,10 +358,9 @@ msgstr "Huts gako trukaketa eta bateratzean"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
-#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
-"check the WPA parameters you provided."
+"check the WPA/WPA2 parameters you provided."
 msgstr ""
 "Huts egin du saretze-puntuarekin gako trukaketa eta bateratzean. Mesedez "
 "ezarri egiaztatu WPA/WPA2 parametroak."

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-07-31 22:47+0000\n"
+"POT-Creation-Date: 2011-08-16 04:31+0000\n"
 "PO-Revision-Date: 2011-08-04 17:33+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
@@ -165,8 +165,7 @@ msgstr "WEP/otevřená síť"
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
-#, fuzzy
-msgid "WPA PSK"
+msgid "WPA/WPA2 PSK"
 msgstr "WPA/WPA2 PSK"
 
 #. Type: select
@@ -182,8 +181,8 @@ msgstr "Typ bezdrátové sítě pro ${iface}:"
 #: ../netcfg-common.templates:8002
 #, fuzzy
 msgid ""
-"Choose WEP/Open if the network is open or secured with WEP. Choose WPA if "
-"the network is a WPA PSK protected network."
+"Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
+"if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
 "Pokud je síť otevřená nebo je zabezpečená pomocí WEP, zvolte WEP/otevřená. "
 "Jestliže je síť zabezpečená pomocí WPA/WPA2 PSK, zvolte WPA/WPA2 PSK."
@@ -266,10 +265,9 @@ msgstr "Neplatná přístupová fráze"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid ""
-"The WPA PSK passphrase was either too long (more than 64 characters) or too "
-"short (less than 8 characters)."
+"The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
+"too short (less than 8 characters)."
 msgstr ""
 "Přístupová fráze WPA/WPA2 PSK byla buď příliš dlouhá (více než 64 znaků), "
 "nebo naopak příliš krátká (méně než 8 znaků)."
@@ -278,17 +276,15 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
-msgid "WPA passphrase for wireless device ${iface}:"
+msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
 msgstr "Přístupová WPA/WPA2 fráze pro bezdrátové zařízení ${iface}:"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid ""
-"Enter the passphrase for WPA PSK authentication. This should be the "
+"Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
 "Zadejte přístupovou frázi pro autentizaci pomocí WPA/WPA2 PSK. Jedná se o "
@@ -333,8 +329,7 @@ msgstr "Může to chvíli trvat."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
-#, fuzzy
-msgid "WPA connection succeeded"
+msgid "WPA/WPA2 connection succeeded"
 msgstr "WPA/WPA2 připojení bylo úspěšně navázáno"
 
 #. Type: note
@@ -348,10 +343,9 @@ msgstr "Chyba při výměně klíčů a připojení"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
-#, fuzzy
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
-"check the WPA parameters you provided."
+"check the WPA/WPA2 parameters you provided."
 msgstr ""
 "Výměna klíčů a připojení k přístupovému bodu selhaly. Zkontrolujte prosím "
 "zadané WPA/WPA2 parametry."
