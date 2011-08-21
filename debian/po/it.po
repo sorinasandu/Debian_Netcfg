@@ -20,7 +20,6 @@
 # Stefano Canepa <sc@linux.it>
 # Stefano Melchior <stefano.melchior@openlabs.it>
 #
-# Milo Casagrande <milo@ubuntu.com>, 2008, 2009, 2010, 2011.
 #
 # Translations from iso-codes:
 # Alastair McKinstry <mckinstry@computer.org>, 2001
@@ -31,21 +30,23 @@
 # Danilo Piazzalunga <danilopiazza@libero.it>, 2004
 # Davide Viti <zinosat@tiscali.it>, 2006
 # Marcello Raffa <mrooth@tiscalinet.it>, 2001
-# Milo Casagrande <milo@casagrande.name>, 2008, 2009, 2010, 2011.
 # Tobias Toedter <t.toedter@gmx.net>, 2007.
 # Translations taken from ICU SVN on 2007-09-09
+# Milo Casagrande <milo@ubuntu.com>, 2008, 2009, 2010, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-05-15 15:18+0200\n"
+"PO-Revision-Date: 2011-08-21 18:53+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Type: boolean
 #. Description
@@ -186,21 +187,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Open network"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID rete senza fili per ${iface}:"
+msgstr "Tipologia rete senza fili per ${iface}:"
 
 #. Type: select
 #. Description
@@ -210,6 +210,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Scegliere WEP/Open se la rete è aperta o protetta tramite WEP; scegliere WPA/"
+"WPA2 se è protetta tramite WPA/WPA2 PSK (Pre-Shared Key)."
 
 #. Type: string
 #. Description
@@ -286,9 +288,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Nome utente non valido"
+msgstr "Passphrase non valida"
 
 #. Type: error
 #. Description
@@ -298,14 +299,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"La passphrase WPA/WPA2 PSK era troppo lunga (più di 64 caratteri) o troppo "
+"corta (meno di 8 caratteri)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Chiave WEP per l'interfaccia senza fili ${iface}:"
+msgstr "Passphrase WPA/WPA2 per l'interfaccia senza fili ${iface}:"
 
 #. Type: string
 #. Description
@@ -315,6 +317,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Digitare la passphrase per l'autenticazione WPA/WPA2 PSK. Questa dovrebbe "
+"essere la passphrase definita per la rete senza fili a cui si vuole accedere."
 
 #. Type: error
 #. Description
@@ -339,7 +343,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Tentativo di scambio delle chiavi con l'access point..."
 
 #. Type: text
 #. Description
@@ -356,14 +360,14 @@ msgstr "Questa operazione potrebbe richiedere un po' di tempo."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Connessione WPA/WPA2 stabilita con successo"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Scambio delle chiavi e associazione non riusciti"
 
 #. Type: note
 #. Description
@@ -373,6 +377,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Lo scambio delle chiavi e l'associazione con l'accesso point non sono "
+"riusciti. Controllare i parametri WPA/WPA2 forniti."
 
 #. Type: string
 #. Description
