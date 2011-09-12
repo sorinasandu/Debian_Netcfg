@@ -35,14 +35,14 @@ msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-07-22 08:05+0200\n"
+"PO-Revision-Date: 2011-09-12 23:50+0300\n"
 "Last-Translator: Damyan Ivanov <dmn@debian.org>\n"
-"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language-Team: Български <dict@fsa-bg.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Type: boolean
 #. Description
@@ -180,21 +180,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Отворена мрежа"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 ключ"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "Безжичен ESSID за ${iface}:"
+msgstr "Вид безжична мрежа за ${iface}:"
 
 #. Type: select
 #. Description
@@ -204,6 +203,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Изберете „WEP/Отворена мрежа“ ако мрежата е отворена или защитена с WEP. "
+"Изберете WPA/WPA2 ако мрежата е защитена чрез споделен ключ за WPA/WPA2."
 
 #. Type: string
 #. Description
@@ -279,9 +280,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Невалидно потребителско име"
+msgstr "Грешна парола"
 
 #. Type: error
 #. Description
@@ -291,14 +291,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Ключът за WPA/WPA2 е или твърде дълга (над 64 знака) или твърде кракта (под "
+"8 знака)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Ключ WEP за безжично устройство ${iface}:"
+msgstr "Ключ за WPA/WPA2 за безжично устройство ${iface}:"
 
 #. Type: string
 #. Description
@@ -308,6 +309,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Въведете ключът за достъп с WPA/WPA2. Това трябва да е паролата, с която е "
+"защитена мрежата, която се опитвате да използвате."
 
 #. Type: error
 #. Description
@@ -332,7 +335,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Опит за размяна на ключове с точката за достъп…"
 
 #. Type: text
 #. Description
@@ -349,14 +352,14 @@ msgstr "Това може да отнеме известно време."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Връзката чрез WPA/WPA2 успя"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Грешка при размяна на ключове и асоцииране"
 
 #. Type: note
 #. Description
@@ -366,6 +369,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Размяната на ключове и асоциирането с точката за достъп не успя. Проверете "
+"предоставените параметри за WPA/WPA2."
 
 #. Type: string
 #. Description
