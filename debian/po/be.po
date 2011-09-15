@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: be\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-12 13:32+0300\n"
+"PO-Revision-Date: 2011-09-15 17:17+0300\n"
 "Last-Translator: Viktar Siarheichyk <vics@eq.by>\n"
 "Language-Team: Belarusian (Official spelling) <debian-l10n-belarusian@lists."
 "debian.org>\n"
@@ -142,7 +142,7 @@ msgid ""
 msgstr ""
 "${iface} ёсць інтэрфэйсам доступу да радыёсеткі. Калі ласка, увядзіце імя "
 "(ESSID) радыёсеткі, дзе Вы хочаце ўжываць ${iface}. Калі Вы хочаце ўжываць "
-"любую даступную сетку, пакіньце поле пустым. "
+"любую даступную сетку, пакіньце поле пустым."
 
 #. Type: string
 #. Description
@@ -162,7 +162,7 @@ msgid ""
 msgstr ""
 "${iface} ёсць інтэрфэйсам доступу да радыёсеткі. Калі ласка, увядзіце імя "
 "(ESSID) радыёсеткі, для якой Вы хочаце ўжываць ${iface}. Калі хочаце "
-"прапусціць настройку радыёпрыладаў, пакіньце поле пустым. "
+"прапусціць настройку радыёпрыладаў, пакіньце поле пустым."
 
 #. Type: select
 #. Choices
@@ -180,9 +180,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID радыёсеткі для ${iface}:"
+msgstr "Тып радыёсеткі для ${iface}:"
 
 #. Type: select
 #. Description
@@ -192,6 +191,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Выберыце WEP/Open, калі сетка адкрытая альбо абароненая WEP. Выберыце WPA/"
+"WPA2, калі сетка абароненая WPA/WPA2 PSK (Pre-Shared Key, з агульным ключом)."
 
 #. Type: string
 #. Description
@@ -242,7 +243,7 @@ msgid ""
 "field blank."
 msgstr ""
 "Канечне, калі Вы не выкарыстоўваеце WEP-ключ для Вашай радыёсеткі, пакіньце "
-"поле пустым. "
+"поле пустым."
 
 #. Type: error
 #. Description
@@ -259,16 +260,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
-"Ключ WEP '${wepkey}'  з'яўляецца памылковым. Калі ласка, уважліва прачытайце "
+"Ключ WEP '${wepkey}' з'яўляецца памылковым. Калі ласка, уважліва прачытайце "
 "інструкцыю па ўводзе ключа WEP на наступным экране, і паспрабуйце яшчэ раз."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Няслушнае імя карыстальніка"
+msgstr "Няслушны пароль"
 
 #. Type: error
 #. Description
@@ -278,14 +278,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Пароль WPA/WPA2 PSK альбо занадта доўгі (больш за 64 знакі), альбо занадта "
+"кароткі (менш за 8 знакаў)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Ключ WEP для радыёпрылады ${iface}:"
+msgstr "Ключ WPA/WPA2 для радыёпрылады ${iface}:"
 
 #. Type: string
 #. Description
@@ -295,6 +296,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Упішыце пароль для аўтэнтыфікацыі WPA/WPA2 PSK. Гэта павінны быць пароль для "
+"бяздротавай сеткі, якую вы спрабуеце скарыстаць."
 
 #. Type: error
 #. Description
@@ -319,7 +322,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Спроба абмяняцца ключамі з пунктам доступу..."
 
 #. Type: text
 #. Description
@@ -336,14 +339,14 @@ msgstr "Гэта можа заняць пэўны час."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Сувязь па пратаколе WPA/WPA2 ўдалася"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Абмяняцца ключамі і звязацца не ўдалося"
 
 #. Type: note
 #. Description
@@ -353,6 +356,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Не ўдалося абмяняцца ключамі і звязацца з пунктам доступу. Спраўдзіце "
+"пададзеныя вамі параметры WPA/WPA2."
 
 #. Type: string
 #. Description
@@ -889,7 +894,7 @@ msgid ""
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
 "Прапанаваны IP адрас з'яўляецца памылковым. Ён мусіць мець выгляд x.x.x.x "
-"(дзе кожны х - лічба не больш за 255). Калі ласка, паспрабуйце яшчэ раз."
+"(дзе кожны 'x' - лічба не больш за 255). Калі ласка, паспрабуйце яшчэ раз."
 
 #. Type: string
 #. Description
@@ -908,8 +913,8 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
-"Адрас PPP выкарыстоўваецца, каб вызначыць іншы канцавы пункт сеткі PPP. "
-"Парайцеся з адміністратарам Вашай сеткі, калі Вы не ведаеце значэння. Адрас "
+"Адрас PPP выкарыстоўваецца, каб вызначыць іншы канцавы пункт сеткі PPP.  "
+"Парайцеся з адміністратарам Вашай сеткі, калі Вы не ведаеце значэння.  Адрас "
 "PPP мусіць мець выгляд чатырох лічбаў, падзеленых кропкамі."
 
 #. Type: string

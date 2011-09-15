@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-12 21:53-0300\n"
+"PO-Revision-Date: 2011-09-14 21:52-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
 "Language: eo\n"
@@ -177,9 +177,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "Sendrata 'ESSID'-o por '${iface}'-o:"
+msgstr "Tipo de sendrata reto por '${iface}'-o:"
 
 #. Type: select
 #. Description
@@ -189,6 +188,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Elektu WEP/Open se la reto estas malferma aŭ sekurigata per WEP. Elektu WPA/"
+"WPA2 se la reto estas protektata per WPA/WPA2 PSK (Pre-Shared Key, antaŭe "
+"disdonita ŝlosilo)."
 
 #. Type: string
 #. Description
@@ -265,9 +267,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Malvalida salutnomo"
+msgstr "Malvalida pasfrazo"
 
 #. Type: error
 #. Description
@@ -277,14 +278,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"La pasfrazo de WPA/WPA2 PS estis tro longa (pli ol 64 signoj) aŭ tro "
+"mallonga (malpli ol 8 signoj)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Ĉifro-ŝlosilo 'WEP' por la sendrata aparato '${iface}':"
+msgstr "Pasfrazo 'WPA/WPA2' por la sendrata aparato '${iface}':"
 
 #. Type: string
 #. Description
@@ -294,6 +296,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Entajpu la pasfrazon por aŭtentigo de WPA/WPA2 PSK. Ĉi tio estu la pasfrazo "
+"difinita por la sendrata reto kiun vi provas ekuzi."
 
 #. Type: error
 #. Description
@@ -318,7 +322,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Provado por interŝanĝi ŝlosilojn kun la retalir-punkto..."
 
 #. Type: text
 #. Description
@@ -335,14 +339,14 @@ msgstr "Tio povas longtempe daŭri."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Konekto de WPA/WPA2 sukcesis"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Interŝanĝo kaj asociado de ŝlosilo fiaskis"
 
 #. Type: note
 #. Description
@@ -352,6 +356,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"La interŝanĝo de ŝlosiloj kaj asociado kun la retalir-punkto fiaskis. "
+"Bonvolu kontroli la parametrojn de WPA/WPA2 kiujn vi provizis."
 
 #. Type: string
 #. Description
