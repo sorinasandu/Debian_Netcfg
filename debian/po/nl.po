@@ -7,10 +7,10 @@
 # Dutch messages for debian-installer.
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-#
 # Frans Pop <aragorn@tiscali.nl>, 2005.
 # Frans Pop <elendil@planet.nl>, 2007, 2008, 2009, 2010.
-# Eric Spreen <erispre@gmail.com>, 2010
+# Eric Spreen <erispre@gmail.com>, 2010.
+# Jeroen Schot <schot@a-eskwadraat.nl>, 2011.
 #
 # Translations from iso-codes:
 # Translations taken from ICU SVN on 2007-09-09.
@@ -21,14 +21,15 @@
 # Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2006, 2007, 2008, 2009, 2010, 2011.
 # Taco Witte <tcwitte@cs.uu.nl>, 2004.
 # Reinout van Schouwen <reinouts@gnome.org>, 2007.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: nl\n"
+"Project-Id-Version: debian-installer/sublevel1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-10-25 14:06+0200\n"
-"Last-Translator: Eric Spreen <erispre@gmail.com>\n"
-"Language-Team: Dutch <debian-l10n-dutch@lists.debian.org>\n"
+"PO-Revision-Date: 2011-09-21 12:04+0200\n"
+"Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
+"Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,7 +76,7 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
-"De domeinnaam is het gedeelte van uw Internetadres dat rechts van uw "
+"De domeinnaam is het gedeelte van uw internetadres dat rechts van uw "
 "computernaam staat. Meestal eindigt een domeinnaam in .nl, .com, .net of ."
 "org. Wanneer u een thuisnetwerkje aan het opzetten bent, kunt u zelf een "
 "naam verzinnen, al dient u er wel op te letten dat u op alle computers "
@@ -172,21 +173,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Open netwerk"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2-PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID voor draadloos netwerk via ${iface}:"
+msgstr "Type draadloos netwerk voor ${iface}:"
 
 #. Type: select
 #. Description
@@ -196,6 +196,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Kies WEP/Open als het network onbeveiligd of met WEP beveiligd is. Kies WPA/"
+"WPA2 als het netwerk is beveiligd met WPA/WPA2-PSK (vooraf gedeelde sleutel)."
 
 #. Type: string
 #. Description
@@ -271,9 +273,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Ongeldige gebruikersnaam"
+msgstr "Ongeldige wachtzin"
 
 #. Type: error
 #. Description
@@ -283,14 +284,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"De WPA/WPA2-PSK-wachtzin was ofwel te lang (meer dan 64 tekens) of te kort "
+"(minder dan 8 tekens)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "WEP-sleutel voor ${iface}:"
+msgstr "WPA/WPA2-wachtzin voor ${iface}:"
 
 #. Type: string
 #. Description
@@ -300,6 +302,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Geeft de wachtzin voor WPA/WPA2-PSK-authenticatie op. Dit moet de wachtzin "
+"zijn die bij het draadloze netwerk hoort dat u probeert te gebruiken."
 
 #. Type: error
 #. Description
@@ -324,7 +328,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Poging tot sleuteluitwisseling met toegangspunt..."
 
 #. Type: text
 #. Description
@@ -341,14 +345,14 @@ msgstr "Dit kan enige tijd duren."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2-verbinding gelukt"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Sleuteluitwisseling en koppeling mislukt"
 
 #. Type: note
 #. Description
@@ -358,6 +362,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"De uitwisseling van sleutels en de koppeling met ver verbindingspunt zijn "
+"mislukt. Controleer de door u opgegeven WPA/WPA2-instellingen."
 
 #. Type: string
 #. Description
@@ -406,7 +412,6 @@ msgstr "De naam '${hostname}' is ongeldig."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -414,9 +419,8 @@ msgid ""
 "sign."
 msgstr ""
 "Een geldige computernaam mag enkel cijfers (0-9), kleine letters (a-z), en "
-"mintekens bevatten. Tevens dient de computernaam minstens 2 en maximaal 63 "
-"karakters lang te zijn, en mag hij niet beginnen of eindigen met een "
-"minteken."
+"mintekens bevatten. Ook mag deze maximaal ${maxhostnamelen} tekens lang zijn "
+"en niet beginnen of eindigen met een minteken."
 
 #. Type: error
 #. Description
@@ -549,9 +553,8 @@ msgstr "Er wordt gezocht naar draadloze toegangspunten..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Automatische hardwareherkenning wordt uitgevoerd, even geduld..."
+msgstr "Link op ${interface} aan het detecteren, even geduld..."
 
 #. Type: text
 #. Description
@@ -966,7 +969,7 @@ msgid ""
 msgstr ""
 "De gateway is het IP-adres (vier nummers gescheiden door punten) van de "
 "gateway router (ook wel de standaard router genoemd). Alle verkeer dat uw "
-"LAN verlaat (b.v. naar het Internet) gaat via deze router. In zeldzame "
+"LAN verlaat (b.v. naar het internet) gaat via deze router. In zeldzame "
 "omstandigheden is het mogelijk dat u geen router heeft; in dat geval kunt u "
 "dit veld gewoon leeg laten. Als u de waarde niet weet kunt u best contact "
 "opnemen met uw netwerkbeheerder."
