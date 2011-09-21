@@ -15,6 +15,9 @@ endif
 ifeq ($(DEB_HOST_ARCH),s390)
 WIRELESS	= 0
 endif
+ifeq ($(DEB_HOST_ARCH),s390x)
+WIRELESS	= 0
+endif
 
 ifneq ($(WIRELESS),0)
 LDOPTS		+= -liw
