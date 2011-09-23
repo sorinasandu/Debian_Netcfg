@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-13 03:06+0600\n"
+"PO-Revision-Date: 2011-09-20 17:52+0600\n"
 "Last-Translator: Zenat Rahnuma <zenat@ankur.org.bd>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
 "Language: bn\n"
@@ -188,9 +188,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "${iface}-এর জন্য ওয়্যারলেস ই.এস.এস.আই.ডি.:"
+msgstr "${iface}-এর জন্য ওয়্যারলেস নেটওয়ার্কের ধরণ:"
 
 #. Type: select
 #. Description
@@ -200,6 +199,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"যদি WEP এর সাথে নেটওয়ার্ক খোলা অথবা নিরাপদ থাকে WEP/খোলা নির্বাচন করুন। যদি WPA/"
+"WPA2 PSK (পূর্বে শেয়ারকৃত কী) এর সাথে নেটওয়ার্ক সুরক্ষিত থাকে তাহলে WPA/WPA2 "
+"নির্বাচন করুন।"
 
 #. Type: string
 #. Description
@@ -275,9 +277,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "অবৈধ ব্যবহারকারীর-নাম"
+msgstr "অকার্যকর ব্যবহারকারীর-নাম"
 
 #. Type: error
 #. Description
@@ -287,14 +288,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"WPA/WPA2 PSK পাসশব্দগুচ্ছ হয় অনেক বড় (৬৪ অক্ষরের বেশী) অথবা অনেক ছোট (৮ অক্ষরের "
+"কম)।"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "ওয়্যারলেস ডিভাইস ${iface}-এর জন্য WEP কী:"
+msgstr "ওয়্যারলেস ডিভাইস ${iface}-এর জন্য WPA/WPA2 পাস শব্দগুচ্ছ:"
 
 #. Type: string
 #. Description
@@ -304,6 +306,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"WPA/WPA2 PSK প্রমাণীকরণের জন্য পাসশব্দগুচ্ছ দিন। আপনি যে ওয়ারলেস নেটওয়ার্কের জন্য "
+"ব্যবহার করতে চাচ্ছেন এটি পাসশব্দগুচ্ছ নির্ধারিত করে রাখে।"
 
 #. Type: error
 #. Description
@@ -328,7 +332,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "প্রবেশাধিকার পয়েন্টের সাথে কী পরিবর্তনের চেষ্টা করা হচ্ছে..."
 
 #. Type: text
 #. Description
@@ -345,14 +349,14 @@ msgstr "এটি হয়ত কিছু সময় নেবে।"
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2 সংযোগ সফল "
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "কী পরিবর্তন এবং সংযুক্ত করতে ব্যর্থ"
 
 #. Type: note
 #. Description
@@ -362,6 +366,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"প্রবেশাধিকার পয়েন্টের সাথে কী পরিবর্তন এবং সংযুক্ত করতে ব্যর্থ। অনুগ্রহ করে WPA/WPA2 "
+"প্যারামিটার যা কিনা আপনি দিয়েছেন তা পরীক্ষা করুন।"
 
 #. Type: string
 #. Description

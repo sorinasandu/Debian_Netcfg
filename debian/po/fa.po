@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: fa\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-14 11:30+0330\n"
-"Last-Translator: Hamid <hamid.r1988@gmail.com>\n"
+"PO-Revision-Date: 2011-09-22 07:08+0330\n"
+"Last-Translator: Behrad Eslamifar <behrad_es@yahoo.com>\n"
 "Language-Team: Debian-l10n-persian <debian-l10n-persian@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -178,9 +178,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID بی‌سیم برای ${iface}:"
+msgstr "نوع شبکه بی سیم برای درگاه  ${iface}:"
 
 #. Type: select
 #. Description
@@ -190,9 +189,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
-"گزینه‌های WEP/Open را در صورتیکه شبکه باز است یا توسط WEP رمزنگاری شده است "
-"انتخاب کنید. WPA/WPA2 را زمانی که شبکه توسط WPA/WPA2 حفاظت می‌شود انتخاب کنید "
-"(Pre-Shared Key)"
+"گزینه WEP/Open را در صورت که شبکه باز است و یا با کلید WEP امن شده است "
+"انتخاب کنید. گزینه WPA/WPA2 را در صورتی که شبکه توسط رمزنگاری WPA/WPA2 PSK "
+"(Pre-Shared Key) محافظت می‌شود، انتخاب کنید."
 
 #. Type: string
 #. Description
@@ -266,7 +265,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid "Invalid passphrase"
-msgstr "نام ‌کاربری نامعتبر"
+msgstr "کلمه رمز نامعتبر"
 
 #. Type: error
 #. Description
@@ -276,16 +275,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
-"طول رمزعبور WPA/WPA2 زیاد است (لبشتر از ۶۴ کارکتر) یا خیلی کوتاه است (کمتر "
-"از ۸ کارکتر)."
+"کله عبور WPA/WPA2 PSK یا بسیار بلند است (بیش از ۶۴ حرف) یا بسیار کوتاه است "
+"(کمتر از ۸ حرف)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "کلید WEP برای دستگاه بی‌سیم ${iface}:"
+msgstr "کلمه عبور WPA/WPA2 برای درگاه بی‌سیم ${iface}:"
 
 #. Type: string
 #. Description
@@ -295,8 +293,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
-"برای احراز هویت WPA/WPA2 PSK رمزعبور را وارد کنید. باید رمزعبوری را که از "
-"قبل برای شبکه بی‌سیم موردنظر تعیین شده است استفاده کنید."
+"کلمه عبور را برای احراز هویت WPA/WPA2 PSK وارد نمایید. این کلمه عبور توسط "
+"شبکه بی‌سیمی که قصد دارید به آن متصل شوید تعریف شده است."
 
 #. Type: error
 #. Description
@@ -321,7 +319,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr "تلاش برای تبادل کلیدها با نقطه دسترسی بی‌سیم ..."
+msgstr "تلاش برای تبادل کلید با access point ..."
 
 #. Type: text
 #. Description
@@ -345,7 +343,7 @@ msgstr "ارتباط WPA/WPA2 با موفقیت برقرار شد"
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr "خطا در تبادل کلیدها و اتصال"
+msgstr "تبادل کلید شکست خورد."
 
 #. Type: note
 #. Description
@@ -355,8 +353,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
-"تبادل اطلاعات و برقراری ارتباط با نقطه دسترسی بی‌سیم با شکست مواجه شد. لطفا "
-"پارامترهایی که برای WPA/WPA2 ارائه دادید را بررسی کنید."
+"تبادل کلید با access point شکست خورد. لطفا گزینه های WPA/WPA2 که مشخص "
+"کرده‌اید را مجدداً بازبینی کنید."
 
 #. Type: string
 #. Description
@@ -404,16 +402,15 @@ msgstr "نام «${hostname}» نامعتبر است."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"یک hostname معتبر ممکن است شامل فقط اعداد 0-9، حروف کوچک a-z، و علامت منفی "
-"باشد. باید بین ۲ تا ۶۳ کاراکتر طول داشته باشد، و ممکن است با علامت منفی شروع "
-"یا خاتمه داده نشود."
+"یک hostname معتبر می‌تواند شامل فقط اعداد 0-9، حروف کوچک و بزرگ (A-Z و a-z)، "
+"و خط تیره باشد. باید باید حداکثر شامل  ${maxhostnamelen} حرف باشد و با خط "
+"تیره شروع و یا پایان نیابد."
 
 #. Type: error
 #. Description
