@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_hi\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-17 09:17-0500\n"
+"PO-Revision-Date: 2011-09-24 23:43-0500\n"
 "Last-Translator: Kumar Appaiah\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -197,6 +197,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"WEP/Open चुनिए अगर नेटवर्क खुला हो या WEP द्वारा सुरक्षित किया गया हो. WPA/WPA2 "
+"चुनिएअगर नेटवर्क WPA/WPA2 PSK (पूर्व साझा कुंजी) के द्वारा सुरक्षित हो."
 
 #. Type: string
 #. Description
@@ -267,9 +269,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "अवैध उपयोक्ता  नाम"
+msgstr "अवैध पासवर्ड"
 
 #. Type: error
 #. Description
@@ -279,14 +280,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"WPA/WPA2 PSK के लिए दिया गया पासवर्ड या तो बहुत लंबा है (64 अक्षर से अधिक) याबहुत "
+"छोटा है (8 अक्षर से कम)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "बेतार उपकरण ${iface} के लिए WEP कुंजी:"
+msgstr "बेतार उपकरण ${iface} के लिए WPA/WPA2 कुंजी:"
 
 #. Type: string
 #. Description
@@ -296,6 +298,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"WPA/WPA2 PSK प्रमाणीकरण हेतु कुंजी दीजिये. यह उस बेतार नेटवर्क की कुंजी होनीजिसका आप "
+"उपयोग करना चाहते हैं."
 
 #. Type: error
 #. Description
@@ -320,7 +324,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "प्रवेश स्थान के साथ कुंजी विनिमय की कोशिश जारी..."
 
 #. Type: text
 #. Description
@@ -337,14 +341,14 @@ msgstr "यह कुछ समय ले सकता है."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2 कनेक्शन की स्थापना सफल"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "WPA/WPA2 कुंजी विनिमय और कनेक्शन की स्थापना करने में असफल"
 
 #. Type: note
 #. Description
@@ -353,7 +357,7 @@ msgstr ""
 msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
-msgstr ""
+msgstr "कुंजी विनिमय और कनेक्शन की स्थापना करने में असफल. कृपया अपने WPA/WPA2 कोजाँचिये."
 
 #. Type: string
 #. Description
@@ -401,7 +405,6 @@ msgstr "नाम \"${hostname}\" अवैध है."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
@@ -409,8 +412,8 @@ msgid ""
 "sign."
 msgstr ""
 "एक वैध होस्टनेम में केवल ये हो सकते हैं: 0-9 अंक, a-z अंग्रेज़ी के छोटे अक्षर और ऋण का चिह्न "
-"(-). इसकी लम्बाई 2 से 63 अक्षरों की हो सकती है और इसके प्रारंभ व अंत मे ऋण का चिह्न नहीं "
-"हो सकता है."
+"(-). इसकी लम्बाई ${maxhostnamelen} अक्षरों तक की हो सकती है और इसके प्रारंभ व अंत मे "
+"ऋण का चिह्न नहीं हो सकता है."
 
 #. Type: error
 #. Description
