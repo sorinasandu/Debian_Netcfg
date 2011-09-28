@@ -18,6 +18,7 @@
    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
+#include "netcfg.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -25,7 +26,6 @@
 #include <sys/types.h>
 #include <cdebconf/debconfclient.h>
 #include <debian-installer.h>
-#include "netcfg.h"
 
 int main(int argc, char** argv)
 {
@@ -37,7 +37,8 @@ int main(int argc, char** argv)
 
     /* initialize libd-i */
     di_system_init("netcfg-static");
-    di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
+    if (strcmp(basename(argv[0]), "ptom") != 0)
+	di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
 
     parse_args(argc, argv);
     reap_old_files();

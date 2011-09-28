@@ -21,6 +21,7 @@
 
 */
 
+#include "netcfg.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -31,7 +32,6 @@
 #ifdef WIRELESS
 #include <iwlib.h>
 #endif
-#include "netcfg.h"
 
 enum wpa_t wpa_supplicant_status;
 static method_t netcfg_method = DHCP;
@@ -86,7 +86,8 @@ int main(int argc, char *argv[])
     /* initialize libd-i */
     di_system_init("netcfg");
 
-    di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
+    if (strcmp(basename(argv[0]), "ptom") != 0)
+        di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
 
     parse_args (argc, argv);
     reap_old_files ();

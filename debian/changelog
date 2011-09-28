@@ -6,6 +6,7 @@ netcfg (1.69) UNRELEASED; urgency=low
   * Explicitly ignore some errors to placate -Wunused-result.
   * Adjust start_dhcp_client to placate -Wformat-security.
   * Handle failure to read a pid from the wpasupplicant pid file.
+  * Don't log "Starting netcfg" messages when invoked as ptom.
 
   [ Holger Wansing ]
   * Mention WPA2 in debconf templates as it is also supported. Also
