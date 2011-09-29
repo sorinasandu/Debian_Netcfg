@@ -25,8 +25,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-03-28 06:40+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"PO-Revision-Date: 2011-09-30 00:03+0100\n"
+"Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -171,21 +171,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Öppet nätverk"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "Trådlös ESSID för ${iface}"
+msgstr "Nätverkstyp för trådlöst nätverk ${iface}:"
 
 #. Type: select
 #. Description
@@ -195,6 +194,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Välj WEP/Öppet om nätverket är öppet eller skyddat med WEP. Välj WPA/WPA2 om "
+"nätverket är skyddat med WPA/WPA2 PSK (delad nyckel (Pre-Shared Key))."
 
 #. Type: string
 #. Description
@@ -270,9 +271,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Ogiltigt användarnamn"
+msgstr "Ogiltig lösenfras"
 
 #. Type: error
 #. Description
@@ -282,14 +282,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Lösenfrasen för WPA/WPA2 PSK var antingen för lång (över 64 tecken) eller "
+"för kort (färre än 8 tecken)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "WEP-nyckel till trådlösa enheten ${iface}:"
+msgstr "WPA/WPA2-lösenfras för trådlösenhet ${iface}:"
 
 #. Type: string
 #. Description
@@ -299,6 +300,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Ange lösenfras för WPA/WPA2 PSK identifiering. Detta ska vara lösenfrasen "
+"som är angiven för det trådlösa nätverk som du försöker använda."
 
 #. Type: error
 #. Description
@@ -323,7 +326,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Försöker utbyta nycklar med accesspunkten..."
 
 #. Type: text
 #. Description
@@ -340,14 +343,14 @@ msgstr "Det här kan ta lite tid."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2-asnlutning lyckades"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Misslyckades vid nyckelutbyte och nyckelsammankoppling"
 
 #. Type: note
 #. Description
@@ -357,6 +360,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Utbytet av nycklar och sammankopplingen med accesspunkten misslyckades. "
+"Vänligen kontrollera WPA/WPA2-parametrarna som du angav."
 
 #. Type: string
 #. Description
