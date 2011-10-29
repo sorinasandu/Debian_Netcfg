@@ -16,7 +16,11 @@ netcfg (1.69) UNRELEASED; urgency=low
   [ Philipp Kern ]
   * Add s390x support.  (No wireless.)
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 08 Aug 2011 19:31:41 +0100
+  [ Jurij Smakov ]
+  * Drop dependency on wpasupplicant and crypto-modules on sparc to get
+    netboot image size under 10MB, otherwise it doesn't boot.
+
+ -- Jurij Smakov <jurij@debian.org>  Sat, 29 Oct 2011 11:57:03 +0100
 
 netcfg (1.68) unstable; urgency=low
 
