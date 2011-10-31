@@ -30,7 +30,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-07-28 09:12+0100\n"
+"PO-Revision-Date: 2011-10-31 14:24+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "Language: sk\n"
@@ -174,21 +174,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Otvorená sieť"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID pre bezdrôtové ${iface}:"
+msgstr "Typ bezdrôtovej siete pre ${iface}:"
 
 #. Type: select
 #. Description
@@ -198,6 +197,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Vyberte WEP/Otvorená ak je sieť otvorená alebo zabezpečená pomocou WEP. "
+"Vyberte WPA/WPA2 ak je sieť zabezpečená pomocou WPA/WPA2 PSK (Pre-Shared "
+"Key)."
 
 #. Type: string
 #. Description
@@ -271,9 +273,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Chybné používateľské meno"
+msgstr "Chybné heslo"
 
 #. Type: error
 #. Description
@@ -283,14 +284,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Heslo WPA/WPA2 PSK bolo buď príliš dlhé (viac ako 64 znakov) alebo príliš "
+"krátje (menej ako 8 znakov)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "WEP kľúč pre bezdrôtové zariadenie ${iface}:"
+msgstr "Kľúč WPA/WPA2 pre bezdrôtové zariadenie ${iface}:"
 
 #. Type: string
 #. Description
@@ -300,6 +302,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Zadajte heslo na autentifikáciu WPA/WPA2 PSK. To by malo byť heslo "
+"bezdrôtovej siete, ktorú sa pokúšate použiť."
 
 #. Type: error
 #. Description
@@ -324,7 +328,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Prebieha pokus o výmenu kľúčov s prístupovým bodom..."
 
 #. Type: text
 #. Description
@@ -341,14 +345,14 @@ msgstr "Môže to chvíľu trvať."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Spojenie WPA/WPA2 bolo úspešné"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Zlyhala výmena kľúčov a asociácia"
 
 #. Type: note
 #. Description
@@ -358,6 +362,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Výmena kľúčov a asociácia s prístupovým bodom zlyhala. Prosím, skontrolujte "
+"parametre WPA/WPA2, ktoré ste zadali."
 
 #. Type: string
 #. Description
