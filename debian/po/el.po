@@ -8,6 +8,10 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 #
+#
+# Translations from iso-codes:
+#     Translations taken from ICU SVN on 2007-09-09
+#   Panayotis Pakos <aeikineton@yahoo.com>
 # George Papamichelakis <george@step.gr>, 2004.
 # Emmanuel Galatoulas <galas@tee.gr>, 2004.
 # Konstantinos Margaritis <markos@debian.org>, 2004, 2006.
@@ -15,13 +19,9 @@
 # quad-nrg.net <galaxico@quad-nrg.net>, 2005, 2006, 2007.
 # quad-nrg.net <yodesy@quad-nrg.net>, 2006, 2008.
 # QUAD-nrg.net <yodesy@quad-nrg.net>, 2006.
-# galaxico@quad-nrg.net <galaxico@quad-nrg.net>, 2009.
+# galaxico@quad-nrg.net <galaxico@quad-nrg.net>, 2009, 2011.
 # Emmanuel Galatoulas <galaxico@quad-nrg.net>, 2009, 2010.
-#
-# Translations from iso-codes:
 #   Tobias Quathamer <toddy@debian.org>, 2007.
-#     Translations taken from ICU SVN on 2007-09-09
-#   Panayotis Pakos <aeikineton@yahoo.com>
 #   Free Software Foundation, Inc., 2004.
 #   Alastair McKinstry <mckinstry@computer.org>, 2001.
 #   QUAD-nrg.net <yodesy@quad-nrg.net>, 2006, 2010.
@@ -33,8 +33,8 @@ msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-09-04 19:11+0300\n"
-"Last-Translator: Emmanuel Galatoulas <galaxico@quad-nrg.net>\n"
+"PO-Revision-Date: 2011-10-31 11:25+0200\n"
+"Last-Translator: galaxico <galaxico@quad-nrg.net>\n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -183,13 +183,13 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Ανοιχτό Δίκτυο"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
@@ -561,9 +561,8 @@ msgstr "Ανίχνευση για ασύρματα σημεία πρόσβαση
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Ανίχνευση υλικού, παρακαλώ περιμένετε..."
+msgstr "Ανίχνευση συνδέσμου στο ${interface}; παρακαλώ περιμένετε..."
 
 #. Type: text
 #. Description
