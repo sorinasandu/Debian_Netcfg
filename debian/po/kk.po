@@ -8,7 +8,7 @@
 # This file is distributed under the same license as debian-installer.
 #
 # Talgat Daniyarov
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2008, 2009
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2008-2011
 # Dauren Sarsenov <daur88@inbox.ru>, 2008, 2009
 #
 # Translations from iso-codes:
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-02-02 10:21+0600\n"
+"PO-Revision-Date: 2011-09-21 14:41+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -165,21 +165,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Ашық желі"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "${iface} үшін сымсыз ESSID:"
+msgstr "${iface} үшін сымсыз желі түрі:"
 
 #. Type: select
 #. Description
@@ -189,6 +188,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Егер желі ашық не WEP көмегімен қорғалған болса, онда WEP/Ашық таңдаңыз. "
+"Егер желі WPA/WPA2 PSK (Pre-Shared Key) көмегімен қорғалған болса, WPA/WPA2 "
+"таңдаңыз."
 
 #. Type: string
 #. Description
@@ -263,9 +265,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Пайдаланушы аты жарамсыз"
+msgstr "Кілт фразасы қате"
 
 #. Type: error
 #. Description
@@ -275,14 +276,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"WPA/WPA2 PSK кілт фразасы не тым ұзын (64 таңбадан көп), не тым қысқа (8 "
+"таңбадан аз)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "${iface} сымсыз құрылғысының WEP кілті:"
+msgstr "${iface} сымсыз құрылғысы үшін WPA/WPA2 кілт фразасы:"
 
 #. Type: string
 #. Description
@@ -292,6 +294,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"WPA/WPA2 PSK аутентификациясы үшін кілт фразаны енгізіңіз. Сіз қолданам "
+"деген сымсыз желі үшін ондай кілт фразасы орнатылған болуы тиіс."
 
 #. Type: error
 #. Description
@@ -315,7 +319,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Қатынау нүктесімен кілттермен алмасып көру талабы..."
 
 #. Type: text
 #. Description
@@ -332,14 +336,14 @@ msgstr "Бұл әрекет біраз уақытты алуы мүмкін."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2 байланысы сәтті"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Кілттермен алмасу мен ассоциация қатесі"
 
 #. Type: note
 #. Description
@@ -349,6 +353,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Қатынау нүктесімен кілттермен алмасу мен ассоциация сәтсіз аяқталды. Сіз "
+"ұсынған WPA/WPA2 баптауларын тексеріңіз."
 
 #. Type: string
 #. Description
@@ -809,7 +815,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
 msgid "Continue without a default route?"
-msgstr "Әдеттегі роутерсіз жалғастыруды қалайсыз ба?"
+msgstr "Бастапқы бағдарсыз (default route) жалғастыруды қалайсыз ба?"
 
 #. Type: boolean
 #. Description
