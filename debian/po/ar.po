@@ -5,25 +5,26 @@
 #
 # translation of ar.po to Arabic
 # Arabic messages for debian-installer. Copyright (C) 2003 Software in the Public Interest, Inc. This file is distributed under the same license as debian-installer. Ossama M. Khayat <okhayat@yahoo.com>, 2005.
-# Ossama M. Khayat <okhayat@yahoo.com>, 2006, 2007, 2008, 2009, 2010.
 #
 # Translations from iso-codes:
+#     Translations taken from ICU SVN on 2007-09-09
+#   Translations from kde-i18n/desktop.po:
+#
+# Ossama M. Khayat <okhayat@yahoo.com>, 2006, 2007, 2008, 2009, 2010.
 #   Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004.
 #   Alastair McKinstry <mckinstry@computer.org>, 2002.
-#   Free Software Foundation, Inc., 2002, 2004
+#   Free Software Foundation, Inc., 2002, 2004.
 #   Ossama M. Khayat <okhayat@yahoo.com>, 2006, 2008, 2010.
 #   Tobias Quathamer <toddy@debian.org>, 2007.
-#     Translations taken from ICU SVN on 2007-09-09
-#   Translations from kde-i18n/desktop.po: 
 #   Mohammad Gamal <f2c2001@yahoo.com>, 2001.
-#
+# Ossama Khayat <okhayat@yahoo.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ar\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-08-22 23:44+0300\n"
-"Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
+"PO-Revision-Date: 2011-11-15 14:34+0300\n"
+"Last-Translator: Ossama Khayat <okhayat@yahoo.com>\n"
 "Language-Team: American English <support@arabeyes.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -165,21 +166,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Open Network"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID لاسلكي لـ ${iface}:"
+msgstr "نوع الشبكة اللاسلكية للواجهة ${iface}:"
 
 #. Type: select
 #. Description
@@ -189,6 +189,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"اختر WEP/Open إن كانت الشبكة مفتوحة أو محميّة ببروتوكول WEP. اختر WPA/WPA2 إن "
+"كانت الشبكة محميّة باستخدام WPA/WPA2 PSK (Pre-Shared Key)."
 
 #. Type: string
 #. Description
@@ -262,9 +264,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "اسم مستخدم غير سليم"
+msgstr "كلمة المرور غير صحيحة"
 
 #. Type: error
 #. Description
@@ -274,14 +275,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"إما أن كلمة مرور WPA/WPA2 PSK طويلة جداً (أكثر من 64 حرف) أ قصيرة جداً (أقل من "
+"8 أحرف)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "مفتاح WEP للجهاز اللاسلكي ${iface}:"
+msgstr "كلمة مرور WPA/WPA2 للجهاز اللاسلكي ${iface}:"
 
 #. Type: string
 #. Description
@@ -291,6 +293,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"أدخل كلمة المرور للتوثيق باستخدام WPA/WPA2 PSK. يجب أن تكون كلمة المرور هذه "
+"هي المحددة للشبكة اللاسلكية التي تحاول استخدامها."
 
 #. Type: error
 #. Description
@@ -315,7 +319,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "جاري محاولة تبادل المفاتيح مع نقطة الوصول..."
 
 #. Type: text
 #. Description
@@ -332,14 +336,14 @@ msgstr "قد يستغرق هذا بعض الوقت."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "نجح اتصال WPA/WPA2"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "فشل تبادل المفاتيح والربط"
 
 #. Type: note
 #. Description
@@ -349,6 +353,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"فشل تبادل المفاتيح والربط مع نقطة الوصول. الرجاء التحقق من مُعطيات WPA/WPA2 "
+"المُدخلة."
 
 #. Type: string
 #. Description
@@ -396,16 +402,15 @@ msgstr "الاسم \"${hostname}\" غير صالح."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"اسم المضيف الصّحيح يمكنه أن يحتوي فقط الأرقام من 0 إلى 9 و الأحرف الصّغرى من a "
-"إلى z و علامة السّالب. يجب أيضاً أن يكون طوله بين حرفين و 63 حرفاً و لا يمكنه "
-"أن يبدأ أو ينتهي بعلامة السّالب."
+"اسم المضيف الصّحيح يمكن أن يحتوي فقط الأرقام من 0 إلى 9 والأحرف اللاتينية "
+"الكبيرة والصغيرة من a إلى z و علامة السّالب. يجب أيضاً أن يكون طوله بحد أقصى "
+"${maxhostnamelen} حرفاً، وأن لا يبدأ أو ينتهي بعلامة السّالب."
 
 #. Type: error
 #. Description
@@ -534,9 +539,8 @@ msgstr "البحث عن نقاط الوصول اللاسلكي ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "اكتشاف العتاد، الرجاء الانتظار..."
+msgstr "اكتشاف الاتصال على ${interface}; الرجاء الانتظار..."
 
 #. Type: text
 #. Description
