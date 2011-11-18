@@ -295,6 +295,12 @@ int get_all_ifs (int all, char*** ptr)
         if (!strncmp(ibuf, "sit", 3))        /* ignore tunnel devices */
             continue;
 #endif
+#if defined(__FreeBSD_kernel__)
+        if (!strncmp(ibuf, "pfsync", 6))     /* ignore pfsync devices */
+            continue;
+        if (!strncmp(ibuf, "usbus", 5))      /* ignore usbus devices */
+            continue;
+#endif
 #if defined(WIRELESS)
         if (is_raw_80211(ibuf))
             continue;
