@@ -1042,19 +1042,23 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     if ((fp = file_open(HOSTS_FILE, "w"))) {
         char ptr1[INET_ADDRSTRLEN];
 
-        fprintf(fp, "127.0.0.1\tlocalhost\n");
+        fprintf(fp, "127.0.0.1\tlocalhost");
 
         if (ipaddress.s_addr) {
             inet_ntop (AF_INET, &ipaddress, ptr1, sizeof(ptr1));
             if (domain_nodot && !empty_str(domain_nodot))
-                fprintf(fp, "%s\t%s.%s\t%s\n", ptr1, hostname, domain_nodot, hostname);
+                fprintf(fp, "\n%s\t%s.%s\t%s\n", ptr1, hostname, domain_nodot, hostname);
             else
-                fprintf(fp, "%s\t%s\n", ptr1, hostname);
+                fprintf(fp, "\n%s\t%s\n", ptr1, hostname);
         } else {
+#if defined(__linux__) || defined(__GNU__)
             if (domain_nodot && !empty_str(domain_nodot))
-                fprintf(fp, "127.0.1.1\t%s.%s\t%s\n", hostname, domain_nodot, hostname);
+                fprintf(fp, "\n127.0.1.1\t%s.%s\t%s\n", hostname, domain_nodot, hostname);
             else
-                fprintf(fp, "127.0.1.1\t%s\n", hostname);
+                fprintf(fp, "\n127.0.1.1\t%s\n", hostname);
+#else
+            fprintf(fp, "\t%s\n", hostname);
+#endif
         }
 
         fprintf(fp, "\n" IPV6_HOSTS);
