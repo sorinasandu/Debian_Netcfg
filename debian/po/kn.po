@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-11-18 19:11+0530\n"
+"PO-Revision-Date: 2011-11-27 23:24+0530\n"
 "Last-Translator: Prabodh C P <prabodh@fsmk.org>\n"
 "Language-Team: Kannada <debian-l10n-kannada@lists.debian.org>\n"
 "Language: kn\n"
@@ -156,8 +156,8 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
-"${iface} ಎಂಬುದು ನಿಸ್ತಂತು ಜಾಲಬಂಧ ಅಂತರ್-ಕ್ರಿಯೆ. ನೀವು $(iface} ಬಳಕೆ ಮಾಡಲು ಇಚ್ಛಿಸುವ "
-"ನಿಸ್ತಂತು ಜಾಲಬಂಧದ (the ESSID) ನ್ನು ಹೆಸರಿಸಿ. ನಿಸ್ತಂತು ವ್ಯವಸ್ಥೆಯನ್ನು ತೊರೆದು "
+"${iface} ಎಂಬುದು ನಿಸ್ತಂತು ಜಾಲಬಂಧ ಸಂಪರ್ಕ ಸಾಧನ ನೀವು $(iface} ಬಳಕೆ ಮಾಡಲು ಇಚ್ಛಿಸುವ "
+"ನಿಸ್ತಂತು ಜಾಲಬಂಧದ (the ESSID) ನ್ನು ಹೆಸರಿಸಿ. ನಿಸ್ತಂತು .ಸಂರಚನಾ ವ್ಯವಸ್ಥೆಯನ್ನು ತೊರೆದು "
 "ಮುಂದುವರೆಯಲು ಈ ಜಾಗವನ್ನು ಖಾಲಿಬಿಡಿ"
 
 #. Type: select
@@ -276,7 +276,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "ನಿಸ್ತಂತು ಸಲಕರಣೆ ${iface}ಗೆ ಬೇಕಾದ WPA/WPA2"
+msgstr "ನಿಸ್ತಂತು ಸಲಕರಣೆ ${iface}ಗೆ ಬೇಕಾದ WPA/WPA2 ಗುಪ್ತವಾಕ್ಯ"
 
 #. Type: string
 #. Description
@@ -464,7 +464,7 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
-"ಭೌತಿಕ \"kill switch\" ಮುಖಾಂತರ ${iface}ಅನ್ನು ನಿಷ್ಕ್ರೀಯಗೊಳಿಸಲಾಗಿದೆ. ಈ ಅಂತರ್-"
+"ಭೌತಿಕ \"kill switch\" ಮುಖಾಂತರ ${iface}ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಈ ಅಂತರ್-"
 "ಪ್ರಕ್ರಿಯೆಯನ್ನು ಬಳಸಲು ಇಚ್ಚಿಸಿದಲ್ಲಿ ಮುಂದುವರೆಯು ಮುನ್ನ ಸ್ವಿಚ್ ಆನ್ ಮಾಡಿ."
 
 #. Type: select
@@ -626,14 +626,14 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:43001
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "ಅಂತರ್-ಬಳಕೆದಾರ ಸಂಪರ್ಕ ವಾಹನ"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:44001
 msgid "Unknown interface"
-msgstr ""
+msgstr "ತಿಳಿಯದ ಸಂಪರ್ಕ ಸಾಧನ"
 
 #. Type: text
 #. Description
@@ -709,7 +709,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
-msgstr ""
+msgstr "DHCP ಸಂರಚನಾ ಕ್ರಿಯೆಯನ್ನು ಮಧ್ಯದಲ್ಲೇ ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ."
 
 #. Type: select
 #. Choices
@@ -810,6 +810,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"ಜಾಲಬಂಧದ ಸ್ವಯಂಸಂರಚನೆ ಯಶಸ್ವಿಯಾಗಿದೆ. ಆದರೆ ಪೂರ್ವನಿಯೋಜಿತ ಮಾರ್ಗವನ್ನು ಸಿದ್ಧಪಡಿಸಲಾಗಿಲ್ಲ: "
+"ಅಂತರ್ಜಾಲದಲ್ಲಿರುವ ಇತರೇ ಆತಿಥೇಯಗಳೊಡನೆ ವ್ಯವಹರಿಸಲು ಹೇಗೆಂದು ಗಣಕಕ್ಕೆ ತಿಳಿದಿಲ್ಲ. ನಿಮ್ಮೊಡನೆ "
+"ಮೊದಲನೆ ಅನುಸ್ಥಾಪನಾ CD-ROM, 'Netinst' CD-ROM, ಅಥವಾ ಸ್ಥಳೀಯ ಜಾಲಬಂಧದಲ್ಲಿನ "
+"ಮೆದುಸರಕುಗಳು, ಇವುಗಳಲ್ಲಿ ಯಾವುದೊಂದು ಲಭ್ಯವಿಲ್ಲದಿದ್ದಲ್ಲಿ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಮುಂದುವರೆಸುವುದು "
+"ಅಸಾಧ್ಯ."
 
 #. Type: boolean
 #. Description
@@ -932,14 +937,14 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "Unreachable gateway"
-msgstr "ತಲುಪಲಾಗದ ಗೇಟ್ ವೇ"
+msgstr "ತಲುಪಲಾಗದ ಪ್ರವೀಶದ್ವಾರ"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "The gateway address you entered is unreachable."
-msgstr ""
+msgstr "ನೀವು ದಾಖಲಿಸಿದ ಪ್ರವೇಶದ್ವಾರ ವಿಳಾಸವನ್ನು ತಲಪಲಾಗುತ್ತಿಲ್ಲ."
 
 #. Type: error
 #. Description
