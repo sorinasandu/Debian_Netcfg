@@ -7,10 +7,9 @@
 # Copyright (C) 2010 Software in the Public Interest, Inc.
 # Copyright (C) 2008 THE cp6Linux'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the debian-installer package.
-# Karolina Kalic <karolina@janos.in.rs>, 2010.
-# Janos Guljas <janos@janos.in.rs>, 2010.
+# Karolina Kalic <karolina@resenje.org>, 2010-2011.
+# Janos Guljas <janos@resenje.org>, 2010-2011.
 # Veselin Mijušković <veselin.mijuskovic@gmail.com>, 2008.
-# , fuzzy
 #
 #
 # Translations from iso-codes:
@@ -26,8 +25,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-08-25 17:41+0100\n"
-"Last-Translator: Janos Guljas <janos@janos.in.rs>\n"
+"PO-Revision-Date: 2011-12-04 00:12+0100\n"
+"Last-Translator: Karolina Kalic <karolina@resenje.org>\n"
 "Language-Team: Serbian/Cyrillic\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -169,21 +168,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Отворена мрежа"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "Бежични ESSID за ${iface}:"
+msgstr "Бежични тип мреже за ${iface}:"
 
 #. Type: select
 #. Description
@@ -193,6 +191,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Изаберите WEP/Oтворена ако је мрежа отворена или осигурана WEP кључем. "
+"Изаберите WPA/WPA2 ако је мрежа заштићена WPA/WPA2 PSK (Pre-Shared Key) "
+"кључем."
 
 #. Type: string
 #. Description
@@ -267,9 +268,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Неисправно корисничко име"
+msgstr "Неисправна лозинка"
 
 #. Type: error
 #. Description
@@ -279,14 +279,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"WPA/WPA2 PSK фраза је била или предуга (више од 64 карактера) или прекратка "
+"(мање од 8 карактера)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "WEP кључ за бежични уређај ${iface}:"
+msgstr "WPA/WPA2 лозинка за бежични уређај ${iface}:"
 
 #. Type: string
 #. Description
@@ -296,6 +297,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Унесите фразу за WPA/WPA2 PSK аутентикацију. Ово треба да је фраза "
+"дефинисана за бежичну мрежу коју желите да користите."
 
 #. Type: error
 #. Description
@@ -320,7 +323,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Покушај размене кључа са приступном тачком..."
 
 #. Type: text
 #. Description
@@ -337,14 +340,14 @@ msgstr "Ово може потрајати неко време."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2 конекција је успела"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Неуспех размене кључа и повезивања"
 
 #. Type: note
 #. Description
@@ -354,6 +357,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Размена кључа и повезивање са приступном тачком није успела. Проверите WPA/"
+"WPA2 параметре које сте унели."
 
 #. Type: string
 #. Description
@@ -402,16 +407,16 @@ msgstr "Име \"${hostname}\" је нисправно."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Важеће име рачунара може да садржи само бројеве од 1 до 9, мала латинична "
-"слова од a до z, и знак „минус“. Мора бити дуго од 2 до 63 знака, и не може "
-"почињати или се завршавати знаком „минус“."
+"Важеће име рачунара може да садржи само бројеве од 0 до 9, велика и мала "
+"латинична слова (А-Z и a-z), и знак „минус“. Мора бити највише "
+"${maxhostnamelen} знака дуго, и не може почињати или се завршавати знаком "
+"„минус“."
 
 #. Type: error
 #. Description
@@ -543,9 +548,8 @@ msgstr "Тражење прикључне тачке бежичне мреже..
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Детектовање хардвера, сачекајте..."
+msgstr "Детектовање линка на ${interface}; сачекајте..."
 
 #. Type: text
 #. Description
