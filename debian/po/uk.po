@@ -3,12 +3,40 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
+# translation of uk.po to Ukrainian
+# translation of uk.po to
+# Ukrainian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+#
+# Translations from iso-codes:
+# Eugeniy Meshcheryakov <eugen@debian.org>, 2005, 2006, 2007, 2010.
+# Євгеній Мещеряков <eugen@debian.org>, 2008.
+# Borys Yanovych <borys@yanovy.ch>, 2010, 2011.
+# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2010.
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: uk\n"
+"Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
+"POT-Creation-Date: 2011-08-16 04:31+0000\n"
+"PO-Revision-Date: 2011-09-19 07:23+0300\n"
+"Last-Translator: Borys Yanovych <borys@yanovy.ch>\n"
+"Language-Team: Ukrainian <>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Auto-configure network with DHCP?"
-msgstr ""
+msgstr "Налаштувати мережу автоматично за допомогою DHCP?"
 
 #. Type: boolean
 #. Description
@@ -21,13 +49,18 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
+"Мережа може бути налаштована або за допомогою DHCP, або вручну. Якщо ви "
+"виберете DHCP, але програма встановлення не зможе отримати необхідну "
+"інформацію від DHCP сервера вашої мережі, то вам буде надана можливість "
+"налаштувати вашу мережу вручну, після спроби налаштувати її за допомогою "
+"DHCP."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:3001
 msgid "Domain name:"
-msgstr ""
+msgstr "Назва домену:"
 
 #. Type: string
 #. Description
@@ -39,13 +72,17 @@ msgid ""
 "If you are setting up a home network, you can make something up, but make "
 "sure you use the same domain name on all your computers."
 msgstr ""
+"Назва домену - це частина вашої Інтернет-адреси, справа від назви "
+"комп'ютера. Часто вона закінчується на .com, .net, .edu або.org. Якщо ви "
+"встановлюєте домашню мережу, то можете вказати щось своє, але впевніться, що "
+"назва домену однакова на всіх ваших комп'ютерах."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:4001
 msgid "Name server addresses:"
-msgstr ""
+msgstr "Адреси серверів імен:"
 
 #. Type: string
 #. Description
@@ -58,13 +95,18 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
+"Сервери імен використовуються для пошуку комп'ютерів за їх назвами. Введіть "
+"IP адреси серверів імен (не назви вузлів і не більше 3), розділені "
+"пробілами. Не використовуйте коми. Сервери будуть опитуватися в порядку їх "
+"вказування. Якщо ви не хочете використовувати сервери , то залиште поле "
+"порожнім."
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:5001
 msgid "Primary network interface:"
-msgstr ""
+msgstr "Первинний мережевий інтерфейс:"
 
 #. Type: select
 #. Description
@@ -75,6 +117,9 @@ msgid ""
 "primary network interface during the installation. If possible, the first "
 "connected network interface found has been selected."
 msgstr ""
+"Ваша система має декілька мережевих інтерфейсів. Виберіть той, який буде "
+"використовуватися як первинний під час встановлення. Якщо це можливо, то "
+"вибраний перший знайдений під'єднаний мережевий інтерфейс."
 
 #. Type: string
 #. Description
@@ -84,7 +129,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
-msgstr ""
+msgstr "Бездротовий ESSID для ${iface}:"
 
 #. Type: string
 #. Description
@@ -95,13 +140,16 @@ msgid ""
 "of the wireless network you would like ${iface} to use. If you would like to "
 "use any available network, leave this field blank."
 msgstr ""
+"${iface} є інтерфейсом бездротової мережі. Введіть назву (ESSID) бездротової "
+"мережі, яку повинен використовувати ${iface}. Якщо ви бажаєте "
+"використовувати будь-яку доступну мережу, то залиште поле порожнім."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
-msgstr ""
+msgstr "Спроба знайти доступну бездротову мережу завершилася невдачею."
 
 #. Type: string
 #. Description
@@ -112,25 +160,28 @@ msgid ""
 "of the wireless network you would like ${iface} to use. To skip wireless "
 "configuration and continue, leave this field blank."
 msgstr ""
+"${iface} є інтерфейсом бездротової мережі. Введіть назву (ESSID) бездротової "
+"мережі, яку ви бажаєте використовувати для ${iface}. Залиште це поле "
+"порожнім, якщо ви бажаєте продовжити без налаштування бездротової мережі."
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Відкрита мережа"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
 msgid "Wireless network type for ${iface}:"
-msgstr ""
+msgstr "Тип бездротової мережі для ${iface}:"
 
 #. Type: select
 #. Description
@@ -140,13 +191,16 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Оберіть WEP/Open, якщо мережа відкрита або захищена за допомогою WEP. "
+"Оберіть WPA/WPA2, якщо мережа захищена за допомогою WPA/WPA2 PSK (Pre-Shared "
+"Key)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:9001
 msgid "WEP key for wireless device ${iface}:"
-msgstr ""
+msgstr "WEP ключ для бездротового пристрою ${iface}:"
 
 #. Type: string
 #. Description
@@ -156,6 +210,8 @@ msgid ""
 "If applicable, please enter the WEP security key for the wireless device "
 "${iface}. There are two ways to do this:"
 msgstr ""
+"Введіть WEP ключ, якщо використовуєте, для бездротового пристрою ${iface}. "
+"Це можна зробити двома способами:"
 
 #. Type: string
 #. Description
@@ -165,6 +221,8 @@ msgid ""
 "If your WEP key is in the format 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn', "
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
+"Якщо ваш WEP ключ в форматі „nnnn-nnnn-nn“, „nn:nn:nn:nn:nn:nn:nn:nn“ або "
+"„nnnnnnnn“, де n - цифра, то просто введіть його в поле вводу."
 
 #. Type: string
 #. Description
@@ -174,6 +232,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
+"Якщо ваш WEP ключ є паролем, то додайте до нього префікс „s:“ (без лапок)."
 
 #. Type: string
 #. Description
@@ -183,13 +242,15 @@ msgid ""
 "Of course, if there is no WEP key for your wireless network, leave this "
 "field blank."
 msgstr ""
+"Звичайно, якщо для вашої бездротової мережі немає WEP ключа, залиште поле "
+"порожнім."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:10001
 msgid "Invalid WEP key"
-msgstr ""
+msgstr "Невірний WEP ключ"
 
 #. Type: error
 #. Description
@@ -199,13 +260,15 @@ msgid ""
 "The WEP key '${wepkey}' is invalid. Please refer to the instructions on the "
 "next screen carefully on how to enter your WEP key correctly, and try again."
 msgstr ""
+"WEP ключ „${wepkey}“ невірний. Уважно прочитайте інструкції щодо введення "
+"WEP ключа та спробуйте знову."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
 msgid "Invalid passphrase"
-msgstr ""
+msgstr "Непридатна ключова фраза"
 
 #. Type: error
 #. Description
@@ -215,13 +278,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Ключова фраза для WPA/WPA2 PSK занадто довга (понад 64 символів) або занадто "
+"коротка (менш ніж 8 символів)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr ""
+msgstr "Ключова фраза WPA/WPA2 для бездротового пристрою ${iface}:"
 
 #. Type: string
 #. Description
@@ -231,13 +296,15 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Введіть ключову фразу для WPA/WPA2 PSK аутентифікації. Це має бути ключова "
+"фраза, встановлена для бездротової мережі, яку ви намагаєтесь використати."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
 msgid "Invalid ESSID"
-msgstr ""
+msgstr "Невірний ESSID"
 
 #. Type: error
 #. Description
@@ -247,13 +314,15 @@ msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
 "but may contain all kinds of characters."
 msgstr ""
+"ESSID „${essid}“ невірний. ESSID повинен мати довжину не більше 32 символів, "
+"але він може містити всі види символів."
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Спроба обміну ключами з точкою доступу..."
 
 #. Type: text
 #. Description
@@ -263,21 +332,21 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:15001 ../netcfg-dhcp.templates:3001
 msgid "This may take some time."
-msgstr ""
+msgstr "Це може зайняти деякий час"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA/WPA2 зв'язок успішно встановлено"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Не вдалося здійснити обмін ключами та встановлення зв'язку "
 
 #. Type: note
 #. Description
@@ -287,20 +356,22 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Обмін ключами та встановлення зв'язку завершилися невдачею. Будь ласка, "
+"перевірте вказані вами параметри WPA/WPA2."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Hostname:"
-msgstr ""
+msgstr "Назва комп'ютера:"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:18001
 msgid "Please enter the hostname for this system."
-msgstr ""
+msgstr "Введіть назву цього комп'ютера:"
 
 #. Type: string
 #. Description
@@ -312,20 +383,24 @@ msgid ""
 "administrator. If you are setting up your own home network, you can make "
 "something up here."
 msgstr ""
+"Назва комп'ютера - це одне слово, що ідентифікує вашу систему в мережі. Якщо "
+"ви не знаєте, якою повинна бути назва вашого комп'ютера, то порадьтеся з "
+"адміністратором вашої мережі. Якщо ви встановлюєте вашу власну мережу, "
+"можете ввести щось на ваш смак."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
 msgid "Invalid hostname"
-msgstr ""
+msgstr "Невірна назва комп'ютера"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
 msgid "The name \"${hostname}\" is invalid."
-msgstr ""
+msgstr "Назва комп'ютера „${hostname}“ не припустима."
 
 #. Type: error
 #. Description
@@ -337,13 +412,17 @@ msgid ""
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
+"Вірна назва комп'ютера може містити тільки цифри 0-9, великі та малі літери "
+"(A-Z і a-z) та знак мінус. Її довжина не повинна перевищувати "
+"${maxhostnamelen} символів. Назва не може починатися або закінчуватися "
+"знаком мінус."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:20001
 msgid "Error"
-msgstr ""
+msgstr "Помилка"
 
 #. Type: error
 #. Description
@@ -353,13 +432,15 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
+"Виникла помилка і процес налаштування мережі було перервано. Ви можете "
+"повторити його з меню встановлення."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:21001
 msgid "No network interfaces detected"
-msgstr ""
+msgstr "Мережеві інтерфейси не знайдені"
 
 #. Type: error
 #. Description
@@ -369,6 +450,8 @@ msgid ""
 "No network interfaces were found. The installation system was unable to find "
 "a network device."
 msgstr ""
+"Мережеві інтерфейси не знайдені. Система встановлення не змогла знайти "
+"мережеву карту."
 
 #. Type: error
 #. Description
@@ -378,6 +461,8 @@ msgid ""
 "You may need to load a specific module for your network card, if you have "
 "one. For this, go back to the network hardware detection step."
 msgstr ""
+"Можливо вам потрібно завантажити модуль для мережевої карти, якщо така є. "
+"Для цього поверніться до кроку визначення мережевого обладнання."
 
 #. Type: note
 #. Description
@@ -386,7 +471,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:22001
 msgid "Kill switch enabled on ${iface}"
-msgstr ""
+msgstr "Інтерфейс ${iface} вимкнений вимикачем"
 
 #. Type: note
 #. Description
@@ -399,6 +484,9 @@ msgid ""
 "\". If you intend to use this interface, please switch it on before "
 "continuing."
 msgstr ""
+"Здається, інтерфейс ${iface} вимкнений за допомогою фізичного вимикача. Якщо "
+"ви збираєтесь використовувати цей інтерфейс, то ввімкніть його перед "
+"продовженням."
 
 #. Type: select
 #. Choices
@@ -410,7 +498,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:23001
 msgid "Infrastructure (Managed) network"
-msgstr ""
+msgstr "Централізована мережа"
 
 #. Type: select
 #. Choices
@@ -422,13 +510,13 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:23001
 msgid "Ad-hoc network (Peer to peer)"
-msgstr ""
+msgstr "Ad-hoc мережа (точка-точка)"
 
 #. Type: select
 #. Description
 #: ../netcfg-common.templates:23002
 msgid "Type of wireless network:"
-msgstr ""
+msgstr "Тип бездротової мережі:"
 
 #. Type: select
 #. Description
@@ -438,131 +526,135 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
+"Бездротова мережа може бути або централізованою, або ad-hoc. Якщо ви "
+"використовуєте справжню точку доступу, то ваша мережа є централізованою. "
+"Якщо вашою „точкою доступу“ є інший комп'ютер, то ваша мережа може бути ad-"
+"hoc мережею."
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:24001
 msgid "Wireless network configuration"
-msgstr ""
+msgstr "Налаштування бездротової мережі"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
-msgstr ""
+msgstr "Пошук точок доступу бездротової мережі..."
 
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
 msgid "Detecting link on ${interface}; please wait..."
-msgstr ""
+msgstr "Перевірка зв'язку на інтерфейсі ${interface}, зачекайте..."
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:28001
 msgid "<none>"
-msgstr ""
+msgstr "<жоден>"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:29001
 msgid "Wireless ethernet (802.11x)"
-msgstr ""
+msgstr "Бездротовий Ethernet (802.11x)"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:30001
 msgid "wireless"
-msgstr ""
+msgstr "бездротовий"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:31001
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:32001
 msgid "Token Ring"
-msgstr ""
+msgstr "Token Ring"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:33001
 msgid "USB net"
-msgstr ""
+msgstr "USB net"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:35001
 msgid "Serial-line IP"
-msgstr ""
+msgstr "IP по послідовній лінії (SLIP)"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:36001
 msgid "Parallel-port IP"
-msgstr ""
+msgstr "IP по паралельній лінії (PLIP)"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:37001
 msgid "Point-to-Point Protocol"
-msgstr ""
+msgstr "Протокол PPP"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:38001
 msgid "IPv6-in-IPv4"
-msgstr ""
+msgstr "IPv6-в-IPv4"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:39001
 msgid "ISDN Point-to-Point Protocol"
-msgstr ""
+msgstr "Протокол ISDN PPP"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:40001
 msgid "Channel-to-channel"
-msgstr ""
+msgstr "Channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:41001
 msgid "Real channel-to-channel"
-msgstr ""
+msgstr "Real channel-to-channel"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:43001
 msgid "Inter-user communication vehicle"
-msgstr ""
+msgstr "Inter-user communication vehicle"
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:44001
 msgid "Unknown interface"
-msgstr ""
+msgstr "Невідомий інтерфейс"
 
 #. Type: text
 #. Description
@@ -570,7 +662,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:45001
 msgid "Storing network settings..."
-msgstr ""
+msgstr "Збереження мережевих налаштувань..."
 
 #. Type: text
 #. Description
@@ -578,14 +670,14 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
-msgstr ""
+msgstr "Налаштувати мережу"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "DHCP hostname:"
-msgstr ""
+msgstr "DHCP-назва:"
 
 #. Type: string
 #. Description
@@ -595,34 +687,37 @@ msgid ""
 "You may need to supply a DHCP host name. If you are using a cable modem, you "
 "might need to specify an account number here."
 msgstr ""
+"В деяких випадках вам може знадобитися DHCP-назва машини. Якщо ви "
+"користуєтесь кабельним модемом, то часто провайдер вимагає вказати тут номер "
+"облікового запису."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:1001
 msgid "Most other users can just leave this blank."
-msgstr ""
+msgstr "Більшість інших користувачів можуть залишити це поле порожнім."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr ""
+msgstr "Налаштування мережі за допомогою DHCP"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
-msgstr ""
+msgstr "Автоматичне налаштування мережі завершене успішно"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client found"
-msgstr ""
+msgstr "Клієнти DHCP не знайдені"
 
 #. Type: error
 #. Description
@@ -630,13 +725,15 @@ msgstr ""
 #: ../netcfg-dhcp.templates:5001
 msgid "No DHCP client was found. This package requires pump or dhcp-client."
 msgstr ""
+"Клієнти DHCP не знайдені. Для цього пакунку потрібні пакунки pump або dhcp-"
+"client."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
-msgstr ""
+msgstr "Процес налаштування DHCP було перервано."
 
 #. Type: select
 #. Choices
@@ -646,7 +743,7 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr ""
+msgstr "Повторити автоматичне налаштування мережі"
 
 #. Type: select
 #. Choices
@@ -656,7 +753,7 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr ""
+msgstr "Повторити автоматичне налаштування мережі з DHCP-назвою вузла"
 
 #. Type: select
 #. Choices
@@ -666,7 +763,7 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
-msgstr ""
+msgstr "Налаштувати мережу вручну"
 
 #. Type: select
 #. Choices
@@ -676,14 +773,14 @@ msgstr ""
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Do not configure the network at this time"
-msgstr ""
+msgstr "Не налаштовувати мережу зараз"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:6002
 msgid "Network configuration method:"
-msgstr ""
+msgstr "Метод налаштування мережі:"
 
 #. Type: select
 #. Description
@@ -696,13 +793,18 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
+"Звідси ви можете повторити автоматичне налаштування мережі за допомогою DHCP "
+"(що може спрацювати, якщо у вас повільний DHCP сервер) або налаштувати "
+"мережу вручну. Для деяких DHCP серверів потрібно, щоб клієнт надіслав DHCP-"
+"назву вузла, тому ви також можете повторити автоматичне налаштування з "
+"назвою вузла."
 
 #. Type: note
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr ""
+msgstr "Не вдалося автоматично налаштувати мережу"
 
 #. Type: note
 #. Description
@@ -712,13 +814,15 @@ msgid ""
 "Your network is probably not using the DHCP protocol. Alternatively, the "
 "DHCP server may be slow or some network hardware is not working properly."
 msgstr ""
+"Ваша мережа, мабуть, не використовує протокол DHCP. Також, можливо, DHCP "
+"сервер дуже повільний або деяке мережеве обладнання працює некоректно."
 
 #. Type: boolean
 #. Description
 #. :sl2:
 #: ../netcfg-dhcp.templates:8001
 msgid "Continue without a default route?"
-msgstr ""
+msgstr "Продовжувати без маршруту за замовчанням?"
 
 #. Type: boolean
 #. Description
@@ -731,6 +835,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
+"Автоматичне налаштування мережі пройшло успішно. Однак, не був встановлений "
+"маршрут за замовчанням: система не знає, як зв'язуватися з вузлами Інтернет. "
+"Ви не зможете продовжити встановлення, якщо ви не маєте першого офіційного "
+"компакт-диску Debian, диску „Netinst“ або пакунків, що доступні через "
+"локальну мережу."
 
 #. Type: boolean
 #. Description
@@ -740,20 +849,22 @@ msgid ""
 "If you are unsure, you should not continue without a default route: contact "
 "your local network administrator about this problem."
 msgstr ""
+"Якщо ви не впевнені, чи можете ви продовжувати без маршруту за замовчанням, "
+"проконсультуйтеся із адміністратором вашої локальної мережі."
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr ""
+msgstr "Повторити налаштування бездротової мережі"
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-static.templates:1001
 msgid "IP address:"
-msgstr ""
+msgstr "IP-адреса:"
 
 #. Type: string
 #. Description
@@ -764,13 +875,16 @@ msgid ""
 "separated by periods.  If you don't know what to use here, consult your "
 "network administrator."
 msgstr ""
+"IP-адреса унікальна для вашого комп'ютера і складається із чотирьох чисел, "
+"розділених крапками. Якщо ви не знаєте, що тут використати, "
+"проконсультуйтеся у вашого мережевого адміністратора."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:2001
 msgid "Malformed IP address"
-msgstr ""
+msgstr "Неприпустима IP адреса"
 
 #. Type: error
 #. Description
@@ -780,13 +894,15 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
+"Введена вами IP адреса неприпустима. Вона повинна бути введена в форматі x.x."
+"x.x де кожен „x“ є числом не більшим 255. Спробуйте знову."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:3001
 msgid "Point-to-point address:"
-msgstr ""
+msgstr "Адреса PPP:"
 
 #. Type: string
 #. Description
@@ -798,13 +914,16 @@ msgid ""
 "know the value.  The point-to-point address should be entered as four "
 "numbers separated by periods."
 msgstr ""
+"Адреса PPP використовується для визначення другого кінця PPP з'єднання. "
+"Проконсультуйтеся з вашим мережевим адміністратором, якщо ви не знаєте цієї "
+"адреси. PPP адреса повинна бути введена як чотири числа, розділені крапками."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-static.templates:4001
 msgid "Netmask:"
-msgstr ""
+msgstr "Маска підмережі:"
 
 #. Type: string
 #. Description
@@ -815,13 +934,17 @@ msgid ""
 "Consult your network administrator if you do not know the value.  The "
 "netmask should be entered as four numbers separated by periods."
 msgstr ""
+"Маска підмережі використовується для визначення того, які машини вважаються "
+"локальними для вашої мережі. Проконсультуйтеся з адміністратором мережі, "
+"якщо ви не знаєте, якою вона повинна бути. Маска підмережі повинна бути "
+"введена як чотири числа, розділені крапками."
 
 #. Type: string
 #. Description
 #. :sl1:
 #: ../netcfg-static.templates:5001
 msgid "Gateway:"
-msgstr ""
+msgstr "Шлюз:"
 
 #. Type: string
 #. Description
@@ -835,20 +958,27 @@ msgid ""
 "you can leave this blank.  If you don't know the proper answer to this "
 "question, consult your network administrator."
 msgstr ""
+"Шлюз - це IP-адреса (чотири числа, розділені крапками), яка вказує на "
+"шлюзовий маршрутизатор, також відомий як маршрутизатор за замовчанням. Весь "
+"трафік, що направляється за межі вашої локальної мережі (наприклад, в "
+"Інтернет), проходить через цей маршрутизатор. В рідких випадках ви можете не "
+"мати такого маршрутизатора; в цьому випадку залиште це поле порожнім. Якщо "
+"ви не знаєте правильної відповіді на це питання, проконсультуйтеся в "
+"адміністратора мережі."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "Unreachable gateway"
-msgstr ""
+msgstr "Шлюз недоступний"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-static.templates:6001
 msgid "The gateway address you entered is unreachable."
-msgstr ""
+msgstr "Вказана вами адреса шлюзу недоступна."
 
 #. Type: error
 #. Description
@@ -857,20 +987,22 @@ msgstr ""
 msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
+"Ви могли помилитися при введенні IP-адреси, маски підмережі та/або адреси "
+"шлюзу."
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-static.templates:7001
 msgid "Is this information correct?"
-msgstr ""
+msgstr "Чи вірна ця інформація?"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-static.templates:7001
 msgid "Currently configured network parameters:"
-msgstr ""
+msgstr "Поточні мережеві налаштування:"
 
 #. Type: boolean
 #. Description
@@ -884,6 +1016,12 @@ msgid ""
 " pointopoint   = ${pointopoint}\n"
 " nameservers   = ${nameservers}"
 msgstr ""
+" інтерфейс      = ${interface}\n"
+" IP-адреса      = ${ipaddress}\n"
+" маска підмережі= ${netmask}\n"
+" шлюз           = ${gateway}\n"
+" PPP адреса     = ${pointopoint}\n"
+" сервери імен   = ${nameservers}"
 
 #. Type: text
 #. Description
@@ -891,4 +1029,4 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
-msgstr ""
+msgstr "Налаштувати мережу із статичним адресуванням"
