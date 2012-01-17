@@ -3,19 +3,19 @@
 #
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
-# translation of debian-installer_packages_po_sublevel1_km.po to Khmer
-# Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2007, 2008, 2010.
+# translation of km.po to Khmer
 #
-# Translations from iso-codes:
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2007, 2008, 2010.
 #   eng vannak <evannak@khmeros.info>, 2006.
 #   auk piseth <piseth_dv@khmeros.info>, 2006.
-#   Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2010.
+#   Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2010, 2012.
+# Translations from iso-codes:
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer_packages_po_sublevel1_km\n"
+"Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-12-13 13:47+0700\n"
+"PO-Revision-Date: 2012-01-17 11:49+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
 "Language: \n"
@@ -156,21 +156,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "បណ្ដាញ WEP/Open"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID ឥតខ្សែ​សម្រាប់ ${iface} ៖"
+msgstr "ប្រភេទ​បណ្ដាញ​ឥត​ខ្សែសម្រាប់ ${iface}​ ៖"
 
 #. Type: select
 #. Description
@@ -180,6 +179,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"ជ្រើស WEP/Open ប្រសិន​បើ​បណ្ដាញ​បើក ឬ​មាន​សុវត្ថិភាព​ដោយ​ប្រើ​សោ WEP ។ ជ្រើស WPA/WPA2 ប្រសិន​បើ​"
+"បណ្ដាញ​ត្រូវ​បានការពារ​ដោយ WPA/WPA2 PSK (Pre-Shared Key) ។"
 
 #. Type: string
 #. Description
@@ -251,9 +252,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "ឈ្មោះ​អ្នក​ប្រើ​មិន​ត្រឹមត្រូវ"
+msgstr "ពាក្យ​សម្ងាត់​មិន​ត្រឹមត្រូវ"
 
 #. Type: error
 #. Description
@@ -263,14 +263,14 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"ពាក្យ​សម្ងាត់ WPA/WPA2 PSK វែង​ពេក (មាន​ច្រើនជាង ៦៤ តួអក្សរ) ឬ​ខ្លី​ពេក (តិចជាង ៨ តួអក្សរ) ។"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "កូនសោ WEP សម្រាប់​ឧបករណ៍​ឥត​ខ្សែ ${iface} ៖"
+msgstr "ពាក្យ​សម្ងាត់ WPA/WPA2 សម្រាប់​ឧបករណ៍​ឥត​ខ្សែ ${iface} ៖"
 
 #. Type: string
 #. Description
@@ -280,6 +280,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"បញ្ជូល​ពាក្យ​សម្ងាត់​សម្រាប់​ការ​ផ្ទៀងផ្ទាត់ WPA/WPA2 PSK ។ វា​គួរ​តែ​ជា​ពាក្យ​សម្ងាត់​ដែល​បាន​កំណត់​សម្រាប់​"
+"បណ្ដាញ​ឥត​ខ្សែ ដែល​អ្នក​កំពុង​ព្យាយាម​ប្រើ ។"
 
 #. Type: error
 #. Description
@@ -304,7 +306,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "កំពុង​ព្យាយាម​ផ្លាស់ប្ដូរ​សោ​ដែលមាន​ចំណុច​ចូល​ដំណើរការ..."
 
 #. Type: text
 #. Description
@@ -321,14 +323,14 @@ msgstr "វា​អាច​ចំណាយ​ពេល​មួយ​រយៈ
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "កា​រតភ្ជាប់ WPA/WPA2 បាន​ជោគជ័យ"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "បាន​បរាជ័យ​ក្នុងការ​ភ្ជាប់ និង​ផ្លាស់ប្ដូរ​សោ"
 
 #. Type: note
 #. Description
@@ -338,6 +340,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"ការ​ផ្លាស់ប្ដូរ​សោ និង​ការ​ភ្ជាប់​ជា​មួយ​ចំណុច​ចូល​ដំណើរការ​បាន​បរាជ័យ ។ សូម​ពិនិត្យ​មើល​ប៉ារ៉ាម៉ែត្រ WPA/WPA2 "
+"ដែល​អ្នក​បានផ្ដល់ ។"
 
 #. Type: string
 #. Description
@@ -385,15 +389,14 @@ msgstr "ឈ្មោះ \"${hostname}\" មិន​ត្រឹមត្រូ�
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"ឈ្មោះ​ម៉ាស៊ីន​ត្រឹមត្រូវ​មួយ​អាច​មាន​តែ​លេខ 0-9, អក្សរ​តូច a-z និង សញ្ញាដក ។ វា​ត្រូវ​តែ​មាន​ប្រវែង​ពី ២ "
-"ទៅ ៦៣ តួ ហើយ​មិន​គួរ​ចាប់ផ្ដើម ឬ បញ្ចប់​ដោយ​សញ្ញា​ដក​ឡើយ ។"
+"ឈ្មោះ​ម៉ាស៊ីន​ត្រឹមត្រូវ​អាច​មាន​តែ​លេខ​ពី ០-៩ និង​អក្សរ​តូច និង​ធំ (A-Z និង a-z) និង​សញ្ញា​ដក (-) ។ វា​ត្រូវ​"
+"តែ​មាន​ប្រវែង ${maxhostnamelen} និង​មិន​អាច​ចាប់ផ្ដើម​ដោយ​សញ្ញា​ដក (-) ទេ ។"
 
 #. Type: error
 #. Description
@@ -522,9 +525,8 @@ msgstr "កំពុង​ស្វែង​រក​ចំណុច​ចូល
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "កំពុង​រក​ផ្នែក​រឹង សូម​រង់ចាំ..."
+msgstr "រក​ឃើញ​តំណ​នៅលើ ${interface}; សូម​រង់ចាំ..."
 
 #. Type: text
 #. Description
