@@ -32,8 +32,8 @@ msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-01-03 12:04+0700\n"
-"Last-Translator: Arief S Fitrianto <arief@gurame.fisika.ui.ac.id>\n"
+"PO-Revision-Date: 2012-01-26 18:55+0700\n"
+"Last-Translator: Mahyuddin Susanto <udienz@ubuntu.com>\n"
 "Language-Team: Bahasa Indonesia <debian-l10n-id@gurame.fisika.ui.ac.id>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Auto-configure network with DHCP?"
-msgstr "Konfigurasikan jaringan secara otomatis dengan DHCP?"
+msgstr "Mengatur jaringan secara otomatis dengan DHCP?"
 
 #. Type: boolean
 #. Description
@@ -59,10 +59,10 @@ msgid ""
 "the opportunity to configure your network manually after the attempt to "
 "configure it by DHCP."
 msgstr ""
-"Jaringan dapat dikonfigurasi dengan DHCP atau dengan memasukkan informasi "
-"secara manual. Bila Anda memilih menggunakan DHCP dan program instalasi "
-"tidak mendapatkan konfigurasi dari server DHCP, Anda akan diberi kesempatan "
-"untuk konfigurasi manual."
+"Jaringan dapat diatur dengan DHCP atau dengan memasukkan informasi secara "
+"manual. Bila Anda memilih menggunakan DHCP dan program instalasi tidak "
+"mendapatkan konfigurasi dari server DHCP, Anda akan diberi kesempatan untuk "
+"konfigurasi manual."
 
 #. Type: string
 #. Description
@@ -670,7 +670,7 @@ msgstr "Antarmuka tak dikenal"
 #. :sl1:
 #: ../netcfg-common.templates:45001
 msgid "Storing network settings..."
-msgstr "Menyimpan konfigurasi jaringan ..."
+msgstr "Menyimpan pengaturan jaringan ..."
 
 #. Type: text
 #. Description
@@ -678,7 +678,7 @@ msgstr "Menyimpan konfigurasi jaringan ..."
 #. :sl1:
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
-msgstr "Mengonfigurasi jaringan"
+msgstr "Mengatur jaringan"
 
 #. Type: string
 #. Description
@@ -710,14 +710,14 @@ msgstr "Kebanyakan pengguna dapat membiarkan ruas ini kosong."
 #. :sl1:
 #: ../netcfg-dhcp.templates:2001
 msgid "Configuring the network with DHCP"
-msgstr "Mengonfigurasi jaringan dengan DHCP"
+msgstr "Mengatur jaringan dengan DHCP"
 
 #. Type: text
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:4001
 msgid "Network autoconfiguration has succeeded"
-msgstr "Otokonfigurasi jaringan telah berhasil"
+msgstr "Pengaturan otomatis jaringan telah berhasil"
 
 #. Type: error
 #. Description
@@ -749,7 +749,7 @@ msgstr "Proses konfigurasi DHCP telah dibatalkan."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "Ulangi Otokonfigurasi jaringan"
+msgstr "Ulangi pengaturan otomatis jaringan"
 
 #. Type: select
 #. Choices
@@ -759,7 +759,7 @@ msgstr "Ulangi Otokonfigurasi jaringan"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Ulangi otokonfigurasi jaringan dengan nama host DHCP"
+msgstr "Ulangi pengaturan otomatis jaringan dengan nama host DHCP"
 
 #. Type: select
 #. Choices
@@ -769,7 +769,7 @@ msgstr "Ulangi otokonfigurasi jaringan dengan nama host DHCP"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Configure network manually"
-msgstr "Konfigurasi jaringan secara manual"
+msgstr "Atur jaringan secara manual"
 
 #. Type: select
 #. Choices
@@ -779,14 +779,14 @@ msgstr "Konfigurasi jaringan secara manual"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Do not configure the network at this time"
-msgstr "Jangan mengonfigurasi jaringan saat ini"
+msgstr "Jangan mengatur jaringan saat ini"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../netcfg-dhcp.templates:6002
 msgid "Network configuration method:"
-msgstr "Metoda konfigurasi jaringan:"
+msgstr "Metoda pengaturan jaringan:"
 
 #. Type: select
 #. Description
@@ -799,11 +799,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Dari sini Anda dapat memilih mengulangi konfigurasi otomatis jaringan dengan "
+"Dari sini Anda dapat memilih mengulangi pengaturan otomatis jaringan dengan "
 "DHCP (yang mungkin akan berhasil bila DHCP server lambat merespon "
-"permintaan) atau mengonfigurasi jaringan secara manual. Beberapa server DHCP "
-"mengharuskan nama host DHCP dikirimkan oleh klien, jadi Anda dapat juga "
-"mengulangi konfigurasi otomatis jaringan dengan DHCP menggunakan nama host "
+"permintaan) atau mengatur jaringan secara manual. Beberapa server DHCP "
+"mewajibkan nama host DHCP dikirimkan oleh klien, jadi Anda dapat juga "
+"mengulangi pengaturan otomatis jaringan dengan DHCP menggunakan nama host "
 "yang Anda berikan."
 
 #. Type: note
@@ -811,7 +811,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:7001
 msgid "Network autoconfiguration failed"
-msgstr "Otokonfigurasi jaringan telah gagal"
+msgstr "Pengaturan otomatis jaringan telah gagal"
 
 #. Type: note
 #. Description
@@ -864,7 +864,7 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-dhcp.templates:9001
 msgid "Reconfigure the wireless network"
-msgstr "Mengulangi konfigurasi jaringan nirkabel"
+msgstr "Mengulangi pengaturan jaringan nirkabel"
 
 #. Type: string
 #. Description
@@ -1008,7 +1008,7 @@ msgstr "Apakah keterangan ini benar?"
 #. :sl1:
 #: ../netcfg-static.templates:7001
 msgid "Currently configured network parameters:"
-msgstr "Parameter konfigurasi jaringan saat ini:"
+msgstr "Parameter pengaturan jaringan saat ini:"
 
 #. Type: boolean
 #. Description
@@ -1035,4 +1035,4 @@ msgstr ""
 #. :sl1:
 #: ../netcfg-static.templates:8001
 msgid "Configure a network using static addressing"
-msgstr "Mengkonfigurasi jaringan dengan alamat statis"
+msgstr "Mengatur jaringan dengan alamat statis"

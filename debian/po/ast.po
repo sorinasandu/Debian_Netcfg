@@ -9,26 +9,24 @@
 # in doc/i18n/i18n.txt
 # astur <malditoastur@gmail.com>, 2010
 # Marquinos <maacub@gmail.com>, 2010.
-#
 # Translations from iso-codes:
-#   Marcos Alvarez Costales <marcoscostales@gmail.com>, 2009, 2010.
-#
+# Marcos Alvarez Costales <marcoscostales@gmail.com>, 2009, 2010.
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # Marquinos <maacub@gmail.com>, 2008.
-#
+# Mikel González <mikelglez@softastur.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-05-03 21:27+0100\n"
-"Last-Translator: MAAC <maacub@gmail.com>\n"
-"Language-Team: laptop\n"
-"Language: en\n"
+"PO-Revision-Date: 2012-01-28 13:25+0100\n"
+"Last-Translator: Mikel González <mikelglez@softastur.org>\n"
+"Language-Team: Softastur\n"
+"Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -167,21 +165,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Rede abierta"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID inalámbrica pa ${iface}:"
+msgstr "Tipo de rede inalámbrica pa ${iface}:"
 
 #. Type: select
 #. Description
@@ -191,6 +188,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Esbilla WEP/Abierta si la rede ta abierta o protexida con WEP. Esbilla WPA/"
+"WPA2 si la rede ta protexida con WPA/WPA2"
 
 #. Type: string
 #. Description
@@ -267,9 +266,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Nome d'usuariu non válidu"
+msgstr "La clave nun val"
 
 #. Type: error
 #. Description
@@ -279,14 +277,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"La clave WPA/WPA2 PSK ye mui llarga (más de 64 caráuteres) o mui corta "
+"(menos de 8 caráuteres)"
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Clave WEP pal preséu inalámbricu ${iface}:"
+msgstr "Clave WPA/WPA2 pal preséu inalámbricu ${iface}:"
 
 #. Type: string
 #. Description
@@ -296,6 +295,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Pon la clave pa la conexón WPA/WPA2. Tien de ser la clave definida pa la "
+"rede inalámbrica que tas intentando usa."
 
 #. Type: error
 #. Description
@@ -320,7 +321,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Intentando intercambiar claves col puntu d'accesu..."
 
 #. Type: text
 #. Description
@@ -337,14 +338,14 @@ msgstr "Esto puede llevar daqué de tiempu"
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Conexón WPA/WPA2 establecida"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Fallu d'intercambiu de claves y asociación"
 
 #. Type: note
 #. Description
@@ -354,6 +355,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Falló l'intercambiu de claves y l'asociación col puntu d'accesu. Por favor "
+"revisa les opciones WPA/WPA2 que punxisti."
 
 #. Type: string
 #. Description
