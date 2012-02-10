@@ -298,6 +298,8 @@ int get_all_ifs (int all, char*** ptr)
 #if defined(__FreeBSD_kernel__)
         if (!strncmp(ibuf, "pfsync", 6))     /* ignore pfsync devices */
             continue;
+        if (!strncmp(ibuf, "pflog", 5))      /* ignore pflog devices */
+            continue;
         if (!strncmp(ibuf, "usbus", 5))      /* ignore usbus devices */
             continue;
 #endif
