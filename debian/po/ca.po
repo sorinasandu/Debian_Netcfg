@@ -4,9 +4,9 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Catalan messages for debian-installer.
-# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010 Software in the Public Interest, Inc.
+# Copyright 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2010, 2012 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
-# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010.
+# Jordi Mallach <jordi@debian.org>, 2002, 2003, 2004, 2006, 2007, 2008, 2010, 2012.
 # Guillem Jover <guillem@debian.org>, 2005, 2007.
 #
 # Translations from iso-codes:
@@ -18,10 +18,10 @@
 # Traductor: Jordi Ferré <jordiferre@catalonia.altranet.fr>
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer squeeze\n"
+"Project-Id-Version: debian-installer wheezy\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-10-18 21:17+0200\n"
+"PO-Revision-Date: 2012-02-27 01:56+0100\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
@@ -166,21 +166,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP/Xarxa oberta"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA/WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID wireless per a ${iface}:"
+msgstr "Tipus de xarxa sense fil per a ${iface}:"
 
 #. Type: select
 #. Description
@@ -190,6 +189,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Seleccioneu WEP/Oberta si la xarxa és oberta o protegida amb WEP. "
+"Seleccioneu WPA/WPA2 si la xara és protegida amb WPA/WPA2 PSK (clau "
+"precompartida)."
 
 #. Type: string
 #. Description
@@ -265,9 +267,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "El nom d'usuari no és vàlid"
+msgstr "La frase de pas no és vàlida"
 
 #. Type: error
 #. Description
@@ -277,14 +278,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"La frase de pas WPA/WPA2 és o bé massa llarga (més de 64 caràcters) o massa "
+"curta (menys de 8 caràcters)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Clau WEP per a la interfície sense fil ${iface}:"
+msgstr "Frase de pas WPA/WPA2 per a la interfície sense fil ${iface}:"
 
 #. Type: string
 #. Description
@@ -294,13 +296,16 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Introduïu la frase de pas per a l'autenticació amb WPA/WPA2 PSK. Això hauria "
+"de ser la frase de pas definida per a la xarxa sense fil que esteu intentant "
+"emprar."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
 msgid "Invalid ESSID"
-msgstr "L'ESSID és invàlid"
+msgstr "L'ESSID no és vàlid"
 
 #. Type: error
 #. Description
@@ -318,7 +323,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "S'està intentant fer l'intercanvi de claus amb el punt d'accés..."
 
 #. Type: text
 #. Description
@@ -335,14 +340,14 @@ msgstr "Això pot trigar una estona."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "La connexió WPA/WPA2 s'ha establert amb èxit"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Ha fallat l'intercanvi de claus i l'associació"
 
 #. Type: note
 #. Description
@@ -352,6 +357,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"L'intercanvi de claus i l'associació amb el punt d'accés ha fallat. "
+"Comproveu els paràmetres de WPA/WPA2 que heu proveït."
 
 #. Type: string
 #. Description
@@ -400,16 +407,16 @@ msgstr "El nom «${hostname}» és invàlid."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Un nom del sistema vàlid només pot contindre els números 0-9, les lletres "
-"minúscules a-z i el signe negatiu. Pot tindre entre 2 i 63 caràcters de "
-"longitud i no pot començar o acabar amb un signe negatiu."
+"Un nom del sistema vàlid només pot contindre els números 0-9, lletres "
+"majúscules i minúscules (A-Z i a-z) i el signe negatiu. Pot tindre, com a "
+"molt, ${maxhostnamelen} caràcters de longitud i no pot començar o acabar amb "
+"un signe negatiu."
 
 #. Type: error
 #. Description
@@ -543,9 +550,8 @@ msgstr "S'estan cercant els punts d'accés sense fil..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "S'està detectant el maquinari, espereu..."
+msgstr "S'està detectant l'enllaç a ${interface}, espereu..."
 
 #. Type: text
 #. Description
