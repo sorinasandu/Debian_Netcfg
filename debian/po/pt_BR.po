@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-11-19 15:52-0200\n"
-"Last-Translator: Felipe Augusto van de Wiel <faw@debian.org>\n"
+"PO-Revision-Date: 2012-03-31 20:46-0300\n"
+"Last-Translator: Felipe Augusto van de Wiel (faw) <faw@debian.org>\n"
 "Language-Team: Brazilian Portuguese <debian-l10n-portuguese@lists.debian."
 "org>\n"
 "Language: pt_BR\n"
@@ -142,8 +142,8 @@ msgid ""
 "use any available network, leave this field blank."
 msgstr ""
 "${iface} é uma interface de rede sem fio. Por favor, informe o nome (o "
-"ESSID) da rede sem fio que você gostaria que a ${iface} usasse. Se você "
-"deseja usar qualquer rede disponível, deixe este campo em branco."
+"ESSID) da rede sem fio que você gostaria que a interface ${iface} usasse. Se "
+"você deseja usar qualquer rede disponível, deixe este campo em branco."
 
 #. Type: string
 #. Description
@@ -162,8 +162,9 @@ msgid ""
 "configuration and continue, leave this field blank."
 msgstr ""
 "${iface} é uma interface de rede sem fio. Por favor, informe o nome (o "
-"ESSID) da rede sem fio que você gostaria que a ${iface} usasse. Para pular a "
-"configuração da rede sem fio e continuar, deixe este campo em branco."
+"ESSID) da rede sem fio que você gostaria que a interface ${iface} usasse. "
+"Para pular a configuração da rede sem fio e continuar, deixe este campo em "
+"branco."
 
 #. Type: select
 #. Choices
@@ -181,9 +182,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ESSID da rede sem fio para ${iface}:"
+msgstr "Tipo da rede sem fio para ${iface}:"
 
 #. Type: select
 #. Description
@@ -193,6 +193,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Escolha WEP/Aberto se a rede é aberta ou protegida com WEP. Escolha WPA/WPA2 "
+"se a rede é protegida com WPA/WPA2 PSK (Pre-Shared Key -- \"Chave pré-"
+"compartilhada\")."
 
 #. Type: string
 #. Description
@@ -221,7 +224,7 @@ msgid ""
 "or 'nnnnnnnn', where n is a number, just enter it as it is into this field."
 msgstr ""
 "Se sua chave WEP está no formato 'nnnn-nnnn-nn', 'nn:nn:nn:nn:nn:nn:nn:nn' "
-"ou 'nnnnnnnn', onde n é um número, simplesmente informe-o neste campo."
+"ou 'nnnnnnnn', onde n é um número, simplesmente informe-a neste campo."
 
 #. Type: string
 #. Description
@@ -231,8 +234,8 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se sua chave WEP está no formato de uma frase-senha (\"passphrase\"), "
-"prefixe a mesma com 's:' (sem as aspas)."
+"Se sua chave WEP está no formato de uma frase secreta, prefixe-a com "
+"'s:' (sem as aspas)."
 
 #. Type: string
 #. Description
@@ -268,9 +271,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Nome de usuário inválido"
+msgstr "Frase secreta inválida"
 
 #. Type: error
 #. Description
@@ -280,14 +282,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"A frase secreta WPA/WPA2 PSK é muito longa (mais de 64 caracteres) ou muito "
+"curta (menos de 8 caracteres)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Chave WEP para o dispositivo de rede sem fio ${iface}:"
+msgstr "Frase secreta WPA/WPA2 para o dispositivo de rede sem fio ${iface}:"
 
 #. Type: string
 #. Description
@@ -297,6 +300,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Informe a frase secreta para a autenticação WPA/WPA2 PSK. Esta deverá ser a "
+"frase secreta definida para a rede sem fio que você está tentando usar."
 
 #. Type: error
 #. Description
@@ -314,14 +319,14 @@ msgid ""
 "but may contain all kinds of characters."
 msgstr ""
 "O ESSID \"${essid}\" é inválido. ESSIDs podem ter no máximo 32 caracteres, "
-"mas podem conter qualquer tipo de caracteres."
+"mas podem conter todos os tipos de caracteres."
 
 #. Type: text
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Tentando trocar chaves com o ponto de acesso..."
 
 #. Type: text
 #. Description
@@ -338,14 +343,14 @@ msgstr "Este processo pode levar algum tempo."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "Conexão WPA/WPA2 realizada"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Falha na troca de chaves e associação"
 
 #. Type: note
 #. Description
@@ -355,6 +360,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"A troca de chaves e associação com o ponto de acesso falhou. Por favor, "
+"verifique os parâmetros WPA/WPA2 que você informou."
 
 #. Type: string
 #. Description
@@ -403,16 +410,15 @@ msgstr "O nome \"${hostname}\" é inválido."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Um nome de máquina válido pode conter somente números de 0 até 9, letras "
-"minúsculas de a até z e o sinal de menos. O mesmo deve ter entre 2 e 63 "
-"caracteres e não pode iniciar ou finalizar com um sinal de menos."
+"Um nome de máquina válido só pode conter números (0-9), letras minúsculas (a-"
+"z) e maiúsculas (A-Z) e o sinal de menos (hífen). O mesmo deve ter entre 2 e "
+"63 caracteres e não pode começar ou terminar com um sinal de menos (hífen)."
 
 #. Type: error
 #. Description
@@ -430,7 +436,7 @@ msgid ""
 "You may retry it from the installation main menu."
 msgstr ""
 "Um erro ocorreu e o processo de configuração de rede foi abortado. Você pode "
-"tentar iniciá-lo novamente a partir do menu principal."
+"tentar executá-lo novamente a partir do menu principal."
 
 #. Type: error
 #. Description
@@ -469,7 +475,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:22001
 msgid "Kill switch enabled on ${iface}"
-msgstr "Chaveador habilitado na interface ${iface}"
+msgstr "Chave liga/desliga desativada na interface ${iface}"
 
 #. Type: note
 #. Description
@@ -483,8 +489,8 @@ msgid ""
 "continuing."
 msgstr ""
 "A interface ${iface} parece ter sido desabilitada através de um chaveador "
-"físico. Se você pretende usar esta interface, por favor, altere-a antes de "
-"continuar."
+"físico (\"kill switch\"). Se você pretende usar esta interface, por favor, "
+"ligue-a antes de continuar."
 
 #. Type: select
 #. Choices
@@ -496,7 +502,7 @@ msgstr ""
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:23001
 msgid "Infrastructure (Managed) network"
-msgstr "Rede em modo infraestrutura (Gerenciada)"
+msgstr "Rede em modo infraestrutura (gerenciada)"
 
 #. Type: select
 #. Choices
@@ -508,7 +514,7 @@ msgstr "Rede em modo infraestrutura (Gerenciada)"
 #. You MUST NOT use commas inside choices
 #: ../netcfg-common.templates:23001
 msgid "Ad-hoc network (Peer to peer)"
-msgstr "Rede em modo ad-hoc (Ponto a ponto)"
+msgstr "Rede em modo ad-hoc (ponto a ponto)"
 
 #. Type: select
 #. Description
@@ -836,11 +842,11 @@ msgid ""
 "have the first installation CD-ROM, a 'Netinst' CD-ROM, or packages "
 "available on the local network."
 msgstr ""
-"A configuração automática de rede teve sucesso. Porém, nenhuma rota padrão "
-"foi definida: o sistema não sabe como se comunicar com máquinas na Internet. "
-"Isto faz com que seja impossível continuar a instalação a menos que você "
-"possua o primeiro CD-ROM de instalação, um CD-ROM do tipo 'Netinst' ou "
-"pacotes disponíveis em sua rede local."
+"A configuração automática de rede foi realizada com sucesso. Porém, nenhuma "
+"rota padrão foi definida: o sistema não sabe como se comunicar com máquinas "
+"na Internet. Isto faz com que seja impossível continuar a instalação a menos "
+"que você possua o primeiro CD-ROM de instalação, um CD-ROM do tipo 'Netinst' "
+"ou pacotes disponíveis em sua rede local."
 
 #. Type: boolean
 #. Description
@@ -886,7 +892,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-static.templates:2001
 msgid "Malformed IP address"
-msgstr "Endereço IP malformado"
+msgstr "Endereço IP mali formado"
 
 #. Type: error
 #. Description
@@ -896,8 +902,9 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"O endereço IP que você informou está malformado. Ele deve estar no formato x."
-"x.x.x , onde cada 'x' não deve ser maior que 255. Por favor, tente novamente."
+"O endereço IP que você informou está mal formado. Ele deve estar no formato "
+"x.x.x.x , onde cada 'x' não deve ser maior que 255. Por favor, tente "
+"novamente."
 
 #. Type: string
 #. Description
@@ -990,7 +997,7 @@ msgid ""
 "You may have made an error entering your IP address, netmask and/or gateway."
 msgstr ""
 "Você pode ter cometido um erro ao informar seu endereço IP, máscara de rede "
-"e/ou seu gateway."
+"e/ou gateway."
 
 #. Type: boolean
 #. Description
