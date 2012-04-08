@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-04-04 01:02-0300\n"
+"PO-Revision-Date: 2012-04-07 19:57-0300\n"
 "Last-Translator: Felipe Augusto van de Wiel (faw) <faw@debian.org>\n"
 "Language-Team: Brazilian Portuguese <debian-l10n-portuguese@lists.debian."
 "org>\n"
@@ -96,8 +96,8 @@ msgid ""
 "first to be queried. If you don't want to use any name server, just leave "
 "this field blank."
 msgstr ""
-"Os servidores de nomes são usados para pesquisar nomes de máquinas. Por "
-"favor, informe os endereços IP (e não os nomes de máquinas) de até 3 "
+"Os servidores de nomes são usados para pesquisar nomes de máquinas na rede. "
+"Por favor, informe os endereços IP (e não os nomes de máquinas) de até 3 "
 "servidores de nomes, separados por espaços. Não use vírgulas. O primeiro "
 "servidor de nomes na lista será o primeiro a ser consultado. Se você não "
 "quiser usar nenhum servidor de nomes, deixe este campo em branco."
@@ -193,7 +193,7 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
-"Escolha WEP/Aberto se a rede é aberta ou protegida com WEP. Escolha WPA/WPA2 "
+"Escolha WEP/Aberta se a rede é aberta ou protegida com WEP. Escolha WPA/WPA2 "
 "se a rede é protegida com WPA/WPA2 PSK (Pre-Shared Key -- \"Chave pré-"
 "compartilhada\")."
 
@@ -553,7 +553,7 @@ msgstr "Procurando por pontos de acesso a redes sem fio..."
 #. Description
 #: ../netcfg-common.templates:27001
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Detectando conexão em ${interface};, por favor aguarde..."
+msgstr "Detectando conexão em ${interface}; por favor, aguarde..."
 
 #. Type: text
 #. Description
@@ -892,7 +892,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-static.templates:2001
 msgid "Malformed IP address"
-msgstr "Endereço IP mali formado"
+msgstr "Endereço IP malformado"
 
 #. Type: error
 #. Description
@@ -902,9 +902,8 @@ msgid ""
 "The IP address you provided is malformed. It should be in the form x.x.x.x "
 "where each 'x' is no larger than 255. Please try again."
 msgstr ""
-"O endereço IP que você informou está mal formado. Ele deve estar no formato "
-"x.x.x.x , onde cada 'x' não deve ser maior que 255. Por favor, tente "
-"novamente."
+"O endereço IP que você informou está malformado. Ele deve estar no formato x."
+"x.x.x , onde cada 'x' não deve ser maior que 255. Por favor, tente novamente."
 
 #. Type: string
 #. Description
@@ -969,7 +968,7 @@ msgid ""
 msgstr ""
 "O gateway é um endereço IP (quatro números separados por pontos) que indica "
 "o roteador gateway, também conhecido como o roteador padrão. Todo tráfego "
-"que vai para fora de sua LAN (e consequentemente, para Internet) é enviado "
+"que vai para fora de sua LAN (por exemplo, para a Internet) é enviado "
 "através desse roteador. Em raras circunstâncias, você pode ficar sem um "
 "roteador. Nesse caso, este campo pode ser deixado em branco. Se você não "
 "souber a resposta correta para essa pergunta, consulte o seu administrador "
