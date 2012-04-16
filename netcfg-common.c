@@ -1268,12 +1268,28 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     int count, rv = 0;
     int link_waits = NETCFG_LINK_WAIT_TIME * 4;
     int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
+    int ret;
 
     if (gateway.s_addr) {
         inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
         sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);
     }
-    
+
+    /* Ask for link detection timeout. */
+    debconf_input(client, "low", "netcfg/link_wait_timeout");
+    ret = debconf_go(client);
+
+    if (!ret)
+        debconf_get(client, "netcfg/link_wait_timeout");
+
+    if (!ret && client->value) {
+        link_waits = atoi(client->value);
+
+        if (link_waits <= 0) {
+            link_waits = NETCFG_LINK_WAIT_TIME * 4;
+        }
+    }
+
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
     debconf_progress_start(client, 0, 100, "netcfg/link_detect_progress");

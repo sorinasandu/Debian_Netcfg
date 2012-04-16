@@ -329,3 +329,11 @@ Description: for internal use; can be preseeded
  Set to false to prevent /etc/network/interfaces being adjusted for use by
  network-manager. If you do this, network-manager will probably not work
  correctly.
+
+Template: netcfg/link_wait_timeout
+Type: string
+_Description: Waiting time
+ Enter waiting time (in seconds) for detecting the link. You
+ must enter a greater than zero value in order for it to be
+ considered. You can leave the field blank and a default value
+ will be used.

@@ -46,9 +46,8 @@
 "ff02::1 ip6-allnodes\n" \
 "ff02::2 ip6-allrouters\n"
 
-/* The time, in seconds, that we will wait for a link to be established
- * via link autonegotiation.  Sometime in the future this may become a
- * preseed option.
+/* The default time, in seconds, that we will wait for a link to be
+ * established via link autonegotiation.
  */
 #define NETCFG_LINK_WAIT_TIME 3
 
