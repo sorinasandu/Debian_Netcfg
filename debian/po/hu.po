@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-14 08:39+0100\n"
+"PO-Revision-Date: 2012-04-20 10:20+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
@@ -180,9 +180,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "${iface} drótnélküli ESSID azonosítója:"
+msgstr "${iface} drótnélküli hálózattípus:"
 
 #. Type: select
 #. Description
@@ -192,6 +191,9 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Válaszd a WEP/Open-t ha a hálózat nyitott vagy WEP által védett. Válaszd a "
+"WPA/WPA2 lehetőséget, ha a hálózat WPA/WPA2 PSK (elő-megosztott kulcs) által "
+"védett."
 
 #. Type: string
 #. Description
@@ -265,9 +267,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Helytelen felhasználónév"
+msgstr "Érvénytelen jelmondat"
 
 #. Type: error
 #. Description
@@ -277,14 +278,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"A WPA/WPA2 PSK jelmondat túl hosszú (több, mint 64 karakter) vagy túl rövid "
+"(kevesebb, mint 8 karakter)."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "${iface} drótnélküli eszköz WEP-kulcsa:"
+msgstr "${iface} drótnélküli eszköz WPA/WPA2 jelmondata:"
 
 #. Type: string
 #. Description
@@ -294,6 +296,8 @@ msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
 msgstr ""
+"Add meg a jelmondatot a WPA/WPA2 PSK hitelesítéshez. Ez a használni kívánt "
+"drótnélküli hálózathoz megadott jelmondat kell legyen."
 
 #. Type: error
 #. Description
@@ -318,7 +322,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Kulcscsere kísérlet az elérési ponthoz..."
 
 #. Type: text
 #. Description
@@ -335,14 +339,14 @@ msgstr "Ez percekbe is beletelhet."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "A WPA/WPA2 kapcsolat sikerült"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Sikertelen kulcscsere és társítás"
 
 #. Type: note
 #. Description
@@ -352,6 +356,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"A kulcscsere és társítás az elérési ponthoz sikertelen. Ellenőrizd a "
+"megadott WPA/WPA2 paramétereket."
 
 #. Type: string
 #. Description
@@ -399,15 +405,14 @@ msgstr "A \"${hostname}\" név érvénytelen."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Egy érvényes gépnév csak számokból (0-9), ékezet nélküli kisbetűkből (a-z) "
-"és a mínuszjelből áll. Legalább 2, legfeljebb 63 karakter hosszú, és "
+"Egy érvényes gépnév csak számokból (0-9), nagy és kisbetűkből (A-Z és a-z) "
+"és a mínuszjelből áll. Legfeljebb ${maxhostnamelen} karakter hosszú, és "
 "mínuszjel se az elején, se a végén nincs."
 
 #. Type: error
