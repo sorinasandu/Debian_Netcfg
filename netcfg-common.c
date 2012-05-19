@@ -244,12 +244,13 @@ int get_all_ifs (int all, char*** ptr)
 {
     static const char *const fmt[] = { "eth%d", "wl%d", NULL };
 
-    mach_port_t device_master;
+    mach_port_t device_master, file_master;
     device_t device;
     int err;
     char **list;
     int num, i, j;
     char name[3 + 3 * sizeof (int) + 1];
+    char devname[5 + sizeof(name)];
 
     err = get_privileged_ports (0, &device_master);
     if (err)
@@ -260,9 +261,21 @@ int get_all_ifs (int all, char*** ptr)
     for (i = 0; fmt[i]; i++)
 	for (j = 0;; j++) {
 	    sprintf (name, fmt[i], j);
-	    err = device_open (device_master, D_READ, name, &device);
-	    if (err != 0)
-		break;
+	    sprintf (devname, "/dev/%s", name);
+	    file_master = file_name_lookup (devname, O_READ | O_WRITE, 0);
+	    if (file_master != MACH_PORT_NULL)
+		{
+		    err = device_open (file_master, D_READ, name, &device);
+		    mach_port_deallocate (mach_task_self (), file_master);
+		    if (err != 0)
+			break;
+		}
+	    else
+		{
+		    err = device_open (device_master, D_READ, name, &device);
+		    if (err != 0)
+			break;
+		}
 
 	    device_close (device);
 	    mach_port_deallocate (mach_task_self (), device);

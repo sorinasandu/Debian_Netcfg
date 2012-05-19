@@ -1,8 +1,12 @@
 netcfg (1.71) UNRELEASED; urgency=low
 
+  [ Robert Millan ]
   * Ignore pfsync0, pflog0 and usbus0 devices on GNU/kFreeBSD.
   * Use 127.0.1.1 hack in /etc/hosts only on kernels that support it.
     (Closes: #649747)
+
+  [ Samuel Thibault ]
+  * Also probe /dev/eth* and wl* on hurd-i386.
 
  -- Robert Millan <rmh@debian.org>  Fri, 10 Feb 2012 23:38:43 +0100
 
