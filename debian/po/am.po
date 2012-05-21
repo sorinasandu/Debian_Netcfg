@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-05-20 22:15+0100\n"
+"PO-Revision-Date: 2012-05-21 13:17+0100\n"
 "Last-Translator: Tegegne Tefera <tefera.tegegne@gmail.com>\n"
 "Language-Team: Amharic\n"
 "Language: \n"
@@ -167,9 +167,8 @@ msgstr "WPA/WPA2 PSK"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "ሽቦ አልባ ESSID ለ ${iface}:"
+msgstr "የሽቦ አልባ አውታር አይነት ለ ${iface}:"
 
 #. Type: select
 #. Description
@@ -249,9 +248,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "የማይሰራ የተጠቃሚ ስም"
+msgstr "የማይሰራ ማለፊያ ሚስጢር ቃል "
 
 #. Type: error
 #. Description
@@ -266,9 +264,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "ለሽቦአልባ አካል የWEP ቁልፍ ${iface}:"
+msgstr "ለሽቦአልባ አካል የWEP/WPA2 ቁልፍ ${iface}:"
 
 #. Type: string
 #. Description
@@ -382,15 +379,14 @@ msgstr "\"${hostname}\" የሚለው ስም የለም።"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"ትክክለኛ የተጠሪ ስም፣ ከ0-9፣ ከa-z ያሉ የሮማን ትንሹ ፊደሎችንና የመቀነስ ምልክትን የያዘ ይሆናል። ርዝመቱም ከ2 "
-"እስከ 63 ፊደላት ሊረዝም ሲችል የመቀነስ ምልክት በመጀመሪያ ወይም በመጨረሻ ላይ መሆን አኖርበትም።"
+"ትክክለኛ የተጠሪ ስም፣ ከ0-9፣ ከa-z ያሉ የሮማን ትንሹ ፊደሎችንና የመቀነስ ምልክትን የያዘ ይሆናል። ርዝመቱም "
+"${maxhostnamelen} ሊሆን ሲችል የመቀነስ ምልክት በመጀመሪያ ወይም በመጨረሻ ላይ መሆን አኖርበትም።"
 
 #. Type: error
 #. Description
