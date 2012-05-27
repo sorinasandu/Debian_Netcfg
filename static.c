@@ -385,7 +385,8 @@ int netcfg_activate_static(struct debconfclient *client)
     /* Wait to detect link.  Don't error out if we fail, though; link detection
      * may not work on this NIC or something.
      */
-    netcfg_detect_link(client, interface);
+    if (netcfg_detect_link(client, interface) == GO_BACK)
+        return GO_BACK;
 
     return 0;
 }
@@ -492,10 +493,14 @@ int netcfg_get_static(struct debconfclient *client)
             debconf_input(client, "medium", "netcfg/confirm_static");
             debconf_go(client);
             debconf_get(client, "netcfg/confirm_static");
+
             if (strstr(client->value, "true")) {
                 state = GET_HOSTNAME;
                 netcfg_write_resolv(domain, nameserver_array);
-                netcfg_activate_static(client);
+                if (netcfg_activate_static(client) == GO_BACK) {
+                    state = BACKUP;
+                    break;
+                }
             }
             else
                 state = GET_IPADDRESS;

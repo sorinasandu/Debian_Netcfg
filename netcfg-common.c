@@ -1281,13 +1281,51 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     char arping[256];
     char s_gateway[INET_ADDRSTRLEN];
     int count, rv = 0;
-    int link_waits = NETCFG_LINK_WAIT_TIME * 4;
+    int link_waits;
     int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
 
     if (gateway.s_addr) {
         inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
         sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);
     }
+
+    /* Ask for link detection timeout. */
+    int ok = 0;
+
+    while (!ok) {
+        di_info("Asking for link_wait time");
+
+        debconf_input(client, "low", "netcfg/link_wait_timeout");
+        debconf_go(client);
+        debconf_get(client, "netcfg/link_wait_timeout");
+
+        char *ptr, *end_ptr;
+        ptr = client->value;
+
+        if (!empty_str(ptr)) {
+            link_waits = strtol(ptr, &end_ptr, 10);
+            /* The input contains a single positive integer. */
+            if (*end_ptr == '\0' && link_waits > 0) {
+                ok = 1;
+                link_waits *= 4;
+            }
+        }
+
+        if (!ok) {
+            if (!empty_str(ptr)) {
+                di_info("The value %s provided is not valid", ptr);
+            }
+            else {
+                di_info("No value provided");
+            }
+
+            debconf_input (client, "critical", "netcfg/bad_link_wait_timeout");
+            debconf_go (client);
+            debconf_set(client, "netcfg/link_wait_timeout", "3");
+        }
+    }
+
+    di_info("Waiting time set to %d", link_waits);
 
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
