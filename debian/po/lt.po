@@ -9,40 +9,38 @@
 # Marius Gedminas <mgedmin@b4net.lt>, 2004.
 # Darius Skilinskas <darius10@takas.lt>, 2005.
 # Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004...2010.
-#
-#
 # Translations from iso-codes:
-#   Gintautas Miliauskas <gintas@akl.lt>, 2008.
-#   Tobias Quathamer <toddy@debian.org>, 2007.
-#     Translations taken from ICU SVN on 2007-09-09
-#
-#   Translations from KDE:
-#   - Ričardas Čepas <rch@richard.eu.org>
-#
-#   Free Software Foundation, Inc., 2000-2001, 2004
-#   Gediminas Paulauskas <menesis@delfi.lt>, 2000-2001.
-#   Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
-#   Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004, 2006, 2008, 2009, 2010.
-#
+# Gintautas Miliauskas <gintas@akl.lt>, 2008.
+# Tobias Quathamer <toddy@debian.org>, 2007.
+# Translations taken from ICU SVN on 2007-09-09
+# Translations from KDE:
+# - Ričardas Čepas <rch@richard.eu.org>
+# Free Software Foundation, Inc., 2000-2001, 2004
+# Gediminas Paulauskas <menesis@delfi.lt>, 2000-2001.
+# Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
+# Kęstutis Biliūnas <kebil@kaunas.init.lt>, 2004, 2006, 2008, 2009, 2010.
+# Rimas Kudelis <rq@akl.lt>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2010-09-07 09:04+0300\n"
-"Last-Translator: Kęstutis Biliūnas <kebil@kaunas.init.lt>\n"
+"PO-Revision-Date: 2012-05-27 19:07+0300\n"
+"Last-Translator: Rimas Kudelis <rq@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: boolean
 #. Description
 #. :sl1:
 #: ../netcfg-common.templates:2001
 msgid "Auto-configure network with DHCP?"
-msgstr "Ar atlikti automatinį tinklo konfigūravimas su DHCP?"
+msgstr "Ar atlikti automatinį tinklo konfigūravimą su DHCP?"
 
 #. Type: boolean
 #. Description
@@ -172,21 +170,20 @@ msgstr ""
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WEP/Open Network"
-msgstr ""
+msgstr "WEP / atviras"
 
 #. Type: select
 #. Choices
 #: ../netcfg-common.templates:8001
 msgid "WPA/WPA2 PSK"
-msgstr ""
+msgstr "WPA / WPA2 PSK"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:8002
-#, fuzzy
 msgid "Wireless network type for ${iface}:"
-msgstr "Bevielis (wireless) ESSID sąsajai ${iface}:"
+msgstr "Bevielio tinklo tipas sąsajai ${iface}:"
 
 #. Type: select
 #. Description
@@ -196,6 +193,8 @@ msgid ""
 "Choose WEP/Open if the network is open or secured with WEP. Choose WPA/WPA2 "
 "if the network is protected with WPA/WPA2 PSK (Pre-Shared Key)."
 msgstr ""
+"Rinkitės „WEP / atviras“, jeigu tinklas yra atviras arba apsaugotas WEP "
+"raktu. Rinkitės WPA / WPA2, jei tinklas apsaugotas WPA arba WPA2 PSK būdu."
 
 #. Type: string
 #. Description
@@ -271,9 +270,8 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:11001
-#, fuzzy
 msgid "Invalid passphrase"
-msgstr "Netaisyklingas naudotojo vardas."
+msgstr "Netinkama slaptafrazė."
 
 #. Type: error
 #. Description
@@ -283,14 +281,15 @@ msgid ""
 "The WPA/WPA2 PSK passphrase was either too long (more than 64 characters) or "
 "too short (less than 8 characters)."
 msgstr ""
+"Nurodytoji WPA / WPA2 PSK slaptafrazė yra netinkamo ilgio. Jos ilgis turėtų "
+"būti nuo 8 iki 64 simbolių."
 
 #. Type: string
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:12001
-#, fuzzy
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "WEP raktas bevielio tinklo įrenginiui ${iface}:"
+msgstr "WPA / WPA2 slaptafrazė bevielio tinklo įrenginiui ${iface}:"
 
 #. Type: string
 #. Description
@@ -299,7 +298,7 @@ msgstr "WEP raktas bevielio tinklo įrenginiui ${iface}:"
 msgid ""
 "Enter the passphrase for WPA/WPA2 PSK authentication. This should be the "
 "passphrase defined for the wireless network you are trying to use."
-msgstr ""
+msgstr "Įveskite slaptafrazę WPA / WPA2 PSK autentikacijai šiame tinkle. "
 
 #. Type: error
 #. Description
@@ -324,7 +323,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:14001
 msgid "Attempting to exchange keys with the access point..."
-msgstr ""
+msgstr "Bandoma su prieigos tašku apsikeisti raktais..."
 
 #. Type: text
 #. Description
@@ -341,14 +340,14 @@ msgstr "Tai gali šiek tiek užtrukti."
 #. :sl2:
 #: ../netcfg-common.templates:16001
 msgid "WPA/WPA2 connection succeeded"
-msgstr ""
+msgstr "WPA / WPA2 prisijungimas sėkmingas"
 
 #. Type: note
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:17001
 msgid "Failure of key exchange and association"
-msgstr ""
+msgstr "Klaida apsikeičiant raktais ir susisiejant"
 
 #. Type: note
 #. Description
@@ -358,6 +357,8 @@ msgid ""
 "The exchange of keys and association with the access point failed. Please "
 "check the WPA/WPA2 parameters you provided."
 msgstr ""
+"Apsikeitimas raktais ir susisiejimas su prieigos tašku nepavyko. "
+"Patikrinkite, ar nurodėte teisingus WPA / WPA2 parametrus."
 
 #. Type: string
 #. Description
@@ -406,16 +407,16 @@ msgstr "Vardas \"${hostname}\" netinkamas."
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:19001
-#, fuzzy
 msgid ""
 "A valid hostname may contain only the numbers 0-9, upper and lowercase "
 "letters (A-Z and a-z), and the minus sign. It must be at most "
 "${maxhostnamelen} characters long, and may not begin or end with a minus "
 "sign."
 msgstr ""
-"Tinkamą kompiuterio vardą gali sudaryti tik skaitmenys 0-9, mažosios raidės "
-"a-z ir minuso ženklas. Vardas turi būti nuo 2-jų iki 63-jų simbolių ilgio, "
-"ir negali prasidėti ar baigtis minuso ženklu."
+"Tinkamą kompiuterio vardą gali sudaryti tik skaitmenys 0-9, mažosios ir "
+"didžiosios raidės (A – Z ir a – z), ir minuso ženklas. Vardas turi būti ne "
+"daugiau kaip ${maxhostnamelen} simbolių ilgio ir negali prasidėti ar baigtis "
+"minuso ženklu."
 
 #. Type: error
 #. Description
@@ -524,9 +525,9 @@ msgid ""
 "point of some sort, your network is Managed. If another computer is your "
 "'access point', then your network may be Ad-hoc."
 msgstr ""
-"Bevieliai tinklai būna \"managed\" bei \"ad-hoc\". Jei naudojate tikrą "
-"pasiekimo tašką (Access Point), tuomet rinkitės \"managed\". Jei jungiatės "
-"tiesiogiai prie kito kompiuterio, rinkitės \"ad-hoc\"."
+"Bevieliai tinklai būna dviejų tipų – valdomi ir „ad-hoc“. Jei naudojatės "
+"tikru prieigos tašku (angl. „Access Point“), tuomet rinkitės „managed“. Jei "
+"jungiatės tiesiogiai prie kito kompiuterio, rinkitės „ad-hoc“."
 
 #. Type: text
 #. Description
@@ -545,9 +546,8 @@ msgstr "Ieškoma belaidžio tinklo pasiekimo taškų (access points) ..."
 #. Type: text
 #. Description
 #: ../netcfg-common.templates:27001
-#, fuzzy
 msgid "Detecting link on ${interface}; please wait..."
-msgstr "Ieškoma aparatinė įranga, palaukite..."
+msgstr "Tikrinamas ryšys ${interface} sąsajoje; palaukite..."
 
 #. Type: text
 #. Description
