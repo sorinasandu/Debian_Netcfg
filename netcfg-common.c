@@ -1315,7 +1315,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     }
 
     debconf_progress_stop(client);
-    debconf_capb(client, "");
+    debconf_capb(client, "backup");
     
     return rv;
 }
