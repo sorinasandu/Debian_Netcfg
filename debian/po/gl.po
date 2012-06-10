@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-06-01 00:57+0200\n"
+"PO-Revision-Date: 2012-06-10 01:37+0200\n"
 "Last-Translator: Jorge Barreiro <yortx.barry@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
@@ -118,7 +118,7 @@ msgid ""
 msgstr ""
 "O seu sistema ten varias interfaces de rede. Escolla a interface a empregar "
 "como interface principal durante a instalación. Xa se escolleu, se foi "
-"posíbel, a primeira interface de rede conectada que se achou."
+"posíbel, a primeira interface de rede conectada que se atopou."
 
 #. Type: string
 #. Description
@@ -231,7 +231,7 @@ msgid ""
 "If your WEP key is in the format of a passphrase, prefix it with "
 "'s:' (without quotes)."
 msgstr ""
-"Se a chave WEP ten forma de contrasinal, escríbaa poñéndolle diante "
+"Se a chave WEP ten forma de frase de paso, escríbaa poñéndolle diante "
 "«s:» (sen as comiñas)."
 
 #. Type: string
@@ -287,7 +287,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-common.templates:12001
 msgid "WPA/WPA2 passphrase for wireless device ${iface}:"
-msgstr "Frase de paso WEP para o dispositivo sen fíos ${iface}:"
+msgstr "Frase de paso WPA/WPA2 para o dispositivo sen fíos ${iface}:"
 
 #. Type: string
 #. Description
@@ -431,8 +431,8 @@ msgid ""
 "An error occurred and the network configuration process has been aborted. "
 "You may retry it from the installation main menu."
 msgstr ""
-"Aconteceu un erro e abortouse o proceso de configuración da rede. Pode "
-"volvelo tentar desde o menú principal da instalación."
+"Aconteceu un erro e interrompeuse o proceso de configuración da rede. Pode "
+"tentalo de novo desde o menú principal da instalación."
 
 #. Type: error
 #. Description
@@ -540,7 +540,7 @@ msgstr "Configuración da rede sen fíos"
 #. :sl2:
 #: ../netcfg-common.templates:25001
 msgid "Searching for wireless access points..."
-msgstr "Estanse a procurar puntos de acceso sen fíos..."
+msgstr "Estanse a buscar puntos de acceso sen fíos..."
 
 #. Type: text
 #. Description
@@ -729,7 +729,7 @@ msgstr ""
 #. :sl2:
 #: ../netcfg-dhcp.templates:5001
 msgid "The DHCP configuration process has been aborted."
-msgstr "Abortouse o proceso de configuración por DHCP."
+msgstr "Interrompeuse o proceso de configuración por DHCP."
 
 #. Type: select
 #. Choices
@@ -739,7 +739,7 @@ msgstr "Abortouse o proceso de configuración por DHCP."
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration"
-msgstr "Volver tentar configurar automaticamente a rede"
+msgstr "Tentar de novo a configuración automática da rede"
 
 #. Type: select
 #. Choices
@@ -749,7 +749,8 @@ msgstr "Volver tentar configurar automaticamente a rede"
 #. in single-byte languages)
 #: ../netcfg-dhcp.templates:6001
 msgid "Retry network autoconfiguration with a DHCP hostname"
-msgstr "Volver tentar autoconfigurar a rede cun nome de máquina DHCP"
+msgstr ""
+"Tentar de novo a configuración automática da dere cun nome de máquina DHCP"
 
 #. Type: select
 #. Choices
@@ -789,12 +790,11 @@ msgid ""
 "by the client, so you can also choose to retry DHCP network "
 "autoconfiguration with a hostname that you provide."
 msgstr ""
-"Aquí pode volver tentar configurar da rede automaticamente mediante DHCP (o "
+"Aquí pode tentar de novo a configuración automática da rede mediante DHCP (o "
 "que pode ter éxito se o servidor DHCP tarda moito tempo en responder) ou "
 "configurar a rede manualmente. Algúns servidores DHCP necesitan que se envíe "
-"un nome de máquina DHCP, así que tamén pode volver tentar a "
-"autoconfiguración da rede mediante DHCP empregando un nome fornecido por "
-"vostede."
+"un nome de máquina DHCP, así que tamén pode tentar de novo a configuración "
+"automática da rede mediante DHCP empregando un nome fornecido por vostede."
 
 #. Type: note
 #. Description
@@ -936,7 +936,7 @@ msgid ""
 msgstr ""
 "A máscara de rede emprégase para determinar as máquinas que pertencen á súa "
 "rede. Consulte co administrador de redes se non coñece o seu valor. A "
-"máscara de rede introdúcese coma catro números separados por puntos."
+"máscara de rede introdúcese con catro números separados por puntos."
 
 #. Type: string
 #. Description
@@ -958,7 +958,7 @@ msgid ""
 "question, consult your network administrator."
 msgstr ""
 "A pasarela é un enderezo IP (catro números separados por puntos) que indica "
-"o encamiñador pasarela, tamén coñecido coma encamiñador predeterminado. Todo "
+"o encamiñador pasarela, tamén coñecido como encamiñador predeterminado. Todo "
 "o tráfico dirixido ao exterior da rede local (por exemplo, a Internet), "
 "envíase a través deste encamiñador. Nalgunhas circunstancias, pode non ter "
 "un encamiñador; neste caso, pode deixalo en branco. Se non coñece a resposta "
