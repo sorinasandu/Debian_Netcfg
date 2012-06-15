@@ -433,38 +433,38 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
 
 int init_wpa_supplicant_support(void)
 {
-	return 0;
+    return 0;
 }
 
 int kill_wpa_supplicant(void)
 {
-	return 0;
+    return 0;
 }
 
 int wireless_security_type(struct debconfclient *client, char *if_name)
 {
-	(void)client;
-	(void)if_name;
+    (void)client;
+    (void)if_name;
 
-	return 0;
+    return 0;
 }
 
 int netcfg_set_passphrase(struct debconfclient *client, char *if_name)
 {
-	(void)client;
-	(void)if_name;
+    (void)client;
+    (void)if_name;
 
-	return 0;
+    return 0;
 }
 
 int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid, char *passphrase)
 {
-	(void)client;
-	(void)if_name;
-	(void)ssid;
-	(void)passphrase;
+    (void)client;
+    (void)if_name;
+    (void)ssid;
+    (void)passphrase;
 
-	return 0;
+    return 0;
 }
 
 #endif  /* WIRELESS */

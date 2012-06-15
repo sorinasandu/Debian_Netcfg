@@ -77,7 +77,7 @@ static void netcfg_write_dhcp (char *iface, char *dhostname)
                         (essid && *essid) ? essid : "any");
                 if (wepkey != NULL)
                     fprintf(fp, "\twireless-key1 %s\n", wepkey);
-	    }
+            }
         }
         fclose(fp);
     }
@@ -167,7 +167,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     char dhcp_seconds_str[16];
 
     if (access("/sbin/dhclient", F_OK) == 0)
-		dhcp_client = DHCLIENT;
+            dhcp_client = DHCLIENT;
     else if (access("/sbin/pump", F_OK) == 0)
         dhcp_client = PUMP;
     else if (access("/sbin/udhcpc", F_OK) == 0)
@@ -380,7 +380,7 @@ int ask_dhcp_options (struct debconfclient *client)
     debconf_get(client, "netcfg/dhcp_options");
 
     /* strcmp sucks */
-    if (client->value[0] == 'R') {	/* _R_etry ... or _R_econfigure ... */
+    if (client->value[0] == 'R') {      /* _R_etry ... or _R_econfigure ... */
         size_t len = strlen(client->value);
         if (client->value[len - 1] == 'e') /* ... with DHCP hostnam_e_ */
             return REPLY_RETRY_WITH_HOSTNAME;

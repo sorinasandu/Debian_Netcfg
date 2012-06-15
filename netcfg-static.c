@@ -38,7 +38,7 @@ int main(int argc, char** argv)
     /* initialize libd-i */
     di_system_init("netcfg-static");
     if (strcmp(basename(argv[0]), "ptom") != 0)
-	di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
+        di_info("Starting netcfg v.%s (built %s)", NETCFG_VERSION, NETCFG_BUILD_DATE);
 
     parse_args(argc, argv);
     reap_old_files();

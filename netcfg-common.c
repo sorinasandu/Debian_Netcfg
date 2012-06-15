@@ -254,37 +254,37 @@ int get_all_ifs (int all, char*** ptr)
 
     err = get_privileged_ports (0, &device_master);
     if (err)
-	return 0;
+        return 0;
 
     num = 0;
     list = malloc(sizeof *list);
     for (i = 0; fmt[i]; i++)
-	for (j = 0;; j++) {
-	    char *thename;
-	    sprintf (name, fmt[i], j);
-	    sprintf (devname, "/dev/%s", name);
-	    err = device_open (device_master, D_READ, name, &device);
-	    if (err == 0)
-	        thename = name;
-	    else
-		{
-		    file_master = file_name_lookup (devname, O_READ | O_WRITE, 0);
-		    if (file_master == MACH_PORT_NULL)
-			break;
+        for (j = 0;; j++) {
+            char *thename;
+            sprintf (name, fmt[i], j);
+            sprintf (devname, "/dev/%s", name);
+            err = device_open (device_master, D_READ, name, &device);
+            if (err == 0)
+                thename = name;
+            else
+                {
+                    file_master = file_name_lookup (devname, O_READ | O_WRITE, 0);
+                    if (file_master == MACH_PORT_NULL)
+                        break;
 
-		    err = device_open (file_master, D_READ, name, &device);
-		    mach_port_deallocate (mach_task_self (), file_master);
-		    if (err != 0)
-			break;
-		    thename = devname;
-		}
+                    err = device_open (file_master, D_READ, name, &device);
+                    mach_port_deallocate (mach_task_self (), file_master);
+                    if (err != 0)
+                        break;
+                    thename = devname;
+                }
 
-	    device_close (device);
-	    mach_port_deallocate (mach_task_self (), device);
+            device_close (device);
+            mach_port_deallocate (mach_task_self (), device);
 
-	    list = realloc (list, (num + 2) * sizeof *list);
-	    list[num++] = strdup(thename);
-	}
+            list = realloc (list, (num + 2) * sizeof *list);
+            list[num++] = strdup(thename);
+        }
     list[num] = NULL;
 
     mach_port_deallocate (mach_task_self (), device_master);
