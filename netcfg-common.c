@@ -1329,10 +1329,10 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
 
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
-    debconf_progress_start(client, 0, 100, "netcfg/link_detect_progress");
+    debconf_progress_start(client, 0, link_waits, "netcfg/link_detect_progress");
     for (count = 0; count < link_waits; count++) {
         usleep(250000);
-        if (debconf_progress_set(client, 50 * count / link_waits) == 30) {
+        if (debconf_progress_set(client, count) == 30) {
             /* User cancelled on us... bugger */
             rv = 0;
             break;
@@ -1342,14 +1342,11 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
                 for (count = 0; count < gw_tries; count++) {
                     if (di_exec_shell_log(arping) == 0)
                         break;
-                    if (debconf_progress_set(client, 50 + 50 * count / gw_tries) == 30)
-                        break;
                 }
             }
             rv = 1;
             break;
         }
-        debconf_progress_set(client, 100);
     }
 
     debconf_progress_stop(client);
