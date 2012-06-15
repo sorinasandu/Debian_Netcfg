@@ -84,7 +84,7 @@ int wireless_security_type (struct debconfclient *client, char *if_name)
 int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
 {
     int ret;
-    
+
     debconf_subst(client, "netcfg/wireless_wpa", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_wpa");
     ret = debconf_go(client);
@@ -94,7 +94,7 @@ int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
 
     if (passphrase != NULL)
         free(passphrase);
-        
+
     debconf_get(client, "netcfg/wireless_wpa");
     passphrase = strdup(client->value);
 
@@ -127,7 +127,7 @@ static int start_wpa_daemon(struct debconfclient *client)
             di_error("could not exec wpasupplicant: %s", strerror(errno));
             return 1;
         }
-        else 
+        else
             return 0;
     }
     else {
@@ -149,23 +149,23 @@ static int wpa_connect(char *if_name)
 {
     char *cfile;
     int flen, res;
-    
+
     flen = (strlen(WPASUPP_CTRL) + strlen(if_name) + 2);
-    
+
     cfile = malloc(flen);
     if (cfile == NULL) {
         di_info("Can't allocate memory for WPA control interface.");
         return 1;
-    }    
-        
+    }
+
     res = snprintf(cfile, flen, "%s/%s", WPASUPP_CTRL, if_name);
     if ((res < 0) || (res >= flen)) {
         free(cfile);
         return 1;
-    }   
+    }
     ctrl = wpa_ctrl_open(cfile);
     free(cfile);
-    
+
     if (ctrl == NULL) {
         di_info("Couldn't connect to wpasupplicant");
         return 1;
@@ -179,15 +179,15 @@ static int netcfg_wpa_cmd (char *cmd)
     char buf[256];
     size_t len;
     int ret;
-    
+
     len = sizeof(buf) -1;
     ret = wpa_ctrl_request(ctrl, cmd, strlen(cmd), buf, &len, NULL);
-    
+
     if (ret < 0) {
         di_info("Sending %s to wpasupplicant failed", cmd);
         return 1;
     }
-    
+
     return 0;
 }
 
@@ -197,11 +197,11 @@ static int wpa_set_ssid (char *ssid)
     size_t len;
     char cmd[256];
     char buf[256];
-    
+
     res = snprintf(cmd, sizeof(cmd), "SET_NETWORK 0 %s \"%s\"", "ssid", ssid);
     if (res < 0)
         return 1;
-        
+
     len = sizeof(buf) -1;
     ret = wpa_ctrl_request(ctrl, cmd, sizeof(cmd), buf, &len, NULL);
     if (ret != 0) {
@@ -217,12 +217,12 @@ static int wpa_set_psk(char *passphrase)
     size_t len;
     char buf[256];
     char cmd[256];
-    
+
     res = snprintf(cmd, sizeof(cmd), "SET_NETWORK 0 %s \"%s\"", "psk", passphrase);
     if (res < 0)
         return 1;
-    
-    len = sizeof(buf) -1;    
+
+    len = sizeof(buf) -1;
     ret = wpa_ctrl_request(ctrl, cmd, sizeof(cmd), buf, &len, NULL);
     if (ret != 0)
         return 1;
@@ -236,7 +236,7 @@ static int wpa_status(void)
     size_t len;
     char buf[2048];
     const char *success = "wpa_state=COMPLETED";
-    
+
     len = sizeof(buf) -1;
     ret = wpa_ctrl_request(ctrl, "STATUS", 7, buf, &len, NULL);
 
@@ -246,7 +246,7 @@ static int wpa_status(void)
     }
     else
         return 1;
-        
+
     if (strstr(buf, success) == NULL)
         return 1;
     else {
@@ -306,7 +306,7 @@ int poll_wpa_supplicant(struct debconfclient *client)
 int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid, char *passphrase)
 {
     int retry = 0;
-    
+
     enum { CHECK_DAEMON,
            START_DAEMON,
            CONNECT,
@@ -319,10 +319,10 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
            POLL,
            ABORT,
            SUCCESS } state = CHECK_DAEMON;
-    
+
     for (;;) {
         switch(state) {
-        
+
         case CHECK_DAEMON:
             wpa_daemon_running();
             if (wpa_is_running)
@@ -330,21 +330,21 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
             else
                 state = START_DAEMON;
             break;
-            
+
         case START_DAEMON:
             if (!start_wpa_daemon(client))
                 state = CONNECT;
             else
                 state = ABORT;
             break;
-        
+
         case CONNECT:
             if (wpa_connect(if_name) == 0)
                 state = PING;
             else
                 state = ABORT;
             break;
-        
+
         case PING:
             /* if the daemon doesn't respond, try and ping
              * it and increment retry. If we have done
@@ -361,7 +361,7 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
             else
                 state = ADD_NETWORK;
             break;
-        
+
         case ADD_NETWORK:
             if (wpa_is_running) {
                 state = SET_ESSID;
@@ -372,51 +372,51 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
             else
                 state = SET_ESSID;
             break;
-        
+
         case SET_ESSID:
             if (wpa_set_ssid(ssid))
                 state = PING;
             else
                 state = SET_PSK;
             break;
-        
+
         case SET_PSK:
             if (wpa_set_psk(passphrase))
                 state = PING;
             else
                 state = SET_SCAN_SSID;
             break;
-        
+
         case SET_SCAN_SSID:
             if (netcfg_wpa_cmd("SET_NETWORK 0 scan_ssid 1"))
                 state = PING;
             else
                 state = ENABLE_NETWORK;
             break;
-        
+
         case ENABLE_NETWORK:
              if (netcfg_wpa_cmd("ENABLE_NETWORK 0"))
                  state = PING;
              else
                  state = POLL;
              break;
-        
+
         case POLL:
             if (poll_wpa_supplicant(client))
                 state = ABORT;
             else
                 state = SUCCESS;
             break;
-             
+
         case ABORT:
-            if (ctrl == NULL) 
+            if (ctrl == NULL)
                 return GO_BACK;
             else {
                 wpa_ctrl_close(ctrl);
                 ctrl = NULL;
                 return GO_BACK;
             }
-             
+
          case SUCCESS:
              if (ctrl == NULL)
                  return 0;
@@ -453,7 +453,7 @@ int netcfg_set_passphrase(struct debconfclient *client, char *if_name)
 {
 	(void)client;
 	(void)if_name;
-	
+
 	return 0;
 }
 
@@ -463,7 +463,7 @@ int wpa_supplicant_start(struct debconfclient *client, char *if_name, char *ssid
 	(void)if_name;
 	(void)ssid;
 	(void)passphrase;
-	
+
 	return 0;
 }
 

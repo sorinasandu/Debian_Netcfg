@@ -415,7 +415,7 @@ int ask_wifi_configuration (struct debconfclient *client)
                 wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
                     ABORT : SECURITY_TYPE;
             break;
-        
+
         case SECURITY_TYPE:
             {
                 int ret;
@@ -428,7 +428,7 @@ int ask_wifi_configuration (struct debconfclient *client)
                     wifistate = WEP;
                 break;
             }
-        
+
         case WEP:
             if (wpa_supplicant_status == WPA_UNAVAIL)
                 wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
@@ -437,21 +437,21 @@ int ask_wifi_configuration (struct debconfclient *client)
                 wifistate = (netcfg_wireless_set_wep(client, interface) == GO_BACK) ?
                     SECURITY_TYPE : DONE;
             break;
-        
+
         case WPA:
             wifistate = (netcfg_set_passphrase(client, interface) == GO_BACK) ?
                 SECURITY_TYPE : START;
             break;
-        
+
         case START:
             wifistate = (wpa_supplicant_start(client, interface, essid, passphrase) == GO_BACK) ?
                 ESSID : DONE;
             break;
-            
+
         case ABORT:
             return REPLY_ASK_OPTIONS;
             break;
-        
+
         case DONE:
             return REPLY_CHECK_DHCP;
             break;
@@ -738,7 +738,7 @@ int read_resolv_conf_nameservers(struct in_addr array[])
 {
     FILE *f;
     int i = 0;
-    
+
     if ((f = fopen(RESOLV_FILE, "r")) != NULL) {
         char buf[256];
 

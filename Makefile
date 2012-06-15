@@ -40,7 +40,7 @@ netcfg: netcfg.o dhcp.o static.o ethtool-lite.o wpa.o wpa_ctrl.o
 
 ethtool-lite: ethtool-lite-test.o
 	$(CC) -o $@ $<
-	
+
 ethtool-lite-test.o: ethtool-lite.c
 	$(CC) -c $(CFLAGS) -DTEST $(DEFS) $(INCS) -o $@ $<
 

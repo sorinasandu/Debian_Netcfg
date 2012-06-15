@@ -300,7 +300,7 @@ int main(int argc, char *argv[])
             }
 
         case WCONFIG_WEP:
-            if (netcfg_wireless_set_wep(client, interface) == GO_BACK) 
+            if (netcfg_wireless_set_wep(client, interface) == GO_BACK)
                 if (wpa_supplicant_status == WPA_UNAVAIL)
                     state = WCONFIG_ESSID;
                 else
@@ -326,7 +326,7 @@ int main(int argc, char *argv[])
                 state = WCONFIG_ESSID;
             else
                 state = GET_METHOD;
-            break; 
+            break;
 
         case QUIT:
             netcfg_update_entropy();

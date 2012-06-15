@@ -82,7 +82,7 @@ netcfg (1.70) unstable; urgency=low
 
   [ Jurij Smakov ]
   * Don't try to compile wireless code on sparc, fixing FTBFS introduced
-    by (intentional) dropping of libiw-dev build dependency. 
+    by (intentional) dropping of libiw-dev build dependency.
 
  -- Jurij Smakov <jurij@debian.org>  Fri, 04 Nov 2011 20:53:05 +0000
 
@@ -219,7 +219,7 @@ netcfg (1.61) unstable; urgency=low
   [ Robert Edmonds ]
   * Wait for the network to be usable before trying to use it
     (in the case of STP-enabled switch for instance
-    Use busybox's arping with the '-f' flag (quit on first ARP reply).  
+    Use busybox's arping with the '-f' flag (quit on first ARP reply).
     Wait up to 45 seconds for an ARP reply from the default gateway
     Closes: #537271
 
@@ -1339,7 +1339,7 @@ netcfg (1.14) unstable; urgency=high
 
   * Update libiw build-dep and rebuild to fix crash with new version of the
     library. Closes: #327390
-  * Updated translations: 
+  * Updated translations:
     - Danish (da.po) by Claus Hindsgaul
     - Spanish (es.po) by Javier Fernández-Sanguino Peña
     - Basque (eu.po) by Piarres Beobide
@@ -1390,7 +1390,7 @@ netcfg (1.13) unstable; urgency=low
   * Fix error setting default value for new netcfg/dhcp_timeout template.
   * Add myself to uploaders
 
-  * Updated translations: 
+  * Updated translations:
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
     - German (de.po) by Holger Wansing
@@ -1429,7 +1429,7 @@ netcfg (1.12) unstable; urgency=low
   * A few interface types seem to be pure product names and not translatable.
     Do not mark these templates as translatable.
 
-  * Updated translations: 
+  * Updated translations:
     - Czech (cs.po) by Miroslav Kure
     - French (fr.po) by Christian Perrier
     - Italian (it.po) by Giuseppe Sacco
@@ -1445,10 +1445,10 @@ netcfg (1.11) unstable; urgency=low
 
   [ Joey Hess ]
   * Switch to using libiw28.
-  * Add a hack to sed the substvars files to get proper dependency on 
+  * Add a hack to sed the substvars files to get proper dependency on
     the libiw udeb w/o a versioned dependency on the deb.
-    
-  * Updated translations: 
+
+  * Updated translations:
     - Catalan (ca.po) by Guillem Jover
     - Greek, Modern (1453-) (el.po) by Greek Translation Team
     - Basque (eu.po) by Piarres Beobide
@@ -1561,7 +1561,7 @@ netcfg (1.07.1) unstable; urgency=low
     - Add a note to translators about the maximum length of
       individual Choices translations for Select templates
   * Includes fixes for substitutions in translated templates.
-  * Updated translations: 
+  * Updated translations:
     - Bosnian (bs.po) by Safir Šećerović
     - Catalan (ca.po) by Jordi Mallach
     - Czech (cs.po) by Miroslav Kure
@@ -1588,7 +1588,7 @@ netcfg (1.07) unstable; urgency=high
       (Note: this seems to fix s:xxxxx passphrase entry.)
     - Rectify some poor wording and missing examples in netcfg/wireless_wep
       template.
-  * Updated translations: 
+  * Updated translations:
     - Arabic (ar.po) by Ossama M. Khayat
     - Bulgarian (bg.po) by Ognyan Kulev
     - Bosnian (bs.po) by Safir Šećerović
@@ -1635,7 +1635,7 @@ netcfg (1.06) unstable; urgency=high
     - Fix substitution variables in Greek and Swedish translations.
   * Joshua Kwan
     - Really apply Andrew Pollock's WEP patch. closes: #262624
-  * Updated translations: 
+  * Updated translations:
     - Greek, Modern (1453-) (el.po) by Greek Translation Team
     - Finnish (fi.po) by Tapio Lehtonen
     - Hebrew (he.po) by Lior Kaplan
@@ -1653,7 +1653,7 @@ netcfg (1.05) unstable; urgency=high
 
   * Joey Hess
     - Rebuild, fixing dependencies on libiw27.
-  * Updated translations: 
+  * Updated translations:
     - Bulgarian (bg.po) by Ognyan Kulev
 
  -- Joey Hess <joeyh@debian.org>  Sun, 10 Oct 2004 14:55:38 -0400
@@ -1663,8 +1663,8 @@ netcfg (1.04) unstable; urgency=low
   * Thiemo Seufer
     - Sanitize the ifdef TEST maze in ethtool-lite.c.
   * Joshua Kwan
-    - Remove -V option. (closes: #275096) 
-  * Updated translations: 
+    - Remove -V option. (closes: #275096)
+  * Updated translations:
     - Welsh (cy.po) by Dafydd Harries
     - Hebrew (he.po) by Lior Kaplan
     - Hungarian (hu.po) by VEROK Istvan
@@ -1751,7 +1751,7 @@ netcfg (1.02) unstable; urgency=low
       support was removed.
     - Allow netcfg/choose_interface to be preseeded to just an interface name,
       don't choke on the lack of a colon after it.
-  * Updated translations: 
+  * Updated translations:
     - Arabic (ar.po) by Ossama M. Khayat
     - Bulgarian (bg.po) by Ognyan Kulev
     - Bosnian (bs.po) by Safir Šećerović
@@ -1830,7 +1830,7 @@ netcfg (1.01) unstable; urgency=medium
 
 netcfg (1.00) unstable; urgency=low
 
-  * Updated translations: 
+  * Updated translations:
     - Arabic (ar.po) by Abdulaziz Al-Arfaj
     - Welsh (cy.po) by Dafydd Harries
     - Danish (da.po) by Frederik Dannemare
@@ -1892,7 +1892,7 @@ netcfg (0.72) unstable; urgency=low
     - Albanian (sq.po) by Elian Myftiu
     - Turkish (tr.po) by Osman Yüksel
     - Ukrainian (uk.po) by Eugeniy Meshcheryakov
-    - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu  
+    - Simplified Chinese (zh_CN.po) by Carlos Z.F. Liu
 
  -- Joshua Kwan <joshk@triplehelix.org>  Sat, 17 Jul 2004 18:44:18 -0700
 
@@ -2214,14 +2214,14 @@ netcfg (0.62) unstable; urgency=low
     - Prune unused #defines.
     - Nuke unused netcfg/title template.
     - Clarify nameserver question by adding an introductory sentence.
-      (Closes: #243251) 
+      (Closes: #243251)
     - Touch resolv.conf when using DHCP, to fix problems with pppoeconf
       (at least for now. Closes: #241075)
   * Per Olofsson
     - Check for hotpluggable (PCMCIA) network interfaces in
       /etc/network/devhotplug and don't generate auto entries for them.
       Also put them in a "mapping hotplug" stanza. Closes: #239284.
-  * Updated translations: 
+  * Updated translations:
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
     - Basque (eu.po) by Piarres Beobide Egaña
@@ -2254,7 +2254,7 @@ netcfg (0.61) unstable; urgency=high
     - modprobe in busybox won't load af_packet. This causes DHCP
       configuration fail.
       This can be avoid by running modprobe without '/sbin/'.
-  * Updated translations: 
+  * Updated translations:
     - Welsh (cy.po) by Dafydd Harries
     - German (de.po) by Alwin Meschede
     - Polish (pl.po) by Bartosz Fenski
@@ -2266,7 +2266,7 @@ netcfg (0.61) unstable; urgency=high
 
 netcfg (0.60) unstable; urgency=low
 
-  * Updated translations: 
+  * Updated translations:
     - Greek, Modern (1453-) (el.po) by Konstantinos Margaritis
     - Hebrew (he.po) by Lior Kaplan
     - Indonesian (id.po) by Parlin Imanuel Toh
@@ -2284,7 +2284,7 @@ netcfg (0.59) unstable; urgency=low
 
   * Joey Hess
     - Fix endian problem in gateway calculation.
-  * Updated translations: 
+  * Updated translations:
     - Bosnian (bs.po) by Safir Šećerović
     - Catalan (ca.po) by Jordi Mallach
     - Czech (cs.po) by Miroslav Kure
@@ -2310,7 +2310,7 @@ netcfg (0.58) unstable; urgency=low
   * Joey Hess
     - Convert netcfg/get_method, a select list, to netcfg/use_dhcp, a boolean.
       This will make it easier to override at the boot prompt.
-  * Updated translations: 
+  * Updated translations:
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
     - French (fr.po) by Philippe Batailler
@@ -2348,7 +2348,7 @@ netcfg (0.57) unstable; urgency=low
       and do not ask that question a second time. Only ask it if FQDN was
       _not_ passed. (Closes: #174360)
     - Write out some informative text to INTERFACES_FILE.
-  * Updated translations: 
+  * Updated translations:
     - Danish (da.po) by Claus Hindsgaul
     - French (fr.po) by Philippe Batailler
     - Hungarian (hu.po) by VERÓK István
@@ -2391,7 +2391,7 @@ netcfg (0.55) unstable; urgency=low
 
 netcfg (0.54) unstable; urgency=low
 
-  * Strip the binaries again. 
+  * Strip the binaries again.
 
  -- Joey Hess <joeyh@debian.org>  Tue,  9 Mar 2004 15:38:56 -0500
 
@@ -2415,7 +2415,7 @@ netcfg (0.51) unstable; urgency=low
      what DHCP is.
    - Kill dhcp client before beginning static network config, to keep the
      memory footprint as low as possible.
-  * Updated translations: 
+  * Updated translations:
     - Bulgarian (bg.po) by Ognyan Kulev
     - Czech (cs.po) by Miroslav Kure
     - Danish (da.po) by Claus Hindsgaul
@@ -2560,7 +2560,7 @@ netcfg (0.46) unstable; urgency=low
     - Miroslav Kure
       - Updated Czech translation
     - Elian Myftiu
-      - Updated Albanian translation (sq.po) 
+      - Updated Albanian translation (sq.po)
     - Carlos Z.F. Liu
       - Updated Simplified Chinese translation (zh_CN.po)
     - Kenshi Muto
@@ -2745,7 +2745,7 @@ netcfg (0.37) unstable; urgency=low
   * Bart Cornelis
     - Merged Norwegian Bokmael (nb.po) translation from skolelinux-cvs
   * Jure Cuhalev
-    - Added/updated slovenian translation (sl.po). 
+    - Added/updated slovenian translation (sl.po).
 
  -- Joey Hess <joeyh@debian.org>  Tue, 23 Dec 2003 21:47:33 -0500
 
@@ -2825,7 +2825,7 @@ netcfg (0.34) unstable; urgency=low
     - add new combined dhcp and static netcfg
       (udeb netcfg)
     - implement joey's dhcp idea
-      (wait 10s and then ask if we should try 
+      (wait 10s and then ask if we should try
        longer)
     - move common code to netcfg-common.c
     - improve state machines
@@ -3156,7 +3156,7 @@ netcfg (0.14) unstable; urgency=low
 
 netcfg (0.13) unstable; urgency=low
 
-  * French templates thanks to 
+  * French templates thanks to
     Philippe Batailler <pbatailler@teaser.fr> (closes: #138073)
   * some build cleanup
   * tfheen: Use libdebian-installer, thanks to thomas poindessous
@@ -3179,8 +3179,8 @@ netcfg (0.12) unstable; urgency=low
 
 netcfg (0.11) unstable; urgency=low
 
-  * use new dpkg features so build is less cludgy 
-  * dhcp and static templates thanks to 
+  * use new dpkg features so build is less cludgy
+  * dhcp and static templates thanks to
     ilgiz kalmetev <i.kalmetev@bis.bashtelecom.ru>
     (closes: #114843, #114844, #114845)
 
@@ -3188,7 +3188,7 @@ netcfg (0.11) unstable; urgency=low
 
 netcfg (0.10) unstable; urgency=low
 
-  * fix broken handling of nameservers, build with cdebconf-dev. 
+  * fix broken handling of nameservers, build with cdebconf-dev.
 
  -- David Whedon <dwhedon@debian.org>  Wed, 14 Feb 2001 20:33:40 -0800
 
@@ -3201,19 +3201,19 @@ netcfg (0.09) unstable; urgency=low
 
 netcfg (0.08) unstable; urgency=low
 
-  * route is now in /sbin 
+  * route is now in /sbin
 
  -- David Whedon <dwhedon@debian.org>  Wed, 31 Jan 2001 09:58:18 -0800
 
 netcfg (0.07) unstable; urgency=low
 
-  * if a gateway is specified, netcfg-static needs to add a default route 
+  * if a gateway is specified, netcfg-static needs to add a default route
 
  -- David Whedon <dwhedon@debian.org>  Tue, 30 Jan 2001 23:30:18 -0800
 
 netcfg (0.06) unstable; urgency=low
 
-  * added German translations from Michael Bramer <grisu@debian.org> 
+  * added German translations from Michael Bramer <grisu@debian.org>
     (Closes: #83153, #83159)
   * automatically choose between dhcp-client or pump
 
@@ -3222,14 +3222,14 @@ netcfg (0.06) unstable; urgency=low
 netcfg (0.05) unstable; urgency=low
 
   * added support for dhclient and pump.
-  * removed support for dhcpcd. 
+  * removed support for dhcpcd.
   * split things up more cleanly b/w dhcp and static.
 
  -- David Whedon <dwhedon@debian.org>  Sun, 21 Jan 2001 22:07:15 -0800
 
 netcfg (0.04) unstable; urgency=low
 
-  * fixed a segfault found by "Randolph Chung" <randolph@tausq.org>  
+  * fixed a segfault found by "Randolph Chung" <randolph@tausq.org>
 
  -- David Whedon <dwhedon@gordian.com>  Mon,  8 Jan 2001 19:19:17 -0800
 
@@ -3242,7 +3242,7 @@ netcfg (0.03) unstable; urgency=low
 
 netcfg (0.02) unstable; urgency=low
 
-  * dhcp and static config now in two separate udebs 
+  * dhcp and static config now in two separate udebs
 
  -- David Whedon <dwhedon@gordian.com>  Tue, 26 Dec 2000 20:53:58 -0800
 

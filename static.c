@@ -292,21 +292,21 @@ int netcfg_activate_static(struct debconfclient *client)
 
 #elif defined(__FreeBSD_kernel__)
     deconfigure_network();
-    
+
     loop_setup();
     interface_up(interface);
-    
+
     /* Flush all previous addresses, routes */
     snprintf(buf, sizeof(buf), "ifconfig %s inet 0 down", interface);
     rv |= di_exec_shell_log(buf);
-    
+
     snprintf(buf, sizeof(buf), "ifconfig %s up", interface);
     rv |= di_exec_shell_log(buf);
-    
+
     snprintf(buf, sizeof(buf), "ifconfig %s %s",
              interface,
              inet_ntop (AF_INET, &ipaddress, ptr1, sizeof (ptr1)));
-    
+
     /* avoid using a second buffer */
     di_snprintfcat(buf, sizeof(buf), " netmask %s",
                    inet_ntop (AF_INET, &netmask, ptr1, sizeof (ptr1)));
@@ -314,12 +314,12 @@ int netcfg_activate_static(struct debconfclient *client)
     /* avoid using a third buffer */
     di_snprintfcat(buf, sizeof(buf), " broadcast %s",
                    inet_ntop (AF_INET, &broadcast, ptr1, sizeof (ptr1)));
-    
+
     di_info("executing: %s", buf);
     rv |= di_exec_shell_log(buf);
-    
+
     if (pointopoint.s_addr) {
-        snprintf(buf, sizeof(buf), "route add %s", 
+        snprintf(buf, sizeof(buf), "route add %s",
                  inet_ntop (AF_INET, &pointopoint, ptr1, sizeof (ptr1)));
         /* avoid using a second buffer */
         di_snprintfcat(buf, sizeof(buf), "%s",

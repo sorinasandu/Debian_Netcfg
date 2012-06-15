@@ -943,7 +943,7 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
                 *s = '\0';
             }
         }
-        
+
         if (!valid_hostname(*hostname)) {
             di_info("%s is an invalid hostname", *hostname);
             debconf_subst(client, "netcfg/invalid_hostname",
@@ -1288,7 +1288,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
         inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
         sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);
     }
-    
+
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
     debconf_progress_start(client, 0, 100, "netcfg/link_detect_progress");
@@ -1316,6 +1316,6 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
 
     debconf_progress_stop(client);
     debconf_capb(client, "backup");
-    
+
     return rv;
 }

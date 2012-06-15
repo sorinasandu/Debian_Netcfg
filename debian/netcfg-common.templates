@@ -64,7 +64,7 @@ _Description: Wireless ESSID for ${iface}:
 
 Template: netcfg/wireless_security_type
 Type: select
-Choices-C: wep/open, wpa 
+Choices-C: wep/open, wpa
 __Choices: WEP/Open Network, WPA/WPA2 PSK
 # :sl2:
 _Description: Wireless network type for ${iface}:
@@ -174,7 +174,7 @@ Type: error
 # :sl2:
 _Description: No network interfaces detected
  No network interfaces were found. The installation
- system was unable to find a network device. 
+ system was unable to find a network device.
  .
  You may need to load a specific module for your network card, if you have
  one. For this, go back to the network hardware detection step.
