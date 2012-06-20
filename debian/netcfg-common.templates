@@ -333,14 +333,14 @@ Description: for internal use; can be preseeded
 Template: netcfg/link_wait_timeout
 Type: string
 Default: 3
-# :sl5:
+# :sl6:
 _Description: Waiting time (in seconds) for link detection:
  Please enter the maximum time you would like to wait for network link
  detection.
 
 Template: netcfg/bad_link_wait_timeout
 Type: error
-# :sl5:
+# :sl6:
 _Description: Invalid network link detection waiting time
  The value you have provided is not valid. The maximum waiting time (in
  seconds) for network link detection must be a positive integer.
