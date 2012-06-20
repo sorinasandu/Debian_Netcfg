@@ -12,14 +12,14 @@
 # in doc/i18n/i18n.txt
 #
 #
-# Danishka Navin <danishka@gmail.com>, 2009, 2011.
+# Danishka Navin <danishka@gmail.com>, 2009, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-15 07:01+0530\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-02-28 10:16+0530\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
 "Language: si\n"
 "MIME-Version: 1.0\n"
@@ -652,6 +652,39 @@ msgstr "ජාල සැකසීම් ගබඩා කරමින්..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "ජාලය වින්‍යාසගත කරමින්"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr "කරුණාකර නව ZFS එකතුවට යෙදීමට කැමති නාමය ඇතුළත් කරන්න"
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

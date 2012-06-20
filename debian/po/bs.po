@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_bs\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-15 12:18+0100\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-04-11 12:57+0100\n"
 "Last-Translator: Armin Besirovic <armin@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "Language: bs\n"
@@ -671,6 +671,39 @@ msgstr "Spremam mrežne postavke ..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Podesi mrežu"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr "Molim unesite naziv koji želite koristiti za novu ZFS grupu."
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

@@ -13,18 +13,18 @@
 # zorglubb <debian-user-icelandic@lists.debian.org>, 2008.
 # Sveinn í Felli <sveinki@nett.is>, 2010.
 # Alastair McKinstry, <mckinstry@computer.org>, 2002.
-# Sveinn í Felli <sveinki@nett.is>, 2010, 2011.
+# Sveinn í Felli <sveinki@nett.is>, 2010, 2011, 2012.
 # Alastair McKinstry <mckinstry@computer.org>, 2002.
 # Translations from iso-codes:
-# Copyright (C) 2002,2003, 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2010, 2011, 2012 Free Software Foundation, Inc.
 # Translations from KDE:
 # Þórarinn Rúnar Einarsson <thori@mindspring.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_is\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-12-27 21:05+0000\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-06-16 08:55+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -32,6 +32,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 ">\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: boolean
 #. Description
@@ -667,6 +668,39 @@ msgstr "Geymi netstillingar..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Stilla netið"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr "Sláðu inn það heiti sem þú kýst fyrir nýja rökeintakið."
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

@@ -58,9 +58,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-09-13 02:45+0200\n"
-"Last-Translator: Javier Fernández-Sanguino <jfs@debian.org>\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-06-18 02:09+0200\n"
+"Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -713,6 +713,40 @@ msgstr "Guardando la configuración de la red ..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Configurar la red"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr ""
+"Introduzca el nombre que desea utilizar para el nuevo grupo de volúmenes ZFS."
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

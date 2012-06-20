@@ -4,7 +4,6 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # translation of km.po to Khmer
-#
 # Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2007, 2008, 2010.
 #   eng vannak <evannak@khmeros.info>, 2006.
 #   auk piseth <piseth_dv@khmeros.info>, 2006.
@@ -14,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-01-17 11:49+0700\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-01-18 15:40+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
 "Language: \n"
@@ -648,6 +647,39 @@ msgstr "កំពុង​ទុក​ការ​កំណត់​បណ្ដ
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​​បណ្ដាញ"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr "សូម​បញ្ចូល​ឈ្មោះ​ដែល​អ្នក​ចង់​ប្រើ​សម្រាប់​ក្រុម ZFS ថ្មី ។"
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

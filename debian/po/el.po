@@ -27,14 +27,14 @@
 #   QUAD-nrg.net <yodesy@quad-nrg.net>, 2006, 2010.
 #   Simos Xenitellis <simos@hellug.gr>, 2001.
 #   Konstantinos Margaritis <markos@debian.org>, 2004.
-#   Athanasios Lefteris <alefteris@gmail.com>, 2008.
+#   Athanasios Lefteris <alefteris@gmail.com>, 2008, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2012-01-23 15:57+0200\n"
-"Last-Translator: galaxico <galaxico@quad-nrg.net>\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-04-07 19:51+0300\n"
+"Last-Translator: \n"
 "Language-Team: Greek <debian-l10n-greek@lists.debian.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -691,6 +691,41 @@ msgstr "Αποθήκευση των ρυθμίσεων δικτύου..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Ρύθμιση του δικτύου"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr ""
+"Παρακαλώ εισάγετε το όνομα που θα θέλατε να χρησιμοποιήσετε για το καινούριο "
+"ZFS pool."
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description

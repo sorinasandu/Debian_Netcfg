@@ -15,7 +15,7 @@
 #   Alastair McKinstry <mckinstry@computer.org>, 2001, 2002.
 #   Copyright (C) 2002 Free Software Foundation, Inc.
 #   Free Software Foundation, Inc., 2004
-#   Ivan Masár <helix84@centrum.sk>, 2007, 2008, 2009, 2010, 2011.
+#   Ivan Masár <helix84@centrum.sk>, 2007, 2008, 2009, 2010, 2011, 2012.
 #     Translations taken from sk.wikipedia.org on 2008-06-17
 #   Pavol Cvengros <orpheus@hq.alert.sk>, 2001.
 #   Peter Mann <Peter.Mann@tuke.sk>, 2004, 2006.
@@ -29,10 +29,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2011-08-16 04:31+0000\n"
-"PO-Revision-Date: 2011-10-31 14:24+0100\n"
+"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"PO-Revision-Date: 2012-06-16 12:01+0100\n"
 "Last-Translator: Ivan Masár <helix84@centrum.sk>\n"
-"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"Language-Team: Slovak <debian-l10n-slovak@lists.debian.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -674,6 +674,40 @@ msgstr "Ukladajú sa nastavenia siete ..."
 #: ../netcfg-common.templates:46001
 msgid "Configure the network"
 msgstr "Nastavenie siete"
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+msgid "Waiting time (in seconds) for link detection:"
+msgstr ""
+
+#. Type: string
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:48001
+#, fuzzy
+msgid ""
+"Please enter the maximum time you would like to wait for network link "
+"detection."
+msgstr ""
+"Prosím, zadajte názov, ktorý chcete použiť na označenie nového fondu ZFS."
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid "Invalid network link detection waiting time"
+msgstr ""
+
+#. Type: error
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:49001
+msgid ""
+"The value you have provided is not valid. The maximum waiting time (in "
+"seconds) for network link detection must be a positive integer."
+msgstr ""
 
 #. Type: string
 #. Description
