@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-16 14:01+0300\n"
+"PO-Revision-Date: 2012-06-20 23:08+0300\n"
 "Last-Translator: Mattias Põldaru <mahfiaz@gmail.com>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
@@ -678,24 +678,23 @@ msgstr "Võrgu seadistamine"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Ühenduse tuvastamise ooteaeg sekundites:"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "Palun sisesta nimi, mida soovid uue ZFS tsooni jaoks kasutada."
+msgstr "Palun sisesta, kui kaua võrguühenduse tuvastamise järel oodata tohiks."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Võrguühenduse tuvastamise ooteaeg on vigane"
 
 #. Type: error
 #. Description
@@ -705,6 +704,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"Sisestatud väärtus ei ole korrektne. Võrguühenduse tuvastamise maksimaalne "
+"ooteaeg sekundites peab olema positiivne täisarv."
 
 #. Type: string
 #. Description

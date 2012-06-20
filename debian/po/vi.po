@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer Level 1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-18 03:18+0900\n"
+"PO-Revision-Date: 2012-06-21 05:13+0900\n"
 "Last-Translator: Nguyen Vu Hung <vuhung16plus@gmail.com>\n"
 "Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
 "Language: vi\n"
@@ -683,24 +683,23 @@ msgstr "Cấu hình mạng"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Thời gian đợi dò tìm liên kết (tính bằng giây)"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "Hãy nhập tên bạn muốn sử dụng cho pool ZFS mới."
+msgstr "Hãy nhập thời gian dò tìm mạng tối đa."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Thời gian đợi dò tìm liên kết mạng không hợp lệ"
 
 #. Type: error
 #. Description
@@ -710,6 +709,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"Giá trị không hợp lệ. Thời gian đợi lớn nhất (bằng giây) phải là số nguyên "
+"dương."
 
 #. Type: string
 #. Description
