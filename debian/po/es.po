@@ -16,8 +16,8 @@
 # Steve Langasek <vorlon@debian.org>, 2004
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2005
 # Rubén Porras Campo <nahoo@inicia.es>, 2005
-# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2010
 # Omar Campagne <ocampagne@gmail.com>, 2010
+# Javier Fernández-Sanguino <jfs@debian.org>, 2003-2012
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -59,7 +59,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-18 02:09+0200\n"
+"PO-Revision-Date: 2012-06-22 00:40+0200\n"
 "Last-Translator: Javier Fernández-Sanguino Peña <jfs@debian.org>\n"
 "Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "Language: \n"
@@ -719,25 +719,25 @@ msgstr "Configurar la red"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Tiempo de espera (en segundos) para la detección de enlace:"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
 msgstr ""
-"Introduzca el nombre que desea utilizar para el nuevo grupo de volúmenes ZFS."
+"Introduzca el tiempo máximo que desearía esperar para la detección del "
+"enlace de red."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Tiempo de detección de enlace de red inválido"
 
 #. Type: error
 #. Description
@@ -747,6 +747,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"El valor que ha introducido no es válido. El máximo valor de espera (en "
+"segundos) para la detección de enlace de red debe ser un entero positivo."
 
 #. Type: string
 #. Description
