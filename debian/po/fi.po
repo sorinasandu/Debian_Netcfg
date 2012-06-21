@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-20 10:39+0100\n"
+"PO-Revision-Date: 2012-06-21 09:08+0100\n"
 "Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
@@ -677,24 +677,23 @@ msgstr "Tee verkkoasetukset"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Odotusaika (sekunneissa) linkin havaitsemiselle:"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "Anna haluamasi nimi uudelle ZFS-varannolle."
+msgstr "Syötä maksimiaika, jonka verran verkkolinkin havaitsemista odotetaan."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Ei kelvollinen verkkolinkin havaitsemisen odotusaika"
 
 #. Type: error
 #. Description
@@ -704,6 +703,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"Tarjoamasi arvo ei ole kelvollinen. Suurimman sallitun odotusajan "
+"(sekunneissa) tulee olla positiivinen kokonaisluku."
 
 #. Type: string
 #. Description

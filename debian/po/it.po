@@ -39,7 +39,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-17 14:26+0200\n"
+"PO-Revision-Date: 2012-06-21 08:33+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -697,24 +697,25 @@ msgstr "Configurare la rete"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Tempo di attesa (in secondi) per il rilevamento della connessione:"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "Indicare il nome da usare per il nuovo pool ZFS."
+msgstr ""
+"Indicare il tempo massimo di attesa per il rilevamento della connessione di "
+"rete."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Tempo di attesa inserito non valido"
 
 #. Type: error
 #. Description
@@ -724,6 +725,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"Il valore fornito non è valido. Il tempo massimo di attesa (in secondi) per "
+"il rilevamento della connessione deve essere un numero intero positivo."
 
 #. Type: string
 #. Description
