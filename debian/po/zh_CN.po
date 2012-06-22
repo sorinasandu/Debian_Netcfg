@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-04-28 18:39+0800\n"
+"PO-Revision-Date: 2012-06-22 14:45+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
@@ -662,24 +662,23 @@ msgstr "配置网络"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "连接探测等待的时间(秒)："
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "请输入新 ZFS 池的名称。"
+msgstr "请输入等待网络连接的最大时间(秒)。"
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "网络连接探测等待时间无效"
 
 #. Type: error
 #. Description
@@ -688,7 +687,7 @@ msgstr ""
 msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
-msgstr ""
+msgstr "您提供的值无效。网络连接探测的最大等待时间(秒)必须为正整数。"
 
 #. Type: string
 #. Description
