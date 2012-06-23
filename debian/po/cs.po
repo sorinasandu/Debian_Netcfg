@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-16 18:31+0200\n"
+"PO-Revision-Date: 2012-06-23 09:24+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "Language: cs\n"
@@ -665,24 +665,25 @@ msgstr "Nastavit síť"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "Čas (v sekundách) pro rozpoznání spojení:"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "Zadejte jméno, kterým chcete označovat nový ZFS pool."
+msgstr ""
+"Zadejte nejdelší čas, během kterého chcete počkat na rozpoznání síťového "
+"spojení."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "Neplatný čas pro rozpoznání síťového spojení"
 
 #. Type: error
 #. Description
@@ -692,6 +693,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"Zadaná hodnota není platná. Nejdelší čas (v sekundách) pro rozpoznání "
+"síťového spojení musí být kladné celé číslo."
 
 #. Type: string
 #. Description
