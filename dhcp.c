@@ -409,10 +409,10 @@ int ask_wifi_configuration (struct debconfclient *client)
         switch (wifistate) {
         case ESSID:
             if (wpa_supplicant_status == WPA_UNAVAIL)
-                wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
+                wifistate = (netcfg_wireless_set_essid(client, interface) == GO_BACK) ?
                     ABORT : WEP;
             else
-                wifistate = (netcfg_wireless_set_essid(client, interface, "high") == GO_BACK) ?
+                wifistate = (netcfg_wireless_set_essid(client, interface) == GO_BACK) ?
                     ABORT : SECURITY_TYPE;
             break;
 

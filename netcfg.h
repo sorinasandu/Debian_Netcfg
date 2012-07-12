@@ -126,7 +126,7 @@ extern void netcfg_write_common (struct in_addr ipaddress, char *hostname,
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 
 extern int is_wireless_iface (const char* iface);
-extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface, char* priority);
+extern int netcfg_wireless_set_essid (struct debconfclient *client, char* iface);
 extern int netcfg_wireless_set_wep (struct debconfclient *client, char* iface);
 extern int wireless_security_type (struct debconfclient *client, char* iface);
 extern int netcfg_set_passphrase (struct debconfclient *client, char* iface);

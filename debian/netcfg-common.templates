@@ -54,13 +54,13 @@ _Description: Wireless ESSID for ${iface}:
 
 Template: netcfg/wireless_essid_again
 Type: string
-# :sl2:
+# :sl6:
 _Description: Wireless ESSID for ${iface}:
  Attempting to find an available wireless network failed.
  .
  ${iface} is a wireless network interface. Please enter the name (the ESSID)
- of the wireless network you would like ${iface} to use. To skip wireless
- configuration and continue, leave this field blank.
+ of the wireless network you would like ${iface} to use. To connect to any
+ available network, leave this field blank.
 
 Template: netcfg/wireless_security_type
 Type: select
@@ -114,8 +114,8 @@ Template: netcfg/invalid_essid
 Type: error
 # :sl2:
 _Description: Invalid ESSID
- The ESSID "${essid}" is invalid. ESSIDs may only be up to 32 characters,
- but may contain all kinds of characters.
+ The ESSID "${essid}" is invalid. ESSIDs may only be up to ${max_essid_len}
+ characters, but may contain all kinds of characters.
 
 Template: netcfg/wpa_progress
 Type: text
@@ -344,3 +344,13 @@ Type: error
 _Description: Invalid network link detection waiting time
  The value you have provided is not valid. The maximum waiting time (in
  seconds) for network link detection must be a positive integer.
+
+Template: netcfg/wireless_show_essids
+Type: select
+Choices-C: ${essid_list} manual
+# Translators: please do not translate the variable essid_list
+_Choices: ${essid_list} Enter ESSID manually
+# :sl6:
+_Description: Wireless network:
+ Select the wireless network to use during the installation process.
+
