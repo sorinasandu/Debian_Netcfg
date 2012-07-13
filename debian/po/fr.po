@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-20 22:13+0200\n"
+"PO-Revision-Date: 2012-07-13 09:03-0600\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -160,7 +160,6 @@ msgstr "La recherche d'un réseau sans fil disponible a échoué."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
@@ -168,7 +167,7 @@ msgid ""
 msgstr ""
 "${iface} est l'interface d'un réseau sans fil. Veuillez indiquer le nom "
 "(ESSID) de ce réseau sans fil pour pouvoir utiliser ${iface}. Si vous voulez "
-"utiliser un autre réseau, laissez ce champ vide."
+"utiliser n'importe quel réseau disponible, laissez ce champ vide."
 
 #. Type: select
 #. Choices
@@ -320,13 +319,13 @@ msgstr "Nom (ESSID) non valable"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"Le nom « ${essid} » n'est pas valable. Les ESSID ne doivent pas dépasser 32 "
-"caractères, mais ils peuvent contenir toutes sortes de caractères."
+"Le nom « ${essid} » n'est pas valable. Les ESSID ne doivent pas dépasser "
+"${max_essid_len} caractères, mais ils peuvent contenir toutes sortes de "
+"caractères."
 
 #. Type: text
 #. Description
@@ -727,23 +726,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Entrer le nom du réseau manuellement"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Type de réseau sans fil :"
+msgstr "Réseau sans fil :"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Choisissez la prochaine étape :"
+msgstr "Veuillez choisir le réseau sans fil à utiliser pendant l'installation."
 
 #. Type: string
 #. Description
