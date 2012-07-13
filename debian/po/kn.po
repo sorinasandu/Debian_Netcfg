@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-03-05 22:29+0530\n"
 "Last-Translator: Prabodh C P <prabodh@fsmk.org>\n"
 "Language-Team: Kannada <debian-l10n-kannada@lists.debian.org>\n"
@@ -122,7 +122,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface}ನ ನಿಸ್ತಂತು ಜಾಲಬಂಧ ESSID "
@@ -142,23 +142,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ಬೇರೆ ನಿಸ್ತಂತು ಜಾಲಬಂಧದ ಹುಡುಕಾಟ ವಿಫಲವಾಗಿದೆ "
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} ಎಂಬುದು ನಿಸ್ತಂತು ಜಾಲಬಂಧ ಸಂಪರ್ಕ ಸಾಧನ ನೀವು $(iface} ಬಳಕೆ ಮಾಡಲು ಇಚ್ಛಿಸುವ "
-"ನಿಸ್ತಂತು ಜಾಲಬಂಧದ (the ESSID) ನ್ನು ಹೆಸರಿಸಿ. ನಿಸ್ತಂತು .ಸಂರಚನಾ ವ್ಯವಸ್ಥೆಯನ್ನು ತೊರೆದು "
-"ಮುಂದುವರೆಯಲು ಈ ಜಾಗವನ್ನು ಖಾಲಿಬಿಡಿ"
+"${iface} ಎಂಬುದು ನಿಸ್ತಂತು ಜಾಲಬಂಧ ಅಂತರ್-ಕ್ರಿಯೆ. ನೀವು $(iface} ಬಳಕೆ ಮಾಡಲು ಇಚ್ಛಿಸುವ "
+"ನಿಸ್ತಂತು ಜಾಲಬಂಧದ (the ESSID) ನ್ನು ಹೆಸರಿಸಿ. ಯಾವುದಾದರೂ ಲಭ್ಯವಿರುವ ಜಾಲಬಂಧವನ್ನು ಬಳಸಲು "
+"ಇಚ್ಛಿಸುವಿರಾದರೆ ಈ ಜಾಗವನ್ನು ಖಾಲಿ ಬಿಡಿ."
 
 #. Type: select
 #. Choices
@@ -305,9 +306,10 @@ msgstr "ಅಮಾನ್ಯವಾದ ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSIDಯಲ್ಲಿನ \"${essid}\" ಅಮಾನ್ಯವಗಿದೆ. ESSIDಗಳು ಕೇವಲ ೩೨ ಅಕ್ಷರಗಳವರೆಗೆ ಮಾತ್ರ "
 "ಇರಬಹುದು, ಆದರೆ ಎಲ್ಲ ಬಗೆಯ ಅಕ್ಷರಗಳನ್ನು ಹೊಂದಿರಬಹುದು."
@@ -696,6 +698,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "ನಿಸ್ತಂತು ಜಾಲಬಂಧದ ರೀತಿ:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "ಅನುಸ್ತಾಪನಾ ಪ್ರಕ್ರಿಯಯಲ್ಲಿ ಮುಂದಿನ ಹಂತವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
 #. Type: string
 #. Description

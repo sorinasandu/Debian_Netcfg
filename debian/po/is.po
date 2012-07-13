@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_is\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-16 08:55+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
@@ -125,7 +125,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID þráðlauss nets á ${iface}:"
@@ -145,23 +145,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Tókst ekki að finna tiltækt þráðlaust net."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} er þráðlaust netkort. Sláðu inn nafn (ESSID) þráðlausa netsins sem "
-"þú vilt láta ${iface} nota. Skildu þessa línu eftir auða ef þú villt sleppa "
-"því að seja upp þráðlaust net."
+"þú vilt láta ${iface} nota. Ef þú vilt nota hvaða net sem finnst getur þú "
+"skilið þessa línu eftir auða."
 
 #. Type: select
 #. Choices
@@ -311,9 +312,10 @@ msgstr "Ógilt ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID kennimerkið „${essid}“ er ógilt. ESSID geta einungis verið 32 stafir "
 "að lengd en geta innhaldið allskyns stafi."
@@ -701,6 +703,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Tegund þráðlauss netkerfis:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Veldu næsta þrep uppsetningarferlisins:"
 
 #. Type: string
 #. Description

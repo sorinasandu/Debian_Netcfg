@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-23 16:11+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} ਲਈ ਬੇਤਾਰ ESSID:"
@@ -143,22 +143,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ਇੱਕ ਉਪਲੱਬਧ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਦੀ ਖੋਜ ਅਸਫ਼ਲ ਰਹੀ ਹੈ।"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} ਇੱਕ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਹੈ। ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਜੋ ਤੁਸੀਂ ${iface} ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਦਾ "
-"ਨਾਂ (ESSID) ਭਰੋ ਜੀ। ਬੇਤਾਰ ਸੰਰਚਨਾ ਨੂੰ ਛੱਡ ਕੇ ਅੱਗੇ ਜਾਣ ਲਈ ਇਸ ਨੂੰ ਖਾਲੀ ਰਹਿ ਦਿਓ।"
+"ਨਾਂ (ESSID) ਭਰੋ ਜੀ। ਜੇ ਤੁਸੀਂ ਕੋਈ ਵੀ ਉਪਲੱਬਧ ਨੈੱਟਵਰਕ ਵਰਤਣਾ ਪਸੰਦ ਕਰਦੇ ਹੋ, ਇਹ ਕਾਲਮ ਖਾਲੀ ਛੱਡੋ।"
 
 #. Type: select
 #. Choices
@@ -302,9 +303,10 @@ msgstr "ਗਲਤ ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" ਗਲਤ ਹੈ। ESSIDs ਸਿਰਫ 32 ਅੱਖਰਾਂ ਦਾ ਹੋ ਸਕਦਾ ਹੈ, ਪਰ ਸਾਰੀ ਕਿਸਮ ਦੇ "
 "ਅੱਖਰ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ।"
@@ -691,6 +693,29 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਵਲੋਂ ਦਿੱਤਾ ਮੁੱਲ ਗਲਤ ਹੈ। ਵੱਧ ਤੋਂ ਵੱਧ ਉਡੀਕ ਸਮੇਂ (ਸਕਿੰਟ ਵਿੱਚ) ਲਈ ਨੈੱਟਵਰਕ ਲਿੰਕ ਖੋਜ ਧਨਾਤਮਕ ਅੰਕ "
 "ਵੀ ਹੋਵੇ।"
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਦੀ ਕਿਸਮ:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਕਾਰਵਾਈ ਲਈ ਅਗਲਾ ਸਟੈਪ ਚੁਣੋ:"
 
 #. Type: string
 #. Description

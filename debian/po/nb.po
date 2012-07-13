@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-21 00:26+0200\n"
 "Last-Translator: Hans Fredrik Nordhaug <hans@nordhaug.priv.no>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -135,7 +135,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Trådløs ESSID for ${iface}:"
@@ -155,23 +155,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Forsøk på å finne et tilgjengelig trådløst nettverk mislyktes."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} er et trådløst nettverksgrensesnitt. Skriv inn navnet (ESSID-en) på "
 "det trådløse nettverket du vil at ${iface} skal bruke. La feltet stå tomt "
-"hvis du vil hoppe over oppsett for trådløst nettverk og fortsette."
+"hvis det er det samme hvilket nettverk du bruker."
 
 #. Type: select
 #. Choices
@@ -318,9 +319,10 @@ msgstr "Ugyldig ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID-en «${essid}» er ugyldig. ESSID-er kan ha opptil 32 tegn, og kan "
 "inneholde all slags tegn."
@@ -712,6 +714,29 @@ msgid ""
 msgstr ""
 "Verdien du oppgav er ikke gyldig. Den maksimale ventetiden (i sekunder) for "
 "nettverklink-deteksjon må være et positivt heltall."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Type trådløst nettverk:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Velg neste trinn i installasjonen:"
 
 #. Type: string
 #. Description

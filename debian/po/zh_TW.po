@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-22 10:16+0800\n"
 "Last-Translator: Yao Wei (魏銘廷) <mwei@lxde.org>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
@@ -130,7 +130,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} 的無線 ESSID:"
@@ -149,22 +149,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "在試圖搜尋是否有任何可用的無線網路時失敗了。"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} 是一個無線網路的介面。請輸入 ${iface} 所要使用的無線網路的名稱 "
-"(ESSID)。若要跳過無線網路的設定並繼續進行，請直接在欄位中留白。"
+"(ESSID)。如果您想使用任何可用的網路，直接在欄位中留白即可。"
 
 #. Type: select
 #. Choices
@@ -304,9 +305,10 @@ msgstr "不正確的 ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "這個 ESSID，${essid} 並不正確。ESSID 最多為 32 個字元，但可使用任何類型的字"
 "元。"
@@ -685,6 +687,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr "您所輸入的值並不正確，網路連結偵測的最長等待時間（秒）必須為正整數。"
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "無線網路的類型:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "請選擇下一個安裝步驟:"
 
 #. Type: string
 #. Description

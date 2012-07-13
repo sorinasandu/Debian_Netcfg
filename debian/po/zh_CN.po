@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-22 14:45+0800\n"
 "Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (simplified) <debian-l10n-chinese@lists.debian.org>\n"
@@ -131,7 +131,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} 的无线 ESSID："
@@ -150,22 +150,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "尝试寻找可用的无线网络失败。"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} 是一个无线网络接口。请输入 ${iface} 将要使用的无线网络的名称 "
-"(ESSID)。如果您要跳过无线网络配置并继续下一步，请将此处置空。"
+"(ESSID)。如果您希望使用任意可用的网络，请将此处置空。"
 
 #. Type: select
 #. Choices
@@ -307,9 +308,10 @@ msgstr "无效的 ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "此 ESSID“${essid}”是无效的。ESSID 最长仅为 32 个字符，但可以包含所有类型的字"
 "符。"
@@ -688,6 +690,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr "您提供的值无效。网络连接探测的最大等待时间(秒)必须为正整数。"
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "无线网络的类型："
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "请选择下一个安装步骤："
 
 #. Type: string
 #. Description

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lo\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-04-25 09:05+0700\n"
 "Last-Translator: Anousak Souphavanh <anousak@gmail.com>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -113,7 +113,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID ຂອງເຄືອຂ່າຍໄຮ້ສາຍສຳຫລັບ ${iface}:"
@@ -132,22 +132,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ບໍ່ສາມາດຊອກເຄືອຂ່າຍໄຮ້ສາຍທີ່ມີຢູ່ໄດ້."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} ເປັນອິນເທີເຟດເຄືອຂ່າຍໄຮ້ສາຍກະລຸນາປ້ອນຊື່  (ESSID) ຂອງເຄືອຂ່າຍໄຮ້ສາຍທີ່ຈະໃຫ້ ${iface}"
-"ໃຊ້ ຖ້າທ່ານຕ້ອງການຂ້າມຂັ້ນຕອນການຕັ້ງຄ່າເຄືອຂ່າຍໄຮ້ສາຍ ກໍ່ປ່ອຍຊ່ອວນີ້ໃຫ້ວ່າງໄວ້ ."
+"${iface} ເປັນອິນເທີເຟດເຄືອຂ່າຍໄຮ້ສາຍ ກະລຸນາປ້ອນຊື່  (ESSID) ຂອງເຄືອຂ່າຍໄຮ້ສາຍທີ່ຈະໃຫ້ "
+"${iface} ໃຊ້ ຖ້າທ່ານຕ້ອງການໃຊ້ເຄືອຂ່າຍໃດກໍ່ໄດ້ທີ່ມີຢູ່ ກໍ່ປ່ອຍຊ່ອງນີ້ໃຫ້ວ່າງໄວ້."
 
 #. Type: select
 #. Choices
@@ -290,9 +291,10 @@ msgstr "ESSID ບໍ່ຖືກຕ້ອງ"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" ບໍ່ຖືກຕ້ອງ  ESSID ມີຄວາມຍາວບໍ່ເກີນ 32 ອັກສອນ ແລະສາມາດມີອັກສອນໃດກະໄດ້."
 
@@ -674,6 +676,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "ເຄືອຂ່າຍບໍ່ມີສາຍປະເພດ:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "ກະລຸນາເລືອກຂັ້ນຕອນຕໍ່ໄປຂອງການຕິດຕັ້ງ:"
 
 #. Type: string
 #. Description

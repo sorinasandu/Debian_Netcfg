@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-05-06 15:56+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: debian-l10n-eu@lists.debian.org\n"
@@ -130,7 +130,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Haririk gabeko ESSID ${iface} interfazerako:"
@@ -150,24 +150,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Huts egin du haririk gabeko sare erabilgarria bilatzean."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} haririk gabeko sareko interfazea da. Idatzi ${iface}-(e)k "
-"erabiltzea nahi duzun haririk gabeko sarearen izena (ESSID). Hari gabeko "
-"sarearen konfigurazioa alde batera utzi eta aurrera jarraitu nahi baduzu, "
-"eremu hau hutsik utz ezazu."
+"erabiltzea nahi duzun haririk gabeko sarearen izena (ESSID). Erabilgarri "
+"dagoen edozein sare erabili nahi baduzu, utzi hutsik eremu hau."
 
 #. Type: select
 #. Choices
@@ -314,9 +314,10 @@ msgstr "ESSID baliogabea"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" baliogabea da. ESSIDek gehienez 32 karaktere izan "
 "ditzakete, baina karaktere mota guztiak izan ditzakete."
@@ -705,6 +706,29 @@ msgid ""
 msgstr ""
 "Ezarri duzun balioa ez da zuzena. Sare konexioa antzemateko gehienzko "
 "denbora muga (segundutan) zenbaki oso positibo bat izan behar da."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Haririk gabeko sare mota:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Aukeratu hurrengo urratsa instalazio prozesuan:"
 
 #. Type: string
 #. Description

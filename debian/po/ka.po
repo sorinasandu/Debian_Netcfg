@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2011-03-01 12:49+0400\n"
 "Last-Translator: Aiet Kolkhi <aietkolkhi@gmail.com>\n"
 "Language-Team: Georgian\n"
@@ -129,7 +129,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "უკაბელო ESSID: ${iface}:"
@@ -149,23 +149,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "ხელმისაწვდომი უსადენო ინტერნეტის მოძებნა ვერ მოხერხდა."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} უკაბელო ქსელის ინტერფეისია. გთხოვთ შეიყვანოთ უკაბელო ქსელის სახელი "
-"(ESSID), რომელიც გსურთ რომ ${iface}-მა გამოიყენოს. თუ გნებავთ უკაბელო ქსელის "
-"კონფიგურაციის გამოტოვება,მაშინ მიმდინარე ველი ცარიელი დატოვეთ."
+"(ESSID), რომელიც გსურთ ${iface}-მა გამოიყენოს. თუ რომელიმე არსებული ქსელის "
+"გამოყენება გსურთ, დატოვეთ ეს ველი ცარიელი."
 
 #. Type: select
 #. Choices
@@ -311,9 +312,10 @@ msgstr "არასწორი ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID „${essid}” არასწორია. ESSID შესაძლოა მაქს. 32 ასონიშნისაგან "
 "შედგებოდეს, თუმცა მასში ყველა სახი სიმბოლო შეიძლება შედიოდეს."
@@ -702,6 +704,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "უსადენო ქსელის ტიპი:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "ამოირჩიეთ ინსტალაციის პროცესის შემდეგი საფეხური:"
 
 #. Type: string
 #. Description

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer wheezy\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-21 11:10+0200\n"
 "Last-Translator: Jordi Mallach <jordi@debian.org>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID wireless per a ${iface}:"
@@ -144,23 +144,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Ha fallat l'intent de trobar una xarxa sense fil."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} és una interfície de xarxa sense fil. Introduïu el nom (l'ESSID) de "
-"la xarxa sense fil que voleu que utilitze ${iface}. Per a ometre la "
-"configuració de la xarxa sense fil i continuar, deixeu aquest camp en blanc."
+"la xarxa sense fil que voleu que utilitze ${iface}. Si voleu utilitzar "
+"qualsevol altra xarxa disponible, deixeu aquest camp en blanc."
 
 #. Type: select
 #. Choices
@@ -311,9 +312,10 @@ msgstr "L'ESSID no és vàlid"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "L'ESSID «${essid}» és invàlid. Els ESSID només poden contindre fins a 32 "
 "caràcters, però poden contindre qualsevol tipus de caràcters."
@@ -709,6 +711,29 @@ msgid ""
 msgstr ""
 "El valor que has donat és invàlid. El temps màxim d'espera (en segons) per a "
 "la detecció de la connexió de xarxa ha de ser un enter positiu."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Tipus de xarxa sense fil:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Seleccioneu el següent pas en el procés d'instaŀlació:"
 
 #. Type: string
 #. Description

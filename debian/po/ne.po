@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_ne\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2011-02-22 17:11-0600\n"
 "Last-Translator: Shiva Prasad Pokharel <shiva@mpp.org.np>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface} का लागि तारविहिन ESSID:"
@@ -145,23 +145,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "एउटा उपलब्ध तारविहिन असफल भएको सञ्जाल फेला पार्न प्रयास गरिदँदैछ ।"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} एउटा तारविहिन सञ्जाल इन्टरफेस हो । कृपया तपाईँले ${iface} प्रयोगका लागि "
-"चाहेको तारवहिहिन सञ्जालको नाम (ESSID) प्रविष्ट गर्नुहोस् । तारविहिन कन्फिगरेसन फड्काउन "
-"र निरन्तर गर्न, यो फाँटलाई खाली छोड्नुहोस् ।"
+"चाहेको तारवहिहिन सञ्जालको नाम (ESSID) प्रविष्ट गर्नुहोस् । यदि तपाईँले कुनै उपलव्ध सञ्जाल "
+"प्रयोग गर्न चाहनुहुन्छ भने, यो फाँटलाई खालि छोड्नुहोस् ।"
 
 #. Type: select
 #. Choices
@@ -306,9 +307,10 @@ msgstr "अवैध ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" अवैध हो । ESSIDs बढिमा ३२ क्यारेक्टर सम्मका हुन सक्छन् , तर जस्तो "
 "किसिमका क्यारेक्टरहरू पनि समाविष्ट हुन सक्दछन् ।"
@@ -695,6 +697,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "तारविहिन सञ्जालको प्रकार:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "स्थापना प्रक्रियामा अर्को चरण रोज्नुहोस्:"
 
 #. Type: string
 #. Description

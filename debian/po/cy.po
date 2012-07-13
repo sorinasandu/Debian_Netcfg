@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-14 09:46-0000\n"
 "Last-Translator: Dafydd Tomos <l10n@da.fydd.org>\n"
 "Language-Team: Welsh <>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID Diwifr ar gyfer ${iface}:"
@@ -144,23 +144,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Methwyd y cais i darganfod rhwydwaith diwifr ar gael."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "Mae ${iface} yn rhyngwyneb rhwydwaith diwifr. Os gwelwch yn dda, rhowch enw "
-"(ESSID) y rhwydwaith diwifr hoffech ${iface} ddefnyddio. I sgipio'r cyflunio "
-"diwifr a parhau, gadewch y maes hwn yn wag."
+"(ESSID) y rhwydwaith diwifr hoffech ${iface} ddefnyddio. Os hoffech "
+"ddefnyddio unrhyw rhwydwaith sydd ar gael, gadewch y maes hwn yn wag."
 
 #. Type: select
 #. Choices
@@ -311,9 +312,10 @@ msgstr "ESSID Annilys"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "Mae'r ESSID \"${essid}\" yn annilys. Rhaid i ESSIDs fod yn 32 nod neu llai, "
 "ond gellir cynnwys pob math o nodau."
@@ -704,6 +706,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Math o rhwydwaith diwifr:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Dewiswch y cam nesaf yn y broses sefydlu:"
 
 #. Type: string
 #. Description

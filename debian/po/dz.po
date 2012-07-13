@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dDz.po\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-02-29 04:41-0500\n"
 "Last-Translator: Jurmey Rabgay <jrabgay@dit.gov.bt>\n"
 "Language-Team: Dzongkha <pgeyleg@dit.gov.bt>\n"
@@ -122,7 +122,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface}:དོན་ལུ་རླུང་འཕྲིན་ཨི་ཨེས་ཨེས་ཨའི་ཌི།"
@@ -142,23 +142,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "འཐོབ་ཚུགས་པའི་རླུང་འཕྲིན་ཡོངས་འབྲེལ་འཐུས་ཤོར་བྱུང་མི་འདི་ འཚོལ་ནི་གི་དཔའ་བཅམ་དོ།"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} འདི་རླུང་འཕྲིན་ཡོངས་འབྲེལ་གྱི་ངོས་འདྲ་བ་ཨིན། ཁྱོད་ཀྱིས་ལག་ལེན་འཐབ་ནི་ཨིན་མི་ ${iface} རླུང་"
-"འཕྲིན་ཡོངས་འབྲེལ་འདི་གི་(the ESSID)མིང་་བཙུགས་གནང་། རླུང་འཕྲིན་རིམ་སྒྲིག་ལས་གོམ་འགྱོ་སྟེ་ལོག་འཕྲོ་མཐུད་"
-"དེ་འབད་དགོ་པ་ཅིན་ ས་སྒོ་འདི་སྟོང་སྦེ་བཞག"
+"${iface} འདི་རླུང་འཕྲིན་ཡོངས་འབྲེལ་ངོས་འདྲ་བ་ཨིན། ཁྱོད་ཀྱིས་ལག་ལེན་འཐབ་ནི་ཨིན་མི་ ${iface} རླུང་"
+"འཕྲིན་ཡོངས་འབྲེལ་འདི་གི་(the ESSID)མིང་འདི་བཙུགས་གནང་། ཁྱོད་ཀྱིས་ཡོངས་འབྲེལ་ཐོབ་ཚུགས་མི་གང་རུང་ལག་"
+"ལེན་འཐབ་ནི་ཨིན་པ་ཅིན་ འ་ནི་ས་སྒོ་འདི་སྟོངམ་བཞག།"
 
 #. Type: select
 #. Choices
@@ -305,9 +306,10 @@ msgstr "ནུས་མེད་ཀྱི་ཨི་ཨེས་ཨེས་ཨ
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ཨི་ཨེས་ཨེས་ཨའི་ཌི་\"${essid}\"འདི་འདི་ནུས་མེད་སོང་ནུག་ ཨི་ཨེས་ཨེས་ཨའི་ཌི་ཚུ་ཡིག་འབྲུ་ ༣༢ ཚུན་ཙམ་"
 "ཅིག་འོང་ནི་མས་ དེ་འབདཝ་ད་ཡིག་འབྲུ་དབྱེ་ཁག་ཆ་མཉམ་ནང་ན་ཡོདཔ་འོང་ནི་མས།"
@@ -698,6 +700,29 @@ msgid ""
 msgstr ""
 "ཁྱོད་ཀྱིས་བྱིན་ཡོད་པའི་གནས་གོང་འདི་ནུས་ཅན་མེན་མས། ཡོངས་འབྲེལ་ འབྲེལ་ལམ་ སྐྱོན་འཛིན་འབད་ནིའི་དོན་ལུ་ "
 "བསྒུག་སྡོན་ནིའི་དུས་ཚོད་མང་མཐའ༼སྐར་ཆ༽ ཡོད་ཆའི་ ཧྲིལ་གྲངས་དགོ།"
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "རླུང་འཕྲིན་ཡོངས་འབྲེལ་གྱི་དབྱེ་བ་:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "གཞི་བཙུགས་ལས་སྦྱོར་ནང་ལུ་རིམ་པ་ཤུལ་མམ་དེ་གདམ་ཁ་རྐྱབས:"
 
 #. Type: string
 #. Description

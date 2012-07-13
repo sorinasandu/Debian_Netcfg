@@ -35,8 +35,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-23 11:08+0300\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
+"PO-Revision-Date: 2012-06-26 09:51+0300\n"
 "Last-Translator: Eddy Petrișor <eddy.petrisor@gmail.com>\n"
 "Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
 "Language: ro\n"
@@ -141,7 +141,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID radio pentru ${iface}:"
@@ -161,23 +161,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Încercarea de a găsi o rețea fără fir disponibilă a eșuat."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} este o interfață de rețea fără fir. Introduceți numele (ESSID-ul) "
-"rețelei radio pe care doriți ca ${iface} să o folosească. Lăsați acest câmp "
-"liber pentru a continua fără a configura rețeaua fără fir."
+"${iface} este o interfață de rețea fără fir. Vă rugăm să introduceți numele "
+"(ESSID-ul) rețelei fără fir pe care doriți ca ${iface} să o folosească. "
+"Lăsați acest câmp liber pentru a folosi orice rețea disponibilă."
 
 #. Type: select
 #. Choices
@@ -328,9 +329,10 @@ msgstr "ESSID invalid"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID-ul „${essid}” este invalid. ESSID-urile pot avea maxim 32 de "
 "caractere, dar pot conține toate tipurile de caractere."
@@ -724,6 +726,29 @@ msgid ""
 msgstr ""
 "Valoarea furnizată nu este validă. Timpul maxim de așteptare (în secunde) "
 "pentru detectare conexiunii la rețea trebui să fie un număr întreg pozitiv."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Tipul rețelei fără fir:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Alegeți următorul pas în procesul de instalare:"
 
 #. Type: string
 #. Description

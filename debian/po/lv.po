@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-20 23:31+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latviešu <locale-l10n@googlegroups.com>\n"
@@ -131,7 +131,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Bezvadu tīkla ESSID ierīcei ${iface}:"
@@ -151,23 +151,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Neizdevās atrast pieejamu bezvadu tīklu."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} ir bezvadu tīkla saskarne. Lūdzu, ievadiet tīkla nosaukumu (ESSID), "
-"ar ko ${iface} vajadzētu savienoties. Lai izlaistu bezvadu tīkla "
-"konfigurēšanu, atstājiet šo lauku tukšu."
+"ar ko ${iface} vajadzētu savienoties. Ja vēlaties izmantot jebkuru pieejamo "
+"tīklu, atstājiet šo lauku tukšu."
 
 #. Type: select
 #. Choices
@@ -314,9 +315,10 @@ msgstr "Nederīgs ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "Jūsu ievadītais ESSID \"${essid}\" nav derīgs. ESSID var būt dažādu simbolu "
 "virkne garumā līdz 32 simboliem."
@@ -708,6 +710,29 @@ msgid ""
 msgstr ""
 "Norādītā vērtība nav derīga. Maksimālajam gaidīšanas laikam (sekundēs) tīkla "
 "saites atklāšanai ir jābūt pozitīvam veselam skaitlim."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Bezvadu tīkla veids:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Izvēlieties nākamo instalēšanas procesa soli:"
 
 #. Type: string
 #. Description

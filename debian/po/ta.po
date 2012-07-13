@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-07 19:44-0500\n"
 "Last-Translator: Kumar Appaiah\n"
 "Language-Team: Tamil <Ubuntu-l10n-tam@lists.ubuntu.com>\n"
@@ -125,7 +125,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface}-ன் கம்பியில்லா அடையாளம் (ESSID):"
@@ -145,23 +145,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "கிடைக்கக்கூடிய கம்பியில்லா வலைப் பின்னலை கண்டுபிடித்தல் தோல்வியுற்றது"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} என்பது கம்பியில்லா வலைப் பின்னலின் இடைமுகம். நீங்கள் ${iface} பயன் படுத்த "
-"வேண்டிய அந்த இடைமுகத்தின் பெயரை (the ESSID) உள்ளிடவும். கம்பியில்லா வலைப் பின்னலின் "
-"வடிவமைப்பை தவிர்த்து தொடர இந்த புலத்தை வெற்றாக விடவும்."
+"${iface} கம்பியில்லா வலையப்பு இடைமுகமாகும். ${iface} உபயோகிக்க வேண்டிய கம்பியில்லா "
+"வலையின் பெயரை (ESSID) உள்ளீடு செய்யவும். இருக்கின்ற வலை ஏதெனுமொன்றை பயன்படுத்த இந்த "
+"புலத்தை காலியாக விடவும்."
 
 #. Type: select
 #. Choices
@@ -308,9 +309,10 @@ msgstr "செல்லுபடியாகாத ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" செல்லுபடியாகாததாகும். ESSID, 32 எழுத்துக்களை மட்டுமே கொண்டிருக்க "
 "முடியும். ஆனல் அவ்வெழுத்துக்கள் எதுவாகவும் இருக்கலாம்."
@@ -699,6 +701,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "கம்பியில்லா வலையின் வகை :"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "நிறுவலின் அடுத்த படியை தேர்வு செய்க:"
 
 #. Type: string
 #. Description

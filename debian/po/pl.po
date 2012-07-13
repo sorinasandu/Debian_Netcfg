@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-20 22:51+0200\n"
 "Last-Translator: Michał Kułach <michal.kulach@gmail.com>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
@@ -134,7 +134,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Bezprzewodowy ESSID dla ${iface}:"
@@ -154,23 +154,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Próba wyszukania dostępnych sieci bezprzewodowych nie powiodła się."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} jest bezprzewodowym interfejsem sieciowym. Proszę wprowadzić nazwę "
-"(ESSID) bezprzewodowej sieci, której chcesz użyć z ${iface}. Zostaw to pole "
-"puste by pominąć konfigurację sieci bezprzewodowej i kontynuować."
+"(ESSID) bezprzewodowej sieci, której chcesz użyć z ${iface}. Jeśli chcesz "
+"użyć jakiejkolwiek dostępnej sieci, zostaw to pole puste."
 
 #. Type: select
 #. Choices
@@ -321,9 +322,10 @@ msgstr "Nieprawidłowy ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" jest nieprawidłowy. ESSID może zawierać maksimum 32 "
 "znaki, ale każdego rodzaju."
@@ -715,6 +717,29 @@ msgid ""
 msgstr ""
 "Wprowadzona wartość jest nieprawidłowa. Maksymalny czas oczekiwania (w "
 "sekundach) na wykrycie połączenia musi być wartością dodatnią."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Rodzaj sieci bezprzewodowej:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Wybierz następny etap instalacji:"
 
 #. Type: string
 #. Description

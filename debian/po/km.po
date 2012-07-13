@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-01-18 15:40+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -115,7 +115,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID ឥតខ្សែ​សម្រាប់ ${iface} ៖"
@@ -134,22 +134,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ប៉ុនប៉ង​រក​បណ្ដាញ​ឥតខ្សែ​ដែល​មាន ។"
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} ជា​ចំណុច​ប្រទាក់​បណ្ដាញ​ឥតខ្សែ ។ សូម​បញ្ចូល​ឈ្មោះ (ESSID) របស់​បណ្ដាញ​ឥតខ្សែ អ្ន​កចង់​ឲ្យ "
-"${iface} ត្រូវ​ប្រើ ។ ដើម្បី​រំលង​ការកំណត់​រចនាសម្ព័ន្ធ​ឥតខ្សែ និង​បន្ត ទុកវាល​នេះ​ឲ្យ​ទំនេរ ។"
+"${iface} គឺ​ជា​ចំណុច​ប្រទាក់​បណ្ដាញ​ឥត​ខ្សែមួយ ។ សូម​បញ្ចូល​ឈ្មោះ (ESSID) របស់​បណ្ដាញ​ឥតខ្សែ​ដែល​អ្នក​ចង់​"
+"ឲ្យ​ ${iface} ប្រើ ។ បើ​អ្នក​ចង់​ប្រើ​បណ្ដាញ​ដែល​មាន​ផ្សេង​ទៀត សូម​ទុក​វាល​នេះ​នៅ​ទទេ ។"
 
 #. Type: select
 #. Choices
@@ -293,9 +294,10 @@ msgstr "ESSID មិន​ត្រឹមត្រូវ"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "​ESSID \"${essid}\" មិន​ត្រឹមត្រូវ​ឡើយ ។ ESSID អាច​មាន​ត្រឹមតែ​​ ៣២ តួអក្សរ​ប៉ុណ្ណោះ ប៉ុន្ដែ​អាច​មាន​"
 "តួអក្សរ​គ្រប់​ប្រភេទ​ទាំងអស់ ។"
@@ -680,6 +682,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "ប្រភេទ​បណ្ដាញ​ឥតខ្សែ ៖"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "ជ្រើស​ជំហាន​បន្ទាប់​ក្នុង​ដំណើរការ​ដំឡើង ៖"
 
 #. Type: string
 #. Description

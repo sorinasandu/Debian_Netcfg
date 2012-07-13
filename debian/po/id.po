@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer (level1)\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-02-24 17:44+0700\n"
 "Last-Translator: Mahyuddin Susanto <udienz@ubuntu.com>\n"
 "Language-Team: Debian Indonesia Translators <debian-l10n-indonesian@lists."
@@ -136,7 +136,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID nirkabel untuk ${iface}:"
@@ -156,23 +156,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Usaha untuk menemukan jaringan nirkabel telah gagal."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} merupakan antarmuka jaringan nirkabel. Silakan masukkan nama "
-"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika tidak ingin "
-"melakukan konfigurasi, biarkan ruas ini kosong."
+"(ESSID) jaringan nirkabel yang akan dipakai ${iface}. Jika Anda ingin "
+"menggunakan jaringan apa saja yang tersedia biarkan ruas ini kosong."
 
 #. Type: select
 #. Choices
@@ -319,9 +320,10 @@ msgstr "ESSID tidak sah"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" tidak sah. ESSID hanya boleh sepanjang maksimum 32 "
 "karakter, tetapi dapat berisi karakter apa saja."
@@ -714,6 +716,29 @@ msgid ""
 msgstr ""
 "Nilai yang anda masukkan tidak valid. Nilai maksimum waktu tunggu(dalam "
 "detik) harus integer positip"
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Jenis jaringan nirkabel:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Pilih langkah berikutnya dalam proses instalasi:"
 
 #. Type: string
 #. Description

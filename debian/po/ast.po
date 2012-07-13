@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-04-02 18:31+0100\n"
 "Last-Translator: ivarela <ivarela@ubuntu.com>\n"
 "Language-Team: Softastur\n"
@@ -123,7 +123,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID inalámbrica pa ${iface}:"
@@ -143,23 +143,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Hebo un fallu al intentar alcontrar una rede inalámbrica."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} ye una interface de rede inalámbrica. Escribi'l nome (la ESSID) de "
-"la rede inalámbrica que quieras qu'use ${iface}. Pa saltar la configuración "
-"inalámbrica y continuar, dexa en blancu esti campu."
+"la rede inalámbrica que quieras qu'use ${iface}. Si prefieres usar "
+"cualesquier rede disponible, dexa en blancu esti campu."
 
 #. Type: select
 #. Choices
@@ -309,9 +310,10 @@ msgstr "L'identificador ESSID nun ye válidu"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "El ESSID «${essid}» nun ye válidu. Un ESSID namái pue tener 32 carauteres, "
 "magar que puen ser de cualesquier triba."
@@ -699,6 +701,29 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Triba de rede inalámbrica:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Escueyi'l próximu pasu nel procesu d'instalación"
 
 #. Type: string
 #. Description

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-04-05 20:47+0200\n"
 "Last-Translator: Kevin Patrick Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -120,7 +120,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID gan sreang do ${iface}:"
@@ -140,23 +140,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Níor aimsíodh líonra gan sreang atá ar fáil."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "Comhéadan líonra gan sreang é ${iface}. Cuir isteach ainm (ESSID) an líonra "
-"gan sreang is mian leat ${iface} a úsáid.  Mura mian leat an líonra gan "
-"sreang a chumrú, fág an réimse seo bán."
+"gan sreang is mian leat ${iface} a úsáid.  Más mian leat aon líonra atá ar "
+"fáil a úsáid, fág an réimse seo bán."
 
 #. Type: select
 #. Choices
@@ -306,9 +307,10 @@ msgstr "ESSID neamhbhailí"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID neamhbhailí é \"${essid}\".  Ní cheadaítear ach 32 carachtar in ESSID, "
 "cé go gceadaítear aon sórt carachtar."
@@ -702,6 +704,29 @@ msgid ""
 msgstr ""
 "Chuir tú luach neamhbhailí isteach. Ní mór gur slánuimhir dheimhneach é an t-"
 "am uasta feithimh (líon soicindí)."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Cineál an líonra gan sreang:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Roghnaigh an chéad chéim eile sa phróiseas suiteála:"
 
 #. Type: string
 #. Description

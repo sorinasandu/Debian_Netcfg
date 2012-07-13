@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fa\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-21 00:58+0330\n"
 "Last-Translator: Hamid <hamid.r1988@gmail.com>\n"
 "Language-Team: Debian-l10n-persian <debian-l10n-persian@lists.debian.org>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID بی‌سیم برای ${iface}:"
@@ -144,23 +144,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "تلاش برای یافتن بک شبکه بی سیم شکست خورد."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} یک درگاه شبکهٔ بیسیم است. لطفا نام شبکهٔ بیسیمی (ESSID) که میخواهید "
-"${iface} از آن استفاده کند را وارد کنید. برای رد کردن پیکربندی درگاه بی "
-"سیم ، این بخش را خالی بگذارید و ادامه دهید."
+"آیا ${iface} یک درگاه شبکه بی سیم است. لطفاً نام شبکه بی سیمی (ESSID) که "
+"می‌خواهید, ${iface} از آن استفاده کند را وارد کنید. در صورتی که می‌خواهید هر "
+"شبکه ای که در دسترس بود را استفاده کنید, این قسمت را خالی بگذارید."
 
 #. Type: select
 #. Choices
@@ -307,9 +308,10 @@ msgstr "ESSID نامعتبر"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID «${essid}» نامتعبر است. ESSIDها ممکن است فقط تا حداکثر ۳۲ کاراکتر "
 "باشند، اما ممکن است حاوی همه‌گونه کاراکتر باشند."
@@ -696,6 +698,29 @@ msgid ""
 msgstr ""
 "مقداری که وارد کردید معتبر نیست. حداکثر زمان انتظار (در واحد ثانیه) برای "
 "تشخیص شبکه باید یک عدد مثبت باشد."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "تنظیم مجدد شبکهٔ بیسیم:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "قدم بعدی را برای ادامهٔ نصب انتخاب کنید:"
 
 #. Type: string
 #. Description

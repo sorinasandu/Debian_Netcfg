@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-21 11:54+0530\n"
 "Last-Translator: Arjuna Rao Chavala <arjunaraoc@gmail.com>\n"
 "Language-Team: d-i <kde-i18n-doc@kde.org>\n"
@@ -117,7 +117,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "${iface}కోసం వైర్లెస్ ESSID:"
@@ -136,22 +136,23 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "అందుబాటులో గల వైర్లెస్ నెట్వర్క్లను  కనుగొనే ప్రయత్నం విఫలమైంది."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} ఒక వైర్లెస్ నెట్వర్క్ సంపర్కం. ${iface}తో వాడటానికి, పేరు (ESSID) ప్రవేశపెట్టండి.  "
-"వైర్లెస్అమరికను దాటవేసి కొనసాగించదలచుకుంటే, ఈ భాగం ఖాళీగా వుంచండి."
+"అందుబాటులో గల ఏదైనా నెట్వర్క్ వాడదలచుకుంటే, ఈ భాగం ఖాళీగా వుంచండి."
 
 #. Type: select
 #. Choices
@@ -294,9 +295,10 @@ msgstr "సరిపోని ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" సరిపోలేదు. ESSIDలుఅన్ని రకాల అక్షరాలతో మిళితమై పరిమాణంలో 32 అక్షరాల వరకే "
 "సీమితంగా వుంటాయి."
@@ -679,6 +681,29 @@ msgid ""
 msgstr ""
 " మీరు ప్రవేశపెట్టిన విలువ సరికాదు. నెట్వర్క్ లింకు కనుగొనుటకు వేచివుండవలసిన అత్యధిక సమయం (సెకన్లలో) "
 "తప్పనిసరిగా పూర్ణసంఖ్య అయివుండాలి."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "వైర్లెస్ నెట్వర్క్ రకము:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "స్థాపక ప్రక్రియలో తరువాతి అంకం:"
 
 #. Type: string
 #. Description

@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian-installer 1st-stage master file HR\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
-"PO-Revision-Date: 2012-06-21 14:57+0200\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
+"PO-Revision-Date: 2012-06-21 18:59+0200\n"
 "Last-Translator: Tomislav Krznar <tomislav.krznar@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -126,7 +126,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "Bežični ESSID za ${iface}:"
@@ -146,23 +146,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "Pokušaj pronalaska dostupne bežične mreže nije uspio."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
 "${iface} je bežično mrežno sučelje. Molim unesite ime (ESSID) bežične mreže "
-"koju želite da ${iface} koristi. Ako želite preskočiti podešavanje bežične "
-"mreže i nastaviti, ostavite prazno."
+"koju želite da ${iface} koristi. Ako želite koristiti bilo koju dostupnu "
+"mrežu, ostavite prazno."
 
 #. Type: select
 #. Choices
@@ -308,9 +309,10 @@ msgstr "Nevaljan ESSID"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID \"${essid}\" nije valjan. ESSID-i mogu biti veličine do 32 znaka i "
 "mogu sadržavati sve vrste znakovlja."
@@ -700,6 +702,29 @@ msgid ""
 msgstr ""
 "Vrijednost koju ste unijeli nije ispravna. Najveće vrijeme čekanja (u "
 "sekundama) za otkrivanje mrežne veze mora biti pozitivan cijeli broj."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "Vrsta bežične mreže:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "Izaberite sljedeći korak instalacije:"
 
 #. Type: string
 #. Description

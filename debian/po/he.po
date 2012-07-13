@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_he\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-06-20 19:29+0000\n"
+"POT-Creation-Date: 2012-07-13 02:28+0000\n"
 "PO-Revision-Date: 2012-06-24 00:08+0300\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
@@ -135,7 +135,7 @@ msgstr ""
 #. :sl2:
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:6001 ../netcfg-common.templates:7001
 msgid "Wireless ESSID for ${iface}:"
 msgstr "ESSID אלחוטי ל-${iface}:"
@@ -155,23 +155,24 @@ msgstr ""
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
 msgstr "הניסיון למציאת רשת אלחוטית זמינה נכשל."
 
 #. Type: string
 #. Description
-#. :sl2:
+#. :sl6:
 #: ../netcfg-common.templates:7001
+#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
-"of the wireless network you would like ${iface} to use. To skip wireless "
-"configuration and continue, leave this field blank."
+"of the wireless network you would like ${iface} to use. To connect to any "
+"available network, leave this field blank."
 msgstr ""
-"${iface} הינו ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שבה "
-"אתה רוצה ש-${iface} ישתמש. כדי לדלג על הגדרת רשת אלחוטית ולהמשיך הלאה "
-"בהתקנה, השאר שדה זה ריק."
+"${iface} הינו ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שלך "
+"שבה אתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש ברשת זמינה כלשהי, השאר את "
+"השדה ריק."
 
 #. Type: select
 #. Choices
@@ -317,9 +318,10 @@ msgstr "ESSID לא תקין"
 #. Description
 #. :sl2:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid ""
-"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to 32 characters, "
-"but may contain all kinds of characters."
+"The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
+"characters, but may contain all kinds of characters."
 msgstr ""
 "ה-ESSID \"${essid}\" אינו תקין. ESSID-ים מוגבלים לעד 32 תווים, אבל הם יכולים "
 "להכיל תווים מסוגים רבים."
@@ -705,6 +707,29 @@ msgid ""
 msgstr ""
 "הערך סופק אינו תקין. זמן המתנה המקסימלי (בשניות) לזיהוי חיבור רשת חייב להיות "
 "מספר שלם חיובי."
+
+#. Type: select
+#. Choices
+#. Translators: please do not translate the variable essid_list
+#: ../netcfg-common.templates:50001
+msgid "${essid_list} Enter ESSID manually"
+msgstr ""
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Wireless network:"
+msgstr "סוג הרשת האלחוטית:"
+
+#. Type: select
+#. Description
+#. :sl6:
+#: ../netcfg-common.templates:50002
+#, fuzzy
+msgid "Select the wireless network to use during the installation process."
+msgstr "בחר את השלב הבא בתהליך ההתקנה:"
 
 #. Type: string
 #. Description
