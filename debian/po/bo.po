@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
-"POT-Creation-Date: 2012-07-13 03:39+0000\n"
+"POT-Creation-Date: 2012-07-13 14:27+0000\n"
 "PO-Revision-Date: 2012-04-14 22:12+0600\n"
 "Last-Translator: Tennom <tankola@ymail.com, tennomyathog@gmail.com>\n"
 "Language-Team: bo <translation-team-bo@lists.sourceforge.net>\n"
@@ -277,20 +277,18 @@ msgstr ""
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
+#, fuzzy
 msgid "Invalid ESSID"
-msgstr "ESSID མ་འགྲིག་པ"
+msgstr "ནུས་མེད་ཀྱི་ WEP ལྡེ་མིག"
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" མ་འགྲིག་པ ESSIDs ལ་ཡིག་འབྲུ་32 ཙམ་ཡོད་སྲིད་པ་དང་དེའི་ནང་ཡི་གེ་སྣ་ཚོགས་"
-"ཡོད་སྲིད"
 
 #. Type: text
 #. Description
@@ -676,12 +674,14 @@ msgstr ""
 #. Type: select
 #. Choices
 #. Translators: please do not translate the variable essid_list
+#. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
 msgstr ""
 
 #. Type: select
 #. Description
+#. :sl6:
 #: ../netcfg-common.templates:50002
 #, fuzzy
 msgid "Wireless network:"
@@ -689,6 +689,7 @@ msgstr "སྐུད་མེད་དྲ་བའི་རིགས："
 
 #. Type: select
 #. Description
+#. :sl6:
 #: ../netcfg-common.templates:50002
 #, fuzzy
 msgid "Select the wireless network to use during the installation process."
