@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-03-16 19:33+0530\n"
+"PO-Revision-Date: 2012-07-14 14:41+0530\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: Debian Malayalam <debian-l10n-malayalam@lists.debian.org>\n"
 "Language: \n"
@@ -160,15 +160,14 @@ msgstr "ലഭ്യമായ ഒരു വയര്‍ലെസ്സ് ശൃ
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} എന്നതു് ഒരു വയര്‍ലെസ്സ് ശൃംഖലയുമായുള്ള വിനിമയതലമാണു്. നിങ്ങള്‍ ${iface} "
-"ഉപയോഗിക്കണമെന്നാഗ്രഹിക്കുന്ന വയര്‍ലെസ്സ് ശൃഖലയുടെ പേരു് (ESSID) ദയവായി നല്‍കുക. ലഭ്യമായിട്ടുള്ള "
-"ഏതു് ശൃഖലയും ഉപയോഗിയ്ക്കുക എന്നതാണു് നിങ്ങളുടെ ആഗ്രഹമെങ്കില്‍ ഈ കളം വെറുതെ ഇടുക."
+"ഉപയോഗിക്കണമെന്നാഗ്രഹിക്കുന്ന വയര്‍ലെസ്സ് ശൃഖലയുടെ പേരു് (ഇഎസ്എസ്ഐഡി) ദയവായി നല്‍കുക. "
+"ലഭ്യമായിട്ടുള്ള ഏതു് ശൃഖലയും ഉപയോഗിയ്ക്കുക എന്നതാണു് നിങ്ങളുടെ ആഗ്രഹമെങ്കില്‍ ഈ കളം വെറുതെ ഇടുക."
 
 #. Type: select
 #. Choices
@@ -316,13 +315,12 @@ msgstr "അസാധുവായ ഇഎസ്എസ്ഐഡി"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"\"${essid}\" എന്ന ഇഎസ്എസ്ഐഡി അസാധുവാണു്. ഇഎസ്എസ്ഐഡികള്‍ 32 അക്ഷരങ്ങള്‍ വരെയേ ആകാവൂ, പക്ഷേ ഏതു് "
-"തരം അക്ഷരങ്ങളും ഉള്‍​ക്കൊള്ളാം."
+"\"${essid}\" എന്ന ഇഎസ്എസ്ഐഡി അസാധുവാണു്. ഇഎസ്എസ്ഐഡികള്‍ ${max_essid_len} അക്ഷരങ്ങള്‍ വരെയേ "
+"ആകാവൂ, പക്ഷേ ഏതു് തരം അക്ഷരങ്ങളും ഉള്‍​ക്കൊള്ളാം."
 
 #. Type: text
 #. Description
@@ -716,23 +714,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ഇഎസ്എസ്ഐഡി നിങ്ങള്‍ നല്‍കുക"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "വയര്‍ലെസ്സ് ശൃഖലയുടെ തരം:"
+msgstr "വയര്‍ലെസ്സ് ശൃഖല:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "ഇന്‍സ്റ്റോള്‍ പ്രക്രിയയിലെ അടുത്ത നടപടിക്രമം തെരഞ്ഞെടുക്കുക:"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുമ്പോള്‍ ഉപയോഗിയ്ക്കേണ്ട വയര്‍ലെസ്സ് ശൃംഖല തെരഞ്ഞെടുക്കുക:"
 
 #. Type: string
 #. Description

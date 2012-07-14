@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-23 09:24+0200\n"
+"PO-Revision-Date: 2012-07-14 12:18+0200\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "Language: cs\n"
@@ -147,7 +147,6 @@ msgstr "Nalezení bezdrátové sítě selhalo."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
@@ -302,13 +301,12 @@ msgstr "Neplatné ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
 "ESSID „${essid}“ je neplatné. ESSID může obsahovat libovolné znaky, ale musí "
-"být kratší než 32 znaků."
+"být kratší než ${max_essid_len} znaků."
 
 #. Type: text
 #. Description
@@ -704,23 +702,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Zadat ESSID ručně"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Typ bezdrátové sítě:"
+msgstr "Bezdrátová síť:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Vyberte další krok instalace:"
+msgstr "Vyberte bezdrátovou síť, kterou chcete použít během instalace."
 
 #. Type: string
 #. Description

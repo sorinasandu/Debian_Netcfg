@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 14:44+0200\n"
+"PO-Revision-Date: 2012-07-14 14:19+0200\n"
 "Last-Translator: Mert Dirik <mertdirik@gmail.com>\n"
 "Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
 "Language: \n"
@@ -167,14 +167,13 @@ msgstr ""
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} bir kablosuz ağ arayüzüdür. Lütfen ${iface} üzerinden kullanmak "
-"istediğiniz kablosuz ağın adını (ESSID) girin. Mevcut ağlardan birisini "
+"istediğiniz kablosuz ağın adını (ESSID) girin. Mevcut ağlardan birini "
 "kullanmak istiyorsanız bu alanı boş bırakın."
 
 #. Type: select
@@ -326,13 +325,12 @@ msgstr "Geçersiz ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
 "\"${essid}\" geçersiz bir ESSID. ESSID'ler her türden karakteri içermekle "
-"birlikte, en fazla 32 karakterden oluşur."
+"birlikte, en fazla ${max_essid_len} karakter uzunluğunda olabilir."
 
 #. Type: text
 #. Description
@@ -728,23 +726,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ESSID'yi elle gir"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Kablosuz ağ türü:"
+msgstr "Kablosuz ağ:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Kurulumun bir sonraki adımını seçin:"
+msgstr "Kurulum esnasında kullanılacak olan kablosuz ağı seçin."
 
 #. Type: string
 #. Description

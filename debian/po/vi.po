@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer Level 1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 10:55+0200\n"
+"PO-Revision-Date: 2012-07-14 08:56+0200\n"
 "Last-Translator: Hai-Nam Nguyen <hainam@jcisio.com>\n"
 "Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
 "Language: vi\n"
@@ -160,15 +160,14 @@ msgstr "Việc thử tìm mạng vô tuyến sẵn sàng bị lỗi."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} là một giao diện mạng vô tuyến (wireless). Hãy nhập tên (ESSID) của "
-"giao diện mạng vô tuyến nào bạn muốn ${iface} sử dụng. Nếu bạn muốn sử dụng "
-"bất cứ mạng sẵn sằng nào, hãy bỏ trường này rỗng."
+"${iface} là một giao diện mạng vô tuyến. Hãy nhập tên (ESSID) của giao diện "
+"mạng vô tuyến bạn muốn ${iface} sử dụng. Để kết nối với bất kì mạng vô tuyến "
+"nào có sẵn, hãy để trống trường này."
 
 #. Type: select
 #. Choices
@@ -317,13 +316,12 @@ msgstr "ESSID không hợp lệ"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID « ${essid} » không hợp lệ. ESSID có độ dài tối đa là 32 ký tự, còn có "
-"thể chứa bất cứ kiểu ký tự nào."
+"ESSID \"${essid}\" không hợp lệ. ESSID có độ dài tối đa là ${max_essid_len} "
+"kí tự, có thể chứa bất cứ kiểu kí tự nào."
 
 #. Type: text
 #. Description
@@ -720,23 +718,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Hãy nhập ESSID thủ công"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Kiểu mạng vô tuyến:"
+msgstr "Mạng vô tuyến:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Hãy chọn bước kế tiếp trong tiến trình cài đặt:"
+msgstr "Chọn mạng vô tuyến bạn muốn sử dụng trong quá trình cài đặt."
 
 #. Type: string
 #. Description

@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 20:34+0400\n"
+"PO-Revision-Date: 2012-07-14 11:11+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -158,15 +158,14 @@ msgstr "Не удалось найти доступную беспроводну
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} -- беспроводное сетевое устройство. Введите имя (ESSID) сети, в "
-"которой будет использоваться ${iface}. Если вы хотите использовать любую "
-"доступную сеть, оставьте это поле пустым."
+"${iface} — беспроводное сетевое устройство. Введите имя (ESSID) сети, в "
+"которой будет использоваться ${iface}. Чтобы подключиться к любой доступной "
+"сети, оставьте это поле пустым."
 
 #. Type: select
 #. Choices
@@ -314,13 +313,12 @@ msgstr "Неверный ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID «${essid}» неверен. ESSID не может содержать более чем 32 произвольных "
-"символа."
+"ESSID «${essid}» неверен. Длина ESSID не может быть более ${max_essid_len}, "
+"но ESSID может состоять из любых символов."
 
 #. Type: text
 #. Description
@@ -720,23 +718,23 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Ввести ESSID вручную"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Тип беспроводной сети:"
+msgstr "Беспроводная сеть:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Выберите следующий этап установки:"
+msgstr ""
+"Выберите беспроводную сеть, которую нужно использовать во время процесса "
+"установки."
 
 #. Type: string
 #. Description

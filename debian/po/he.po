@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_he\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-24 00:08+0300\n"
+"PO-Revision-Date: 2012-07-14 10:35+0300\n"
 "Last-Translator: Lior Kaplan <kaplan@debian.org>\n"
 "Language-Team: Hebrew <debian-hebrew-common@lists.alioth.debian.org>\n"
 "Language: he\n"
@@ -164,15 +164,14 @@ msgstr "הניסיון למציאת רשת אלחוטית זמינה נכשל."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} הינו ממשק רשת אלחוטי. הכנס את השם (ה-ESSID) של הרשת האלחוטית שלך "
-"שבה אתה רוצה ש-${iface} ישתמש. אם אתה רוצה להשתמש ברשת זמינה כלשהי, השאר את "
-"השדה ריק."
+"${iface} הינו ממשק רשת אלחוטי. יש להכניס את השם (ה-ESSID) של הרשת האלחוטית "
+"שלך שברצונך ש-${iface} ישתמש. כדי להתחבר לכל רשת זמינה, יש להשאיר את השדה "
+"ריק."
 
 #. Type: select
 #. Choices
@@ -318,13 +317,12 @@ msgstr "ESSID לא תקין"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ה-ESSID \"${essid}\" אינו תקין. ESSID-ים מוגבלים לעד 32 תווים, אבל הם יכולים "
-"להכיל תווים מסוגים רבים."
+"ה-ESSID \"${essid}\" אינו תקין. ESSID-ים מוגבלים לעד ${max_essid_len} תווים, "
+"אך יכולים להכיל תווים מסוגים רבים."
 
 #. Type: text
 #. Description
@@ -714,23 +712,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} הכנסת ESSID ידנית"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "סוג הרשת האלחוטית:"
+msgstr "רשת אלחוטית:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "בחר את השלב הבא בתהליך ההתקנה:"
+msgstr "בחירת הרשת האלחוטית לשימוש במהלך תהליך ההתקנה."
 
 #. Type: string
 #. Description

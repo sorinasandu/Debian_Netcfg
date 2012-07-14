@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: debian-installer/sublevel1\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 19:00+0200\n"
+"PO-Revision-Date: 2012-07-14 14:26+0200\n"
 "Last-Translator: Jeroen Schot <schot@a-eskwadraat.nl>\n"
 "Language-Team: Debian l10n Dutch <debian-l10n-dutch@lists.debian.org>\n"
 "Language: nl\n"
@@ -160,14 +160,14 @@ msgstr "Er is geen beschikbaar draadloos netwerk gevonden."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} is een draadloos netwerkapparaat. Wat is de naam (de ESSID) van het "
-"draadloos netwerk waarop u ${iface} wilt gebruiken?"
+"draadloos netwerk waarop u ${iface} wilt gebruiken? Laat dit veld leeg om "
+"elk beschikbaar netwerk te gebruiken."
 
 #. Type: select
 #. Choices
@@ -316,13 +316,12 @@ msgstr "Ongeldige ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts 32 karakters groot "
-"zijn (maar er is geen beperking op de toegelaten karakters)."
+"De ESSID '${essid}' is ongeldig. ESSIDs mogen slechts ${max_essid_len} "
+"karakters groot zijn (maar er is geen beperking op de toegelaten karakters)."
 
 #. Type: text
 #. Description
@@ -709,7 +708,7 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
-"De waarde die u heeft opgegevenis niet geldig. De maximale wachttijd (in "
+"De waarde die u heeft opgegeven is niet geldig. De maximale wachttijd (in "
 "seconden) voor detectie van de netwerk-link moet een positief geheel getal "
 "zijn."
 
@@ -719,23 +718,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Voer ESSID handmatig in"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Type draadloos netwerk:"
+msgstr "Draadloos netwerk:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Wat is de volgende installatiestap die u wilt uitvoeren?"
+msgstr "Selecteer het draadloos netwerk tijdens het installatieproces."
 
 #. Type: string
 #. Description

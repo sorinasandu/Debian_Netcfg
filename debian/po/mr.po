@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 07:42+0530\n"
+"PO-Revision-Date: 2012-07-14 23:45+0530\n"
 "Last-Translator: sampada <sampadanakhare@gmail.com>\n"
 "Language-Team: Marathi, janabhaaratii, C-DAC, Mumbai, India "
 "<janabhaaratii@cdacmumbai.in>\n"
@@ -153,14 +153,13 @@ msgstr "उपलब्ध असलेले बिनतारी नेटव
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} हा बिनतारी नेटवर्क अंतराफलक आहे. कृपया तुमची ${iface} ने वापरण्याची इच्छा "
-"असलेल्या बिनतारी नेटवर्कचे नाव (इएसएसआयडी)/द्या. उपलब्ध असलेले कोणतेही नेटवर्क वापरायची "
+"असलेल्या बिनतारी नेटवर्कचे नाव (इएसएसआयडी)द्या. उपलब्ध असलेले कोणतेही नेटवर्क वापरायची "
 "तुमची इच्छा असल्यास, हे क्षेत्र रिक्त सोडा."
 
 #. Type: select
@@ -306,13 +305,12 @@ msgstr "अवैध ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"\"${essid}\" हा ESSID अवैध आहे. ESSID फक्त ३२ चिन्हांपर्यंतच असू शकतात, पण त्यात सर्व "
-"प्रकारची चिन्हे असू शकतात."
+"\"${essid}\" हा इएसएसआयडी अवैध आहे. इएसएसआयडी फक्त ${max_essid_len} चिन्हांपर्यंतच "
+"असू शकतात, पण त्यात सर्व प्रकारची चिन्हे असू शकतात."
 
 #. Type: text
 #. Description
@@ -705,23 +703,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} इएसएसआयडी स्वहस्ते प्रविष्ट करा"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "बिनतारी नेटवर्कचा प्रकार: "
+msgstr "बिनतारी नेटवर्क: "
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "अधिष्ठापनेच्या प्रक्रियेमधील पुढील पायरी निवडा: "
+msgstr "अधिष्ठापनेच्या प्रक्रियेदरम्यान वापरायचे बिनतारी नेटवर्क निवडा.\t"
 
 #. Type: string
 #. Description

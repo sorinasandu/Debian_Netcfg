@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 09:22+0900\n"
+"PO-Revision-Date: 2012-07-14 13:01+0900\n"
 "Last-Translator:  Kenshi Muto <kmuto@debian.org>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
 "Language: \n"
@@ -159,15 +159,14 @@ msgstr "利用可能な無線ネットワークの検索試行は失敗しまし
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} は無線ネットワークインターフェイスです。${iface} を使いたい無線ネッ"
-"トワークの名前 (ESSID) を入力してください。利用可能なネットワークのどれも使い"
-"たいときには、この欄は空のままにしておきます。"
+"トワークの名前 (ESSID) を入力してください。利用可能なネットワークのいずれかに"
+"接続したいときには、この欄は空のままにしてください。"
 
 #. Type: select
 #. Choices
@@ -314,13 +313,12 @@ msgstr "無効な ESSID です"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" は無効です。ESSID は 32 文字までで、各種の文字を含めること"
-"ができます。"
+"ESSID \"${essid}\" は無効です。ESSID は ${max_essid_len} 文字までで、各種の文"
+"字を含めることができます。"
 
 #. Type: text
 #. Description
@@ -716,23 +714,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ESSID を手動で入力"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "無線ネットワークの種類:"
+msgstr "無線ネットワーク:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "インストールプロセスの次のステップの選択:"
+msgstr "インストールプロセス中に利用する無線ネットワークを選択してください。"
 
 #. Type: string
 #. Description
