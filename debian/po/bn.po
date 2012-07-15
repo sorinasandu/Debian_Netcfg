@@ -31,7 +31,7 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 10:19+0600\n"
+"PO-Revision-Date: 2012-07-15 12:19+0600\n"
 "Last-Translator: Ayesha Akhtar <ayesha@ankur.org.bd>\n"
 "Language-Team: Bengali \n"
 "Language: bn\n"
@@ -157,21 +157,20 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
-msgstr "সম্ভাব্য তারবিহীন নেটওয়ার্ক খোঁজার চেষ্টা ব্যর্থ"
+msgstr "সম্ভাব্য তারবিহীন নেটওয়ার্ক খোঁজার চেষ্টা ব্যর্থ।"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} একটি ওয়্যারলেস নেটওয়ার্ক ইন্টারফেস। অনুগ্রহপূর্বক ${iface}-এর জন্য যে "
-"ওয়্যারলেস নেটওয়ার্কটি ব্যবহার করতে চান, তার নাম (ই.এস.এস.আই.ডি.) লিখুন। আর যদি "
-"যেকোন ব্যবহারযোগ্য নেটওয়ার্ক ব্যবহার করতে চান, তবে এই ঘরটি ফাঁকা রাখুন।"
+"${iface} একটি তারবিহীন নেটওয়ার্ক ইন্টারফেস। অনুগ্রহপূর্বক ${iface} এর জন্য যে "
+"তারবিহীন নেটওয়ার্ক ব্যবহার করতে চান তার নাম (ESSID) প্রবেশ করান। যেকোন বিদ্যমান "
+"নেটওয়ার্কে সংযুক্ত করতে, এই ক্ষেত্র ফাঁকা রাখুন।"
 
 #. Type: select
 #. Choices
@@ -313,19 +312,18 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:13001
 msgid "Invalid ESSID"
-msgstr "অবৈধ ESSID"
+msgstr "অকার্যকর ESSID"
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" অবৈধ। ESSID-এর দৈর্ঘ্য ৩২ অক্ষর পর্যন্ত হতে পারে, তবে এতে সব "
-"ধরনের অক্ষরই থাকতে পারে।"
+"ESSID \"${essid}\" অকার্যকর। ESSID শুধুমাত্র ${max_essid_len} অক্ষর পর্যন্ত হতে "
+"পারে, কিন্তু সব ধরণের অক্ষর থাকতে পারে।"
 
 #. Type: text
 #. Description
@@ -725,23 +723,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} নিজ হাতে ESSID প্রবেশ করান"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "ওয়্যারলেস নেটওয়ার্ক এর ধরন:"
+msgstr "তারবিহীন নেটওয়ার্ক:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "ইনস্টল প্রক্রিয়ার পরবর্তী ধাপ বেছে নিন:"
+msgstr "ইনস্টল প্রক্রিয়ার সময় ব্যবহারের জন্য তারবিহীন নেটওয়ার্ক নির্বাচন করুন।"
 
 #. Type: string
 #. Description

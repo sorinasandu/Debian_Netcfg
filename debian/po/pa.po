@@ -26,8 +26,8 @@ msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-23 16:11+0530\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"PO-Revision-Date: 2012-07-15 07:22+0530\n"
+"Last-Translator: Arvinder Singh Kang <contact@arvinderkang.com>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
@@ -152,13 +152,12 @@ msgstr "ਇੱਕ ਉਪਲੱਬਧ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਦ�
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} ਇੱਕ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਹੈ। ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਜੋ ਤੁਸੀਂ ${iface} ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਦਾ "
+"${iface} ਇੱਕ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਇੰਟਰਫੇਸ ਹੈ। ਬੇਤਾਰ ਨੈੱਟਵਰਕ, ਜੋ ਤੁਸੀਂ ${iface} ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਦਾ "
 "ਨਾਂ (ESSID) ਭਰੋ ਜੀ। ਜੇ ਤੁਸੀਂ ਕੋਈ ਵੀ ਉਪਲੱਬਧ ਨੈੱਟਵਰਕ ਵਰਤਣਾ ਪਸੰਦ ਕਰਦੇ ਹੋ, ਇਹ ਕਾਲਮ ਖਾਲੀ ਛੱਡੋ।"
 
 #. Type: select
@@ -303,13 +302,12 @@ msgstr "ਗਲਤ ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ਗਲਤ ਹੈ। ESSIDs ਸਿਰਫ 32 ਅੱਖਰਾਂ ਦਾ ਹੋ ਸਕਦਾ ਹੈ, ਪਰ ਸਾਰੀ ਕਿਸਮ ਦੇ "
-"ਅੱਖਰ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ।"
+"ESSID \"${essid}\" ਗਲਤ ਹੈ। ESSIDs ਸਿਰਫ ${max_essid_len} ਅੱਖਰਾਂ ਤੱਕ ਦਾ ਹੋ ਸਕਦਾ ਹੈ, "
+"ਪਰ ਸਾਰੀ ਕਿਸਮ ਦੇ ਅੱਖਰ ਸ਼ਾਮਲ ਹੋ ਸਕਦੇ ਹਨ।"
 
 #. Type: text
 #. Description
@@ -700,23 +698,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ESSID ਹੱਥੀਂ ਸ਼ਾਮਿਲ ਕਰੋ"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਦੀ ਕਿਸਮ:"
+msgstr "ਬੇਤਾਰ ਨੈੱਟਵਰਕ:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਕਾਰਵਾਈ ਲਈ ਅਗਲਾ ਸਟੈਪ ਚੁਣੋ:"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਕਾਰਵਾਈ ਲਈ ਵਰਤਣ ਵਾਸਤੇ ਬੇਤਾਰ ਨੈੱਟਵਰਕ ਚੁਣੋ।"
 
 #. Type: string
 #. Description

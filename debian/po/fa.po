@@ -147,21 +147,20 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:7001
 msgid "Attempting to find an available wireless network failed."
-msgstr "تلاش برای یافتن بک شبکه بی سیم شکست خورد."
+msgstr "تلاش برای یافتن یک شبکه بی‌سیم موجود، با شکست مواجه شد."
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"آیا ${iface} یک درگاه شبکه بی سیم است. لطفاً نام شبکه بی سیمی (ESSID) که "
-"می‌خواهید, ${iface} از آن استفاده کند را وارد کنید. در صورتی که می‌خواهید هر "
-"شبکه ای که در دسترس بود را استفاده کنید, این قسمت را خالی بگذارید."
+"${iface} یک رابط شبکه بی‌سیم است. لطفاً نام شبکه بی سیمی را (ESSID) که "
+"می‌خواهید, ${iface} از آن استفاده کند،وارد کنید. برای اتصال به هر شبکه بی‌سیم "
+"موجود،این قسمت را خالی بگذارید. "
 
 #. Type: select
 #. Choices
@@ -308,13 +307,12 @@ msgstr "ESSID نامعتبر"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID «${essid}» نامتعبر است. ESSIDها ممکن است فقط تا حداکثر ۳۲ کاراکتر "
-"باشند، اما ممکن است حاوی همه‌گونه کاراکتر باشند."
+"ESSID «${essid}» نامتعبر است. ESSIDها شاید فقط تا حداکثر ۳۲ کاراکتر طول "
+"داشته باشند، اما ممکن است حاوی همه‌ انواع کاراکترها باشند."
 
 #. Type: text
 #. Description
@@ -670,7 +668,7 @@ msgstr "تنظیم شبکه"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr "زمان انتظار (در واحد ثانیه) برای تشخیص ارتباط:"
+msgstr "زمان انتظار (به ثانیه) برای تشخیص پیوند:"
 
 #. Type: string
 #. Description
@@ -679,14 +677,15 @@ msgstr "زمان انتظار (در واحد ثانیه) برای تشخیص ا�
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "لطفا حداکثر زمان دلخواه جهت منتظر ماندن برای تشخیص شبکه را وارد کنید."
+msgstr ""
+"لطفا حداکثر زمان دلخواه جهت منتظر ماندن برای تشخیص پیوند شبکه را وارد کنید."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr "زمان نامعتبر برای تشخیص شبکه"
+msgstr "زمان نامعتبر برای تشخیص پیوند شبکه"
 
 #. Type: error
 #. Description
@@ -696,8 +695,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
-"مقداری که وارد کردید معتبر نیست. حداکثر زمان انتظار (در واحد ثانیه) برای "
-"تشخیص شبکه باید یک عدد مثبت باشد."
+"مقداری که شما وارد کردید معتبر نیست. حداکثر زمان انتظار (به ثانیه) برای "
+"تشخیص پیوند شبکه باید یک عدد صحیح مثبت باشد."
 
 #. Type: select
 #. Choices
@@ -705,23 +704,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ESSID را به صورت دستی وارد کنید"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "تنظیم مجدد شبکهٔ بیسیم:"
+msgstr "شبکه بی‌سیم:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "قدم بعدی را برای ادامهٔ نصب انتخاب کنید:"
+msgstr "شبکه بی‌سیم را برای استفاده در فرآیند نصب انتخاب کنید."
 
 #. Type: string
 #. Description

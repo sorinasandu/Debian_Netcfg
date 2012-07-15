@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 08:45+0700\n"
+"PO-Revision-Date: 2012-07-15 18:25+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -151,7 +151,6 @@ msgstr "ไม่สามารถหาเครือข่ายไร้ส
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
@@ -302,12 +301,11 @@ msgstr "ESSID ไม่ถูกต้อง"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ไม่ถูกต้อง  ESSID มีความยาวได้ไม่เกิน 32 อักขระ "
+"ESSID \"${essid}\" ไม่ถูกต้อง  ESSID ยาวได้ไม่เกิน ${max_essid_len} อักขระ "
 "และสามารถมีอักขระชนิดใดก็ได้"
 
 #. Type: text
@@ -698,23 +696,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ป้อน ESSID เอง"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "ชนิดของเครือข่ายไร้สาย:"
+msgstr "เครือข่ายไร้สาย:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "กรุณาเลือกขั้นต่อไปของการติดตั้ง:"
+msgstr "กรุณาเลือกเครือข่ายไร้สายที่จะใช้ระหว่างการติดตั้ง"
 
 #. Type: string
 #. Description
