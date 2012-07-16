@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 13:49+0600\n"
+"PO-Revision-Date: 2012-07-15 17:14+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh \n"
 "Language: kk\n"
@@ -152,15 +152,14 @@ msgstr "Қол жетерлік сымсыз байланыс табылмады
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} сымсыз желі интерфейсі болып табылады. ${iface} үшін пайдаланғыңыз "
-"келетін желі атын (ESSID) енгізіңіз. Егер сіз кез келген қол жетерлік желіні "
-"пайдаланғыңыз келсе, бұл жолды бос қалдырыңыз."
+"${iface} - сымсыз желі интерфейсі болып табылады. ${iface} үшін "
+"пайдаланғыңыз келетін сымсыз желі атын (ESSID) енгізіңіз. Кез-келген "
+"қолжетерлік желіні пайдалана алу үшін, бұл жолды бос қалдырыңыз."
 
 #. Type: select
 #. Choices
@@ -309,12 +308,12 @@ msgstr "ESSID жарамсыз"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" жарамсыз. ESSID кез келген 32 таңбадан аспауы керек."
+"ESSID \"${essid}\" қате. ESSID ұзындығы ${max_essid_len} таңбадан аспауы "
+"тиіс, құрамында кез-келген таңбалар болуы мүмкін."
 
 #. Type: text
 #. Description
@@ -709,23 +708,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} ESSID қолмен енгізіңіз"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Сымсыз желінің түрі:"
+msgstr "Сымсыз желі:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Орнатудың келесі қадамын таңдаңыз:"
+msgstr "Орнату кезінде қолдану үшін сымсыз желіні таңдаңыз."
 
 #. Type: string
 #. Description

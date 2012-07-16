@@ -34,7 +34,7 @@ msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-21 08:32+0100\n"
+"PO-Revision-Date: 2012-07-16 08:14+0100\n"
 "Last-Translator: Vanja Cvelbar <cvelbar@gmail.com>\n"
 "Language-Team: Slovenian <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
@@ -167,7 +167,6 @@ msgstr "Poskus iskanja dosegljivega brezžičnega omrežja ni uspel."
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
@@ -324,13 +323,12 @@ msgstr "Nepravilen ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID \"${essid}\" ni pravilen. Dolžina ESSID-jev je lahko do 32 znakov "
-"vendar lahko vsebuje vse vrste znakov."
+"ESSID \"${essid}\" ni veljaven. Dolžina ESSID-jev je lahko do "
+"${max_essid_len} znakov in lahko vsebuje vse vrste znakov."
 
 #. Type: text
 #. Description
@@ -727,23 +725,22 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Ročni vnos ESSID"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Vrsta brezžičnega omrežja:"
+msgstr "Brezžično omrežje:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Izberite naslednji korak v postopku namestitve:"
+msgstr ""
+"Izberite brezžično omrežje, ki ga želite uporabiti v postopku namestitve."
 
 #. Type: string
 #. Description

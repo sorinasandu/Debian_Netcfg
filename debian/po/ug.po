@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-22 19:50+0600\n"
+"PO-Revision-Date: 2012-07-16 08:57+0600\n"
 "Last-Translator: Sahran <sahran.ug@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
@@ -151,14 +151,13 @@ msgstr "ئىشلەتكىلى بولىدىغان سىمسىز تورنى ئىزد
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
-"${iface} سىمسىز تور ئېغىزى، ${iface} نى كىرگۈزۈڭ، ئۇ سىمسىز تور ئاتى (ESSID) "
-"غا ئىشلىتىلىدۇ. ئەگەر خالىغان ئىشلەتكىلى بولىدىغان تورنى ئىشلەتمەكچى "
+"${iface} سىمسىز تور ئېغىزى، ${iface} غا ئىشلەتمەكچى بولغان سىمسىز تور ئاتى "
+"(ESSID) نى كىرگۈزۈڭ. ئەگەر خالىغان ئىشلەتكىلى بولىدىغان تورنى ئىشلەتمەكچى "
 "بولسىڭىز ئۇنداقتا بۇ جاينى بوش قالدۇرۇڭ."
 
 #. Type: select
@@ -307,13 +306,12 @@ msgstr "ESSID ئىناۋەتسىز"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"بۇ ESSID \"${essid}\" ئىناۋەتسىز. ESSID ئەڭ ئۇزۇن بولغاندا 32 ھەرپ، ئەمما "
-"بارلىق ھەر بەلگىنى ئۆز ئىچىگە ئالسا بولىدۇ."
+"بۇ ESSID \"${essid}\" ئىناۋەتسىز. ESSID ئەڭ ئۇزۇن بولغاندا ${max_essid_len} "
+"ھەرپ، ئەمما بارلىق ھەر بەلگىنى ئۆز ئىچىگە ئالسا بولىدۇ."
 
 #. Type: text
 #. Description
@@ -705,23 +703,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} دىكى ESSID نى قولدا كىرگۈزۈڭ"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "سىمسىز تور تىپى:"
+msgstr "سىمسىز تور:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "ئورنىتىشنىڭ كېيىنكى قەدىمىنى تاللاڭ:"
+msgstr "ئورنىتىش جەريانىدا ئىشلىتىدىغان سىسمسىز تورنى تاللاڭ."
 
 #. Type: string
 #. Description
