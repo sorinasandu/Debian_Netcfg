@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-05-13 02:29+0900\n"
+"PO-Revision-Date: 2012-07-18 17:30+0900\n"
 "Last-Translator:  Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team:  Korean <debian-l10n-korean@lists.debian.org>\n"
 "Language: ko\n"
@@ -158,15 +158,14 @@ msgstr "사용할 수 있는 무선 네트워크를 찾는데 실패했습니다
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} 인터페이스는 무선 네트워크 인터페이스입니다. ${iface} 인터페이스가 "
-"사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 다른 네트워크를 사용할 수 "
-"있고 그걸 사용하려면, 다음 칸을 비워 두십시오."
+"사용할 무선 네트워크의 이름(ESSID)을 입력하십시오. 사용 가능한 아무 네트워크"
+"나 사용하려면 다음 칸을 비워 두십시오."
 
 #. Type: select
 #. Choices
@@ -309,13 +308,12 @@ msgstr "ESSID가 잘못되었습니다"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"\"${essid}\" ESSID가 잘못되었습니다. ESSID는 32글자까지 가능하지만, 모든 종류"
-"의 문자를 다 쓸 수 있습니다."
+"\"${essid}\" ESSID가 잘못되었습니다. ESSID는 ${max_essid_len}글자까지 가능하"
+"지만, 모든 종류의 문자를 다 쓸 수 있습니다."
 
 #. Type: text
 #. Description
@@ -673,24 +671,23 @@ msgstr "네트워크 설정"
 #. :sl6:
 #: ../netcfg-common.templates:48001
 msgid "Waiting time (in seconds) for link detection:"
-msgstr ""
+msgstr "링크 검사 대기 시간(초 단위):"
 
 #. Type: string
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:48001
-#, fuzzy
 msgid ""
 "Please enter the maximum time you would like to wait for network link "
 "detection."
-msgstr "새 ZFS 풀에 사용하려는 이름을 입력하십시오."
+msgstr "네트워크 링크를 검사할 때 기다릴 최대 시간을 입력하십시오."
 
 #. Type: error
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:49001
 msgid "Invalid network link detection waiting time"
-msgstr ""
+msgstr "네트워크 링크 검사 대기 시간이 잘못되었습니다"
 
 #. Type: error
 #. Description
@@ -700,6 +697,8 @@ msgid ""
 "The value you have provided is not valid. The maximum waiting time (in "
 "seconds) for network link detection must be a positive integer."
 msgstr ""
+"입력한 값이 올바르지 않습니다. 최대 대기 시간은 초 단위로 0보다 큰 정수여야 "
+"합니다."
 
 #. Type: select
 #. Choices
@@ -707,23 +706,21 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} 수동으로 ESSID 입력"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "무선 네트워크 종류:"
+msgstr "무선 네트워크:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "설치 과정에서 다음 단계를 고르십시오:"
+msgstr "설치 과정에서 사용할 무선 네트워크를 고르십시오."
 
 #. Type: string
 #. Description
