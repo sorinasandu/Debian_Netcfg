@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: netcfg@packages.debian.org\n"
 "POT-Creation-Date: 2012-07-13 14:27+0000\n"
-"PO-Revision-Date: 2012-06-20 23:35+0100\n"
+"PO-Revision-Date: 2012-07-23 20:34+0100\n"
 "Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
@@ -158,15 +158,14 @@ msgstr "Försöket att hitta ett tillgängligt trådlöst nätverk misslyckades.
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:7001
-#, fuzzy
 msgid ""
 "${iface} is a wireless network interface. Please enter the name (the ESSID) "
 "of the wireless network you would like ${iface} to use. To connect to any "
 "available network, leave this field blank."
 msgstr ""
 "${iface} är ett trådlöst nätverksgränssnitt. Ange namnet (ESSID) på det "
-"trådlösa nätverk som du vill att ${iface} ska använda. Om du vill använda "
-"alla tillgängliga nätverk ska du lämna det här fältet tomt."
+"trådlösa nätverk som du vill att ${iface} ska använda. Lämna fältet tomt om "
+"vilket tillgängligt nätverk som helst duger."
 
 #. Type: select
 #. Choices
@@ -315,13 +314,12 @@ msgstr "Ogiltig ESSID"
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:13001
-#, fuzzy
 msgid ""
 "The ESSID \"${essid}\" is invalid. ESSIDs may only be up to ${max_essid_len} "
 "characters, but may contain all kinds of characters."
 msgstr ""
-"ESSID-strängen (${essid}) är ogiltig. ESSID-strängar får bara vara upp till "
-"32 tecken långa men de får innehålla alla typer av tecken."
+"ESSID-strängen \"${essid}\" är ogiltig. ESSID får bara vara upp till "
+"${max_essid_len} tecken långa men de får innehålla vilka tecken som helst."
 
 #. Type: text
 #. Description
@@ -717,23 +715,22 @@ msgstr ""
 #. :sl6:
 #: ../netcfg-common.templates:50001
 msgid "${essid_list} Enter ESSID manually"
-msgstr ""
+msgstr "${essid_list} Ange ESSID manuellt"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Wireless network:"
-msgstr "Typ av trådlöst nätverk:"
+msgstr "Trådlöst nätverk:"
 
 #. Type: select
 #. Description
 #. :sl6:
 #: ../netcfg-common.templates:50002
-#, fuzzy
 msgid "Select the wireless network to use during the installation process."
-msgstr "Välj nästa steg i installationsprocessen:"
+msgstr ""
+"Välj det trådlösa nätverk som ska användas under installationsprocessen."
 
 #. Type: string
 #. Description
