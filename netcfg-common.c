@@ -666,6 +666,7 @@ void netcfg_die(struct debconfclient *client)
     debconf_capb(client);
     debconf_input(client, "high", "netcfg/error");
     debconf_go(client);
+    di_info("Yep, will die now\n");
     exit(1);
 }
 

@@ -75,6 +75,7 @@ int main(int argc, char** argv)
             }
             break;
         case GET_STATIC:
+            di_info("Get static from netcfg-static\n");
             if (netcfg_get_static(client))
                 state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
             else
@@ -94,6 +95,7 @@ int main(int argc, char** argv)
                 state = BACKUP;
             else
                 state = WCONFIG_WEP;
+            di_info("Got essid %s from netcfg-static\n", essid);
             break;
 
         case WCONFIG_WEP:
@@ -101,6 +103,7 @@ int main(int argc, char** argv)
                 state = WCONFIG_ESSID;
             else
                 state = GET_STATIC;
+            di_info("Got WEP\n");
             break;
 
         case QUIT:

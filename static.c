@@ -172,6 +172,10 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
     FILE *fp;
 
     if ((fp = file_open(NETWORKS_FILE, "w"))) {
+
+        di_info("Writing static network config to nwtwork file: %s\n",
+                NETWORKS_FILE);
+
         fprintf(fp, "default\t\t0.0.0.0\n");
         fprintf(fp, "loopback\t127.0.0.0\n");
         fprintf(fp, "link-local\t169.254.0.0\n");
@@ -181,6 +185,10 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
         goto error;
 
     if ((fp = file_open(INTERFACES_FILE, "a"))) {
+
+        di_info("Writing static network config to interface file: %s\n",
+                INTERFACES_FILE);
+
         fprintf(fp, "\n# The primary network interface\n");
         if (!iface_is_hotpluggable(interface) && !find_in_stab(interface))
             fprintf(fp, "auto %s\n", interface);
@@ -199,6 +207,9 @@ static int netcfg_write_static(char *domain, struct in_addr nameservers[])
          * Write wireless-tools options
          */
         if (is_wireless_iface(interface)) {
+
+            di_info("Writing wireless config to interfaces file\n");
+
             fprintf(fp, "\t# wireless-* options are implemented by the wireless-tools package\n");
             fprintf(fp, "\twireless-mode %s\n",
                     (mode == MANAGED) ? "managed" : "ad-hoc");
@@ -408,6 +419,8 @@ int netcfg_get_static(struct debconfclient *client)
     debconf_metaget(client,  "netcfg/internal-none", "description");
     none = client->value ? strdup(client->value) : strdup("<none>");
 
+    di_info("Getting static configurations\n");
+
     for (;;) {
         switch (state) {
         case BACKUP:
@@ -510,6 +523,7 @@ int netcfg_get_static(struct debconfclient *client)
             break;
 
         case QUIT:
+            di_info("Got the configs, now write them\n");
             netcfg_write_common(ipaddress, hostname, domain);
             netcfg_write_static(domain, nameserver_array);
             return 0;

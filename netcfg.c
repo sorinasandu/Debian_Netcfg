@@ -122,6 +122,7 @@ int main(int argc, char *argv[])
     for (;;) {
         switch(state) {
         case BACKUP:
+            di_info("State BACKUP");
             return 10;
         case GET_INTERFACE:
             /* If we have returned from outside of netcfg and want to
@@ -129,6 +130,8 @@ int main(int argc, char *argv[])
              * running, and kill it if it is. If left running when
              * the interfaces are taken up and down, it appears to
              * leave it in an inconsistant state */
+            di_info("State GET_INTERFACE");
+
             kill_wpa_supplicant();
 
             int ret = 0;
@@ -222,6 +225,8 @@ int main(int argc, char *argv[])
             }
             break;
         case GET_HOSTNAME_ONLY:
+            di_info("State GET_HOSTNAME_ONLY");
+
             if(netcfg_get_hostname(client, "netcfg/get_hostname", &hostname, 0))
                 state = BACKUP;
             else {
@@ -232,6 +237,8 @@ int main(int argc, char *argv[])
             }
             break;
         case GET_METHOD:
+            di_info("State GET_METHOD");
+
             if ((res = netcfg_get_method(client)) == GO_BACK)
                 state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
             else {
@@ -243,6 +250,8 @@ int main(int argc, char *argv[])
             break;
 
         case GET_DHCP:
+            di_info("State GET_DHCP");
+
             switch (netcfg_activate_dhcp(client)) {
             case 0:
                 state = QUIT;
@@ -256,6 +265,8 @@ int main(int argc, char *argv[])
                 state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
                 break;
             case 15:
+                di_info("Tried DHCP, now go to static. I'm not so sure about"
+                        "that :)");
                 state = GET_STATIC;
                 break;
             default:
@@ -265,8 +276,11 @@ int main(int argc, char *argv[])
 
         case GET_STATIC:
             {
+                di_info("State GET_STATIC");
+
                 int ret;
                 /* Misnomer - this should actually take care of activation */
+                di_info("Get static from netcfg, with essid %s\n", essid);
                 if ((ret = netcfg_get_static(client)) == 10)
                     state = GET_INTERFACE;
                 else if (ret)
@@ -277,6 +291,8 @@ int main(int argc, char *argv[])
             }
 
         case WCONFIG:
+            di_info("State WCONFIG");
+
             if (requested_wireless_tools == 0) {
                 di_exec_shell_log("apt-install wireless-tools");
                 requested_wireless_tools = 1;
@@ -285,6 +301,8 @@ int main(int argc, char *argv[])
             break;
 
         case WCONFIG_ESSID:
+            di_info("State WCONFIG_ESSID");
+
             if (netcfg_wireless_set_essid(client, interface) == GO_BACK)
                 state = BACKUP;
             else {
@@ -298,6 +316,8 @@ int main(int argc, char *argv[])
 
         case WCONFIG_SECURITY_TYPE:
             {
+                di_info("State WCONFIG_SECURITY_TYPE");
+
                 int ret;
                 ret = wireless_security_type(client, interface);
                 if (ret == GO_BACK)
@@ -310,16 +330,22 @@ int main(int argc, char *argv[])
             }
 
         case WCONFIG_WEP:
+            di_info("State WCONFIG_WEP");
+
             if (netcfg_wireless_set_wep(client, interface) == GO_BACK)
                 if (wpa_supplicant_status == WPA_UNAVAIL)
                     state = WCONFIG_ESSID;
                 else
                     state = WCONFIG_SECURITY_TYPE;
-            else
+            else {
+                di_info("Configured WEP, now get method\n");
                 state = GET_METHOD;
+            }
             break;
 
         case WCONFIG_WPA:
+            di_info("State WCONFIG_WPA");
+
             if (wpa_supplicant_status == WPA_OK) {
                 di_exec_shell_log("apt-install wpasupplicant");
                 wpa_supplicant_status = WPA_QUEUED;
@@ -332,6 +358,8 @@ int main(int argc, char *argv[])
             break;
 
         case START_WPA:
+            di_info("State START_WPA");
+
             if (wpa_supplicant_start(client, interface, essid, passphrase) == GO_BACK)
                 state = WCONFIG_ESSID;
             else
@@ -339,8 +367,13 @@ int main(int argc, char *argv[])
             break;
 
         case QUIT:
+            di_info("State QUIT");
+
             netcfg_update_entropy();
+            di_info("Job done here, netcfg quiting");
             return 0;
         }
     }
+
+    di_info("Netcfg is now going to sleep, somehow left the loop");
 }

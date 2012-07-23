@@ -166,6 +166,8 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     int dhcp_seconds;
     char dhcp_seconds_str[16];
 
+    di_info("Starting DHCP or something\n");
+
     if (access("/sbin/dhclient", F_OK) == 0)
             dhcp_client = DHCLIENT;
     else if (access("/sbin/pump", F_OK) == 0)
@@ -173,6 +175,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
     else if (access("/sbin/udhcpc", F_OK) == 0)
         dhcp_client = UDHCPC;
     else {
+        di_info("DHCP failed\n");
         debconf_input(client, "critical", "netcfg/no_dhcp_client");
         debconf_go(client);
         exit(1);
@@ -405,6 +408,8 @@ int ask_wifi_configuration (struct debconfclient *client)
     if (wpa_supplicant_status != WPA_UNAVAIL)
         kill_wpa_supplicant();
 
+    di_info("WIFI config via DHCP for some reason");
+
     for (;;) {
         switch (wifistate) {
         case ESSID:
@@ -471,8 +476,12 @@ int netcfg_activate_dhcp (struct debconfclient *client)
     for (;;) {
         switch (state) {
         case START:
-            if (start_dhcp_client(client, dhostname))
+            if (start_dhcp_client(client, dhostname)) {
+                di_info("Netcfg is going to die\n");
                 netcfg_die(client); /* change later */
+                /* Here comes dead code. */
+                di_info("Where do we goo nooow?\n");
+            }
             else
                 state = POLL;
             break;
@@ -480,6 +489,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
         case POLL:
             if (poll_dhcp_client(client)) {
                 /* could not get a lease, show the error, present options */
+                di_info("DHCP failed, show failure\n");
                 debconf_capb(client, "");
                 debconf_input(client, "critical", "netcfg/dhcp_failed");
                 debconf_go(client);
@@ -616,6 +626,8 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 break;
             case REPLY_CONFIGURE_MANUALLY:
                 kill_dhcp_client();
+                sleep(2);
+                di_info("DHCP reply: configure manually\n");
                 return 15;
                 break;
             case REPLY_DONT_CONFIGURE:
@@ -632,6 +644,7 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 }
                 break;
             case REPLY_RECONFIGURE_WIFI:
+                di_info("Reply RECONFIGURE_WIFI");
                 if (ask_wifi_configuration(client) == REPLY_CHECK_DHCP) {
                     kill_dhcp_client();
                     state = START;
