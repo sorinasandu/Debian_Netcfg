@@ -317,7 +317,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
 
     if ((err = iw_set_ext(skfd, iface, SIOCSIWENCODE, &wrq)) < 0) {
         di_warning("setting WEP key on %s failed with code %d", iface, err);
-        return ENTER_MANUALLY;
+        return -1;
     }
 
     return 0;
