@@ -43,7 +43,7 @@ response_t netcfg_get_method(struct debconfclient *client)
     iret = debconf_input(client, "medium", "netcfg/use_dhcp");
     ret = debconf_go(client);
 
-    if (ret == 30)
+    if (ret == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/use_dhcp");
@@ -53,7 +53,7 @@ response_t netcfg_get_method(struct debconfclient *client)
     else
         netcfg_method = STATIC;
 
-    if (iret == 30)
+    if (iret == CMD_INPUTINVISIBLE)
         return NOT_ASKED;
 
     return 0;
@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
                     if (check_kill_switch(*ifaces)) {
                         debconf_subst(client, "netcfg/kill_switch_enabled", "iface", *ifaces);
                         debconf_input(client, "high", "netcfg/kill_switch_enabled");
-                        if (debconf_go(client) == 30) {
+                        if (debconf_go(client) == CMD_GOBACK) {
                             state = BACKUP;
                             break;
                         }
