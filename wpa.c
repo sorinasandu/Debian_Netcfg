@@ -69,7 +69,7 @@ int wireless_security_type (struct debconfclient *client, char *if_name)
     debconf_input(client, "high", "netcfg/wireless_security_type");
     ret = debconf_go(client);
 
-    if (ret == 30)
+    if (ret == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/wireless_security_type");
@@ -89,7 +89,7 @@ int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
     debconf_input(client, "high", "netcfg/wireless_wpa");
     ret = debconf_go(client);
 
-    if (ret == 30)
+    if (ret == CMD_GOBACK)
         return GO_BACK;
 
     if (passphrase != NULL)
@@ -107,7 +107,7 @@ int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
         debconf_input(client, "high", "netcfg/wireless_wpa");
         ret = debconf_go(client);
 
-        if (ret == 30)
+        if (ret == CMD_GOBACK)
             return GO_BACK;
 
         debconf_get(client, "netcfg/wireless_wpa");
@@ -266,10 +266,11 @@ int poll_wpa_supplicant(struct debconfclient *client)
 
     for (seconds_slept = 0; seconds_slept <= wpa_timeout; seconds_slept++) {
 
-         if (debconf_progress_info(client, "netcfg/wpa_progress_note") == 30)
+         if (debconf_progress_info(client, "netcfg/wpa_progress_note") ==
+                 CMD_PROGRESSCANCELLED)
              goto stop;
 
-             if (debconf_progress_step(client, 1) == 30)
+             if (debconf_progress_step(client, 1) == CMD_PROGRESSCANCELLED)
                  goto stop;
 
              sleep(1);

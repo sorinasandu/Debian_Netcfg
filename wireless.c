@@ -276,7 +276,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     debconf_input (client, "high", "netcfg/wireless_wep");
     ret = debconf_go(client);
 
-    if (ret == 30)
+    if (ret == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/wireless_wep");
@@ -301,7 +301,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
         debconf_input (client, "high", "netcfg/wireless_wep");
         ret = debconf_go(client);
 
-        if (ret == 30)
+        if (ret == CMD_GOBACK)
             return GO_BACK;
 
         debconf_get(client, "netcfg/wireless_wep");

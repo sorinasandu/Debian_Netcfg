@@ -312,7 +312,8 @@ int poll_dhcp_client (struct debconfclient *client)
     /* show progress bar */
     debconf_capb(client, "backup progresscancel");
     debconf_progress_start(client, 0, dhcp_seconds, "netcfg/dhcp_progress");
-    if (debconf_progress_info(client, "netcfg/dhcp_progress_note") == 30) {
+    if (debconf_progress_info(client, "netcfg/dhcp_progress_note") ==
+            CMD_PROGRESSCANCELLED) {
         kill_dhcp_client();
         goto stop;
     }
@@ -323,7 +324,7 @@ int poll_dhcp_client (struct debconfclient *client)
             && (seconds_slept < dhcp_seconds) ) {
         sleep(1);
         seconds_slept++; /* Not exact but close enough */
-        if (debconf_progress_step(client, 1) == 30)
+        if (debconf_progress_step(client, 1) == CMD_PROGRESSCANCELLED)
             goto stop;
     }
     /* Either the client exited or time ran out */
@@ -333,9 +334,11 @@ int poll_dhcp_client (struct debconfclient *client)
         ret = 0;
 
         debconf_capb(client, "backup"); /* stop displaying cancel button */
-        if (debconf_progress_set(client, dhcp_seconds) == 30)
+        if (debconf_progress_set(client, dhcp_seconds) ==
+                CMD_PROGRESSCANCELLED)
             goto stop;
-        if (debconf_progress_info(client, "netcfg/dhcp_success_note") == 30)
+        if (debconf_progress_info(client, "netcfg/dhcp_success_note") ==
+                CMD_PROGRESSCANCELLED)
             goto stop;
         sleep(2);
     }
@@ -374,7 +377,7 @@ int ask_dhcp_options (struct debconfclient *client)
     debconf_input(client, "critical", "netcfg/dhcp_options");
     ret = debconf_go(client);
 
-    if (ret == 30)
+    if (ret == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/dhcp_options");

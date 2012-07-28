@@ -443,8 +443,8 @@ char *get_ifdsc(struct debconfclient *client, const char *ifp)
             sprintf(template, "netcfg/internal-%s", new_ifp);
             free(new_ifp);
 
-            if (debconf_metaget(client, template, "description") == 0 &&
-                client->value != NULL) {
+            if (debconf_metaget(client, template, "description") ==
+                    CMD_SUCCESS && client->value != NULL) {
                 return strdup(client->value);
             }
         } else {
@@ -909,7 +909,7 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
         debconf_input(client, "high", template);
         ret = debconf_go(client);
 
-        if (ret == 30) /* backup */
+        if (ret == CMD_GOBACK) /* backup */
             return ret;
 
         debconf_get(client, template);
@@ -1332,7 +1332,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     debconf_progress_start(client, 0, link_waits, "netcfg/link_detect_progress");
     for (count = 0; count < link_waits; count++) {
         usleep(250000);
-        if (debconf_progress_set(client, count) == 30) {
+        if (debconf_progress_set(client, count) == CMD_PROGRESSCANCELLED) {
             /* User cancelled on us... bugger */
             rv = 0;
             break;
