@@ -1303,10 +1303,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     debconf_capb(client, "");
 
     while (!ok) {
-        if (debconf_input(client, "low", "netcfg/link_wait_timeout") ==
-                CMD_SUCCESS) {
-            di_info("Asking for link_wait time");
-        }
+        debconf_input(client, "low", "netcfg/link_wait_timeout");
         debconf_go(client);
         debconf_get(client, "netcfg/link_wait_timeout");
 
