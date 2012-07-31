@@ -1333,7 +1333,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
         }
     }
 
-    di_info("Waiting time set to %d", link_waits);
+    di_info("Waiting time set to %d", link_waits / 4);
 
     debconf_capb(client, "progresscancel");
     debconf_subst(client, "netcfg/link_detect_progress", "interface", if_name);
@@ -1343,18 +1343,26 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
         if (debconf_progress_set(client, count) == CMD_PROGRESSCANCELLED) {
             /* User cancelled on us... bugger */
             rv = 0;
+            di_info("Detecting link on %s was cancelled", if_name);
             break;
         }
         if (ethtool_lite(if_name) == 1) /* ethtool-lite's CONNECTED */ {
+            di_info("Found link on %s", if_name);
+
             if (gateway.s_addr && !is_wireless_iface(if_name)) {
                 for (count = 0; count < gw_tries; count++) {
                     if (di_exec_shell_log(arping) == 0)
                         break;
                 }
+                di_info("Gateway reachable on %s", if_name);
             }
             rv = 1;
             break;
         }
+    }
+
+    if (count == link_waits) {
+        di_info("Reached timeout for link detection on %s", if_name);
     }
 
     debconf_progress_stop(client);
