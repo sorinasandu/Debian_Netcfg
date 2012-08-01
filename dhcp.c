@@ -675,7 +675,11 @@ int netcfg_activate_dhcp (struct debconfclient *client)
                 state = HOSTNAME;
             else {
                 netcfg_write_common(ipaddress, hostname, domain);
-                netcfg_write_dhcp(interface, dhostname);
+
+                if (!is_wireless_iface(interface) ||
+                    netcfg_ask_write_wireless_config(client, interface)) {
+                    netcfg_write_dhcp(interface, dhostname);
+                }
                 /* If the resolv.conf was written by udhcpc, then nameserver_array
                  * will be empty and we'll need to populate it.  If we asked for
                  * the nameservers, then it'll be full, but nobody will care if we

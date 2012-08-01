@@ -1158,6 +1158,31 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     free(domain_nodot);
 }
 
+/* Ask if the configuration for the wireless interface should be written in
+ * the interfaces file. It is not advisable to have the configs there, and
+ * the question defaults to "false", but for expert install a choice should
+ * be given. */
+extern int netcfg_ask_write_wireless_config(struct debconfclient *client,
+        char *iface)
+{
+    int rv = 0;
+
+    debconf_capb(client, "");
+    debconf_subst(client, "netcfg/write_wireless_config", "iface", iface);
+    debconf_subst(client, "netcfg/write_wireless_config", "interfaces_file",
+            INTERFACES_FILE);
+    debconf_input(client, "medium", "netcfg/write_wireless_config");
+    debconf_go(client);
+    debconf_get(client, "netcfg/write_wireless_config");
+
+    if (!empty_str(client->value) && strcmp(client->value, "true") == 0) {
+        rv = 1;
+    }
+
+    debconf_capb(client, "backup");
+
+    return rv;
+}
 
 void deconfigure_network(void)
 {
