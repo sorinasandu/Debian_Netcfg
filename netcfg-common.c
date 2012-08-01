@@ -1285,6 +1285,8 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
     int link_waits;
     int gw_tries = NETCFG_GATEWAY_REACHABILITY_TRIES;
 
+    di_info("Just got into netcfg_detect_link");
+
     if (gateway.s_addr) {
         inet_ntop(AF_INET, &gateway, s_gateway, sizeof(s_gateway));
         sprintf(arping, "arping -c 1 -w 1 -f -I %s %s", if_name, s_gateway);

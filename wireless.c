@@ -270,7 +270,9 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     unsigned char buf [IW_ENCODING_TOKEN_MAX + 1];
     struct iwreq wrq;
 
+    di_info("Get config for %s to set WEP key", iface);
     iw_get_basic_config (wfd, iface, &wconf);
+    di_info("Got configs");
 
     debconf_subst(client, "netcfg/wireless_wep", "iface", iface);
     debconf_input (client, "high", "netcfg/wireless_wep");
@@ -283,7 +285,9 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     rv = client->value;
 
     if (empty_str(rv)) {
+        di_info("Unset WEP key, wireless.c, 289");
         unset_wep_key (iface);
+        di_info("Key was unset");
 
         if (wepkey != NULL) {
             free(wepkey);
@@ -315,6 +319,7 @@ int netcfg_wireless_set_wep (struct debconfclient * client, char* iface)
     wrq.u.data.flags = 0;
     wrq.u.data.length = keylen;
 
+    di_info("Now set WEP key");
     if ((err = iw_set_ext(skfd, iface, SIOCSIWENCODE, &wrq)) < 0) {
         di_warning("setting WEP key on %s failed with code %d", iface, err);
         return -1;

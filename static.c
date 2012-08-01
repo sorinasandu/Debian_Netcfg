@@ -284,6 +284,8 @@ int netcfg_activate_static(struct debconfclient *client)
     char buf[256];
     char ptr1[INET_ADDRSTRLEN];
 
+    di_info("netcfg_activate_static");
+
 #ifdef __GNU__
     snprintf(buf, sizeof(buf),
              "settrans -fgap /servers/socket/2 /hurd/pfinet --interface=%s --address=%s",
@@ -304,7 +306,10 @@ int netcfg_activate_static(struct debconfclient *client)
 #elif defined(__FreeBSD_kernel__)
     deconfigure_network();
 
+    di_info("Set loop");
     loop_setup();
+
+    di_info("Bring interface up");
     interface_up(interface);
 
     /* Flush all previous addresses, routes */
@@ -342,16 +347,20 @@ int netcfg_activate_static(struct debconfclient *client)
         rv |= di_exec_shell_log(buf);
     }
 #else
+    di_info("Deconfigure network, static.c, 346");
     deconfigure_network();
+    di_info("Done deconfiguring");
 
     loop_setup();
     interface_up(interface);
 
     /* Flush all previous addresses, routes */
     snprintf(buf, sizeof(buf), "ip addr flush dev %s", interface);
+    di_info("exec/log: %s", buf);
     rv |= di_exec_shell_log(buf);
 
     snprintf(buf, sizeof(buf), "ip route flush dev %s", interface);
+    di_info("exec/log: %s", buf);
     rv |= di_exec_shell_log(buf);
 
     rv |= !inet_ptom (NULL, &masksize, &netmask);
@@ -376,11 +385,13 @@ int netcfg_activate_static(struct debconfclient *client)
     if (pointopoint.s_addr)
     {
         snprintf(buf, sizeof(buf), "ip route add default dev %s", interface);
+        di_info("exec/log: %s", buf);
         rv |= di_exec_shell_log(buf);
     }
     else if (gateway.s_addr) {
         snprintf(buf, sizeof(buf), "ip route add default via %s",
                  inet_ntop (AF_INET, &gateway, ptr1, sizeof (ptr1)));
+        di_info("exec/log: %s", buf);
         rv |= di_exec_shell_log(buf);
     }
 #endif
@@ -396,8 +407,10 @@ int netcfg_activate_static(struct debconfclient *client)
     /* Wait to detect link.  Don't error out if we fail, though; link detection
      * may not work on this NIC or something.
      */
+    di_info("Go to detect link, 402");
     if (netcfg_detect_link(client, interface) == GO_BACK)
         return GO_BACK;
+    di_info("Perhaps detected");
 
     return 0;
 }
