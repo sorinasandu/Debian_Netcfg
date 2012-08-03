@@ -55,6 +55,9 @@
 #define MAXHOSTNAMELEN 63
 #endif
 
+#define RETURN_TO_MAIN 10
+#define CONFIGURE_MANUALLY 15
+
 typedef enum { NOT_ASKED = 30, GO_BACK, REPLY_WEP, REPLY_WPA } response_t;
 typedef enum { DHCP, STATIC, DUNNO } method_t;
 typedef enum { ADHOC = 1, MANAGED = 2 } wifimode_t;

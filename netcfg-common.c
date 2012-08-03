@@ -838,7 +838,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         free(ptr);
 
     netcfg_die(client);
-    return 10; /* unreachable */
+    return RETURN_TO_MAIN; /* unreachable */
 }
 
 /*

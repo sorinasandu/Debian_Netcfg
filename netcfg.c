@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
     for (;;) {
         switch(state) {
         case BACKUP:
-            return 10;
+            return RETURN_TO_MAIN;
         case GET_INTERFACE:
             /* If we have returned from outside of netcfg and want to
              * reconfigure networking, check to see if wpasupplicant is
@@ -247,15 +247,15 @@ int main(int argc, char *argv[])
             case 0:
                 state = QUIT;
                 break;
-            case 10:
+            case RETURN_TO_MAIN:
                 /*
                  * It doesn't make sense to go back to GET_METHOD because
-                 * the user has already been asked whether he wants to
+                 * the user has already been asked whether they want to
                  * try an alternate method.
                  */
                 state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
                 break;
-            case 15:
+            case CONFIGURE_MANUALLY:
                 state = GET_STATIC;
                 break;
             default:
@@ -267,7 +267,7 @@ int main(int argc, char *argv[])
             {
                 int ret;
                 /* Misnomer - this should actually take care of activation */
-                if ((ret = netcfg_get_static(client)) == 10)
+                if ((ret = netcfg_get_static(client)) == RETURN_TO_MAIN)
                     state = GET_INTERFACE;
                 else if (ret)
                     state = GET_METHOD;

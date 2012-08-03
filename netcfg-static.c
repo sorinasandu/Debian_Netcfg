@@ -51,7 +51,7 @@ int main(int argc, char** argv)
     while (1) {
         switch(state) {
         case BACKUP:
-            return 10;
+            return RETURN_TO_MAIN;
         case GET_INTERFACE:
             if (netcfg_get_interface(client, &interface, &num_interfaces, NULL))
                 state = BACKUP;

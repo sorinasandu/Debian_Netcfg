@@ -411,7 +411,7 @@ int netcfg_get_static(struct debconfclient *client)
     for (;;) {
         switch (state) {
         case BACKUP:
-            return 10; /* Back to main */
+            return RETURN_TO_MAIN;
             break;
 
         case GET_IPADDRESS:

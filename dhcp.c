@@ -613,13 +613,13 @@ int netcfg_activate_dhcp (struct debconfclient *client)
             switch (ask_dhcp_options (client)) {
             case GO_BACK:
                 kill_dhcp_client();
-                return 10;
+                return RETURN_TO_MAIN;
             case REPLY_RETRY_WITH_HOSTNAME:
                 state = DHCP_HOSTNAME;
                 break;
             case REPLY_CONFIGURE_MANUALLY:
                 kill_dhcp_client();
-                return 15;
+                return CONFIGURE_MANUALLY;
                 break;
             case REPLY_DONT_CONFIGURE:
                 kill_dhcp_client();
