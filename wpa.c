@@ -67,9 +67,8 @@ int wireless_security_type (struct debconfclient *client, char *if_name)
     int ret = 0 ;
     debconf_subst(client, "netcfg/wireless_security_type", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_security_type");
-    ret = debconf_go(client);
 
-    if (ret == CMD_GOBACK)
+    if (debconf_go(client) == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/wireless_security_type");
@@ -83,13 +82,10 @@ int wireless_security_type (struct debconfclient *client, char *if_name)
 
 int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
 {
-    int ret;
-
     debconf_subst(client, "netcfg/wireless_wpa", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_wpa");
-    ret = debconf_go(client);
 
-    if (ret == CMD_GOBACK)
+    if (debconf_go(client) == CMD_GOBACK)
         return GO_BACK;
 
     if (passphrase != NULL)
@@ -105,14 +101,14 @@ int netcfg_set_passphrase (struct debconfclient *client, char *if_name)
         free(passphrase);
 
         debconf_input(client, "high", "netcfg/wireless_wpa");
-        ret = debconf_go(client);
 
-        if (ret == CMD_GOBACK)
+        if (debconf_go(client) == CMD_GOBACK)
             return GO_BACK;
 
         debconf_get(client, "netcfg/wireless_wpa");
         passphrase = strdup(client->value);
     }
+
     return 0;
 }
 

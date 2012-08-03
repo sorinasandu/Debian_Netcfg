@@ -169,13 +169,13 @@ int netcfg_wireless_show_essids(struct debconfclient *client, char *iface)
         debconf_subst(client, "netcfg/wireless_show_essids", "essid_list", buffer);
         debconf_fset(client, "netcfg/wireless_show_essids", "seen", "false");
         debconf_input(client, "high", "netcfg/wireless_show_essids");
-        int ret = debconf_go(client);
 
-        if (ret == CMD_GOBACK) {
+        if (debconf_go(client) == CMD_GOBACK) {
             debconf_fset(client, "netcfg/wireless_show_essids", "seen",
                     "false");
             free_network_list(&network_list.result);
             free(buffer);
+
             return GO_BACK;
         }
 
@@ -237,10 +237,8 @@ select_essid:
     }
 
     if (choose_ret == ENTER_MANUALLY) {
-        int manually_ret = netcfg_wireless_choose_essid_manually(client,
-                iface, "netcfg/wireless_essid");
-
-        if (manually_ret == GO_BACK) {
+        if (netcfg_wireless_choose_essid_manually(client, iface,
+                                      "netcfg/wireless_essid") == GO_BACK) {
             goto select_essid;
         }
     }

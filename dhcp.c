@@ -375,9 +375,8 @@ int ask_dhcp_options (struct debconfclient *client)
 
     /* critical, we don't want to enter a loop */
     debconf_input(client, "critical", "netcfg/dhcp_options");
-    ret = debconf_go(client);
 
-    if (ret == CMD_GOBACK)
+    if (debconf_go(client) == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/dhcp_options");

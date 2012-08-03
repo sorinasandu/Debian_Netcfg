@@ -38,12 +38,11 @@ static method_t netcfg_method = DHCP;
 
 response_t netcfg_get_method(struct debconfclient *client)
 {
-    int iret, ret;
+    int iret;
 
     iret = debconf_input(client, "medium", "netcfg/use_dhcp");
-    ret = debconf_go(client);
 
-    if (ret == CMD_GOBACK)
+    if (debconf_go(client) == CMD_GOBACK)
         return GO_BACK;
 
     debconf_get(client, "netcfg/use_dhcp");

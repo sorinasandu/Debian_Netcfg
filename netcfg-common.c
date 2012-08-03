@@ -795,7 +795,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         debconf_subst(client, "netcfg/choose_interface", "ifchoices", ptr);
         free(ptr);
 
-        asked = (debconf_input(client, "critical", "netcfg/choose_interface") == 0);
+        asked = (debconf_input(client, "critical", "netcfg/choose_interface") == CMD_SUCCESS);
         ret = debconf_go(client);
 
         /* If the question is not asked, honor preseeded interface name.
@@ -907,10 +907,9 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
         if (accept_domain)
             have_domain = 0;
         debconf_input(client, "high", template);
-        ret = debconf_go(client);
 
-        if (ret == CMD_GOBACK) /* backup */
-            return ret;
+        if (debconf_go(client) == CMD_GOBACK)
+            return GO_BACK;
 
         debconf_get(client, template);
 
@@ -965,7 +964,7 @@ int netcfg_get_hostname(struct debconfclient *client, char *template, char **hos
 }
 
 /* @brief Get the domainname.
- * @return 0 for success, with *domain = domain, 30 for 'goback',
+ * @return 0 for success, with *domain = domain, GO_BACK for 'goback',
  */
 int netcfg_get_domain(struct debconfclient *client,  char **domain)
 {
