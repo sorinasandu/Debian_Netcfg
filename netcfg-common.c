@@ -187,8 +187,10 @@ int check_kill_switch(const char *iface)
  out:
     free(temp);
     free(linkbuf);
+
     if (fd != -1)
         close(fd);
+
     return ret;
 }
 
@@ -780,6 +782,7 @@ int netcfg_get_interface(struct debconfclient *client, char **interface,
         free(ptr);
         free(old_selection);
         *numif = 0;
+
         return ret;
     }
     else if (num_interfaces == 1) {
@@ -997,6 +1000,7 @@ int netcfg_get_domain(struct debconfclient *client,  char **domain)
             ++start; /* trim leading dots */
         *domain = strdup(start);
     }
+
     return 0;
 }
 
@@ -1266,7 +1270,8 @@ int netcfg_get_nameservers (struct debconfclient *client, char **nameservers)
     *nameservers = NULL;
     if (ptr)
         *nameservers = strdup(ptr);
-    return ret;
+
+    return 0;
 }
 
 void netcfg_update_entropy (void)

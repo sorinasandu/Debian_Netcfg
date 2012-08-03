@@ -208,6 +208,7 @@ int netcfg_wireless_show_essids(struct debconfclient *client, char *iface)
          * question. */
         if (netcfg_wireless_choose_essid_manually(client, iface,
                 "netcfg/wireless_essid_again") == GO_BACK) {
+
             return GO_BACK;
         }
 
