@@ -64,7 +64,6 @@ int kill_wpa_supplicant(void)
 
 int wireless_security_type (struct debconfclient *client, char *if_name)
 {
-    int ret = 0 ;
     debconf_subst(client, "netcfg/wireless_security_type", "iface", if_name);
     debconf_input(client, "high", "netcfg/wireless_security_type");
 

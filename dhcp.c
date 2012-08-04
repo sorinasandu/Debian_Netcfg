@@ -364,8 +364,6 @@ int poll_dhcp_client (struct debconfclient *client)
 
 int ask_dhcp_options (struct debconfclient *client)
 {
-    int ret;
-
     if (is_wireless_iface(interface)) {
         debconf_metaget(client, "netcfg/internal-wifireconf", "description");
         debconf_subst(client, "netcfg/dhcp_options", "wifireconf", client->value);

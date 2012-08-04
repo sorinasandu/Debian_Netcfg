@@ -903,7 +903,6 @@ short valid_domain (const char *dname)
  */
 int netcfg_get_hostname(struct debconfclient *client, char *template, char **hostname, short accept_domain)
 {
-    int ret;
     char *s, buf[1024];
 
     for(;;) {
