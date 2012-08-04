@@ -385,8 +385,7 @@ int netcfg_activate_static(struct debconfclient *client)
     /* Wait to detect link.  Don't error out if we fail, though; link detection
      * may not work on this NIC or something.
      */
-    if (netcfg_detect_link(client, interface) == GO_BACK)
-        return GO_BACK;
+    netcfg_detect_link(client, interface);
 
     return 0;
 }
@@ -497,10 +496,7 @@ int netcfg_get_static(struct debconfclient *client)
             if (strstr(client->value, "true")) {
                 state = GET_HOSTNAME;
                 netcfg_write_resolv(domain, nameserver_array);
-                if (netcfg_activate_static(client) == GO_BACK) {
-                    state = BACKUP;
-                    break;
-                }
+                netcfg_activate_static(client);
             }
             else
                 state = GET_IPADDRESS;

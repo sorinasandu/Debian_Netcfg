@@ -130,8 +130,6 @@ int main(int argc, char *argv[])
              * leave it in an inconsistant state */
             kill_wpa_supplicant();
 
-            int ret = 0;
-
             /* Choose a default by looking for link */
             if (get_all_ifs(1, &ifaces) > 1) {
                 while (*ifaces) {
@@ -151,14 +149,8 @@ int main(int argc, char *argv[])
 
                     interface_up(*ifaces);
 
-                    ret = netcfg_detect_link (client, *ifaces);
-
-                    if (ret == GO_BACK) {
-                        state = GET_INTERFACE;
-                        break;
-                    }
-
-                    if (ret == 1) /* CONNECTED */ {
+                    if (netcfg_detect_link (client, *ifaces) == 1) {
+                        /* CONNECTED */
                         di_info("found link on interface %s, making it the default.", *ifaces);
                         defiface = strdup(*ifaces);
                         break;
@@ -203,7 +195,7 @@ int main(int argc, char *argv[])
                 }
             }
 
-            if (state == BACKUP || ret == GO_BACK)
+            if (state == BACKUP)
                 break;
 
             if (!defiface && defwireless)
