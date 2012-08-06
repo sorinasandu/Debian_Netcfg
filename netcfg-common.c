@@ -1157,9 +1157,12 @@ void interface_up (char* iface)
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
 
     if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0) {
+        di_info("Activating interface %s", iface);
         strncpy(ifr.ifr_name, iface, IFNAMSIZ);
         ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
         ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    } else {
+        di_info("Geting flags for interface %s failed, not activating interface.", iface);
     }
 }
 
@@ -1170,9 +1173,12 @@ void interface_down (char* iface)
     strncpy(ifr.ifr_name, iface, IFNAMSIZ);
 
     if (skfd && ioctl(skfd, SIOCGIFFLAGS, &ifr) >= 0) {
+        di_info("Taking down interface %s", iface);
         strncpy(ifr.ifr_name, iface, IFNAMSIZ);
         ifr.ifr_flags &= ~IFF_UP;
         ioctl(skfd, SIOCSIFFLAGS, &ifr);
+    } else {
+        di_info("Geting flags for interface %s failed, not taking down interface.", iface);
     }
 }
 
