@@ -1162,7 +1162,7 @@ void interface_up (char* iface)
         ifr.ifr_flags |= (IFF_UP | IFF_RUNNING);
         ioctl(skfd, SIOCSIFFLAGS, &ifr);
     } else {
-        di_info("Geting flags for interface %s failed, not activating interface.", iface);
+        di_info("Getting flags for interface %s failed, not activating interface.", iface);
     }
 }
 
@@ -1178,7 +1178,7 @@ void interface_down (char* iface)
         ifr.ifr_flags &= ~IFF_UP;
         ioctl(skfd, SIOCSIFFLAGS, &ifr);
     } else {
-        di_info("Geting flags for interface %s failed, not taking down interface.", iface);
+        di_info("Getting flags for interface %s failed, not taking down interface.", iface);
     }
 }
 
