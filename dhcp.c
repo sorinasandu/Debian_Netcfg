@@ -281,7 +281,7 @@ int start_dhcp_client (struct debconfclient *client, char* dhostname)
 
 static int kill_dhcp_client(void)
 {
-    if (system("killall.sh")) {
+    if (system("kill-all-dhcp")) {
         /* We can't do much about errors anyway, so ignore them. */
     }
     return 0;
