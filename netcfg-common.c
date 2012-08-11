@@ -227,6 +227,75 @@ int is_raw_80211(const char *iface)
 }
 #endif
 
+#if defined(__s390__)
+// Layer 3 qeth on s390(x) cannot do arping to test gateway reachability.
+int is_layer3_qeth(const char *iface)
+{
+    int retval = 0;
+    char* path;
+    char* buf;
+    size_t len;
+    ssize_t slen;
+    char* driver;
+    int fd;
+
+    // This is sufficient for both /driver and /layer2.
+    len = strlen(SYSCLASSNET) + strlen(iface) + strlen("/device/driver") + 1;
+
+    path = malloc(len);
+    snprintf(path, len, SYSCLASSNET "%s/device/driver", iface);
+
+    // lstat() on sysfs symlinks does not provide size information.
+    buf = malloc(1024);
+    slen = readlink(path, buf, 1024);
+
+    if (slen < 0) {
+        di_error("Symlink %s cannot be resolved: %s", path, strerror(errno));
+        goto out;
+    }
+
+    buf[slen + 1] = '\0';
+
+    driver = strrchr(buf, '/') + 1;
+    if (strcmp(driver, "qeth") != 0) {
+        di_error("no qeth found: %s", driver);
+        goto out;
+    }
+
+    snprintf(path, len, SYSCLASSNET "%s/device/layer2", iface);
+
+    fd = open(path, O_RDONLY);
+    if (fd == -1) {
+        di_error("%s cannot be opened: %s", path, strerror(errno));
+        goto out;
+    }
+
+    slen = read(fd, buf, 1);
+    if (slen == -1) {
+        di_error("Read from %s failed: %s", path, strerror(errno));
+        close(fd);
+        goto out;
+    }
+
+    if (buf[0] == '0') {
+        // driver == 'qeth' && layer2 == 0
+        retval = 1;
+    }
+
+    close(fd);
+
+out:
+    free(buf);
+    free(path);
+    return retval;
+}
+#else
+int is_layer3_qeth(const char *iface __attribute__((unused)))
+{
+    return 0;
+}
+#endif
+
 int qsort_strcmp(const void *a, const void *b)
 {
     const char **ia = (const char **)a;
@@ -1349,15 +1418,13 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
         if (ethtool_lite(if_name) == 1) /* ethtool-lite's CONNECTED */ {
             di_info("Found link on %s", if_name);
 
-#if !defined(__s390__) /* QETH on s390(x) can do layer 3 networking */
-            if (gateway.s_addr && !is_wireless_iface(if_name)) {
+            if (gateway.s_addr && !is_wireless_iface(if_name) && !is_layer3_qeth(if_name)) {
                 for (count = 0; count < gw_tries; count++) {
                     if (di_exec_shell_log(arping) == 0)
                         break;
                 }
                 di_info("Gateway reachable on %s", if_name);
             }
-#endif
 
             rv = 1;
             break;
