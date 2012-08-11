@@ -1349,6 +1349,7 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
         if (ethtool_lite(if_name) == 1) /* ethtool-lite's CONNECTED */ {
             di_info("Found link on %s", if_name);
 
+#if !defined(__s390__) /* QETH on s390(x) can do layer 3 networking */
             if (gateway.s_addr && !is_wireless_iface(if_name)) {
                 for (count = 0; count < gw_tries; count++) {
                     if (di_exec_shell_log(arping) == 0)
@@ -1356,6 +1357,8 @@ int netcfg_detect_link(struct debconfclient *client, const char *if_name)
                 }
                 di_info("Gateway reachable on %s", if_name);
             }
+#endif
+
             rv = 1;
             break;
         }
