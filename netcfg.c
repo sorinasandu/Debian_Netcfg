@@ -22,6 +22,7 @@
 */
 
 #include "netcfg.h"
+#include "nm-conf.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -82,6 +83,7 @@ int main(int argc, char *argv[])
     char **ifaces;
     char *defiface = NULL, *defwireless = NULL;
     response_t res;
+    struct nm_config_info nmconf;
 
     /* initialize libd-i */
     di_system_init("netcfg");
@@ -331,6 +333,9 @@ int main(int argc, char *argv[])
             break;
 
         case QUIT:
+            nm_get_configuration(&nmconf);
+            nm_write_config_file(nmconf);
+
             netcfg_update_entropy();
             return 0;
         }
