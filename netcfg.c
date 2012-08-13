@@ -34,7 +34,8 @@
 #endif
 
 enum wpa_t wpa_supplicant_status;
-static method_t netcfg_method = DHCP;
+method_t netcfg_method = DHCP;
+response_t wifi_security;
 
 response_t netcfg_get_method(struct debconfclient *client)
 {
@@ -247,6 +248,7 @@ int main(int argc, char *argv[])
                 state = (num_interfaces == 1) ? BACKUP : GET_INTERFACE;
                 break;
             case CONFIGURE_MANUALLY:
+                netcfg_method = STATIC;
                 state = GET_STATIC;
                 break;
             default:
@@ -289,11 +291,10 @@ int main(int argc, char *argv[])
 
         case WCONFIG_SECURITY_TYPE:
             {
-                int ret;
-                ret = wireless_security_type(client, interface);
-                if (ret == GO_BACK)
+                wifi_security = wireless_security_type(client, interface);
+                if (wifi_security == GO_BACK)
                     state = WCONFIG_ESSID;
-                else if (ret == REPLY_WPA)
+                else if (wifi_security == REPLY_WPA)
                     state = WCONFIG_WPA;
                 else
                     state = WCONFIG_WEP;

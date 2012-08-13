@@ -418,11 +418,10 @@ int ask_wifi_configuration (struct debconfclient *client)
 
         case SECURITY_TYPE:
             {
-                int ret;
-                ret = wireless_security_type(client, interface);
-                if (ret == GO_BACK)
+                wifi_security = wireless_security_type(client, interface);
+                if (wifi_security == GO_BACK)
                     wifistate = ESSID;
-                else if (ret == REPLY_WPA)
+                else if (wifi_security == REPLY_WPA)
                     wifistate = WPA;
                 else
                     wifistate = WEP;

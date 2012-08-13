@@ -96,7 +96,7 @@ get_essid:
         goto get_essid;
     }
 
-    strdup(client->value);
+    essid = strdup(client->value);
 
     memset(wconf.essid, 0, IW_ESSID_MAX_SIZE + 1);
     snprintf(wconf.essid, IW_ESSID_MAX_SIZE + 1, "%s", essid);

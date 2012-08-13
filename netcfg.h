@@ -65,6 +65,7 @@ extern int netcfg_progress_displayed;
 extern int wfd, skfd;
 extern int input_result;
 extern int have_domain;
+extern method_t netcfg_method;
 
 /* network config */
 extern char *interface;
@@ -82,6 +83,7 @@ extern struct in_addr pointopoint;
 /* wireless */
 extern char *essid, *wepkey, *passphrase;
 extern wifimode_t mode;
+extern response_t wifi_security;
 
 /* common functions */
 extern int check_kill_switch (const char *iface);
