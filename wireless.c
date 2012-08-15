@@ -105,7 +105,7 @@ get_essid:
 
     iw_set_basic_config(wfd, iface, &wconf);
 
-    di_info("Network choosen: %s. Proceding to connecting.", essid);
+    di_info("Network chosen: %s. Proceeding to connect.", essid);
 
     return 0;
 
@@ -138,7 +138,7 @@ int netcfg_wireless_show_essids(struct debconfclient *client, char *iface)
                 &network_list) >= 0 ) {
         wireless_scan *network;
 
-        di_info("Scanning wireless interface %s succeded.", iface);
+        di_info("Scan of wireless interface %s succeeded.", iface);
 
         /* Determine the actual length of the buffer. */
         for (network = network_list.result; network; network =
@@ -218,7 +218,7 @@ int netcfg_wireless_show_essids(struct debconfclient *client, char *iface)
     iw_set_basic_config(wfd, iface, &wconf);
     interface_down(iface);
 
-    di_info("Network choosen: %s. Proceding to connecting.", essid);
+    di_info("Network chosen: %s. Proceding to connect.", essid);
 
     return 0;
 }
