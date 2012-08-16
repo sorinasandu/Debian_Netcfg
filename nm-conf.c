@@ -145,7 +145,23 @@ void nm_write_ipv6(FILE *config_file, nm_ipv6 ipv6)
 /* Write Network Manager config file. */
 void nm_write_config_file(struct nm_config_info nmconf)
 {
-    FILE *config_file = fopen(nmconf.connection.id, "w");
+    FILE    *config_file;
+    char    buffer[NM_MAX_LEN_BUF];
+
+    /* Create the directory for the config file and clear any possible
+     * previous files found there. */
+    sprintf(buffer, "mkdir -p %s", NM_CONFIG_FILE_PATH);
+    di_exec_shell(buffer);
+
+    /* If the directory exist mkdir will do nothing, so just remove every file
+     * there. Rely on the fact that for now netcfg only does config for one
+     * interface. */
+    sprintf(buffer, "rm %s/*", NM_CONFIG_FILE_PATH);
+    di_exec_shell(buffer);
+
+    /* Open file using its full path. */
+    sprintf(buffer, "%s/%s", NM_CONFIG_FILE_PATH, nmconf.connection.id);
+    config_file = fopen(buffer, "w");
 
     if (config_file == NULL) {
         di_info("Unable to open file for writting configurations, "

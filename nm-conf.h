@@ -37,6 +37,7 @@
 #define NM_DEFAULT_WIRELESS             "802-11-wireless"
 #define NM_DEFAULT_WIRELESS_SECURITY    "802-11-wireless-security"
 #define NM_DEFAULT_PATH_FOR_MAC         "/sys/class/net/%s/address"
+#define NM_CONFIG_FILE_PATH             "/etc/NetworkManager/system-connections"
 
 #define NM_SETTINGS_CONNECTION          "[connection]"
 #define NM_SETTINGS_WIRELESS            "["NM_DEFAULT_WIRELESS"]"
