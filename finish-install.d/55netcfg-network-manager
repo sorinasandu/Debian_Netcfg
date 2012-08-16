@@ -4,9 +4,17 @@ set -e
 
 . /usr/share/debconf/confmodule
 
+NM_CONFIG_FILE_PATH=etc/NetworkManager/system-connections
+
 db_get netcfg/network-manager
 if [ "$RET" = true ] && \
    [ -f /target/usr/lib/NetworkManager/ifblacklist_migrate.sh ]; then
+
+	# Copy NM config file. First make sure the directory exists
+	mkdir -p /target/$NM_CONFIG_FILE_PATH
+	cp /$NM_CONFIG_FILE_PATH/* /target/$NM_CONFIG_FILE_PATH/
+	chmod 600 /target/$NM_CONFIG_FILE_PATH/*
+
 	NETCFG=1 chroot /target \
 		sh /usr/lib/NetworkManager/ifblacklist_migrate.sh
 fi

@@ -327,7 +327,8 @@ Type: boolean
 Default: true
 Description: for internal use; can be preseeded
  Set to false to prevent /etc/network/interfaces being adjusted for use by
- network-manager. If you do this, network-manager will probably not work
+ network-manager and to prevent copying a NM config file for the network used
+ during install. If you do this, network-manager will probably not work
  correctly.
 
 Template: netcfg/link_wait_timeout
