@@ -86,14 +86,14 @@ void nm_write_ipv4(FILE *config_file, nm_ipv4 ipv4)
         fprintf(config_file, "method=%s\n", "auto");
     }
     else {
-        fprintf(config_file, "method=%s\n", "manual");
+        char    buffer[NM_MAX_LEN_BUF], addr[NM_MAX_LEN_IPV4];
+        int     i;
 
-        char buffer[NM_MAX_LEN_BUF], addr[NM_MAX_LEN_IPV4];
+        fprintf(config_file, "method=%s\n", "manual");
 
         /* Get DNS in printable format. */
         memset(buffer, 0, NM_MAX_LEN_BUF);
 
-        int i;
         for (i = 0; ipv4.nameserver_array[i].s_addr; i++) {
             inet_ntop(AF_INET, &(ipv4.nameserver_array[i]),
                       addr, INET_ADDRSTRLEN);
@@ -197,11 +197,12 @@ void nm_write_config_file(struct nm_config_info nmconf)
 #ifdef WIRELESS
 void nm_get_wireless_connection(nm_connection *connection)
 {
+    uuid_t uuid;
+
+    /* Use the wireless network name for connection id. */
     snprintf(connection->id, NM_MAX_LEN_ID, "Auto %s", essid);
 
     /* Generate uuid. */
-    uuid_t uuid;
-
     uuid_generate(uuid);
     uuid_unparse(uuid, connection->uuid);
 
@@ -212,11 +213,12 @@ void nm_get_wireless_connection(nm_connection *connection)
 /* Get info for the connection setting for wired networks. */
 void nm_get_wired_connection(nm_connection *connection)
 {
+    uuid_t uuid;
+
+    /* This is the first wired connection. */
     snprintf(connection->id, NM_MAX_LEN_ID, "Wired connection 1");
 
     /* Generate uuid. */
-    uuid_t uuid;
-
     uuid_generate(uuid);
     uuid_unparse(uuid, connection->uuid);
 
@@ -236,10 +238,11 @@ void nm_get_mac_address(char *mac_addr)
         mac_addr[0] = '\0';   /* Empty string means don't write MAC. */
     }
     else {
+        int i;
+
         fscanf(file, "%s\n", mac_addr);
 
         /* Should be upper case. */
-        int i;
         for (i = 0; mac_addr[i]; i++) {
             mac_addr[i] = toupper(mac_addr[i]);
         }
@@ -290,6 +293,7 @@ void nm_get_wireless_security(nm_wireless_security *wireless_security)
         wireless_security->key_mgmt = WEP_KEY;
         memset(wireless_security->wep_key0, 0, NM_MAX_LEN_WEP_KEY);
         iw_in_key(wepkey, wireless_security->wep_key0);
+
         /* Only options supported by netcfg for now. */
         wireless_security->wep_key_type = HEX_ASCII;
         wireless_security->auth_alg = OPEN;
@@ -301,12 +305,13 @@ void nm_get_wireless_security(nm_wireless_security *wireless_security)
 void nm_get_ipv4(nm_ipv4 *ipv4)
 {
     if (netcfg_method == STATIC) {
+        int i;
+
         ipv4->method = MANUAL;
         ipv4->ip_address = ipaddress;
         ipv4->gateway = gateway;
         ipv4->netmask = netmask;
 
-        int i;
         for (i = 0; i < NM_MAX_COUNT_DNS; i++) {
             ipv4->nameserver_array[i] = nameserver_array[i];
         }
@@ -348,7 +353,7 @@ void nm_get_wired_config(struct nm_config_info *nmconf)
     nm_get_ipv6(&(nmconf->ipv6));
 }
 
-/* Relies on global variables (y u no say? :) ) */
+/* Getting configurations for NM relies on netcfrg global variables. */
 void nm_get_configuration(struct nm_config_info *nmconf)
 {
     /* Decide if wireless configuration is needed. */
