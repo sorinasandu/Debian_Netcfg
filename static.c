@@ -507,10 +507,7 @@ int netcfg_get_static(struct debconfclient *client)
 
         case QUIT:
             netcfg_write_common(ipaddress, hostname, domain);
-            if (!is_wireless_iface(interface) ||
-                netcfg_ask_write_wireless_config(client, interface)) {
-                netcfg_write_static(domain, nameserver_array);
-            }
+            netcfg_write_static(domain, nameserver_array);
             return 0;
             break;
         }

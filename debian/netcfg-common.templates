@@ -356,10 +356,3 @@ _Choices: ${essid_list} Enter ESSID manually
 _Description: Wireless network:
  Select the wireless network to use during the installation process.
 
-Template: netcfg/write_wireless_config
-Type: boolean
-Default: false
-Description: Write wireless configurations for ${iface}:
- Do you want to write the wireless configurations for ${iface} interface
- to the ${interfaces_file} file?
-

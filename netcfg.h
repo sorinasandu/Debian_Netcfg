@@ -125,8 +125,6 @@ extern int netcfg_activate_static(struct debconfclient *client);
 extern void netcfg_write_loopback (void);
 extern void netcfg_write_common (struct in_addr ipaddress, char *hostname,
         char *domain);
-extern int netcfg_ask_write_wireless_config(struct debconfclient *client,
-        char *iface);
 
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 
