@@ -9,6 +9,7 @@
 #define DHCLIENT_CONF   "/etc/dhclient.conf"
 #define DOMAIN_FILE     "/tmp/domain_name"
 #define NTP_SERVER_FILE "/tmp/dhcp-ntp-servers"
+#define CONNECTION_FILE "/tmp/connection_type"
 #define WPASUPP_CTRL    "/var/run/wpa_supplicant"
 #define WPAPID          "/var/run/wpa_supplicant.pid"
 
@@ -125,6 +126,8 @@ extern int netcfg_activate_static(struct debconfclient *client);
 extern void netcfg_write_loopback (void);
 extern void netcfg_write_common (struct in_addr ipaddress, char *hostname,
         char *domain);
+
+extern void netcfg_write_config_type();
 
 void netcfg_nameservers_to_array(char *nameservers, struct in_addr array[]);
 

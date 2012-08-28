@@ -336,6 +336,8 @@ int main(int argc, char *argv[])
             nm_get_configuration(&nmconf);
             nm_write_config_file(nmconf);
 
+            netcfg_write_config_type();
+
             netcfg_update_entropy();
             return 0;
         }

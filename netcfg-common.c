@@ -1158,6 +1158,25 @@ void netcfg_write_common(struct in_addr ipaddress, char *hostname, char *domain)
     free(domain_nodot);
 }
 
+/*
+ * Write a file only containing a line, which states if the connection used
+ * during install was wired or wireless, in order to use this info in the
+ * finish-install script.
+ */
+void netcfg_write_config_type()
+{
+    FILE *f = fopen(CONNECTION_FILE, "w");
+
+    if (is_wireless_iface(interface)) {
+        fprintf(f, "wireless\n");
+    }
+    else {
+        fprintf(f, "wired\n");
+    }
+
+    fclose(f);
+}
+
 void deconfigure_network(void)
 {
     /* deconfiguring network interfaces */
