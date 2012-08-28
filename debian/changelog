@@ -2,6 +2,7 @@ netcfg (1.90) UNRELEASED; urgency=low
 
   * netcfg.h: drop ip6-localnet (obsolete)
   * netcfg.h: drop ip6-mcastprefix (no need for it to be in /etc/hosts)
+  * netcfg-common.c (is_layer3_qeth): fix off-by-one, introduce a constant
 
  -- Philipp Kern <pkern@debian.org>  Tue, 28 Aug 2012 23:57:14 +0200
 

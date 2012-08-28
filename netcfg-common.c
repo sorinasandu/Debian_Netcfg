@@ -231,6 +231,7 @@ int is_raw_80211(const char *iface)
 // Layer 3 qeth on s390(x) cannot do arping to test gateway reachability.
 int is_layer3_qeth(const char *iface)
 {
+    const int bufsize = 1024;
     int retval = 0;
     char* path;
     char* buf;
@@ -246,8 +247,8 @@ int is_layer3_qeth(const char *iface)
     snprintf(path, len, SYSCLASSNET "%s/device/driver", iface);
 
     // lstat() on sysfs symlinks does not provide size information.
-    buf = malloc(1024);
-    slen = readlink(path, buf, 1024);
+    buf = malloc(bufsize);
+    slen = readlink(path, buf, bufsize - 1);
 
     if (slen < 0) {
         di_error("Symlink %s cannot be resolved: %s", path, strerror(errno));
