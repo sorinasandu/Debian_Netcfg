@@ -1,37 +1,38 @@
 #! /bin/sh
-# Disable 'auto dhcp' interfaces if network-manager is in use.
 set -e
-set -x
 
 . /usr/share/debconf/confmodule
 
 # File paths for various configuration files
-NM_CONFIG_FILE_PATH=etc/NetworkManager/system-connections
-NETCFG_CONNECTION_TYPE_FILE=/tmp/connection_type
+FILE_PATH_NM_CONFIG=etc/NetworkManager/system-connections
+FILE_INTERFACES=/etc/network/interfaces
+FILE_NETCFG_CONNECTION_TYPE=/tmp/connection_type
 
-# Flag to determine whether Network Manager is installed. Relies on the return
-# value of dpkg -l, so 0 means installed
-NM_IS_INSTALLED=1
+# Flag to determine whether Network Manager is installed.
+# TODO: test this
+if [ in-target dpkg -l network-manager >/dev/null 2>&1 -eq 0]; then
+	NM_IS_INSTALLED=true
+else
+	NM_IS_INSTALLED=false
+fi
 
 # The type of the connection used during installation
-NETCFG_CONNECTION_TYPE=$(cat $NETCFG_CONNECTION_TYPE_FILE)
+NETCFG_CONNECTION_TYPE=$(cat $FILE_NETCFG_CONNECTION_TYPE)
 
 # netcfg/base_system_config question values
 CONFIG_NM="Network Manager configuration"
 CONFIG_INTERFACES="/etc/network/interfaces configuration"
 CONFIG_LOOPBACK="Minimal loopback configuration in /etc/network/interfaces"
 
-# TODO: DO NOT SET THIS, THIS IS TESTING
-db_set netcfg/base_system_config ""
 db_get netcfg/base_system_config
 
 # Check for preseeding. If the value of the question is empty then set
 # default options.
 if [ -z "$RET" ]; then
-	if [ $NM_IS_INSTALLED -eq 0 ]; then
+	if [ "$NM_IS_INSTALLED" == true ]; then
 		db_set netcfg/base_system_config $CONFIG_NM
 	else
-		if [ $NETCFG_CONNECTION_TYPE == "wired" ]; then
+		if [ "$NETCFG_CONNECTION_TYPE" == "wired" ]; then
 			db_set netcfg/base_system_config $CONFIG_INTERFACES
 		else # wireless
 			db_set netcfg/base_system_config $CONFIG_LOOPBACK
@@ -39,17 +40,31 @@ if [ -z "$RET" ]; then
 	fi
 fi
 
+# Ask the question regarding how the system should be configured.
+db_input medium netcfg/base_system_config || true
+db_go || true
 
-#if [ "$RET" = true ] && \
-#   [ -f /target/usr/lib/NetworkManager/ifblacklist_migrate.sh ]; then
-#
-#	# Copy NM config file. First make sure the directory exists
-#	mkdir -p /target/$NM_CONFIG_FILE_PATH
-#	cp /$NM_CONFIG_FILE_PATH/* /target/$NM_CONFIG_FILE_PATH/
-#	chmod 600 /target/$NM_CONFIG_FILE_PATH/*
-#
-#	NETCFG=1 chroot /target \
-#		sh /usr/lib/NetworkManager/ifblacklist_migrate.sh
-#fi
+db_get netcfg/base_system_config
+
+if [ "$RET" == "$CONFIG_NM" ]; then
+	# Copy NM config file. First make sure the directory exists
+	mkdir -p /target/$FILE_PATH_NM_CONFIG
+	cp /$FILE_PATH_NM_CONFIG/* /target/$FILE_PATH_NM_CONFIG/
+	chmod 600 /target/$FILE_PATH_NM_CONFIG/*
+
+	# Rewrite /etc/network/interfaces to contain only loopback
+	netcfg write_loopback
+fi
+
+if [ "$RET" == "$CONFIG_LOOPBACK" ]; then
+	# Rewrite /etc/network/interfaces to contain only loopback
+	netcfg write_loopback
+fi
+
+# Copy /etc/network/interfaces to target. Note: there's nothing particular to
+# be done if the /e/n/i option is chosen, since /e/n/i gets copied in any
+# situation.
+mkdir -p /target$(dirname $FILE_INTERFACES)
+cp $FILE_INTERFACES /target$FILE_INTERFACES
 
 exit 0
