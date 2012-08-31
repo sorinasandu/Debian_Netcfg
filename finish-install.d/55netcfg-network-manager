@@ -1,22 +1,55 @@
 #! /bin/sh
 # Disable 'auto dhcp' interfaces if network-manager is in use.
 set -e
+set -x
 
 . /usr/share/debconf/confmodule
 
+# File paths for various configuration files
 NM_CONFIG_FILE_PATH=etc/NetworkManager/system-connections
+NETCFG_CONNECTION_TYPE_FILE=/tmp/connection_type
 
-db_get netcfg/network-manager
-if [ "$RET" = true ] && \
-   [ -f /target/usr/lib/NetworkManager/ifblacklist_migrate.sh ]; then
+# Flag to determine whether Network Manager is installed. Relies on the return
+# value of dpkg -l, so 0 means installed
+NM_IS_INSTALLED=1
 
-	# Copy NM config file. First make sure the directory exists
-	mkdir -p /target/$NM_CONFIG_FILE_PATH
-	cp /$NM_CONFIG_FILE_PATH/* /target/$NM_CONFIG_FILE_PATH/
-	chmod 600 /target/$NM_CONFIG_FILE_PATH/*
+# The type of the connection used during installation
+NETCFG_CONNECTION_TYPE=$(cat $NETCFG_CONNECTION_TYPE_FILE)
 
-	NETCFG=1 chroot /target \
-		sh /usr/lib/NetworkManager/ifblacklist_migrate.sh
+# netcfg/base_system_config question values
+CONFIG_NM="Network Manager configuration"
+CONFIG_INTERFACES="/etc/network/interfaces configuration"
+CONFIG_LOOPBACK="Minimal loopback configuration in /etc/network/interfaces"
+
+# TODO: DO NOT SET THIS, THIS IS TESTING
+db_set netcfg/base_system_config ""
+db_get netcfg/base_system_config
+
+# Check for preseeding. If the value of the question is empty then set
+# default options.
+if [ -z "$RET" ]; then
+	if [ $NM_IS_INSTALLED -eq 0 ]; then
+		db_set netcfg/base_system_config $CONFIG_NM
+	else
+		if [ $NETCFG_CONNECTION_TYPE == "wired" ]; then
+			db_set netcfg/base_system_config $CONFIG_INTERFACES
+		else # wireless
+			db_set netcfg/base_system_config $CONFIG_LOOPBACK
+		fi
+	fi
 fi
+
+
+#if [ "$RET" = true ] && \
+#   [ -f /target/usr/lib/NetworkManager/ifblacklist_migrate.sh ]; then
+#
+#	# Copy NM config file. First make sure the directory exists
+#	mkdir -p /target/$NM_CONFIG_FILE_PATH
+#	cp /$NM_CONFIG_FILE_PATH/* /target/$NM_CONFIG_FILE_PATH/
+#	chmod 600 /target/$NM_CONFIG_FILE_PATH/*
+#
+#	NETCFG=1 chroot /target \
+#		sh /usr/lib/NetworkManager/ifblacklist_migrate.sh
+#fi
 
 exit 0
