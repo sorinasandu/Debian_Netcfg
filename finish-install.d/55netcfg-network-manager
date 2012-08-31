@@ -10,7 +10,7 @@ FILE_NETCFG_CONNECTION_TYPE=/tmp/connection_type
 
 # Flag to determine whether Network Manager is installed.
 # TODO: test this
-if [ in-target dpkg -l network-manager >/dev/null 2>&1 -eq 0]; then
+if in-target dpkg -l network-manager >/dev/null 2>&1; then
 	NM_IS_INSTALLED=true
 else
 	NM_IS_INSTALLED=false
@@ -29,7 +29,7 @@ db_get netcfg/base_system_config
 # Check for preseeding. If the value of the question is empty then set
 # default options.
 if [ -z "$RET" ]; then
-	if [ "$NM_IS_INSTALLED" == true ]; then
+	if $NM_IS_INSTALLED; then
 		db_set netcfg/base_system_config $CONFIG_NM
 	else
 		if [ "$NETCFG_CONNECTION_TYPE" == "wired" ]; then
