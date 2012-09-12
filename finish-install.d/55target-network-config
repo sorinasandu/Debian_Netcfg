@@ -9,7 +9,6 @@ FILE_INTERFACES=/etc/network/interfaces
 FILE_NETCFG_CONNECTION_TYPE=/tmp/connection_type
 
 # Flag to determine whether Network Manager is installed.
-# TODO: test this
 if in-target dpkg -l network-manager >/dev/null 2>&1; then
 	NM_IS_INSTALLED=true
 else
@@ -17,34 +16,34 @@ else
 fi
 
 # The type of the connection used during installation
-NETCFG_CONNECTION_TYPE=$(cat $FILE_NETCFG_CONNECTION_TYPE)
+NETCFG_CONNECTION_TYPE=$(cat $FILE_NETCFG_CONNECTION_TYPE | head -n 1)
 
-# netcfg/base_system_config question values
-CONFIG_NM="Network Manager configuration"
-CONFIG_INTERFACES="/etc/network/interfaces configuration"
-CONFIG_LOOPBACK="Minimal loopback configuration in /etc/network/interfaces"
+# netcfg/target_network_config question values
+CONFIG_NM="nm_config"
+CONFIG_INTERFACES="ifupdown"
+CONFIG_LOOPBACK="loopback"
 
-db_get netcfg/base_system_config
+db_get netcfg/target_network_config
 
 # Check for preseeding. If the value of the question is empty then set
 # default options.
 if [ -z "$RET" ]; then
 	if $NM_IS_INSTALLED; then
-		db_set netcfg/base_system_config $CONFIG_NM
+		db_set netcfg/target_network_config $CONFIG_NM
 	else
 		if [ "$NETCFG_CONNECTION_TYPE" == "wired" ]; then
-			db_set netcfg/base_system_config $CONFIG_INTERFACES
+			db_set netcfg/target_network_config $CONFIG_INTERFACES
 		else # wireless
-			db_set netcfg/base_system_config $CONFIG_LOOPBACK
+			db_set netcfg/target_network_config $CONFIG_LOOPBACK
 		fi
 	fi
 fi
 
 # Ask the question regarding how the system should be configured.
-db_input medium netcfg/base_system_config || true
+db_input medium netcfg/target_network_config || true
 db_go || true
 
-db_get netcfg/base_system_config
+db_get netcfg/target_network_config
 
 if [ "$RET" == "$CONFIG_NM" ]; then
 	# Copy NM config file. First make sure the directory exists
