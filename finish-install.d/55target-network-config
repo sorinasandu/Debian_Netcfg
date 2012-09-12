@@ -17,6 +17,7 @@ fi
 
 # The type of the connection used during installation
 NETCFG_CONNECTION_TYPE=$(cat $FILE_NETCFG_CONNECTION_TYPE | head -n 1)
+NETCFG_CONNECTION_SECURITY=$(cat $FILE_NETCFG_CONNECTION_TYPE | head -n 2 | tail -n 1)
 
 # netcfg/target_network_config question values
 CONFIG_NM="nm_config"
@@ -58,6 +59,12 @@ fi
 if [ "$RET" == "$CONFIG_LOOPBACK" ]; then
 	# Rewrite /etc/network/interfaces to contain only loopback
 	netcfg write_loopback
+fi
+
+# Protect /e/n/i from being read if it contains a password
+if [ $NETCFG_CONNECTION_SECURITY == "secured" ] &&
+   [ "$RET" == "$CONFIG_INTERFACES" ]; then
+    chmod 600 $FILE_INTERFACES
 fi
 
 # Copy /etc/network/interfaces to target. Note: there's nothing particular to

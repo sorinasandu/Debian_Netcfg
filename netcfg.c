@@ -60,6 +60,21 @@ response_t netcfg_get_method(struct debconfclient *client)
     return 0;
 }
 
+void netcfg_write_connection_security()
+{
+    FILE *f = fopen(CONNECTION_FILE, "a");
+
+    if ( is_wireless_iface(interface) &&
+        !(wifi_security == REPLY_WEP &&  wepkey == NULL)) {
+        fprintf(f, "secured\n");
+    }
+    else {
+        fprintf(f, "unsecured\n");
+    }
+
+    fclose(f);
+}
+
 int main(int argc, char *argv[])
 {
     int num_interfaces = 0;
@@ -337,6 +352,7 @@ int main(int argc, char *argv[])
             nm_write_config_file(nmconf);
 
             netcfg_write_config_type();
+            netcfg_write_connection_security();
 
             netcfg_update_entropy();
             return 0;
