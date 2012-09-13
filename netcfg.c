@@ -66,10 +66,10 @@ void netcfg_write_connection_security()
 
     if ( is_wireless_iface(interface) &&
         !(wifi_security == REPLY_WEP &&  wepkey == NULL)) {
-        fprintf(f, "secured\n");
+        fprintf(f, "security: secured\n");
     }
     else {
-        fprintf(f, "unsecured\n");
+        fprintf(f, "security: unsecured\n");
     }
 
     fclose(f);

@@ -1168,10 +1168,10 @@ void netcfg_write_config_type()
     FILE *f = fopen(CONNECTION_FILE, "w");
 
     if (is_wireless_iface(interface)) {
-        fprintf(f, "wireless\n");
+        fprintf(f, "connection type: wireless\n");
     }
     else {
-        fprintf(f, "wired\n");
+        fprintf(f, "connection type: wired\n");
     }
 
     fclose(f);
