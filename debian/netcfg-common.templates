@@ -326,9 +326,6 @@ Template: netcfg/target_network_config
 Type: select
 Choices-C: nm_config, ifupdown, loopback
 Choices: Network Manager, ifupdown (/etc/network/interfaces), No network configuration
-# A substitution of the network-manager-info variable should provide info
-# related to Network Manager status, and what would best practice be in
-# the given situation.
 Description: Post installation network configuration:
  Please choose what kind of network configuration you want to have on your
  system after the installation process is complete.
